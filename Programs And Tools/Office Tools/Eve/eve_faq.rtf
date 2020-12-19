@@ -1,0 +1,107 @@
+{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}{\f1\froman\fcharset2 Symbol;}{\f2\froman\fprq2 Times New Roman;}{\f3\froman Times New Roman;}}
+{\colortbl\red0\green0\blue0;}
+\deflang1033\pard\plain\f2\fs24\b EVE FAQ\plain\f2\fs24  
+\par 
+\par Q
+\par All of the lines have "handles" (little red circles) in the middle, and text labels have a little handle on their left side. Can I get rid of these?
+\par A
+\par Yes, they disappear when you do any output, such as to printer, EMF/SVG file, or to the clipboard. They only exist on the screen for editing purposes. You can see this by going up to the menu "Control/Copy window to clipboard as bitmap" -- all of the handles will disappear.
+\par Also, in "Control/EVE preferences..." dialog box, you can tick a checkbox to hide them, which is something that you might want to do if the diagram is to be read-only (this dialog box has some other checkboxes also to make the diagram fully read-only).
+\par 
+\par Q
+\par I imported a bitmap using "File/Import a picture..." but nothing appears on the screen.
+\par A
+\par When a picture is imported, GIF, JPG or BMP, it goes into the database and does not immediately appear. You have to create a picture icon from the Elements menu. Right-click on the picture icon and you will see that you can select any of the pictures in the database. This technique is extremely efficient as any number of picture icons can share the same picture. 
+\par 
+\par Q
+\par Sometimes when I'm working on a diagram, bits of elements get left behind on the screen. Does this matter?
+\par A
+\par No. This is a purely cosmetic thing, and will be refined with later versions of EVE. At any time you can tell EVE to redraw the window, by clicking the right mouse button over a blank area of the working surface. 
+\par 
+\par Q
+\par This may seem silly, but I "lost" my diagram. I was working on it somewhere, but after I had zoomed out and back in, it was gone. Where is it?
+\par A
+\par Remember, you have a virtually unlimited working surface. The top-right of the window shows the current mouse X/Y coordinates, and presumably you constructed your diagram near the 0/0 origin -- so go to the menu and select "Control/Go to origin". If it's not visible, zoom out until you find it. Position the diagram in the centre of the window, and zoom back in.
+\par Alternatively, select "Control/Element# find..." and enter the number "1" -- this will place element number 1 right in the centre of the window. Element number 1 is the first element that you will have created in your diagram. 
+\par 
+\par Q
+\par I want to paste a diagram created in EVE, into Microsoft Word. How do I do that?
+\par A
+\par One way is via the clipboard. Adjust the EVE window to frame what you want to export, then go to the menu "Control/Copy window to clipboard as bitmap". Over in your Word application, select "Paste".
+\par Note that in many Windows applications such as Microsoft Word and Lotus WordPro, you can scale the graphic image down to fit nicely in your document, but the full number of dots is retained, which means you'll get the original quality when it prints. The EVE User Manual has suggestions on getting high quality bitmaps.
+\par You can also go to "File/Export selected elements as EMF..." (Enhanced WMF) to export in standard Microsoft vector image format, that can be inserted into almost all Windows applications.
+\par Furthermore, with the \plain\f2\fs24\i Web Edition\plain\f2\fs24  of EVE you can go to "File/Export selected elements as SVG..." to create an SVG file (the new international open standard for vector graphics). An SVG graphic can be inserted into MS Word via "Insert/Object...". 
+\par 
+\par Q
+\par Hey, there are no scrollbars! Why not?
+\par A
+\par All other Windows applications that I know of are "page centric", that is, you construct drawings on a known page size. However, EVE has an indefinitely large drawing surface. With no top, bottom, left or right of the page, how can you have scrollbars? Scrollbars require some known start and end points. Also, it was a deliberate design decision to maximise the working surface as much as possible -- so, not even any toolbars or icons cluttering up the window. 
+\par 
+\par Q
+\par As there are no toolbars etc., where is all the functionality hiding?
+\par A
+\par Apart from the pull-down menus at the top of the window, EVE achieves enormous functionality by means of mouse right-button-click on an element. This will pop-up a properties box for the element that has all the configurability that you will need for that element. This properties box is context-sensitive, meaning that you see the exact options needed, nothing irrelevant. 
+\par 
+\par Q
+\par Also, there is no "Page setup..." or "Printer setup..." menu item. Why not?
+\par A
+\par A key aspect of the philosophy behind EVE is no impact on the operating system -- no changes to the registry, files, folders or settings. When you run EVE, you use the printer settings as-is.
+\par If you want to change something, such as select A5 paper size, you have to exit EVE, make the change, then restart EVE. A future version may have some limited printer configurability. 
+\par 
+\par Q
+\par There are only "Times New Roman", "Arial" and "Courier New" fonts to choose from. Why don't you give EVE the capability to select other fonts?
+\par A
+\par You must be using a version of EVE prior to 1.08. Of course, any individual PC will have heaps of fonts installed, which is the problem. EVE diagrams are intended to be portable over any Windows system, so the fonts used must be guaranteed to be available. Those three fonts are the basic TrueType fonts supplied with all Windows versions. They cover the requirements of with serifs (Times New Roman), without serifs (Arial), and monotype (Courier New). This was the rationale for the restriction. However, EVE version 1.08 onwards allows selection of any font, and international languages. 
+\par 
+\par Q
+\par I constructed a curved line, attached at each end to other elements. When I changed the width of the line to 4 pixels (the default is 1 pixel, which is 1 diagram-unit at normal zoom factor), the actual shape, or trajectory, of the line changed. Why is this?
+\par A
+\par This is to allow for arrowheads. Wider lines have bigger arrowheads, and EVE automatically recalculates a nice trajectory to suit the size of the arrowhead. This behaviour only applies to "sticky lines", whose ends can attach to other elements. If you absolutely don't want this effect, use a multi-segmented line (polyline) (which is not "sticky"). Refer to the User Manual for more information. 
+\par 
+\par Q
+\par What is the difference between WMF and EMF files? I see that the "File" menu offers export to EMF but not WMF.
+\par A
+\par WMF (Windows Meta File) is an older standard for vector graphics, dating back to Windows 3.x. It does \plain\f2\fs24\i not\plain\f2\fs24  support curved lines, and when you save in this format, all curved lines will be automatically converted to segmented lines. One the other hand, EMF (Enhanced Meta File) \plain\f2\fs24\i does\plain\f2\fs24  support curved lines (called Bezier lines). Also there are other issues that make EMF superior. 
+\par 
+\par Q
+\par I see that your Web Edition of EVE can generate SVG vector graphics files. Is SVG superior to WMF/EMF?
+\par A
+\par Yes. For me as an application author, SVG is very satisfying as it is an open standard, comprehensively documented. Thus, I was able to write an SVG export for EVE that I know works well, whereas my WMF/EMF export has some "grey areas" due to Microsoft's poor documentation of their proprietary "standard".
+\par From the users point of view, SVG is a very sophisticated and complete standard, and import/export filters are gradually becoming available for the major graphics editors, plus viewers on web browsers and major OSs are already available. Also you can convert SVG to and from many vector standards such as Postscript, DXF, WMF and PDF. I recommend SVG as the way to go for vector graphics both on and off the web.
+\par Actually, we are comparing chalk and cheese here -- SVG is a very sophisticated multimedia interface, with user interaction, animation, hyperlinks, video, sound (and will probably replace Macromedia Flash). WMF/EMF is just for displaying static vector shapes. 
+\par 
+\par Q
+\par What features will be in later versions?
+\par A
+\par Heaps of things! For example, the text file that you are reading right now is a separate file, but it could be saved inside the .EVE data file -- to simplify emailing the whole thing anywhere. This is already implemented for bitmap graphics files. The "EVE versions" page at www.goosee.com has a wish list. 
+\par 
+\par Q
+\par EVE is free, but will it remain so?
+\par A
+\par Yes. EVE is fully functional, no nag screens, no time limit, free, and will remain so. The only fee that I may introduce is for extra documentation, such as the database storage format, or for formal support, or maybe for some specialised or customised versions -- currently I'm asking $10 for a special Web Edition of EVE that generates SVG graphics for web pages. 
+\par 
+\par Q
+\par Is EVE being used for anything really heavy-duty? I mean, real business, commercial or education applications?
+\par A
+\par It's happening! The number of people who know about EVE is still very small. An excellent example is the work by Jorgen Carlsen, who is using EVE for drawing electrical floor plans. His work illustrates the power of the composite-object symbol library and utilises features such as the "snap to grid" for rapid placement of symbols and the page-grid for accurate scaling and alignment for printing. His work shows just how simple to use and powerful EVE is. A sample of his work is available for download at www.goosee.com.
+\par Other people are using EVE to plan/design computer programs, mindmapping, family trees. Recently someone wanted to layout JPG images on a page and print them -- he found EVE does that very well. Someone else is using EVE WE to design complete web pages. Another person is using EVE to teach C++ programming. The list goes on and on... 
+\par 
+\par Q
+\par I clicked on the PayPal button to purchase the EVE Web Edition, and it went through fine. Now that I have paid, how do I get hold of the Web Edition?
+\par A
+\par I usually manage to respond within half a day, with an email to you. Sometimes, however, there may be a slightly longer time before I respond. After you have paid PayPal, wait patiently. At the very worst, the delay will be two days (maybe I will want to take the weekend off sometimes!), but generally expect a speedy response. 
+\par 
+\par Q
+\par I see that your purchase price is US$10. If I pay PayPal, will I be charged any processing fee?
+\par A
+\par No. Or rather, you shouldn't, not by PayPal nor by your credit card company or bank. There is a PayPal fee and a credit card processing fee, but this is deducted from the amount that I receive. Paypal do have a $1.95 credit card verification fee when you join them, but my understanding is that this is optional -- that is, you can pay me without being verified (I think that PayPal do require verification from people who live in certain countries). Considering the rate at which PayPal is spreading over the Internet, I recommend becoming a verified member -- it tells everyone that PayPal has checked out your credit card and it belongs to you and is genuine. It also means that you can use PayPal to send and receive money without having to give out your credit card details to lots of different companies.
+\par It is possible in some countries that your bank may charge a small processing fee. A person in France told me that on his statement there was an extra small amount deducted. This is an issue in that country -- the international policy of the credit card companies is that all fees be deducted only from the payee, that is, me. 
+\par 
+\par Q
+\par Do you have a site-licence fee structure for EVE Web Edition?
+\par A
+\par Yes. To use EVEWE in any one site costs US$100. Multi-site institutions must pay for each site.
+\par Note that buyers from "third world" countries may get a discount, including for individual licences. Third world educational and charitable institutions may have EVEWE for free. Kindly email your request to me.
+\par --0-- 
+\par }
+ 

@@ -1,0 +1,29 @@
+:Base Setup2go.hlp
+:Title Setup2Go User's Guide
+1 Welcome=welcome
+1 Editions=editions
+1 License=license
+1 Ordering=ordering
+1 Credits=credits
+1 Contact=contact
+1 Bug Reports=bug_reports
+1 Quick Start
+2 Quick Start=quick_start
+1 Setup Project Settings
+2 General Info Tab=general_info_tab
+2 Setup Settings Tab=setup_settings_tab
+2 Requirements Tab=requirements_tab
+2 Files Tab=files_tab
+2 File Properties=file_properties
+2 Shortcuts Tab=shortcuts_tab
+2 Registry Tab=registry_tab
+2 File Types Tab=file_types_tab
+2 Dialogs/Screens Tab=dialogs_screens_tab
+2 Setup Window Settings=setup_windows_settings
+2 External Tools Tab=external_tools_tab
+2 INI Files Tab=ini_files_tab
+2 Create Setup Tab=create_setup_tab
+1 Variables
+2 Built-in Variables=variables
+1 Command Line Builder Execution
+2 Command Line Builder Execution=commandline

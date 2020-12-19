@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="menu.css" rel="stylesheet" type="text/css" />
+<title>TRANSACTIONS</title>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<a href="http://www.rq.sk/rqmoneyen.html" title="Official RQ Money web"><img src="img/logo_64px.ico" align="left" style="margin-right: 10px" border="0" /></a>
+		<a href="transakcie.html"><img class="rotate" src="img/sk.png" title="Slovenská verzia" /></a>
+		<div id="nadpis">RQ MONEY</div>
+		NOW YOU CAN MANAGE YOUR FINANCES MUCH BETTER!
+		</div>
+		<div id="navigation">
+			<ul>
+			<li><a href="history.html">History</a></li>
+			<li><a href="help.html">Database</a></li>
+			<li style="float: right; color: ivory; margin-top: 3px; margin-right: 10px">TRANSACTIONS</li>
+			<li><a href="lists.html">Lists</a></li>
+			<li><a href="tools.html">Financial tools</a></li>
+            <li><a href="view.html">View</a></li>
+			<li><a href="program1.html">Program</a></li>
+			<li><a href="shortcuts.html">Shortcuts</a></li>
+			</ul>
+		</div>
+
+		<div id="content-container">
+		<strong>A financial transaction</strong>  can be any of three types (Income, Expenditures or a Transfer). An income or expenditure transaction adds one record to the database. A transfer AUTOMATICALLY results in two records, a debit from the donor account and a credit to the receiving account.
+
+		<!-- Add transaction -->
+		<div class="ramik">
+			<h4>ADD A NEW TRANSACTION</h4>
+			<div class="keys"><span class="key">INSERT</span></div>
+		Clicking on the Add transaction toolbar icon brings up the New Transaction Form where you must complete the five mandatory fields  (Transaction Date, Transaction Type (direct debit, credit, transfer) ACCOUNT, CATEGORY and a PERSON.  The AMOUNT, DESCRIPTION and PAYEE fields are usually needed but not mandatory.<br />
+In the AMOUNT field, you can perform simple calculations (without brackets [] or parenthesis () in the enumeration) for a transaction composed of several items. Only additions and subtractions  (to version 2.1.0), <strong>divisions and multuplications (from version 2.1.0)</strong> operation are allowed, eg:<br /><br />
+<ul class="a1">
+<li>132,5+44-19,6 (there appears a result 156.90 after pressing Enter) or</li>
+<li>2,5+3*4 or</li>
+<li>12*10/2,5 or</li>
+<li>25,4-33/3,3</li></ul>
+You can move between the New transaction Form Fields by pressing ENTER (recommended) or by tabbing if you are not changing the field data.<br /><br />
+<strong>CHOOSE FROM LIST</strong><br />
+If, as recommended, the field lists are populated with data, you can easily select say the Payee data using that field dropdown box. To do so either:
+        <ul class="a1">
+          <li>type the first letter of the Payee and then use the down/up arrows to select the desired PAYEE,</li>
+          <li> use the mouse to open the Payee field dropdown list and choose the item by dragging down,</li>
+		  <li> using the keyboard shortcut ALT + down arrow,</li>
+          </ul>
+If desired Payee is not in the Payee list, click Payee icon to bring up the add Payee form and complete it before proceeding.<br /><br />
+When all necessary fields are completed, save the new record by pressing ENTER. The new record will displays in the main window. <br />
+You can click on any of the Transaction Table column headings to sort the transactions in ascending or descending order.</div>
+
+		<div class="ramik">
+		<h4>EDITING OR CORRECTING TRANSACTIONS</h4>
+        <div class="keys"><span class="key">ENTER</span></div>
+		Any entered transactions can be edited using the Toolbar Edit Icon, or by double clicking the record to bring up the transaction form. In the form just overwrite any of the text fields (DATE, AMOUNT, DESCRIPTION) or select a different value from the field dropdown boxes (ACCOUNT, SUBCATEGORY, PERSON or PAYEE). Click to button SAVE or shortly press SHIFT+ENTER to resave the edited record.
+		</div>
+
+		<div class="ramik">
+        <!-- Copy transactions -->
+        <h4>COPY THE TRANSACTION</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">INSERT</span></div>
+		Income or Expenditure records previously entered can be copied (duplicated) using the Transaction copy Icon. This creates a completely new record but with the same data values. You can then edit if needed.<br /> You can only copy INCOMING or OUTGOING type of transaction (NOT TRANSFERING).
+		</div>
+		<div class="ramik">
+
+		<!-- Delete transaction -->
+        <h4>DELETING TRANSACTIONS</h4>
+        <div class="keys"><span class="key">DELETE</span></div>
+		For a single record deletion, click to highlight that record and the click on the Delete Transaction Icon on the Toolbar to remove that transaction.<br />
+        Similarly for multiple record deletion you can highlight the records in several ways:
+        <ul class="a1">
+          <li>To delete a continuous block of records, highlight the first record, press SHIFT and drag to select the last record.</li>
+          <li>If the records are separate rows, press CTRL and the click the mouse on each record you want to mark for deletion</li>
+          <li>and for a TRANSFER deletion it is necessary to mark and delete both the transfer records</li>
+        </ul>
+        <div class="notice">IMPORTANT NOTE!!!<br />After deletion of a record is not possible to undo that action.  All of the transaction steps that you perform on the database (adding, correcting, erasing) are carried out and stored instantly, it is not necessary to save the database file later. The great advantage of this system is that, in the case of a power or operating system failure, all your work is stored. The downside is, if mistakenly delete or overwrite some records-it is not possible to step back!!!<br />
+        Therefore, the author recommends that you BACK UP the database whenever the program is used (or archived). This is easy as Version 2.0 and later of RQMoney automatically backups the database on exiting the program. (This feature is free for databases with less than 2000 records). If the user exceeds 2000 transactions the database automatic backup is disabled. However, a contribution of 10 € to the author for further development of the program will give you a license key that will unlock the automatic backup of all databases on that computer. For more detailed information about the license key, visit the <strong>donation</strong> page.
+        </div> <br /><strong>Author is not responsible for any damages you use this program</strong>!!!.
+		</div>
+
+		<!-- Import transactions -->
+		<div class="ramik">
+		<h4>TRANSACTIONS IMPORT</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">I</span></div>
+		Program allows to import CSV or TXT files (eg. bank statements) to get their transactions to the program.<br />
+		On start you need to choose:
+        <ul>
+         <li>
+          the file for the import (CSV or TXT format)
+         </li>
+         <li>
+          the target account and
+         </li>
+         <li>
+          the correct template to specify import formats of the date, the amount, the type of transactons, etc. No one template is prepared for the user, he needs to set his each template himself and save it for the future using.
+         </li>
+        </ul>
+		</div>
+
+		<!-- Export transactions -->
+		<div class="ramik">
+		<h4>TRANSACTIONS EXPORT</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">E</span></div>
+  Program allows to export selected transactions (also Summary table, Statistics or SummaryX data) to the various formats like PDF, CSV or XLS to another use. User can set many other printing options for PDF page (paper size and orientation, font, margins, etc) or some format options for XLS page.
+		</div>
+		<!-- Import transactions -->
+		<div class="ramik">
+		<h4>TRANSACTIONS HISTORY</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">H</span></div>
+		This informative function works from version 2.4.0 only. <br />Transactions created in lower versions have missing date of creation.
+		</div>
+		</div>
+
+		<div id="footer">
+			<hr />
+			Copyright © 2014
+			<hr />
+		</div>
+	</div>
+</body>

@@ -1,0 +1,293 @@
+Hello?
+
+ WHA.. WHAT?
+
+Are You Awake?
+
+ I.. I.. .. ..
+
+Hello?
+
+ I'M NOT SURE.. I CAN'T SEE ANYTHING..
+
+Oh.. .. ..
+
+ W.. WHAT?
+
+Dark Powers Seem To Be Crawling Up Your Mind!
+
+ I.. I KNOW.. I.. I MUST.. RESIST..
+
+Can You Still Feel A Source Of Light?
+
+ YE..YES.. I CAN..
+
+Then You Should Fight For Your Feelings!
+And The Energies Of The Eternal Light Shall Join You..
+
+ I AM READY!
+
+So You Must Leave The Human Body Now..
+Lets Start Your Journey..
+
+ I HAVE NO FEAR!
+
+Injection Starting.. .. .. .. .. .. .. ..
+T.R.I.P.. .. .. .. .. .. .. Initialized..
+Get Ready!
+
+
+_________________________________________
+=========================================
+
+TSUNAMI 2010
+psychedelic oldschool abstract electronic
+space-shooter pixel-overdose fun in 96kb!
+
+_________________________________________
+=========================================
+
+
+welcome shooter-fans..
+
+finally it's been released.. tsunami 2010..
+after weeks of delay.. (real life rulez! ;)
+so pleeeeaze enjoy and play it like nutz!!!
+
+
+celebrating the upcoming 10th anniversary of
+yak's mega-superb jaggy-t2k (which is still
+one of my all-time favourite games!) and
+making one of my oldest dreams come true..
+(=coding a totally new t2k-pcee-rmx-conversion.. ;)
+
+there are a LOT of differences between
+the old jaggy version and this one..
+not only concerning the gfx+rendering, of course..
+(although these are the coolest new features.. =)
+
+(100!) rmxd levels, (14!) rmxd enemies,
+(a hell lot of!) rmxd bonus-items,
+rmxd gameplay, rmxd everything..
+so it even deserved a new name.. ;)
+
+so here it is.. relax and enjoy..
+cause THIS was made for YOU!
+
+
+this software was done in my spare time
+and you should have got it for free..
+since i don't want to make profit with this
+game you don't have to pay anything for it..
+(it was made to learn more about gfx/sound-coding
+ and especially game-design (i'm still a student :)
+ so i hope there won't be any lawyers pissing
+ me off because of copyright-stuff!
+ cause everything you got with this release
+ is 101% selfmade.. the textures/enemies/animations/
+ soundfx/muzix/etc. are synthesized when tsunami is
+ started/during gameplay (=calculated from scratch!)
+ to get the game as small as it is now.. so there's
+ NO stolen/ripped stuff included!!!  >)
+
+
+------------------------------------------------
+JUST ONE MORE IMPORTANT THINGIE ABOUT THE MUZIK:
+------------------------------------------------
+
+please do yourself a favour and
+get some more stompin' muzik-files
+to extend the game to a pure 101%
+ultra-zen-pleasure-experience..
+you're able to choose between:
+
+a)TEMPEST2000(R)-PC-CDROM or TEMPEST2000(R)-SOUNDTRACK-CD or DEFENDER2000(R)-SOUNDTRACK-CD
+  (easy: simply insert the cd into that cdrom drive
+  which you use to listen your music-cds with)
+
+b)TEMPEST2000(R)-JAGUAR-MODS
+  (almost easy: copy all of the seven mod-files (although track 3 isn't really needed)
+   (T2000-1.mod .. T2000-7.mod) or (Tempest_2k_1.mod .. Tempest_2k_7.mod)
+  into the T2010 game folder)
+c)DEFENDER2000(R)-JAGUAR-MODS
+  (almost easy: copy all of the six mod-files
+   (D2000-1.mod .. D2000-6.mod)
+  into the T2010 game folder)
+
+d)JUST-ANY-MUSIC-CD
+  (easy: choose between random or linear track selection
+     or: create your own playlist (->user_cd.ini)
+          each line of it should contain one track-number
+           Line1:    Menu
+           Line2:    Bonus
+           Line3-12: Levels)
+  (recommended music: psytrance/goa.. of course.. ;)
+
+e)JUST-ANY-MODS
+  (almost easy: create your own playlist (->user_mods.ini)
+    each line of it should contain one mod-filename (myfilename.mod or just myfilename)
+     Line1:   Menu
+     Line2:   Bonus
+     Line3-6: Levels)
+  (recommended music: oldskool amiga game tunes.. f.e. projectx,killinggameshow,supercars,..,..,..
+                      demo(scene)tunes.. chiptunes..)
+
+
+then select your favourite muzik-scheme inside the "start game"-menu..
+
+
+the jaggy-t2k/d2k-mods can be downloaded f.e. from the following sites:
+ -> http://www.ntrautanen.fi/marko/sao/musiikki/musiikki_jagge.htm
+ -> http://jaguar.holyoak.com/sounds/
+ -> http://blueneptune.com/~zio/sound/
+legal issue: d'load only if you've bought the original jaggy-games!
+
+p.s.: i'm not responsible for the sites listed above..
+p.p.s.: do not spread this game in bundle with the jaggy-mods! only .exe/.txt/.diz!
+
+
+---------
+AS USUAL:
+---------
+
+-fractal zoomer
+-2 built-in chipmuzix
+-procedural textures,animations,sounds
+-unlimited lightsources/explosions/pixels/dusts/..
+-tons of new gl-eyecandy-fx
+-some pure oldskool 2d-pixel-fx  :)
+-no f**king high-level-gfx-engine used for that to get some speedy renderin and freakin small code!
+-auto-saving for gameplay (+scores+options.. ;)
+ (but it's only saved after each 3 continously completed levels! (->levels: 25,28,31,34,37,40,43,..))
+-configurable soundtrack (cdaudio or using my suckin' mod-player)
+-multiplier-based-score-system (you gotta find out for yourself how it works! >)
+-ainc-style psychedelic nausea
+
+
+--------
+MINIMUM:
+--------
+
+-400 mhz cpu
+-32mb ram
+-win95/98/me/nt/2000/xp
+
+------------
+RECOMMENDED:
+------------
+
+-800 mhz (mmx-)cpu
+-64mb ram
+-radeon or geforce
+-win95/98/me/nt/2000/xp
+-joypad
+
+------------
+TESTED WITH:
+------------
+
+-amd athlon (500/750/1800 mhz)
+-intel pentium2/3/4 (with various mhz/ram-configs)
+
+-ati radeon1/2 (=7500/8500)
+-nvidia tnt2/geforce1/2(mx)/3/4(mx)/quadro4 (with various mhz/ram-configs)
+-intel 8x0 (->yucky rendering, but works!)
+-m$-software-renderer (->yucky rendering, but works!)
+
+-windows 95/98/ME/NT/2000/XP
+
+ (->some nt-opengl-drivers deliver sloppy/stuttering animations! (but only for grid-texture-fx and embrio-rendering??!)
+  ->some (nt only?-)nvidia-gl-drivers using 16bit-resolutions crash during zapper-effect! (might be a stencil-"bug" (nvidia-cards don't "like" 16bitRGB with stencil activated))
+  ->some (nt only?-)nvidia-gl-drivers using fullscreen-anti-aliasing are buggy during zapper-effect -> black polys! (one can't see the level-grid/enemies/.. anymore)
+  ->some old ati-gl-drivers using fullscreen-anti-aliasing are buggy -> the glow-effect of the level-grid is totally f**ked up)
+
+-gravis 4 button joypad
+-noname 4/10 button joypads
+
+
+---------------
+THANX + GREETZ:
+---------------
+
+jesus p. aka 2pac aka 3pac => the 2 included chiptunes are "based" on his modtunes antipasti#31 + boot'em#03
+
+markus oberhumer/laszlo molnar  (UPX-ExePacker) => www.nexus.hu/upx
+the whole freepascal developers/community (FPC) => www.freepascal.org
+(no other software/libs used then this free stuff.. own code rulez.. =)
+
+delax^sundancer inc. .. hopper^tsq .. bugger^tsq .. bitbreaker^voz ..
+jace^tbl .. venom^venomsoft .. paniq .. yoda^tsq .. and .. mecflai^eska ..
+avalanche .. rob^aardbei .. adok^hugi ..
+all (ex-)ainc-members and sorry to all i forgot ..                   ;)
+
+respectz to
+tbl .. aardbei .. vacuum .. voz .. crest .. creative minds ..
+panorama .. hitmen .. cryonics .. inf .. potion .. seminar ..
+headcrash .. trepaan .. scarab .. sundancer inc .. orange ..
+matrix .. three pixels .. unique .. mfx .. squoquo .. lunix ..
+and all other (in-)active sceners around the globe!!!
+
+lifetime achievement awards to
+yak^llamasoft .. (although he didn't like the idea of me coding tsunami)
+dave theurer  .. (thanx for having that strange nightmare ~23 years ago)
+
+
+
+
+made in late 2k2 (finished for breakpoint 2k3) by toxie^ainc.
+real life is calling. so byebye. c ya next time.
+
+http://ainc.de
+
+
+
+p.s.: cmdline parameters:
+      -16bit     (for 16bit rendering)
+      -windowed  (for windowed rendering)
+
+p.p.s.: default input keys are:
+        Left/Right   Move on Grid
+        'A' / Joy1   Shoot
+        'Q' / Joy4   Zapper
+        'S' / Joy3   Jump   (needs PowerUp)
+        'W' / Joy2   Tremor (needs PowerUp)
+
+p.p.p.s.: keys can be changed in the user_key.ini
+          by using this table for the keycodes:
+
+LEFT         37
+UP           38
+RIGHT        39
+DOWN         40
+
+0 - 9        48 - 57
+A - Z        65 - 90
+
+BACK          8
+TAB           9
+RETURN       13
+SHIFT        16
+SPACE        32
+CONTROL      17
+PAUSE        19
+PRIOR        33
+NEXT         34
+END          35
+HOME         36
+PRINT        42
+SNAPSHOT     44
+INSERT       45
+DELETE       46
+
+NUMPAD0 - 9  96 - 105
+MULTIPLY    106
+ADD         107
+SEPARATOR   108
+SUBTRACT    109
+DECIMAL     110
+DIVIDE      111
+
+F1 - F24    112 - 135
+
+
+p.p.p.p.s.: joypad buttons can be changed in the user_joy.ini

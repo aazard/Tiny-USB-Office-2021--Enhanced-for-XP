@@ -1,0 +1,15 @@
+HOW TO CREATE CUSTOM SOUND SETS?
+
+* Create new folder and name it whatever you 
+  would like to call your sound set.
+* Put these 6 files in that folder.
+  - Damage.wav     Played when cars hit something.
+  - Ding.wav       Played on start and when last lap begins.
+  - Engine.wav     Default engine sound.
+  - Skid.wav       Skid sound.
+  - Yeah.wav       Played when someone wins a race.
+( - Fuel.wav       Played when player's car is running out of fuel. )
+* You can use different engine sound for each car.
+  - General.wav    Engine sound for car named "General"
+  - Formula.wav    Engine sound for car named "Formula"
+  - ...

@@ -1,0 +1,163 @@
+Introduction
+
+bm1.bmp      What is AVI to WAV ?
+bm1.bmp      How to extract WAV from AVI
+bm1.bmp      AVI to WAV Batch Scripts
+bm1.bmp      Version history
+bm1.bmp      About
+$#bm0.bmp
+What is AVI to WAV ? How to extract WAV from AVI AVI to WAV Batch Scripts Version history About
+
+AVI to WAV is a simple program which can extract sound from AVI file and save it into a WAV RIFF file in original sound format.
+
+It creates WAV file by extracting a sound chunks from AVI animation. WAV file will be created with its original parameters and in original format.
+
+This version of AVI to WAV can inform you about audio format of future WAV file - it can diverse large number of specific audio codecs registered within the WAVE registry and generaly used in AVI animations - from PCM, DSP True Speech, GSM 6.10 up to MPEG-Layer 3 (used in DivX AVIs) and more ... see AVI2WAVCMD.TXT for complete list.
+
+You can use normal or smart extraction (usefull for users who experience problems with repeated audio within resulting WAV).
+
+Note that you don't need to have installed any of that codecs to extract sound from AVI because AVI to WAV does not use any codec to extract sound - it uses its own algorithm to do that so it can do the job even when other codec-oriented extractors fails.
+
+This also allow AVI2WAV to extract entire audio from AVI which other tools that use codec oriented APIs and MM API functions can't do.
+
+For formats that cannot be detected, AVI to WAV will also create correct audio file using original format from AVI.
+
+NOTE: In this version, automatic extension change is not implemented !
+Some formats (like MPEG-Layer 3) can be extracted without WAV RIFF header and used in its original way (with MP3 extension). But, this version of AVI to WAV will always create file with WAV RIFF header and WAV extension (because audio is extracted from AVI where this audio format is, actually, specific audio codec registered within the WAVE registry).
+Genneraly, this means that every file will, by default, have .WAV extension and WAV RIFF header even if it contains other type of audio.
+
+Before you extract sound, you can preview selected AVI file. Also, when AVI is selected, you can see short info about its size, video resolution, does it contains audio etc. ...
+
+AVI to WAV supports extraction from one selected AVI or from several AVIs automatically (batch mode) or using simple batch scripts - for details, see How to extract WAV from AVI and AVI to WAV Batch Scripts.
+
+Also, here is 32-bit comand line version that can be used from BATCH files or some other automatization process.Command line version has the same extracting features as corresponding GUI version but it can return ERRORLEVEL value depending on extraction state and depending on extracted audio format. Also, command line version has INFO mode where you can test AVI's audio type (format, bit resolution, audio type, number of audio chunks etc.). SMART mode is implemented too.
+For details about command line version read AVI2WAVCMD.TXT.
+
+
+This version works only with indexed AVI files with audio chunks (both types: video+audio or only audio AVI files).
+
+What is AVI to WAV ? How to extract WAV from AVI AVI to WAV Batch Scripts Version history About
+
+
+AVI to WAV - Version 3.5
+
+Disclaimer
+
+Program is freeware but copyrighted.
+
+YOU MAY NOT SELL OR CHANGE THIS PROGRAM OR ANY OTHER PART OF THIS PROGRAM OR DOCUMENTATION !
+
+DISTRIBUTION OF THIS PROGRAM MUST BE FREE AND IN ORIGINAL FORM WITH ALL FILES INCLUDED AND INTACT.
+
+Every effort has been made to ensure that no problems occur with its usage but the author makes no warranties about it and accepts no responsibility for any data loss or other system trouble that may occur from its useage.
+
+
+Author
+
+Arminio Grgic
+Istarska 6
+34000 Pozega
+Croatia
+
+Arminio_Grgic@Yahoo.com
+http://www.geocities.com/SiliconValley/Way/9629/arminio.htm
+http://www.geocities.com/agrgic.geo/avi2wav.htm
+
+Š1997-2002 m&g Software
+$#
+
+bm0.bmp
+What is AVI to WAV ? How to extract WAV from AVI AVI to WAV Batch Scripts Version history About
+
+Using AVI to WAV you can extract sound from AVI animation and save it in a WAV format.
+
+It can be done in two modes - normal or smart (see further help on this page) and in two ways:
+
+bm2.bmp      Single file extracting:
+         Just select a desired AVI file, enter or choose name of WAV file to be created, select mode and hit extract button to start extracting. In this way, you can extract sound from one AVI file at a time.
+
+
+bm2.bmp      Multiple file extracting:
+
+batch mode
+If you select more than one file, program automatically enters in a batch mode and allow you to extract sound from several AVIs automatically. To select several files, use mouse and Ctrl and/or Shift keys in a standard Windows way ... Also, if you want to select/deselect all files, just click on a file list with a right mouse button.
+
+batch script mode
+Another way to use batch mode is to create a simple batch script with names/paths of AVI files from which you want to extract sound. To use batch scripts, change file filter from "AVI files" to "AVI2WAV Batch Scripts" and program will automatically enter in a batch script mode. Now select a script from a file list (note that you can select only one file at a time - extraction from several scripts are not supported in this version) and start extracting.
+
+         For all information about scripts see AVI to WAV Batch Scripts.
+
+         During extraction in one of batch modes, you can trace what is happening in a log on screen where all actions and possible errors or warnings are logged. When extraction finish, log can be saved into a file for later analysis.
+
+
+         Here is what you need to know when you use batch modes:
+
+bm2.bmp      Note that, in a batch mode, you cannot enter WAV filename. Instead of that, when you start extraction, AVI to WAV will ask you to choose destination directory where ALL WAVs will be created. Also, WAV filenames will be the same as corresponding AVI filenames but with WAV extension (for example: from FILE1.AVI sound will be extracted into FILE1.WAV etc.)
+bm2.bmp      If you use multiple selection, AVI preview and info are related to a focused file in a file list (focused is one that is selected and "framed")
+bm2.bmp      If you use batch script mode, AVI preview and info are not available - instead preview, you can edit selected script.
+bm2.bmp      WARNING ! If some WAV file with the same name as a new one already exists on destination directory, it will be automatically overwritten with a new one during extraction.
+bm2.bmp      Batch extraction can be canceled by pressing "Cancel" button on a window with a progress bar or by pressing Alt+C key.
+#
+
+Extracting modes:
+
+"Normal extraction" that AVI2WAV performs is plain extracting of audio chunks from AVI file performed by parsing AVI index which contains pointers to video/audio chunks within file.
+
+But, AVI2WAV have additional option which can improve extracting - called "Smart extraction mode".
+
+In this mode, AVI2WAV will skip audio chunks that are already processed. It is usefull if you have AVIs that have bunch of crappy audio chunks (usually at end of index part) that points somewhere back in file to some audio part that is already processed. If you play AVI, you will not hear them because players use MM system functions to play and MM system will ignore them automatically. But, because AVI2WAV uses its own way to extract sound, it will process entire sound - even repeated parts (if you play resulting WAV you will hear that some audio is repeated at end of playing - or even during).
+
+By turning this option, those repeated parts of sound will not be extracted. Note that this option can slow down pre-processing a bit, but extracting will still be fast as before and result will be perfect WAV file :-) .
+
+So far, this problem is spoted on larger (over 10 MB) AVIs made by "Camtasia" capture software and "TechSmith Screen Capture Codec (TSCC)" in conjuction with PCM audio codec.
+
+Special thanks to Eduardo Tomazini Correa who spoted this problem and helped me to solve it.
+
+$#bm0.bmp
+What is AVI to WAV ? How to extract WAV from AVI AVI to WAV Batch Scripts Version history About
+
+AVI to WAV batch scripts enables you to perform auto-extraction of a large number of AVI files in a very easy way.
+Also, scripts are only possible way to auto-extract sound from several AVI files which are not at the same directory.
+
+AVI to WAV batch script is a simple ASCII file that can be written in any ASCII file editor (NOTEPAD, EDIT ...) but it must have extension A2W so AVI to WAV can process them easily. AVI to WAV process scripts in script batch mode - for details, see "How to extract WAV from AVI".
+
+Script must contain AVI filenames from which you want to extract sound.
+
+Filenames can contains full path. If they contains only filename without path, AVI to WAV will search them in a default directory. Default directory is a current directory or directory defined in lines that starts with * - text after * represent default directory for next lines with AVI files without full path (this has no reflection on lines with full pathnames - only for those without full path)
+Blank lines are allowed - it will be ignored.
+Lines that start with ; are comments and will be skipped.
+
+Scripts can be created manually or very easily using DOS command DIR with switches:
+
+DIR /b will list all files in a bare format without heading information or summary - it will list only filenames without path (here you can use * to define path)
+DIR /b /s will list all files in specified directory and its subdirectories in a bare format without heading information or summary but with full path
+
+
+Example of creating script for a set of AVI files in a two different directories:
+
+Suppose that we have 2 AVI files in C:\AVI and 3 in D:\BUGMEDIA. Here is what we do:
+
+First we create script with all AVI filenames from C:\AVI. We can call it AVILIST.A2W:
+         DIR C:\AVI\*.avi /b >AVILIST.A2W
+
+Then we add filenames from D:\BUGMEDIA:
+         DIR D:\BUGMEDIA\*.avi /b >>AVILIST.A2W
+
+After that, we edit AVILIST.A2W and add * lines:
+
+* C:\AVI                  <- manually added - next 2 file will search in C:2AVI
+file1.avi       <- added by DIR
+file2.avi
+* D:\BUGMEDIA    <- manually added - next 3 file will search in D:\BUGMEDIA
+file1.avi       <- added by DIR
+file2.avi
+file3.avi
+
+We could also use:
+         DIR C:\AVI\*.avi /b /s >AVILIST.A2W
+         DIR D:\BUGMEDIA\*.avi /b /s >>AVILIST.A2W
+
+and result will depend on contents of subdirs in C:\AVI and D:\BUGMEDIA if there are any subdirs at all, and if there are AVI files in them. In this case, we don't need to use *.
+
+See SAMPLESCRIPT.A2W for details and try to extract from it to see what happens ...
+

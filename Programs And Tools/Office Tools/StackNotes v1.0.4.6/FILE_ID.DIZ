@@ -1,0 +1,50 @@
+Program:  StackNotes
+Version:  1.046
+Release:  30-09-2018
+
+
+Program Description:
+
+Use StackNotes pages to record notes and lists of things
+to do...
+
+The first line of each StackNotes page is used as the Table
+of Contents entry. 
+Use the Edit menu to Cut, Copy and Paste notes and lists.
+StackNotes pages are automatically saved whenever you browse
+through your notes. Each StackNotes page can contain up to
+32K of ASCII text. 
+
+Features :
+Table of Contents, Drag & Drop, Priorities, Find & Replace,
+Built-in Help, Auto Saving, Desktop Locations, Taskbar Tray
+
+Contents of Zip file:
+
+  Name				Size (bytes)	   Description
+  --------------------------------------------------------------
+  FILE_ID.DIZ			1524		this description file
+  CAB10.DLL			143872		compression dynamic link library
+  lame.exe			282112		MP3 encoder program
+  StackNotes.exe		125952		main executable program
+  History.txt			10777		log of changes
+  Manual.chm			20898		documentation
+
++ file "Checksums.md5" for CRC checksums.
++ the program sources are included under the "Sources" subfolder.
+
+System Requirements:
+
+ . Windows 2000
+ . 486DX or higher processor
+ . 16 MB of memory (32 MB recommended)
+ . 1 MB of available disk space
+ . VGA or higher-resolution graphics card set
+   to 64K colors for best results
+ . Mouse or compatible pointing device
+
+Direct all questions, comments to:
+
+  Author: yannick dalissier
+  E-mail: yannick_dalissier@gmx.com
+Internet: https://sourceforge.net/projects/stacknotes/

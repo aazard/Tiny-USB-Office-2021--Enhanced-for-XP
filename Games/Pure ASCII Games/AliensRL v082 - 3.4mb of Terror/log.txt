@@ -1,0 +1,284 @@
+0:21:26 : INFO    : --- Logging start : 2020-12-02 0:21:26 ---
+0:21:26 : REPORT  : ---------------------- Compiler info -------------------------
+0:21:26 : REPORT  : This program was compiled at 21:45:48 on 2012/09/07 by 
+0:21:26 : REPORT  : Compiler version  : 2.6.0
+0:21:26 : REPORT  : Target OS         : Win32
+0:21:26 : REPORT  : Target CPU        : i386
+0:21:26 : REPORT  : ---------------------- OS runtime info -----------------------
+0:21:26 : REPORT  : Current dir       : C:\Users\PCX-001-R5-3600XT\Downloads\aliensrl-win-082
+0:21:26 : REPORT  : Local time        : 12-02-2020 00:21:26
+0:21:26 : INFO    : <TSystems//0> Initialized.
+0:21:26 : INFO    : <TGame//0> Initialized.
+0:21:26 : INFO    : <TGame//0> Loading config.lua...
+0:21:26 : INFO    : <TGame//0> Parsing command line...
+0:21:26 : INFO    : <TFMODSound//0> Initialized.
+0:21:26 : INFO    : <TSDLIODriver> Initializing SDL...
+0:21:26 : INFO    : <TSDLIODriver> Checking mode 1024x768/32bit...
+0:21:26 : INFO    : <TSDLIODriver> Mode 1024x768/32 set.
+0:21:26 : INFO    : <TSDLIODriver> SDL IO system ready.
+0:21:26 : INFO    : <TGLConsoleRenderer> Requesting capabilities [ CON_CURSOR CON_EXTCOLOR ]...
+0:21:26 : INFO    : <TGLConsoleRenderer> Initializing GL Console Renderer...
+0:21:26 : INFO    : <TGameUI//0> Initialized.
+0:21:26 : INFO    : <TGameLua//0> Initialized.
+0:21:26 : INFO    : <TGameLua//0> Loading Lua...
+0:21:26 : INFO    : <TGameLua//0> Loading data from aliensrl.dat...
+0:21:26 : INFO    : <TVDataFile> Loading "aliensrl.dat"...
+0:21:26 : INFO    : <TVDataFile> Loaded "aliensrl.dat" (27 files).
+0:21:26 : INFO    : <TGameLua//0> Reading "const.inc" size (3821bytes) (0-3821)
+0:21:26 : INFO    : <TGameLua//0> Loaded "const.inc" (3821bytes)
+0:21:26 : INFO    : <TGameLua//0> Reading "core.lua" size (29825bytes) (0-29825)
+0:21:26 : INFO    : LuaRequire, entering...
+0:21:26 : INFO    : LuaRequire("aliensrl:functions")
+0:21:26 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "functions.lua")
+0:21:26 : INFO    : <TGameLua//0> Reading "functions.lua" size (4214bytes) (0-4214)
+0:21:26 : INFO    : <TGameLua//0> Loaded "functions.lua" (4214bytes)
+0:21:26 : INFO    : <TGameLua//0> Loaded "core.lua" (29825bytes)
+0:21:26 : INFO    : <TGameLua//0> Reading "main.lua" size (1124bytes) (0-1124)
+0:21:26 : INFO    : LuaRequire, entering...
+0:21:26 : INFO    : LuaRequire("aliensrl:items")
+0:21:26 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "items.lua")
+0:21:26 : INFO    : <TGameLua//0> Reading "items.lua" size (10315bytes) (0-10315)
+0:21:26 : INFO    : <TGameLua//0> Loaded "items.lua" (10315bytes)
+0:21:26 : INFO    : LuaRequire, entering...
+0:21:26 : INFO    : LuaRequire("aliensrl:ai")
+0:21:26 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "ai.lua")
+0:21:26 : INFO    : <TGameLua//0> Reading "ai.lua" size (14785bytes) (0-14785)
+0:21:26 : INFO    : <TGameLua//0> Loaded "ai.lua" (14785bytes)
+0:21:26 : INFO    : LuaRequire, entering...
+0:21:26 : INFO    : LuaRequire("aliensrl:aliens")
+0:21:26 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "aliens.lua")
+0:21:26 : INFO    : <TGameLua//0> Reading "aliens.lua" size (8212bytes) (0-8212)
+0:21:27 : INFO    : <TGameLua//0> Loaded "aliens.lua" (8212bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:ammos")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "ammos.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "ammos.lua" size (5144bytes) (0-5144)
+0:21:27 : INFO    : <TGameLua//0> Loaded "ammos.lua" (5144bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:armors")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "armors.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "armors.lua" size (2039bytes) (0-2039)
+0:21:27 : INFO    : <TGameLua//0> Loaded "armors.lua" (2039bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:cells")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "cells.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "cells.lua" size (8284bytes) (0-8284)
+0:21:27 : INFO    : <TGameLua//0> Loaded "cells.lua" (8284bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:cells_doors")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "cells_doors.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "cells_doors.lua" size (5628bytes) (0-5628)
+0:21:27 : INFO    : <TGameLua//0> Loaded "cells_doors.lua" (5628bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:cells_furniture")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "cells_furniture.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "cells_furniture.lua" size (12755bytes) (0-12755)
+0:21:27 : INFO    : <TGameLua//0> Loaded "cells_furniture.lua" (12755bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:items")
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:klasses")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "klasses.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "klasses.lua" size (3415bytes) (0-3415)
+0:21:27 : INFO    : <TGameLua//0> Loaded "klasses.lua" (3415bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:skills")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "skills.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "skills.lua" size (2480bytes) (0-2480)
+0:21:27 : INFO    : <TGameLua//0> Loaded "skills.lua" (2480bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:missions")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "missions.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "missions.lua" size (4405bytes) (0-4405)
+0:21:27 : INFO    : <TGameLua//0> Loaded "missions.lua" (4405bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:towers")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "towers.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "towers.lua" size (2441bytes) (0-2441)
+0:21:27 : INFO    : <TGameLua//0> Loaded "towers.lua" (2441bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:weapons")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "weapons.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "weapons.lua" size (6356bytes) (0-6356)
+0:21:27 : INFO    : <TGameLua//0> Loaded "weapons.lua" (6356bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:generator")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "generator.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "generator.lua" size (40599bytes) (0-40599)
+0:21:27 : INFO    : <TGameLua//0> Loaded "generator.lua" (40599bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:generators")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "generators.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "generators.lua" size (20084bytes) (0-20084)
+0:21:27 : INFO    : <TGameLua//0> Loaded "generators.lua" (20084bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:levels")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "levels.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "levels.lua" size (16912bytes) (0-16912)
+0:21:27 : INFO    : <TGameLua//0> Loaded "levels.lua" (16912bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:rooms")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "rooms.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "rooms.lua" size (8153bytes) (0-8153)
+0:21:27 : INFO    : <TGameLua//0> Loaded "rooms.lua" (8153bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:room_sets")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "room_sets.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "room_sets.lua" size (645bytes) (0-645)
+0:21:27 : INFO    : <TGameLua//0> Loaded "room_sets.lua" (645bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:layouts")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "layouts.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "layouts.lua" size (10581bytes) (0-10581)
+0:21:27 : INFO    : <TGameLua//0> Loaded "layouts.lua" (10581bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:elements")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "elements.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "elements.lua" size (6492bytes) (0-6492)
+0:21:27 : INFO    : <TGameLua//0> Loaded "elements.lua" (6492bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:effects")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "effects.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "effects.lua" size (4840bytes) (0-4840)
+0:21:27 : INFO    : <TGameLua//0> Loaded "effects.lua" (4840bytes)
+0:21:27 : INFO    : LuaRequire, entering...
+0:21:27 : INFO    : LuaRequire("aliensrl:hints")
+0:21:27 : INFO    : LuaRequire( Module "aliensrl", Path "", FileName "hints.lua")
+0:21:27 : INFO    : <TGameLua//0> Reading "hints.lua" size (1403bytes) (0-1403)
+0:21:27 : INFO    : <TGameLua//0> Loaded "hints.lua" (1403bytes)
+0:21:27 : INFO    : <TGameLua//0> Loaded "main.lua" (1124bytes)
+0:21:27 : INFO    : <TGameLua//0> aliensrl.dat loaded.
+0:21:27 : INFO    : <TGameLua//0> Lua data loaded.
+0:21:31 : INFO    : <TUIDStore//0> Initialized.
+0:21:31 : INFO    : <TWorld//1> Generating world...
+0:21:31 : INFO    : <TWorld//1> Generating civilian...
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 1 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 1 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 2 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 2 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 3 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 3 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 4 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 4 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 5 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 5 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 6 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 6 )
+0:21:31 : INFO    : <TWorld//1> Generating civilian, level 7 (civilian)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( civilian civilian 7 )
+0:21:31 : INFO    : <TWorld//1> Generating medical...
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 1 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 1 )
+0:21:31 : INFO    : No items3 for level medical level 1!
+0:21:31 : INFO    : No items3 for level medical level 2!
+0:21:31 : INFO    : No items3 for level medical level 3!
+0:21:31 : INFO    : No items3 for level medical level 4!
+0:21:31 : INFO    : No items3 for level medical level 5!
+0:21:31 : INFO    : No items3 for level medical level 6!
+0:21:31 : INFO    : No items3 for level medical level 7!
+0:21:31 : INFO    : No items3 for level medical level 8!
+0:21:31 : INFO    : No items3 for level medical level 9!
+0:21:31 : INFO    : No items3 for level medical level 10!
+0:21:31 : INFO    : No items3 for level medical level 11!
+0:21:31 : INFO    : No items3 for level medical level 12!
+0:21:31 : INFO    : No items3 for level medical level 13!
+0:21:31 : INFO    : No items3 for level medical level 14!
+0:21:31 : INFO    : No items3 for level medical level 15!
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 2 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 2 )
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 3 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 3 )
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 4 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 4 )
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 5 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 5 )
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 6 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 6 )
+0:21:31 : INFO    : <TWorld//1> Generating medical, level 7 (medical)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( medical medical 7 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering...
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 1 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 1 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 2 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 2 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 3 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 3 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 4 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 4 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 5 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 5 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 6 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 6 )
+0:21:31 : INFO    : <TWorld//1> Generating engineering, level 7 (engineering)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( engineering engineering 7 )
+0:21:31 : INFO    : <TWorld//1> Generating security...
+0:21:31 : INFO    : <TWorld//1> Generating security, level 1 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 1 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 2 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 2 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 3 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 3 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 4 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 4 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 5 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 5 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 6 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 6 )
+0:21:31 : INFO    : <TWorld//1> Generating security, level 7 (security)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( security security 7 )
+0:21:31 : INFO    : <TWorld//1> Generating military...
+0:21:31 : INFO    : <TWorld//1> Generating military, level 1 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 1 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 2 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 2 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 3 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 3 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 4 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 4 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 5 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 5 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 6 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 6 )
+0:21:31 : INFO    : <TWorld//1> Generating military, level 7 (military)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( military military 7 )
+0:21:31 : INFO    : <TWorld//1> Generating storage...
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 1 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 1 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 2 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 2 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 3 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 3 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 4 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 4 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 5 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 5 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 6 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 6 )
+0:21:31 : INFO    : <TWorld//1> Generating storage, level 7 (storage)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( storage storage 7 )
+0:21:31 : INFO    : <TWorld//1> Generating main...
+0:21:31 : INFO    : <TWorld//1> Generating main, level 1 (main)
+0:21:31 : DEBUG   : <TWorld//1> CreateLevel( main main 1 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 2 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 2 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 3 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 3 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 4 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 4 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 5 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 5 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 6 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 6 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 7 (main)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main main 7 )
+0:21:32 : INFO    : <TWorld//1> Generating main, level 8 (main8)
+0:21:32 : DEBUG   : <TWorld//1> CreateLevel( main8 main 8 )
+0:21:41 : INFO    : <TWorld//1> World generated successfully.
+0:21:41 : INFO    : <TWorld//1> UIDCounter at 4255
+0:22:19 : INFO    : <TSystems//0> Closed.
+0:22:19 : INFO    : <TFMODSound//0> Closed.
+0:22:19 : INFO    : <TGameUI//0> Closed.
+0:22:19 : INFO    : <TGameLua//0> Closed.
+0:22:19 : INFO    : <TGame//0> Closed.
+0:22:19 : INFO    : <TUIDStore//0> Closed.
+0:22:19 : INFO    : --- Logging end   : 2020-12-02 0:22:19 ---

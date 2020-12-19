@@ -1,0 +1,50 @@
+------------------------------------------------------------
+Stranded Tips & Tricks
+------------------------------------------------------------
+
+1. Sleep on trees 
+Sleep on trees or in water if lions or raptors are nearby.
+Run against a tree and hold your jump key in order to climb it.
+
+2. Water storage
+Use leafs at water wells in order to fill them with water.
+This way you can always carry it with you.
+
+3. Construction 
+Build your buildings close to eachother. Pick an area close to the
+sea with sufficient building area, berries, palm trees and a well.
+
+4. Keep an eye on character status
+Always pay attention to hunger, thirst and fatigue levels.
+Always carry some food along with you.
+
+5. Grain and hemp growing
+You can plant the seeds of grain and hemp into the soil.
+Let it grow for over 2 nights to attain maximum harvest.
+
+6. Fishing bait 
+Use worms as a fishing bait in order to catch more fish.
+You can often find worms anywhere in the area without plants or stones.
+The worm is automatically used as bait when you use a fishing pole.
+
+7. Axe without hemp!
+If you don't feel like harvesting hemp for an old man,
+you can simply kill him. This is an alternative way of getting an axe.
+
+8. More hemp
+The old man's small hemp field will gradually generate more hemp to be
+harvested. (3x3 hemp plants, each with 3 hemp leaves = 27 hemp leaves!)
+You must sleep only one night, and already on the next morning there will
+grow more hemp. Still works even if you killed the old man.
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+©by Unreal Software 2004 - www.unrealsoftware.de
+THX ² [Shizo] for the translation!
+------------------------------------------------------------

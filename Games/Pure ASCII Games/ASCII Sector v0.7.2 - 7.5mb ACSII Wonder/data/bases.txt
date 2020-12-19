@@ -1,0 +1,967 @@
+          *MMMMMMM*
+         dMMMMMMMMMb
+         MMMMMMMMMMM
+         VMMMMMMMMMP
+          VP  0  VP
+     dMb      0      dMb
+    *MMMb     0     dMMM*
+    MMMMP     0     VMMMM
+    MMMM     dMb     MMMM
+    MMMM    dMMMb    MMMM
+    MMMM0000MMMMM0000MMMM
+    MMMM    VMMMP    MMMM
+    MMMM     VMP     MMMM
+    MMMMb     0     dMMMM
+    *MMMP     0     VMMM*
+     VMP      0      VMP
+          db  0  db
+         dMMMMMMMMMb
+         MMMMMMMMMMM
+         VMMMMMMMMMP
+          *MMMMMMM*
+        ..oOMMMMMOo..
+      .:::::::::::::::.
+     ***::::::::::::::::.
+   .**:::::::**:::::::::db
+  .:::::::******:::::::dMP.
+ .:::::*:::::***:*:::::VU::.
+ ::::****::::*:*:**:::::::::
+::::**:::db:::***::::::::::::
+:::**::::VMb::::::::::::**:::
+::***:::::MP:::::::MM::****::
+:::****:::M:::::::MMM****::::
+::::*::::dM:::::::VMMMb:*::::
+::::::::dMP:::::::::VP:::*:::
+ :::::::VP:::::::**:::::::::
+ :::::::::::::::::***:::::::
+  ::*:::::::::dMb:::***::::
+   ::*:::::::::V::::::::::
+    ***::::::::::::::::::
+     ****:::::::::::::::
+      `:::::::::::::::'
+         `-COOOOOD-'
+
+
+
+
+          dMMMMMMb
+       dMMM^MOOO^MMMb
+       MM^MMOOOOOMM^MMb
+      dMMMM^MOOOM^M^MMMb
+     d^MP  V^M»ÕªMMM^M^M
+     MMM    M^MM»ÕªMMMMM
+     M^M    VMM^MOOOM^MM
+     MM^     MMMOOOOOMMP
+     VMMb   dM^M^OOOMMM
+      M^MMMM^MMMMMMM^MP
+      MM^^MMMP   V^MMP
+      V^MMM^P     VMP
+       VMMMP
+
+
+
+
+        ..oOMMMMMOo..
+      .dMMMMMP:::::::db
+     d****MMV:::::::dMMMb
+   .dMM*****:::::**::MMMMb
+  .MMM*****:::::****MMMM:Mb
+ .dMM****::::dP:::***MMP:MMb
+ ::MMP::::**dMP::::::MM::MMb.
+.::VMP::::d***::::dMMMM:dMMMb
+::::V**::dMMP****dMMMMM::MMMM
+:::::d**dMMM:::*****MMMb:MMMM
+::::dMM****M:::::*****MMMMMM*
+:::::VMMM****:::***::VMMMMM**
+::::::M****MM::***::::VMM****
+ ::::***MMMMP:::***::::MMM**
+ :::**:VMMMP::::dM*::::VMP::
+  :**:::VMP::*::MMb:::::U::
+   **::::U::*****MMb::::::
+    ***:::::::**VMMP:::::
+     ***:::::::::UUP::::
+      `:::::::::::::::'
+         `-COOOOOD-'
+       .-d*:**MMM:**-.
+     .**MM*****M**MMM**.
+    dMM****::***:***:M***
+   ::***MM**:M**MM:***M:::
+  ***::****MM**:M::M****MMb
+ dM:****M**:M****MMMMM****Mb
+.M:**M:M:***:::MM:M:M::M:MMM.
+d***MM***:*MM:****::MM**MM::b
+M::******MM**:M****::**MM:M*M
+:**::**MM:**M::M*::MMM:::M**M
+M::***::MMM:::**:MM:**MMM**::
+**M:****M::MM**:MMM*::M*****M
+M****M:**M::MMMMM:***MMM:MMMM
+VM*M::***::M**MM:***:MM**:M**
+`**::M::MM***MMMM::MM:**MMMM'
+ ***:**MMM:M***:::M:***M::M*
+  V**MM***MM:***:M***:MM:**
+   V**MM***:MM:**M:M***MM:
+    ****M***::M:::**MMMMP
+     `:*MM::MMM***:MMMP'
+       `-**M::***:MP-'
+
+
+      dMMb
+     dMMMMb
+    dMMMM^Mb
+    M^M^MMMMb
+   dMM^MM^^MM       dMMMb
+   M^MMOOOMMMb    dMMMM^M
+   MMMOOOOOMMMMMMMM^M^MMM
+   M^MMOOOMM^MMMMMM^MMMMP
+   MM^MM»ªMMMM^^MOO…OO^M
+   VMMM^M»ª^MMMMMOOºOOªMb
+    M^^MMOOOMM^MMMM^M…º^Mb
+    MMMMOOOOOMM^M^MMOOMMMP
+    VM^MMOOOM^MMMMM^OOMMM
+     MMMM^MMMM^MM^MMMM^MP
+     VM^MMMMP  VMMM^MMMP
+       VMP         VMMP
+
+
+
+
+
+
+        db
+      dMMMb
+     dMOOOMb
+     MOOOOOMMb   dMb
+     VMOOOMM^MMMMM^Mb
+      VMMM^MM^MOOMM^P
+       M^MMM^MMOOªMM
+       M^M^MMMM^M»ªM
+      d^MMMMM^MM^OOMD
+      VMM^M^MMMMMOOM
+       MMMMM^MM^MMMMb
+      dMOO^MMMMMMM^^MMb
+      VMOOMP   VMMMM^MM
+       VMMP      VM^MM^D
+                   VMMP
+
+
+
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+        ..oOMMMMMOo..
+      .db:::::::::::::.
+     dMMP*****::::db:*Mb.
+   .dMMM::***b::dMM***M::.
+  .:MMM****MMMb:VMMM*MMb::.
+ .::MMMM**MMMMM::VM*MMMMb::.
+ dMMMMMMMMMMMMP:::**MMMMM:::
+dMMMMMMMMMMMP:::****MM:MMb**:
+MMMM***MMMMMb:****MMMMMMM**::
+VMMMM***MMMMMMMMMMMM::MM*MMD:
+:VMM**:VMMMMMMMMMMMMMMMMM*P::
+::***b::MMMMMMMM***MMMMMMM*::
+:::VMMMMMP:VMMM**MMP:MMM***::
+ :::MMMMM:::VP::**M:dMM***Mb
+ :::MMMMM*::::::::MMMP:VMMMP
+  **M:VM****Mb::CMMP::::VP:
+   **b:VMM***MMb:VP::**:::
+    ****:VMMMMMP::::dMMMP
+     V:***:VMMP::::CMMMP
+      `:::::::::::::::'
+         `-COOOOOD-'
+        ..oOMMMMMOo..
+      .**::::::::*::::.
+    .:**::::::::**::::db.
+   .d*:::::db::****:::VMb.
+  .dMb:d**:VMb::****:::VMb.
+ .dMMP***:::MM::d**MMb*::::.
+ ::VM***::::MMMM**MMMMM**:::
+::::VD:***dMMM***MP:MMMM**:::
+::::::*:::MMMM**MM:dMM***::::
+::::***b::VM:**MMMMMMMM****::
+::***MMMb::U:::VMM**MMMMM:**:
+:::***MMM::::::::*::VMMMM:*::
+:::**MMMM::::M:*****:MM**::::
+ ****MMMP::::Mb::**:dMMM**::
+ ***MMMM::::CMM::d****M*::::
+  ****MM:::::MMMMMMMMMMP*::
+   ::**M::::dMP:VMP:MP**::
+    VM***:::VP::***:U***:
+     VP:***::::**::***::
+      `:::::::::::::::'
+         `-COOOOOD-'
+
+
+
+
+
+
+               dMMMMb
+           dMMMMM^^MMb
+       dMMM^MM^^MMM^M^Mb
+      dMM^MM^MMM^M^MOMMM
+     dM^MM…OOMM^MMMM^M^M
+     VM^MOOM^MMMMM^OMMMM
+      MMMM^MM^MMM^MM^^MM
+      VM^MM^MMMP VMMMM^P
+       VMMMMP      V^MP
+                    VP
+
+
+
+
+
+
+
+
+
+
+           dMMMb
+         dMMMMMMMMb
+        dM^M^MMM^MMMMMb
+       dM^MMMMM^MMMM^MMb
+       MMMMMM^MMMM^MMMMP
+       MMMM^MMMMMMM^MMM
+       VM^MMMMMOOOMMMMP
+        MMMM^MOOOOOM^M
+        VM^MMMMOOOM^MM
+         VMMM^MMMMMMMP
+           V^MMM^M^MP
+              VMMMP
+
+
+
+
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+
+
+         dMMMMb
+       dMM^MMM^MMMMb
+      dMMMM^MMMM^MMMMb
+     dMMMMMMM^MMM^M^MMMMb
+   dMMM^M^M^MMM^MMMMMM^MMb
+  dMMMMMMMMMMMMMMMOOOMMM^Mb
+  VMMM^MMMM…ÕªMMMOOOOOM^MMM
+   MM^MMMM…ºM»ªMMMOOOMMMMMM
+   MMMMMM…ºMMM»ªMM…ºMMM^MMP
+  d^MM^MOOOMMMM»ÕÕºMMM^M^M
+  MM^MMOOOOOM^MMMMMM^MMMMMb
+  VMMMMMOOOMMM^MMMM^MP VMMP
+   VMMMMMMM^M^MMM^MMM   VP
+    VM^M^MMMMMMMMMMMMMb
+     VMMM^MM^MMb  MMM^Mb
+       VMMMMMP VbdM^MMMM
+         VM^P   VMMMMMMP
+                  VMMMP
+
+        .-dMMMMMMMb-.
+      .MMMM^M^^M*MMMMb.
+     ^^M^^MMMMMMM**MMM*b
+    ^MM^MMMMM^MMM***MM^*b
+   dM*MMMMMMMM^^MMM**MM**b
+  dM*MMMMM^MMMMM^MM^*MM*MMb
+ .M*MM^MM^MMM*MMM^MM**M*MMM.
+ dM*M^MMMMMM*MMMM^MMM*MM*MMb
+ M**MM^MMMMM*MMMMM^MM*^MM^MM
+ M**M^MMMM**MM^MMM^MM^MMMM^M
+ MM**^MMM**MM^M^MMMM^MMM*M^M
+ M*M^*^MM**MMMMM^MMM^MM*MMM^
+ MM*^MM^M**MMM*MMMM^MM**MMMM
+ VMM*^MMMM**MM*M**MMMM**MMMP
+ `M^*M^MMMMM*MM*MMMM^**M^MM'
+  ^*M*^MMM^MM**M*MM^M**M^MP
+   V*MM^MMM^MMM*M^MM**M^MP
+    *MMMMMMMMMMM^MMM*M^MP
+     *MMM^MMMMMM^MMMMM^P
+      `MMMMM^MM^MMMMMP'
+        `-VMMMMMMMP-'
+
+         ..oOMMMOo..
+       .:::::*:::::::.
+      ::::::***:::CMb::
+     :A*:db**:::**:VMb::
+    ::M*****:dMb:**:VMb::
+   ::dMb**::dMMMMb***VMb::
+  .::VMMb:dMMMMMMMb:**VP::.
+  ::::VMMMMMMMMMMMMb:*::**:
+  ::A::VMMMMMMMMMMMM:*:*:::
+  :dMD::MP:VMMMMMMMP*:::db:
+  :VM::CP:*:VP:VMMM:*::MMMb
+  ::Vb:::***::**VMMb::MMMMP
+   **VD::::********M::MMMM
+   :**:::dMb:::******:VMMP
+    :**:CMMMMMb:::**:::MP
+     :**::VMMMMD::*::::P
+      :***::VMP::::*:::
+       `:**:::::::*::'
+         ``-COOOD-''
+
+
+
+        dMb
+       dMMMMMb
+      dMMM^MMMMb
+      VMM^MMM^MMMMb
+       VMMMMMMMMM^MMb
+        MMMMOOMMMMM^Mb
+        MMMMOOMM^MMMMMb
+       dMMMM…ºMMMMMMMM^b
+      dM^MM…ºM^MMMOOOMMMb
+     dMMMM…ºMMMMMOOOOOM^M
+    dMM^M…ºMMMM^MMOOOM^MM
+    MM^MMOOMMMMMMMMMMMMMP
+    VMMMMOOMM^MMMMM^MMMP
+     VMMMMMM^MM^M^MMMMP
+      VM^MMMMMMMMMMMMP
+       VMMM^MM^MP
+         VMMP
+
+
+
+
+
+         dMb     dMb
+         MMM     MMM
+         VMP     VMP
+           \_dMb_/  dMb
+             MMM   _MMM
+      dMb    VMP  / VMP
+     dMMMb O  M dMb
+     MM*MMMOMMMMMMM
+     VMMMP O  M VMP
+      VMP    dMb  \_dMb
+            _MMM_   MMM
+           / VMP \  VMP
+         dMb     dMb
+         MMM     MMM
+         VMP     VMP
+
+
+
+
+
+
+
+                db
+               dMMb
+             dMMMMM
+            dMMMMMP
+            MMMMMM
+           dMMOMMM
+           MMOOMMM
+           VMMMMMP
+            MMMMM
+            VMMMP
+             VMP
+
+
+
+
+
+
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+
+
+
+              dMMb
+          dMM^MMMMMb
+         d^MMMMM^MMMb
+      dMMMMMM^MMMMMMM^b
+     dM^MMMMMMMMOOOMMMMMb
+    dM^MM^MMM…ÕOOOOOMM^MMb
+    MMMMOOM…ÕºMMOOOMMMMMMM
+    M^MMOOÕºMMMMMMMMM^MMMP
+    VMM^MMMMMM^MMMMM^MMMP
+      VM^MMMMMM^M^MMMMM^
+       VMMM^MMMMMMMMMP
+         VMMMM^M^MM^P
+          VM^MMMMP
+           ^MMMMP
+            VMMP
+
+
+
+
+         ..:::::::..
+       .:::*::****:::.
+      :::**:*******::::
+     ::::*::::***:*:::Mb
+    ::db::::::::::::::VM:
+   ::::M::::::::::::::::::
+  .::::Mb::::CMb::::::::::.
+  :::::MP:::::VMMMb::::::::
+  ::::dP:::::::VMMMMD::::::
+  *:::M:::::::::VMP:::::*::
+  **::Mb*:::::::::::::::*::
+  :**:VM**:::::::::::::**::
+  `:*::Vb*::::::dD:::::*::'
+   ::*::M**:::dMM::::**:::
+    ::::::****MMMD::**:::
+     :::::::V**MP:::::::
+      :::::::::::::::::
+       `:::::::::::::'
+         ``:::::::''
+
+        ..oOMMMMMOo..
+      .:::::::::::::::.
+    .::::::::::::::::*::.
+   .:::::dMb:dMb:dMMMb*::.
+  .:::::dMMMMMMMMMMMMM*:::.
+ .::*:CMP::VMMMMMMMM:::**::.
+ ::*:::::::::VMMMMMMb:::::::
+:*:*::::::*:**::::VMMD:::::::
+:*:*d*D:**:**:*::::VP:*::::::
+::***P*:**:*::::*::*:*::**:::
+::CP*:**:*****:::***:*:*::*::
+:::**::*::**:**:*::*::***::::
+::**:::::***::::::*::*::*::::
+ ::::::db:::::::::::::**:*::
+ :::::dMMMb::::::::::::db:::
+  ::CMMMMMMb:*:::db::dMMP::
+   ::VM::VMMM*::dMMMMMMP::
+    ::V:::VP*:::VMMMMP:::
+     :::::**::::::VP::::
+      `:::::::::::::::'
+         `-COOOOOD-'
+
+
+
+
+             dMb
+             OOO
+             VMP
+             |||
+           dMMMMMb
+           MMMMMMM
+           MMMMMMM
+           MMMMMMM
+           VMMMMMP
+             |||
+             dMb
+             OOO
+             VMP
+
+
+
+
+
+
+
+
+             dMb
+             OOO
+             VMP
+             |||
+           dMMMMMb
+           MMMMMMM
+           MMMMMMM
+           MMMMMMM
+           VMMMMMP
+             |||
+             dMb
+             OOO
+             VMP
+
+
+
+
+        ..oOMMMMMOo..
+      .::**:::::**::::.
+    .db:****:::::****:db.
+   .dMP***::dMMb::***dMMb.
+  .dMP**:dMMM*MMMMb****MP:.
+ .::V**::MMMMM**MMMb:**V:::.
+ ::::*:dM**MMMM**MMMb:::::::
+::::*:dMMM**MMMM*MMMMMb::**::
+::*::dMMMMMM*MMMMMMMMM*Mb:**:
+::*::MMMM*M*MMMMMMMMM**MMb**:
+::**:MMMM*MMMMMMMMMMM***MM:**
+:::**VMMM***MMMMMP:V***MMMD**
+::M:*:MMMM***P:VP::**MMMMP**:
+ dM:**VMMMMMP:::::***VP:::*:
+ VMb*::VMMMM:::::***:::::*::
+  VMb*::VMMP::db**::::::**:
+   VM:*::::*::V**MMb:::**:
+    V:::::***::VMMMMD:***
+     ::::::***::::VP***:
+      `::::::***::::*:'
+         `-COOOOOD-'
+
+         db
+        dMMMb
+       dM^MMMb
+      d^MMM^MM^
+      MMMOOMMMMb
+     dMMMOOM^MMP     dMb
+     ^M^M…ºMMMP    dM^MMMb
+    dMMMM∫M^MP    dMMM^MMM
+   dMM^M…ºMMM    dMM^…OO^P
+   MM^MM∫MMM^b  dM^MM∫OOM
+   M^MM…º^MMMMMM^MMM…ºMMP
+   VMM^∫MMM^M^M^MM^…º^MM
+    ^MM»OOMMMMMMOO…ºMMMP
+     V^MOOMM^M…ÕOOºMM^M
+      VMM»ªMMM∫MMM^M^MP
+        ^M»ªOOºM^MMMMP
+       dMM^»OOM^  VMP
+       V^MMM^MMP
+        VMM^MMP
+
+        ..oOMMMMMOo..
+      dP::***:::***MMb.
+    .dP::**:::dMM****MMb.
+   .:::***::::VMM:M*:MM:b.
+  .::*dMMM*::::VMMM***MMMb.
+ .::*dM:MMb**Mb::VMMM**:MMb.
+ :d**MMM::Mb**Mb:::::*MMM::b
+:d***M:MMMMM**VP::::::*M:MMMb
+:MM*:MM:MM:M:*::::::***VM:MMP
+:V***MMMM:MP***MMM:b:**:VMMP:
+::V**MMM:MM:**MM:MMMb::*:::::
+:::MMM::MMM:dM:MM:MMMb:**::::
+:::M:MMMMMM:VM:M:M:MM:b:*::::
+ ::****::MM::VMMMM::MMM:*:::
+ ::M*****MM:::VMM:MMM:M**:::
+  :MM***MMP::::::VM:MM*::::
+   VM:M****::dMb::VM***:::
+    VM:M**::dMMMD:::*::::
+     VMMM**:VMMP:::**:::
+      :VP:::::::::::::'
+         `-COOOOOD-'
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+
+         ..oOMMMOo..
+       .*::::::::::::.
+      **:::::dMMb:*:dMb
+     *::dMMMMMMMMMM**MMb
+    :*:dMMMMMMMMMMMM**MMb
+   :*:d**MMMMMMMMMMMM*MP::
+  .*****P::VMMMMMMMMMMP:::.
+  ::**:::::::::VMMP:*:*::::
+  :*:::::****::::::**:::*::
+  *:::::**::***:::*::::*:::
+  **::::::*::::::::::*:*:::
+  :**Mb:::::dMMMb:::::**:::
+   d**MMMMMMMMMMMMMb:**:::
+   VMM**MMMMMMMMMMMP:**:::
+    VMM**MMMMMMMMMP:**:::
+     VMM***MMMMP:::***::
+      VMP:**:::::**::::
+       `:::::::::::::'
+         ``-COOOD-''
+
+
+
+
+
+                  dMMb
+                 dMM^Mb
+                dM^MMMMb
+                MMOOOM^M
+                MOOOOOMM
+         dMMb  dMMOOOMMP
+       dMM^M^MMM^M…ºM^M
+      dMM^MM…ÕÕÕÕÕº^MMM
+      MMMOO…ºMMMMMMM^MP
+      M^MOOºM^P  V^MMP
+      VMM^MMMM    VMP
+       VMMM^MP
+          VMP
+
+
+
+
+
+
+
+
+        dMMb
+       d^MMMb
+       MMM^MM
+       VM^MMMb   dMb
+        VMM^MMMMMM^M
+         VMMMMMO^MMMb
+          VM^MOOOMM^Mb
+           MMOO*OM^MMP
+           MMMOOOMM^P
+           VMMM^MMMP
+            M^MM^P
+            VMMMP
+             VP
+
+
+
+
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+             dMb
+             MOM_ dMb
+             VMP \MOM
+              |   VMP
+              |
+              |
+            dMMMb
+           dMMMMMb
+          dMMMMMMMb     \
+          MMMMMMMMM    dMb
+        --MMMMMMMMM----MOM
+          MMMMMMMMM    VMP
+          VMMMMMMMP
+           VMMMMMP
+            VMMMP
+              |
+              |
+              |
+           \_dMb_
+             MOM
+             VMP
+
+
+
+
+
+
+            dMMMb
+           dMMMMMb
+          dMP | VMb
+          MM dMb MM
+          MMƒMMMƒMM
+          MM VMP MM
+          VMb | dMP
+           VMMMMMP
+            VMMMP
+
+
+
+
+
+
+
+
+         dM*     *Mb
+        dMMM     MMMb
+       dMMMM     MMMMb
+      *MMMMP     VMMMM*
+      MMMMP       VMMMM
+      MMMM         MMMM
+      MMMM   dMb   MMMM
+      MMMM  dMMMb  MMMM
+      MMMM  MMMMM  MMMM
+      MMMM  VMMMP  MMMM
+      MMMM   VMP   MMMM
+      MMMM    0    MMMM
+      MMMMb   0   dMMMM
+      *MMMMMMMMMMMMMMM*
+       VMMMMMMMMMMMMMP
+        VMMMMMMMMMMMP
+         *MMMMMMMMM*
+
+
+             dMb
+        dMb _MOM_ dMb
+        MOM/ VMP \MOM
+        VMP   |   VMP
+    dMb       |       dMb
+    MOM       |       MOM
+    VMP     dMMMb     VMP
+     /     dMMMMMb     \
+    /     dMMMMMMMb     \
+   dMb    MMMMMMMMM    dMb
+   MOM----MMMMMMMMM----MOM
+   VMP    MMMMMMMMM    VMP
+    \     VMMMMMMMP     /
+     \     VMMMMMP     /
+    dMb     VMMMP     dMb
+    MOM       |       MOM
+    VMP       |       VMP
+        dMb   |   dMb
+        MOM\_dMb_/MOM
+        VMP  MOM  VMP
+             VMP
+
+              dMb
+             dMMMb
+            dM^M^M
+            M^MMMM
+           dMMMMM^b
+          ^MMOOOMMM
+         dM…OOOOOMM
+        dMM∫MOOOMMMb
+        MM…ºMM∫MM^MM
+       dMM∫MMM»ªMMM^b
+      dMM…ºM^MM»ª^MMM
+     dM^MOOMMM^M»ªMMMb
+     MMMMOOMM^MMM»OO^Mb
+     VMM^MM^MMMM^MOOMMMb
+      V^MMMMMMMMMM^MM^MMD
+       VMM^MM  VMMM^MMMP
+        VMM^P    VMMMMP
+          VP       V^P
+
+
+
+         ..****:::..
+       .::**:::::::::.
+      :::*::::::**:::**
+     :::::::::::::***::*
+    ::**:::::::dMb:::::::
+    :*::**:::dMMMMb::db::
+   :***:::dMMMMMMMMMMMMb::
+   **::::dMMMMMMM**MMMMM::
+   ::::::MMM**MM**MMMMMP::
+   ::::::VMMM***MMMMMMP:::
+   :::::::VMMMMMMMMMMP::::
+   :***:::::VMMMMMMP::::*:
+   :db:**::::::VP:::::**::
+    VMd::***:::::::::*:::
+    :MP:***::**::::**::::
+     V:::****:::::::::::
+      :::::::::::::::::
+       ':::::***::*::'
+         '':::::**''
+
+        ..oOMMMMMOo..
+      .*:::::::::::::b.
+    .:***:::::dMMb:::MMb.
+   .:*:::dM::dMMMMMMMMMMb.
+  .::***:VMM:MMMMMMMMMMMMb.
+  :::::***VMMMMMM**MMMMMMMb
+ ::dMMb::***:VMM****MMMMMMP:
+ :dMMMMMb:***:***MMMMP::VP:*
+ :MMMMMMMb:****MMMMP::::::*:
+ :VMMMMMMM:::*VMMMP::*::***:
+ *::V*MMMMb::::VMP:**::::*::
+ **:****MMMMb::::****:db::*:
+ :***VM***MMMMb:**::dMMMb:::
+ :::**VM**MMMMP**::dMMMMMb::
+  ::***:MM*MMP:*::dMMMMMMP:
+  :**:**VMMMP:***CMMMMMMP::
+   :*MMb::VP::*:****MMMP::
+    V*MMMb:::db:::***VP::
+     VMMMMD:CMMD:::**:::
+       VP:::::::::::::'
+         '-COOOOOD-'
+
+         .dMMMMMMMb.
+       .dMMMMMMMMMMMb.
+      dMMMMMMM^MMMMMMMb
+     dMMMM|/MMM^M^MMMMMb
+    dM^MM-o-MMMMMM^MMMMMb
+   .M^MMM/MMMMMMMMMMMMMMM.
+   dMMOMMMMMMOOMMMMMMM^MMb
+   MMOOMMMMMMMMMMM/MMMM^MM
+   MMMM^MMM^MMMM-oMMMMMMMM
+   MMM^MMMMM^^MMM|\MOMM^MM
+   MMM^MMOMMMM^MMMMMOMMM^M
+   MMMMMMMMMMMMMMMMMMMM^MM
+   VMMM^MMM\M/MMMM^MMM^MMP
+   'MMMMMMM-o-MMMMM^MMMMM'
+    VMMMMMMMM\MMMMM^MMMMP
+     VMMMMMMMMM^MMMMMMMP
+      VMM^^MMMMMMMMMMMP
+       'VMM^^MMMMMMMP'
+         'VMMMMMMMP'
+
+        ..oOMMMMMOo..
+      .*::::::::::::::.
+    .**:dMb::::***:::***.
+   .**:dMMP:::*:::****:::.
+  .::::VMP::::::::::::::::.
+ .::::::*::::dMMMMMb::::dMb.
+ dMMb:**:::dMMMMMMMMMMMMMMMb
+:MMM***MMMMMMMMMMMMMMMMMMMMMb
+dM***MMMMMMMMMMMMMMMMMMMMMM*M
+MMMMMMMMMM*MMMM****MMMMMMM*MM
+MMMMMMMM**MMM***MM****MM***MM
+MMMMMMM**MMMMMMMMMMMM****MMMM
+VM**MMM***MMMMMMMMMMMM**MMMMP
+ MM**M*MM***MMMMMMMMMMMMMMMM
+ VMM***MMMMMMMMMMMMMMMMMMMMP
+  VMM***MMP::::VMMMMMMMMP::
+   VMMMMP::::**:::VMMMP:::
+    VMP:::*:**:**:::U::::
+     ::::::**:::***:::::
+      ':::::::::::::::'
+         '-COOOOOD-'
+        ..oOMMMMMOo..
+      .:::::::::::::**.
+     dMMMb::::***::::***.
+   dMMM:MMM**b::**:::::::.
+  dM::MMM***MMMMM*MMb:::::.
+ .VMM:MMM:MMM:MM:MMMP::::::.
+ :::VMM:MM**:MMMMMP::::dMMMM
+:::::VMMM::*M:MMP:::::CMMMMMb
+::::::::VMMMMP:::::::::VMMMMM
+::::dMb:::::::::::::::::::VMM
+:::CMMMMb:***::::::::****::::
+:**:VMMMM::**::dMb::::****:::
+:::::VMMMb::***MMMb::*****:::
+ ::::::MMMD::*::VMP:::***:::
+ :::CMMMMP::::::::::***:::::
+  :::VMMP::::::dMMMMMb:::::
+   :::**::::dMMMMMMMMP::::
+    :::***:CMMMMMMMMP::::
+     :***:::VMMP::::::::
+      `:::::::::::::::'
+         `-COOOOOD-'
+-

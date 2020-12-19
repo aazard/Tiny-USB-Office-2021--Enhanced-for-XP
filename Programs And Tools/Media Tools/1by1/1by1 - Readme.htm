@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>1by1 Documentation</title>
+<style type="text/css">
+body {margin:40px; padding: 0px; background-color: #f4f6f8;}
+* {font-family: Arial, Geneva, Verdana, Helvetica, sans-serif; color: #000000; font-size: 1.0em;}
+h1 {font-size: 3.0em; font-weight: bold; margin-bottom: 0px; margin-top: 30px;}
+h2 {font-size: 1.4em; font-weight: bold; margin: 60px 0px 30px 0px;; background-color: #d4dbdf; padding: 10px 30px;}
+h3 {font-size: 1.2em; font-weight: bold; margin-bottom: 0px; margin-top: 30px; margin-left: 30px;}
+h4 {font-size: 1.2em; font-weight: bold; margin: 0px;}
+p {text-align: justify; margin-bottom: 10px; margin-top: 14px; width: 90%; margin-left: 80px;}
+a {text-decoration: underline; color: #000000;}
+ul {list-style-type: square; margin-left: 100px; margin-top: 10px; margin-bottom: 20px;}
+a:hover {text-decoration: underline;}
+table {margin-left: 60px; margin-bottom: 20px; margin-top: 10px; border: 0px; border-collapse: collapse;}
+td {padding: 2px 20px; vertical-align: top;}
+p.note {border: 2px solid #d4dbdf; padding: 6px; width: 80%; margin-left: 100px;}
+pre {margin-left: 80px;}
+</style>
+</head>
+<body>
+
+<h1>1by1</h1>
+<h4>The Directory Player</h4>
+<h2>Contents</h2>
+<table>
+<tr><td><a href="#bas">General</a></td><td>Overview, Resume play, Bookmarks, Uninstall</td></tr>
+<tr><td><a href="#mov">Track handling</a></td><td>Move, Skip, Sort, Shuffle, Repeat, Intro scan, Drop, Insert</td></tr>
+<tr><td><a href="#lis">Search and lists</a></td><td>Directory finder, File finder, Playlists, Cue sheets, Status bar</td></tr>
+<tr><td><a href="#key">Keyboard control</a></td><td>Keyboard shortcuts, Hotkeys, Command line options</td></tr>
+<tr><td><a href="#aud">Audio configuration</a></td><td>MP3 decoders, BASS, Plugins, Audio settings, Enhancers</td></tr>
+<tr><td><a href="#opt">Other settings</a></td><td>Control options, List options, Display, Pictures, Big view</td></tr>
+<tr><td><a href="#fea">More features</a></td><td>Systray, Logging, WAV export, HTTP server</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="#new">Version history</a></td></tr>
+<tr><td><a href="#faq">FAQ</a></td></tr>
+</table>
+
+<a id="bas"></a>
+<h2>General features</h2>
+<h3>The Directory Player</h3>
+<p>
+1by1 is a small and versatile audio player for MP3 and many more audio formats supported by the BASS
+library or by plugins - as WAV, OGG, AAC, MP4, FLAC, CD. With no need for playlists it simply plays your tracks,
+one by one directly from your directories.
+</p><p>
+The player focuses on smart file handling and enhanced play features. You won't find visual effects or skins. On the
+other hand you get many extra features like audio enhancing, crossfading, file finder, Cue sheet and Playlist support.
+</p>
+<h3>General usage</h3>
+<p>
+Browse your folders using the tree and start tracks from the lists. Besides the configurable toolbar there are some
+<b>menus</b> to be opened by right clicking: On the toolbar (also by F1) you reach the <b>Main menu</b> with
+<b>Options menu</b>, History and Bookmarks. Track list and Tree items have <b>Context menus</b>.
+</p>
+<h3>Resume Play</h3>
+<p>
+The <b>Resume</b> function is not just a simple pause button. It remembers the played file and the position -
+even when the program was closed. To resume a track, press the <b>Stop/Play</b> button or the Space key.
+1by1 always starts in the previously played folder by default.
+</p>
+<h3>Bookmarks</h3>
+<p>
+You can store up to 30 tracks, folders, Cue sheets or playlists. They are shown in the <b>Main/Bookmarks
+menu</b>. Under the Bookmarks item in the tree, local folders and lists are also shown. To <b>add a bookmark</b> you
+have three ways: 1. track context menu, 2. tree context menu folders/lists, 3. Main menu for the current position.
+</p>
+<h3>Uninstall</h3>
+<p>
+To remove 1by1 from your system, simply delete the program folder and the shortcuts. The program does not create
+any Registry entries. 1by1 tries to store its <i>ini-File</i> in the program folder. If you don't have write access there, the
+settings are stored in the folder <i>1by1</i> in the user profile, usually under <i>AppData\Roaming</i>. To remove it
+from there, you can easily use the <i>Uninstall...</i> function in the System section of 1by1's settings.
+</p>
+
+<a id="mov"></a>
+<h2>Track handling</h2>
+<h3>Moving and skipping tracks in the list</h3>
+<p>
+The <b>Next</b> button moves selected tracks to the position after the current. To exclude a track from being played,
+press the <b>Skip</b> button, which never deletes any file but removes it temporarily from the list until it is reloaded.
+Tracks can also be <b>dragged</b> with the mouse or moved with <b>Shift+(Page) Up/Down</b>. On changing or
+reloading the folder, any changes will be forgotten.
+</p><p>
+<b>Tip:</b> To let 1by1 continue at another position, skip the current track and select the next track to be played.
+</p>
+<h3>Sort and shuffle files</h3>
+<p>
+You can sort your file list with the tab buttons. <b>Shuffle</b> (random file listing) is enabled by the <b>Shuffle button</b>
+in the toolbar. To shuffle again press the same button. To leave the Shuffle mode, press one of the sort buttons.
+Jumping into random directories is not possible. But you can play a <b>whole path shuffled</b> by listing subfolder
+contents (see below).
+</p>
+<h3>Repeat modes</h3>
+<ul>
+<li>Regular play
+<li>Repeat all tracks (of the folder or the whole drive - depending on <i>Auto search dirs</i> set)
+<li>Repeat the current track (works not with Cue sheets)
+<li>Play only one track (works not with Cue sheets)
+<li>Repeat only current track: temporary enabled until the track is changed
+<li>Stop only after current track: one time usage of Play one track
+</ul>
+<h3>Dropping files</h3>
+<p>
+A single file or a group of files can be dropped into 1by1 - with different effects:
+<ul>
+<li>Drop to file list or playlist: Insert track(s) to list
+<li>Drop to folder tree: jump to folder and start track
+</ul>
+</p>
+<h3>Intro scan</h3>
+<p>
+Gives an audible overview of the tracks in the current list. Opened from the <b>Main menu</b> or by <b>Ctrl+N</b>.
+It starts from the first or from the selected track and works even with Cue sheets. Scanning multiple folders is not
+possible. Adjust start position and preview duration with the sliders. While Intro scan is running you have access to
+the other funcrtions, e.g. to enqueue files to the playlist view.
+</p>
+<h3>(Auto) insert</h3>
+<p>
+Automated and manual insertion of tracks from another folder to the current list. Opened either by a folder context menu,
+or by sending results of the <b>search dialog</b> to the Insert window. Tracks are added manually with <b>Insert</b>,
+double click or by dragging. Automatic insertions will be done after a time between 1 and 90 minutes (adjusted by the
+slider). The next or the first file will be inserted. Only one file can be auomatically inserted to the same position.
+</p>
+
+<a id="lis"></a>
+<h2>Find and list</h2>
+<h3>Directory finder</h3>
+<p>
+1by1 scans for folders with known file types, playlists and Cue sheets with the <b>Find previous/next folder</b> buttons.
+If <i>Auto search dirs</i> is enabled, 1by1 will search the next folder when it reaches the end of the current. To skip
+playlists and Cue sheets (to prevent files from being played twice), check the corresponding option in the control settings.
+</p>
+<h3>File finder</h3>
+<p>
+By <b>F3 or the tree context menu</b> you can call the file finder for a folder tree item. <b>Shift+F3 or the optional toolbar
+button</b> calls the file finder for the current drive. The finder searches (always including subfolders) for files with currently
+supported types. You can enter a search string (e.g. part of a track name or an extension), a date range, a size range or a
+combination of all (AND combined). A running search can be interrupted by pressing the Esc key.
+</p><p>
+The button <b>To insert view</b> sends the results to the <i>Insert window</i> instead of the normal file list. To list all
+(supported) files of the path and subfolders, press Search with nothing entered. Scanning all drives at once is not possible.
+</p>
+<h3>Playlists and Cue Sheets</h3>
+<p>
+Playlists (*.m3u, *.m3u8) and Cue Sheets (*.cue) appear <b>like folders</b> in the tree. <b>Playlists</b> can be shown
+in their original order, sorted by filename or path or be shuffled. <b>Cue sheets</b> are used to display large files (e.g. CD
+images) with track indices and titles. A Cue sheet can only be played in the given order.
+</p><p class="note">
+<b>Note:</b> Cue sheets used together with <b>VBR files</b> will usually create incorrect cue positions. 1by1 can locate
+the exact cue positions in VBR files with the <i>Control</i> option <b>Scan Cue sheet positions on VBR files</b>. While
+scanning the VBR file for the cues, the program may freeze for a short time.
+</p>
+<h3>Playlist View</h3>
+<p>
+A second list can be opened to compile a playlist from different folders. Use the <b>Playlist button</b> in the toolbar
+(or Shift+F5) to switch it on/off. If you quit 1by1 or close the list, the content will be saved.
+</p><p>
+To add files, simply <b>drag</b> them from the file list or press <b>Ctrl+Return</b> or choose <b>Enqueue</b>
+from the file context menu. You can also enqueue a file at the command line by starting 1by1 with the option
+<i>/enqueue</i> (see Command line options), or drag files from the explorer into the playlist view.
+</p><p>
+For adding existing <b>m3u Playlists</b> to the playlist view, copy the whole list from the normal view to the playlist
+view by selecting all (Ctrl+A). If the file of a playlist entry does not exist, it will not be copied to the playlist view.
+</p><p>
+To <b>export tracks to a playlist file</b>, open the context menu for one or more selected files and use
+<b>Playlist > Create/Append</b>". This works also in the normal file view.
+</p>
+</p>
+<h3>Status bar</h3>
+<p>
+The status bar on the bottom gives information of folder summary, track type and decoder,
+and on the right side some informations about program settings in short form. These are the meanings:
+</p>
+<table>
+<tr><td>QUIT!</td><td>Quitting after current track</td></tr>
+<tr><td>ENH</td><td>Classic audio enhancer enabled</td></tr>
+<tr><td>ENH2</td><td>Multiband audio enhancer enabled</td></tr>
+<tr><td>EQ</td><td>Audio equalizer enabled (only with classic enhancer)</td></tr>
+<tr><td>MONO</td><td>Mono downmixing audio</td></tr>
+<tr><td>MUTE</td><td>Output muted</td></tr>
+<tr><td>OVLP</td><td>Playing gapless and overlapped</td></tr>
+<tr><td>GAPL</td><td>Playing gapless</td></tr>
+<tr><td>SPACE</td><td>Auto space enabled</td></tr>
+<tr><td>SRCH</td><td>Auto search dirs enabled</td></tr>
+<tr><td>FCS</td><td>Continue in focused (last clicked) list</td></tr>
+<tr><td>LOG</td><td>Track logging enabled</td></tr>
+<tr><td>HTTP</td><td>HTTP/streaming server enabled</td></tr>
+</table>
+
+<a id="key"></a>
+<h2>Shortcuts and external control</h2>
+<h3>Keyboard shortcuts</h3>
+<table>
+<tr><td>Up/Down, Page Up/Down,<br>Home/End, Tab  (or Ctrl+PgDown)<br></td><td><b>Navigate</b></td></tr>
+<tr><td>Return</td><td><b>Play</b></td></tr>
+<tr><td>Space</td><td><b>Stop/Resume</b></td></tr>
+<tr><td>Left/Right</td><td><b>Track position (or folder tree control)</b></td></tr>
+<tr><td>Ctrl+Up/Down or Numpad [+] / [-]</td><td><b>Volume</b></td></tr>
+<tr><td>Ctrl+Left/Right or Numpad [/] / [*]</td><td><b>Play prev/next track</b></td></tr>
+<tr><td>Shift+Left/Right or [,] / [.] </td><td><b>Search prev/next folder</b></td></tr>
+<tr><td>Shift+(Pg)Up/Down</td><td><b>Move track up/down</b></td></tr>
+<tr><td>Ins</td><td><b>Move track after current</b></td></tr>
+<tr><td>Del</td><td><b>Skip track</b></td></tr>
+<tr><td>Alt+Return or Ctrl+I</td><td><b>File info window</b></td></tr>
+<tr><td>Ctrl+A</td><td><b>Mark all</b></td></tr>
+<tr><td>Ctrl+B</td><td><b>Toggle Big title view</b></td></tr>
+<tr><td>Ctrl+C</td><td><b>Copy path and filename to clipboard</b></td></tr>
+<tr><td>Ctrl+D</td><td><b>Auto search dirs on/off</b></td></tr>
+<tr><td>Ctrl+E</td><td><b>Audio enhancer on/off</b></td></tr>
+<tr><td>Ctrl+G</td><td><b>Gapless mode on/off</b></td></tr>
+<tr><td>Ctrl+H or Ctrl+Home</td><td><b>Go home (to current track)</b></td></tr>
+<tr><td>Ctrl+K</td><td><b>Autospace on/off (on disables Gapless, time under settings)</b></td></tr>
+<tr><td>Ctrl+M</td><td><b>Toggle Mono downmix</b></td></tr>
+<tr><td>Ctrl+N</td><td><b>Intro scan</b></td></tr>
+<tr><td>Ctrl+O or Ctrl+PgUp</td><td><b>Cycle track order type</b></td></tr>
+<tr><td>Ctrl+P</td><td><b>Toggle order direction / re-shuffle</b></td></tr>
+<tr><td>Ctrl+Q</td><td><b>Quit program after current track</b></td></tr>
+<tr><td>Ctrl+R</td><td><b>Cycle repeat mode</b></td></tr>
+<tr><td>Ctrl+T</td><td><b>Cycle title bar time display</b></td></tr>
+<tr><td>Ctrl+U</td><td><b>Show upcoming/current file</b></td></tr>
+<tr><td>Ctrl+V</td><td><b>Add current track and position to bookmarks</b></td></tr>
+<tr><td>Ctrl+W</td><td><b>Equalizer on/off</b></td></tr>
+<tr><td>Ctrl+X</td><td><b>Explore folder or edit Cue sheet/playlist</b></td></tr>
+<tr><td>Ctrl+Y</td><td><b>Append seleced tracks to playlist file</b></td></tr>
+<tr><td>Ctrl+Shift+B</td><td><b>Open manual beat counter / beat</b></td></tr>
+<tr><td>Ctrl+Shift+C</td><td><b>Copy "Now playing" info to clipboard</b></td></tr>
+<tr><td>Ctrl+Shift+E</td><td><b>Multiband enhancer on/off</b></td></tr>
+<tr><td>Ctrl+Shift+F</td><td><b>Toggle Continue in focused list</b></td></tr>
+<tr><td>Ctrl+Shift+G</td><td><b>Go to folder</b></td></tr>
+<tr><td>Ctrl+Shift+H</td><td><b>Toggle auto home</b></td></tr>
+<tr><td>Ctrl+Shift+L</td><td><b>View track log</b></td></tr>
+<tr><td>Ctrl+Shift+P</td><td><b>Toggle Cover art display</b></td></tr>
+<tr><td>Ctrl+Shift+Q</td><td><b>Quit program on reaching end of current list</b></td></tr>
+<tr><td>Ctrl+Shift+T</td><td><b>Toggle Always scan for times</b></td></tr>
+<tr><td>Ctrl+Shift+V</td><td><b>Open cover picture in standard viewer</b></td></tr>
+<tr><td>Ctrl+Shift+W</td><td><b>Enable HTTP/streaming server</b></td></tr>
+<tr><td>F1</td><td><b>Main/Bookmarks menu</b></td></tr>
+<tr><td>F2</td><td><b>Rename/move file</b></td></tr>
+<tr><td>F3</td><td><b>File finder</b></td></tr>
+<tr><td>F4</td><td><b>Toggle tree view</b></td></tr>
+<tr><td>F5 or Ctrl+End</td><td><b>Rescan tree and file list</b></td></tr>
+<tr><td>F6</td><td><b>Settings window</b></td></tr>
+<tr><td>F7</td><td><b>Toggle compact view</b></td></tr>
+<tr><td>Shift+F3</td><td><b>Find files in current drive</b></td></tr>
+<tr><td>Shift+F4</td><td><b>Scan files for times/info</b></td></tr>
+<tr><td>Shift+F5</td><td><b>Toggle playlist view</b></td></tr>
+<tr><td>Shift+F6 or Ctrl+Return</td><td><b>Enqueue file(s) after playlist view selection</b></td></tr>
+<tr><td>Pause</td><td><b>Mute</b></td></tr>
+<tr><td>Shift+Pause</td><td><b>Soft mute</b></td></tr>
+<tr><td>App key</td><td><b>File/Tree menu</b></td></tr>
+<tr><td>Escape</td><td><b>Close tool windows<br>(and even 1by1 with the "Allow quit by Escape" option)</b></td></tr>
+</table>
+<h3>Global Hotkeys</h3>
+<p>
+By using global Hotkeys you can reach basic play functions of 1by1without switching to the application.
+Preset Hotkeys are: <b>F8 - F12</b>, optionally combined with Alt, Ctrl or the Windows key:
+</p>
+<table>
+<tr><td>(Ctrl / Alt / Win +) F8 </td><td><b>Stop/Resume</b></td></tr>
+<tr><td>(Ctrl / Alt / Win +) F9 </td><td><b>Previous track</b></td></tr>
+<tr><td>(Ctrl / Alt / Win +) F10 </td><td><b>Next track</b></td></tr>
+<tr><td>(Ctrl / Alt / Win +) F11 </td><td><b>Volume down</b></td></tr>
+<tr><td>(Ctrl / Alt / Win +) F12 </td><td><b>Volume up</b></td></tr>
+</table>
+<p>
+For setting <b>own Hotkey definitions</b> select the function in the list on the right, then choose a key from
+the list below and a combination. To define the Hotkey, press <b>Set</b>.
+</p>
+<h3>Command line options</h3>
+<p>
+<b>Usage:</b> <i>1by1.exe &lt;audio file / folder / Cue sheet / playlist&gt; &lt;options&gt;</i>
+</p>
+<table>
+<tr><td><b> </b></td><td><b>Resume on start options:</b></td></tr>
+<tr><td><b>/r</b></td><td>Resume the last track and position</td></tr>
+<tr><td><b>/rt</b></td><td>Play the last track from the beginning</td></tr>
+<tr><td><b>/rd</b></td><td>Play the last directory from the beginning (depending on how it is sorted)</td></tr>
+<tr><td><b> </b></td><td><br><b>Other options:</b></td></tr>
+<tr><td><b>/close</b> </td><td>Close the program after playing one track</td></tr>
+<tr><td><b>/hide</b></td><td>Hide the window and enable the Systray icon</td></tr>
+<tr><td><b>/enqueue </b></td><td>Enqueue the given file to the playlist view</td></tr>
+<tr><td><b>/newinst </b></td><td>Start a new instance ignoring the "Only one instance" setting</td></tr>
+<tr><td><b>/localini </b></td><td>Don't store the settings in the user profile</td></tr>
+</table>
+
+<a id="aud"></a>
+<h2>Audio configuration</h2>
+<h3>Settings window</h3>
+<p>
+The Settings window can be opened with the <b>Settings button</b>, by pressing <b>F6</b> or from the Main menu.
+</p>
+<h3>Audio settings</h3>
+<p>
+<b>Output Device:</b> Default is the default DirectSound device selected for the system. Also other available devices
+can be selected. If a selected device is not available later (e.g. by plugging out a headphone), it will result in an error.
+</p><p>
+<b>Buffer length:</b> Size of the total audio buffer used for DirectSound and WaveOut. Default is 1 second. On play
+interruptions a higher value could help.
+</p><p>
+<b>Alt. volume setting:</b> If (in rare cases) volume setting by the slider does not work or affects other apps, this
+option can be used to calculate the volume internally. Only working on 16 bit output.
+</p><p>
+<b>Auto space:</b> Waits the entered time (in milliseconds) before starting the next track. Maximum is 10 seconds.
+Disables the Gapless output.
+</p><p>
+<b>Gapless:</b> Allows continuous audio output on track changings. E.g. WAV, FLAC, CD and also MP3 files which
+are directly encoded with Lame can be played with no interruptions.
+</p><p>
+<b>Skip silences:</b> Parts below -56 dB at track beginnings and ends will be skipped.
+</p><p>
+<b>Overlap mixing:</b> Automated track transition mixing. Buffer size should be large enough, 10 seconds is the
+default. <b>Out: Samplerate</b> enables resampling to a fixed rate for avoiding interruptions on samplerate changes.
+Recommended is <b>Out: Current track</b> to disable resampling, because the quality needs to be improved.
+<b>Threshold</b> adjusts the level of the ending track where the next track sets in.
+</p>
+<h3>Decoders: ACM and mpglib.dll</h3>
+<p>
+<b>ACM</b> is the default and recommended decoder for MP3. It is part of Windows since XP.
+Also <b>Wine (Linux)</b> provides an MP3 ACM, but it may return wrong "source bytes used" data causing the time
+and position bar run too fast. So on Wine it is recommended to use BASS instead.
+</p><p>
+<b>mpglib.dll</b> uses a little more CPU than ACM or BASS. It must be in 1by1's folder. Version 0.92 is really old
+(2001), but it decodes Layers 3 and also 2. It is available at 1by1's homepage. Only the binary is needed, not the
+source. If you have BASS or no MP2 files, it is not needed at all.
+</p>
+<h3>Decoders: BASS</h3>
+<p>
+The BASS library decodes lots of file formats: MP3, MP2, OGG, WAV, many "trackers", and with add-ons also
+AAC, MP4, MIDI, FLAC, CD-Audio and more.
+</p><p>
+<b>Usage:</b> Download the bass.dll and optionally some add-ons from the Un4seen homepage. Copy the
+<b>DLL file(s)</b> into the 1by1 program folder. <b>IMPORTANT: Copy the 32 bit versions, NOT 64 bit!</b>
+Because 1by1 is also a 32 bit application. If you want to use the Midi add-on, you also need a GM Soundfont file in the
+program folder (the first found is used). All currently supported file types are shown in the lists.
+The "pure" 1by1 only shows MP3 and MP2.
+</p><p>
+BASS also allows <b>netstreaming</b>. The URLs must be in an m3u playlist, preferably together with a "friendly"
+stream name in a line above the URL (format: "#EXTINF:-1,name"). For more info check m3u format refererences
+or download the Webradio m3u example from the 1by1 homepage. You can also <b>save a playing netstream:</b>
+Right click on a folder in the tree and select <b>Save download stream here...</b>
+</p>
+<h3>Decoders: Winamp Input Plugins</h3>
+</p><p class="note">
+<b>Note:</b> Plugin support is outdated. It's recommended to use the BASS library and BASS add-ons prior to
+Winamp plugins. Since 1by1 supports only Winamp 2.x plugins, unicode filenames can't be resolved. Also problems
+on play and long tracks may occur.
+</p><p>
+<b>Usage:</b> put the needed plugin <b>DLL files</b> (in_*.dll) into your 1by1 directory.
+</p><p>
+Several plugins may behave differently. <u>These plugins are successfully tested in earlier 1by1 versions:</u>
+<b>in_wave</b> (2.0+2.06),
+<b>in_vorbis</b> (1.13a, 1.2b19+1.32; on seek problems set the plugin priority to "normal"),
+<b>in_CDReader</b> (1.95),
+<b>in_mp3</b> (2.75j, 2.81b, 2.91; problems with seek on VBR files with no "TOC" in the header),
+<b>in_mp3pro</b> (1.1),
+<b>in_mod</b> (2.2.10b29),
+<b>in_mad</b> (0.14.2b, 0.15.1b; problems with seek on CBR files; 24/32 bit output successfully tested),
+<b>in_mp4</b> (2.1b; buffer size must be divisible by 4!),
+<b>in_flac</b> (1.1.4).
+<u>Plugins which don't use the wave output</u> are no longer supported (1by1 1.95), the behaviour is undefined.
+</p>
+<h3>Enhancer</h3>
+<p>
+The built in DSP gets rid of tracks in different volumes. Depending on the settings and the input it also can enhance
+the sound of tracks which already have full level. Note: The enhancer works <b>only with 16 bit</b> output.
+</p><p>
+<b>Max amp:</b> Maximum amplification (up to 20 dB = 10x)
+</p><p>
+<b>Amp raise:</b> Time the enhancer tends towards the maximum amplification level. A shorter value will enhance
+more but can also cause more distortions on some input material. For more original sound choose longer values
+(500 ms or more), to enhance the presence try shorter values (130...80 ms).
+</p><p>
+<b>Amp reduce:</b> Amplification reducing speed on exceeding the threshold. To minimize distortions it must not be
+too slow but even not too fast. Recommended values are from 0.6 ms to 1.0 ms.
+</p><p>
+<b>Threshold:</b> A value of about -3 dB is recommended. This is the "headroom" to catch distortions
+if "Amp reduce" does not react fast enough. The output level is not generally limited to the threshold.
+</p><p>
+<b>Input HP cutoff:</b> Using a highpassed "side chain" signal to reduce a "pumping" output. May create
+bass distortions especially on values above 80 Hz. Then also lowering the Threshold can help.
+</p><p>
+<b>Prelisten mode:</b> Only enabled while play. It switches to a short buffer to give a fast adjustment response.
+</p><p>
+<b>3 Band Equalizer:</b> In the frequency fields you can set individual frequencies (parametric EQ). The default
+values are: 100 Hz, 1000 Hz, 10000 Hz. Works only on 16 bit output. Sliders on 0 dB don't not use CPU.
+</p>
+<h3>Enhancer 2 - Multiband</h3>
+<p>
+Multiband enhancing can produce more consistent sound of different sources. Like an "automatic equalizer" it
+regulates frequency bands dynamically to a threshold. Adjustments should be careful. More garbage is possible
+- but also a more present and smoother sound.
+</p><p>
+Up to four bands are possible. If a crossover frequency is set to 0, the next bands are disabled. <b>Threshold</b>
+is the most important value for the appearance of each band. Higher frequencies usually have a lower level in order
+not to overshade the mix. The curve on the right shows a frequency chirp, it is not aligned by the frequencies.
+</p><p>
+<b>Level</b> adjusts the level after Multiband and before Soft clipping and Limiter. <b>Stereo</b> reaches from a
+40 % mono mix to 40 % channel separation. <b>Soft clipping</b> is a simple algorithm to smooth distortions of audio
+clipping. It can also produce a bit of wanted saturation. If disabled, the Limiter catches clippings.
+</p>
+
+<a id="opt"></a>
+<h2>Miscellaneous settings</h2>
+<h3>Control options</h3>
+<p>
+<b>Continue in focused list:</b> Can be used if the paylist view is open. Means that the next track
+will be taken from the current position or selection of the current/focused list. The focused list
+can be slightly hilited by an option in the List settings. Without this option checked, the list focus
+will be ignored and 1by1 continues playing the list where the current file was started.
+</p><p>
+<b>Go home before track change:</b> Returns to the folder of the current file before starting the
+next track. This option prevents from playing unwanted tracks on browsing through other folders.
+</p>
+<h3>List options</h3>
+<p>
+<b>Folders and lists in file view:</b> Shows subdirectories, playlists and Cue sheets of the current
+folder at the top of the file list. Useful for navigating without the folder tree.
+</p><p>
+<b>File info in context menu:</b> Displays audio parameters, length and ID3v1 fields of the
+selected file directly at the top of the context menu.
+</p><p>
+<b>Show created instead of modified date:</b> Disabled by default. If enabled, the last row of the file list
+shows the creation date of a file instead of the date of the last modification. For normal usage this should
+be disabled. The creation date of a copied file is newer than its modified date.
+This option also affects the features File finder and Easy renamer.
+</p><p>
+<b>Allow sort by month:</b> Gives you an additional sort option in the date row, which sorts the list
+at first by month and then by year.
+</p><p>
+<b>Month colors:</b> This feature visualizes the date of your tracks. It associates a color range to the
+12 months of the year, giving an overview of the seasons the files are dated.
+</p>
+<h3>Display options</h3>
+<p>
+<b>Show track/folder related pictures:</b> This feature shows images (e.g. cover art) in the lower left corner.
+It looks for <b>two types of picture names</b> in the current directory: either a picture which <b>filename beginning</b>
+fits to the current track (e.g.: <i>"album5.jpg"</i> for the tracks <i>"album5_track1.mp3", "album5_track2.mp3"</i>...)
+- or, if no track related picture is found, an editable standard filename as <i>"folder.jpg"</i>. If a picture is found in an
+<b>ID3v2 tag</b>, 1by1 will use it before looking for track related picture files. With <b>embedded Big title view</b>,
+the picture is shown on the right and always track related or ID3v2 if present. If the image is placed below the tree view,
+it shows the folder picture file of the currently browsed folder if present.
+</p><p>
+<b>On no present image...:</b> If the picture function does not find any picture, this option allows to fill the place
+with a standard image. It must have the standard filename and must be stored in the 1by1 settings folder
+(which can be reached easily by the corresponding button in the Control tab).
+</p><p>
+<b>Bitmap file for the toolbar buttons:</b> Lets you select an external image file for individual toolbar
+styles. The BMP file must be a row of 21 images of the same size. Its color depth should be 4 or 8 bit
+(16 or 256 colors). The color of the first pixel will be interpreted as the transparent color. As 1by1 saves
+not the path of the BMP file, it must be in the program directory.
+</p>
+<h3>System options</h3>
+<p>
+<b>External Programs:</b> Allows starting other programs by the context menu of a selected file,
+folder, playlist or Cue sheet. If you want to start an external program with <b>additional parameters</b>,
+you should create a <b>batch file</b> and set it as the external program instead of the program itself.
+<b>Example:</b> for calling the Lame encoder from 1by1 create a file <i>"Lame.bat"</i> containing
+a line like <i>"C:\Windows\Lame.exe -m j -q 1 -b 128 %1"</i>, where %1 is the placeholder for the file
+to be sent to the external program.
+</p><p>
+<b>High Priority:</b> Disabled by default. Only recommended if other applications interfere with 1by1
+and increasing the buffer size and amount on WaveOut or the buffer time on Direct Sound does not help.
+</p><p>
+<b>Force portable/local settings:</b> This option creates an additional ini file in the program folder. The extra
+file is needed to tell the program, where to look for the normal settings file. If the 1by1local.ini file is present,
+1by1 will never write or read settings to or from the user profile (like on the command line option /localini).
+The option is not usable on missing write access to the program folder.
+</p>
+<h3>Big view</h3>
+<p>
+1by1 shows title, track and other informations in a big text style. The view can either be embedded in the main window
+- below or above the lists. Or it can appear in an extra window - optionally after an individual input idle time.
+The <b>font size</b> depends on the size of the Big view area and the number of lines (Layout). The view can be
+switched manually from the main menu or by the shortcut <b>Ctrl+B</b>.
+</p><p>
+Bis view is configured in the <b>Big view tab</b> in the settings. Sizes are adjusted by draggings the edges. If the
+undocked view moves out of screen for some reason, you can restore the position with <b>Reset view position</b>.
+</p><p>
+<b>Extra infos:</b> Frequently shows additional pages about program and play settings or track and output parameters.
+The period of a page is adjusted with <b>Speed/Info cycle time</b>. <b>Info pattern</b> defines type and order of infos.
+The help window can stay open while editing.
+</p><p>
+<b>RSS feed titles:</b> Adds news headlines or other RSS feed information. Put source links into the URLs field,
+separated by space. If you are connected by proxy, the proxy address can be added in the system tab. The complete
+RSS download can be read with <b>View RSS file</b> from the context menu (right button).
+</p><p>
+<b>Idle seconds until popup</b>: Mouse or keyboard idle time for appearance of the undocked Big view. Auto popup
+works only if 1by1 is in foreground.
+</p>
+
+<a id="fea"></a>
+<h2>Enhanced features</h2>
+<h3>Systray Icon</h3>
+<p>
+<b>Enable or disable</b> under Settings > System > Environment.
+</p><p>
+<b>Left mouse button</b>: Shows or hides the main window.
+</p><p>
+<b>Middle mouse button</b>: Stop / Resume
+</p><p>
+<b>Right mouse button</b>: Shows the tray menu with play and config options. The <b>Current list</b>
+item shows the first 150 tracks of the current folder or playlist, sorted in the order of the window list.
+</p>
+<h3>Logging</h3>
+<p>
+The log file stores informations about played tracks. You can view the content
+by calling <b>View track log</b> from the main menu. The log file is needed
+for retrying scrobbling if a connection error has occured. If a title has been scrobbled successfully,
+the last column in the log view shows 'done'. If the transfer failed, it shows 'tried'. You can also use
+the track log to browse played tracks and restart them by double clicking or call other functions with
+the right mouse button.
+</p><p>
+<b>Scrobbling</b> has been disabled in 1.86 since last.fm changed the track info submission protocol to
+"API 2.0" where authentication by API key is needed. Receiving an API key for 1by1 was not working
+due to relaunch problems of the last.fm site.
+</p>
+<h3>WAV file conversion</h3>
+<p>
+Tracks to be decoded by ACM, mpglib or BASS can also be saved to uncompressed WAV files (16 bit).
+The function can be found in the track context menu if 1by1 is not playing anything.
+In the dialog you can adjust name and location of the destination file. You also can apply
+audio processing with the current settings for enhancer, equalizer and mono downmix.
+</p>
+<h3>HTTP web and streaming server</h3>
+<p>
+The HTTP server feature allows to control 1by1 by a simple remote web interface. The streaming server sends
+the audio output of 1by1 in a configurable MP3 format to connected receivers.
+</p><p>
+To enable the HTTP server, enter the <b>local IP address of the computer</b> which runs 1by1 into the
+<b>Server address</b> field. Usually you can use the local address shown on the right in the dialog (while the
+server is not running). Also the port number is needed, for HTTP this usually is 80 or 8080. See the example string
+in the config window on the right. After enabling/starting the server, the <b>Firewall</b> of your system may ask for
+permission. You need either to allow 1by1 or the port used. With the entered server <i>address:port</i>
+of the above field you can access the simple web interface from any browser in the (local) network.
+</p><p>
+The MP3 <b>streaming URL</b> has the format <i>http://your-ip:port/1by1.mp3</i>. Give this URL to your remote player
+device. You can also use an M3U playlist. Both can be found on bottom of the web interface page. Streaming starts
+if 1by1 is playing and a client requests the MP3 URL. If 1by1 is not playing and a client starts streaming, 1by1
+should automatically resume the current track.
+</p><p>
+While not streaming, you can adjust the encoder settings
+and select the encoder. Note that Lame's lame_enc.dll must be in the path or in the 1by1 program folder. For
+ACM the "professional" version (l3codecp) should be used. Newer Windows versions should have it already,
+but it may be needed to activate by adding a few Registry entries.
+</p><p>
+The option <b>Keep connection and send silence</b> allows streaming even if 1by1 is not playing. This may also be
+needed if Gapless play is not used. Otherwise an interruption of the stream may occur on track changes.
+</p>
+</p><p class="note">
+<b>Note:</b> Streaming of a running audio output is a quite complex matter of moving, handling, compressing
+and sending audio segments. Stream terminations, sound interruptions or skippings may occur.
+Depending on the device, WaveOut method for local audio output might
+give a little more stable results than DirectSound.
+</p>
+
+
+<a id="new"></a>
+<h2>Version history</h2>
+<pre>
+v1.97, 2020-08-29
+- Possible Multiband DSP overdrive fixed
+- Stereo mode for Plugins was not shown for current track
+- Multiple folder picture names possible
+- Wait for pre-buffering on BASS stream play
+- Toolbar is now wrapable
+- Optional toolbar buttons with description
+- Optional toolbar Tab key access
+- New toolbar symbol color grey
+- Some corrections
+
+v1.96, 2020-05-31
+- Big view below track list option
+- Cover art display method changed
+- DirectSound VU meter corrections
+- Previous Soft clip method in Enhancer 2
+- Plugin host adjustments
+
+v1.95, 2020-03-22
+- Overlap/crossfade engine rewritten
+- DirectSound and WaveOut handling renewed
+- New Multiband enhancer filtering
+- Input plugin host rewritten
+- Config dialog style changes
+- Intro scan ignoring track change fixed
+- Lots of improvements and corrections
+
+v1.94, 2020-01-16
+- Ini file strings changed to UTF-8
+- Compare folders feature renewed
+- DSP Plugin config handling modified
+- Bold treeview items on current file path
+- Auto time scan on multi enqueue fixed
+
+v1.93, 2018-08-26
+- Improved Soft clip implementation on multiband
+- Adjustable title limit for RSS feed display
+- Streaming from https enabled
+
+v1.92, 2018-05-25
+- Plugin issues fixed
+- HTTP control slightly improved
+- 5 band dynamics and lookahead peak limiter
+- Simple host for Winamp dsp plugins
+- Finer mouse wheel volume option
+</pre>
+
+<a id="faq"></a>
+<h2>Frequently asked questions</h2>
+<p><b>How can I play MP4, AAC, WAV, OGG, FLAC, CD...?</b><br>
+By using the BASS library or a plugin. More infos under <a href="#aud">Audio config</a>.
+</p>
+<p><b>Which plugin plays exotic formats?</b><br>
+Known informations are collected in the Plugin section (<a href="#aud">Configuration</a>).
+</p>
+<p><b>The volume fader does not work or affects other programs.</b><br>
+Activate 1by1's internal volume adjustment: Settings / Audio / Alternative volume setting.
+</p>
+<p><b>1by1 in background plays interrupted.</b><br>
+In the Audio settings switch to a Direct Sound output device (usually to the first list item beginning with "DirectSound:").
+The "High task priority" option in Settings / System could also help.
+</p>
+<p><b>Can 1by1 show ID3 Tag informations in the list?</b><br>
+Scannable informations like titles can be shown in an extra column. This is enabled under "List and Tree".
+ID3 fields are also shown in the track info dialog (Context menu or Alt+Return or Ctrl+I) and in the Big title view.
+</p>
+<p><b>How can I shuffle multiple folders at once?</b><br>
+Random play is only possible for the current list. But you can fill the list with all tracks within a path by calling
+"Show subfolder contents" in the tree context menu. The result can be shuffled or sorted as known.
+</p>
+<p><b>Network or desktop folders do not work correctly.</b><br>
+The complete network structure is only shown on browsing the network. To display an existing track path in the
+network, 1by1 will add the single <i>\\server\sharepoint\</i> part under the network item.
+</p>
+<p><b>Can 1by1 support multiple languages?</b><br>
+Language support is not planned. The program and all documentations will only be provided in english.
+</p>
+<p><b>How can I make 1by1 portable?</b><br>
+Easiest way is the "Force portable/local settings" option under Settings / System /  "Configuration files". Also without
+this option 1by1 is already portable if: 1. the program folder has write access for the ini, 2. there is no 1by1 folder in
+the user profile. 1by1 will only store the settings in the user profile on missing write access to its own folder. Once the
+settings are in the user profile, this location will be used. Portable usage can also be forced by the "/localini" command
+line option. To prevent starting in the last folder, check Settings / Control "Start in Base folder".
+</p>
+
+<h3> </h3><p>Copyright &copy; 2001-2020 Martin Pesch</p>
+</body>
+</html>

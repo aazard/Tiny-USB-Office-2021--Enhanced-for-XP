@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+  <head>
+    <meta name="generator" content="HelpNDoc Professional Edition">
+    <link rel="StyleSheet" href="toc.css" type="text/css"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="jquery.treeview.min.js"></script>
+    <script type="text/javascript" src="jquery.rich-array-hnd.js"></script>
+    <script type="text/javascript" src="searchdata.js"></script>
+    <script type="text/javascript"><!--
+      $(document).ready(function(){
+        $("#toc").treeview(
+        )
+        $("#keywords").treeview({collapsed: true});
+        $(document.body).click(function(e){var $target = $(e.target); if($target.is("a")) return; hidePopup();});
+        $(function(){var tabContainers = $("div.tabs > div");tabContainers.hide().filter(":first").show();$("div.tabs ul.tabNavigation a").click(function(){tabContainers.hide();
+        tabContainers.filter(this.hash).show();$("div.tabs ul.tabNavigation a").removeClass("selected");$(this).addClass("selected");return false;}).filter(":first").click();});
+      });
+      function hidePopup() {if($("#popupMenu")) $("#popupMenu").remove();}
+      function showPopup(oSender,aLinks){hidePopup();if (aLinks==0) return true;var oParentDiv=document.createElement("DIV");oParentDiv.id="popupMenu";var oLink,oBr=null;
+      for (var nCnt=0;nCnt<aLinks.length;nCnt++){oLink=document.createElement("A");oLink.innerHTML=aLinks[nCnt][0];oLink.href=aLinks[nCnt][1];oLink.target="FrameMain";oLink.onclick=hidePopup;
+      oParentDiv.appendChild(oLink);if (nCnt<aLinks.length-1){oBr=document.createElement("BR");oParentDiv.appendChild(oBr);}}document.body.appendChild(oParentDiv);var pos=$(oSender).offset(); 
+      var height=$(oSender).height();$(oParentDiv).css({"backgroundColor": "#EEEEEE","border": "1px solid #999999","position": "absolute","left": (pos.left+20)+"px","top": (pos.top+height+5)+"px",
+      "padding": 5+"px"});$(oParentDiv).show();return false;}
+      function performSearch(){sValue = $("#search_value").val().toLowerCase();var aValues = sValue.split(" ");var aFinalResults = [];for (var nValue = 0; nValue < aValues.length; nValue++){if (aValues[nValue] == "") continue;var aResults = oSearchData[aValues[nValue]];if (aResults && aResults.length > 0){if (nValue == 0) aFinalResults = aResults
+else aFinalResults = jQuery.richArray.intersect(aFinalResults, aResults);}else{aFinalResults = [];break;}}if (aFinalResults.length > 0){$("#search_results").html("Found " + aFinalResults.length + " results");for (var nCnt = 0; nCnt < aFinalResults.length; nCnt++){var oElmt = document.createElement("DIV");oElmt.innerHTML = "<a href='" + aFinalResults[nCnt][0] + "?search=" + sValue + "' target='FrameMain'>" + aFinalResults[nCnt][1] + "</a> (" + aFinalResults[nCnt][2] + ")<br/>";$(oElmt).appendTo($("#search_results"));}}else{$("#search_results").html("No result found");}}
+    //--></script>
+    <style type="text/css">
+      ul.tabNavigation{list-style: none;margin: 0;padding: 10px;}ul.tabNavigation li{display: inline;}ul.tabNavigation li A{padding: 3px 5px;background-color: #ccc;color: #000;
+      text-decoration: none;}ul.tabNavigation li A.selected,ul.tabNavigation li A:hover{background-color: #333;color: #fff;}ul.tabNavigation li A:focus{outline: 0;}
+      </style>
+  </head>
+
+  <body>
+  
+    <div class="tabs">
+      <ul class="tabNavigation">
+        <li><a href="#tab_toc">Contents</a></li>
+        <li><a href="#tab_keywords">Index</a></li>
+        <li><a href="#tab_search">Search</a></li>
+      </ul>
+      <div id="tab_toc">
+        <ul id="toc" class="filetree">
+          
+          <li>
+            <a href="Overview.html" class="file" target="FrameMain">Overview</a>
+          </li>
+          
+          <li>
+            <a href="Tutorials.html" class="folder" target="FrameMain">Tutorials</a>
+            <ul>
+              
+              <li>
+                <a href="Gettingstarted.html" class="file" target="FrameMain">Creating a responsive website</a>
+              </li>
+              
+              <li>
+                <a href="HowtocreateaPHPcontactform.html" class="file" target="FrameMain">How to create a contact form</a>
+              </li>
+              
+              <li>
+                <a href="MasterPages.html" class="file" target="FrameMain">How to use Master Pages</a>
+              </li>
+              
+              <li>
+                <a href="HowtouseBreakpoints.html" class="file" target="FrameMain">How to use Breakpoints</a>
+              </li>
+              
+              <li>
+                <a href="Howpasswordprotectawebsite.html" class="file" target="FrameMain">How password protect a website</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Components.html" class="folder" target="FrameMain">Components</a>
+            <ul>
+              
+              <li>
+                <a href="Text22.html" class="file" target="FrameMain">Container</a>
+              </li>
+              
+              <li>
+                <a href="Image.html" class="file" target="FrameMain">Image</a>
+              </li>
+              
+              <li>
+                <a href="Shape.html" class="file" target="FrameMain">Styled Button</a>
+              </li>
+              
+              <li>
+                <a href="NamedAnchor.html" class="file" target="FrameMain">Named Anchor</a>
+              </li>
+              
+              <li>
+                <a href="Slideshow.html" class="file" target="FrameMain">Image Slideshow</a>
+              </li>
+              
+              <li>
+                <a href="ImageGallery.html" class="file" target="FrameMain">Image Gallery</a>
+              </li>
+              
+              <li>
+                <a href="NavigationMenu.html" class="file" target="FrameMain">Navigation Menu</a>
+              </li>
+              
+              <li>
+                <a href="Flash.html" class="file" target="FrameMain">Flash</a>
+              </li>
+              
+              <li>
+                <a href="Java.html" class="file" target="FrameMain">Java</a>
+              </li>
+              
+              <li>
+                <a href="WebForm.html" class="file" target="FrameMain">WebForm</a>
+              </li>
+              
+              <li>
+                <a href="HTMLCode.html" class="file" target="FrameMain">HTML Code</a>
+              </li>
+              
+              <li>
+                <a href="PHPCode.html" class="file" target="FrameMain">PHP Code</a>
+              </li>
+              
+              <li>
+                <a href="JavaScriptCode.html" class="file" target="FrameMain">JavaScript Code</a>
+              </li>
+              
+              <li>
+                <a href="Table.html" class="file" target="FrameMain">Table</a>
+              </li>
+              
+              <li>
+                <a href="Text.html" class="file" target="FrameMain">Floating Text</a>
+              </li>
+              
+              <li>
+                <a href="QuicktimeVideo.html" class="file" target="FrameMain">Quicktime Video</a>
+              </li>
+              
+              <li>
+                <a href="YoutubeVideo.html" class="file" target="FrameMain">Youtube Video</a>
+              </li>
+              
+              <li>
+                <a href="HTML5Audio.html" class="file" target="FrameMain">HTML5 Audio / Video</a>
+              </li>
+              
+              <li>
+                <a href="IFrame.html" class="file" target="FrameMain">IFrame</a>
+              </li>
+              
+              <li>
+                <a href="ContentPlaceholder.html" class="file" target="FrameMain">Content Placeholder</a>
+              </li>
+              
+              <li>
+                <a href="ContentPlaceholder22.html" class="file" target="FrameMain">Password Protection</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Hyperlinks.html" class="file" target="FrameMain">Hyperlinks</a>
+          </li>
+          
+          <li>
+            <a href="PHPandASPpages.html" class="file" target="FrameMain">PHP and ASP pages</a>
+          </li>
+          
+          <li>
+            <a href="PublishingtheWebsite.html" class="file" target="FrameMain">Publishing the Website</a>
+          </li>
+          
+          <li>
+            <a href="GeneratorTag.html" class="file" target="FrameMain">Generator Tag</a>
+          </li>
+          
+          <li>
+            <a href="AdvancedSettings.html" class="file" target="FrameMain">Advanced Settings</a>
+          </li>
+          
+          <li>
+            <a href="OnlineHelp.html" class="file" target="FrameMain">Online Help</a>
+          </li>
+          
+          <li>
+            <a href="LicenseandCopyright.html" class="file" target="FrameMain">License and Copyright</a>
+          </li>
+      </ul>
+    </div>
+    
+    <div id="tab_keywords">
+      <ul id="keywords" class="filetree">
+        
+        <li>
+          <a href="HowtouseBreakpoints.html" target="FrameMain" class="file" onclick="hidePopup();">Breakpoint</a>
+        </li>
+        
+        <li>
+          <a href="AdvancedSettings.html" target="FrameMain" class="file" onclick="hidePopup();">Change generated HTML ID</a>
+        </li>
+        
+        <li>
+          <a href="AdvancedSettings.html" target="FrameMain" class="file" onclick="hidePopup();">change id</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">DarkeningFactor</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Download</a>
+        </li>
+        
+        <li>
+          <a href="Flash.html" target="FrameMain" class="file" onclick="hidePopup();">Flash</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">FTP client</a>
+        </li>
+        
+        <li>
+          <a href="GeneratorTag.html" target="FrameMain" class="file" onclick="hidePopup();">Generator</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">Gradient Shape</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">GradientStyle</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Hyperlinks</a>
+        </li>
+        
+        <li>
+          <a href="Image.html" target="FrameMain" class="file" onclick="hidePopup();">Image</a>
+        </li>
+        
+        <li>
+          <a href="Slideshow.html" target="FrameMain" class="file" onclick="hidePopup();">Image Slideshow</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Images</a>
+        </li>
+        
+        <li>
+          <a href="AdvancedSettings.html" target="FrameMain" class="file" onclick="hidePopup();">Install RocketCake silently</a>
+        </li>
+        
+        <li>
+          <a href="Slideshow.html" target="FrameMain" class="file" onclick="hidePopup();">Interactive Slideshows</a>
+        </li>
+        
+        <li>
+          <a href="Java.html" target="FrameMain" class="file" onclick="hidePopup();">Java</a>
+        </li>
+        
+        <li>
+          <a href="MasterPages.html" target="FrameMain" class="file" onclick="hidePopup();">Master Pages</a>
+        </li>
+        
+        <li>
+          <a href="GeneratorTag.html" target="FrameMain" class="file" onclick="hidePopup();">Meta tag</a>
+        </li>
+        
+        <li>
+          <a href="NamedAnchor.html" target="FrameMain" class="file" onclick="hidePopup();">Named Anchor</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">pages</a>
+        </li>
+        
+        <li>
+          <a href="Howpasswordprotectawebsite.html" target="FrameMain" class="file" onclick="hidePopup();">password</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Preview</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Properties</a>
+        </li>
+        
+        <li>
+          <a href="Howpasswordprotectawebsite.html" target="FrameMain" class="file" onclick="hidePopup();">protect</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">Publish</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="hidePopup();">responsive website</a>
+        </li>
+        
+        </li>
+        
+        <li>
+          <a href="AdvancedSettings.html" target="FrameMain" class="file" onclick="hidePopup();">silent install</a>
+        </li>
+        
+        <li>
+          <a href="Hyperlinks.html" target="FrameMain" class="file" onclick="hidePopup();">special action</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">Styled Button</a>
+        </li>
+        
+        <li>
+          <a href="Slideshow.html" target="FrameMain" class="file" onclick="hidePopup();">switch to next image</a>
+        </li>
+        
+        <li>
+          <a href="Slideshow.html" target="FrameMain" class="file" onclick="hidePopup();">switch to previous image</a>
+        </li>
+        
+        <li>
+          <a href="Table.html" target="FrameMain" class="file" onclick="hidePopup();">Table</a>
+        </li>
+        
+        <li>
+          <a href="Gettingstarted.html" target="FrameMain" class="file" onclick="return showPopup(this, [['Creating a responsive website', 'Gettingstarted.html'], ['Floating Text', 'Text.html']]);">Text</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">Transparent Shape</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">UseHoverStyles</a>
+        </li>
+        
+        <li>
+          <a href="Shape.html" target="FrameMain" class="file" onclick="hidePopup();">Web2.0 Shape</a>
+        </li>
+    </ul>
+  </div>
+  <div id="tab_search" style="padding:10px">
+    Search: <form onsubmit="performSearch(); return false;"><input id="search_value"></input><input type="submit" value="search"/></form><div id="search_results"></div>
+  </div>
+</div>
+</div>
+</body>
+
+</html>

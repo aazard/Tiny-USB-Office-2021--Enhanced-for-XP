@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity name="Tweaking.com.EnvelopePrinter" processorArchitecture="X86" type="win32" version="1.0.0.0" />
+  <description>Tweaking.com - Envelope Printer</description>
+  <file name="tweaking_tabs.ocx">
+    <typelib tlbid="{C1737950-391B-4208-AD45-530D7D9B734E}" version="9.0" flags="control" helpdir="" />
+    <comClass clsid="{661263AD-28E1-4F88-8C85-E36762CD55E0}" tlbid="{C1737950-391B-4208-AD45-530D7D9B734E}" threadingModel="Apartment" progid="Tweaking_Tabs.XTab" description="" />
+    <comClass clsid="{36109714-9E72-45D8-BAC9-F10673A7C6D6}" tlbid="{C1737950-391B-4208-AD45-530D7D9B734E}" threadingModel="Apartment" description="" />
+  </file>
+  <file name="TweakingImgCtl.ocx">
+    <typelib tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" version="1.1" flags="control" helpdir="" />
+    <comClass clsid="{A7118153-2CC5-443A-B2C9-6D1B51CB4B0A}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.AlphaImgCtl" description="" />
+    <comClass clsid="{7624B4BB-60E0-4853-AA57-736EC6A4CA4B}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.GDIpImage" description="" />
+    <comClass clsid="{FD1ADFCD-96AE-428D-BAFF-3C6A76430F66}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" description="" />
+    <comClass clsid="{816D8995-C6C7-4C8A-B52C-394C35852EDC}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.UnicodeFileDialog" description="" />
+    <comClass clsid="{D889672E-DFA0-4AA7-B447-DFAA02A96FA7}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" progid="AlphaImg.Animator" description="" />
+    <comClass clsid="{FAD24A24-96AE-4BDB-B005-B5AB3E540B5B}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.AICGlobals" description="" />
+    <comClass clsid="{45C34510-6711-4065-B544-93AB68233FEA}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.GDIpEffects" description="" />
+    <comClass clsid="{6CFEB288-278E-46CB-856E-C26B402D7E2B}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" description="" />
+    <comClass clsid="{D8DC40D0-E804-4A78-A544-7906584CD52A}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.UnicodeBrowseFolders" description="" />
+    <comClass clsid="{D00C1C2F-7CF1-43E1-8DF1-9D48EEF38F5E}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.AlphaShapeCtl" description="" />
+    <comClass clsid="{E18F90E0-75CB-4414-B8F5-D64EDE757E16}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" description="" />
+    <comClass clsid="{8255B182-F848-4E07-BB6B-0F5E789A2633}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" progid="AlphaImg.cUniTextBox" description="" />
+    <comClass clsid="{C1FEE082-65DA-4156-97E5-F43C6F42BECF}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.GDIpPenBrush" description="" />
+    <comClass clsid="{52BBE118-D1A9-446C-932B-8924C6FDE75D}" tlbid="{46911355-69A9-40D2-9CC5-6B116383938F}" threadingModel="Apartment" progid="AlphaImg.GDIpShape" description="" />
+  </file>
+  <file name="Codejock.Controls.Unicode.v17.2.0.ocx">
+    <typelib tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" version="17.2" flags="control" helpdir="" />
+    <comClass clsid="{E245C475-92F4-4AF7-9231-F158D1A035C3}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{EEE5C475-92F4-4AF7-9231-F158D1A035C3}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{79EB54C2-BDD4-4257-8CF4-A2AB1674C51E}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{1DC3FB95-9808-4CBF-BAC2-F2455C8C8A46}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{1232C4DB-8C00-4F05-AF87-9F05BCB55475}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{E232C4DB-8C00-4F05-AF87-9F05BCB55475}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{BDDDB4DB-8C00-4F05-AF87-9F05BCB55475}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{157EA082-D285-4951-B0F8-E3A844A2D1A0}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.PushButton.17.2.0" description="PushButton Control" />
+    <comClass clsid="{938018E1-A6E8-4379-A446-F8590E49990F}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.RadioButton.17.2.0" description="RadioButton Control" />
+    <comClass clsid="{E21B3D25-7AA1-44CF-93A6-F7DB66AD8E43}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.CheckBox.17.2.0" description="CheckBox Control" />
+    <comClass clsid="{3DE227E1-3E7F-47EB-8E89-117C31F444D0}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.GroupBox.17.2.0" description="GroupBox Control" />
+    <comClass clsid="{6081DF01-559B-40D0-878F-E600F6B92565}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ColorPicker.17.2.0" description="ColorPicker Control" />
+    <comClass clsid="{C8A3161F-6F29-497F-80EE-6AB3D74ADB5B}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.FlatEdit.17.2.0" description="FlatEdit Control" />
+    <comClass clsid="{FD4FD92A-717E-425B-8D30-A7C7350556B8}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.Label.17.2.0" description="Label Control" />
+    <comClass clsid="{99A236D0-66FC-48CC-B96A-D3FB782269F3}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ListBox.17.2.0" description="ListBox Control" />
+    <comClass clsid="{0798DA10-9D36-45F0-8478-F5BA4BB1AB65}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ComboBox.17.2.0" description="ComboBox Control" />
+    <comClass clsid="{12CF7BD7-12B1-4FB2-9864-96DF631794AE}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.Resizer.17.2.0" description="Resizer Control" />
+    <comClass clsid="{81864DC8-1C98-40B5-AA4F-AE1900BD47EA}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TabControl.17.2.0" description="TabControl Control" />
+    <comClass clsid="{C2BD7EE2-D5D4-486F-A181-DF813AB09CF0}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TabControlPage.17.2.0" description="TabControlPage Control" />
+    <comClass clsid="{1AC5136A-B94D-4848-955C-1D0AFDD2862F}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" description="" />
+    <comClass clsid="{114DBF8A-E5B1-4669-B5C3-E55E87922B3F}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.PopupControl.17.2.0" description="PopupControl Control" />
+    <comClass clsid="{E6E857E1-01C9-4CB8-91B8-AAB74317E98E}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TreeView.17.2.0" description="TreeView Control" />
+    <comClass clsid="{43C4CEBE-0E9A-4A6B-8EA8-665B9AC9F8CF}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ListView.17.2.0" description="ListView Control" />
+    <comClass clsid="{5D2CE167-D4B7-4238-B7C0-F4B6A564FD97}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ProgressBar.17.2.0" description="ProgressBar Control" />
+    <comClass clsid="{1868B553-448C-41C7-92EF-46D1734A2C6D}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.ScrollBar.17.2.0" description="ScrollBar Control" />
+    <comClass clsid="{F2E32FC6-D732-4BD9-90AE-3E98B0CFDC3C}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.UpDown.17.2.0" description="UpDown Control" />
+    <comClass clsid="{91E38FB0-D02C-4448-8175-21E7D4F545F1}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.Slider.17.2.0" description="Slider Control" />
+    <comClass clsid="{3979B32E-3854-40C6-A287-66671C87FF7A}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TaskDialog.17.2.0" description="TaskDialog Control" />
+    <comClass clsid="{594F2F04-A033-4502-B37B-262A8DEBDF6E}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.CommonDialog.17.2.0" description="CommonDialog Control" />
+    <comClass clsid="{FB055D19-27FA-40F6-B998-36BC20D0C226}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.DateTimePicker.17.2.0" description="DateTimePicker Control" />
+    <comClass clsid="{B24CC6A3-ABF5-410E-ADE9-07B1D0F323FF}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.MonthCalendar.17.2.0" description="MonthCalendar Control" />
+    <comClass clsid="{FB0DF170-4C69-417A-B8D3-9B5A996C4B92}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.WebBrowser.17.2.0" description="WebBrowser Control" />
+    <comClass clsid="{9ADFDDED-B1D4-4639-A5EC-2DCE5321C2BD}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TrayIcon.17.2.0" description="TrayIcon Control" />
+    <comClass clsid="{74C95EC7-F76A-48F1-8B1A-A6EA21F418A8}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.HexEdit.17.2.0" description="HexEdit Control" />
+    <comClass clsid="{79D9CD55-C747-4513-844E-9E3300D1CE3F}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.FormExtender.17.2.0" description="FormExtender Control" />
+    <comClass clsid="{9396A39C-901E-4D81-84B6-BA9D82D63746}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" threadingModel="Apartment" progid="Codejock.TaskbarManager.17.2.0" description="TaskbarManager Control" />
+    <comClass clsid="{D59B7914-311D-479D-A9E9-41D0492F2851}" tlbid="{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}" progid="Codejock.SuiteControlsGlobalSettings.17.2.0" description="SuiteControls Global Settings" />
+  </file>
+<asmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+    <asmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+      <dpiAware>true</dpiAware>
+    </asmv3:windowsSettings>
+  </asmv3:application>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+        <requestedPrivileges>
+          <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+        </requestedPrivileges>
+    </security>
+  </trustInfo>
+   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1"> 
+       <application> 
+           <!-- Windows Vista -->
+           <supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"/> 
+           <!-- Windows 7 -->
+           <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>
+           <!-- Windows 8 -->
+           <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
+           <!-- Windows 8.1 -->
+           <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
+           <!-- Windows 10 -->
+           <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}"/>
+       </application> 
+   </compatibility>
+</assembly> 

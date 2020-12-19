@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="menu.css" rel="stylesheet" type="text/css" />
+<title>LISTS</title>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<a href="http://www.rq.sk/rqmoneyen.html" title="Official RQ Money web"><img src="img/logo_64px.ico" align="left" style="margin-right: 10px" border="0" /></a>
+		<a href="zoznamy.html"><img class="rotate" src="img/sk.png" title="Slovenská verzia" /></a>
+		<div id="nadpis">RQ MONEY</div>
+		NOW YOU CAN MANAGE YOUR FINANCES MUCH BETTER!
+		</div>
+		<div id="navigation">
+			<ul>
+			<li><a href="history.html">History</a></li>
+			<li><a href="help.html">Database</a></li>
+			<li><a href="transactions.html">Transactions</a></li>
+			<li style="float: right; color: ivory; margin-top: 3px; margin-right: 10px">LISTS</li>
+			<li><a href="tools.html">Financial tools</a></li>
+            <li><a href="view.html">View</a></li>
+			<li><a href="program1.html">Program</a></li>
+			<li><a href="shortcuts.html">Shortcuts</a></li>
+			</ul>
+		</div>
+
+		<div id="content-container">
+		<!-- Osoby -->
+		<div class="ramik">
+		<h4>PERSONS</h4>
+        <div class="keys"><span class="key">F12</span></div>
+		A <strong>required</strong> Transaction field with no limit to the number of persons on the list. This list records the names of all the individuals who use the database. A listed Person must be assigned to each new Transaction.<br />
+          <strong>WARNING</strong>: Deleting a person from the list also deletes all transactions (revenue, expenditure and transfer), which were assigned in the database to that person.
+		</div>
+
+		<!-- KATEGÓRIE -->
+		<div class="ramik">
+		<h4>CATEGORIES</h4>
+        <div class="keys"><span class="key">F11</span></div>
+		A <strong>required</strong> transaction field with no limit to the number of categories/subcategories on the list.<br />
+    The Category field dropdown box facilitates the entry of revenue and expenditure transactions by category. If, for example. you use a car, just create a category names "car" and the relevant subcategories (eg. petrol, servicing and repair, insurance, etc.).The order of sorting records in the box is the following.:<br />
+	THE ORDER-THE MOVEMENT-CATEGORY-SUBCATEGORY.<br />
+	The order is used for prioritize the most frequently used entries on top. If you leave the order everywhere the same, it will be shifting records alphabetically ... (thus the first MOVEMENT, then the CATEGORY and at the end of SUBCATEGORY). It is up to you how much detail you assign to your category and the subcategories.<br />
+    <strong>WARNING:</strong> Deleting the category will delete all the transactions (revenue, expenditure and movements), which are in the database assigned to it.
+		</div>
+
+		<!-- ÚČTY -->
+		<div class="ramik">
+		<h4>ACCOUNTS</h4>
+        <div class="keys"><span class="key">F10</span></div>
+		 A <strong>required</strong> transaction field with no limit to number of accounts on the list. This List records all the accounts covered by the database. Each account can be of any currency but it is not possible to have multiple currencies in one account.<br />
+    At the start of a new database you should assign a minimum of 2 accounts (eg. Cash and a BANK ACCOUNT). You can specify the opening balance of the account. The Date of establishment of the account is required to check against the date of the Transaction entry. The program will not allow the writing of transaction (income, expenditure or movement), where that date is older than the date of establishment of the account.<br />
+    <strong>WARNING: </strong>Deleting the account will delete all the transactions (revenue, expenditure and movements), which are in the database assigned to it.
+		</div>
+
+		<!-- POPISY -->
+		<div class="ramik">
+		<h4>DESCRIPTIONS</h4>
+        <div class="keys"><span class="key">F9</span></div>
+		The is an <strong>optional</strong> field in a transaction with no limit on number of descriptions in the list. The list is used for faster data entry of repetitive transaction descriptions or memos .(e.g. rent for an apartment, instalment credit, selecting from an ATM, etc.).
+		</div>
+
+		<!--  -->
+		<div class="ramik">
+		<h4>PAYEES</h4>
+        <div class="keys"><span class="key">F8</span></div>
+		The data is required in a transaction and there are no limits to number of Payees on the list. The List assigns a PAYEE name to the transaction. Typically the recipient of the financial transaction.<br />
+    <strong>WARNING: </strong>Deleting a Payee also deletes all transactions (revenue, expenditure and movements), assigned to that Payee in the specific database.
+		</div>
+
+		<!-- MENY -->
+		<div class="ramik">
+		<h4>CURRENCIES</h4>
+        <div class="keys"><span class="key">F7</span></div>
+		The list is used in conjunction with an account. Each account must and can have only one currency. The user makes his own currency list either by selecting from the currencies given or by adding another one in the Add Currency Form.<br />
+    For each currency there is sub list of all the notes and coins. As long as they are entered in the register, it is possible to easily count your cash in that currency by using the Cash Counter feature.<br />
+    <strong>Note:</strong> It is possible to DELETE a currency only if it is not used in any account. In the event that you have established an account in that currency, the currency cannot be deleted.
+		</div>
+
+		<!-- POZNÁMKY -->
+		<div class="ramik">
+		<h4>NOTES</h4>
+        <div class="keys"><span class="key">F6</span></div>
+		The number of notes in the list is unlimited.<br />
+    This list allows the user to call up Notes that have no connection with the data in the database. The program allows notes about the consumption of water, gas, electricity, gasoline and fuelling operations, etc. Since version 2.0 the ability to insert notes with arbitrary name and frequency is allowed.
+		</div>
+
+		<!-- ŠTÁTNE SVIATKY -->
+		<div class="ramik">
+		<h4>NATIONAL HOLIDAYS</h4>
+        <div class="keys"><span class="key">F5</span></div>
+		The number of public holidays in the list is unlimited.<br />
+    A list of the public holidays in the user's country. Used when generating scheduled payments (monthly, quarterly, semiannual and annual only). In the event that the date of the planned payment lands on a public holiday, the actual scheduled payment date becomes the day before.
+		</div>
+
+<!-- EXTERNAL LINKS -->
+<div class="ramik">
+		<h4>EXTERNAL LINKS</h4>
+        <div class="keys"><span class="key">F4</span></div>
+		The list is used to register internet links, which will serve the user eg. for a quick connection to the bank (eg for account statements), the central national bank (due to exchange rate difference), but the user can put any links to favorite sites there. The advantage is usage of own keyboard shortcuts so after pressing them, the user automatically opens the web browser with the page.
+		</div>
+
+		</div>
+
+		<div id="footer">
+			<hr />
+			Copyright © 2014
+			<hr />
+		</div>
+	</div>
+</body>

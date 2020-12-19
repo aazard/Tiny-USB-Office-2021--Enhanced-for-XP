@@ -1,0 +1,13 @@
+When you start SoftMaker Office for the first time, you will be asked to input your name, e-mail address and serial number. Here is what you should input:
+
+Name:
+            aazard
+
+E-mail:
+            infradata.it@gmail.com
+
+Serial number:
+            2X494-7LA4S-8SFAT-WRFFA-AJJJJ
+
+
+IMPORTANT: Type in the name, e-mail address and serial number EXACTLY in the way listed above as the serial number is based on your name and e-mail address.

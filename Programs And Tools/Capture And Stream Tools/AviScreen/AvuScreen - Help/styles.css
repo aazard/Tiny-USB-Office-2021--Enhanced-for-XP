@@ -1,0 +1,28 @@
+body { font-family: Verdana; font-size: 8pt; color: black; background-color: white }
+a.nu { text-decoration: none }
+a.catmajor, a.catmajor:link, a.catmajor:visited, a.catmajor:active { font-size: 12pt; color: black; font-weight: bold }
+a.catminor, a.catminor:link, a.catminor:visited, a.catminor:active { font-size: 8pt; color: black }
+font.catmajor, { font-size: 12pt; color: black; font-weight: bold }
+a:link { color: #34538C }
+a:visited { color: #34538C }
+a.menu, a.menu:link, a.menu:visited, a.menu:active { color: white; font-weight: bold; text-decoration: none }
+a.umenu, a.umenu:link, a.umenu:visited, a.umenu:active { color: black; }
+a.head, a.head:link, a.head:visited, a.head:active { color: black; }
+p, td, th, div, i, blockquote, center { font-family: Verdana; font-size: 8pt; color: black }
+.head1 { font-size: 14pt; font-weight: bold; color: #34538C }
+.head2 { font-size: 9pt; font-weight: bold; color: #FF9933 }
+.topmenu { color: #000080; background-color: #FF9933 }
+.tableborder { background-color: black }
+.tablehead { color: white; background-color: #FF9933 }
+.tablebody { color: black; background-color: white; font-family: Verdana; font-size: 8pt; color: black}
+.xborder { background-color: black }
+.xtab1 { color: white; background-color: #FF9933 }
+.xtab2 { color: white; background-color: #FF9933 }
+.lineeven { background-color: #EFEFEF; font-family: arial; font-size: 8pt; color: black }
+.lineodd  { background-color: #FFF2E6; font-family: arial; font-size: 8pt; color: black }
+.tiny {font-family: arial; font-size: 6pt; color: black }
+a.lineeven:link, a.lineodd:link { color: #34538C; }
+a.lineeven:visited, a.lineodd:visited { color: #34538C; }
+
+
+

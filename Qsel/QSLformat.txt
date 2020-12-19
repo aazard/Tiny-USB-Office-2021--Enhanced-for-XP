@@ -1,0 +1,13 @@
+Menu line:
+	Menu item name = semicolon separated item data
+
+Item data in menu line:
+#1	Command
+#2	Parameters (if any)
+#3	Folder (run in.., default: folder of command file)
+#4	Min/maximize ("min"|"max" or empty)
+#5	Icon string (comma separated):
+	#1 Icon file path
+	#2 Icon position 0.. (or empty)
+
+*

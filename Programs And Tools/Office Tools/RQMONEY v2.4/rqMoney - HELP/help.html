@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="menu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Imprima">
+<title>MANUAL</title>
+</head>
+
+<body>
+	<div id="container">
+	<div id="header">
+		<a href="http://www.rq.sk/rqmoneyen.html" title="Official RQ Money web"><img src="img/logo_64px.ico" align="left" style="margin-right: 10px" border="0" /></a>
+		<a href="manual.html"><img class="rotate" src="img/sk.png" title="Slovenská verzia" /></a>
+		<div id="nadpis">RQ MONEY</div>
+		NOW YOU CAN MANAGE YOUR FINANCES MUCH BETTER!
+		</div>
+		<div id="navigation">
+			<ul>
+			<li><a href="history.html">History</a></li>
+			<li style="float: right; color: ivory; margin-top: 3px; margin-right: 10px">menu DATABASE</li>
+			<li><a href="transactions.html">Transactions</a></li>
+			<li><a href="lists.html">Lists</a></li>
+			<li><a href="tools.html">Financial tools</a></li>
+            <li><a href="view.html">View</a></li>
+			<li><a href="program1.html">Program</a></li>
+			<li><a href="shortcuts.html">Shortcuts</a></li>
+			</ul>
+		</div>
+
+		<div id="content-container">
+		<div class="ramik">
+			<h4>CREATE A NEW DATABASE</h4>
+			<div class="keys"><span class="key">CTRL</span> <span class="key">N</span></div>
+		To get started with the program, first create a new database to store your data. To do so, select CREATE from the Database menu and a dialog box appears where you can specify:<br />
+        <ul class="a1">
+          <li><strong>name of the file</strong> (e.g. MY ACCOUNT). This entry is required. If you do not specify a file extension, the default .RQM will be added automatically. <em>This entry is required.</em></li>
+		  <li><strong>the path directory</strong>, where you want the new file store (eg. D:\RQMONEY). <em>This entry is required.</em></li>
+			<li><strong>currency</strong>, in which your account is maintained (minimum one is required)</li>
+          <li><strong>a password</strong>, to protect your sensitive data within the file. <em>This entry is not required</em>, just recommended. If you want, you can set the password later.
+          </li></ul>
+		Upon completion of the above, you will then be informed If the new database is successfully established. You then have two ways you enter your financial transactions within the new database file.
+        <ul class="a1">
+          <li> Add some data to the persons, accounts and categories lists. This will make adding transactions easier through use of field drop down boxes.</li>
+          <li>b) Or, you can just start to add new transaction. In this case you will have to branch out of the "new transaction form" every time you want to enter, say a new Payee name.</li>
+        </ul>
+		</div>
+
+		<div class="ramik">
+        <!-- Open database -->
+        <h4>OPEN AN EXISTING DATABASE</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">O</span></div>
+		You can open an existing database by using the dialog box. In the event that you want to open the database from version 2.0, select the file with an extension of <strong>RQM</strong>. If you want to open an older database (versions 1.3 and lower), select the file with a <strong>DB</strong> (you must change [file type] in the dialog box). Subsequently, following the confirmation of a file, you will receive instruction that helps you to convert your an older database to the newer version of the 2.0 (Note the original database DB yet does not change).</div>
+		<div class="ramik">
+
+		<!-- Close database -->
+        <h4>CLOSE AN OPENED DATABASE</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">X</span></div>
+		This feature is available only if you have opened a database. Closing the database causes all data from the screen to disappear. Subsequently, you can either:<br />
+ 		<ul class="a1">
+		<li>create a completely new database,</li>
+		<li>open an existing database,</li>
+		<li>or exit the program.</li></ul></div>
+		<div class="ramik">
+
+		<h4>DATABASE PASSWORD</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">W</span></div>
+		Protection of your financial data is very important. Therefore each RQMoney database file can be protected with a unique Password. To do so, select Password from the Database menu and in the Password Form, type in the new password, confirm it, and then press [Enter] to save it.<br />
+        Thereafter, any time you want to open that database, the program you ask you to enter the password.<br />
+        To remove the protection, you can cancel the password using the Change Password Form. Just fill in the old password and leave the new password field blank.</div>
+		<div class="ramik">
+
+		<h4>BEGINNER'S GUIDE</h4>
+		<div class="keys"><span class="key">CTRL</span> <span class="key">G</span></div>
+		Beginner's guide is very helpful to starting users. It is offered after successful creating of new database.
+		Sprievodca začiatočníka je pomocný program pre začínajúcich užívateľov. Ponúkne sa po úspešnom vytvorení novej databázy. At each step explains how to fill the lists of persons, accounts and categories (or subcategories), as well as add your first transaction (income, outgoing or transfer) in the main window. You can run <strong>beginner's guide</strong> in the program whenever is open any database (due to registration records).</div>
+		<div class="ramik">
+
+		<h4>SQLITE ZONE</h4>
+		<div class="keys"><span class="key">CTRL</span> <span class="key">Q</span></div>
+		SQLite zone is used for more advanced users for its own operations with a database. This feature has already builte some SQL commands, but the user can enter their own SQL commands to obtain any data (SELECT command), respectively completely change records (INSERT, UPDATE, or DELETE commands). <br /> <strong> NOTE: Each user should have prior work in SQLite zone do backup your database! User with incorrect SQL command can damage their data. Therefore, they should perform SQL queries only experienced users who know what each commands mean. Author is not responsible for any damage to the user database.</strong></div>
+
+		<div class="ramik">
+		<!-- Database properties -->
+        <h4>DATABASE PROPERTIES</h4>
+        <div class="keys"><span class="key">CTRL</span> <span class="key">R</span></div>
+	Clicking PROPERTIES from the Database menu, allows you to view a dialog showing the current properties of your database file (eg name, size, date of last changes, etc) and about counts of records in database tables.
+		</div>
+		</div>
+
+		<div id="footer">
+			<hr />
+			Copyright © 2014
+			<hr />
+		</div>
+</div>
+</body>

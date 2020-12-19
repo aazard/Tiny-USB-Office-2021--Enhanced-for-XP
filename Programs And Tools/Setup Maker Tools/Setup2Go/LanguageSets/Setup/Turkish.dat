@@ -1,0 +1,151 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% Kur
+Static1=%ProductName% %ProductVersion% sisteminize kurulu. Kur'a baþlamadan önce eski versiyonu kaldýrmanýz önerilir.
+Error1=Kur eski veriyonu kaldýramýyor. Kur yükleme iþlemine devam edecek.
+Yes=&Eskiyi Kaldýr
+No=&Kur'a Devam
+Cancel=Iptal
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Dikkat
+Static1=Kur dosyayý yeni versiyonuyla deðiþtiremedi:
+Static2=Tüm programlarý kapatýp tekrar deneyebilirsiniz.
+Retry=&Terar
+Cancel=&Iptal
+Abort=&Gözardý et
+
+[PASSWORD_DIALOG]
+Dialog_Title=Kur Þifresi
+Static1=Lütfen Kur Þifresini Giriniz
+OK=&Tamam
+Exit=Ç&ýk
+Error_Title=Hata
+Error_Static1=Yanlýþ þifre lütfen tekrar deneyiniz.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Kur Dil Seçimi
+Static1=Lütfen Kur Dilini Seçiniz.
+Next=&Ileri >
+Cancel=Iptal
+
+[WELCOME_DIALOG]
+Dialog_Title=Kur Programýna Hoþgeldiniz
+Static1=%ProductName% Kur Programýna Hoþgeldiniz. Bu programla %ProductName% Programýnýn bilgisayarýnýza kurulmasýný saðlayacaksýnýz.
+Static2=Baþarýlý bir program kurma iþlemi için çalýþan tüm programlarýnýzý kapatmanýz önerilir.
+Static3=Iptal'i týklayarak kur iþlemini durdurabilirsiniz.
+Static4=YASAL UYARI: Bu program T.C. Telif haklarý ve EULA sözleþmesiyle korunmaktadýr.
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[LICENSE_DIALOG]
+Dialog_Title=Yazýlým Lisans Sözleþmesi
+Static1=PAGE DOWN ve Scroll tuþlarýný kullanarak tüm sözleþmeyi okuyabilirsiniz.
+Static2=Eðer sözleþmeyi kabul ediyorsanýz 'Kabul'ü, kabul etmiyorsanýz 'Red'i týklayarak kuru sonlandýrabilirsiniz.
+Back=< &Geri
+Yes=Kabul
+No=Red
+
+[README_DIALOG]
+Dialog_Title=Son Kullanýcý Bilgi Formu
+Static1=Kur Bilgileri:
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Kur Klasörü
+Static1= Kur %ProductName% kurulacaðý klasör.
+Static2=Klasöre kurmak için Ileri'yi
+Static3=Baþka bir klasöre kurmak için Gözat'ý týklayýn.
+Static4=Programý kurmak istemiyorsanýz Iptal týklayýnýz
+Static5=Gerekli alan:
+Static7=Kullanýlabilir alan:
+Browse=G&özat...
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Klasör Seç
+Static1=Lütfen, programlarýn yükleneceði klasörü seçiniz.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Program Kýsayolu
+Static1=Kur aþaðýda listelenen program kýsa yolunu yaratacaktýr.
+Static2=&Program Klasörü
+Static3=A&çýk Klasörler
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Kýsayolu
+Static1=Kur programýnýz kolay kullaným için aþaðýdaki seçenekleri sunmaktadýr.
+Static2=Masa Üstüne kýsa yol yaratýlsýn mý?.
+Static3=Hýzlý kullaným  çubuðuna kýsa yol yaratýlsýn mý?
+Yes=Evet
+No=Hayýr
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[START_DIALOG]
+Dialog_Title=Kopyalanmaya Baþlanýyor
+Static1=Kur aþaðýda yazýlý olan bilgiler doðrultusunda programýnýz kurmaya baþlayacak, lütfen bilgilerinizi kontrol ediniz.
+Static2=Ayarlar
+String1=Hedef Klasör:
+String2=Program Grubu:
+Back=< &Geri
+Next=&Ileri >
+Cancel=Iptal
+
+[PROCESS_DIALOG]
+Dialog_Title=Dosyalar Kopyalanýyor
+Cancel=Iptal
+
+[FINISH_DIALOG]
+Dialog_Title=Kur tamamlandý.
+Static1=Programýnýz bilgisayarýnýza kuruldu, kur iþlemini bitirmek için son'u týklayýn.
+Check1=&Okuma dosyasýný göster
+Check2=&Programý çalýþtýr
+Back=< &Geri
+Finish=Son
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Kurdan Çýk
+Static1=Kur programýnýzý kurmayý baþaramadý.
+Static2=diyet@diyetimiz.com adresinden teknik destek alabilirsiniz.
+Static3=Tekrar deneyebilir ya da kurdan çýkabilirsiniz.
+Resume=&Tekrar dene
+Exit=Ç&ýk
+
+[UNINSTALL_DIALOG]
+1001=Kaldýr
+1101=Dosya Silmeyi Onayla
+1102=%1 ve tüm bileþenlerinin kaldýrýlmasýný istiyor musunuz ?
+1103=&Eskiyi Kaldýr
+1104=&Kur'a Devam
+1201=Program bilgisayarýnýzdan kaldýrýldý.
+1202=Kaldýr biligsayarýnýzdan  %1'nu kaldýrdý. Lütfen bileþenlerin kaldýrýlmasýný bekleyiniz...
+1203=Kaldýrma iþlemi tamamlandý. Bazý bileþenler kaldýrýlamadý. Kaldýrýlamayan bileþenleri elle kaldýrabilirsiniz.
+1204=Kaldýrma iþlemi baþarýyla tamamlandý.
+1301=Ortak paylaþým dosyalarý kaldýrýlsýn mý?
+1302=Sisteminize kurulu olan ortak kullaným dosyalarý baþka programlar tarafýndan kullanýlmakta. Eðer bu dosyalarý kaldýrýrsanýz bu dosyalarý kullanan programlarýn bazý fonksiyonlarýnda hata oluþabilir. Ortak kullaným dosyalarýný kaldýrmak istediðinize emin misiniz?<br><br>Leaving this file will not harm your system. If you are not sure what to do, it is suggested that you choose to not remove this shared component.<br><br>File name:<tab>%1<br>Located in:<tab>%2
+1400=Detaylar
+1401=Detaylar...
+1402=Klasör Kaldýrýlamadý
+1403=Dosya Kaldýrýlamadý
+Yes=Evet
+No=Hayýr
+
+[STRINGS]
+1=Notice
+10=Sistem ayarlarýnýz deðiþti.
+11=Yeni ayarlarýnýz bilgisayarýnýzý tekrar baþlatmadan geçerli olmayacaktýr.<br><br>Bilgisayarýnýzý tekrar baþlatmak istiyor musunuz?
+21=Sisteminizde  %1. Kur iþlemi sonlandýrýlacak.
+22=Sisteminizde  %1. Kur devam edecek, programýnýz düzgün çalýþmayabilir.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

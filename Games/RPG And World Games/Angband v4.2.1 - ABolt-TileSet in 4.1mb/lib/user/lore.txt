@@ -1,0 +1,20 @@
+name:blubbering idiot
+counts:2:0:0:0:19:0:0
+flags:UNIQUE | QUESTOR | MALE | FEMALE | GROUP_AI | SPIRIT | INVISIBLE
+flags:CLEAR_WEB
+
+name:squint-eyed rogue
+counts:1:0:0:0:6:0:0
+flags:UNIQUE | QUESTOR | MALE | FEMALE | GROUP_AI | SPIRIT | INVISIBLE
+flags:CLEAR_WEB
+
+name:mean-looking mercenary
+counts:1:0:0:0:6:0:0
+flags:UNIQUE | QUESTOR | MALE | FEMALE | GROUP_AI | SPIRIT | INVISIBLE
+flags:CLEAR_WEB
+
+name:battle-scarred veteran
+counts:3:0:0:0:0:0:0
+flags:UNIQUE | QUESTOR | MALE | FEMALE | GROUP_AI | SPIRIT | INVISIBLE
+flags:COLD_BLOOD | CLEAR_WEB
+

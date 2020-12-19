@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>i.Ftp Http</title>
+	<link rel="stylesheet" type="text/css" href="iftp.css">
+</head>
+<body>
+
+	<h1>i.Ftp Http</h1>
+	<div class="content">
+
+		<div class="bar"><a href="index.html">Index</a><a href="sched.html">Scheduler</a><a href="http.html">Http</a></div>
+
+		<div class="heading">Overview</div>
+		The HTTP downloader in i.Ftp is a simple one shot affair primarily useful for having more control over the
+		proxy and caching settings than you would get with a normal browser. You also have access to all the headers
+		sent back by the server, which is useful for web developers. It supports resuming downloads which most
+		browsers don't do, useful for large file downloads that broke connection. The HTTP downloader can not be
+		active while an FTP connection is currently open.
+		<p/>
+
+		<div class="heading">Usage</div>
+		Open the HTTP downloader via the HTTP->HTTP Download menu, then fill out the relevant fields.
+		<blockquote>
+			<table>
+				<tr>
+					<td class="fld">URL
+					<td>The full URL of the file to download.
+				<tr>
+					<td class="fld">File
+					<td>The local file to download to. If you have set the URL field already and you click the
+					"..." button you will have the filename pre-populated and all you have to do is select the
+					right folder.
+				<tr>
+					<td class="fld">Use Proxy
+					<td>The proxy fields are for specifying the HTTP proxy server to use. The username / password
+					fields are optional, some proxy servers don't need them. Currently the HTTP download doesn't
+					support user authentication, this is not the place to put any username/password required to
+					access the source file, but the auth for the proxy.
+				<tr>
+					<td class="fld">Resume Download
+					<td>The resume options control the operation of the resume download feature. If the download
+					file already exists but is of a smaller size than the source file on the HTTP server you can
+					resume the download to only fetch the part of the file you don't have. Note: Some servers don't support
+					resuming downloads. The option "Roll Back" allows you to discard the last "n" KB of the file as possibly
+					corrupt. This is useful for modem connects where you were downloading the connection dropped out. This
+					can corrupt the end of the file. A value of 8 to 16 is useful in this case. However most of the time
+					this roll back is not needed.
+				<tr>
+					<td class="fld">Force Cache to Refetch
+					<td>This option turns on the header that askes the HTTP proxy cache to refetch the document/file
+					regardless of whether it's out of date or not. Useful if you getting an old version of the file.
+			</table>
+		</blockquote>
+
+	</div>
+	<div class="copy">&copy; 2005 <a href="mail:fret@memecode.com">Matthew Allen</a></div>
+
+</body>
+</html>

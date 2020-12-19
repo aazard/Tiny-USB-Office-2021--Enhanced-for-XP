@@ -1,0 +1,188 @@
+<html>
+<head>
+	<title>i.Ftp Help</title>
+	<link rel="stylesheet" type="text/css" href="iftp.css">
+</head>
+<body>
+
+	<h1>i.Ftp Help</h1>
+	<div class="content">
+
+		<div class="bar"><a href="index.html">Index</a><a href="sched.html">Scheduler</a><a href="http.html">Http</a></div>
+
+		<div class="heading">Overview</div>
+		<a href="http://www.memecode.com/iftp.php">i.Ftp</a> is a simple cross platform 
+		file transfer program (Win32, Linux, BeOS). It supports
+		<a href="http://en.wikipedia.org/wiki/Ftp">FTP</a> (File Transfer Protocol),
+		<a href="http://en.wikipedia.org/wiki/SSH_file_transfer_protocol">SFTP</a>
+		(SSH File Transfer Protocol) and
+		<a href="http://en.wikipedia.org/wiki/HTTP">HTTP</a> (HyperText Transfer Protocol).
+		<p/>
+
+		<div class="heading">Install/Uninstall</div>
+		The binary for i.Ftp is a self installing setup executable. But once installed to
+		a folder the program is completely self contained and can be copied or moved to
+		another folder using a file manager. The uninstaller is provided for user's 
+		convenience, you could uninstall the program equally well by just deleting the folder
+		containing it.
+		<p/>
+
+		<div class="heading">Command Line Arguments</div>
+		You can drive i.Ftp from the command line via optional cmd line arguments:
+		<blockquote>
+			<table>
+				<tr>
+					<td class="fld">-o&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;
+					<td>Set the options file.
+				<tr>
+					<td class="fld">-x
+					<td>Exit after operations complete.
+				<tr>
+					<td class="fld">-over
+					<td>Overwrite target file.
+				<tr>
+					<td class="fld">-s
+					<td>The source file. Either an ftp:// url or a local path.
+				<tr>
+					<td class="fld">-d
+					<td>The destination file. Either an ftp:// url or a local path.
+			</table>
+		</blockquote>
+
+		<div class="heading">Connecting To Servers</div>
+		To connect to a server you need to enter the address and other relevant details into the "Connect"
+		window which you can access via the File->Connect menu or the "Connect" toolbar button (looks like
+		a wire with a socket outlined in yellow). The connect dialog has the following fields:
+		<blockquote>
+			<table>
+				<tr>
+					<td class="fld">History / Add / Delete
+					<td>The history selector and Add/Delete buttons allow you to store account settings that
+							persist between sessions. To create a new record, click "Add", enter a name and then
+							fill out all the details. This will then be available until you delete it. By default
+							the connect window doesn't store server settings permanently, shown by the history
+							list starting on "(temporary)". If you select an existing account in the list, all the
+							field change to that account's settings. You can edit them or connect using the "Connect"
+							button. To delete an account, just select it and press the "Delete" button. You can
+							also select an account to connect to via the main window's "Accounts" menu.
+				<tr>
+					<td class="fld">Host Address / URL
+					<td>This is the address to connect to, it should be a host name like "ftp.host.com" or an
+							IP address like "192.168.0.1". This is a required field. You can also paste/type a 
+							complete ftp:// URI into this field and i.Ftp will decode all the parameters into the
+							relevant fields when you connect.
+				<tr>
+					<td class="fld">Port
+					<td>The port to connect to. This is usually 21 for FTP connections, but may be something else
+							depending on the way the server is set up. SFTP connections are usually on port 22.
+				<tr>
+					<td class="fld">User ID
+					<td>This is the username to use for authentication, if blank it's assumed you want an anonymous
+							connection, which is supported by some servers.
+				<tr>
+					<td class="fld">Password
+					<td>The password to use for authentication, or blank.
+				<tr>
+					<td class="fld">Initial Remote Directory
+					<td>The directory to go to on the server once the connection is established. Can be blank for no action.
+				<tr>
+					<td class="fld">Initial Local Directory
+					<td>The local directory to go to once the connection is established. Can be blank for no action.
+				<tr>
+					<td class="fld">Anonymous Login
+					<td>This should be set if you want an anonymous login, it will usually be auto-populated depending
+							on whether the user name has been filled out.
+				<tr>
+					<td class="fld">Use Active Transfers Only
+					<td>If you are having trouble with listing files on the server or sending / receiving files then
+							you may need to use Active Transfers. An active transfer is where instead of the FTP program
+							connecting out (passive transfers) to the server for the data connection (to receive a folder listing or transfer
+							a file) the server connects back to the client. The normal "passive" transfers work well through
+							a firewall. But some servers/proxies don't understand passive transfers, and then you need to
+							switch on this option.
+				<tr>
+					<td class="fld">Force simple "LIST"
+					<td>Usually a FTP server can accept parameters on the end of a LIST command, but sometimes they can't.
+							If you get an error trying to list files on the server, try switching this option on.
+				<tr>
+					<td class="fld">Sftp (Secure FTP over SSH)
+					<td>If you want to make an SFTP connection instead of an FTP connection, switch this option on. You
+							will need to have installed the SFTP capable version of i.Ftp to use this option.
+				<tr>
+					<td class="fld">Proxy: Socks5 Server / User / Password
+					<td>In the case that you can provided access to the internet via a SOCKS5 proxy then you will need
+							to fill out these fields with the details of your proxy server. These fields are global and don't 
+							need to be set for each account.
+			</table>
+		</blockquote>
+
+		<div class="heading">Mode</div>
+		The mode menu lets you switch between ASCII and Binary transfers. In ASCII mode the file is converted to
+		the native text file format for the server. This usually means linefeed only for end of line markers.
+		This is useful for text files but will corrupt a binary file.
+		<p/>
+		You can however force certain types of files to always be transfered as ASCII or Binary. Open the options
+		using the File->Options menu and then specify the extensions in the fields named 
+		"Automatically transfer as...". Use wildcards to match different extensions e.g. "*.gif *.zip *.jpg" would
+		be useful in the "Automatically transfer these file types as binary" field. When i.Ftp is transfering a file
+		that matches one of these wildcards the "Mode" menu option will be ignored and the specified mode used 
+		instead.
+
+		<div class="heading">Connected State Operation</div>
+		Once connected you will see a list of files (if any) on the server in the right hand pane. The files on the
+		local side are in the left hand pane. You can now change folder on either panel, and start transfering files.
+		To upload a file, select it on the local side (left hand pane) and then click the "Transfer" button above the
+		pane (a green up arrow) and the transfer will begin. To download a file, first select it in the remote (right 
+		hand pane) and then click the "Transfer" button in the right hand pane (green up arrow). While the transfer is
+		active the status bar at the very bottom of the main window will show some statistics about the transfer. The
+		fields from left to right are:
+		<blockquote>
+			<table>
+				<tr>
+					<td class="fld">Transfer Rate Throttle
+					<td>This is a selector that lets you throttle the transfer so that not all the available
+					bandwidth is used. This is used for allowing other application use the available connection
+					bandwidth, or for keeping a low profile :) To use this option first set the scale appropriate
+					for your connection by clicking on the "No Limit" label. A menu of speeds will appear and you
+					should select which is closest to the amount of bandwidth available. A dialup modem is about
+					56K, ADSL modem is 256K or 512K or 1500K or more. A cable modem can be 8000K, other connections
+					can be higher again. Then select the amount of the connection to use by sliding the control
+					to the left. This sets a percentage of the bandwidth to use. If you want full speed again,
+					slider the knob to the very right until it says "No Limit" again.
+				<tr>
+					<td class="fld">Throughput History
+					<td>This field is a neat little graph of the throughput history showing you what sort of 
+					transfer you are getting over time. The number beside it is the scale of the graph, which equals
+					the largest throughput you have received during the period being graphed.
+				<tr>
+					<td class="fld">Numerical Progress
+					<td>This shows you in numbers how much has been transfered, and the total transfer size.
+				<tr>
+					<td class="fld">Graphical Progress
+					<td>A simple graphical progress bar.
+				<tr>
+					<td class="fld">Average Data Rate
+					<td>This shows the average data throughput rate over the entire transfer.
+				<tr>
+					<td class="fld">Time Remaining
+					<td>This field shows an approximate time left for the transfer to complete based on the average rate
+					and position in the transfer.
+			</table>
+		</blockquote>
+		You can select a whole folder, or multiple files and folders and select transfer on the relevant pane
+		to queue up a list of transfers. The number of queued items is show at the bottom left on the menu 
+		window.
+		<p/>
+		The other button in the toolbar for each pane let you create folders, delete items, open files and
+		move to the parent folder or refresh the view. The labels let you know what they are. If you can't see
+		labels then right click on the buttons and select "Show Text Labels".
+		<p/>
+		The delete function deletes all the selected items, including folders and all their contents. Delete
+		confirmation can be switched on or off in the options (File->Options menu).
+
+
+	</div>
+	<div class="copy">&copy; 2005 <a href="mailto:fret@memecode.com">Matthew Allen</a></div>
+
+</body>
+</html>

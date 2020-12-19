@@ -1,0 +1,858 @@
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+NAME
+       gifsicle - manipulates GIF images and animations
+
+SYNOPSIS
+       gifsicle [options, frames, and filenames]...
+
+DESCRIPTION
+       gifsicle  is a powerful command-line program for creating,
+       editing, manipulating, and getting information  about  GIF
+       images and animations.
+
+INTRODUCTION
+       Without  options, gifsicle acts like a filter: you feed it
+       a GIF on standard input, and it writes that GIF  on  stan-
+       dard  output.  That  means  these two commands do the same
+       thing:
+
+            % gifsicle < in.gif > out.gif
+            % gifsicle < in.gif | gifsicle | gifsicle > out.gif
+
+       Not too interesting. Most times you'll  tell  gifsicle  to
+       alter its inputs by giving it command line options. The -i
+       option, for example,  tells  it  to  interlace  its  input
+       files:
+
+            % gifsicle -i < pic.gif > interlaced-pic.gif
+
+
+       To  modify  GIF files in place, you should use the --batch
+       option. With --batch, gifsicle will modify the  files  you
+       specify instead of writing a new file to the standard out-
+       put. To interlace all the GIFs in the  current  directory,
+       you could say:
+
+            % gifsicle --batch -i *.gif
+
+
+       gifsicle  is  good at creating and manipulating GIF anima-
+       tions. The simplest way to create an animation is to  give
+       more  than  one input file, which gifsicle will combine to
+       create a ``flipbook'' animation:
+
+            % gifsicle pic1.gif pic2.gif pic3.gif > animation.gif
+
+       Use options like --delay, --loopcount, and  --optimize  to
+       tune  your  animations;  see  their  descriptions for more
+       details.
+
+       The bulk of this manual page  indexes  gifsicle's  options
+       and  describes  them in gory detail. New users may want to
+       skip to the Examples section at the end.
+
+CONCEPT INDEX
+       This index is meant to help you find options that do  what
+
+
+
+Version 1.60                2 May 2008                          1
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       you  want.   Concepts  are  on the left, relevant gifsicle
+       options are on the right.
+
+       Animations, changing     frame selections, frame  changes,
+                                etc.
+          disposal              --disposal
+          looping               --loopcount
+          portions of           frame selections
+          smaller               --optimize, --colors
+          speed                 --delay
+       Bad output               --careful
+       Background color         --background
+       Colors, changing         --change-color,   --use-colormap,
+                                --dither, --transform-colormap
+          reducing number       --colors, --dither
+       Comments                 --comment
+       Extensions               --extension,     --app-extension,
+                                --extension-info
+       File size                --optimize,         --unoptimize,
+                                --colors
+       Image transformations
+          cropping              --crop, --crop-transparency
+          flipping              --flip-*
+          resizing              --resize, --scale
+          rotating              --rotate-*
+       Grayscale                --use-colormap
+       Interlacing              --interlace
+       Positioning frames       --position
+       Screen, logical          --logical-screen
+       Selecting frames         frame selections (like '#0')
+       Transparency             --transparent
+       Warnings                 --no-warnings
+       Web-safe palette         --use-colormap
+
+COMMAND LINE
+       gifsicle's command line consists of GIF  input  files  and
+       options.  Most  options start with a dash (-) or plus (+);
+       frame selections, a kind of option, start  with  a  number
+       sign (#). Anything else is a GIF input file.
+
+       gifsicle  reads and processes GIF input files in order. If
+       no GIF input file is given, or you give the special  file-
+       name `-', it reads from the standard input.
+
+       gifsicle  exits  with status 0 if there were no errors and
+       status 1 otherwise.
+
+OPTIONS
+       Every option has a long  form,  `--long-descriptive-name'.
+       You  don't  need  to type the whole long descriptive name,
+       just enough to make it unambiguous.
+
+       Some options also have a short form, `-X'.  You  can  com-
+       bine short options if they don't take arguments: `-IIb' is
+
+
+
+Version 1.60                2 May 2008                          2
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       the same as `-I -I -b'.  But be careful with options  that
+       do take arguments: `-cblah' means `-c blah', not `-c -b -l
+       -a -h'.
+
+       Many options also have a  converse,  `--no-option',  which
+       turns off the option. You can turn off a short option `-X'
+       by saying `+X' instead.
+
+   Mode Options
+       Mode options tell gifsicle what kind of output  to  gener-
+       ate. There can be at most one, and it must precede any GIF
+       inputs.
+
+       --merge, -m
+            Combine all GIF inputs into one  file  with  multiple
+            frames  and  write  that file to the standard output.
+            This is the default mode.
+
+       --batch, -b
+            Modify each GIF input in place by reading and writing
+            to  the  same filename.  (GIFs read from the standard
+            input are written to the standard output.)
+
+       --explode, -e
+            Create an output GIF for each  frame  of  each  input
+            file. The output GIFs are named `xxx.000', `xxx.001',
+            and so on, where `xxx' is the name of the input  file
+            (or  whatever  you specified with `--output') and the
+            numeric extension is the frame number.
+
+       --explode-by-name, -E
+            Same as --explode, but  write  any  named  frames  to
+            files   `xxx.name'   instead  of  `xxx.frame-number'.
+            Frames are named using the `--name' option.
+
+   General Options
+       General options control the  information  gifsicle  prints
+       and  where  it  writes  its  output.  The info options and
+       --verbose can be turned off with `--no-X'.
+
+       --color-info
+            Like --info, but also print information  about  input
+            files'   colormaps.    --cinfo   is   a  synonym  for
+            --color-info.
+
+       --extension-info
+            Like --info, but also print any unrecognized GIF  ex-
+            tensions  in  a hexdump(1)-like format.  --xinfo is a
+            synonym for --extension-info.
+
+       --help, -h
+            Print usage information and exit.
+
+
+
+
+
+Version 1.60                2 May 2008                          3
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       --info, -I
+            Print a human-readable description of each input  GIF
+            to  the standard output, or whatever file you specify
+            with -o.  This option suppresses normal  output,  and
+            cannot  be  combined  with mode options like --batch.
+            If you give two --info or -I options, however, normal
+            output is not suppressed; information will be printed
+            on standard error, and you can supply a mode  option.
+
+       -o file
+       --output file
+            Send  output to file.  The special filename `-' means
+            the standard output.
+
+       --verbose, -V
+            Print progress information (files read  and  written)
+            to standard error.
+
+       --no-warnings, -w
+            Suppress all warning messages.
+
+       --version
+            Print  the version number and some short non-warranty
+            information and exit.
+
+       --conserve-memory
+            Conserve memory usage at the  expense  of  processing
+            time.  This may be useful if you are processing large
+            GIFs on a computer without very much memory.
+
+       --nextfile
+            Allow input files to  contain  multiple  concatenated
+            GIF  images.  If a filename appears multiple times on
+            the command line, gifsicle will read a new image from
+            the  file  each  time.  This  option can help scripts
+            avoid the need for temporary files. For  example,  to
+            create an animated GIF with three frames with differ-
+            ent delays, you might run "gifsicle --nextfile -d10 -
+            -d20  - -d30 - > out.gif" and write the three GIF im-
+            ages, in sequence, to gifsicle's standard input.
+
+       --multifile
+            Like --nextfile, but read as many GIF images as  pos-
+            sible  from  each  file.  This option is intended for
+            scripts. For example, to merge an unknown  number  of
+            GIF  images  into  a  single animation, run "gifsicle
+            --multifile - > out.gif" and write the GIF images, in
+            sequence,  to  gifsicle's  standard input.  Any frame
+            selections apply only to the last file  in  the  con-
+            catenation.
+
+   Frame Selections
+       A  frame selection tells gifsicle which frames to use from
+       the current input file. They are useful  only  for  anima-
+
+
+
+Version 1.60                2 May 2008                          4
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       tions,  as non-animated GIFs only have one frame. Here are
+       the acceptable forms for frame specifications.
+
+       #num         Select frame num. (The first frame  is  `#0'.
+                    Negative  numbers  count  backwards  from the
+                    last frame, which is `#-1'.)
+       #num1-num2   Select frames num1 through num2.
+       #num1-       Select frames num1 through the last frame.
+       #name        Select the frame named name.
+
+       For example,
+            gifsicle happy.gif
+       will use all of `happy.gif's frames, while
+            gifsicle happy.gif "#0"
+       will only use the first. (Note the quotes around the frame
+       specification.  The  `#' character has special meaning for
+       many shells, so you may need to quote it.)
+
+       The action performed with the selected frames  depends  on
+       the  current mode. In merge mode, only the selected frames
+       are merged into the output GIF. In batch  mode,  only  the
+       selected  frames  are  modified;  other  frames remain un-
+       changed. In explode mode, only the selected frames are ex-
+       ploded into output GIFs.
+
+   Frame Change Options
+       Frame  change  options insert new frames into an animation
+       or replace or  delete  frames  that  already  exist.  Some
+       things  -- for example, changing one frame in an animation
+       -- are difficult to express  with  frame  selections,  but
+       easy with frame changes.
+
+       --delete frames [frames...]
+            Delete frames from the input GIF.
+
+       --insert-before frame other-GIFs
+            Insert other-GIFs before frame in the input GIF.
+
+       --append other-GIFs
+            Append other-GIFs to the input GIF.
+
+       --replace frames other-GIFs
+            Replace frames from the input GIF with other-GIFs.
+
+       --done
+            Complete the current set of frame changes.
+
+       The  frames  arguments  are  frame selections (see above).
+       These arguments always refer to frames from  the  original
+       input  GIF.  So,  if  `a.gif' has 3 frames and `b.gif' has
+       one, this command
+            gifsicle a.gif --delete "#0" --replace "#2" b.gif
+       will produce an output animation with  2  frames:  `a.gif'
+       frame 1, then `b.gif'.
+
+
+
+Version 1.60                2 May 2008                          5
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       The other-GIFs arguments are any number of GIF input files
+       and frame selections.  These images are combined in  merge
+       mode  and added to the input GIF.  The other-GIFs last un-
+       til the next frame change option, so this command replaces
+       the  first frame of `in.gif' with the merge of `a.gif' and
+       `b.gif':
+            gifsicle -b in.gif --replace "#0" a.gif b.gif
+
+       This  command,  however,  replaces  the  first  frame   of
+       `in.gif' with `a.gif' and then processes `b.gif' separate-
+       ly:
+            gifsicle -b in.gif --replace "#0" a.gif --done b.gif
+
+       Warning: You shouldn't use both frame selections and frame
+       changes on the same input GIF.
+
+   Image Options
+       Image options modify input images -- by changing their in-
+       terlacing, transparency, and cropping, for example.  Image
+       options have three forms: `--X', `--no-X', and `--same-X'.
+       The `--X' form  selects  a  value  for  the  feature,  the
+       `--no-X'  form  turns  off the feature, and the `--same-X'
+       form means that the feature's value is  copied  from  each
+       input.  The  default  is  always `--same-X'.  For example,
+       -background="#0000FF" sets the background color  to  blue,
+       --no-background turns the background color off (by setting
+       it to 0), and --same-background uses input images'  exist-
+       ing  background  colors. You can give each option multiple
+       times; for example,
+            gifsicle -b -O2 -i a.gif --same-interlace b.gif c.gif
+       will  make  `a.gif'  interlaced,  but  leave  `b.gif'  and
+       `c.gif' interlaced only if they were already.
+
+       -B color
+       --background color
+            Set  the output GIF's background to color.  The argu-
+            ment can have the same forms as in the  --transparent
+            option below.
+
+       --crop x1,y1-x2,y2
+       --crop x1,y1+widthxheight
+            Crop  the following input frames to a smaller rectan-
+            gular area. The top-left corner of this rectangle  is
+            (x1,y1);  you can give either the lower-right corner,
+            (x2,y2), or the width and height of the rectangle. In
+            the  x1,y1+widthxheight form, width and height can be
+            zero or negative. A zero dimension means the cropping
+            area goes to the edge of the image; a negative dimen-
+            sion brings the cropping area that many  pixels  back
+            from  the  image  edge. For example, --crop 2,2+-2x-2
+            will shave 2 pixels off each side of the input image.
+            Cropping  takes  place before any rotation, flipping,
+            resizing, or positioning.
+
+
+
+
+Version 1.60                2 May 2008                          6
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       --crop-transparency
+            Crop any transparent borders off the following  input
+            frames.  This  happens  after any cropping due to the
+            --crop option. It works on the raw input images;  for
+            example,  any  transparency options have not yet been
+            applied.
+
+       --flip-horizontal
+       --flip-vertical
+            Flip the following frames horizontally or vertically.
+
+       -i
+       --interlace
+            Turn interlacing on.
+
+       -S widthxheight
+       --logical-screen widthxheight
+            Set   the  output  logical  screen  to  widthxheight.
+            --no-logical-screen sets the output logical screen to
+            the   size   of   the  largest  output  frame,  while
+            --same-logical-screen sets the output logical  screen
+            to  the  largest input logical screen.  --screen is a
+            synonym for --logical-screen.
+
+       -p x,y
+       --position x,y
+            Set  the  following  frames'  positions   to   (x,y).
+            --no-position  means --position 0,0.  Normally, --po-
+            sition x,y places every succeeding frame  exactly  at
+            x,y. However, if an entire animation is input, x,y is
+            treated as the position for the animation.
+
+       --rotate-90
+       --rotate-180
+       --rotate-270
+            Rotate the following frames by 90, 180,  or  270  de-
+            grees.  --no-rotate turns off any rotation.
+
+       -t color
+       --transparent color
+            Make color transparent in the following frames.  Col-
+            or can be a colormap  index  (0-255),  a  hexadecimal
+            color  specification (like "#FF00FF" for magenta), or
+            slash- or comma-separated red, green and blue  values
+            (each between 0 and 255).
+
+   Extension Options
+       Extension options add non-visual information to the output
+       GIF. This includes names,  comments,  and  generic  exten-
+       sions.
+
+       -x app-name extension
+       --app-extension app-name extension
+            Add  an application extension named app-name and with
+
+
+
+Version 1.60                2 May 2008                          7
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+            the value extension to the output GIF.
+
+       -c text
+       --comment text
+            Add a comment, text, to the output GIF.  The  comment
+            will be placed before the next frame in the stream.
+
+            --no-comments  and --same-comments affect all the im-
+            ages following, and apply only to input GIF comments,
+            not ones added with --comment.
+
+       --extension number extension
+            Add  an  extension numbered number and with the value
+            extension to the output GIF.  Number can be in  deci-
+            mal, octal, hex, or it can be a single character like
+            `n', whose ASCII value is used.
+
+            --no-extensions (or +x) and --same-extensions  affect
+            all the images following, and apply only to input GIF
+            extensions.
+
+       -n text
+       --name text
+            Set the next frame's name  to  text.   This  name  is
+            stored  as  an extension in the output GIF (extension
+            number 0xCE, followed by the characters of the  frame
+            name).
+
+            --no-names  and  --same-names  affect  all the images
+            following. They apply only to input  GIF  names,  not
+            ones added with --name.
+
+   Animation Options
+       Animation options apply to GIF animations, or to individu-
+       al frames in GIF animations. As with image  options,  most
+       animation  options  have three forms, `--X', `--no-X', and
+       `--same-X', and you can give  animation  options  multiple
+       times; for example,
+            gifsicle -b a.gif -d50 "#0" "#1" -d100 "#2" "#3"
+       sets  the delays of frames 0 and 1 to 50, and frames 2 and
+       3 to 100.
+
+       -d time
+       --delay time
+            Set the delay between frames to time in hundredths of
+            a second.
+
+       -D method
+       --disposal method
+            Set  the  disposal method for the following frames to
+            method.  A frame's disposal method determines  how  a
+            viewer should remove the frame when it's time to dis-
+            play the next.  Method can be a number between 0  and
+            7  (although  only 0 through 3 are generally meaning-
+
+
+
+Version 1.60                2 May 2008                          8
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+            ful), or one of these names: none  (leave  the  frame
+            visible  for future frames to build upon), asis (same
+            as "none"), background (or  bg)  (replace  the  frame
+            with  the background), or previous (replace the frame
+            with the area from  the  previous  displayed  frame).
+            --no-disposal means --disposal=none.
+
+       -l[count]
+       --loopcount[=count]
+            Set  the  Netscape loop extension to count.  Count is
+            an integer, or forever to loop endlessly. If you sup-
+            ply  a  --loopcount  option without specifying count,
+            Gifsicle will use forever.  --no-loopcount  (the  de-
+            fault) turns off looping.
+
+            Set  the  loop  count  to one less than the number of
+            times you want the animation  to  run.  An  animation
+            with  --no-loopcount  will  show  every  frame  once;
+            --loopcount=1 will  loop  once,  thus  showing  every
+            frame  twice;  and so forth.  Note that --loopcount=0
+            is equivalent to --loopcount=forever, not  --no-loop-
+            count.
+
+       -O[level]
+       --optimize[=level]
+            Optimize  output GIF animations for space.  Level de-
+            termines how much optimization  is  done.  There  are
+            currently two levels:
+
+            -O1  Stores  only  the changed portion of each image.
+                 This is the default.
+            -O2  Also uses transparency to shrink the  file  fur-
+                 ther.
+
+            There is no --same-optimize option.
+
+       -U
+       --unoptimize
+            Unoptimize  GIF animations into an easy-to-edit form.
+
+            GIF animations are often optimized  (see  --optimize)
+            to make them smaller and faster to load, which unfor-
+            tunately makes them difficult to edit.   --unoptimize
+            changes  optimized  input GIFs into unoptimized GIFs,
+            where each frame is a faithful representation of what
+            a user would see at that point in the animation.
+
+            There is no --same-unoptimize option.
+
+   Whole-GIF Options
+       Whole-GIF  options  effect entire GIFs as they are read or
+       written. They can be turned off with `--no-option'.
+
+
+
+
+
+Version 1.60                2 May 2008                          9
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       --careful
+            Write slightly larger GIFs that avoid  bugs  in  some
+            other GIF implementations. Some Java and Internet Ex-
+            plorer versions cannot display the  correct,  minimal
+            GIFs that Gifsicle produces. Use the --careful option
+            if you are having problems with a particular image.
+
+       --change-color color1 color2
+            Change color1 to color2 in the following input  GIFs.
+            (The color arguments have the same forms as in the -t
+            option.) You can change multiple colors by giving the
+            option  multiple times. Color changes don't interfere
+            with one another, so you can safely swap  two  colors
+            with  `--change-color  color1  color2  --change-color
+            color2 color1'.  They all take effect as an input GIF
+            is   read.    --no-change-color   cancels  all  color
+            changes.
+
+       -k num
+       --colors num
+            Reduce the number of distinct colors in  each  output
+            GIF  to  num or less.  Num must be between 2 and 256.
+            This can be used to shrink output GIFs  or  eliminate
+            any local color tables.
+
+            Unless  you give --use-colormap, an adaptive group of
+            colors is chosen from the existing color table.   You
+            can  affect  this process with the --color-method op-
+            tion. Gifsicle may need to add  an  additional  color
+            (making num+1 in all) if there is transparency in the
+            image.
+
+       --color-method method
+            Determine how a smaller colormap is chosen. There are
+            three choices: diversity, the default, is xv(1)'s di-
+            versity algorithm, which uses a strict subset of  the
+            existing  colors.   blend-diversity is a modification
+            of this: some color values are blended from  a  group
+            of the existing colors.  median-cut is the median cut
+            algorithm described by Heckbert.  --method is a  syn-
+            onym for --color-method.
+
+       -f
+       --dither
+            This option only matters if the colormap was changed.
+            With --dither on, Floyd-Steinberg error diffusion  is
+            used  to  approximate  any  colors that were removed.
+            This looks better, but makes  bigger  files  and  can
+            cause animation artifacts, so it is off by default.
+
+       --resize widthxheight
+            Resize  the output GIF to widthxheight.  Either width
+            or height may be an underscore `_'. If  the  argument
+            is  widthx_,  then  the output GIF is scaled to width
+
+
+
+Version 1.60                2 May 2008                         10
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+            pixels wide without changing  its  aspect  ratio.  An
+            analogous  operation  is performed for _xheight.  Re-
+            sizing happens after all input frames have been  com-
+            bined  and before optimization. Gifsicle's resize al-
+            gorithm is designed for speed, not quality; for best-
+            looking results you will need to use other tools.
+
+       --resize-width width
+            Same as --resize widthx_.
+
+       --resize-height height
+            Same as --resize _xheight.
+
+       --scale Xfactor[xYfactor]
+            Scale  the  output  GIF's width and height by Xfactor
+            and Yfactor.  If Yfactor is not given, it defaults to
+            Xfactor.  Scaling happens after all input frames have
+            been combined and before optimization.
+
+       --transform-colormap command
+            Command should be a shell  command  that  reads  from
+            standard  input  and  writes to standard output. Each
+            colormap in the output GIF is  translated  into  text
+            colormap  format (see --use-colormap below) and piped
+            to the command. The  output  that  command  generates
+            (which  should  also be in text colormap format) will
+            be used as the colormap instead.
+
+       --use-colormap colormap
+            Set the image's colormap to colormap.   Colormap  can
+            be  web  for the 216-color ``Web-safe palette''; gray
+            for grayscale; bw for black-and-white; or the name of
+            a  file.  That file should either be a text file (the
+            format is described below) or a GIF file, whose glob-
+            al  colormap will be used. If --colors=N is also giv-
+            en, an N-sized subset of colormap will be used.
+
+            Text colormap files have a very simple format:
+
+            # each non-comment line represents one color, "red green blue"
+            # each component should be between 0 and 255
+            0 0 0            # like this
+            255 255 255
+
+EXAMPLES
+       Here are a bunch of examples showing how gifsicle is  com-
+       monly used.
+
+       First, let's create an animation, `anim.gif':
+
+            % gifsicle a.gif b.gif c.gif d.gif > anim.gif
+
+       This  animation  will  move  very quickly: since we didn't
+       specify a delay, a browser will cycle through  the  frames
+
+
+
+Version 1.60                2 May 2008                         11
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       as fast as it can. Let's slow it down and pause .5 seconds
+       between frames, using the --delay option.
+
+            % gifsicle --delay 50 a.gif b.gif c.gif d.gif > anim.gif
+
+       If we also want the GIF to loop three times,  we  can  use
+       --loopcount:
+
+            % gifsicle -d 50 --loop=3 a.gif b.gif c.gif d.gif > anim.gif
+
+       (Rather  than  type --delay again, we used its short form,
+       -d.  Many options have short forms; you can  see  them  by
+       running  `gifsicle  --help'.   We also abbreviated --loop-
+       count to --loop, which is OK since no other option  starts
+       with `loop'.)
+
+       To explode `anim.gif' into its component frames:
+
+            % gifsicle --explode anim.gif
+            % ls anim.gif*
+            anim.gif      anim.gif.000  anim.gif.001  anim.gif.002  anim.gif.003
+
+       To optimize `anim.gif':
+
+            % gifsicle -b -O2 anim.gif
+
+       To change the second frame of `anim.gif' to `x.gif':
+
+            % gifsicle -b --unoptimize -O2 anim.gif --replace "#1" x.gif
+
+       --unoptimize is used since `anim.gif' was optimized in the
+       last step. Editing individual frames in optimized GIFs  is
+       dangerous   without  --unoptimize;  frames  following  the
+       changed frame  could  be  corrupted  by  the  change.   Of
+       course, this might be what you want.
+
+       Note that --unoptimize and --optimize can be on simultane-
+       ously.  --unoptimize affects input GIF files, while  --op-
+       timize affects output GIF files.
+
+       To  print information about the first and fourth frames of
+       `anim.gif':
+
+            % gifsicle -I "#0" "#3" < anim.gif
+            (information printed)
+
+       To make black the transparent color in all the GIFs in the
+       current directory, and also print information about each:
+
+            % gifsicle -bII --trans "#000000" *.gif
+            (information printed)
+
+       Giving  -I  twice forces normal output to occur. With only
+       one -I, the GIFs would not have changed on disk.
+
+
+
+Version 1.60                2 May 2008                         12
+
+
+
+
+
+GIFSICLE(1)                                           GIFSICLE(1)
+
+
+       To change `anim.gif' to use a 64-color subset of the  Web-
+       safe palette:
+
+            % gifsicle -b --colors=64 --use-col=web anim.gif
+
+       To make a dithered black-and-white version of `anim.gif':
+
+            % gifsicle --dither --use-col=bw anim.gif > anim-bw.gif
+
+
+       To  overlay  one GIF atop another -- producing a one-frame
+       output GIF that looks like the superposition  of  the  two
+       inputs -- use gifsicle twice:
+
+            % gifsicle bottom.gif top.gif | gifsicle -U "#1" > result.gif
+
+
+BUGS
+       Some  optimized output GIFs may appear incorrectly on some
+       GIF implementations (for example, Java's); see the --care-
+       ful option.
+
+       Please  email  suggestions, additions, patches and bugs to
+       kohler@cs.ucla.edu.
+
+SEE ALSO
+       For a tutorial on GIF images and animations, you might try
+       some  of the resources listed on-line at webreference.com:
+       http://www.webreference.com/authoring/graphics/animation.html
+
+AUTHORS
+       Eddie Kohler <ekohler@gmail.com>
+       http://www.cs.ucla.edu/~kohler/
+       He wrote it.
+
+       Anne Dudfield <annied@frii.com>
+       http://www.frii.com/~annied/
+       She named it.
+
+       Hans Dinsen-Hansen <dino@danbbs.dk>
+       http://www.danbbs.dk/~dino/
+       Adaptive tree method for GIF writing.
+
+       http://www.lcdf.org/gifsicle/
+       The gifsicle home page.
+
+
+
+
+
+
+
+
+
+
+
+
+Version 1.60                2 May 2008                         13
+
+

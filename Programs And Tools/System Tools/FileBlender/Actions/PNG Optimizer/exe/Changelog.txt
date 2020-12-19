@@ -1,0 +1,13 @@
+== PngOptimizerCL Changelog ==
+
+Note: for engine optimization, see PngOptimizer Changelog instead.
+
+-----------------
+2011-04-25 (2.0)
+
+- new: x64 version
+- new: more background color options.
+- new: added IgnoreAnimatedGif option.
+- new: textual data options added.
+
+- fixed: returns 0 upon success or if no argument provided. Returns 1 if an error occurred.
