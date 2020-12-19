@@ -10,6 +10,7 @@ Install to "Root of Drive", ie: C:\, D:\ or Etc.
 ***
 
 
+
 All software included is FOSS or Freeware. Software authors, that have working contact information, have reviewed and/or approved this release, when possible.
 
 Licences and EULA of all included software are expected to be respected/followed by users. 
