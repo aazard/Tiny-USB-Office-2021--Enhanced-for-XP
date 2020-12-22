@@ -1,0 +1,18 @@
+1;This is Company Patrol <FLEET>. Do you require any assistance?;;;
+;Yes;2;;
+;No;3;;
+2;How can we help you?;;;
+;Can you escort us to the nearest base?;4;;
+;We are in dire need of fuel;5;;
+;Actually I don't need any help;3;;
+3;Have you seen Pirates or other hostiles in the area;;;
+;Yes;6;;
+;No;7;;
+4;Negative. We are on patrol duty.;;;
+;Oh;2;;
+5;We can supply you with fuel for 3 Cr per ton;2;BUYFUEL;3
+6;Where did you see them?;;;
+;Truth;7;SETTARGET;1
+;Lie;7;SETTARGET;2
+7;Been nice chatting to you. Have a save journey;;;
+;Thank you, you too.;0;;

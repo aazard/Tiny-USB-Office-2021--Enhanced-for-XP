@@ -1,0 +1,16 @@
+1;Hello, Hello? Do you read me?;
+;Yes, we do read you.;2
+;...;7
+2;Thank goodness! We have run out of fuel! Can you help us please?;
+;Of course;3
+;For a price, perhaps;4
+;No, ;5
+3;Great. We are at <COORDS>. Just dock at our ship.;
+4;Great. We are at <COORDS>. Just dock at our ship. We can negotiate a price when you are on board.;
+5;What? Are you serious???;
+;All right, but for a price.;3
+;Yes I am. Consider yourself darwin award winners;6
+6;May you rot in Hell! You poor heartless SOB. If I ever get my hands on you ....;
+7;We've run out of fuel. Please respond. Hello?;
+;This is <PLAYER>;2
+;...;0

@@ -1,0 +1,46 @@
+Species
+    name = "SP_KOBUNTURA"
+    description = "SP_KOBUNTURA_DESC"
+    gameplay_description = "SP_KOBUNTURA_GAMEPLAY_DESC"
+    Native
+    CanProduceShips
+    CanColonize
+
+    tags = [ "SELF_SUSTAINING" "GREAT_INDUSTRY" "AVERAGE_SUPPLY" "BAD_ATTACKTROOPS" "PEDIA_SELF_SUSTAINING_SPECIES_CLASS" ]
+
+    foci = [
+        [[HAS_INDUSTRY_FOCUS]]
+        [[HAS_RESEARCH_FOCUS]]
+        [[HAS_GROWTH_FOCUS]]
+        [[HAS_ADVANCED_FOCI]]
+    ]
+
+    preferredfocus = "FOCUS_INDUSTRY"
+
+    effectsgroups = [
+        [[GREAT_INDUSTRY]]
+        [[AVERAGE_RESEARCH]]
+        [[AVERAGE_STOCKPILE]]
+
+        [[AVERAGE_POPULATION]]
+        [[AVERAGE_HAPPINESS]]
+        [[AVERAGE_SUPPLY]]
+        [[BAD_DEFENSE_TROOPS]]
+        [[BAD_OFFENSE_TROOPS]]
+
+        // not for description
+        [[AVERAGE_PLANETARY_DEFENSE]]
+        [[AVERAGE_PLANETARY_SHIELDS]]
+        [[STANDARD_SHIP_SHIELDS]]
+        [[NATIVE_PLANETARY_DETECTION(10)]]
+        [[NATIVE_PLANETARY_DEFENSE(10*[[PLANET_DEFENSE_FACTOR]])]]
+        [[NATIVE_PLANETARY_SHIELDS(10*[[PLANET_SHIELD_FACTOR]])]]
+    ]
+
+    [[BARREN_STANDARD_EP]]
+
+    graphic = "icons/species/intangible-04.png"
+
+#include "common/*.macros"
+
+#include "/scripting/common/*.macros"

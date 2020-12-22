@@ -1,0 +1,18 @@
+1;This is merchant convoy <FLEET>;;;
+;Just saying Hello;3;;
+;Have you seen any pirates?;2;;
+;Anything else?;2;;
+;What's your cargo?;4;;
+;Drop your cargo or be destroyed!;6;;
+;Do you need an escort?;7;;
+;We need fuel, would you sell some?;8;;
+2;No problems so far;;;
+3;Thanks. Have a nice trip.;;;
+4;Why do you want to know?;;;
+;Just checking;3;;
+;I'd like to steal it;5;;
+;Drop your cargo or be destroyed!;6;;
+5;Be advised that we will defend ourselves;;;
+6;;;PIRATETHREAT;
+7;;;ESCORT;
+8;We can supply you with fuel for 5 Cr per ton;1;BUYFUEL;5

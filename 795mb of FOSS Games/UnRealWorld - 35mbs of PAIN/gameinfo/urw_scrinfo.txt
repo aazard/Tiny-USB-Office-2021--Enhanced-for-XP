@@ -1,0 +1,75 @@
+
+// on-screen information for "Wounds & Injuries" screen
+//
+.WOUNDS.
+These colors indicate the state of your injuries. 
+The state of fresh wounds is not known until they have been 
+treated - or have started to heal on their own.<br>
+BL abbreviation is used for bleeding wounds.<br>
+<br>
+The TREATED bar shows how many of all the possible treatments
+have been applied to the wound today. Wounds can be treated
+on a daily basis by using the PHYSICIAN skill.
+<br>
+***
+
+.ENCYCLOPEDIA.
+There's more information available about highlighted topics. To display a page, 
+choose and select the topic by using the cursor keys and ENTER - or by clicking
+with the mouse. You can also type a free keyword/topic to search for a specific page.
+***
+
+
+.SKILLS.
+Select a skill from the list to use it.<br>
+<br>
+From the main game screen you can use skills quickly by pressing simultaneously:<br>
+[ALT]+[skill hotkey a-z]<br>
+<br>
+<br>
+<br>
+Skills that have improved during the present day are marked with<green>+</green>.<br>
+<br>
+The darker section of skill meter bar, if visible, shows your original skill mastery.<br>
+<br>
+Your natural aptitude for learning and developing a skill is rated by stars: <lightgray>*</lightgray>.<br>
+This is determined by your physical and mental attributes and affects the pace of skill improvement.
+***
+
+.SKILLS_IMPROVE.
+Your character possesses the following selection of cultural and family skills which can be now developed further. 
+You have number of options to assign to the skills you prefer. Select a skill from the list and press [+] or [-] to
+improve or degrade it.<br>
+<br>
+The darker section of skill meter bar, if visible, shows your initial skill mastery.<br>
+<br>
+Your natural aptitude for learning and developing a skill is rated by stars <lightgray>*</lightgray>.
+This is determined by your physical and mental attributes and affects the level of skill improvement.
+***
+
+.QUEST_JOURNAL.
+These are the quests you are currently involved in. Select a quest from the list to view it in detail.
+***
+
+.KNOWN_AREAS_MAP.
+Click locations with mouse for more information, where available. Or use arrow keys to move
+target cursor, when visible, and select the location with [ENTER]. 
+***
+
+.SPELLS_GENERAL.
+These are the spells and magic means currently known to you.<br>
+Bring the selector over the desired spell to view its description.<br>
+Most often the spells are performed by following the instructions and doing the required actions given in the spell description.
+***
+
+.SPELLS_INSTANT.
+Invocations and rituals marked with this color work differently and are automatically performed upon selection.
+***
+
+.SPELLS_INITIAL.
+You start with these spells and magic means to interact and communicate
+with the spirits and the otherworld. You'll learn more during your life.<br>
+Exit this screen when you are ready to continue character creation
+or take a moment to learn more by bringing the selector over the desired 
+spell to view its description.
+***

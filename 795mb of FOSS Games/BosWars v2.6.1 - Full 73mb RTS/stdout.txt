@@ -1,0 +1,82 @@
+Bos Wars default config file loading ...
+
+Loading unit: unit-aircraftfactory.lua
+Loading unit: unit-antharus.lua
+Loading unit: unit-apcs.lua
+Loading unit: unit-artil.lua
+Loading unit: unit-assault.lua
+Loading unit: unit-bazoo.lua
+Loading unit: unit-biggunturret.lua
+Loading unit: unit-bomber.lua
+Loading unit: unit-buggy.lua
+Loading unit: unit-camera.lua
+Loading unit: unit-camp.lua
+Loading unit: unit-cannon.lua
+Loading unit: unit-chopper.lua
+Loading unit: unit-corpses.lua
+Loading unit: unit-grenadier.lua
+Loading unit: unit-gturret.lua
+Loading unit: unit-harvester.lua
+Loading unit: unit-heli.lua
+Loading unit: unit-hospital.lua
+Loading unit: unit-hotspot.lua
+Loading unit: unit-jet.lua
+Loading unit: unit-magmapump.lua
+Loading unit: unit-medic.lua
+Loading unit: unit-missilesilo.lua
+Loading unit: unit-morels.lua
+Loading unit: unit-nukeplant.lua
+Loading unit: unit-plant.lua
+Loading unit: unit-powerplant.lua
+Loading unit: unit-radar.lua
+Loading unit: unit-rocks.lua
+Loading unit: unit-rocksfield.lua
+Loading unit: unit-rtank.lua
+Loading unit: unit-tank.lua
+Loading unit: unit-tree.lua
+Loading unit: unit-tree02.lua
+Loading unit: unit-tree03.lua
+Loading unit: unit-tree04.lua
+Loading unit: unit-weakhotspot.lua
+Loading AI: blitz.lua
+Loading AI: default.lua
+Loading AI: passive.lua
+Loading AI: rush.lua
+Loading AI: tankrush.lua
+Loading patch: dirtyPlain.lua
+Loading patch: dirtyPlain2.lua
+Loading patch: dirtyPlain3.lua
+Loading patch: grass.lua
+Loading patch: greenMountain.lua
+Loading patch: lake.lua
+Loading patch: pikeMountain.lua
+Loading patch: plain1.lua
+Loading patch: plain16.lua
+Loading patch: plain2.lua
+Loading patch: plain4.lua
+Loading patch: plain8.lua
+Loading patch: rockyMountainL.lua
+Loading patch: rockyMountainR.lua
+Loading patch: smallWetPlain.lua
+Loading patch: te0.lua
+Loading patch: te1.lua
+Loading patch: te2.lua
+Loading patch: te3.lua
+Loading patch: te4.lua
+Loading patch: te5.lua
+... ready!
+Bos Wars V2.6.0, (c) 1998-2010 by the Bos Wars and Stratagus Project.
+  written by Lutz Sammer, Fabrice Rossi, Vladi Shabanski, Patrice Fortier,
+Jon Gabrielson, Andreas Arens, Nehal Mistry, Jimmy Salmon, Francois Beerten and others.
+	(http://www.boswars.org)
+Compile options VORBIS THEORA 
+
+Bos Wars may be copied only under the terms of the GNU General Public License
+which must be distributed with this program.
+
+DISCLAIMER:
+This software is provided as-is.  The author(s) can not be held liable for any
+damage that might arise from the use of this software.
+Use it at your own risk.
+
+Thanks for playing Bos Wars.

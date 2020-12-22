@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<quests>
+
+<!--<quest filename="data/quest_test.xml"/>-->
+<quest filename="data/quest_kill_goblins.xml" name="1: Goblin caves"/> <!-- 1st -->
+<quest filename="data/quest_wizard_dungeon_find_item.xml" name="2: The Wizard's dungeon"/> <!-- 2nd -->
+<quest filename="data/quest_through_mountains.xml" name="3: Journey to Wardensgard"/> <!-- 3rd -->
+<!--<quest filename="data/quest_necromancer.xml" name="4: The Necromancer"/>--> <!-- 4th -->
+
+</quests>

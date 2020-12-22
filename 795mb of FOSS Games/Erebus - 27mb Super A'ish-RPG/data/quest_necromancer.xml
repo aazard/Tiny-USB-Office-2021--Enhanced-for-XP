@@ -1,0 +1,2107 @@
+<?xml version="1.0" ?>
+<quest name="The Necromancer">
+
+<info>After completing your previous quest, you retire with your riches to take a much needed break. You can now afford luxuries that you never had before - a large house, exquisite foods, fine clothes. A year passes by peacefully.
+
+You should have noticed the warning signs sooner, but they seemed isolated incidents at first. Late on one summer evening whilst walking along a country road, you saw what looked like a grinning skeleton behind some trees, but before you could investigate closer, whatever it was had vanished, and you passed it off as a trick of the light.
+
+...
+
+News has been received from other villages of a spreading evil across the land - the dead are rising from their graves, say the reports, and some villages have completely fallen under the control of undead legions.
+
+Many suspect the work of a necromancer to be the cause, and there are rumours that that a great army of undead will soon sweep across the land.
+
+You are eager to do what you can to help. You head east towards the village of Axbury. There you should seek out a person named Borin, who is known for being knowledgable in these matters.
+</info>
+
+<completed_text>
+</completed_text>
+
+<quest_objective type="find_item" arg1="Vespar's Skull" gold="500"/>
+
+<!-- need to ensure all Characters can carry the weight, and have weapons they can use -->
+<start_bonus
+    FP="2" BS="2" S="1" A="0" M="2" D="1" B="2" Sp="0.5"
+    bonus_health="24"
+    XP="2110">
+    <gold amount="2371"/>
+    <item template="Shield"/>
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+    <weapon name="Long Sword" image_name="longsword" weight="10"
+        damageX="2" damageY="10" damageZ="2"
+        min_strength="7"
+        animation_name="longsword"
+        base_template="Long Sword" worth_bonus="150"
+        />
+    <weapon name="Magic Long Sword" image_name="longsword" weight="12"
+        damageX="2" damageY="10" damageZ="2"
+        min_strength="7"
+        animation_name="longsword"
+        magical="true"
+        base_template="Long Sword" worth_bonus="300"
+        />
+    <armour name="Derrin's Armour" image_name="metal_armour" x="29.0" y="38.0" weight="200"
+        min_strength="8" rating="7" magical="true"
+        base_template="Plate Armour" worth_bonus="200">
+This plate armour is blessed with ancient Dwarven magic, offering greater protection, though it is just as heavy.
+    </armour>
+    <ring name="Derrin's Ring" image_name="ring_gold" weight="0" magical="true" bonus_D="1"
+        base_template="Gold Ring" worth_bonus="250"
+        />
+    <ammo name="Arrows +1" ammo_type="Arrows" image_name="arrow" projectile_image_name="arrow" weight="1"
+        rating="2"
+        magical="true"
+        base_template="Arrows" worth_bonus="100"
+        amount="10"
+        x="8.5" y="17.5"
+        />
+</start_bonus>
+
+<location name="Axbury" display_name="true" lighting_min="160" geo_type="outdoors">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="30.0" rect_h="40.0"/>
+
+<player_start x="16.0" y="22.0"/>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="15.0" y="17.0">
+         68           68
+         9b           9b
+         9b           9b
+         9b           9b
+677777777547777777777754777778
+cdddddddddddd21dddddddddddddde
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             9b
+             ce
+</tilemap>
+
+<scenery name="Magic Shop" image_name="building3" x="20.0" y="18.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.429" blocking="true" block_visibility="true" exit_location="Magic Shop, Axbury" exit_location_x="1.0" exit_location_y="2.5"/>
+
+<scenery name="Armourer" image_name="building3" x="26.0" y="16.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.429" blocking="true" block_visibility="true" exit_location="Armourer, Axbury" exit_location_x="1.5" exit_location_y="4.5"/>
+
+<scenery name="Borin's Home" image_name="building" x="32.0" y="25.0" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="Borin's Home" exit_location_x="2.5" exit_location_y="4.5"/>
+
+<scenery name="Well" image_name="well" x="29.0" y="20.0" size="1.0" blocking="true"/>
+
+<scenery name="Peasant's Home" image_name="building2" x="25.0" y="27.0" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="General Stores" image_name="building3" x="32.0" y="32.0" size="3.43" boundary_iso="true" boundary_iso_ratio="0.429" blocking="true" block_visibility="true" exit_location="General Stores, Axbury" exit_location_x="1.0" exit_location_y="2.5"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="32.5" y="38.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="31.0" y="43.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="27.0" y="42.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="20.0" y="42.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Church" image_name="church" x="36.5" y="16.0" size="5.0" boundary_iso="true" boundary_iso_ratio="0.537" blocking="true" block_visibility="true" exit_location="Church, Axbury" exit_location_x="3.5" exit_location_y="9.5"/>
+
+<scenery name="Signpost" image_name="signpost" x="44.0" y="21.0" size="1.0" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="16.0" exit_location_y="40.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel east to the town of Middleham?"
+    requires_flag="borin_reveal_exit"
+/>
+
+<scenery name="Tree" image_name="tree2" x="20.0" y="30.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="27.0" y="33.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="30.0" y="15.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="22.5" y="32.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="18.0" y="27.6" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="30.9" y="17.8" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="20.6" y="34.9" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="23.3" y="37.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="22.7" y="40.1" size="3.0"/>
+
+<scenery name="Grass" image_name="grass" x="20.5" y="31.8" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="25.0" y="34.2" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="31.4" y="36.7" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="36.5" y="32.7" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="37.5" y="27.7" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="40.5" y="31.4" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="38.6" y="28.9" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="40.1" y="24.3" size="1.0" draw_type="background"/>
+
+<scenery name="Scarecrow" image_name="scarecrow" x="40.0" y="32.0" size="0.8">
+This worn and battered old scarecrow watches over the fields. As you examine it, for a moment you are sure that there is some movement - a slight turn of the head, a movement of its makeshift eyes, and you have a feeling of being watched. It must be your eyes playing tricks on you.
+</scenery>
+<scenery name="Grass" image_name="grass" x="39.5" y="33.0" size="1.0" draw_type="background"/>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="30.0" y="29.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello - have you heard the news about the dead coming out of their graves?
+</opening_initial>
+<opening_later>Hello - have you heard the news about the dead coming out of their graves?
+</opening_later>
+</npc>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="50.0" rect_w="6.0" rect_h="20.0"/>
+
+<floorregion shape="rect" rect_x="36.0" rect_y="64.0" rect_w="6.0" rect_h="6.0"/>
+
+<scenery name="Tree" image_name="tree2" x="32.0" y="53.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="31.7" y="58.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="31.6" y="66.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="34.4" y="60.0" size="3.0"/>
+
+<scenery name="Boulders" image_name="boulders" x="35.1" y="55.1" size="0.58" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="41.0" y="69.0" size="0.58" blocking="true"/>
+
+<scenery name="Stairs" image_name="stairsdown_outdoors" x="39.0" y="67.0" size="2.0" blocking="true" exit_location="Dungeons near Axbury" exit_location_x="30.0" exit_location_y="3.5"/>
+
+<npc name="Zombie" template="Zombie" x="37.0" y="64.5"/>
+
+<scenery name="Bones" image_name="bones" x="39.5" y="68.5" size="0.5" draw_type="background"/>
+
+</location>
+
+<location name="Armourer, Axbury" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="1.0" rect_y="5.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.5" y="6.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="25.0" exit_location_y="19.0"/>
+
+<scenery name="Table" image_name="table" x="2.5" y="1.0" size="0.8" blocking="true"/>
+
+<npc name="Shopkeeper" animation_name="peasant_man" static_image="true" x="1.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Armourer"/>
+
+</location>
+
+<location name="Borin's Home" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="0.0" rect_w="2.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="5.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="32.0" exit_location_y="27.5"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="1.0" size="0.8" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="4.25" y="2.5" size="1.2" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<npc name="Borin" animation_name="peasant_man" static_image="true" x="2.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="WANT_OBJECT"
+    interaction_data="Scrying Orb"
+    interaction_xp="100"
+    interaction_journal="I found Borin's Scrying Orb for him. He told me that a Skeleton Army had destroyed the village of Dunbridge to the east, led by a Skeleton Lord who I should kill. He suggested I go to Wentbridge Fort, also to the east, for more help."
+    interaction_set_flag="borin_reveal_exit"
+>
+<opening_initial>Hello. A great evil plagues this land. You look like someone who could help us?
+</opening_initial>
+<opening_later>Hello, again.
+</opening_later>
+<opening_interaction_complete>Hello, again. I'm afraid I have nothing more of help to tell you.
+</opening_interaction_complete>
+<talk question="I'm trying to find the source of this evil - do you have any information?" while_not_done="true" journal="Borin asked me to find a Scrying Orb, located in some dungeons to the south.">Unfortunately I don't yet know. But you could help me by finding one of my Scrying Orbs - I put them in a dungeon to the south for safe keeping. I can then use it to identify the source of this evil.
+</talk>
+<talk question="I have found the Scrying Orb for you" objective="true">
+Ah, thank you. Now let's see - it's been a while since I've used this old orb. Yes - ah, I see it now. There is indeed great evil, the dead walk across the land.
+
+A necromancer is certainly behind this evil, but unfortuntely I cannot see his location. But I do see a great concentration of power in the village of Dunbridge, to the east - or what remains of it. Now all I see is smouldering buildings and rotten corpses, slain by a skeleton army.
+
+They are led by a Skeleton Lord, who needs to be slain, but this vile creature is protected by powerful magic. Hmm, I'm afraid that's the extent of my vision. For more help, I suggest you check out Wentbridge Fort, also to the east. The soldiers there may be able to offer help.
+</talk>
+</npc>
+
+<!--<item name="Scrying Orb" image_name="orb" icon_width="0.25" weight="2" x="0.5" y="0.5">
+When you stare into this Orb, you see swirling lights of many different colours.
+</item>-->
+
+</location>
+
+<location name="Church, Axbury" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="1.0" rect_y="1.0" rect_w="5.0" rect_h="9.0"/>
+
+<scenery name="Torch" image_name="torch" x="5.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="3.5" y="10.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="36.5" exit_location_y="19.0"/>
+
+<scenery name="Door" image_name="door_metal_n" x="2.0" y="0.95" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Graveyard, Axbury" exit_location_x="6.0" exit_location_y="12.0"/>
+
+<scenery name="Table" image_name="table" x="1.5" y="4.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="5.5" y="4.0" size="0.8" blocking="true"/>
+
+<scenery name="Shrine" image_name="shrine" x="3.5" y="2.0" size="1.0" blocking="true"/>
+
+<npc name="Priest" animation_name="man" static_image="true" x="2.5" y="5.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="KILL_NPCS"
+    interaction_data="Axbury_Priest"
+    interaction_xp="75"
+    interaction_journal="I killed the Zombies for the Priest."
+>
+<opening_initial>Hello - you look like someone who could help me!
+</opening_initial>
+<opening_later>Hello, again - please, are you able to help me?
+</opening_later>
+<opening_interaction_complete>Thank you again for ridding this church of those foul zombies!
+</opening_interaction_complete>
+<talk question="How can I help you?" while_not_done="true" journal="The priest of Axbury asked if I could kill the Zombies in the church graveyard.">The dead are coming out graves! At this very moment, there are two rotting corpses out in the graveyard, walking around. Please can you do something about it!
+</talk>
+<talk question="I have killed the Zombies for you" objective="true">
+Thank you for helping me!
+</talk>
+</npc>
+
+</location>
+
+<location name="Graveyard, Axbury" display_name="true" lighting_min="90" geo_type="outdoors">
+
+<!--<player_start x="6.0" y="12.0"/>-->
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="1.0" rect_y="1.0" rect_w="10.0" rect_h="12.0"/>
+<scenery name="Door" image_name="door_metal_n" x="6.0" y="13.05" w="1.0" h="0.1" visual_h="0.9" exit_location="Church, Axbury" exit_location_x="2.0" exit_location_y="1.5"/>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="5.0" y="4.0">
+68
+9b
+947778
+91ddde
+9b
+9b
+9b
+9b
+ce
+</tilemap>
+
+<scenery name="Tomb" image_name="tomb" x="8.0" y="3.1" size="1.0" blocking="true">
+The text on this tomb is faded and unreadable.
+    <gold amount="2"/>
+</scenery>
+
+<scenery name="Tomb" image_name="tomb" x="10.0" y="3.0" size="1.0" blocking="true">
+Orin, 1132-1211.
+</scenery>
+
+<scenery name="Plant" image_name="plant" x="9.0" y="3.5" size="0.5" draw_type="background"/>
+
+<scenery name="Grave" image_name="grave2" x="8.6" y="5.0" size="0.5" blocking="true">
+Galain, 1208-1248.
+</scenery>
+
+<scenery name="Grave" image_name="grave0" x="6.0" y="3.0" size="1.0" blocking="true">
+Rogar, 1196-1231.
+</scenery>
+
+<scenery name="Grave" image_name="grave1" x="9.0" y="9.0" size="0.75" blocking="true">
+The text on this grave is faded and unreadable.
+</scenery>
+
+<scenery name="Grave" image_name="grave3" x="7.5" y="9.0" size="0.5" blocking="true">
+The text on this grave is faded and unreadable.
+</scenery>
+
+<scenery name="Grave" image_name="grave2" x="7.56" y="11.0" size="0.5" blocking="true">
+Selena, 1115-1249.
+</scenery>
+
+<scenery name="Grave" image_name="grave2" x="9.1" y="10.9" size="0.5" blocking="true">
+Eli, 1204-1231.
+</scenery>
+
+<scenery name="Tree" image_name="tree2" x="2.5" y="2.0" size="3.0"/>
+
+<scenery name="Grave" image_name="grave2" x="3.0" y="2.8" size="0.5" blocking="true">
+Keran, 1188-1241.
+</scenery>
+
+<scenery name="Grave" image_name="grave3" x="2.0" y="5.0" size="0.5" blocking="true">
+The text on this grave is faded and unreadable.
+</scenery>
+
+<scenery name="Grass" image_name="grass" x="2.1" y="5.5" size="0.5">
+Sama, 1223-1238.
+</scenery>
+
+<scenery name="Grave" image_name="grave2" x="3.7" y="7.0" size="0.5" blocking="true">
+The text on this grave is faded and unreadable.
+</scenery>
+
+<scenery name="Grass" image_name="grass" x="3.1" y="7.1" size="0.5"/>
+
+<scenery name="Grave" image_name="grave1" x="2.0" y="10.0" size="0.75" blocking="true">
+The text on this grave is faded and unreadable.
+</scenery>
+
+<scenery name="Grave" image_name="grave1" x="4.0" y="10.1" size="0.75" blocking="true">
+Luna, 1222-1245.
+</scenery>
+
+<npc name="Zombie" objective_id="Axbury_Priest" template="Zombie" x="2.0" y="3.5"/>
+
+<npc name="Zombie" objective_id="Axbury_Priest" template="Zombie" x="3.0" y="6.1"/>
+
+</location>
+
+<location name="Magic Shop, Axbury" display_name="true">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="3.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Torch" image_name="torch" x="1.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="4.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="19.0" exit_location_y="21.0"/>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="2.5" y="2.2"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Magic Shop"/>
+
+</location>
+
+<location name="General Stores, Axbury" display_name="true">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="3.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Torch" image_name="torch" x="1.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="4.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="31.0" exit_location_y="34.5"/>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="2.5" y="2.2"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="General Stores"/>
+
+</location>
+
+<location name="Dungeons near Axbury" display_name="true">
+
+<floor image_name="floor_rock"/>
+<wall image_name="wall_rock" image_x_scale="1.0"/>
+<background image_name="background_brown"/>
+
+<wandering_monster template="Weak Skeleton" time="180000" rest_chance="10"/>
+
+<floorregion shape="rect" rect_x="28.0" rect_y="0.0" rect_w="4.0" rect_h="12.0"/>
+
+<!--<player_start x="30.0" y="3.5"/>-->
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="30.0" y="2.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Axbury" exit_location_x="37.5" exit_location_y="67.0"/>
+
+<!--west route-->
+
+<floorregion shape="rect" rect_x="24.0" rect_y="10.0" rect_w="4.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="20.0" rect_y="9.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Barrel" image_name="barrel" x="20.5" y="9.5" size="0.8" blocking="true">
+    <gold amount="3"/>
+    <item name="Leaf" image_name="leaf" icon_width="0.25" weight="0"/>
+</scenery>
+
+<npc name="Zombie" template="Zombie" x="23.0" y="10.0"/>
+
+<trap x="22.0" y="10.0" w="1.0" h="1.0" type="acid" rating="4"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="10.0" rect_w="4.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="12.0" rect_y="9.0" rect_w="4.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="12.0" rect_y="13.0" rect_w="1.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="13.0" rect_y="20.0" rect_w="1.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="28.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Chest" image_name="chest" x="11.5" y="28.5" size="0.8" blocking="true">
+    <item name="Broken Scrying Orb" image_name="orb_broken" icon_width="0.25" weight="2">
+When you stare into this Orb, it shows nothing but blackness.
+    </item>
+</scenery>
+
+<npc name="Zombie" template="Zombie" x="15.0" y="29.0"/>
+
+<npc name="Zombie" template="Zombie" x="15.0" y="32.0"/>
+
+<!--south route-->
+
+<floorregion shape="rect" rect_x="30.0" rect_y="12.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="31.0" rect_y="17.0" rect_w="1.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="22.0" rect_w="4.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="32.0" rect_y="26.0" rect_w="1.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="28.0" rect_y="31.0" rect_w="9.0" rect_h="1.0"/>
+
+<!--south route/side passage for key-->
+
+<floorregion shape="rect" rect_x="25.0" rect_y="17.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="25.0" rect_y="18.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="23.0" rect_y="19.0" rect_w="4.0" rect_h="4.0"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="24.0" y="20.0">
+    <item name="Axbury Dungeon Key" image_name="key" icon_width="0.5" weight="0"/>
+</npc>
+
+<scenery name="Barrel" image_name="barrel" x="26.5" y="19.5" size="0.8" blocking="true">
+    <gold amount="5"/>
+    <item template="Plain Ring"/>
+</scenery>
+
+<!--south route/left-->
+
+<floorregion shape="rect" rect_x="28.0" rect_y="32.0" rect_w="1.0" rect_h="3.0"/>
+
+<floorregion shape="rect" rect_x="27.0" rect_y="35.0" rect_w="3.0" rect_h="4.0"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="29.5" y="35.5"/>
+
+<scenery name="Crate" image_name="crate" x="27.5" y="35.5" size="0.8" blocking="true">
+    <gold amount="3"/>
+    <item template="Short Sword"/>
+    <item template="Bullets"/>
+</scenery>
+
+<!--south route/right-->
+
+<floorregion shape="rect" rect_x="36.0" rect_y="32.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="35.0" rect_w="1.0" rect_h="7.0"/>
+
+<!--south route/door left, locked-->
+
+    <floorregion shape="rect" rect_x="34.0" rect_y="38.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="32.0" rect_y="37.5" rect_w="2.0" rect_h="2.0"/>
+
+<scenery name="Door" image_name="door_wood" x="34.95" y="38.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Axbury Dungeon Key"
+    />
+
+<scenery name="Barrel" image_name="barrel" x="32.5" y="38.0" size="0.8" blocking="true">
+    <gold amount="41"/>
+</scenery>
+
+<!--south route/door right, locked-->
+
+    <floorregion shape="rect" rect_x="36.0" rect_y="38.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="37.0" rect_y="37.5" rect_w="2.0" rect_h="2.0"/>
+
+<scenery name="Door" image_name="door_wood" x="36.05" y="38.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Axbury Dungeon Key"
+    />
+
+<npc name="Zombie" template="Zombie" x="38.0" y="38.5"/>
+
+<!--continuing south route-->
+
+<floorregion shape="rect" rect_x="31.0" rect_y="42.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="27.0" rect_y="42.0" rect_w="4.0" rect_h="3.0"/>
+
+<npc name="Zombie" template="Zombie" x="30.0" y="44.5"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="27.5" y="44.5"/>
+
+<scenery name="Crate" image_name="crate" x="27.5" y="42.5" size="0.8" blocking="true">
+    <gold amount="5"/>
+    <item name="Scrying Orb" image_name="orb" icon_width="0.25" weight="2">
+When you stare into this Orb, you see swirling lights of many different colours.
+    </item>
+    <armour name="Borin's Armour" image_name="metal_armour" x="29.0" y="38.0" weight="150"
+        min_strength="7" rating="6" magical="true"
+        base_template="Plate Armour" worth_bonus="200">
+This magical plate armour is as strong as regular plate, but much lighter.
+    </armour>
+</scenery>
+
+<!--east route-->
+
+<floorregion shape="rect" rect_x="32.0" rect_y="9.0" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="37.0" rect_y="10.0" rect_w="7.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="43.0" rect_y="11.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="41.0" rect_y="17.0" rect_w="5.0" rect_h="1.0"/>
+
+<!--east route/left, safe-->
+
+<floorregion shape="rect" rect_x="41.0" rect_y="18.0" rect_w="1.0" rect_h="6.0"/>
+
+<!--east route/right, safe-->
+
+<floorregion shape="rect" rect_x="45.0" rect_y="18.0" rect_w="1.0" rect_h="6.0"/>
+
+<trap x="45.0" y="19.0" w="1.0" h="1.0" type="acid" rating="10"/>
+<scenery name="Skeleton" image_name="skeleton" x="45.5" y="20.5" size="0.7" draw_type="background"/>
+
+<trap x="45.0" y="22.0" w="1.0" h="1.0" type="death"/>
+<scenery name="Skeleton" image_name="skeleton" x="45.5" y="22.5" size="0.7" draw_type="background"/>
+<gold amount="17" x="45.5" y="22.5"/>
+
+<!--east route/continuing-->
+
+<floorregion shape="rect" rect_x="41.0" rect_y="24.0" rect_w="5.0" rect_h="1.0"/>
+
+<!--<player_start x="42.0" y="24.5"/>-->
+
+<floorregion shape="rect" rect_x="43.0" rect_y="25.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="39.0" rect_y="29.0" rect_w="9.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="27.0" rect_w="4.0" rect_h="3.0"/>
+
+<scenery name="Door" image_name="door_wood" x="39.05" y="29.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Crate" image_name="crate" x="35.5" y="27.5" size="0.8" blocking="true">
+    <item name="Scrying Orb" image_name="orb" icon_width="0.25" weight="2">
+When you stare into this Orb, you see swirling lights of many different colours.
+    </item>
+    <item template="Plate"/>
+</scenery>
+
+<npc name="Fire Ant" template="Fire Ant" x="40.0" y="29.5"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="36.5" y="29.5"/>
+
+<floorregion shape="rect" rect_x="48.0" rect_y="27.0" rect_w="4.0" rect_h="3.0"/>
+
+<scenery name="Door" image_name="door_wood" x="47.95" y="29.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Barrel" image_name="barrel" x="51.5" y="27.5" size="0.8" blocking="true">
+    <gold amount="7"/>
+    <item template="Dagger"/>
+    <item template="Potion of Speed"/>
+</scenery>
+
+<npc name="Skeleton" template="Skeleton" x="51.0" y="27.0"/>
+
+</location>
+
+<location name="Middleham" display_name="true" lighting_min="160" geo_type="outdoors">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="10.0" rect_h="60.0"/>
+
+<floorregion shape="rect" rect_x="25.0" rect_y="10.0" rect_w="20.0" rect_h="10.0"/>
+
+<floorregion shape="rect" rect_x="25.0" rect_y="60.0" rect_w="20.0" rect_h="10.0"/>
+
+<floorregion shape="rect" rect_x="45.0" rect_y="10.0" rect_w="10.0" rect_h="60.0"/>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="15.0" y="39.0">
+6777777778
+cdddddddde
+</tilemap>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="45.0" y="39.0">
+6777777778
+cdddddddde
+</tilemap>
+
+<scenery name="Tree" image_name="tree5" x="47.0" y="37.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="48.5" y="36.5" size="3.0"/>
+
+<scenery name="Plant" image_name="plant" x="24.0" y="41.1" size="0.5" draw_type="background"/>
+
+<!-- town -->
+
+<floorregion shape="rect" rect_x="25.0" rect_y="39.5" rect_w="1.0" rect_h="1.0" image_name="floor_paved"/>
+
+<floorregion shape="rect" rect_x="26.0" rect_y="21.0" rect_w="18.0" rect_h="38.0" image_name="floor_paved"/>
+
+<floorregion shape="rect" rect_x="44.0" rect_y="39.5" rect_w="1.0" rect_h="1.0" image_name="floor_paved"/>
+
+<!--<player_start x="16.0" y="40.0"/>-->
+
+<!--<player_start x="26.0" y="40.0"/>-->
+
+<scenery name="Signpost" image_name="signpost" x="15.5" y="40.0" size="1.0" blocking="false" block_visibility="false" exit_location="Axbury" exit_location_x="43.5" exit_location_y="21.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel west to the village of Axbury?"
+/>
+
+<scenery name="Signpost" image_name="signpost" x="53.0" y="40.0" size="1.0" blocking="false" block_visibility="false" exit_location="Stockton" exit_location_x="16.0" exit_location_y="22.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel east to the village of Stockton?"
+/>
+
+<scenery name="Signpost" image_name="signpost" x="53.0" y="20.0" size="1.0" blocking="false" block_visibility="false" exit_location="Oakley Farm" exit_location_x="10.0" exit_location_y="19.0" exit_travel_time="1"
+    confirm_text="Do you wish to travel north to Oakley Farm?"
+/>
+
+<!-- town, west side -->
+
+<scenery name="Private Home" image_name="building2" x="28.5" y="26.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="The Sword and Talisman" image_name="building" x="30.5" y="34.5" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="The Sword and Talisman, Middleham" exit_location_x="2.5" exit_location_y="9.5"/>
+
+<scenery name="Private Home" image_name="house_brick" x="28.5" y="44.5" size="3.0" boundary_iso="true" boundary_iso_ratio="0.545" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.27" smoke_y="0.0147" locked="true"/>
+
+<scenery name="Magic Shop" image_name="building2" x="29.0" y="50.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" exit_location="Magic Shop, Middleham" exit_location_x="1.5" exit_location_y="4.5"/>
+
+<scenery name="Private Home" image_name="building2" x="28.5" y="56.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<!-- town, central column -->
+
+<scenery name="General Stores" image_name="building" x="35.5" y="46.5" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="General Stores, Middleham" exit_location_x="2.5" exit_location_y="4.5"/>
+
+<!-- town, east side -->
+
+<scenery name="Tree" image_name="tree5" x="43.5" y="21.8" size="3.0"/>
+
+<scenery name="Plant" image_name="plant" x="42.0" y="25.5" size="0.5" draw_type="background"/>
+
+<scenery name="Stairs" image_name="stairsdown_outdoors" x="42.5" y="24.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Vaults, Middleham" exit_location_x="24.0" exit_location_y="25.5"/>
+
+<scenery name="Private Home" image_name="building3" x="41.5" y="33.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.429" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Armourer" image_name="building" x="40.5" y="39.5" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="Armourer, Middleham" exit_location_x="2.5" exit_location_y="4.5"/>
+
+<scenery name="Barrel" image_name="barrel" x="43.0" y="42.5" size="0.8" blocking="true">
+    <gold amount="5"/>
+</scenery>
+
+<scenery name="Jail" image_name="building4" x="39.5" y="50.5" size="3.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.7344" smoke_y="0.0574" exit_location="Jail, Middleham" exit_location_x="2.5" exit_location_y="5.5"/>
+
+<scenery name="Plant" image_name="plant" x="37.5" y="48.5" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="36.5" y="52.5" size="0.5" draw_type="background"/>
+
+<scenery name="Gallows" image_name="gallows" x="42.0" y="55.0" size="2.0" blocking="true"/>
+
+<scenery name="Tree" image_name="tree3" x="40.5" y="57.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="43.5" y="57.0" size="3.0"/>
+
+<!-- town, north side -->
+
+<scenery name="Private Home" image_name="building2" x="32.0" y="24.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Private Home" image_name="building2" x="36.0" y="24.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Temple" image_name="building" x="39.5" y="28.0" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="Temple, Middleham" exit_location_x="2.5" exit_location_y="4.5"/>
+
+<scenery name="Private Home" image_name="building2" x="32.5" y="30.0" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Private Home" image_name="building2" x="36.5" y="31.5" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<!-- town, south side -->
+
+<scenery name="Private Home" image_name="building2" x="32.5" y="56.0" size="3.43" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Private Home" image_name="house_brick" x="36.5" y="56.5" size="3.0" boundary_iso="true" boundary_iso_ratio="0.567" blocking="true" block_visibility="true" locked="true"/>
+
+</location>
+
+<location name="The Sword and Talisman, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="2.5" y="9.5"/>-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="9.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="1.0" rect_w="2.0" rect_h="8.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="10.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="30.5" exit_location_y="37.0"/>
+
+<scenery name="Torch" image_name="torch" x="4.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="2.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="4.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="6.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="8.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="3.0" y="2.0" size="0.8" blocking="true"/>
+
+<scenery name="Table" image_name="table" x="2.5" y="5.0" size="0.8" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="7.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<scenery name="Counter" image_name="counter_left" x="0.125" y="1.6" w="0.25" h="1.2" visual_h="1.7" blocking="true"/>
+<!--<scenery name="Counter" image_name="counter_right" x="1.575" y="1.6" w="0.25" h="1.2" visual_h="1.7" blocking="true"/>-->
+<scenery name="Counter" image_name="counter_right" x="1.575" y="1.2" w="0.25" h="0.4" visual_h="0.9" blocking="true"/>
+<scenery name="Counter" image_name="counter_front" x="0.85" y="2.575" w="1.7" h="0.75" visual_h="0.75" blocking="true"/>
+
+<npc name="Innkeeper" animation_name="peasant_man" static_image="true" x="1.2" y="1.75"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Inn"/>
+
+<npc name="Peasant" animation_name="peasant_man" static_image="true" x="4.6" y="1.35"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Leave me in peace.
+</opening_initial>
+<opening_later>I'm not interested in talking to you, stranger.
+</opening_later>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="4.5" y="3.35"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello stranger, welcome to our town.
+</opening_initial>
+<opening_later>Hello again.
+</opening_later>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_man" static_image="true" x="4.6" y="4.65"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello, I don't think I've seen you here before.
+</opening_initial>
+<opening_later>Hello.
+</opening_later>
+</npc>
+
+</location>
+
+<location name="Magic Shop, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="1.0" rect_y="5.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.5" y="6.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="29.0" exit_location_y="52.5"/>
+
+<scenery name="Table" image_name="table" x="0.5" y="1.0" size="0.8" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="2.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<npc name="Shopkeeper" animation_name="peasant_man" static_image="true" x="1.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Magic Shop"/>
+
+</location>
+
+<location name="General Stores, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="0.0" rect_w="2.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="5.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="35.5" exit_location_y="49.0"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="1.0" size="0.8" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="1.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="General Stores"/>
+
+</location>
+
+<location name="Armourer, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="0.0" rect_w="2.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="5.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="41.5" exit_location_y="41.5"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="1.0" size="0.8" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="1.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Armourer"/>
+
+</location>
+
+<location name="Temple, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="0.0" rect_w="2.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="5.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="40.5" exit_location_y="30.0"/>
+
+<scenery name="Table" image_name="table" x="3.5" y="0.5" size="0.8" blocking="true"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<scenery name="Fire" image_name="fire" x="4.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<npc name="Priest" animation_name="peasant_man" static_image="true" x="1.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>I'm afraid I'm too busy to talk right now - too many people dying from unnatural disease, and now strange haunting noises from the vaults. The gods have cursed us!
+</opening_initial>
+<opening_later>I'm afraid I'm too busy to talk right now - too many people dying from unnatural disease, and now strange haunting noises from the vaults. The gods have cursed us!
+</opening_later>
+</npc>
+
+</location>
+
+<location name="Jail, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="2.5" y="5.5"/>-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="6.0" rect_h="5.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="6.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="39.5" exit_location_y="53.0"/>
+
+<scenery name="Torch" image_name="torch" x="5.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_metal_n" x="1.0" y="0.95" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false">
+Peering through the small hole in the cell door, you see a small dark room. After a few moments, you can make out the shape of someone crouching on the stone floor, chained to the wall.
+</scenery>
+
+<scenery name="Door" image_name="door_metal_n" x="2.5" y="0.95" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false">
+Peering through the small hole in the cell door, you see the face of a woman. She pleads you to let her out, though the door is locked shut.
+</scenery>
+
+<floorregion shape="rect" rect_x="3.5" rect_y="0.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Blood Stain" image_name="bloodstain" x="4.0" y="0.5" w="0.7" h="0.7" opacity="0.8" draw_type="background"/>
+
+<scenery name="Door" image_name="door_metal_n" x="4.0" y="0.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Table" image_name="table" x="4.0" y="3.0" size="1.2" blocking="true"/>
+
+<npc name="Jailer" animation_name="peasant_man" static_image="true" x="5.0" y="2.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello, how can I help you?
+</opening_initial>
+<opening_later>How can I help you?
+</opening_later>
+<talk question="What are these prisoners here for?">
+blah
+</talk>
+<talk question="Can't you let them go?">
+blah blah
+</talk>
+</npc>
+
+</location>
+
+<location name="Vaults, Middleham" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall_rock" image_x_scale="1.0"/>
+<background image_name="background_brown"/>
+
+<wandering_monster template="Weak Skeleton" time="180000" rest_chance="10"/>
+
+<floorregion shape="rect" rect_x="20.0" rect_y="20.0" rect_w="8.0" rect_h="8.0"/>
+
+<scenery name="Torch" image_name="torch" x="22.0" y="19.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="26.0" y="19.55" w="0.75" h="0.75"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="24.0" y="24.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Middleham" exit_location_x="42.5" exit_location_y="25.5"/>
+
+<!--<player_start x="24.0" y="25.5"/>-->
+
+<floorregion shape="rect" rect_x="23.0" rect_y="28.0" rect_w="2.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="25.0" rect_y="34.0" rect_w="6.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="17.0" rect_y="34.0" rect_w="6.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="32.0" rect_w="6.0" rect_h="6.0"/>
+
+<scenery name="Torch" image_name="torch" x="12.25" y="31.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="15.75" y="31.55" w="0.75" h="0.75"/>
+
+<floorregion shape="rect" rect_x="13.5" rect_y="31.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="13.5" rect_y="38.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="5.0" rect_y="34.0" rect_w="6.0" rect_h="2.0"/>
+
+<npc name="Crypt Stalker" template="Crypt Stalker" x="16.5" y="37.5"/>
+
+<npc name="Crypt Stalker" template="Crypt Stalker" x="14.0" y="31.5"/>
+
+<npc name="Crypt Stalker" template="Crypt Stalker" x="14.0" y="38.5"/>
+
+<npc name="Crypt Stalker" template="Crypt Stalker" x="7.6" y="35.0"/>
+
+<scenery name="Tomb" image_name="tomb" x="12.0" y="35.0" size="1.0" blocking="true">
+    <gold amount="7"/>
+</scenery>
+
+<scenery name="Tomb" image_name="tomb" x="14.0" y="35.0" size="1.0" blocking="true">
+    <gold amount="100"/>
+</scenery>
+
+<scenery name="Tomb" image_name="tomb" x="16.0" y="35.0" size="1.0" blocking="true">
+    <trap type="acid" rating="16"/>
+</scenery>
+
+</location>
+
+<location name="Oakley Farm" display_name="true" lighting_min="120" geo_type="outdoors">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="20.0" rect_h="20.0"/>
+
+<!--<player_start x="10.0" y="19.0"/>-->
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="9.0" y="10.0">
+68
+9b
+9b
+9b
+9b
+9b
+9b
+9b
+9b
+ce
+</tilemap>
+
+<scenery name="Signpost" image_name="signpost" x="8.5" y="19.0" size="1.0" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="52.5" exit_location_y="20.0" exit_travel_time="1"
+    confirm_text="Do you wish to travel south to the town of Middleham?"
+/>
+
+<scenery name="Oakley Farmhouse" image_name="building" x="10.5" y="10.0" size="4.0" blocking="true" block_visibility="true" has_smoke="true" smoke_x="0.337" smoke_y="0.0147" exit_location="Oakley Farmhouse" exit_location_x="2.5" exit_location_y="9.5"/>
+
+<npc name="Skeleton" template="Skeleton" x="12.0" y="13.0" objective_id="Oakley Farm"/>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" x="16.0" y="1.0" objective_id="Oakley Farm">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" x="17.0" y="2.0" objective_id="Oakley Farm">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<npc name="Skeleton" template="Skeleton" x="17.5" y="1.0" objective_id="Oakley Farm"/>
+
+</location>
+
+<location name="Oakley Farmhouse" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="2.5" y="9.5"/>-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="9.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="1.0" rect_w="2.0" rect_h="8.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="10.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Oakley Farm" exit_location_x="10.0" exit_location_y="12.5"/>
+
+<scenery name="Torch" image_name="torch" x="4.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="3.5" size="1.0" blocking="true" has_smoke="true"/>
+
+<scenery name="Table" image_name="table" x="2.5" y="3.0" size="1.2" blocking="true"/>
+
+<npc name="Farmer" animation_name="farmer" static_image="true" x="1.5" y="5.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="KILL_NPCS"
+    interaction_data="Oakley Farm"
+    interaction_xp="50"
+    interaction_journal="I killed the Skeletons outside Oakley Farm."
+>
+<opening_initial>
+</opening_initial>
+<opening_later>
+</opening_later>
+<opening_interaction_complete>Hello, again. Thank you for destroying those skeletons!
+</opening_interaction_complete>
+<talk question="I have killed the skeletons outside." objective="true">
+</talk>
+</npc>
+
+<npc name="Farmer" animation_name="peasant_woman" static_image="true" x="4.0" y="3.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"/>
+
+</location>
+
+<location name="Stockton" display_name="true" lighting_min="160" geo_type="outdoors">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="5.0" rect_w="30.0" rect_h="40.0"/>
+
+<!--<player_start x="16.0" y="22.0"/>-->
+
+<scenery name="Signpost" image_name="signpost" x="15.5" y="22.0" size="1.0" blocking="false" block_visibility="false" exit_location="Middleham" exit_location_x="52.5" exit_location_y="40.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel west to the town of Middleham?"
+/>
+
+<scenery name="Signpost" image_name="signpost" x="44.5" y="20.0" size="1.0" blocking="false" block_visibility="false" exit_location="Wentbridge Fort" exit_location_x="16.0" exit_location_y="42.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel east to Wentbridge Fort?"
+/>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="15.0" y="15.0">
+             68
+             9b
+             9b
+             9b
+    67777777754777777777777778
+    91dddddddddd21ddddddddddde
+67775b          9b
+cdddde          9b
+                9b
+                9b
+                9b
+                9b
+                9b
+                9b
+                9b
+                ce
+</tilemap>
+
+<scenery name="Tree" image_name="deadtree2" x="20.0" y="15.0" size="3.0"/>
+
+<npc name="Zombie" template="Zombie" x="23.0" y="14.0"/>
+
+<npc name="Zombie" template="Zombie" x="23.2" y="10.0"/>
+
+<scenery name="Ruined Building" image_name="ruined_house" x="25.0" y="15.0" size="5.0" boundary_iso="true" boundary_iso_ratio="0.332" blocking="true" block_visibility="true" locked="true"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="28.1" y="15.0"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="24.5" y="26.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" exit_location="Peasant Hut, Stockton" exit_location_x="1.0" exit_location_y="2.5"/>
+
+<!-- n.b., no smoke -->
+<scenery name="Private Home" image_name="house_brick" x="29.0" y="25.0" size="3.0" boundary_iso="true" boundary_iso_ratio="0.545" blocking="true" block_visibility="true" locked="true"/>
+
+<!-- n.b., no smoke -->
+<scenery name="Private Home" image_name="house_brick2" x="36.0" y="15.0" size="3.0" boundary_iso="true" boundary_iso_ratio="0.387" blocking="true" block_visibility="true" locked="true"/>
+
+<npc name="Zombie" template="Zombie" x="27.0" y="27.0"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="27.0" y="28.0"/>
+
+<scenery name="Tree" image_name="deadtree3" x="41.0" y="17.0" size="3.0"/>
+
+<scenery name="Tree" image_name="deadtree4" x="43.0" y="14.0" size="3.0"/>
+
+<npc name="Zombie" template="Zombie" x="40.0" y="15.1"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="42.0" y="20.0"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="40.0" y="25.0"/>
+
+<scenery name="Tree" image_name="deadtree4" x="24.75" y="32.0" size="3.0"/>
+
+<scenery name="Tree" image_name="deadtree2" x="26.75" y="34.0" size="3.0"/>
+
+<scenery name="Tree" image_name="deadtree2" x="33.75" y="30.0" size="3.0"/>
+
+<scenery name="Ruined Building" image_name="ruined_house2" x="36.0" y="25.0" size="5.0" boundary_iso="true" boundary_iso_ratio="0.379" blocking="true" block_visibility="true" exit_location="Magnus's Home, Stockton" exit_location_x="3.5" exit_location_y="9.5"/>
+
+<npc name="Magnus" animation_name="peasant_man" static_image="true" x="32.3" y="25.1"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="WANT_OBJECT"
+    interaction_data="Magnus's Heirloom"
+    interaction_xp="30"
+    interaction_reward_gold="25"
+    interaction_journal="I found Magnus's heirloom for him, who in return gave me 25 gold pieces as a reward."
+>
+<opening_initial>Please ... will you help me?
+</opening_initial>
+<opening_later>Please ... will you help me?
+</opening_later>
+<opening_interaction_complete>
+Thank you again for your help.
+</opening_interaction_complete>
+<talk question="What happened here?">
+blah
+</talk>
+<talk question="What are you doing here?" while_not_done="true" journal="Magnus has asked me to retrive his heirloom from his home, that has been invaded by zombies.">
+My home still has those awful creatures in there. I wonder ... I know it's silly to worry about material goods when I am lucky to be alive, but there is a treasured heirloom of mine that has been in my family for generations. I would be grateful if someone were to retrieve it for me from my home.
+</talk>
+<talk question="I have recovered your heirloom" objective="true">
+Thank you! Here, have 25 gold pieces as a reward.
+</talk>
+</npc>
+
+</location>
+
+<location name="Peasant Hut, Stockton" display_name="true">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="3.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Torch" image_name="torch" x="2.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="4.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Stockton" exit_location_x="23.5" exit_location_y="27.75"/>
+
+<npc name="Zombie" template="Zombie" x="2.5" y="1.5"/>
+
+</location>
+
+<location name="Magnus's Home, Stockton" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="2.0" rect_y="1.0" rect_w="3.0" rect_h="9.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="3.5" y="10.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Stockton" exit_location_x="36.0" exit_location_y="28.0"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="4.0" size="0.8" blocking="true"/>
+
+<scenery name="Chest" image_name="chest" x="4.5" y="1.5" size="0.8" blocking="true">
+    <item name="Magnus's Heirloom" image_name="ring_gem_red" weight="0"/>
+    <gold amount="23"/>
+</scenery>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="2.5" y="1.5"/>
+
+<npc name="Zombie Champion" template="Zombie Champion" x="4.4" y="2.5"/>
+
+<npc name="Zombie" template="Zombie" x="2.7" y="5.0"/>
+
+</location>
+
+<location name="Wentbridge Fort" display_name="true" lighting_min="70">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="30.0" rect_w="20.0" rect_h="20.0"/>
+
+<!--<player_start x="16.0" y="42.0"/>-->
+
+<scenery name="Signpost" image_name="signpost" x="15.5" y="42.0" size="1.0" blocking="false" block_visibility="false" exit_location="Stockton" exit_location_x="44.0" exit_location_y="20.0" exit_travel_time="24"
+    confirm_text="Do you wish to travel west to the village of Stockton?"
+/>
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="15.0" y="30.0">
+          68
+          9b
+          9b
+          9b
+          9b
+          9b
+          9b
+          9b
+          9b
+          9b
+          9b
+67777777775b
+cdddddddddde
+</tilemap>
+
+<scenery name="Door" image_name="door_wood_n" x="26.0" y="29.95" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Ground Level, Wentbridge Fort" exit_location_x="32.5" exit_location_y="59.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="0.0" rect_w="30.0" rect_h="30.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="30.0" rect_w="30.0" rect_h="20.0"/>
+
+<scenery name="Signpost" image_name="signpost" x="32.0" y="40.0" size="1.0" blocking="true" block_visibility="false">
+The sign, which is spattered with blood, bears the warning: "Beware the Krulls"
+</scenery>
+
+<scenery name="Tree" image_name="tree2" x="34.0" y="40.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="37.0" y="36.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="37.0" y="44.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="39.0" y="37.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="41.0" y="38.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="43.0" y="39.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="45.0" y="39.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="47.0" y="38.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="49.0" y="37.0" size="3.0"/>
+
+<scenery name="Boulders" image_name="boulders2" x="45.7" y="41.1" size="1.5" blocking="true"/>
+
+<scenery name="Tree" image_name="tree2" x="51.0" y="37.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="53.0" y="38.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="55.0" y="37.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="57.0" y="37.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="59.0" y="37.5" size="3.0"/>
+
+<!-- west row of trees -->
+
+<scenery name="Tree" image_name="tree3" x="38.0" y="34.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="37.0" y="30.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="38.0" y="26.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="37.5" y="22.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="38.5" y="18.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="39.5" y="14.0" size="3.0"/>
+
+<!-- east row of trees -->
+
+<scenery name="Tree" image_name="tree3" x="42.0" y="34.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="43.0" y="30.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="42.5" y="26.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="41.5" y="22.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="42.3" y="18.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="43.5" y="16.0" size="3.0"/>
+
+<scenery name="Boulders" image_name="boulders" x="43.5" y="33.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="44.5" y="31.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="44.5" y="29.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="44.0" y="27.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="44.5" y="26.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="44.0" y="24.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="44.5" y="23.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="44.0" y="21.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="44.5" y="20.0" size="1.5" blocking="true"/>
+
+
+<scenery name="Boulders" image_name="boulders2" x="46.0" y="31.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="47.5" y="32.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="49.0" y="31.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="50.5" y="31.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="52.0" y="31.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="53.5" y="31.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="55.0" y="31.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="56.5" y="30.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="58.0" y="30.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="59.5" y="29.5" size="1.5" blocking="true"/>
+
+<!-- top area -->
+
+<scenery name="Tree" image_name="tree3" x="41.0" y="12.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="43.0" y="11.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="45.0" y="10.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="47.0" y="11.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="49.0" y="10.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree5" x="51.0" y="11.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="53.0" y="12.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="55.0" y="12.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="57.0" y="13.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="59.0" y="14.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="60.5" y="17.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="61.0" y="21.0" size="3.0"/>
+
+
+<scenery name="Tree" image_name="tree3" x="45.5" y="16.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="47.5" y="16.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="49.5" y="17.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="51.5" y="17.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="53.5" y="18.0" size="3.0"/>
+
+<scenery name="Boulders" image_name="boulders" x="46.0" y="20.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="47.5" y="20.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="49.0" y="20.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="50.5" y="20.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="52.0" y="20.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="53.5" y="20.5" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="54.0" y="22.0" size="1.5" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="54.5" y="23.5" size="1.5" blocking="true"/>
+
+<!-- camp area -->
+
+<scenery name="Campfire" image_name="campfire" x="52.0" y="25.0" size="0.8" blocking="true"/>
+
+<scenery name="Bones" image_name="bones" x="49.0" y="25.5" size="0.5" draw_type="background"/>
+
+<scenery name="Bones" image_name="bones" x="50.0" y="27.5" size="0.5" draw_type="background"/>
+
+<scenery name="Skulls" image_name="skulls" x="51.5" y="28.0" size="0.3" draw_type="background"/>
+
+<scenery name="Bones" image_name="bones" x="53.5" y="28.5" size="0.5" draw_type="background"/>
+
+<scenery name="Skulls" image_name="skulls" x="55.0" y="28.0" size="0.3" draw_type="background"/>
+
+<!--<scenery name="Bones" image_name="bones" x="50.0" y="25.0" size="0.5" draw_type="background"/>
+<scenery name="Bones" image_name="bones" x="47.0" y="25.5" size="0.5" draw_type="background"/>
+<scenery name="Bones" image_name="bones" x="52.0" y="27.0" size="0.5" draw_type="background"/>-->
+
+<npc name="Orc Shaman" template="Orc Shaman" x="50.0" y="25.0">
+    <spell name="Acid strike" count="2"/>
+    <spell name="Agony" count="2"/>
+    <spell name="Heal" count="2"/>
+</npc>
+<npc name="Orc Archer" template="Orc" x="47.0" y="25.5">
+    <item template="Chain Mail Armour"/>
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+<npc name="Orc Champion" template="Orc Champion" x="52.0" y="27.0">
+    <item template="Chain Mail Armour"/>
+</npc>
+
+<scenery name="Crate" image_name="crate" x="49.0" y="25.0" size="0.8" blocking="true">
+    <item template="Skull" x="40.5" y="10.3"/>
+    <gold amount="24"/>
+    <item name="Gregory's Journal" image_name="book" weight="1">
+This is a tattered old journal, its pages worn from age, whilst spatters of blood on the cover look more recent. Inside are large numbers of diary entries of someone's life, going back many years.
+    </item>
+</scenery>
+
+</location>
+
+<location name="Ground Level, Wentbridge Fort" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="32.5" y="59.0"/>-->
+
+<floorregion shape="rect" rect_x="30.0" rect_y="50.0" rect_w="5.0" rect_h="10.0"/>
+
+<npc name="Soldier" animation_name="spearman" static_image="true" x="31.0" y="51.1"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello stranger - welcome to Wentbridge Fort.
+</opening_initial>
+<opening_later>Hello again, stranger.
+</opening_later>
+</npc>
+
+<scenery name="Torch" image_name="torch" x="31.0" y="49.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="34.0" y="49.55" w="0.75" h="0.75"/>
+
+<scenery name="Carpet" image_name="carpet" x="32.5" y="54.0" w="1.0" h="1.5" draw_type="background"/>
+
+<scenery name="Door" image_name="door_wood_n" x="32.5" y="60.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Wentbridge Fort" exit_location_x="26.0" exit_location_y="31.0"/>
+
+<floorregion shape="rect" rect_x="32.0" rect_y="45.0" rect_w="1.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="29.0" rect_y="35.0" rect_w="7.0" rect_h="10.0"/>
+
+<scenery name="Torch" image_name="torch" x="31.0" y="34.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="34.0" y="34.55" w="0.75" h="0.75"/>
+
+<scenery name="Fire" image_name="fire" x="30.0" y="36.0" size="1.0" blocking="true" has_smoke="true"/>
+
+<scenery name="Cabinet" image_name="cabinet" x="35.0" y="35.5" size="0.8" blocking="true">
+    <item name="A History of Wentbridge Fort" image_name="book" icon_width="0.25" weight="2">
+This book describes the history of Wentbridge Fort, since its construction in the year 1070.
+    </item>
+</scenery>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="31.0" y="43.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Magic Shop"/>
+
+<npc name="Shopkeeper" animation_name="peasant_man" static_image="true" x="34.5" y="42.8"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="General Stores"/>
+
+<npc name="Shopkeeper" animation_name="spearman" static_image="true" x="31.5" y="37.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Armourer"/>
+
+<npc name="Gregory" animation_name="peasant_man" static_image="true" x="34.0" y="37.1"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="WANT_OBJECT"
+    interaction_data="Gregory's Journal"
+    interaction_xp="40"
+    interaction_reward_gold="50"
+    interaction_journal="I found Gregory's Journal for him, and he gave me 50 gold pieces as a reward."
+>
+<opening_initial>Hello stranger - you look like a sort who might be able to help me?
+</opening_initial>
+<opening_later>Hello again.
+</opening_later>
+<opening_interaction_complete>
+Thank you for your help.
+</opening_interaction_complete>
+<talk question="How can I help you?" while_not_done="true" journal="Gregory asked me to find his journal, taken by some creatures. Their camp is located in the woods nearby Wentbridge Fort.">
+I was travelling here a few days ago, but on the way here I was attacked by some savages. Thankfully I managed to get away from them, but they snatched my bag. Most of the items are replaceable, but they took my journal, that I have kept for many years.
+
+I doubt the thugs can even read, it's no use to them. I don't suppose a brave warrior like yourself could find the item? There are 50 gold pieces in it for you. The people here tell me that they keep a camp in the woods nearby. And you'd be doing everyone a favour if you were to get rid of them.
+</talk>
+<talk question="I have recovered your journal" objective="true">
+Thank you! Here, have 50 gold pieces as a reward.
+</talk>
+</npc>
+
+<!-- west route to haunted room -->
+
+<floorregion shape="rect" rect_x="24.0" rect_y="39.0" rect_w="5.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="24.0" rect_y="34.0" rect_w="1.0" rect_h="5.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="24.5" y="33.95" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Guest Room, Ground Level, Wentbridge Fort" exit_location_x="24.5" exit_location_y="33.5"/>
+
+<!-- east route to upper level -->
+
+<floorregion shape="rect" rect_x="36.0" rect_y="39.0" rect_w="5.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="41.0" rect_y="38.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="43.0" y="40.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Upper Level, Wentbridge Fort" exit_location_x="32.5" exit_location_y="58.5"/>
+
+<floorregion shape="rect" rect_x="42.5" rect_y="32.0" rect_w="1.0" rect_h="6.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="43.0" y="32.05" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true" locked="true" unlocked_by_template="Wentbridge Dungeon Key"/>
+
+<floorregion shape="rect" rect_x="41.0" rect_y="28.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Stairs" image_name="stairsdown_indoors" x="43.0" y="30.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Dungeons, Wentbridge Fort" exit_location_x="22.0" exit_location_y="4.5"/>
+
+</location>
+
+<location name="Guest Room, Ground Level, Wentbridge Fort" display_name="true" rest_summon_location="summon_ghost">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="22.0" rect_y="29.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="24.5" y="34.05" w="1.0" h="0.1" visual_h="0.9" blocking="false" block_visibility="false" exit_location="Ground Level, Wentbridge Fort" exit_location_x="24.5" exit_location_y="34.5"/>
+
+<!--<player_start x="24.5" y="33.0"/>-->
+
+<scenery name="Bed" image_name="bed" x="24.5" y="31.0" size="1.2" blocking="true"/>
+
+<scenery name="Cabinet" image_name="cabinet" x="23.0" y="30.0" size="0.8" blocking="true">
+    <gold amount="7"/>
+    <item template="Plain Ring"/>
+</scenery>
+
+<scenery name="Table" image_name="table" x="26.0" y="30.0" size="0.8" blocking="true"/>
+
+<scenery name="Torch" image_name="torch" x="26.0" y="28.55" w="0.75" h="0.75"/>
+
+</location>
+
+<location name="summon_ghost">
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="22.0" rect_y="29.0" rect_w="5.0" rect_h="5.0"/>
+
+<npc name="Ghost" animation_name="ghost" static_image="true" bounce="true" x="22.5" y="31.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Woo!
+</opening_initial>
+<opening_later>Woo!
+</opening_later>
+</npc>
+
+</location>
+
+<location name="Upper Level, Wentbridge Fort" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="32.5" y="59.0"/>-->
+
+<floorregion shape="rect" rect_x="30.0" rect_y="50.0" rect_w="5.0" rect_h="10.0"/>
+
+<scenery name="Torch" image_name="torch" x="31.0" y="49.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="34.0" y="49.55" w="0.75" h="0.75"/>
+
+<scenery name="Stairs" image_name="stairsdown_indoors" x="32.5" y="57.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Ground Level, Wentbridge Fort" exit_location_x="41.5" exit_location_y="40.0"/>
+
+<floorregion shape="rect" rect_x="25.0" rect_y="54.0" rect_w="5.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="20.0" rect_y="52.5" rect_w="5.0" rect_h="5.0"/>
+
+<npc name="Hectar" animation_name="soldier" static_image="true" x="22.0" y="54.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="KILL_NPCS"
+    interaction_data="Hectar"
+    interaction_xp="100"
+    interaction_reward_gold="50"
+    interaction_reward_item="Hectar's Talisman"
+    interaction_journal="I killed the Skeletons in the dungeon beneath Wentbridge Fort. Hectar gave me a talisman, to protect me from the undead plague."
+>
+<opening_initial>I am Hectar, the Captain of Wentbridge Fort.
+</opening_initial>
+<opening_later>Hello, again.
+</opening_later>
+<opening_interaction_complete>Hello, again. Good luck in your quest.
+</opening_interaction_complete>
+<talk question="Can you help me destroy the Skeleton Army that has invaded this land?" while_not_done="true" journal="Hectar told me that he had created a talisman to protect against a plague carried by the skeleton army. In order to get it, I have to prove my worth by killing all the skeletons in the dungeon beneath Wentbridge Fort. The key to the dungeon is located in the chest in the same room as Hectar.">We have tried to engage the army in battle, but our soldiers ended up being infected with a mysterious plague, killing or severely weakening them.
+
+We returned to the safety of this fort, and set our scholars and wizards to work. They have now perfected a talisman to protect someone from this evil plague. But it won't protect an entire army - we need a hero to venture into the dungeons that have been constructed beneath the village of Dunbridge, and, protected by our talisman, find and slay the Skeleton Lord.
+
+However we can't give away this precious talisman to anyone. If you think you are worthy of this quest, you must prove yourself. Beneath this fort is a dungeon - we use it to lock up criminals, but now it is inhabited by skeletons. Kill them all, and I will give you the talisman. You will find a key to the dungeons in the chest in this room.
+</talk>
+<talk question="I have slain all the skeletons, may I now have the talisman?" objective="true">
+You have proven yourself a worthy champion, though the quest that lies before you I fear will be far harder. Here is the talisman, and I hope you are able to succeed in destroying the undead evil.
+</talk>
+<item name="Hectar's Talisman" image_name="talisman" icon_width="0.25" weight="2">
+blah blah
+</item>
+</npc>
+
+<scenery name="Chest" image_name="chest" x="20.5" y="53.0" size="0.8" blocking="true">
+    <item name="Wentbridge Dungeon Key" image_name="key" icon_width="0.5" weight="0"/>
+</scenery>
+
+</location>
+
+<location name="Dungeons, Wentbridge Fort" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<wandering_monster template="Orc" time="300000" rest_chance="15"/>
+
+<!--<player_start x="22.0" y="4.5"/>-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="1.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="22.0" y="3.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Ground Level, Wentbridge Fort" exit_location_x="43.0" exit_location_y="31.5"/>
+
+<floorregion shape="rect" rect_x="21.0" rect_y="5.0" rect_w="2.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="22.0" rect_y="13.0" rect_w="4.0" rect_h="2.0"/>
+
+<scenery name="Skeleton" image_name="skeleton" x="24.0" y="14.1" size="0.7" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="26.0" rect_y="13.5" rect_w="4.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="12.5" rect_w="8.0" rect_h="3.0"/>
+
+<!-- skeleton chambers -->
+
+<floorregion shape="rect" rect_x="32.0" rect_y="11.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="32.0" rect_y="15.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="34.0" rect_y="11.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="34.0" rect_y="15.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="36.0" rect_y="11.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="36.0" rect_y="15.5" rect_w="1.0" rect_h="1.0"/>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" objective_id="Hectar" x="32.5" y="12.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" objective_id="Hectar" x="36.5" y="12.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" objective_id="Hectar" x="32.5" y="16.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" objective_id="Hectar" x="36.5" y="16.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<floorregion shape="rect" rect_x="38.0" rect_y="13.5" rect_w="4.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="42.0" rect_y="13.5" rect_w="1.0" rect_h="1.0"/>
+
+<!--<player_start x="42.5" y="14.0"/>-->
+
+<!-- south route to grate -->
+
+<floorregion shape="rect" rect_x="42.0" rect_y="14.5" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="41.0" rect_y="20.5" rect_w="3.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="42.5" y="20.45" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Trapdoor" image_name="grate" x="42.5" y="22.5" w="0.5" h="0.5" exit_location="Dungeons Lower Level, Wentbridge Fort" exit_location_x="42.5" exit_location_y="22.5" confirm_text="There is a trapdoor in this room. Do you want to drop down into the room below?" draw_type="background"/>
+
+<!-- east route to locked cell with orcs -->
+
+<floorregion shape="rect" rect_x="43.0" rect_y="13.5" rect_w="3.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="46.0" rect_y="11.5" rect_w="4.0" rect_h="5.0"/>
+
+<scenery name="Door" image_name="door_wood" x="45.95" y="14.0" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Wentbridge Cell Key"
+    />
+
+<npc name="Orc" template="Orc" x="46.5" y="12.0"/>
+
+<npc name="Orc" template="Orc" x="49.0" y="12.0"/>
+
+<npc name="Orc" template="Orc" x="49.5" y="15.5"/>
+
+<npc name="Orc" template="Orc" x="47.0" y="13.5"/>
+
+<!--<player_start x="46.5" y="15.5"/>-->
+
+<!-- north route to stairs room, guard room, and beyond -->
+
+<floorregion shape="rect" rect_x="42.0" rect_y="7.5" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="42.0" rect_y="6.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="2.5" rect_w="3.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="42.5" y="6.55" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Stairs" image_name="stairsdown_indoors" x="41.5" y="4.5" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Dungeons Lower Level, Wentbridge Fort" exit_location_x="41.5" exit_location_y="6.0"/>
+
+<floorregion shape="rect" rect_x="46.0" rect_y="6.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="45.0" rect_y="2.5" rect_w="3.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="46.5" y="6.55" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Crate" image_name="crate" x="45.5" y="3.0" size="0.8" blocking="true">
+    <gold amount="5"/>
+    <item template="Long Sword"/>
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+    <item template="Bullets"/>
+    <item name="Wentbridge Cell Key" image_name="key" icon_width="0.5" weight="0"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="43.0" rect_y="7.5" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="48.0" rect_y="6.5" rect_w="10.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="57.0" rect_y="7.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="polygon">
+    <floorregion_point x="58.0" y="8.5"/>
+    <floorregion_point x="57.0" y="8.5"/>
+    <floorregion_point x="52.0" y="13.0"/>
+    <floorregion_point x="53.0" y="18.5"/>
+    <floorregion_point x="53.5" y="24.0"/>
+    <floorregion_point x="59.0" y="24.0"/>
+    <floorregion_point x="61.0" y="19.5"/>
+</floorregion>
+
+<!--<player_start x="56.5" y="16.0"/>-->
+
+<npc name="Skeleton" template="Skeleton" objective_id="Hectar" x="53.0" y="18.5"/>
+
+<npc name="Skeleton Archer" template="Skeleton Archer" objective_id="Hectar" x="55.0" y="20.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<floorregion shape="rect" rect_x="58.0" rect_y="6.5" rect_w="8.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="65.0" rect_y="7.5" rect_w="1.0" rect_h="5.0"/>
+
+<!--room with orcs-->
+
+<floorregion shape="rect" rect_x="65.0" rect_y="12.5" rect_w="6.0" rect_h="5.5"/>
+
+<npc name="Orc" template="Orc" x="69.5" y="13.0">
+    <item template="Chain Mail Armour"/>
+</npc>
+<npc name="Orc Shaman" template="Orc Shaman" x="70.5" y="13.0">
+    <spell name="Acid strike" count="2"/>
+    <spell name="Agony" count="2"/>
+    <spell name="Heal" count="2"/>
+</npc>
+<npc name="Orc Archer" template="Orc" x="70.5" y="16.0">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+<npc name="Orc Champion" template="Orc Champion" x="70.5" y="14.0">
+    <item template="Plate Armour"/>
+    <ring name="Hermes's Ring" image_name="ring_plain" weight="0" magical="true" bonus_Sp="0.2"
+        base_template="Gold Ring" worth_bonus="250"
+        >
+The ring is plain, except for a symbol of a small pair of wings.
+    </ring>
+</npc>
+
+<floorregion shape="rect" rect_x="68.0" rect_y="18.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="63.0" rect_y="24.0" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="63.0" rect_y="25.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="58.0" rect_y="25.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="58.0" rect_y="24.0" rect_w="1.0" rect_h="1.0"/>
+
+<!-- route to exit to lower level -->
+
+<floorregion shape="rect" rect_x="48.5" rect_y="24.0" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="48.5" rect_y="25.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="47.0" rect_y="26.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Stairs" image_name="stairsdown_indoors" x="49.0" y="28.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Dungeons Lower Level, Wentbridge Fort" exit_location_x="49.0" exit_location_y="29.5"/>
+
+</location>
+
+<location name="Dungeons Lower Level, Wentbridge Fort" display_name="true">
+
+<floor image_name="floor_rock"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<wandering_monster template="Orc" time="300000" rest_chance="20"/>
+
+<!--<player_start x="41.5" y="6.0"/>-->
+
+<floorregion shape="rect" rect_x="42.0" rect_y="6.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="2.5" rect_w="3.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="42.5" y="6.55" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="41.5" y="4.5" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Dungeons, Wentbridge Fort" exit_location_x="41.5" exit_location_y="6.0"/>
+
+<floorregion shape="rect" rect_x="42.0" rect_y="7.5" rect_w="1.0" rect_h="13.0"/>
+
+<floorregion shape="rect" rect_x="41.0" rect_y="20.5" rect_w="3.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="42.5" y="20.45" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Wentbridge Cell Key"
+    />
+
+<scenery name="Skeleton" image_name="skeleton" x="43.5" y="22.3" size="0.7" draw_type="background"/>
+
+<scenery name="Chest" image_name="chest" x="41.5" y="21.0" size="0.8" blocking="true">
+    <weapon name="Blessed Long Sword" image_name="longsword" weight="14"
+        damageX="2" damageY="10" damageZ="0"
+        unholy_bonus="4"
+        min_strength="7"
+        animation_name="longsword"
+        magical="true"
+        base_template="Long Sword" worth_bonus="300"
+        />
+</scenery>
+
+<!-- main part -->
+
+<floorregion shape="rect" rect_x="47.0" rect_y="26.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="49.0" y="28.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="Dungeons, Wentbridge Fort" exit_location_x="49.0" exit_location_y="29.5"/>
+
+<!--<player_start x="49.0" y="29.5"/>-->
+
+<!-- north route, past human prisoners -->
+
+<floorregion shape="rect" rect_x="48.5" rect_y="20.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="49.5" rect_y="20.0" rect_w="8.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="49.0" rect_y="18.0" rect_w="1.0" rect_h="2.0"/>
+
+<npc name="Prisoner" animation_name="peasant_man" static_image="true" x="49.5" y="18.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello... have you come to free me?
+</opening_initial>
+<opening_later>Thank you for freeing me.
+</opening_later>
+<talk question="Why are you locked up down here?">
+I was caught poaching in the Fort grounds. Got myself locked up down here for five miserable years... is it time for me to be let out?
+</talk>
+</npc>
+
+<scenery name="Door" image_name="door_wood_n" x="49.5" y="19.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Wentbridge Cell Key"
+    />
+
+<floorregion shape="rect" rect_x="51.0" rect_y="18.0" rect_w="1.0" rect_h="2.0"/>
+
+<npc name="Prisoner" animation_name="peasant_man" static_image="true" x="51.5" y="18.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Please... no more torture!
+</opening_initial>
+<opening_later>Please... no more torture!
+</opening_later>
+</npc>
+
+<scenery name="Door" image_name="door_wood_n" x="51.5" y="19.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Wentbridge Cell Key"
+    />
+
+<!-- west-to-east route -->
+
+<floorregion shape="rect" rect_x="43.0" rect_y="27.5" rect_w="4.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="43.0" rect_y="28.5" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="43.0" rect_y="32.5" rect_w="8.0" rect_h="1.0"/>
+
+</location>
+
+</quest>

@@ -1,0 +1,60 @@
+0;I am looking for a new <ITEMWDESC>. My old one is falling apart.;I could really use some cash, would you be interested in buying a <ITEMH>?;Thank you. Now I can throw out the old one.
+1;I could use a new <ITEMWDESC>. The one I have now just doesn't do the job.;I've been trying to get rid of this <ITEMH>. Maybe you want it?;Thank you. Now I can throw out the old one.
+2;I always wanted a <ITEMWDESC>! I would pay anything to get my fingers on one.;I've got a spare <ITEMH> if you want it.;Thank you. Now I can throw out the old one.
+0;I like <CHARACTER>s peformance. An Autograph would be nice.;I have an Autograph of <OCHAR>;Oh, Thank you
+1;I love <CHARACTER>! An autograph would be great!;I have an Autograph of <OCHAR>;Great! Thank you very much!
+2;I am the biggest fan of <CHARACTER>! The only thing missing in my collection would be an autograph.;I have an Autograph of <OCHAR>;Awesome! How did you get that? Thank you very, very much!
+0;If you meet <CHARACTER>, could you remind <HIMHER> that <HESHE> owes me <MONEY> Cr.? If you can get it for me I'll let you keep 10%; 4-3;Oh, Thank you
+1;<CHARACTER> owes me <MONEY> Cr. I offer you 20% if you can get it for me.; 4-2;Great! Thank you very much!
+2;I am struggling to make ends meet, while <CHARACTER> still owes me <MONEY> Cr.! If you meet <HIMHER> please would you step on <HISHERS> toes? I am willing to give up 30% if anybody can get it.; 4-1;Finally! Thank you very much for your help
+0;We always have work for good engineers.;I have some experience in that field. Do you know somebody who needs one?;Oh? Thank's. I'll contact <OHIMHER>.
+1;Our engineering department is starting to run a backlog. We have the funds, now we just need the right person for the job.;I have, and I have some time for side projects at the moment.;That's good to know. Thanks for the information. I'll contact <OHIMHER>.
+2;Let's be honest. This place is falling apart. I really need a good engineer. Now. Though yesterday would be better.;Yes, I have. And I am actually looking for work right now.;That's great News! Thanks for telling me. I'll contact <OHIMHER> right away!
+0;I am doing research on <ITEMW>. Running a bit low at the moment;I really have way too much <ITEMH>. Do you need any?;Thank you!
+1;I am doing research on <ITEMW>, but I have run out of it. You think you can get me some?;I've got some <ITEMH> to spare. Do you want it?;Thank you!
+2;I am stuck in my research! I need <ITEMW> to continue!;I guess I could spare some of this <ITEMH>. If it is worth my while.;Thank you!
+0;I have. I would be interested in a trinket to show people where I have been.;If you like it you can have it.;That looks interesting! Thank you!
+1;I've heard of that. I'd be interested in buying.;I would be ready to let go of it for a price;That looks interesting! Thank you!
+2;I have. If they are as interesting as people claim I'd be interested in buying. I am looking for something exotic, something to kick off a conversation, representative of this sector.;I really like it too. You'd have to offer a decent price if you want it.;That looks interesting! Thank you!
+0;I am always looking for new tools. Nothing particular right now though.;I've got some tools to sell. Interested in buying?;Oh yeah, I could need those. Thank you very much!
+1;If I had some better tools, I could work a lot better!;I am not using some of my tools. Maybe you would want to buy them?;Ah just what I needed! Thanks!
+2;I can't do anything right now! I just don't have the tools!;My toolbox is getting to full. Got some great stuff to sell!;Finally! Thank you very much!
+0;Lately the audience seemed a little bored. A new show concept would be nice.;I've had this Idea for a show for <OCHAR> ;That sounds like a neat idea. Thank you 
+1;I wasn't able to fill halls like I used to. I need to work on a new show concept.;I've had a great idea for a show for <OCHAR> ;Oh, never thought of that. Thanks for sharing!
+2;What's wrong with my show? Nobody is coming anymore! Soon I will have to work as a cook;I know how <OCHAR> can make a comeback. I've had some great ideas!;Yay! Can you say comeback? I say this says comeback! Thank you very much!
+0;Stations sensors are really good. Having access to them would be helpful for my research.;I do. But I don't need it anymore. You can have it if you want.;Thank you! This will help a lot.
+1;If I only could get access to the station sensors, I could prove my thesis!;I do. I could sell it to you.;Thank you! Can't wait to use them.
+2;I really need access to the station sensors! I am on the verge of a scientific breaktrhough!;I do. I could sell it to you.;Thank you! Now I can finish my research.
+0;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;Thank you very much for the trip.
+1;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;Thank you very much for the trip.
+2;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;I need to be at station <DEST> by <TIME>. Can you help me? I can pay you <PAY> credits.;Thank you very much for the trip.
+0; 13-1;I have <TONS> tons of cargo for station <DEST> but i have other pressing business. Would you be interested in the job?;34
+1; 13-2;I have <TONS> tons of cargo for station <DEST> but i have other pressing business. Would you be interested in the job?;35
+2; 13-3;I have <TONS> tons of cargo for station <DEST> but i have other pressing business. Would you be interested in the job?;36
+0;If we knew where the pirates bases were, they would be easier to avoid.;I know where a piratebase is <->There is a piratebase at <PCORDS>;Thank you. I will stay clear of that one
+1;Another merchant ship was destroyed a short while ago. If we only could warn them where they have to keep an eye on their sensor readings.;I know where a piratebase is <->There is a piratebase at <PCORDS>;Ah. Good to know! I will avoid that system then. Thank you!
+2;Spacetrade is about to grind to a halt! I need to know! Where are the pirate bases?;I know where a piratebase is <->There is a piratebase at <PCORDS>;This is vital information! Thank you very much
+0;Did you find any interesting planets, worth a visit?;I know a very interesting place <->There is <SPLANET> at <PCORDS>;Thanks. I'll take a look at that.
+1;My crew needs a challenge. Did you find any interesting planets, worth a visit?;I know a very interesting place <->There is <SPLANET> at <PCORDS>;Thanks. Sounds interesting and worth a visit.
+2;I could really use some excitement on my next trip! Do you know about any interesting planets?;I know a very interesting place <->There is <SPLANET> at <PCORDS>;Awesome! I must take a look at that immediately
+0;Do you know of any earthlike planets in this sector?;I know about an earthlike planet <->The earthlike planet is at <PCORDS>. I think you would really enjoy it.;Oh thanks! I am sure I will enjoy myself there!
+1;I really need to take a walk without a spacesuit! Do you know of any earthlike planets?;I know about an earthlike planet <->The earthlike planet is at <PCORDS>. I think you would really enjoy it.;Oh thanks! I am sure I will enjoy myself there!
+2;Are all planets in this sector uninhabitable? Please tell me, have you found any earthlike planets yet?;I know about an earthlike planet <->The earthlike planet is at <PCORDS>. I think you would really enjoy it.;Oh thanks! I am sure I will enjoy myself there!
+0;I've heard of an interesting paper by <CHARACTER>. I would like to read it.;I just finished this research paper. Don't know if I am going to publish it.;52
+1;The paper by <CHARACTER> can propably help me solve my problem.;I just finished this research paper. It's sure gonna turn some heads.;53
+2;I need <CHARACTER>s research paper! I can't continue my work without it.;I just finished this research paper. Now I am looking for a buyer.;54
+0;I like to get ahead of our competition. I am always interested in info on <CORP>;I've got their latest report if you want it.;Thanks. Maybe I find something in here.
+1;I am suspicious <CORP> is up to something. If you know anything about them let me know.;I've got their latest internal report, if you want it.;Thanks. Maybe I find something in here.
+2;I know <CORP> is planning something! Any info you got on them would be highly appreciated!;Can't tell you how I got it, but this report is top secret. I would sell it to you.;Thanks. Maybe I find something in here.
+0;I need biodata for my research. I am only just starting out and the companies are really stingy when it comes to supplying independents.;I've got some extra biodata I would be willing to sell;Thats some interesting Data. Thank you.
+1;I still need some more biodata befor I can finish my research.;I've got interesting biodata. I would be willing to sell it.;Ah. Thanks! This looks interesting and I hate the paperwork.
+2;Just a bit more biodata and I can finish my research. You don't happen to have any?;I've got highly interesting biodata. Do you want to buy it?;Just what I needed! Thank you.
+0;I am always interested in data on anomalies.;I've got some data on anomalies I don't really need.;Thats some interesting Data. Thank you.
+1;My research on anomalies is going on well. I need a decent chunk of data to test my hypothesis. Then I can finish it.;Ive got some interesting data on anomalies.;Ah. Thanks! This looks interesting and I hate the paperwork.
+2;Just a little bit more of data and I can finish my research on anomalies.;I've got very interesting data on anomalies. If you want it can be yours.;Just what I needed! Thank you.
+0;I am always interested in new approaches for maintenance and repair procedures, born out of necessity.;I've got this plan for emergency repairs. Do you want it?;64
+1;Right now I am stuck with a problem. I could really need some inspiration!;I've got this plan for emergency repairs. Do you want to buy it?;65
+2;I have heard of something done by a SO that should be impossible. I would love to get my hands on those plans!;I've got this revolutionary plan for emergency repairs. It's gonna cost you if you want it.;66
+0;0;I am really looking forward to retire. Might you be interested in buying my ship?;
+1;1;If I want to get home I need to get rid of this ship! I'll make you an offer you can't refuse!;
+2;2;I can't stand the bloodshed and the horror anymore! I am going home. Firesale is what this is! Do you want my ship?;

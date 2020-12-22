@@ -1,0 +1,971 @@
+.NPC_IS_CARRYING.
+[PP_SUBJ:<npc>] is carrying
+
+.NPC_IS_WEARING.
+[PP_SUBJ:<npc>] is wearing
+
+
+// For example: It looks starved and sad.
+.NPC_LOOKS_LIKE.
+[PP_SUBJ:<npc>] looks
+
+.NPC_IS_INJURED.
+[PP_SUBJ:<npc>] is suffering from
+
+
+
+
+// when players movement is blocked by obstacle like wall, tree etc. 
+//
+.MOVEMENT_OBSTACLE_AHEAD.
+!There's %s blocking your way!
+
+// when players movement is obstructed by NPC ahead
+//
+.MOVEMENT_NPC_AHEAD.
+!There's <npc_desc> in your way!
+
+
+.NOT_SUITABLE_ITEM.
+!This item is not suitable for that!
+
+.BOTH_HANDS_WIELDED.
+!Your both hands are in use! Take off something to wield a new item.
+
+
+
+
+
+.WOUND_STATE_VERY_GOOD.
+healing quickly and easily
+
+.WOUND_STATE_GOOD.
+healing just fine
+
+.WOUND_STATE_AVERAGE.
+a wound with good chances to heal normally
+
+.WOUND_STATE_BAD.
+a serious wound that may not heal easily
+
+.WOUND_STATE_SERIOUS.
+a grievous wound with a risk of turning fatal
+
+.WOUND_STATE_VERY_SERIOUS.
+a deadly wound
+
+// 1. %s = wound description
+// 2. %s = WOUND_STATE_GOOD/BAD/SERIOUS/etc. (selected by the game)
+.WOUND_TREATMENT_RESULT.
+:After treating the %s you consider it %s.
+
+.ABOUT_TO_TREAT.
+#You are about to treat %s...
+
+// %s = wound treatment eg. "clean the wound"
+.WOUND_TREATMENT.       
+:You try to %s to the best of your ability.
+
+.NO_FURTHER_TREATMENT.
+!No further treatment can be given for this wound now. Try again tomorrow.
+
+//////////////
+// sleeping //
+//////////////
+
+// general wake up message for PC and NPCs
+.WAKE_UP.(who)
+[PC::You wake up.]
+[*:<npc_defdesc> wakes up.]
+
+// disturbed sleep, player is wakes up for variety of reasons 
+.AWAKEN_BY.
+[HUNGER:&Hunger wakes you.]
+[THIRST:&You are awakened by thirst.]
+[FIGHT:!You awake! You have been attacked.]
+
+
+
+.NOT_TIRED.
+&You are not tired!
+
+// messages for player going to sleep. 
+// rug - there are furs to cover the surface
+// cover - there are furs cover the surface and the sleeper
+.SLEEPNOTE.
+[RUG::You lay on the fur and fall asleep.]
+[COVER::You wrap yourself in furs and fall asleep.]
+[*::You lay down and fall asleep.]
+
+
+
+// Doors.
+//
+
+.DOOR_NOT.
+!That is not a door or gate.
+
+.DOOR_ALR_OPEN.
+!This door is already open.
+
+.DOOR_ALR_CLOSED.
+!This door is already closed.
+
+.GATE_ALR_OPEN.
+!This gate is already open.
+
+.GATE_ALR_CLOSED.
+!This gate is already closed.
+
+.DO_OPEN_DOOR.(who)
+[PC:{OPEN_DOOR}You open the door.]
+[*:{OPEN_DOOR}<npc_desc> opens a door.]
+[HEAR:{OPEN_DOOR}You hear a door opening.]
+
+.DO_CLOSE_DOOR.(who)
+[PC:{CLOSE_DOOR}You close the door.]
+[*:{CLOSE_DOOR}<npc_desc> closes a door.]
+[HEAR:{CLOSES_DOOR}You hear a door closing.]
+
+.DO_OPEN_GATE.(who)
+[PC:You open the gate.]
+[*:<npc_desc> opens a gate.]
+[HEAR:You hear a gate being opening.]
+
+.DO_CLOSE_GATE.(who)
+[PC:You close the gate.]
+[*:<npc_desc> closes a gate.]
+[HEAR:You hear a gate being closed.]
+
+
+// List of messages for several player and NPC actions.
+// Where PC: case hasn't been used the message is for NPCs only.
+// 
+.DO_ESCAPE.(who)
+[*:<npc_desc> flees.]
+[HEAR:You hear something running away in the [IN_DIR:<npc_direction>].]
+
+.DO_TREECLIMB.(who)
+[*:<npc_desc> climbs up into a tree.]
+[HEAR:You hear branches rustling in the [IN_DIR:<npc_direction>].]
+
+.DO_LAND.(who)
+[*:<npc_desc> lands down.]
+[HEAR:You hear rustle of wings from the [IN_DIR:<npc_direction>].]
+
+.DO_FLY.(who)
+[*:<npc_desc> flies up into the air.]
+[HEAR:You hear rustle of wings from the [IN_DIR:<npc_direction>].]
+
+.DO_DIVE.(who)
+[*:{splash}<npc_desc> dives under the water.]
+[HEAR:{splash}You hear a splash from the [IN_DIR:<npc_direction>].]
+
+
+.DO_DROP_DOWN.(who)
+[*:<npc_defdesc> drops down on the ground.]
+[HEAR:You hear a thud from the [IN_DIR:<npc_direction>].]
+
+.DO_FALL_PRONE.(who)
+[PC:&You fall prone.]
+[*:<npc_defdesc> falls prone.]
+
+.DO_FELL_SMALL_TREE.(who)
+[PC:{treefall_small}:The tree falls down.]
+[*:{treefall_small}<npc_desc> fell a tree.]
+[HEAR:{treefall_small}You hear the sound of a tree falling down in the [IN_DIR:<npc_direction>].]
+
+.DO_FELL_BIG_TREE.(who)
+[PC:{treefall_big}:The tree falls down.]
+[*:{treefall_big}<npc_desc> fell a tree.]
+[HEAR:{treefall_big}You hear the sound of a big tree falling down in the [IN_DIR:<npc_direction>].]
+
+
+// picking up/dropping items
+// %s gets value of handled item(s)
+// 
+.PICK_UP.(who)
+[PC::You pick up the %s.]
+[*:<npc_desc> picks up %s.]
+
+.CANT_PICK_UP.
+!There is nothing here to pick up.
+
+.DROP_ITEM.
+:You drop the %s.
+
+.CANT_DROP_WORN.
+!You cannot drop something you are wearing.
+
+// trying to pick up item that is being prepared
+// %s for process time desc (ie."in a few hours", "after 5 days")
+//
+.CANT_PICK_PREPARING.
+_The <item> will be ready %s. You may not pick it up yet.
+
+
+///////////////////////////////
+// item selections - general //
+///////////////////////////////
+
+.ITEM_CANT_APPLY.
+!There's no special way to apply <the_item>.
+
+// selected item is invalid for given item manipulation command. 
+// %s - command word (eat, drink etc.) 
+.ITEM_INVALID.
+!You cannot %s <the_fullitem>!
+
+// item cannot be selected for given item manipulation command because of being used 
+// %s - command word (eat, drink etc.)
+.ITEM_IN_USE.
+!You cannot %s <the_fullitem> while it is in use.
+
+// item cannot be selected for given item manipulation command because of being worn
+// %s - command word (eat, drink etc.)
+.ITEM_BEING_WORN.
+!You cannot %s <the_fullitem> while it is being worn.
+
+// not carrying certain type of items required for given item manipulation command. %s - command word (eat, drink etc.)
+.OUT_OF_ITEMS.
+!You don't have anything to %s.
+
+// universal message for no items in inventory
+.CARRY_NOTHING.(who)
+[PC:!You are not carrying anything!]
+[*:!<npc_defdesc> is not carrying anything!]
+
+.CARRY_TOO_MANY.
+!You are carrying too much! Drop excess items to continue your extensive gathering.
+
+.CARRY_TOO_HEAVY.(who)
+[PC:!Nggggh! <items> is too heavy for you to lift.]
+[*:!Burden of <items> is too much for <npc_defdesc> to carry!]
+
+
+.BURIED_IN_BOG.
++<the_item> is buried in the bog.
+
+// ice related
+//
+
+// falling through the ice
+//
+.ICE_BREAKS.(who)
+[PC:!The ice breaks and you fall in the freezing water!]
+[*:<npc_defdesc> falls through the ice.]
+
+// climbing back on the ice from the water
+//
+.ICE_CLIMB_SUCCESS.(who)
+[PC:=You manage to pull yourself up and onto the ice.]
+[*:<npc_defdesc> manages to get back on the ice.]
+
+
+// Messages to display when NPC dies/is killed. 
+//
+.NPC_DEATH.(who)
+[*:@<npc_defdesc> dies.]
+[HEAR:You hear a rattle of death from the [IN_DIR:<npc_direction>].]
+
+.NPC_DEATH_PEACEFUL.(who)
+[*:@<npc_defdesc> sighs once, then stays laying dead still.]
+
+.NPC_DEATH_DROWN.(who)
+[*:<npc_defdesc> seems to have drowned.]
+
+// NPC behaviour related
+//
+
+
+
+// NPC withdraws away from moving player (pets, companions and livestock)
+//
+.NPC_WITHDRAWS.
+<npc_defdesc> withdraws from your way.
+
+// an animal trying to avoid the one who approaches
+.NPC_AVOIDS.
+<npc_defdesc> gets some distance.
+
+// an animal notices of being approached (before a visual contact)
+.NPC_GETS_ALERT.
+<npc_defdesc> seems alert.  
+
+/////////////
+// talking //
+/////////////
+
+.SHOUT_INFO.
+?You can shout to command pets out of sight.
+
+.TALK_FAR_AWAY.
+_You get no response. Go closer.
+
+// when NPC doesn't respond to your attempt to talk with it 
+// (most often because of being aggressive, sleeping or otherwise unable to talk)
+.NPC_DOESNT_RESPOND.
+!<npc_desc> doesn't respond.
+
+.NPC_TALK_STARTLED.
+!<npc_desc> is startled by your attempt to make a conversation.
+
+// when NPC starts a conversation with the player
+// 
+.NPC_TALKS.
+<npc_desc> starts talking to you...
+
+// when NPC says a short sentence that is displayed in the main game-screen
+// %s gets the value of the said message
+//
+.NPC_SAYS.(who)
+[*:=<npc_desc> says: "%s"]
+[HEAR:!You hear someone uttering: "%s"]
+
+// when NPC shouts a short sentence that is displayed in the main game-screen
+// %s gets the value of the shouted message 
+//
+.NPC_SHOUTS.(who)
+[*:!<npc_desc> shouts: "%s"]
+[HEAR:!You hear someone shouting: "%s"]
+
+// PC/NPC enters a trap. 
+// %s gets value of the trap entered - but can't be used with HEAR-case
+//
+.TRAP_ENTER.(who)
+[PC:!You walk into %s!]
+[*:!<npc_desc> enters %s.]
+[HEAR:You hear a trap being triggered in the [IN_DIR:<npc_direction>].]
+
+// PC/NPC manages to free oneself from the trap
+//
+.TRAP_FREE.(who)
+[PC::You manage to free yourself from %s.]
+[*:<npc_desc> manages to get free from %s.]
+
+//
+// pets/domestic animals
+//
+
+// when player applies rope etc. to leash an animal
+//
+.PET_LEASHED.
+:<npc_defdesc> is now put on the leash.
+
+.PET_UNLEASHED.
+:You unleash <npc_defdesc>.
+
+// animal is tied to a tree. %s gets value of tree/terrain description.
+.PET_TIED.
+:<npc_defdesc> is now tied to the %s.
+
+// animal is tied to a tree. %s gets value of tree/terrain description.
+.PET_UNTIED.
+:You untie <npc_defdesc>.
+
+// can't tie an animal to chosen tile
+.PET_TIE_CANT.
+!Nay, that won't do. Tie it to a tree instead.
+
+
+
+
+
+// throwing/ranged attacks
+
+.CANT_THROW_THAT_FAR.
+!The <item> doesn't fly quite that far.
+
+.CANT_THROW_PAST_CONTOUR.
++The <item> hits the slope in between.
+
+// when trying to throw at an adjacent enemy
+//
+.CANT_THROW_IN_MELEE.
+!You are in melee range! It's better to strike with your <item>, than to throw it.
+
+// messages indicating that player prepares to throw an item/weapon, shoot with a bow, to fire a crossbow.
+// 
+.PREPARE_TO_THROW.
++You swing your arm back preparing to throw <the_fullitem>.
+
+.PREPARE_TO_SHOOT.
++You draw your <fullitem> and prepare to shoot.
+
+.PREPARE_TO_FIRE.
++You prepare to fire your <fullitem>.
+
+
+////////////////////////////
+// moving/pushing/packing //
+////////////////////////////
+
+// [m]oving items
+.MOVE_DONE.
++You moved <the_fullitem(s)> to the chosen location.
+
+// no items on the ground to move/push/pack
+.MOVE_NOTHING.
+!There are no items at your feet!
+
+// push/pack information 
+.PUSH_INFO.
+?Items at your feet will be moved to an adjacent location or packed on an animal.
+
+.PACK_ANIMAL_SELECTED.
+#You start packing items on <npc_defdesc>.
+
+.PACK_DONE.
++You packed <the_fullitem(s)> on <npc_defdesc>.
+
+
+// picking items from a pack animal or a companion 
+.UNPACK_SELECTED.(who)
+[ANIMAL:#You start unpacking items from <npc_defdesc>.]
+[*:#You start picking items from <npc_desc>.]
+
+.WATERCRAFT_LAUNCH.
+:You push <the_item> into water and jump aboard.
+
+.WATERCRAFT_OVERLOADED.
+#Your <item> is overloaded and won't move until you ease the load.
+
+
+
+// fishing
+
+// start message for angling
+.ANGLE_START.
+&You sit down, spit in the water and start to angle, dreaming of a huge catch.
+
+.FISHING_NO_CATCH.
+You didn't manage to catch any fish.
+
+// %s gets full fishlist description
+.FISHING_CATCH.
+=@You caught %s!
+
+.CATCH_PICK_INFO.
+_The catch now awaits at your feet to be picked up.
+
+.GOOF_NO_NET.
+!There are no nets beside you. Nothing to retrieve.
+
+.NET_PULL.
+&You start retrieving the net from the water...
+
+.NET_NO_CATCH.
+There are no fish in this net.
+
+.NET_DESTROYED.
++That <fullitem> is damaged and worn out beyond usable condition.
+
+.GOOF_NO_WATER.
+!Huh? There's no water.
+
+
+/////////////////////
+// eating, plr&npc //
+/////////////////////
+
+
+// (do display verbose item name here -> ie. "fine pot of bland rye porridge")
+.EAT_COMPLETE.
+:You finish eating <item_verbose_def>.
+
+// (display raw item name here -> ie. "some of that rye porridge">
+.EAT_PARTIAL.
+:You finish eating some of that <item_raw>.
+
+.EAT_FULL.
+{BURP}=Burp! Your stomach is full.
+
+.EAT_CANT.
+&You are full and satiated and can't eat more right now!
+
+.EAT_UNEDIBLE.
+!It's not possible to consume plain <item_raw>!
+
+// part of 'start eating' message dealing with food taste, fields 1-5 from awful to to delicious.
+// (hardcoded hunger based description is then added to the final string)
+//
+.EATMSG_TASTE.
+[1:This tastes terrible]
+[2:That's bland]
+[3:It's plain good <item_raw>]
+[4:It's very tasty]
+[5:This tastes great]
+[*:This is <item_raw>]
+
+.DO_EAT.
+<the_npc> eats <item>.
+
+// player drinks something - different messages for different amounts drank
+.DRINK.
+[SIP::You take a sip of <item_raw>.]
+[GULP::You gulp that <item_raw>.]
+[*::You drink some <item_raw>.]
+
+
+
+// hiding messages for player
+
+.HIDING_START.
+:You begin sneaking, trying to stay hidden and move as quietly as possible.
+
+.HIDING_STOP.
+:You quit hiding and sneaking.
+
+.HIDING_CANT.
+!You can't hide now as you are clearly seen at this location.
+
+.HIDING_NOISE.
+!You make some noise while trying to sneak.
+
+
+
+// plant/agriculte messages
+//
+// plant isn't ripe yet - nothing can be harvested.
+// generated variables: <item*> <prepdays>
+//
+.HARVEST_NOT_YET.
+!<item_defdesc> here isn't ripe for harvesting yet.
+
+// plant isn't ripe yet, but young leaves of the sprout can be collected
+.HARVEST_YOUNG_LEAVES.
+!<item_defdesc> here isn't ripe yet, but there are young leaves already.
+
+.HARVEST_NOTHING.
+!You find nothing to harvest there.
+
+// the plant needs to be harvested down, not picked
+.HARVEST_NOPICKING.
+!<item_def> needs to be gathered by harvesting! 
+
+// plant for picking, not cutting down harvesting (eg. berry shrub)
+.HARVEST_NONEED.
+!<item> doesn't require harvesting, but is gathered by picking up.
+
+.HARVEST_SEEDINFO.
+!To gather the seeds as well you need to harvest <item_def> by using your AGRICULTURE-skill.
+
+// inform that plant is producing seeds in the future
+.HARVEST_SEEDS_COMING.
+!To gather the seeds, harvest <item_def> after its flowering period.
+
+// picking up plant which doesn't yield flowers anymore
+.HARVEST_FLOWERED.
+!<item_def> here is past its flowering period and will not yield flowers.
+
+// withered or completely picked plant
+.HARVEST_UNPROVIDED.
+!This <item> no longer provides any yield nor carries any usable parts.
+
+// plant which doesn't carry usable parts to pick anymore, but can be harvested (for roots)
+.HARVEST_FOR_YIELD.
+!This <item> doesn't carry usable parts to pick, try to harvest and thresh it.
+
+// plant has been picked already
+.HARVESTED_ALREADY.
+!The <item> here has been picked already!
+
+// (number of) plant(s) has been cut down
+.HARVEST_DONE.
+Ok. You harvested <items_ind>.
+
+// info for estimated harvest time
+.HARVEST_TIME.
+:It can be harvested after [TIMESPAN_DAY:<prepdays>].
+
+// info for estimated withering time
+.WITHER_TIME.
+:It's withering and will die in [TIMESPAN_DAY:<prepdays>].
+
+// if too early to plant.
+.PLANT_NOT_YET.
+_It's too early for planting <item>. Try again after [TIMESPAN_DAY:<prepdays>].
+
+// if too late to plant
+.PLANT_TOO_LATE.
+!It's too late to plant <item> this year.
+
+// something planted
+.PLANT_DONE.
+=Ok. You planted a patch of <item> here. Time will tell how many will sprout.
+
+// plant is harvested by picking. use fullitems to display in-game amount (fistful etc.) and quantity 
+.HARVEST_PICKED.
+:You got <items_verbose>.
+
+
+
+// tracking messages
+.TRACKS_NOT_FOUND.
+You don't notice any tracks around here.
+
+.TRACKS_FOUND.
+=You find some tracks here.
+
+.TRACKS_FOUND_NEARBY.
+=You spot some tracks close by.
+
+.TRACKING_GOOF_SHALLOW.
+You peer into the water. Your reflection peers back at you.
+
+.TRACKING_GOOF_DEEP.
+You think you see something moving in the depths but then it's gone.
+
+
+
+/////////////////////////
+// handling containers //
+/////////////////////////
+
+.POUR_INFO.
+?Select an item stack or another container from where to pour.
+
+.POUR_CANT.
+!That is something you can't pour into a container!
+
+.POUR_SOURCE_OK.
++Ok, <raw_item> will be poured in there.
+
+.POUR_OK.
+=You fill %s with %s.
+
+.FILL_CANT.
+!There's nothing fill your <item> with.
+
+.FILL_WATER.
+=You fill <the_item_container> with water.
+
+.FILL_INFO.
+?To fill that <item_container> you need water or an animal to milk.
+
+.MILK_REFUSE.
+!<npc_defdesc> makes it clear that you are not allowed you to milk her.
+
+.MILK_CANT.
+!Milk <npc_defdesc>? Nay, think again.
+
+.MILK_GOT.
+Alright. Thank you for the milk, <npc_desc>.
+
+.NO_MORE_MILK_TODAY.
+It seems <npc_defdesc> can't yield any more milk today.
+
+.MILK_DRY_PERIOD.
+!<npc_defdesc> is having a dry period. No milk during wintertime.
+
+
+
+
+
+// container is emptied by plr
+.CONTAINER_EMPTIED.
++You empty <the_item> to have it filled again.
+
+
+
+
+////////////////////////
+// crafting - general //
+////////////////////////
+//
+// use %s where set - it gets value of item(s) made
+//
+
+.RAWMAT_INVALID. 
+!<item> doesn't work as %s!
+
+// quality of processed item is lowered due to poor performance (in multi-stage crafting)
+.CRAFTQUALITY_LOWERED.
+!You fail to maintain the quality of <item_def_verbose> during this step.
+
+// when items have been crafted and now appear on the ground. %s gets description of all crafted items. 
+.CRAFTING_DONE_GROUND.
+=Ok, you made %s here.
+
+// when items have been crafted and placed in character's inventory. %s gets description of all crafted items. 
+.CRAFTING_DONE.
+=Ok, you obtained %s.
+
+// when items have been made and are set on the groung for getting 'being processed'
+.CRAFTING_TO_PREPARE.
+=Ok, you set and leave %s here to prepare.
+
+// the best tool for crafting was automatically selected, display full description to inform about item quality
+.TOOL_SELECTED.
+Ok. <the_fullitem> you have will be used.
+
+// there's need to select more of required raw materials/tools
+//
+.REQ_MORE.
+_That's not enough. Select some more.
+
+// required tools or materials have been found nearby on the ground.
+// use %s to display selected item(s).
+//
+.REQ_NEARBY.
++%s nearby will be used.
+
+// required tools or materials have been found from character's inventory.
+// use %s to display selected item(s).
+.REQ_INV.
++%s in your inventory will be used.
+
+// when water is required and there's a natural source of water nearby (eg. lake)
+//
+.REQ_WATER_OK.
+There is plenty of water nearby.
+
+
+//////////////
+// building //
+//////////////
+
+
+// when continuing cancelled building task. use %s for description of the construction, eg. half-made fence.
+.BIY_CONTINUE.
+#You continue working on the %s.
+
+
+/////////////////////
+// carcass related //
+/////////////////////
+
+.CARCASS_NOT_FOUND.
+!You should have the carcass nearby on the ground, one step away at the most.
+
+.CARCASS_ROTTEN.
+!This %s is not fresh enough to be utilized.
+
+
+
+/////////////////
+// hideworking //
+/////////////////
+
+.HIDEWORK_CURE_START.
+#You finalize cleaning the skin and set it properly in place for curing.
+
+.HIDEWORK_CURE_DONE.
++The skin is now left to dry completely, after which it will keep for future usage.
+
+
+.HIDEWORK_CLEAN_START.
+#You start to scrape and rinse the skin clean from any remaining flesh and fat.
+
+.HIDEWORK_CLEAN_DONE.
++You obtained %s which can be now processed further, or cured for preservation.
+
+// apply tanning material
+.HIDEWORK_TANNING_START.
+#You start to rub the tanning material on the skin.
+
+// done applying tanning material
+.HIDEWORK_TANNING_DONE.
+#The skin is now left alone for the tanning material to get working.
+
+// start rinsing the skin after applying tanning material
+.HIDEWORK_RINSE_START.
+#You scrape off the tanning mixture and rinse the skin clean.
+
+.HIDEWORK_RINSE_DONE.
+#The skin is now left to hang until it's dry enough to continue tanning.
+
+// last stage of tanning, softening
+.HIDEWORK_SOFTEN_START.
+#You start softening the skin by pounding, stretching, squeezing and cursing - the final and the most laborious stage of tanning.
+
+// whole tanning process is completed, leather or fur has been made 
+// use %s for description of the item produced
+.HIDEWORK_SOFTEN_DONE.
++You finish the tanning process and obtained %s.
+
+.SKIN_MUTILATED.
+!Hide of this %s is mutilated beyond usage.
+
+
+
+
+// waterlife: swimming, wading, watercrafts
+
+.CAN_WADE.
+:The water here is shallow enough to wade.
+
+.DEEP_WATER.
+!It's deep water there! You need to swim, or go by watercraft.
+
+.OUT_OF_THE_WATER.
+:You get out of the water.
+
+
+
+// cookery
+
+// Food was cooked. Use %s to show all prepared cookings.
+.COOKING_DONE.
++Ok, you finished preparing %s.
+
+// Food was cooked and left to prepare. Use %s to show all the prepared cookings.
+.COOKING_TO_PREPARE.
+=Ok, you leave %s to cook and prepare.
+
+// food that was left to cook is ready
+.FOOD_READY.
+:It smells like <the_item> is ready.
+
+// food that was left to cook is burning soon
+.FOOD_BURNING.
+:It smells like <the_item> is burning soon.
+
+.GRIND_INFO.
+?Select the grains to grind, or use roots and seeds for wild flour.
+
+.GRIND_CANT.
+!It's not possible to grind <items_nonum> for flour.
+
+
+
+// herblore
+
+// plant to be recognized is known to player character
+.HERBLORE_KNOWN.
+You do know that's <item_ind>.
+
+// plant is recognized completely 
+//
+.HERBLORE_SUCCESS.
+=You recognize that being <item_ind>.
+
+// some plant(s) recognized, but not known by hear yet.
+//
+.HERBLORE_RECKON.
+=You reckon it must be <item_ind>.
+
+// plant properties are learned, but it's still unknown 
+.HERBLORE_LEARN.
+=You have learned something new about <the_item>.
+
+// plant can't be recognized
+.HERBLORE_FAILURE.
+You do not recognize what <the_item> might be.
+
+
+
+
+// repair clothes
+
+// item that can't be repaired (due to material or type)
+.REPAIR_CANT.
+_It's impossible for you to repair <the_fullitem>.
+
+///////////
+/// wear //
+///////////
+
+.WEAR_ALREADY.
+!You are already wearing that.
+
+.WEAR_DOUBLE.
+!You cannot wear double <item>.
+
+// trying to wear something that is similar to something already worn. 
+// %s gets description of the similar object already worn.
+.WEAR_SIMILAR.
+!You cannot wear <item> over %s already being worn.
+
+.WEAR_OK.(who)
+[PC:+You are now wearing <item_ind>.]
+[*:<npc_desc> wears <fullitem>.]
+
+
+// physical condition requirements to perform certain task failed
+// first string describes wounds; severely injured arms/severly injured hands. 
+// second string describes the task; fell a tree,make a fire etc.
+.PHYSREQ_CANT.
+&With %s, you are in no condition to %s!
+
+// physical condition to perform certain task requires stance.
+.PHYSREQ_STANCE.
+&To %s, first you need to get on your feet.
+
+// when it's not possible to wield anything due to hand injuries.
+.CANT_WIELD_INJURED.
+[1:&You can't wield anything with your badly injured right hand!]
+[2:&You can't wield anything with your badly injured left hand!]
+
+
+//////////////
+// take off //
+//////////////
+
+.TAKEOFF_CANT.
+!Nay, not that one! You are supposed to take off things you are wearing or items you are wielding.
+
+.TAKEOFF_OK.
++You take off your <fullitem>.
+
+
+// warnings, confirmations, system messages etc. //
+
+.WARNING_MAP_ITEM_LIMIT.
+#Whoa, items all over the place! Hoard wisely and spread your stuff over a larger area.
+
+// no creature selected when it should have been selected (for talking, leashing, etc.)
+.GOOF_NO_CREATURE.
+!Huh? There's no creature there.
+
+.TASK_PROMPT_CREATURE.
+:Meanwhile, <npc_desc> enters your view...
+
+.TASK_PROMPT_AGG_CREATURE.
+!Meanwhile, an aggressive <npc_desc> enters your view...
+
+.TASK_PROMPT_AGG_APPROACH.
+!Meanwhile, an aggressive <npc_desc> approaches...
+
+.TASK_PROMPT_AGGRESSION.
+!Meanwhile, <npc_desc> turns hostile on you...
+
+
+// simple responses to pet/companion commands
+//
+.RESPONSE_CONFUSED.(who)
+[ANIMAL:<npc_desc> tilts its head in confusion.]
+[*:<npc_desc> gives a questioning expression.]
+
+.RESPONSE_HAPPY.(who)
+[ANIMAL:<npc_desc> gives you a happy look.]
+[*:<npc_desc> smiles happily.]
+
+////////////////
+// firemaking //
+////////////////
+
+.FIRE_MADE.
+You managed to make a fire.
+
+.FIRE_FAILED.
+You did not succeed in making a fire.
+
+.FIRE_NEEDS_FIREWOOD.
+!More firewood is required there.
+
+.FIRE_NEEDS_KINDLING.
+!Some smaller kindling such as branches is required there.
+
+.FIRE_NEEDS_MORE_KINDLING.
+!More kindling such as branches is required there.
+
+
+/////////////
+// rituals //
+/////////////
+
+.SACRIFICE_ITEM.
++You gently set <the_item> on the ground as a sacrifice.
+
+

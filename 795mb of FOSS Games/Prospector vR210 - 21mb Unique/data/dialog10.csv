@@ -1,0 +1,15 @@
+1;This is indipendent station I-<#FL>.;;
+;Hi, how are you ;2;
+;Can you tell me where you are?;5;
+;Everything ok?;3;
+;What's the current fuel price;4;
+;Bye;6;
+2;;;STATIONEVENT
+;;1;
+3;;;STATIONEVENT
+;;1;
+4;;;FUELPRICE
+;;1;
+5;Of course! We are at <COORDS>, looking forward to do business with you!;;
+;;1;
+6;Looking forward to your visit!;0;

@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<quest name="Goblin caves">
+
+<info>The nearby caves to your village have become infested with Goblins, who have been responsible for taking part in raids on your village, killing innocent people and burning down their homes. Kill these vermin, and you will be rewarded with one hundred gold pieces!
+</info>
+
+<completed_text>The villagers are grateful for you cleansing the caves of the infestion of goblins, and hope that now they will be safe from attacks from goblin raiders. They present you with the reward of one hundred gold pieces.
+</completed_text>
+
+<quest_objective type="kill" arg1="all_hostile" gold="100"/>
+
+<location>
+
+<floor image_name="floor_rock"/>
+<wall image_name="wall"/>
+<background image_name="background_brown"/>
+
+<!--<wandering_monster template="Goblin" time="120000" rest_chance="10"/>-->
+
+<player_start x="0.5" y="9.0"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="8.0" rect_w="1.0" rect_h="2.0" />
+
+<!--<gold amount="101" x="1.0" y="9.0"/>-->
+
+<scenery name="Door" image_name="door_wood_n" x="0.5" y="7.55" w="1.0" h="0.9" blocking="false" block_visibility="false" exit="true"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="10.0" rect_w="12.0" rect_h="1.0" />
+
+<scenery name="Torch" image_name="torch" x="2.0" y="9.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="9.0" y="9.55" w="0.75" h="0.75"/>
+
+<!--<item template="Holy Water" x="0.5" y="10.0"/>-->
+<!--<item template="Acid" x="0.5" y="10.0"/>-->
+<!--<item template="Potion of Cure Disease" x="0.5" y="10.0"/>-->
+<!--<item template="Longbow" x="0.5" y="9.5"/>
+<item template="Arrows" x="0.5" y="10.0"/>
+<ammo name="Arrows +1" ammo_type="Arrows" image_name="arrow" projectile_image_name="arrow" weight="1"
+    rating="2"
+    magical="true"
+    base_template="Arrows" worth_bonus="50"
+    x="0.5" y="10.5"
+    amount="5"/>-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="5.0" y="5.0" />
+    <floorregion_point x="4.5" y="10.0" />
+    <floorregion_point x="6.0" y="10.0" />
+    <floorregion_point x="6.0" y="5.0" />
+</floorregion>
+<floorregion shape="rect" rect_x="5.0" rect_y="4.0" rect_w="1.0" rect_h="1.0" />
+<floorregion shape="rect" rect_x="6.0" rect_y="4.0" rect_w="5.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="8.0" y="3.55" w="0.75" h="0.75"/>
+
+<!--<npc name="Zombie" template="Zombie" x="10.0" y="4.5"/>-->
+<!--<npc name="Giant Spider" template="Giant Spider" x="10.0" y="4.5"/>-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="11.0" y="1.0" />
+    <floorregion_point x="10.5" y="2.5" />
+    <floorregion_point x="11.0" y="4.0" />
+    <floorregion_point x="11.0" y="5.0" />
+    <floorregion_point x="11.5" y="6.0" />
+    <floorregion_point x="13.5" y="6.5" />
+    <floorregion_point x="15.5" y="6.0" />
+    <floorregion_point x="16.0" y="5.0" />
+    <floorregion_point x="16.0" y="3.0" />
+    <floorregion_point x="15.5" y="2.5" />
+    <floorregion_point x="15.0" y="1.0" />
+    <floorregion_point x="14.5" y="0.5" />
+    <floorregion_point x="13.5" y="0.0" />
+    <floorregion_point x="12.0" y="0.5" />
+</floorregion>
+
+<npc name="Goblin" template="Goblin" x="13.0" y="3.0"/>
+<npc name="Goblin Mage" template="Goblin Mage" x="15.0" y="2.0">
+    <spell name="Fire bolt" count="6"/>
+    <spell name="Heal" count="1"/>
+</npc>
+
+<scenery name="Boulders" image_name="boulders" x="12.0" y="2.0" size="0.56" blocking="true"/>
+<scenery name="Boulders" image_name="boulders2" x="14.0" y="1.5" size="0.56" blocking="true"/>
+<scenery name="Big Boulder" image_name="bigboulder" x="13.0" y="1.0" size="0.58" blocking="true"/>
+<item template="Mushroom" x="12.0" y="5.0"/>
+<scenery name="Fire" image_name="fire" x="14.0" y="3.0" size="1.0" blocking="true" has_smoke="true"/>
+<scenery name="Rock" image_name="rock1" x="14.5" y="5.7" size="0.2" draw_type="background"/>
+
+<scenery name="Crate" image_name="crate" x="15.0" y="5.0" size="0.8" blocking="true">
+    <gold amount="20"/>
+    <item template="Arrows"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="3.0" rect_w="5.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="19.0" y="2.55" w="0.75" h="0.75"/>
+<floorregion shape="rect" rect_x="21.0" rect_y="3.0" rect_w="1.0" rect_h="1.0" />
+<floorregion shape="polygon">
+    <floorregion_point x="21.0" y="4.0" />
+    <floorregion_point x="21.0" y="17.0" />
+    <floorregion_point x="22.5" y="17.0" />
+    <floorregion_point x="22.0" y="4.0" />
+</floorregion>
+<floorregion shape="rect" rect_x="5.0" rect_y="11.0" rect_w="1.0" rect_h="6.0" />
+
+<npc name="Goblin" template="Goblin" x="5.5" y="15.5"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="11.0" rect_w="1.0" rect_h="6.0" />
+<floorregion shape="rect" rect_x="5.0" rect_y="17.0" rect_w="1.0" rect_h="1.0" />
+<floorregion shape="rect" rect_x="6.0" rect_y="17.0" rect_w="5.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="8.5" y="16.55" w="0.75" h="0.75"/>
+<floorregion shape="rect" rect_x="11.0" rect_y="17.0" rect_w="10.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="16.0" y="16.55" w="0.75" h="0.75"/>
+<floorregion shape="rect" rect_x="21.0" rect_y="17.0" rect_w="1.5" rect_h="1.0" />
+
+    <floorregion shape="rect" rect_x="6.0" rect_y="7.6" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="polygon">
+    <floorregion_point x="7.0" y="6.5" />
+    <floorregion_point x="6.5" y="7.0" />
+    <floorregion_point x="6.5" y="8.75" />
+    <floorregion_point x="9.5" y="8.5" />
+    <floorregion_point x="9.3" y="7.0" />
+    <floorregion_point x="9.0" y="6.5" />
+</floorregion>
+
+<scenery name="Rock" image_name="rock1" x="8.5" y="7.1" size="0.2" draw_type="background"/>
+<scenery name="Skulls" image_name="skulls" x="7.75" y="8.0" size="0.3" draw_type="background"/>
+
+<npc name="Goblin" template="Goblin" x="8.0" y="8.0">
+    <item template="Leather Armour"/>
+    <item template="Red Gem"/>
+</npc>
+
+    <floorregion shape="rect" rect_x="12.0" rect_y="13.6" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="rect" rect_x="12.5" rect_y="12.5" rect_w="2.0" rect_h="3.0" />
+<scenery name="Torch" image_name="torch" x="13.5" y="12.05" w="0.75" h="0.75"/>
+    <floorregion shape="rect" rect_x="14.5" rect_y="13.6" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="rect" rect_x="15.0" rect_y="12.5" rect_w="2.5" rect_h="3.0" />
+<scenery name="Torch" image_name="torch" x="17.0" y="12.05" w="0.75" h="0.75"/>
+    <floorregion shape="rect" rect_x="17.5" rect_y="13.6" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="rect" rect_x="18.0" rect_y="12.5" rect_w="2.5" rect_h="3.0" />
+<scenery name="Torch" image_name="torch" x="19.0" y="12.05" w="0.75" h="0.75"/>
+    <floorregion shape="rect" rect_x="19.6" rect_y="15.5" rect_w="0.8" rect_h="1.5" />
+
+    <floorregion shape="rect" rect_x="12.0" rect_y="10.1" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="rect" rect_x="12.5" rect_y="7.5" rect_w="2.0" rect_h="3.5" />
+
+<scenery name="Campfire" image_name="campfire" x="14.0" y="8.5" size="0.8" blocking="true"/>
+<scenery name="Bones" image_name="bones" x="13.5" y="9.5" size="0.5" draw_type="background"/>
+
+    <floorregion shape="rect" rect_x="10.5" rect_y="13.6" rect_w="0.5" rect_h="0.8" />
+<floorregion shape="rect" rect_x="7.5" rect_y="12.5" rect_w="3.0" rect_h="3.0" />
+
+<scenery name="Chest" image_name="chest" x="8.0" y="13.0" size="0.8" blocking="true">
+    <gold amount="50"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="6.0" rect_y="18.0" rect_w="1.0" rect_h="5.0" />
+<floorregion shape="rect" rect_x="6.0" rect_y="23.0" rect_w="5.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="8.0" y="22.55" w="0.75" h="0.75"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="23.0" rect_w="4.0" rect_h="4.0" />
+<npc name="Goblin" template="Goblin" x="13.0" y="26.0"/>
+<gold amount="11" x="11.5" y="26.5"/>
+<scenery name="Boulders" image_name="boulders" x="14.0" y="23.8" size="0.56" blocking="true"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="26.0" rect_w="6.5" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="18.0" y="25.55" w="0.75" h="0.75"/>
+
+<floorregion shape="rect" rect_x="21.5" rect_y="18.0" rect_w="1.0" rect_h="9.0" />
+
+<!--
+<gold amount="10" x="1.0" y="10.5"/>
+<gold amount="20" x="1.0" y="10.5"/>
+<gold amount="30" x="1.0" y="10.5"/>
+<gold amount="40" x="1.0" y="10.5"/>
+<gold amount="50" x="1.0" y="10.5"/>
+<gold amount="60" x="1.0" y="10.5"/>
+-->
+
+<!--<item template="Potion of Healing" x="2.0" y="10.5"/>-->
+
+<!--<item template="Gold Ring" x="4.0" y="10.5"/>-->
+
+<npc name="Goblin" template="Goblin" x="21.5" y="15.5"/>
+
+<npc name="Goblin" template="Goblin" x="17.0" y="13.0"/>
+
+<scenery name="Door" image_name="door_wood" x="6.05" y="8.0" w="0.1" h="0.8" blocking="true" block_visibility="true" door="true"/>
+<scenery name="Door" image_name="door_wood" x="12.05" y="14.0" w="0.1" h="0.8" blocking="true" block_visibility="true" door="true"/>
+<scenery name="Door" image_name="door_wood" x="10.95" y="14.0" w="0.1" h="0.8" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Goblin's Key"
+    />
+<scenery name="Door" image_name="door_wood_n" x="20.0" y="16.9" w="0.8" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<scenery name="Door" image_name="door_wood_n" x="20.0" y="12.4" w="0.8" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Rock" image_name="rock1" x="2.0" y="10.7" size="0.2" draw_type="background"/>
+
+<scenery name="Barrel" image_name="barrel" x="15.5" y="15.0" size="0.8" blocking="true">
+    <gold amount="25"/>
+    <item template="Bowl"/>
+</scenery>
+
+    <floorregion shape="rect" rect_x="19.6" rect_y="10.5" rect_w="0.8" rect_h="2.0" />
+<floorregion shape="rect" rect_x="15.0" rect_y="7.25" rect_w="5.5" rect_h="3.25" />
+
+<!--<player_start x="20.0" y="9.0"/>-->
+
+<scenery name="Torch" image_name="torch" x="17.0" y="6.8" w="0.75" h="0.75"/>
+
+<scenery name="Chest" image_name="chest" x="19.0" y="8.25" size="0.8" blocking="true">
+    <gold amount="50"/>
+    <item template="Potion of Healing"/>
+    <item template="Gold Ring"/>
+</scenery>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="16.0" y="9.0">
+    <item template="Leather Armour"/>
+    <item name="Goblin's Key" image_name="key" icon_width="0.5" weight="0"/>
+</npc>
+<npc name="Goblin" template="Goblin" x="16.0" y="10.0"/>
+
+<scenery name="Big Boulder" image_name="bigboulder" x="16.0" y="8.25" size="0.58" blocking="true"/>
+
+<trap x="3.0" y="10.0" w="1.0" h="1.0" type="mantrap"/>
+
+<trap x="8.0" y="17.0" w="1.0" h="1.0" type="mantrap"/>
+<trap x="13.0" y="17.0" w="1.0" h="1.0" type="mantrap"/>
+<trap x="16.0" y="17.0" w="1.0" h="1.0" type="mantrap"/>
+
+</location>
+
+</quest>

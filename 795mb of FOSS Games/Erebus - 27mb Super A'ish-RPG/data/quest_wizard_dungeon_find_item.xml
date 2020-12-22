@@ -1,0 +1,1975 @@
+<?xml version="1.0" ?>
+<quest name="The Wizard's dungeon">
+
+<info>As thanks for the success in your recent quest, the village elders invite you to a banquet. After congratulating you, they say they have summoned you here to learn something of a more important nature.
+
+Over one hundred years ago, nearby lived a powerful mage named Vespar. He lived in an underground dungeon. Few were allowed into his home, which was rumoured to hold great secrets and power, though he often communicated with the nearby villages.
+
+But then, one hundred years ago, all contact was lost, and furthermore, no one was able to find the entrance to his dungeon. Even those who had been there before were unable to find it. Some said they had just forgotten, whilst others said some magic had caused the dungeon to have been concealed, or destroyed.
+
+Recently a villager from one of the nearby villages stumbled across a doorway in the mountains to an underground location. He did not venture far, hearing the sounds of dreadful creatures that now inhabited it, but he managed to bring back various documents and artefacts he found in the first room, which scholars identified as belonging to the great mage Vespar.
+
+Since then, various adventurers have set off from the other villages to explore, with varying degrees of success. The scholars of your village however have learnt some additional information. They know that the mage died one hundred years ago, and your village's own wizards have detected that a source of magic lies buried deep within the dungeons. This is, in fact, Vespar's skull, which seems to somehow be still blessed with his magic.
+
+The village elders ask you to enter his dungeon, and retrieve the skull, lest it falls into the hands of evil. They will reward you with three hundred gold pieces. You will also have plenty of opportunity to find other treasures within the dungeons, which you are welcome to keep for yourself.
+</info>
+
+<completed_text>The village elders are most pleased that you have succeeded in your quest. They take the mage's skull from you, and give you your reward of three hundred gold pieces.
+</completed_text>
+
+<quest_objective type="find_item" arg1="Vespar's Skull" gold="300"/>
+
+<!-- need to ensure all Characters can carry the weight, and have weapons they can use -->
+<start_bonus
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    bonus_health="0"
+    XP="70">
+    <gold amount="134"/>
+    <item template="Shield"/>
+    <item template="Chain Mail Armour"/>
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+</start_bonus>
+
+<location name="entrance">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<player_start x="32.0" y="2.0"/>
+
+<wandering_monster template="Goblin" time="180000" rest_chance="10"/>
+
+<!--main room-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="30.0" y="1.0" />
+    <floorregion_point x="28.0" y="3.0" />
+    <floorregion_point x="28.0" y="6.0" />
+    <floorregion_point x="37.0" y="6.0" />
+    <floorregion_point x="37.0" y="3.0" />
+    <floorregion_point x="35.0" y="1.0" />
+</floorregion>
+<scenery name="Rock" image_name="rock1" x="31.0" y="1.5" size="0.2" draw_type="background"/>
+<scenery name="Rock" image_name="rock1" x="35.0" y="5.3" size="0.2" draw_type="background"/>
+<scenery name="Rock" image_name="rock1" x="36.2" y="2.5" size="0.2" draw_type="background"/>
+
+<scenery name="Table" image_name="table" x="35.0" y="2.5" size="0.8" blocking="true"/>
+
+<!--<item template="Potion of Combat" x="32.0" y="3.0"/>
+<item template="Potion of Archery" x="32.0" y="4.0"/>-->
+
+<scenery name="Door" image_name="door_wood_n" x="32.5" y="0.55" w="1.0" h="0.9" blocking="false" block_visibility="false" exit="true"/>
+
+<scenery name="Torch" image_name="torch" x="31.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Torch" image_name="torch" x="34.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Barrel" image_name="barrel" x="30.0" y="3.0" size="0.8" blocking="true">
+    <gold amount="7"/>
+</scenery>
+
+<!--western route, goblins-->
+
+    <floorregion shape="rect" rect_x="27.5" rect_y="3.5" rect_w="0.5" rect_h="1.0" />
+    <scenery name="Door" image_name="door_wood" x="27.95" y="4.0" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="22.0" rect_y="3.0" rect_w="5.5" rect_h="2.0" />
+<scenery name="Torch" image_name="torch" x="25.0" y="2.55" w="0.75" h="0.75"/>
+<floorregion shape="rect" rect_x="22.0" rect_y="5.0" rect_w="2.0" rect_h="9.0" />
+<npc name="Goblin" template="Goblin" x="22.5" y="6.0"/>
+<npc name="Goblin" template="Goblin" x="23.5" y="8.5"/>
+
+<!--goblins to the west-->
+
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="7.0" rect_h="1.0" />
+<floorregion shape="rect" rect_x="11.0" rect_y="9.0" rect_w="4.0" rect_h="3.0" />
+<scenery name="Torch" image_name="torch" x="13.0" y="8.55" w="0.75" h="0.75"/>
+
+<npc name="Goblin" template="Goblin" x="12.0" y="9.5"/>
+<npc name="Goblin" template="Goblin" x="13.0" y="9.5"/>
+
+<floorregion shape="rect" rect_x="8.0" rect_y="10.0" rect_w="3.0" rect_h="1.0" />
+
+<scenery name="Chest" image_name="chest" x="8.5" y="10.5" size="0.8" blocking="true">
+    <item template="Potion of Combat"/>
+</scenery>
+
+<!--southern route, poisonous fog-->
+<floorregion shape="rect" rect_x="32.0" rect_y="6.0" rect_w="1.0" rect_h="8.0" />
+<scenery name="Door" image_name="door_wood_n" x="32.5" y="6.05" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<scenery name="Door" image_name="door_wood_n" x="32.5" y="13.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="33.0" rect_y="10.0" rect_w="8.0" rect_h="1.0" />
+
+<!-- should be more than E_TOL_LINEAR away from adjacent floorregions, so width/height must be reduced by more than 2*E_TOL_LINEAR -->
+<scenery name="Poison Fog" image_name="fog_red" x="32.5" y="10.0" w="0.996" h="7.996" blocking="false" block_visibility="false" opacity="0.6" draw_type="floating" action_type="harm_player" action_value="1" action_delay="2000"/>
+<scenery name="Poison Fog" image_name="fog_red" x="37.0" y="10.5" w="7.996" h="0.996" blocking="false" block_visibility="false" opacity="0.6" draw_type="floating" action_type="harm_player" action_value="1" action_delay="1500"/>
+
+<!--eastern rooms, goblins-->
+    <floorregion shape="rect" rect_x="37.0" rect_y="3.5" rect_w="0.5" rect_h="1.0" />
+    <scenery name="Door" image_name="door_wood" x="37.05" y="4.0" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="37.5" rect_y="3.0" rect_w="8.5" rect_h="2.0" />
+<scenery name="Torch" image_name="torch" x="42.0" y="2.55" w="0.75" h="0.75"/>
+<floorregion shape="rect" rect_x="44.0" rect_y="5.0" rect_w="2.0" rect_h="4.0" />
+<floorregion shape="rect" rect_x="44.0" rect_y="9.0" rect_w="5.0" rect_h="4.0" />
+<npc name="Goblin" template="Goblin" x="45.0" y="10.0"/>
+<npc name="Goblin" template="Goblin" x="48.0" y="10.0"/>
+<npc name="Goblin" template="Goblin" x="48.0" y="12.0"/>
+
+<scenery name="Skeleton" image_name="skeleton" x="47.0" y="12.0" size="0.7" draw_type="background"/>
+<item name="Journal" x="46.5" y="12.2" image_name="book" icon_width="0.25" weight="1">
+The book appears to be a journal of some kind - you read some of the most recent entries:
+
+27th - I have decide to explore the dungeons of the long dead wizard, in search of the great treasure rumoured to be found in there.
+
+...
+
+28th - I have received some useful advice, from an old adventurer who once tried to explore the wizard's lair. She told me of a cursed level - every item and offering there brings nothing but misery and harm, except for two teleporters, which she claimed allowed her to travel through time. I am not sure if I believe it myself, being such an amazing claim.
+
+She also warned me of a great beast lurking in the lower levels - perhaps one created by the wizard himself, which she wonders if it was his undoing.
+
+...
+
+30th - Today I set out on my quest, confident that I will soon be rewarded for my efforts with the great riches to be found!
+</item>
+<scenery name="Rock" image_name="rock1" x="46.5" y="11.0" size="0.2" draw_type="background"/>
+
+<!--southern passage-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="14.0" rect_w="15.0" rect_h="1.0" />
+<scenery name="Torch" image_name="torch" x="28.5" y="13.55" w="0.75" h="0.75"/>
+
+<floorregion shape="rect" rect_x="20.5" rect_y="15.0" rect_w="1.0" rect_h="1.0" />
+
+<scenery name="Door" image_name="door_wood_n" x="21.0" y="15.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_1" exit_location_x="12.5" exit_location_y="2.0"/>
+
+<!--room with goblin champion-->
+
+    <floorregion shape="rect" rect_x="26.5" rect_y="13.0" rect_w="1.0" rect_h="1.0" />
+<floorregion shape="rect" rect_x="25.0" rect_y="9.0" rect_w="4.0" rect_h="4.0" />
+<scenery name="Torch" image_name="torch" x="27.0" y="8.55" w="0.75" h="0.75"/>
+<scenery name="Door" image_name="door_wood_n" x="27.0" y="13.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="27.0" y="11.0"/>
+<scenery name="Chest" image_name="chest" x="28.0" y="10.0" size="0.8" blocking="true">
+    <gold amount="25"/>
+</scenery>
+
+<!--room with chairs-->
+
+<floorregion shape="rect" rect_x="35.0" rect_y="12.5" rect_w="6.0" rect_h="5.0" />
+<scenery name="Torch" image_name="torch" x="38.0" y="12.05" w="0.75" h="0.75"/>
+<scenery name="Door" image_name="door_wood" x="35.05" y="14.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+<scenery name="Throne" image_name="throne" x="37.0" y="14.0" size="0.8" blocking="true" interact_type="INTERACT_TYPE_THRONE_FP"/>
+<scenery name="Throne" image_name="throne" x="39.0" y="14.0" size="0.8" blocking="true" interact_type="INTERACT_TYPE_THRONE_GOLD"/>
+<scenery name="Throne" image_name="throne" x="37.0" y="16.0" size="0.8" blocking="true" interact_type="INTERACT_TYPE_THRONE_M"/>
+<scenery name="Throne" image_name="throne" x="39.0" y="16.0" size="0.8" blocking="true" interact_type="INTERACT_TYPE_THRONE_H"/>
+
+</location>
+
+<location name="level_1">
+
+<floor image_name="floor_paved_blood"/>
+<wall image_name="wall_redbricks" image_x_scale="1.0"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="12.5" y="2.0"/>-->
+
+<wandering_monster template="Goblin" time="300000" rest_chance="5"/>
+
+<floorregion shape="rect" rect_x="10.0" rect_y="1.0" rect_w="5.0" rect_h="12.0"/>
+<scenery name="Door" image_name="door_wood_n" x="12.5" y="0.55" w="1.0" h="0.9" blocking="false" block_visibility="false" exit_location="entrance" exit_location_x="21.0" exit_location_y="15.0"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="4.5" rect_w="4.0" rect_h="2.0"/>
+<scenery name="Barrel" image_name="barrel" x="18.5" y="5.0" size="0.8" blocking="true">
+    <gold amount="9"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="8.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="18.0" rect_y="8.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Crate" image_name="crate" x="18.5" y="8.5" size="0.8" blocking="true">
+    <gold amount="20"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="1.0" rect_w="20.0" rect_h="1.0"/>
+<trap x="19.0" y="1.0" w="1.0" h="1.0" type="arrow"/>
+<trap x="29.0" y="1.0" w="1.0" h="1.0" type="arrow"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="12.0" rect_w="20.0" rect_h="1.0"/>
+<trap x="19.0" y="12.0" w="1.0" h="1.0" type="arrow"/>
+<floorregion shape="rect" rect_x="24.0" rect_y="11.0" rect_w="1.0" rect_h="1.0"/>
+<npc name="Goblin Champion" template="Goblin Champion" x="24.5" y="11.5"/>
+
+<!--cells-->
+
+<floorregion shape="rect" rect_x="35.0" rect_y="1.0" rect_w="5.0" rect_h="12.0" />
+
+<item template="Mushroom" x="39.5" y="1.5"/>
+<item template="Mushroom" x="39.1" y="2.3"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="2.0" rect_w="1.0" rect_h="1.0" />
+<scenery name="Door" image_name="door_metal" x="40.05" y="2.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Vespar's Cell Key" unlock_xp="10"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="4.0" rect_w="1.0" rect_h="1.0" />
+<scenery name="Door" image_name="door_metal" x="40.05" y="4.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Vespar's Cell Key" unlock_xp="10"/>
+<scenery name="Skeleton" image_name="skeleton" x="40.5" y="4.5" size="0.7" draw_type="background"/>
+<item name="Notes" x="40.6" y="4.7" image_name="book" icon_width="0.25" weight="1">
+This is a small set of papers, containing some notes. The writing is barely legible, and gets worse towards the end. You read some of the entries:
+
+I have been sentenced to five months in prison, to be served in the mage's dungeon. I managed to smuggle these scraps of paper with me, which I now use to record my ordeal. I have been locked up in this tiny cell, the only light comes from a small hole in the iron door.
+
+...
+
+I have heard terrible rumours of this place, and I don't know what fate awaits me. Every so often, I hear the most terrible screams.
+
+...
+
+Every so often, food is passed through a slot in the door. Though it barely passes as edible, I have no choice to keep off the hunger. I have had no contact with anyone. With no way to judge the time, I don't know how long I have been kept here.
+
+...
+
+Food is no longer given to me. I note that I no longer hear any noises - whether the terrible screams, or anything else. I have tried banging on the door, shouting for help, but there is no response. I do not know whether this is some form of torture, or if I have been forgotten, left to starve.
+</item>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="6.0" rect_w="1.0" rect_h="1.0" />
+<scenery name="Door" image_name="door_metal" x="40.05" y="6.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Vespar's Cell Key" unlock_xp="10"/>
+<scenery name="Blood Stain" image_name="bloodstain" x="40.5" y="6.5" w="0.7" h="0.7" opacity="0.9" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="8.0" rect_w="1.0" rect_h="1.0" />
+<scenery name="Door" image_name="door_metal" x="40.05" y="8.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Vespar's Cell Key" unlock_xp="10"/>
+
+<floorregion shape="rect" rect_x="40.0" rect_y="10.0" rect_w="1.0" rect_h="1.0" />
+<scenery name="Door" image_name="door_metal" x="40.05" y="10.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Vespar's Cell Key" unlock_xp="10"/>
+<scenery name="Skulls" image_name="skulls" x="40.5" y="10.3" size="0.3" draw_type="background"/>
+<gold amount="4" x="40.6" y="10.5"/>
+
+<!--passage next to cells-->
+
+<floorregion shape="rect" rect_x="40.0" rect_y="12.0" rect_w="10.0" rect_h="1.0"/>
+
+<!--guard room-->
+
+<floorregion shape="rect" rect_x="48.0" rect_y="10.0" rect_w="1.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="45.0" rect_y="6.0" rect_w="4.0" rect_h="4.0"/>
+
+<npc name="Orc" template="Orc" x="47.0" y="9.0">
+    <item name="Vespar's Cell Key" image_name="key" icon_width="0.5" weight="0"/>
+</npc>
+
+<scenery name="Table" image_name="table" x="46.0" y="7.0" size="1.2" blocking="true"/>
+<scenery name="Chest" image_name="chest" x="48.5" y="6.5" size="0.8" blocking="true">
+    <gold amount="27"/>
+    <item name="Prison Journal" image_name="book" icon_width="0.25" weight="1">
+This book seems to be a record of unfortunate prisoners that were kept in this terrible place. You glance at some of the entries:
+
+C21 - This prisoner has been possessed by demonic forces. Use whatever means necessary to extract the evil.
+
+...
+
+D9 - Sentenced to five months for stealing food products.
+
+...
+
+D64 - Sentenced to one year for unspecified crimes. Sentenced extended indefinitely, due to prisoner's uncooperative behaviour. We have increased the frequency and severity of torture to see if it has any effect.
+
+...
+
+F43 - Suspected of witchcraft, sent here until the prisoner confesses his crime. Approved for use of torture.
+
+    </item>
+</scenery>
+
+<!--torture chamber-->
+
+<floorregion shape="rect" rect_x="50.0" rect_y="12.0" rect_w="0.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="50.5" rect_y="11.0" rect_w="5.0" rect_h="3.0"/>
+    <scenery name="Door" image_name="door_metal" x="50.05" y="12.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Blood Stain" image_name="bloodstain2" x="53.0" y="12.2" w="0.7" h="0.7" opacity="0.9" draw_type="background"/>
+<scenery name="Skeleton" image_name="skeleton" x="51.5" y="11.4" size="0.65" draw_type="background"/>
+<scenery name="Skeleton" image_name="skeleton" x="54.0" y="13.0" size="0.75" draw_type="background"/>
+
+<scenery name="Chest" image_name="chest" x="55.0" y="11.5" size="0.8" blocking="true">
+    <item name="Torturer's Journal" image_name="book" icon_width="0.25" weight="1">
+This journal seems to be a record of grisly torture that took place in this room. You skim through, catching details of terrible tortures that were applied on the unfortunates here. Everything is written in a methodical manner, with seemingly no sympathy for the victims. You quickly shut the book in horror.
+    </item>
+</scenery>
+
+<scenery name="Skulls" image_name="skulls" x="53.5" y="11.5" size="0.3" draw_type="background"/>
+<scenery name="Bones" image_name="bones" x="51.0" y="13.5" size="0.5" draw_type="background"/>
+
+<!--exit to next location-->
+
+<floorregion shape="rect" rect_x="48.0" rect_y="13.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Door" image_name="door_wood_n" x="48.5" y="13.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_2" exit_location_x="12.5" exit_location_y="2.0"/>
+
+</location>
+
+<location name="level_2">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="12.5" y="2.0"/>-->
+
+<wandering_monster template="Goblin" time="180000" rest_chance="10"/>
+
+<floorregion shape="rect" rect_x="5.0" rect_y="1.0" rect_w="15.0" rect_h="2.0"/>
+<scenery name="Door" image_name="door_wood_n" x="12.5" y="0.55" w="1.0" h="0.9" blocking="false" block_visibility="false" exit_location="level_1" exit_location_x="48.5" exit_location_y="13.0"/>
+
+<!--north west room-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Torch" image_name="torch" x="1.0" y="0.55" w="0.75" h="0.75"/>
+
+<npc name="Orc Archer" template="Orc" x="1.0" y="3.0">
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+</npc>
+<npc name="Goblin" template="Goblin" x="2.0" y="3.0"/>
+
+<scenery name="Crate" image_name="crate" x="4.5" y="5.5" size="0.8" blocking="true">
+    <gold amount="11"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="6.0" rect_w="2.0" rect_h="10.0"/>
+
+<!--north east room-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="1.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Torch" image_name="torch" x="24.0" y="0.55" w="0.75" h="0.75"/>
+
+<floorregion shape="rect" rect_x="24.0" rect_y="6.0" rect_w="1.0" rect_h="10.0"/>
+
+<!--south west room-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="16.0" rect_w="5.0" rect_h="5.0"/>
+
+<npc name="Orc Archer" template="Orc" x="1.0" y="20.0">
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<!--south east room-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="16.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Rock" image_name="rock1" x="23.0" y="17.5" size="0.2" draw_type="background"/>
+
+<npc name="Goblin" template="Goblin" x="21.0" y="20.0"/>
+<npc name="Goblin Champion" template="Goblin Champion" x="23.0" y="20.0"/>
+<npc name="Goblin Mage" template="Goblin Mage" x="20.5" y="17.0">
+    <spell name="Fire bolt" count="6"/>
+    <spell name="Heal" count="1"/>
+</npc>
+
+<scenery name="Chest" image_name="chest" x="24.5" y="20.5" size="0.8" blocking="true">
+    <weapon name="Magic Dagger" image_name="dagger" weight="5"
+        damageX="1" damageY="6" damageZ="1"
+        bonus_FP="-1"
+        animation_name="dagger"
+        magical="true"
+        base_template="Dagger" worth_bonus="200"
+        />
+</scenery>
+
+<!--south passage-->
+
+<floorregion shape="rect" rect_x="5.0" rect_y="19.0" rect_w="15.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="12.0" rect_y="21.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Door" image_name="door_wood_n" x="12.5" y="21.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_3" exit_location_x="12.5" exit_location_y="2.0"/>
+
+</location>
+
+<location name="level_3">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="12.5" y="2.0"/>-->
+
+<wandering_monster template="Wyvern" time="300000" rest_chance="10"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="1.0" rect_w="3.0" rect_h="6.0"/>
+<scenery name="Door" image_name="door_wood_n" x="12.5" y="0.55" w="1.0" h="0.9" blocking="false" block_visibility="false" exit_location="level_2" exit_location_x="12.5" exit_location_y="20.0"/>
+
+<scenery name="Shrine" image_name="shrine" x="12.5" y="5.0" size="1.0" blocking="true" interact_type="INTERACT_TYPE_SHRINE"/>
+
+<!--study-->
+
+<floorregion shape="rect" rect_x="6.0" rect_y="6.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="6.0" rect_y="7.0" rect_w="1.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="5.0" rect_y="12.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Painting" image_name="painting_gate" big_image_name="gfx/scenes/painting_gate.jpg" x="7.75" y="11.5" w="0.768" h="0.54">
+This painting is titled, "The Gate in the Forest".
+</scenery>
+
+<scenery name="Torch" image_name="torch" x="8.5" y="11.55" w="0.75" h="0.75"/>
+
+<scenery name="Carpet" image_name="carpet" x="6.5" y="14.0" w="1.0" h="1.5" draw_type="background"/>
+<scenery name="Table" image_name="table" x="8.5" y="15.5" size="0.8" blocking="true"/>
+<scenery name="Cabinet" image_name="cabinet" x="5.5" y="12.5" size="0.8" blocking="true"
+    locked="true"/>
+<scenery name="Chest" image_name="chest" x="5.5" y="15.5" size="0.8" blocking="true"
+    locked="true"/>
+
+<npc name="Calbert" animation_name="man" static_image="true" x="6.5" y="14.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="WANT_OBJECT"
+    interaction_data="Necromancy for Beginners"
+    interaction_xp="50"
+    interaction_journal="I found a book on necromancy for Calbert, allowing him to complete his work."
+>
+<opening_initial>My goodness, how wonderful to have a visitor! It has been a long time since I have had any kind of company down here.
+</opening_initial>
+<opening_later>Hello again?
+</opening_later>
+<opening_interaction_complete>
+Thank you once again for helping me. Once I have finished researching from this book that you found for me, I will finally be able to leave this place.
+</opening_interaction_complete>
+<talk question="Who are you?">
+I am Calbert, a scholar, employed by the great wizard Vespar to help in his research here.
+</talk>
+<talk question="Don't you know Vespar is long dead? It's been one hundred years...">
+No, surely not ... that is terrible news if he has died, admittedly I haven't seen him in a while. But one hundred years? It's been a while, but surely not more than a few months...
+</talk>
+<talk question="Why are you still here?" while_not_done="true" journal="I met Calbert, who has been trapped in his room by a spell, until he completes his work. He is after some information on necromancy.">
+The wizard had set me a research task, but grew impatient at my lack of progress - he cast a spell trapping me in this room, to remain until I had completed my task. Unfortuately the answers do not lie in these books, and I am now unable to leave. Perhaps you could help me? All I need is some information on necromancy, maybe there is some resource of the subject matter you are able to bring me...
+</talk>
+<talk question="I have a book that may help you" objective="true">
+Ah, thank you! Yes that looks like it will be of most help to me.
+</talk>
+</npc>
+
+<!--east passage-->
+
+<floorregion shape="rect" rect_x="14.0" rect_y="6.0" rect_w="5.0" rect_h="1.0"/>
+
+<!--west-->
+<floorregion shape="rect" rect_x="18.0" rect_y="7.0" rect_w="1.0" rect_h="13.0"/>
+
+<!--south-->
+<floorregion shape="rect" rect_x="19.0" rect_y="19.0" rect_w="18.0" rect_h="1.0"/>
+
+<!--east-->
+<floorregion shape="rect" rect_x="37.0" rect_y="7.0" rect_w="1.0" rect_h="13.0"/>
+
+<!--north-->
+<floorregion shape="rect" rect_x="19.0" rect_y="7.0" rect_w="18.0" rect_h="1.0"/>
+<npc name="Orc" template="Orc" x="26.5" y="7.5"/>
+
+<!--rooms-->
+
+<!--bedroom-->
+    <floorregion shape="rect" rect_x="19.0" rect_y="10.5" rect_w="0.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="19.5" rect_y="9.5" rect_w="4.0" rect_h="3.0"/>
+<scenery name="Bed" image_name="bed" x="22.5" y="10.5" size="1.2" blocking="true"/>
+<scenery name="Cabinet" image_name="cabinet" x="20.0" y="10.0" size="0.8" blocking="true">
+    <gold amount="43"/>
+    <item template="Gold Ring"/>
+</scenery>
+
+<scenery name="Torch" image_name="torch" x="23.0" y="9.05" w="0.75" h="0.75"/>
+
+<scenery name="Painting" image_name="painting_fortress" big_image_name="gfx/scenes/painting_fortress.jpg" x="21.5" y="9.0" w="0.512" h="0.36">
+This painting is titled, "The Fortress".
+</scenery>
+
+<!--<player_start x="21.5" y="11.5"/>-->
+
+<!--room behind mirror door-->
+<scenery name="Door" image_name="door_mirror" x="23.5" y="11.5" w="0.2" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Hand Mirror" locked_silent="true" locked_text="none" unlock_text="The mirror shatters before you!"
+    />
+
+    <floorregion shape="rect" rect_x="23.5" rect_y="11.0" rect_w="0.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="24.0" rect_y="9.5" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Chest" image_name="chest" x="24.5" y="10.0" size="0.8" blocking="true">
+    <weapon name="Magic Short Sword" image_name="longsword" weight="10"
+        damageX="2" damageY="6" damageZ="1"
+        animation_name="longsword"
+        magical="true"
+        base_template="Short Sword" worth_bonus="200"
+        />
+    <ring name="Ring of Bravery" image_name="ring_gold" weight="0" magical="true" bonus_B="1"
+        base_template="Gold Ring" worth_bonus="150"
+        />
+    <item template="Red Gem"/>
+    <gold amount="16"/>
+</scenery>
+
+<!--room-->
+
+    <floorregion shape="rect" rect_x="19.0" rect_y="15.5" rect_w="0.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="19.5" rect_y="14.0" rect_w="4.0" rect_h="3.5"/>
+<scenery name="Barrel" image_name="barrel" x="23.0" y="17.0" size="0.8" blocking="true">
+    <gold amount="3"/>
+</scenery>
+
+<!--armoury-->
+    <floorregion shape="rect" rect_x="26.0" rect_y="17.5" rect_w="1.0" rect_h="1.5"/>
+<floorregion shape="rect" rect_x="24.0" rect_y="14.0" rect_w="5.0" rect_h="3.5"/>
+<scenery name="Crate" image_name="crate" x="28.5" y="17.0" size="0.8" blocking="true">
+    <item template="Long Sword"/>
+    <item template="Short Sword"/>
+    <item template="Short Sword"/>
+    <item template="Dagger"/>
+    <item template="Dagger"/>
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+    <item template="Sling"/>
+    <item template="Bullets"/>
+    <weapon name="Short Sword +1" image_name="longsword" weight="10"
+        damageX="2" damageY="6" damageZ="1"
+        bonus_FP="1"
+        animation_name="longsword"
+        base_template="Short Sword" worth_bonus="100"
+        />
+</scenery>
+<item template="Leather Armour" x="28.5" y="14.5"/>
+<npc name="Orc" template="Orc" x="26.0" y="14.5">
+    <item template="Leather Armour"/>
+</npc>
+
+<!--garden-->
+<floorregion shape="rect" rect_x="35.5" rect_y="8.0" rect_w="1.0" rect_h="7.0"/>
+<trap x="35.5" y="8.0" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<trap x="35.5" y="10.0" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<trap x="35.5" y="12.0" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+
+<floorregion shape="rect" rect_x="29.5" rect_y="15.0" rect_w="7.0" rect_h="2.5"/>
+<npc name="Wyvern" template="Wyvern" x="30.5" y="16.0"/>
+<npc name="Wyvern" template="Wyvern" x="33.5" y="17.0"/>
+
+<!--<player_start x="33.0" y="17.0"/>-->
+
+<scenery name="Tree" image_name="tree2" x="30.0" y="17.0" size="1.0"/>
+
+<scenery name="Tree" image_name="tree2" x="36.0" y="17.0" size="1.0"/>
+
+<scenery name="Plant" image_name="plant" x="29.75" y="15.25" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="32.0" y="17.25" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="34.0" y="16.5" size="0.5" draw_type="background"/>
+
+<item template="Wyvern Egg" x="32.25" y="17.25"/>
+
+<item template="Wyvern Egg" x="33.75" y="16.75"/>
+
+<item template="Mushroom" x="30.25" y="15.1"/>
+
+<item template="Mushroom" x="33.9" y="16.1"/>
+
+<item template="Mushroom" x="31.1" y="17.1"/>
+
+<item name="Hand Mirror" image_name="hand_mirror" icon_width="0.25" weight="2" x="30.2" y="17.0"/>
+
+<!--library-->
+    <floorregion shape="rect" rect_x="31.0" rect_y="14.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="29.5" rect_y="10.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Cabinet" image_name="cabinet" x="30.0" y="10.5" size="0.8" blocking="true">
+    <item name="Necromancy for Beginners" image_name="book" icon_width="0.25" weight="2">
+This old and heavy tome describes the black arts of Necromancy. Early chapters talk of death, and give background information on the different spirit planes. Later chapters discuss necromantic magic, from spells that cure and cause disease, to magic for reanimating the dead.
+    </item>
+</scenery>
+
+<!--<player_start x="40.0" y="8.5"/>-->
+
+<!--shadow room-->
+<floorregion shape="rect" rect_x="38.0" rect_y="8.0" rect_w="8.0" rect_h="1.0"/>
+
+<!--<ammo name="Magical Arrows" ammo_type="Arrows" image_name="arrow" projectile_image_name="arrow" weight="1"
+    x="38.5" y="8.5"
+    magical="true"
+    amount="20"/>-->
+
+<npc name="Shadow" template="Shadow" x="45.0" y="8.5"/>
+
+    <scenery name="Door" image_name="door_wood" x="45.95" y="8.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<floorregion shape="rect" rect_x="46.0" rect_y="7.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Chest" image_name="chest" x="49.5" y="10.5" size="0.8" blocking="true">
+    <item template="Potion of Speed"/>
+    <item template="Blue Gem"/>
+</scenery>
+
+<!--exit-->
+
+<floorregion shape="rect" rect_x="38.0" rect_y="15.0" rect_w="8.0" rect_h="1.0"/>
+<scenery name="Door" image_name="door_wood" x="45.95" y="15.5" w="0.1" h="1.0" blocking="true" block_visibility="true" exit_location="level_4_1" exit_location_x="1.0" exit_location_y="1.5"/>
+
+</location>
+
+<location name="level_4_1">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<!--<player_start x="1.0" y="1.5"/>-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="1.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+<scenery name="Door" image_name="door_wood" x="0.05" y="1.5" w="0.1" h="1.0" blocking="true" block_visibility="true" exit_location="level_3" exit_location_x="45.0" exit_location_y="15.5"/>
+
+<scenery name="Teleport" image_name="teleport" x="5.5" y="0.5" size="1.0" blocking="true" exit_location="level_4_2" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="5.5" y="2.5" size="1.0" blocking="true" exit_location="level_4_3" exit_location_x="2.5" exit_location_y="1.5"/>
+
+</location>
+
+<location name="level_4_2">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="4.5" y="0.5" size="1.0" blocking="true" exit_location="level_4_4" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="4.5" y="2.5" size="1.0" blocking="true" exit_location="level_4_5" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<npc name="Goblin" template="Goblin" x="1.0" y="2.5"/>
+<npc name="Goblin" template="Goblin" x="4.0" y="2.5"/>
+
+</location>
+
+<location name="level_4_3">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="4.5" y="0.5" size="1.0" blocking="true" exit_location="level_4_6" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="4.5" y="2.5" size="1.0" blocking="true" exit_location="level_4_7" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<npc name="Orc" template="Orc" x="4.0" y="2.0"/>
+
+</location>
+
+<location name="level_4_4">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="0.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_3" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="4.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_1" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<scenery name="Crate" image_name="crate" x="4.5" y="2.5" size="0.8" blocking="true">
+    <gold amount="21"/>
+</scenery>
+
+</location>
+
+<location name="level_4_5">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="0.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_4" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="4.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_8" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<npc name="Orc" template="Orc" x="0.5" y="0.5"/>
+<npc name="Orc Archer" template="Orc" x="4.5" y="0.5">
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+</npc>
+
+</location>
+
+<location name="level_4_6">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="0.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_8" exit_location_x="2.5" exit_location_y="1.5"/>
+<scenery name="Teleport" image_name="teleport" x="4.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_5" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<npc name="Orc" template="Orc" x="0.5" y="3.5"/>
+<npc name="Goblin" template="Goblin" x="4.5" y="3.5"/>
+
+</location>
+
+<location name="level_4_7">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+
+<scenery name="Teleport" image_name="teleport" x="4.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_3" exit_location_x="2.5" exit_location_y="1.5"/>
+
+<npc name="Orc" template="Orc" x="0.5" y="1.5"/>
+
+</location>
+
+<location name="level_4_8">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="3.0"/>
+<floorregion shape="rect" rect_x="5.0" rect_y="1.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Door" image_name="door_wood" x="5.95" y="1.5" w="0.1" h="1.0" blocking="true" block_visibility="true" exit_location="level_5" exit_location_x="1.0" exit_location_y="5.5"/>
+
+<scenery name="Teleport" image_name="teleport" x="0.5" y="1.5" size="1.0" blocking="true" exit_location="level_4_1" exit_location_x="2.5" exit_location_y="1.5"/>
+
+</location>
+
+<location name="level_5">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<wandering_monster template="Goblin" time="120000" rest_chance="15"/>
+
+<!--<player_start x="1.0" y="5.5"/>-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="5.0" rect_w="5.0" rect_h="1.0"/>
+<scenery name="Door" image_name="door_wood" x="0.05" y="5.5" w="0.1" h="1.0" blocking="true" block_visibility="true" exit_location="level_4_8" exit_location_x="5.0" exit_location_y="1.5"/>
+
+<scenery name="Torch" image_name="torch" x="2.5" y="4.55" w="0.75" h="0.75"/>
+
+<item name="Smelly Mushroom" image_name="mushroom" icon_width="0.25" weight="0"
+    rating="2" use="ITEMUSE_HARM" use_verb="Eat" x="3.0" y="5.5"/>
+
+<floorregion shape="rect" rect_x="5.0" rect_y="5.0" rect_w="6.0" rect_h="6.0"/>
+
+<scenery name="Bell" image_name="church_bell" x="8.0" y="8.0" size="1.0" blocking="true" interact_type="INTERACT_TYPE_BELL"/>
+
+<!--zombie route-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="10.0" y="5.0" />
+    <floorregion_point x="11.0" y="5.0" />
+    <floorregion_point x="15.0" y="1.0" />
+    <floorregion_point x="15.0" y="0.0" />
+</floorregion>
+
+<trap x="12.0" y="3.0" w="1.0" h="1.0" type="darts" rating="1"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="0.0" rect_w="3.0" rect_h="2.0"/>
+
+<scenery name="Chest" image_name="chest" x="17.5" y="1.5" size="0.8" blocking="true">
+<item name="Unknown Potion" image_name="potion_green" weight="1"
+    rating="4" magical="true" use="ITEMUSE_HARM" use_verb="Drink">
+This is a vial of some murky green liquid, though you are unsure of its effect.
+</item>
+</scenery>
+
+    <floorregion shape="rect" rect_x="18.0" rect_y="0.5" rect_w="0.5" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood" x="18.45" y="1.0" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="18.5" rect_y="0.0" rect_w="3.0" rect_h="2.0"/>
+
+<scenery name="Table" image_name="table" x="21.0" y="0.5" size="0.8" blocking="true"/>
+
+<npc name="Zombie" template="Zombie" x="21.0" y="1.5"/>
+
+    <floorregion shape="rect" rect_x="16.0" rect_y="2.0" rect_w="1.0" rect_h="1.5"/>
+    <scenery name="Door" image_name="door_wood_n" x="16.5" y="3.45" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="15.0" rect_y="3.5" rect_w="3.0" rect_h="2.0"/>
+
+<scenery name="Cabinet" image_name="cabinet" x="15.5" y="4.0" size="0.8" blocking="true">
+    <item name="Book" image_name="book" icon_width="0.25" weight="1">
+This is a heavy book, a journal full of written notes, that talks about experiments, claiming to find an alternative to magical means for raising the dead. You skim to the later pages, and find records of experiments. They refer to unfortunate subjects - prisoners who were sent here for various petty or dubious crimes - placed in chambers, with the aim of not permanently killing them, but to reanimate them as creatures of undead. From the descriptions and illustrations, you recognise these creatures as zombies. It is believed that such beings can be created from the dead with powerful magic from necromancers, though it seems that the wizard was experimenting with a more mechanical means to manufacture such monsters, for who knows what purpose.
+    </item>
+</scenery>
+
+<!--trapdoor route-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="5.0" y="11.0"/>
+    <floorregion_point x="5.0" y="10.0"/>
+    <floorregion_point x="0.0" y="15.0"/>
+    <floorregion_point x="1.0" y="15.0"/>
+</floorregion>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="15.0" rect_w="1.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="17.0" rect_w="3.0" rect_h="3.0"/>
+
+<scenery name="Barrel" image_name="barrel" x="0.5" y="19.5" size="0.8" blocking="true">
+    <trap type="acid" rating="4"/>
+</scenery>
+
+<!--<player_start x="1.5" y="17.5"/>-->
+
+<scenery name="Trapdoor" image_name="grate" x="1.5" y="18.5" w="0.5" h="0.5" exit_location="level_6" exit_location_x="1.0" exit_location_y="1.0" confirm_text="There is a trapdoor in this room. Do you want to drop down into the room below?" draw_type="background"/>
+
+<!--chess route-->
+
+<floorregion shape="rect" rect_x="11.0" rect_y="10.0" rect_w="3.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_white" x="11.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="12.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="13.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+
+<item template="Chess Piece (Knight)" x="11.5" y="10.5"/>
+
+<floorregion shape="rect" rect_x="13.0" rect_y="11.0" rect_w="3.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_black" x="13.5" y="11.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="14.5" y="11.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="15.5" y="11.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="13.0" rect_y="12.0" rect_w="1.0" rect_h="3.0"/>
+<scenery name="Tile" image_name="tile_white" x="13.5" y="12.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="13.5" y="13.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="13.5" y="14.5" w="1.0" h="1.0" draw_type="background"/>
+<trap x="13.0" y="14.0" w="1.0" h="1.0" type="death"/>
+<floorregion shape="rect" rect_x="14.0" rect_y="14.0" rect_w="2.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_black" x="14.5" y="14.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="15.5" y="14.5" w="1.0" h="1.0" draw_type="background"/>
+<trap x="14.0" y="14.0" w="1.0" h="1.0" type="death"/>
+<floorregion shape="rect" rect_x="15.0" rect_y="13.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_black" x="15.5" y="13.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="3.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_white" x="15.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="16.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="17.5" y="10.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="17.0" rect_y="11.0" rect_w="1.0" rect_h="2.0"/>
+<scenery name="Tile" image_name="tile_black" x="17.5" y="11.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="17.5" y="12.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="13.0" rect_w="3.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_white" x="16.5" y="13.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="17.5" y="13.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="18.5" y="13.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="18.0" rect_y="14.0" rect_w="1.0" rect_h="3.0"/>
+<scenery name="Tile" image_name="tile_black" x="18.5" y="14.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="18.5" y="15.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="18.5" y="16.5" w="1.0" h="1.0" draw_type="background"/>
+<trap x="18.0" y="16.0" w="1.0" h="1.0" type="death"/>
+<gold amount="100" x="18.5" y="16.5"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="15.0" rect_w="2.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_white" x="16.5" y="15.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_black" x="17.5" y="15.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="16.0" rect_w="1.0" rect_h="2.0"/>
+<scenery name="Tile" image_name="tile_black" x="16.5" y="16.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="16.5" y="17.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="14.0" rect_y="16.0" rect_w="2.0" rect_h="1.0"/>
+<trap x="15.0" y="16.0" w="1.0" h="1.0" type="death"/>
+<scenery name="Tile" image_name="tile_black" x="14.5" y="16.5" w="1.0" h="1.0" draw_type="background"/>
+<scenery name="Tile" image_name="tile_white" x="15.5" y="16.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="14.0" rect_y="17.0" rect_w="1.0" rect_h="1.0"/>
+<scenery name="Tile" image_name="tile_white" x="14.5" y="17.5" w="1.0" h="1.0" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="14.0" rect_y="18.0" rect_w="1.0" rect_h="1.0"/>
+
+<!--exit of chessboard-->
+<floorregion shape="rect" rect_x="16.0" rect_y="18.0" rect_w="4.0" rect_h="1.0"/>
+
+<!--<player_start x="22.5" y="18.5"/>-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="18.0" rect_w="5.0" rect_h="5.0"/>
+<trap x="20.0" y="18.0" w="1.0" h="1.0" type="gas" rating="4"/>
+
+<scenery name="Painting" image_name="painting_sword" big_image_name="gfx/scenes/painting_sword.jpg" x="22.0" y="17.55" w="0.3" h="0.6" interact_type="INTERACT_TYPE_PAINTING_SHATTER"/>
+
+<npc name="Shadow" template="Shadow" x="22.5" y="20.5"/>
+
+    <floorregion shape="rect" rect_x="25.0" rect_y="18.0" rect_w="0.5" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood" x="25.45" y="18.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="25.5" rect_y="18.0" rect_w="3.0" rect_h="2.0"/>
+
+<npc name="Goblin" x="28.0" y="18.5"
+    template="Goblin"
+    is_hostile="false"
+    can_talk="true"
+>
+<opening_initial>Grk! Ug crakkle, spat.
+</opening_initial>
+<opening_later>Grk?
+</opening_later>
+<talk question="Prepare to die, you evil creature!" action="SET_HOSTILE">
+Gakk!
+</talk>
+</npc>
+
+<floorregion shape="rect" rect_x="24.0" rect_y="10.0" rect_w="1.0" rect_h="8.0"/>
+<trap x="24.0" y="16.0" w="1.0" h="1.0" type="acid"/>
+
+    <scenery name="Door" image_name="door_wood_n" x="24.5" y="10.05" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="22.0" rect_y="5.0" rect_w="5.0" rect_h="5.0"/>
+
+<npc name="Orc" template="Orc" x="23.0" y="7.0"/>
+
+    <floorregion shape="rect" rect_x="27.0" rect_y="7.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="28.0" rect_y="5.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Experimental Chamber" image_name="experimental_chamber" x="28.7" y="5.6" size="0.75" blocking="true" interact_type="INTERACT_TYPE_EXPERIMENTAL_CHAMBER_EMPTY"/>
+
+<scenery name="Experimental Chamber" image_name="experimental_chamber" x="30.2" y="5.6" size="0.75" blocking="true" interact_type="INTERACT_TYPE_EXPERIMENTAL_CHAMBER_EMPTY"/>
+
+<scenery name="Experimental Chamber" image_name="experimental_chamber" x="31.7" y="5.6" size="0.75" blocking="true" interact_type="INTERACT_TYPE_EXPERIMENTAL_CHAMBER"/>
+
+<scenery name="Blood Stain" image_name="bloodstain" x="28.9" y="9.2" w="0.7" h="0.7" opacity="0.9" draw_type="background"/>
+
+<npc name="Zombie" template="Zombie" x="31.0" y="9.0"/>
+
+<!--<player_start x="29.0" y="9.0"/>-->
+
+<scenery name="Table" image_name="table" x="32.0" y="9.0" size="1.2" blocking="true">
+</scenery>
+<!--    <item name="Book" image_name="book" icon_width="0.25" weight="1">
+Experiments.
+    </item>-->
+
+<floorregion shape="rect" rect_x="25.0" rect_y="22.0" rect_w="11.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="23.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="27.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="23.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="35.0" rect_y="27.0" rect_w="5.0" rect_h="5.0"/>
+
+<scenery name="Stairs" image_name="stairsdown_indoors" x="37.5" y="29.5" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="level_6" exit_location_x="38.5" exit_location_y="14.0"/>
+
+<scenery name="Skulls" image_name="skulls" x="39.5" y="27.5" size="0.3" draw_type="background"/>
+
+<!--time travel portals-->
+
+<!--<player_start x="20.5" y="25.0"/>-->
+
+<floorregion shape="rect" rect_x="20.0" rect_y="23.0" rect_w="1.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="17.0" rect_y="28.0" rect_w="7.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="12.0" rect_y="28.0" rect_w="5.0" rect_h="4.0"/>
+<scenery name="Teleport" image_name="teleport" x="12.5" y="30.0" size="1.0" blocking="true" exit_location="level_past" exit_location_x="25.0" exit_location_y="24.0"/>
+
+<floorregion shape="rect" rect_x="24.0" rect_y="28.0" rect_w="5.0" rect_h="4.0"/>
+<scenery name="Teleport" image_name="teleport" x="28.5" y="30.0" size="1.0" blocking="true" exit_location="level_future" exit_location_x="22.5" exit_location_y="20.5"/>
+<scenery name="Cabinet" image_name="cabinet" x="28.5" y="28.5" size="0.8" blocking="true">
+    <item name="Vespar's Journal" image_name="book" icon_width="0.25" weight="1">
+"I have discovered an amazing secret!" begins this journal. It details, in an excited tone, the discovery that use of magical teleporters, with appropriate modifications, can be used to send the traveller not just through space, but through time.
+
+The journal claims that each of the nearby teleporters is linked to a different point in time, one to six hundred years in the past, the other to six hundred years in the future.
+    </item>
+</scenery>
+
+</location>
+
+<location name="level_past" lighting_min="160" geo_type="outdoors">
+
+<floor image_name="grass"/>
+<wall image_name="wall"/>
+<background image_name="background_green"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="30.0" rect_h="40.0"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="0.0" rect_w="8.0" rect_h="10.0"/>
+
+<!--<player_start x="25.0" y="24.0"/>-->
+<!--<player_start x="30.0" y="26.0"/>-->
+
+<!--<item name="Missing Teleporter Piece" image_name="clockwork" icon_width="0.5" weight="50" x="25.0" y="23.0">
+A complex piece of machinery. You wonder if this is the essential piece missing from the teleporter...
+</item>-->
+
+<tilemap imagemap="dirt_extended" tile_width="32" tile_height="32" x="22.5" y="17.5">
+ 68
+ 9b
+ 9b
+ 9b
+65477778
+cddddd2b
+      9b
+      9b
+      9b
+      9b
+      9b
+ 677775b
+ 91dddde
+ 9b
+ 9b
+ 9b
+ 9b+
+ 9b
+ 9b
+ 9b
+ 9b
+ ce
+</tilemap>
+
+<scenery name="Teleport" image_name="teleport" x="25.0" y="26.0" size="2.0" blocking="true" exit_location="level_5" exit_location_x="14.0" exit_location_y="30.0"
+    locked="true" unlocked_by_template="Missing Teleporter Piece" locked_silent="true" locked_text="The teleporter does not seem to function!" locked_used_up="true"/>
+
+<scenery name="Fire" image_name="fire" x="27.0" y="26.0" size="1.0" blocking="true" has_smoke="true"/>
+
+<scenery name="Big Boulder" image_name="bigboulder" x="21.5" y="24.0" size="1.0" blocking="true"/>
+
+<scenery name="Big Boulder" image_name="bigboulder" x="21.5" y="28.0" size="1.0" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="25.9" y="36.0" size="0.58" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders2" x="21.1" y="21.0" size="0.58" blocking="true"/>
+
+<scenery name="Boulders" image_name="boulders" x="22.8" y="42.3" size="0.58" blocking="true"/>
+
+<scenery name="Armourer" image_name="building" x="25.0" y="16.5" size="4.0" blocking="true" block_visibility="true" exit_location="Armourer" exit_location_x="2.0" exit_location_y="3.0" has_smoke="true" smoke_x="0.337" smoke_y="0.0147"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="32.0" y="23.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="General Stores" image_name="hut" x="35.0" y="27.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" exit_location="General Stores" exit_location_x="1.0" exit_location_y="2.5"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="35.0" y="31.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" exit_location="peasant_hut" exit_location_x="1.0" exit_location_y="2.5"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="29.0" y="37.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="34.0" y="36.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Peasant's Hut" image_name="hut" x="38.0" y="35.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.589" blocking="true" block_visibility="true" locked="true"/>
+
+<scenery name="Mage's Tent" image_name="tent" x="20.0" y="43.0" size="2.5" boundary_iso="true" boundary_iso_ratio="0.495" blocking="true" block_visibility="true" exit_location="mage_tent" exit_location_x="1.0" exit_location_y="1.5"/>
+
+<scenery name="Stairs" image_name="stairsdown_outdoors" x="17.0" y="1.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="cave" exit_location_x="6.3" exit_location_y="30.2"/>
+
+<scenery name="Tree" image_name="tree2" x="20.0" y="30.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="27.0" y="33.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="30.0" y="15.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="22.5" y="32.0" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="18.0" y="27.6" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="30.9" y="19.8" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="20.6" y="34.9" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="23.3" y="37.5" size="3.0"/>
+
+<scenery name="Tree" image_name="tree2" x="22.7" y="40.1" size="3.0"/>
+
+<scenery name="Tree" image_name="tree3" x="18.4" y="40.8" size="3.0"/>
+
+<scenery name="Grass" image_name="grass" x="36.5" y="28.7" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="20.5" y="31.8" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="25.0" y="34.2" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="31.4" y="36.7" size="1.0" draw_type="background"/>
+
+<scenery name="Grass" image_name="grass" x="38.5" y="31.4" size="1.0" draw_type="background"/>
+
+<npc name="Peasant" animation_name="peasant_man" static_image="true" x="22.5" y="24.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>How amazing to once again have visitors through the gate! I hope you are not like those who travelled here before...
+</opening_initial>
+<opening_later>Hello again?
+</opening_later>
+<talk question="There have been earlier visitors through the 'gate'?">
+Yes, and still they remain. I was just a child when it happened, almost forty years ago. Evil creatures of the like that we have never seen before. They burned down our homes and took what little wealth we had, before forcing us to build them a lair. Now they come back to the village once a year, to take captives - who knows for what dreadful purpose.
+</talk>
+<talk question="Where are these visitors?">
+If you really want to go there, they live in a dug out cave to the north. Though I do not recommend it.
+</talk>
+<talk question="How can I get back through the gate?">
+I don't know that. We know of nothing of how such powerful magic works - just that there seems to be no way to use it.
+</talk>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="30.0" y="29.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello.
+</opening_initial>
+<opening_later>Hello.
+</opening_later>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="24.0" y="35.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello.
+</opening_initial>
+<opening_later>Hello.
+</opening_later>
+</npc>
+
+</location>
+
+<location name="Armourer" display_name="true">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="5.0"/>
+<floorregion shape="rect" rect_x="3.0" rect_y="0.0" rect_w="2.0" rect_h="4.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="2.5" y="4.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_past" exit_location_x="25.0" exit_location_y="19.0"/>
+
+<scenery name="Table" image_name="table" x="4.5" y="1.0" size="0.8" blocking="true"/>
+
+<npc name="Shopkeeper" animation_name="man" static_image="true" x="2.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Armourer"/>
+
+<scenery name="Fire" image_name="fire" x="0.5" y="2.5" size="1.0" blocking="true" has_smoke="true"/>
+
+</location>
+
+<location name="General Stores" display_name="true">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="3.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Torch" image_name="torch" x="1.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="3.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_past" exit_location_x="34.0" exit_location_y="28.75"/>
+
+<npc name="Shopkeeper" animation_name="peasant_woman" static_image="true" x="2.5" y="2.2"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="General Stores"/>
+
+</location>
+
+<location name="peasant_hut">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="1.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="3.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Torch" image_name="torch" x="2.0" y="0.55" w="0.75" h="0.75"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="3.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_past" exit_location_x="34.0" exit_location_y="32.75"/>
+
+<npc name="Peasant" animation_name="peasant_man" static_image="true" x="2.5" y="2.2"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Hello.
+</opening_initial>
+<opening_later>Hello.
+</opening_later>
+</npc>
+
+</location>
+
+<location name="mage_tent">
+
+<floor image_name="floor_dirt"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="3.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="0.5" rect_y="2.0" rect_w="1.0" rect_h="1.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="1.0" y="2.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" exit_location="level_past" exit_location_x="19.0" exit_location_y="44.75"/>
+
+<npc name="Shopkeeper" animation_name="man" static_image="true" x="2.5" y="1.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    shop="Magic Shop"/>
+
+</location>
+
+<location name="cave">
+
+<floor image_name="floor_rock"/>
+<wall image_name="wall_rock" image_x_scale="1.0"/>
+<background image_name="background_brown"/>
+
+<wandering_monster template="Goblin Champion" time="120000" rest_chance="15"/>
+
+<floorregion shape="polygon">
+    <floorregion_point x="3.0" y="31.0" />
+    <floorregion_point x="7.0" y="31.0" />
+    <floorregion_point x="8.0" y="30.0" />
+    <floorregion_point x="6.0" y="26.0" />
+    <floorregion_point x="4.0" y="26.0" />
+    <floorregion_point x="2.0" y="30.0" />
+</floorregion>
+
+<!--<player_start x="6.3" y="30.2"/>-->
+<!--<player_start x="16.0" y="23.0"/>-->
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="5.0" y="29.5" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="level_past" exit_location_x="19.0" exit_location_y="1.0"/>
+
+<scenery name="Bones" image_name="bones" x="5.5" y="27.5" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="3.25" y="28.5" size="0.5" draw_type="background"/>
+
+<floorregion shape="polygon">
+    <floorregion_point x="5.0" y="16.0" />
+    <floorregion_point x="4.0" y="17.0" />
+    <floorregion_point x="4.0" y="26.0" />
+    <floorregion_point x="6.0" y="26.0" />
+    <floorregion_point x="6.0" y="16.0" />
+</floorregion>
+
+<npc name="Orc" template="Orc" x="4.5" y="17.0"/>
+<npc name="Orc Archer" template="Orc" x="5.5" y="17.5">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+</npc>
+
+<floorregion shape="rect" rect_x="6.0" rect_y="16.0" rect_w="5.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="10.0" rect_y="12.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="16.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="22.0" rect_w="4.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="22.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Crate" image_name="crate" x="15.5" y="25.5" size="0.8" blocking="true">
+    <gold amount="25"/>
+</scenery>
+
+<scenery name="Campfire" image_name="campfire" x="17.0" y="24.0" size="0.8" blocking="true"/>
+<scenery name="Bones" image_name="bones" x="18.5" y="23.5" size="0.5" draw_type="background"/>
+
+<floorregion shape="polygon">
+    <floorregion_point x="19.0" y="25.0" />
+    <floorregion_point x="19.0" y="26.0" />
+    <floorregion_point x="24.0" y="27.0" />
+    <floorregion_point x="27.0" y="26.0" />
+    <floorregion_point x="27.0" y="25.0" />
+    <floorregion_point x="22.0" y="24.5" />
+</floorregion>
+
+<floorregion shape="rect" rect_x="27.0" rect_y="25.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="27.0" rect_y="23.0" rect_w="1.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="20.0" rect_y="17.5" rect_w="8.0" rect_h="5.5"/>
+    <scenery name="Door" image_name="door_wood_n" x="27.5" y="24.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<scenery name="Bed" image_name="bed" x="21.0" y="18.5" size="1.2" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="23.0" y="18.5" size="1.2" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="26.0" y="18.5" size="1.2" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="21.0" y="21.5" size="1.2" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="23.0" y="21.5" size="1.2" blocking="true"/>
+
+<scenery name="Bed" image_name="bed" x="25.0" y="21.5" size="1.2" blocking="true"/>
+
+<scenery name="Crate" image_name="crate" x="27.5" y="18.1" size="0.8" blocking="true">
+    <gold amount="23"/>
+    <item template="Green Gem"/>
+    <item template="Gold Ring"/>
+</scenery>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="21.0" y="19.5"/>
+<npc name="Orc" template="Orc" x="23.0" y="19.5">
+    <item template="Leather Armour"/>
+</npc>
+<npc name="Orc" template="Orc" x="27.0" y="19.5">
+</npc>
+
+<floorregion shape="rect" rect_x="32.0" rect_y="12.0" rect_w="1.0" rect_h="14.0"/>
+
+<floorregion shape="rect" rect_x="33.0" rect_y="25.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="34.0" rect_y="25.0" rect_w="3.0" rect_h="3.0"/>
+    <scenery name="Door" image_name="door_wood" x="33.05" y="25.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Orc Warlord's Key" unlock_xp="80"
+    />
+
+<scenery name="Bones" image_name="bones" x="34.5" y="27.0" size="0.5" draw_type="background"/>
+<scenery name="Skulls" image_name="skulls" x="36.5" y="25.5" size="0.3" draw_type="background"/>
+<scenery name="Rock" image_name="rock1" x="36.6" y="27.1" size="0.2" draw_type="background"/>
+
+<npc name="Peasant" animation_name="peasant_man" static_image="true" x="36.0" y="25.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Thank you for freeing us!
+</opening_initial>
+<talk question="Who are you?">
+I am a peasant from the nearby village, but I was captured by the Orcs attacking our village, and brought back here, where I have been kept prisoner ever since.
+</talk>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="35.5" y="26.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Thank you for freeing us!
+</opening_initial>
+<talk question="Who are you?">
+I am a peasant from the nearby village, but I was captured by the Orcs attacking our village, and brought back here, where I have been kept prisoner ever since.
+</talk>
+</npc>
+
+<npc name="Peasant" animation_name="peasant_woman" static_image="true" x="36.4" y="27.5"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+>
+<opening_initial>Thank you for freeing us!
+</opening_initial>
+<talk question="Who are you?">
+I am a peasant from the nearby village, but I was captured by the Orcs attacking our village, and brought back here, where I have been kept prisoner ever since.
+</talk>
+</npc>
+
+<floorregion shape="rect" rect_x="26.0" rect_y="12.0" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="28.0" rect_y="10.5" rect_w="1.0" rect_h="1.5"/>
+    <scenery name="Door" image_name="door_wood_n" x="28.5" y="11.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+<floorregion shape="rect" rect_x="26.0" rect_y="6.5" rect_w="5.0" rect_h="4.0"/>
+
+<npc name="Orc" template="Orc" x="28.0" y="7.5"/>
+
+<floorregion shape="rect" rect_x="28.0" rect_y="13.0" rect_w="1.0" rect_h="1.5"/>
+    <scenery name="Door" image_name="door_wood_n" x="28.5" y="13.05" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Orc Warlord's Key"
+    />
+<floorregion shape="rect" rect_x="28.0" rect_y="14.5" rect_w="3.0" rect_h="2.0"/>
+
+<scenery name="Crate" image_name="crate" x="30.5" y="16.0" size="0.8" blocking="true">
+    <item name="Missing Teleporter Piece" image_name="clockwork" icon_width="0.5" weight="50">
+A complex piece of machinery. You wonder if this is the essential piece missing from the teleporter.
+    </item>
+    <item name="Prisoner's Journal" image_name="book" icon_width="0.25" weight="1">
+This book appears to be a journal kept by one of the villagers who was kept prisoner here. It tells of how they were captured one day by a collection of monsters in a raid upon their village. Others were slain, including close family and friends, and their houses burned down
+
+They were bound, blindfolded, and taken away, to be placed in a small cell that appeared to be in some underground cave.
+
+Every so often, one of the prisoners was taken away, never to be returned.
+    </item>
+</scenery>
+
+<floorregion shape="rect" rect_x="21.5" rect_y="11.0" rect_w="4.5" rect_h="4.0"/>
+    <scenery name="Door" image_name="door_wood" x="26.05" y="12.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="25.5" y="11.5"/>
+
+<floorregion shape="rect" rect_x="21.0" rect_y="12.5" rect_w="0.5" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood" x="21.45" y="13.0" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="10.0" rect_w="5.0" rect_h="5.0"/>
+<scenery name="Barrel" image_name="barrel" x="16.5" y="14.5" size="0.8" blocking="true">
+    <gold amount="12"/>
+</scenery>
+<scenery name="Table" image_name="table" x="20.5" y="14.5" size="0.8" blocking="true"/>
+<npc name="Goblin Champion" template="Goblin Champion" x="18.5" y="12.5">
+    <item template="Leather Armour"/>
+</npc>
+
+<floorregion shape="rect" rect_x="18.0" rect_y="15.0" rect_w="1.0" rect_h="1.5"/>
+    <scenery name="Door" image_name="door_wood_n" x="18.5" y="16.45" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"/>
+
+<floorregion shape="rect" rect_x="16.0" rect_y="16.5" rect_w="3.0" rect_h="3.0"/>
+<scenery name="Crate" image_name="crate" x="16.5" y="18.5" size="0.8" blocking="true">
+    <item template="Long Sword"/>
+    <item template="Long Sword"/>
+    <item template="Short Sword"/>
+    <item template="Short Sword"/>
+    <item template="Shield"/>
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+    <item template="Arrows"/>
+    <ammo name="Arrows +1" ammo_type="Arrows" image_name="arrow" projectile_image_name="arrow" weight="1"
+        rating="2"
+        magical="true"
+        base_template="Arrows" worth_bonus="50"
+        amount="5"/>
+    <item template="Bullets"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="11.0" rect_y="12.0" rect_w="5.0" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood" x="15.95" y="12.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<!--route to Orc Warlord-->
+
+<floorregion shape="rect" rect_x="33.0" rect_y="17.0" rect_w="5.0" rect_h="1.0"/>
+
+<!--<player_start x="34.9" y="17.5"/>-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="39.0" y="14.0" />
+    <floorregion_point x="38.0" y="15.0" />
+    <floorregion_point x="38.0" y="20.0" />
+    <floorregion_point x="39.0" y="21.0" />
+    <floorregion_point x="44.0" y="21.0" />
+    <floorregion_point x="45.0" y="20.0" />
+    <floorregion_point x="45.0" y="15.0" />
+    <floorregion_point x="44.0" y="14.0" />
+</floorregion>
+
+<scenery name="Throne" image_name="throne" x="41.5" y="17.5" size="0.8" blocking="true"/>
+
+<npc name="Orc Warlord" template="Orc Champion" x="44.0" y="19.0">
+    <item name="Orc Warlord's Key" image_name="key" icon_width="0.5" weight="0"/>
+    <item template="Chain Mail Armour"/>
+</npc>
+
+<npc name="Orc" template="Orc" x="43.0" y="18.5"/>
+
+<npc name="Orc Archer" template="Orc" x="43.0" y="17.5">
+    <item template="Longbow"/>
+    <item template="Arrows"/>
+</npc>
+
+<floorregion shape="rect" rect_x="45.0" rect_y="17.0" rect_w="1.0" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood" x="45.05" y="17.5" w="0.1" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+<floorregion shape="rect" rect_x="46.0" rect_y="16.0" rect_w="3.0" rect_h="3.0"/>
+
+<scenery name="Chest" image_name="chest" x="48.5" y="17.5" size="0.8" blocking="true">
+    <item template="Potion of Healing"/>
+    <gold amount="100"/>
+</scenery>
+
+</location>
+
+<location name="level_future">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<floorregion shape="rect" rect_x="20.0" rect_y="21.0" rect_w="5.0" rect_h="4.0"/>
+
+<!--<player_start x="22.5" y="20.5"/>-->
+
+<scenery name="Teleport" image_name="teleport" x="22.5" y="23.0" size="1.0" blocking="true" exit_location="level_5" exit_location_x="27.0" exit_location_y="30.0"/>
+
+<scenery name="Window" image_name="door_mirror" x="22.5" y="24.9" w="1.0" h="0.2" blocking="true" block_visibility="true">You look outside the window, to see a scene of death and destruction. It seems you are high up in a large building, looking out over a large flat area, that is covered with decaying bodies that have now rotten away to partial skeletons. Most of them seem to be wearing some kind of strange armour.
+
+You can also see large strange iron contraptions around the place, that appear to be damaged beyond repair. Some of them have wheels, though made of a material that looks alien to you.
+
+Further away, the landscape is formed by fields and trees, with occasional buildings, most of them damaged, some of them reduced to rubble. The trees look burned black, with no leaves. There is no sign of life that you see.
+</scenery>
+
+<scenery name="Grandfather Clock" image_name="grandfather_clock" x="24.0" y="21.75" size="1.5" blocking="true"/>
+
+<scenery name="Cabinet" image_name="cabinet" x="21.0" y="21.5" size="0.8" blocking="true">
+    <item name="Rise of the Steam Age" image_name="book" icon_width="0.25" weight="2">
+This seems to be a kind of history book, detailing the progress that has been made in recent years. It talks of a thing called "science", which seems to be a means to develop amazing devices that seem magical to you. Together with harnessing the use of steam, great machines have been constructed, far more powerful than anything that can be done by a man on his own.
+
+Later chapters in the book talk of a unification of science, steam and magic, and how this has enabled the creation of even more advancements. The book shows great flying machines, long distance communication devices, as well as destructive and explosive weapons.
+    </item>
+    <item name="News Paper" image_name="book" icon_width="0.25" weight="1">
+This is a collection of papers, with printed text that claims to describe "news" events. The paper feels old, the text faded. The main story talks about a recently started war, referring to deaths of tens of thousands even in single events - already it seems a war on a scale that you have never seen.
+
+Reading through the details, it seems that wars are no longer fought with sword and cavalry, but with devices that cause explosions, perhaps similar to cannons of your time, but far more refined and powerful. Great transportation devices are also in use, on land, sea and even in the air.
+
+Magic still plays a part, with groups of highly trained wizards being used to focus their energies against the enemy.
+
+A notice in the paper also calls upon all able-bodied men and women to report for service, or face imprisonment.
+
+There seems to be no information on the cause of the war, or who the enemy is.
+    </item>
+</scenery>
+
+<floorregion shape="rect" rect_x="22.0" rect_y="19.0" rect_w="1.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="19.0" rect_y="18.0" rect_w="7.0" rect_h="1.0"/>
+
+<scenery name="Door" image_name="door_metal" x="22.5" y="17.55" w="1.0" h="0.9" blocking="false" block_visibility="false" door="true"
+    locked="true"/>
+
+<floorregion shape="rect" rect_x="15.0" rect_y="18.0" rect_w="4.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="26.0" rect_y="18.0" rect_w="4.0" rect_h="4.0"/>
+
+</location>
+
+<location name="level_6">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<wandering_monster template="Goblin Champion" time="60000" rest_chance="10"/>
+
+<!--trapdoor route-->
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="5.0"/>
+
+    <floorregion shape="rect" rect_x="5.0" rect_y="1.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="6.0" rect_y="0.0" rect_w="4.0" rect_h="3.0"/>
+
+<scenery name="Barrel" image_name="crate" x="6.5" y="2.5" size="0.8" blocking="true">
+    <gold amount="3"/>
+</scenery>
+
+<scenery name="Crate" image_name="crate" x="9.5" y="2.5" size="0.8" blocking="true">
+    <gold amount="9"/>
+    <item template="Short Sword"/>
+    <item template="Shield"/>
+</scenery>
+
+    <floorregion shape="rect" rect_x="10.0" rect_y="1.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="11.0" rect_y="0.0" rect_w="4.0" rect_h="4.0"/>
+
+<scenery name="Crate" image_name="crate" x="11.5" y="3.5" size="0.8" blocking="true">
+    <item name="Maze Key" image_name="key" icon_width="0.5" weight="0"/>
+</scenery>
+
+<scenery name="Crate" image_name="crate" x="14.5" y="3.5" size="0.8" blocking="true">
+    <gold amount="9"/>
+    <item template="Arrows"/>
+</scenery>
+
+<npc name="Orc" template="Orc" x="13.5" y="3.5">
+    <item template="Chain Mail Armour"/>
+</npc>
+
+<floorregion shape="rect" rect_x="2.0" rect_y="5.0" rect_w="1.0" rect_h="12.0"/>
+
+<scenery name="Door" image_name="door_metal_n" x="2.5" y="5.05" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Maze Key"/>
+
+<!--Maze area-->
+
+<!--<player_start x="2.5" y="2.5"/>-->
+<!--<player_start x="2.5" y="6.5"/>-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="3.0" y="9.0"/>
+    <floorregion_point x="3.0" y="10.0"/>
+    <floorregion_point x="8.0" y="6.0"/>
+    <floorregion_point x="8.0" y="5.0"/>
+</floorregion>
+<floorregion shape="rect" rect_x="8.0" rect_y="5.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="8.0" rect_y="6.0" rect_w="1.0" rect_h="3.0"/>
+<floorregion shape="rect" rect_x="9.0" rect_y="8.0" rect_w="2.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="3.0" rect_y="11.0" rect_w="5.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="5.0" rect_y="12.0" rect_w="1.0" rect_h="2.0"/>
+<scenery name="Door" image_name="door_metal_n" x="5.5" y="13.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true"/>
+
+<floorregion shape="rect" rect_x="7.0" rect_y="10.0" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="12.0" rect_y="6.0" rect_w="1.0" rect_h="10.5"/>
+<floorregion shape="rect" rect_x="11.0" rect_y="15.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="7.0" rect_y="12.0" rect_w="4.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="10.0" rect_y="13.0" rect_w="1.0" rect_h="2.0"/>
+<floorregion shape="rect" rect_x="7.0" rect_y="14.0" rect_w="3.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="7.0" rect_y="15.0" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="11.0" rect_w="2.0" rect_h="1.0"/>
+<scenery name="Teleport" image_name="teleport" x="0.5" y="11.5" size="1.0" blocking="true" exit_location="level_space" exit_location_x="20.0" exit_location_y="20.0"/>
+
+<floorregion shape="rect" rect_x="1.0" rect_y="17.0" rect_w="10.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="6.0" rect_y="18.0" rect_w="1.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="2.0" rect_y="22.0" rect_w="8.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="9.0" rect_y="20.0" rect_w="1.0" rect_h="2.0"/>
+
+<floorregion shape="rect" rect_x="2.0" rect_y="20.0" rect_w="1.0" rect_h="2.0"/>
+
+<item name="Ghost's Bones" image_name="casket" icon_width="0.25" weight="10" x="2.5" y="20.5">
+Inside this casket are a collection of bones.
+</item>
+
+<!--from stairs down route-->
+
+<floorregion shape="rect" rect_x="34.5" rect_y="11.5" rect_w="5.0" rect_h="7.0"/>
+
+<scenery name="Stairs" image_name="stairsup_indoors" x="37.0" y="14.0" size="2.0" boundary_iso="true" boundary_iso_ratio="0.5" blocking="true" exit_location="level_5" exit_location_x="39.0" exit_location_y="29.5"/>
+
+<!--<player_start x="38.5" y="14.0"/>-->
+
+<scenery name="Bones" image_name="bones" x="35.5" y="14.0" size="0.5" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="32.5" rect_y="17.5" rect_w="2.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="32.5" rect_y="18.5" rect_w="1.0" rect_h="2.5"/>
+<floorregion shape="rect" rect_x="33.5" rect_y="20.0" rect_w="6.5" rect_h="1.0"/>
+<trap x="36.5" y="20.0" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<floorregion shape="rect" rect_x="40.0" rect_y="9.0" rect_w="1.0" rect_h="12.0"/>
+<floorregion shape="rect" rect_x="38.0" rect_y="9.0" rect_w="2.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="31.0" rect_y="14.0" rect_w="3.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="31.0" rect_y="15.0" rect_w="1.0" rect_h="10.5"/>
+<floorregion shape="rect" rect_x="32.0" rect_y="24.5" rect_w="9.5" rect_h="1.0"/>
+<trap x="39.0" y="24.5" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<floorregion shape="rect" rect_x="41.5" rect_y="7.5" rect_w="1.0" rect_h="18.0"/>
+<floorregion shape="rect" rect_x="32.5" rect_y="6.5" rect_w="10.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="36.5" rect_y="10.0" rect_w="1.0" rect_h="1.5"/>
+<floorregion shape="rect" rect_x="30.5" rect_y="9.0" rect_w="7.0" rect_h="1.0"/>
+<trap x="35.5" y="9.0" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<floorregion shape="rect" rect_x="30.5" rect_y="7.5" rect_w="1.0" rect_h="1.5"/>
+
+<floorregion shape="rect" rect_x="25.5" rect_y="11.5" rect_w="9.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="28.0" rect_y="12.5" rect_w="1.0" rect_h="1.5"/>
+<floorregion shape="rect" rect_x="27.0" rect_y="14.0" rect_w="3.0" rect_h="2.0"/>
+
+<npc name="Orc Champion" template="Orc Champion" x="29.5" y="14.5">
+    <item template="Chain Mail Armour"/>
+</npc>
+
+<scenery name="Chest" image_name="chest" x="27.5" y="14.5" size="0.8" blocking="true">
+    <item name="Bull Statuette" image_name="bull_statuette" icon_width="0.25" weight="10">
+A small bronze statuette of a humanoid bull-like creature.
+    </item>
+</scenery>
+
+<floorregion shape="rect" rect_x="25.5" rect_y="12.5" rect_w="1.0" rect_h="6.0"/>
+<trap x="25.5" y="14.5" w="1.0" h="1.0" type="arrow" difficulty="1" rating="1"/>
+<floorregion shape="rect" rect_x="26.5" rect_y="17.5" rect_w="4.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="29.5" rect_y="18.5" rect_w="1.0" rect_h="3.0"/>
+<floorregion shape="rect" rect_x="25.5" rect_y="21.5" rect_w="5.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="29.0" rect_y="4.0" rect_w="1.0" rect_h="7.5"/>
+<floorregion shape="rect" rect_x="30.0" rect_y="4.0" rect_w="14.0" rect_h="1.0"/>
+<trap x="37.0" y="4.0" w="1.0" h="1.0" type="arrow" difficulty="2" rating="5"/>
+<floorregion shape="rect" rect_x="43.0" rect_y="5.0" rect_w="1.0" rect_h="24.0"/>
+<floorregion shape="rect" rect_x="30.0" rect_y="28.0" rect_w="13.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="28.0" rect_y="29.0" rect_w="3.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="25.0" rect_y="28.0" rect_w="4.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="24.0" rect_y="7.0" rect_w="1.0" rect_h="22.0"/>
+
+<floorregion shape="rect" rect_x="13.5" rect_y="7.0" rect_w="10.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="13.5" rect_y="8.0" rect_w="1.0" rect_h="10.0"/>
+<floorregion shape="rect" rect_x="10.0" rect_y="18.0" rect_w="4.5" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="18.5" rect_y="6.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="12.0" rect_y="5.0" rect_w="7.5" rect_h="1.0"/>
+
+<!--route to minotaur-->
+
+<floorregion shape="rect" rect_x="18.5" rect_y="8.0" rect_w="1.0" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="15.0" rect_y="9.0" rect_w="8.5" rect_h="1.0"/>
+<floorregion shape="rect" rect_x="15.0" rect_y="10.0" rect_w="1.0" rect_h="10.0"/>
+<floorregion shape="rect" rect_x="22.5" rect_y="10.0" rect_w="1.0" rect_h="10.0"/>
+<floorregion shape="rect" rect_x="15.0" rect_y="20.0" rect_w="8.5" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="18.5" rect_y="18.5" rect_w="1.0" rect_h="1.5"/>
+    <scenery name="Door" image_name="door_metal_n" x="19.0" y="19.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Bull Statuette" unlock_text="The bull statuette that you carry shakes..."
+    />
+<floorregion shape="rect" rect_x="16.5" rect_y="11.5" rect_w="5.5" rect_h="7.0"/>
+
+<!--<player_start x="19.0" y="18.5"/>-->
+<!--<player_start x="19.0" y="20.5"/>-->
+<!--<player_start x="19.0" y="22.5"/>-->
+
+<npc name="Minotaur" template="Minotaur" x="19.25" y="14.75">
+    <item name="Minotaur's Key" image_name="key" icon_width="0.5" weight="0"/>
+</npc>
+
+<scenery name="Tree" image_name="tree2" x="17.5" y="12.0" size="1.0"/>
+
+<scenery name="Plant" image_name="plant" x="21.1" y="13.25" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="20.8" y="18.0" size="0.5" draw_type="background"/>
+
+<scenery name="Plant" image_name="plant" x="17.3" y="17.5" size="0.5" draw_type="background"/>
+
+<scenery name="Bones" image_name="bones" x="20.5" y="14.5" size="0.5" draw_type="background"/>
+
+<scenery name="Skulls" image_name="skulls" x="18.1" y="14.9" size="0.3" draw_type="background"/>
+
+<floorregion shape="rect" rect_x="18.5" rect_y="21.0" rect_w="1.0" rect_h="1.0"/>
+    <scenery name="Door" image_name="door_wood_n" x="19.0" y="21.95" w="1.0" h="0.1" visual_h="0.9" blocking="true" block_visibility="true" door="true"
+    locked="true" unlocked_by_template="Minotaur's Key"
+    />
+<floorregion shape="rect" rect_x="17.5" rect_y="22.0" rect_w="3.0" rect_h="3.0"/>
+
+<scenery name="Chest" image_name="chest" x="20.0" y="24.5" size="0.8" blocking="true">
+    <gold amount="150"/>
+    <item name="Vespar's Skull" image_name="skull" icon_width="0.25" weight="10"/>
+</scenery>
+
+<floorregion shape="rect" rect_x="18.5" rect_y="25.0" rect_w="1.0" rect_h="1.5"/>
+<floorregion shape="rect" rect_x="17.5" rect_y="26.5" rect_w="3.0" rect_h="3.0"/>
+
+<!--<player_start x="19.0" y="25.5"/>-->
+
+<scenery name="Teleport" image_name="teleport" x="19.0" y="28.0" size="1.0" blocking="true" exit_location="entrance" exit_location_x="46.0" exit_location_y="11.0"/>
+
+<!--tombs-->
+
+<floorregion shape="rect" rect_x="15.0" rect_y="21.0" rect_w="1.0" rect_h="6.0"/>
+
+<floorregion shape="rect" rect_x="8.0" rect_y="27.0" rect_w="8.0" rect_h="4.0"/>
+
+<!--<player_start x="15.5" y="25.0"/>-->
+
+<npc name="Giant Spider" template="Giant Spider" x="9.0" y="29.0"/>
+
+<scenery name="Tomb" image_name="tomb" x="10.0" y="29.0" size="1.0" blocking="true">
+    <trap type="acid" rating="8"/>
+</scenery>
+
+<scenery name="Tomb" image_name="tomb" x="12.0" y="29.0" size="1.0" blocking="true">
+    <armour name="Magical Leather Armour" image_name="leather_armour" weight="100"
+        rating="3" magical="true"
+        base_template="Leather Armour" worth_bonus="50">
+This leather armour is blessed, offering greater protection.
+    </armour>
+</scenery>
+
+<scenery name="Tomb" image_name="tomb" x="14.0" y="29.0" size="1.0" blocking="true">
+    <gold amount="20"/>
+</scenery>
+
+<item template="Mushroom" x="11.1" y="29.5"/>
+
+<item template="Mushroom" x="13.1" y="28.5"/>
+
+<floorregion shape="rect" rect_x="7.0" rect_y="28.5" rect_w="1.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="4.0" rect_y="27.0" rect_w="3.0" rect_h="4.0"/>
+
+<npc name="Ghost" animation_name="ghost" static_image="true" bounce="true" x="4.9" y="28.0"
+    FP="0" BS="0" S="0" A="0" M="0" D="0" B="0" Sp="0.0"
+    natural_damageX="0" natural_damageY="0" natural_damageZ="0"
+    health="10" max_health="10"
+    is_hostile="false"
+    xp_worth="0"
+    can_talk="true"
+    interaction_type="WANT_OBJECT"
+    interaction_data="Ghost's Bones"
+    interaction_xp="30"
+    interaction_journal="I found and returned the ghost's bones."
+>
+<opening_initial>You can see me? Don't be afraid!
+</opening_initial>
+<opening_later>Woo!
+</opening_later>
+<opening_interaction_complete>
+Thank you for your help.
+</opening_interaction_complete>
+<talk question="Are you ... a ghost?">
+I guess you could say that ... for some reason I was trapped here as a spirit, wandering these passageways for many years, unable to pass onto the plane of death.
+</talk>
+<talk question="How did you die?">
+I would rather not talk about that ... it is too terrible to mention.
+</talk>
+<talk question="Is there anything I can do?" while_not_done="true" journal="I met a ghost, who asked if I could find his bones.">
+Perhaps you can find my bones. I have tried searching for them, but without luck. Maybe if they were returned to me, I might be able to finally leave this plane of existence.
+</talk>
+<talk question="I have found your bones" objective="true">
+Thank you! Now I feel no longer bound to this terrible place. You should leave too, while you still can!
+</talk>
+</npc>
+
+</location>
+
+<location name="level_space" type="outdoors">
+
+<floor image_name="floor_paved"/>
+<dropwall image_name="dropwall"/>
+<background image_name="background_black"/>
+
+<wandering_monster template="Wyvern" time="120000" rest_chance="25"/>
+
+<!--<player_start x="20.0" y="20.0"/>-->
+
+<floorregion shape="rect" rect_x="18.0" rect_y="18.0" rect_w="4.0" rect_h="4.0"/>
+
+<floorregion shape="rect" rect_x="18.0" rect_y="10.0" rect_w="4.0" rect_h="4.0"/>
+
+<npc name="Orc Archer" template="Orc" x="19.0" y="12.0">
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+</npc>
+<npc name="Wyvern" template="Wyvern" x="25.0" y="12.0"/>
+<npc name="Wyvern" template="Wyvern" x="15.0" y="28.0"/>
+
+<!--west side-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="18.0" y="18.0"/>
+    <floorregion_point x="10.0" y="14.0"/>
+    <floorregion_point x="10.0" y="15.0"/>
+    <floorregion_point x="18.0" y="19.0"/>
+</floorregion>
+
+<floorregion shape="rect" rect_x="7.0" rect_y="13.0" rect_w="3.0" rect_h="3.0"/>
+
+<npc name="Orc" template="Orc" x="7.5" y="13.5">
+    <item template="Leather Armour"/>
+</npc>
+
+<floorregion shape="rect" rect_x="8.0" rect_y="16.0" rect_w="1.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="7.0" rect_y="24.0" rect_w="3.0" rect_h="3.0"/>
+
+<npc name="Orc Archer" template="Orc" x="7.5" y="26.5">
+    <item template="Shortbow"/>
+    <item template="Arrows"/>
+    <item template="Red Gem"/>
+</npc>
+
+<floorregion shape="polygon">
+    <floorregion_point x="18.0" y="21.0"/>
+    <floorregion_point x="10.0" y="25.0"/>
+    <floorregion_point x="10.0" y="26.0"/>
+    <floorregion_point x="18.0" y="22.0"/>
+</floorregion>
+
+<!--west platform-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="8.0" y="22.0"/>
+    <floorregion_point x="8.0" y="18.0"/>
+    <floorregion_point x="4.0" y="19.0"/>
+    <floorregion_point x="4.0" y="21.0"/>
+</floorregion>
+
+<scenery name="Teleport" image_name="teleport" x="5.0" y="20.0" size="1.0" blocking="true" exit_location="level_6" exit_location_x="1.5" exit_location_y="11.5"/>
+
+<!--east side-->
+
+<floorregion shape="polygon">
+    <floorregion_point x="22.0" y="19.0"/>
+    <floorregion_point x="30.0" y="15.0"/>
+    <floorregion_point x="30.0" y="14.0"/>
+    <floorregion_point x="22.0" y="18.0"/>
+</floorregion>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="13.0" rect_w="3.0" rect_h="3.0"/>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="32.5" y="13.5"/>
+
+<floorregion shape="rect" rect_x="31.0" rect_y="16.0" rect_w="1.0" rect_h="8.0"/>
+
+<floorregion shape="rect" rect_x="30.0" rect_y="24.0" rect_w="3.0" rect_h="3.0"/>
+
+<npc name="Goblin Champion" template="Goblin Champion" x="32.5" y="26.5"/>
+<npc name="Goblin Champion" template="Goblin Champion" x="31.5" y="26.5"/>
+
+<floorregion shape="polygon">
+    <floorregion_point x="22.0" y="22.0"/>
+    <floorregion_point x="30.0" y="26.0"/>
+    <floorregion_point x="30.0" y="25.0"/>
+    <floorregion_point x="22.0" y="21.0"/>
+</floorregion>
+
+<!--east platform-->
+
+<floorregion shape="rect" rect_x="32.0" rect_y="19.5" rect_w="6.0" rect_h="1.0"/>
+
+<floorregion shape="rect" rect_x="38.0" rect_y="18.0" rect_w="6.0" rect_h="4.0"/>
+<npc name="Orc Shaman" template="Orc Shaman" x="43.5" y="20.0">
+    <spell name="Agony" count="3"/>
+    <spell name="Fire bolt" count="3"/>
+    <spell name="Paralyse" count="1"/>
+    <spell name="Heal" count="1"/>
+</npc>
+<npc name="Goblin Champion" template="Goblin Champion" x="42.5" y="19.0"/>
+<npc name="Goblin Champion" template="Goblin Champion" x="42.5" y="21.0"/>
+<npc name="Wyvern" template="Wyvern" x="42.5" y="22.0"/>
+
+<scenery name="Chest" image_name="chest" x="43.5" y="18.5" size="0.8" blocking="true">
+    <item template="Potion of Archery"/>
+    <item template="Green Gem"/>
+    <gold amount="100"/>
+    <weapon name="Magic Long Sword" image_name="longsword" weight="12"
+        damageX="2" damageY="10" damageZ="2"
+        min_strength="7"
+        animation_name="longsword"
+        magical="true"
+        base_template="Long Sword" worth_bonus="300"
+        />
+</scenery>
+
+<scenery name="Fire" image_name="fire" x="43.5" y="21.0" size="1.0" blocking="true" has_smoke="true"/>
+
+</location>
+
+</quest>

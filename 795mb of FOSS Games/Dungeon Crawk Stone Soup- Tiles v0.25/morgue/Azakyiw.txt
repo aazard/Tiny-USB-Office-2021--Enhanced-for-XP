@@ -1,0 +1,100 @@
+ Dungeon Crawl Stone Soup version 0.25.1 (tiles) character file.
+
+Game seed: 12352181187809219057
+
+Azakyiw the Shield-Bearer (Human Fighter)              Turns: 0, Time: 00:00:08
+
+Health: 18/18      AC:  6    Str: 16    XL:     1   Next: 0%
+Magic:  1/1        EV:  6    Int:  8    God:    
+Gold:   0          SH:  8    Dex: 12    Spells: 0/0 levels left
+
+rFire    . . .     SeeInvis .   a - +0 rapier
+rCold    . . .     Gourm    .   c - +0 kite shield
+rNeg     . . .     Faith    .   b - +0 scale mail
+rPois    .         Spirit   .   (no helmet)
+rElec    .         Reflect  .   (no cloak)
+rCorr    .         Harm     .   (no gloves)
+MR       .....                  (no boots)
+Stlth    ..........             (no amulet)
+HPRegen  0.06/turn              (no ring)
+MPRegen  0.07/turn              (no ring)
+
+@: no status effects
+A: no striking features
+a: no special abilities
+
+
+You are on level 1 of the Dungeon.
+You are not hungry.
+
+You have visited 1 branch of the dungeon, and seen 1 of its levels.
+
+Inventory:
+
+Hand Weapons
+ a - a +0 rapier (weapon)
+Armour
+ b - a +0 scale mail (worn)
+ c - a +0 kite shield (worn)
+Potions
+ d - a potion of might
+Comestibles
+ f - a ration
+
+
+   Skills:
+ + Level 3.0 Fighting
+ + Level 2.0 Short Blades
+ + Level 3.0 Armour
+ + Level 3.0 Shields
+
+
+You cannot memorise any spells.
+You don't know any spells.
+Your spell library is empty.
+
+Dungeon Overview and Level Annotations
+
+Branches:
+Dungeon (1/15)            
+
+Altars:
+
+Message History
+
+Welcome, Azakyiw the Human Fighter.
+It is said that the Orb of Zot exists deep within this dungeon.
+Press ? for a list of commands and other information.
+Found a dagger, a ration, a scroll labeled BOBAOCI SAOT and a short sword.
+Found a staircase leading out of the dungeon.
+Unknown command.
+Unknown command.
+
+#####.....#####
+#...#.....#...#
+#.(.#..?).#.(.#
+#...#.....#...#
+#####.....#####
+...............
+........)......
+.......@.......
+...............
+.............%.
+#####.....#####
+#...#.....#...#
+#.(.#.....#.(.#
+#...#.....#...#
+#####.....#####
+
+
+There are no monsters in sight!
+
+
+Notes
+Turn   | Place    | Note
+-------+----------+-------------------------------------------
+     0 | D:1      | Azakyiw the Human Fighter began the quest for the Orb.
+     0 | D:1      | Reached XP level 1. HP: 18/18 MP: 1/1
+
+Illustrated notes
+

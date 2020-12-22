@@ -1,0 +1,10 @@
+1;Are you one of the metal gods who have returned?;;
+;Yes;2;
+;Yes, and we demand tribute;3;
+;No;4;
+2;We have been waiting for so long, we look forward to you solving all our problems;;
+3;Of course, that is your right;GIVES;1
+4;Oh? I could have sworn. Not that I ever believed in that nonesense;;
+;Tell me about these metal gods;5;
+;But I am not;;
+5;Ancient legends tell of beings from the stars, travelling in iron ships, forming us in their image;;

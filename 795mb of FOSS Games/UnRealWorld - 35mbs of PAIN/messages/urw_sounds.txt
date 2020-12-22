@@ -1,0 +1,168 @@
+// <npc_aggsound> returns value of aggressive NPC/animal sample. 
+// <npc_sound> returns value of peaceful NPC/animal sample.
+// these values are fixed within creature data.
+// the according sample in audio/ will be played when {<npc_aggsound>} or {<npc_sound>} hear-tag is used.
+
+// present tense form of NPC sound strings. eg. "The dog barks in pain."
+// these are just the verbal expression of animal/NPC sounds based on <npc_sound> and <npc_aggsound>.
+//
+.SND_PRES.
+[BAWL:bawls]
+[BARK:barks]
+[BELLOW:bellows]
+[COO:coos]
+[COUGH:coughs]
+[CROW:crows]
+[BLEAT:bleats]
+[SNARL:snarls]
+[SNORT:snorts]
+[SNUFFLE:snuffles]
+[SWEAR:swears]
+[SQUEAK:squeaks]
+[MEOW:meows]
+[GNAW:gnaws]
+[GRUNT:grunts]
+[GROWL:growls]
+[GUFFAW:guffaws]
+[HISS:hisses]
+[ROAR:roars]
+[HOWL:howls]
+[YELP:yelps]
+[WHIMPER:whimpers]
+[SING:sings]
+[CROAK:croaks]
+[CALL:calls]
+[SQUAWK:squawks]
+[WHISTLE:whistles]
+[*:cries]
+
+// present continuous form of NPC sound strings. eg. "You hear a dog barking in the distance."
+//
+.SND_CONT.
+[BAWL:bawling]
+[BARK:barking]
+[BELLOW:bellowing]
+[COO:cooing]
+[COUGH:coughing]
+[CROW:crowing]
+[BLEAT:bleating]
+[SNARL:snarling]
+[SNORT:snorting]
+[SNUFFLE:snuffling]
+[SWEAR:swearing]
+[SQUEAK:squeaking]
+[MEOW:meowing]
+[GNAW:gnawing]
+[GRUNT:grunting]
+[GROWL:growling]
+[GUFFAW:guffawing]
+[HISS:hissing]
+[ROAR:roaring]
+[HOWL:howling]
+[YELP:yelping]
+[WHIMPER:whimpering]
+[SING:singing]
+[CROAK:croaking]
+[CALL:calling]
+[SQUAWK:squawking]
+[WHISTLE:whistling]
+[*:crying]
+
+// noun form of NPC sound strings. eg. "You hear a cry of pain."
+//
+.SND_NOUN.
+[BAWL:bawl]
+[BARK:bark]
+[BELLOW:bellow]
+[COO:coo]
+[COUGH:cough]
+[CROW:crow]
+[CROAK:croak]
+[BLEAT:bleat]
+[SNARL:snarl]
+[SNORT:snort]
+[SNUFFLE:snuffle]
+[SWEAR:swear]
+[SQUEAK:squeak]
+[MEOW:meow]
+[GNAW:gnaw]
+[GRUNT:grunt]
+[GROWL:growl]
+[GUFFAW:guffaw]
+[HISS:hiss]
+[ROAR:roar]
+[HOWL:howl]
+[YELP:yelp]
+[WHIMPER:whimper]
+[SING:song]
+[CALL:call]
+[SQUAWK:squawk]
+[WHISTLE:whistle]
+[*:cry]
+
+// when NPC cries in pain - usually from being wounded.
+// {<npc_aggsound>} plays the aggressive sample of NPC.
+//
+.SOUND_PAIN.(who)
+[*:{<npc_aggsound>}!<npc_defdesc> [SND_PRES:<npc_aggsound>] in pain.]
+[HEAR:{<npc_aggsound>}You hear a [SND_NOUN:<npc_aggsound>] of pain from the [IN_DIR:<npc_direction>].]
+
+// NPC threaten sound - this is always targeted at somebody, and that somebody is set as 'defender'
+// - use <defender*> values for target specific message 
+//
+.SOUND_THREATEN.(who)
+[*:{<npc_aggsound>}<npc_defdesc> [SND_PRES:<npc_aggsound>] at <defender_desc>.]
+[HEAR:{<npc_aggsound>}You hear a [SND_NOUN:<npc_aggsound>] from the [IN_DIR:<npc_direction>].]
+
+// NPC peaceful sound
+// {<npc_sound>} plays the normal sample of NPC.
+//
+.SOUND_NORMAL.(who)
+[*:{<npc_sound>}<npc_defdesc> [SND_PRES:<npc_sound>].]
+[HEAR:{<npc_sound>}You hear a [SND_NOUN:<npc_sound>] from the [IN_DIR:<npc_direction>].]
+
+
+// of bird sounds it's always revealed which bird it is
+// 
+.BIRDSOUND_NORMAL.(who)
+[*:{<npc_sound>}<npc_defdesc> [SND_PRES:<npc_sound>].]
+[HEAR:{<npc_sound>}You hear <npc_desc> [SND_CONT:<npc_sound>] in the [IN_DIR:<npc_direction>].]
+
+
+// NPC (mostly pets) gives a sound for being hungry
+//
+.SOUND_HUNGRY.(who)
+[*:{<npc_sound>}<npc_defdesc> [SND_PRES:<npc_sound>] in hunger.]
+[HEAR:{<npc_sound>}You hear a creature [SND_CONT:<npc_sound>] in hunger in the [IN_DIR:<npc_direction>].]
+
+// NPC (mostly pets) gives a sound in alarm
+//
+.SOUND_ALARM.(who)
+[*:{<npc_sound>}<npc_defdesc> [SND_PRES:<npc_sound>] in alarm.]
+[HEAR:{<npc_sound>}You hear a creature [SND_CONT:<npc_sound>] in alarm in the [IN_DIR:<npc_direction>].]
+
+// NPC (mostly pets) gives a sound for disagreement 
+//
+.SOUND_DISAGREEMENT.(who)
+[*:{<npc_sound>}!<npc_defdesc> [SND_PRES:<npc_sound>] in disagreement.]
+[HEAR:{<npc_sound>}You hear a creature [SND_CONT:<npc_sound>] in disagreement in the [IN_DIR:<npc_direction>].]
+
+.SOUND_AGREEMENT.(who)
+[*:{<npc_sound>}<npc_defdesc> [SND_PRES:<npc_sound>] in agreement.]
+[HEAR:{<npc_sound>}You hear a creature [SND_CONT:<npc_sound>] in agreement in the [IN_DIR:<npc_direction>].]
+
+.SOUND_WOUNDED_DISAGREEMENT.(who)
+[*:{<npc_sound>}!<npc_defdesc> only [SND_PRES:<npc_sound>] miserably and refuses to obey.]
+[HEAR:{<npc_sound>}You hear a creature [SND_CONT:<npc_sound>] miserably in the [IN_DIR:<npc_direction>].]
+
+// when player hears an animal making sound in distance on the wilderness map.
+// <direction> gets value of direction of the sound (N,NE,E etc.) which can be used to form a string of the according compass point.
+// {<npc_sound>} makes the game play NPC basic sound.
+// This message is always generated on HEAR-basis, but using a general message also rules out bug-potential.
+//
+.SOUND_IN_DISTANCE.(who)
+[*:{<npc_sound>}You hear <npc_desc> [SND_CONT:<npc_sound>] nearby in the [IN_DIR:<direction>].]
+[HEAR:{<npc_sound>}You hear <npc_desc> [SND_CONT:<npc_sound>] nearby in the [IN_DIR:<direction>].]
+
+
+

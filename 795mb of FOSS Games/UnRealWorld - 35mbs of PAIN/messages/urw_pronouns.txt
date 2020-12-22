@@ -1,0 +1,65 @@
+// (subjective) Personal pronoun
+//
+// English: You He She It
+//
+// 
+.PP_SUBJ.
+[PC:you]
+[MASC:he]
+[FEM:she]
+[*:it]
+
+
+// objective personal pronoun
+//
+// English: You Him Her It
+// 
+.PP_OBJ.
+[PC:you]
+[MASC:him]
+[FEM:her]
+[*:it]
+
+// possessive adjective / genitive case
+//
+// my, your, his, her, its
+.PP_GEN.
+[PC:your]
+[MASC:his]
+[FEM:her]
+[*:its]
+
+
+.PP_PART.
+[PC:you]
+[*:<npc_definite_partitive>]
+
+// present tense with subject
+//
+// "You" "are"
+// "He/She/It" "is"
+//
+.SUBJ_PRES.
+[PC:You are]
+[*:[PP_SUBJ:<who>] is]
+
+// simply "but" as in example: I would do anything for you BUT I won't do that.
+// 
+.BUT.
+but
+
+// simply "and" as in example: Me AND my game.
+.AND.
+and
+
+// "as" as in example: you make a shot *as* he ducks down.
+.AS.
+as
+
+// general adjectives used in various messages combinations.
+//
+.ADJ.
+[BIG:big]
+[SMALL:small]
+
+

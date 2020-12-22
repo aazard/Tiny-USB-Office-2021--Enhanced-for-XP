@@ -1,0 +1,63 @@
+gtmwx=40
+key_nw = 7
+key_north = 8
+key_ne = 9
+key_west = 4
+key_east = 6
+key_sw = 1
+key_south = 2
+key_se = 3
+key_wait = 5
+key_portal = <
+key_layfire = 0
+key_manual = ?
+key_messages = m
+key_configuration = =
+key_autoinspect = I
+key_autopickup = P
+key_shipstatus =@
+key_awayteam =A
+key_togglehpdisplay =#h
+key_tactics =T
+key_filter =f
+key_logbook =L
+key_quest =Q
+key_equipment =E
+key_yes =y
+key_landing =l
+key_scanning =s
+key_standing =\Cs
+key_targetlanding =\Cl
+key_dock =d
+key_save =s
+key_quit=q
+key_rename =r
+key_comment =c
+key_tow =t
+key_launchprobe =p
+key_pickup =,
+key_dropitem =d
+key_inspect =i
+key_examine =x
+key_radio =r
+key_teleportt
+key_jump =j
+key_communicatec
+key_offer =o
+key_grenade =g
+key_fire =f
+key_autofire =F
+key_heal =h
+key_walk =w
+key_oxygen =O
+key_close =C
+key_dropshield =d
+key_activatesensors =a
+key_run =R
+key_dropmine =d
+key_togglemanjets =M
+_tix:24
+_tiy:24
+tilefont:18
+textfont:16
+lines:26

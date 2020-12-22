@@ -1,0 +1,16 @@
+1;This is an emergency! Do you read me? ;
+;Yes, we do read you.;2
+;...;7
+2;We have run out of fuel and life support ist starting to fail! You must help! Please!;
+;Of course;3
+;For a price, perhaps;4
+;No, ;5
+3;Great. We are at <COORDS>. Just dock at our ship.;
+4;Great. We are at <COORDS>. Just dock at our ship. Please hurry!;
+5;What? Are you serious???;
+;All right, but for a price.;3
+;Yes I am. Consider yourself darwin award winners;6
+6;You can't do this! We are all going to die!;
+7;We've run out of fuel.Life support is failing.  Please respond. Hello?;
+;This is <PLAYER>;2
+;...;0

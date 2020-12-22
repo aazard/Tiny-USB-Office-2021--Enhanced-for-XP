@@ -1,0 +1,20 @@
+Type;Price;Hull;Shield;Engine;Sensors;Cargo;Crew;Weaponslots;Maxfuel;Short;Reloading;Desc;land;aero
+Light Scout;4000;5;1;2;2;1;10;1;100;LS;10;Built for exploring. It has high endurance, a decent sized crew compartment, and can hold some high-grade Equipment.;0;0
+Long Range Fighter;4000;10;2;2;1;0;5;2;80;LRF;8;Designed for autonomous tactical operations. It can't hold a big crew or cargo, but can carry strong weapons, engine and shields.;0;0 
+Light Transport;4000;5;1;2;2;3;5;1;90;LT;10;Stripped of everything possible to increase cargo space. Not built to defend itself, it is the favourite target for space pirates.;0;0
+Troop Transport;4000;5;2;2;1;0;15;1;80;TT;9;Usually used for invasions, it can be used for exploring as well, especially on planets with many hostile lifeforms.;0;0
+Heavy Scout;12000;10;2;3;3;2;15;2;115;HS;10;Science comes first with combat running a close second for the heavy scout. The perfect ship to operate far away from home.;0;0
+Cruiser;16000;20;3;3;2;0;10;3;85;CS;8;Patrolduty was the design goal for the cruiser. Good endurance combined with considerable firepower was the result.;0;0
+Heavy Transport;15000;10;2;2;2;4;10;2;100;HT;10;Its firepower won't impress most pirates, but it might be able to defend itself long enough to flee.;0;0
+Dropship;10000;8;3;2;2;0;25;2;85;DS;9;Designed to deliver a good amount of troops in hostile territory. Some armament ensures that they actually reach the ground.;0;0
+Explorer;30000;15;3;3;4;2;20;3;130;EX;10;Bigger Crew quarters, higher endurance and good offensive weapons make the Explorer the vessel of choice for long term surveys of distant stars.;0;0 
+Destroyer;40000;30;4;4;3;1;15;4;90;DS;8;Not many ships can face a destroyer in combat. It also can load enough fuel to get it where it's needed and deliver a considerable amount of ground troops.;0;0
+Merchantman;28000;15;3;3;3;5;10;3;110;MC;10;While still an easy target without escorts, smaller pirate ships might think twice about attacking it.;0;0 
+Troop Carrier;20000;10;4;3;3;0;35;3;100;TC;9;A good contingent of this shiptype would be a part of any invasion fleet. Some ship to ship capabilites ensure that its payload reaches the ground.;0;0
+Heavy Explorer;50000;20;4;4;5;3;25;4;150;HE;10;The ultimate workhorse for exploration. Built for long term and long range missions in hostile territory.;0;0
+Battleship;70000;40;5;5;4;2;20;5;100;BS;7;A spacecombat powerhouse. Designed to obliterate enemy fleets. It's only weak point is its low endurance, making long missions difficult.;0;0
+Armed Merchantman;60000;20;4;4;4;6;15;3;120;AM;10;The armed Merchantman relies on its own firepower to drive away those who want its cargo.;0;0
+Heavy Troop Carrier;40000;15;5;4;4;0;50;4;120;HTC;8;Designed to deliver huge landing parties. Decent ship to ship capabilities enable it to operate without escorts protecting it.;0;0   
+Generation Ship;5000;0;0;0;0;0;0;0;0;Nil;0;Nil;0;0
+Alien Scoutship;1000000;40;5;5;5;5;50;5;150;ASCS;5;Strange corridors and rooms, but the basic design is human usable. Even if some things like lighting and door controls are in uncommon positions.;0;0
+Alien Probe ;2500;0;0;0;0;0;0;0;0;Nil;0;Nil;0;0

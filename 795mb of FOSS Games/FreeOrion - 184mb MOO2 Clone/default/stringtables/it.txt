@@ -1,0 +1,3687 @@
+Italiano
+
+# This is the Italian String Table file for FreeOrion
+#
+# Translators:
+# * Claudio Giordano <claudio.giordano(at)autistici.org>
+# * Stefano Peris <lordstephen77@gmail.com>, <https://github.com/LordStephen77>
+#
+# Notes: to avoid potential conflict with functional keys in other files, do not
+# make any stringtable keys beginning with "FUNCTIONAL_".
+# New Sitreps priorities should be added to
+# `default/customizations/common_user_customizations.txt`.
+
+# semi-randomly collected characters to force font code page loading
+# 肛門オーガズム
+# åřžßąłżęЗыдШит
+# 를와ẵừổ
+# جامعة
+# یای مجهو
+
+
+##
+## Common phrases
+##
+
+APPLY
+Applica
+
+CANCEL
+Annulla
+
+DONE
+Fatto
+
+SAVE
+Salva
+
+OPEN
+Apri
+
+OR
+o
+
+YES
+Si
+
+EMPIRE
+Impero
+
+PLAYER
+Giocatore
+
+HUMAN_PLAYER
+Umano
+
+AI_PLAYER
+IA
+
+ADD_AI_PLAYER
+Agg IA
+
+OBSERVER
+Osservatore
+
+MODERATOR
+Moderatore
+
+NO_PLAYER
+Nessuno
+
+DROP_PLAYER
+Scarta
+
+ALL
+Tutti
+
+RENAME
+Rinomina
+
+ENTER_NEW_NAME
+Inserisci il nuovo nome
+
+ERROR
+ERRORE
+
+RESET
+Ripristina
+
+NEXT
+Succ
+
+BACK
+Prec
+
+LAST
+Ultimo
+
+# Name for a newly created general purpose fleet.
+# %1% represents a unique number.
+NEW_FLEET_NAME
+Flotta %1%
+
+# Name for a newly created general purpose fleet when no uniqe number could be
+# created.
+NEW_FLEET_NAME_NO_NUMBER
+Flotta
+
+EMPTY_SPACE
+Spazio Profondo
+
+UNEXPLORED_REGION
+Regione Inesplorata
+
+UNEXPLORED_SYSTEM
+Sistema Inesplorato
+
+BOMBER
+Bombardiere
+
+INTERCEPTOR
+Intercettore
+
+DEFAULT_EMPIRE_NAME
+Impero Terrestre
+
+DEFAULT_PLAYER_NAME
+Giocatore_Umano
+
+PASSED
+<rgba 0 255 0 255>(PASSATO)</rgba>
+
+FAILED
+<rgba 255 0 0 255>(FALLITO)</rgba>
+
+ALL_OF
+Tutto Di:
+
+ANY_OF
+Qualunque Di:
+
+
+##
+## Major errors
+##
+
+
+##
+## Predefined Ship Designs (located in default/scripting/ship_designs/)
+##
+
+SD_SCOUT
+Esploratore
+
+SD_SCOUT_DESC
+Nave piccola ed economica progettata per la ricognizione e l'esplorazione.
+
+SD_MARK_1
+Mark I
+
+SD_MARK1_DESC
+Fregata da pattugliamento base armata di cannone a rotaia.
+
+SD_GRAVITATING1_DESC
+Massiccia nave da guerra armata e protetta con gli ultimi ritrovati tecnologici. Fissato il prezzo di conseguenza.
+
+SD_COLONY_SHIP
+Nave Colonizzatrice
+
+SD_COLONY_SHIP_DESC
+Vascello disarmato capace di trasportare in sicurezza milioni di cittadini su nuovi siti per colonia.
+
+SD_OUTPOST_SHIP
+Nave Avamposto
+
+SD_OUTPOST_SHIP_DESC
+Vascello disarmato capace di creare un avamposto su un mondo inabitabile.
+
+SD_COLONY_BASE
+Base Colonia
+
+SD_COLONY_BASE_DESC
+Vascello disarmato capace di creare una colonia nel sistema dove viene prodotta.
+
+SD_OUTPOST_BASE
+Base Avamposto
+
+SD_OUTPOST_BASE_DESC
+Nave disarmata capace di creare un avamposto nel sistema in cui viene prodotta.
+
+SD_TROOP_SHIP
+Nave Truppa
+
+SD_TROOP_SHIP_DESC
+Trasporta una brigata di terra [[metertype METER_TROOPS]] ed attrezzature che possono essere utilizzate per invadere un pianeta.
+
+SD_DRAGON_TOOTH_DESC
+Progetto antico di nave con armi avanzate e sistemi difensivi.
+
+
+##
+## Monsters
+##
+
+SM_MONSTER
+Mostri
+
+
+##
+## Fields
+##
+
+FLD_ION_STORM
+Tempesta di Ioni
+
+FLD_ION_STORM_DESC
+Vortice magnetico di particelle cariche relativistiche che possono interferire con i sensori e danneggiare navi e pianeti.
+
+
+##
+## Predefined starting fleets
+##
+
+FN_BATTLE_FLEET
+Flotta da battaglia
+
+FN_SCOUT_FLEET
+Flotta da esplorazione
+
+FN_COLONY_FLEET
+Flotta colonizzatrice
+
+MONSTERS
+Mostri
+
+
+##
+## Status update messages
+##
+
+RETURN_TO_INTRO
+Ritorna al Menu Principale
+
+SERVER_WONT_START
+Il server non può essere avviato.
+
+SERVER_TIMEOUT
+Il server non risponde.
+
+SERVER_LOST
+La connessione al server è stata persa.
+
+PLAYER_DISCONNECTED
+Il giocatore %1% si è disconnesso.
+
+INVALID_CLIENT_SAVE_DATA_RECEIVED
+Il server ha ricevuto dal client dei dati di salvataggio non validi. Alcuni possono essere ignorati.
+
+NON_HOST_SAVE_REQUEST_IGNORED
+Il server ha ricevuto una richiesta di salvataggio gioco non valida dal vostro client. Non sei il sistema ospite, quindi non è possibile salvare il gioco.
+
+UNABLE_TO_WRITE_CONFIG_XML
+Errore di scrittura per il file config.xml. Impossibile salvare le opzioni.
+
+UNABLE_TO_READ_CONFIG_XML
+Errore di lettura per il file config.xml. Verranno usate le opzioni predefinite.
+
+UNABLE_TO_WRITE_SAVE_FILE
+Errore di scrittura per il file di salvataggio.
+
+UNABLE_TO_READ_SAVE_FILE
+Errore di lettura per il file di salvataggio.
+
+EMPIRE_NOT_FOUND_CANT_HANDLE_ORDERS
+Non controlli un impero e quindi non puoi dare ordini.
+
+ORDERS_FOR_WRONG_EMPIRE
+Non puoi dare ordini ad un impero che non controlli.
+
+SERVER_ALREADY_HOSTING_GAME
+Questo server sta già ospitando una partita.
+
+SERVER_UNABLE_TO_SELECT_HOST
+Il server non è in grado di selezionare un sistema ospite.
+
+SERVER_FOUND_NO_ACTIVE_PLAYERS
+Impossibile generare una partita senza giocatori attivi.
+
+
+##
+## Command-line and options database entries
+##
+
+COMMAND_LINE_USAGE
+'''Utilizzo: '''
+
+COMMAND_LINE_DEFAULT
+'''Predefiniti: '''
+
+OPTIONS_DB_GENERATE_CONFIG_XML
+Utilizza tutte le impostazioni da qualsiasi file config.xml esistente e quelli indicati sulla riga di comando per generare un file config.xml. Questo sovrascriverà il file config.xml corrente, se esiste.
+
+OPTIONS_DB_SOUND_ON
+Abilita il suono durante la partita.
+
+OPTIONS_DB_MUSIC_ON
+Abilita la musica durante la partita.
+
+OPTIONS_DB_BG_MUSIC
+Imposta la traccia da riprodurre per il sottofondo musicale.
+
+OPTIONS_DB_FULLSCREEN
+Avvia il gioco in modalità schermo intero. Potrebbe essere necessario riavviare il gioco affinchè le modifiche abbiano effetto.
+
+OPTIONS_DB_GALAXY_MAP_GAS
+Rendering della sostanza gassosa per determinare la forma della galassia. Può rallentare il rendering su vecchi sistemi.
+
+OPTIONS_DB_GALAXY_MAP_STARFIELDS
+Rendering del campo stellare intorno al sistema. Può rallentare il rendering su vecchi sistemi.
+
+OPTIONS_DB_GALAXY_MAP_SCALE_LINE
+Visualizza la scala per le distanze dell'universo sulla mappa della galassia.
+
+OPTIONS_DB_STARLANE_THICKNESS
+Imposta la larghezza in pixel da visualizzare per la rotta stellare.
+
+OPTIONS_DB_STARLANE_CORE
+Moltiplicatore di larghezza delle linee stellari per il cuore dell'impero.
+
+OPTIONS_DB_RESOURCE_STARLANE_COLOURING
+Assegna alle rotte i colori dell'Impero che può utilizzare per il commercio.
+
+OPTIONS_DB_UNOWNED_STARLANE_COLOUR
+Imposta i colori predefiniti delle rotte.
+
+OPTIONS_DB_FLEET_SUPPLY_LINES
+Assegna alle rotte di rifornimento gli indicatori colorati dell'Impero
+
+OPTIONS_DB_FLEET_SUPPLY_LINE_WIDTH
+Imposta la larghezza in pixels da visualizzare per le rotte di rifornimento.
+
+OPTIONS_DB_FLEET_SUPPLY_LINE_DOT_SPACING
+Imposta la distanza dei punti da visualizzare sulle linee di rifornimento.
+
+OPTIONS_DB_FORCE_EXTERNAL_SERVER
+Impedisce al client l'esecuzione automatica del server.
+
+OPTIONS_DB_EXTERNAL_SERVER_ADDRESS
+L'indirizzo del server esterno. Se usato, questo client diventa il manager del gioco.
+
+OPTIONS_DB_UI_MAIN_MENU_X
+Posizione centrale del menu nella schermata iniziale, da 0 a 1 in riferimento alla larghezza totale.
+
+OPTIONS_DB_UI_MAIN_MENU_Y
+Posizione centrale del menu nella schermata iniziale, da 0 a 1 in riferimento all'altezza totale.
+
+OPTIONS_DB_APP_WIDTH
+Imposta la risoluzione orizzontale dell'applicazione.
+
+OPTIONS_DB_APP_HEIGHT
+Imposta la risoluzione verticale dell'applicazione.
+
+OPTIONS_DB_APP_WIDTH_WINDOWED
+Imposta la risoluzione orizzontale dell'applicazione in modalità finestra.
+
+OPTIONS_DB_APP_HEIGHT_WINDOWED
+Imposta la risoluzione verticale dell'applicazione in modalità finestra.
+
+OPTIONS_DB_SHOW_FPS
+Attiva la visualizzazione dei FPS (1 o 0).
+
+OPTIONS_DB_LIMIT_FPS
+Attiva il limite dei FPS (1 o 0). Il limite è impostato con l'opzione Max FPS.
+
+OPTIONS_DB_MAX_FPS
+Imposta il limite dei FPS, se abilitato. è attivato con Limit FPS.
+
+OPTIONS_DB_UI_SOUND_VOLUME
+Il volume (0 - 255) con il quale vengono riprodotti gli effetti sonori.
+
+OPTIONS_DB_UI_SOUND_BUTTON_ROLLOVER
+Il file audio riprodotto quando il mouse passa sopra un pulsante.
+
+OPTIONS_DB_UI_SOUND_BUTTON_CLICK
+Il file audio riprodotto quando viene cliccato un pulsante.
+
+OPTIONS_DB_UI_SOUND_TURN_BUTTON_CLICK
+Il file audio riprodotto quando viene cliccato il pulsante di fine turno.
+
+OPTIONS_DB_UI_SOUND_LIST_SELECT
+Il file audio riprodotto quando viene selezionata una lista oppure un menu a discesa.
+
+OPTIONS_DB_UI_SOUND_ITEM_DROP
+Il file audio riprodotto quando un elemento viene rilasciato in una lista.
+
+OPTIONS_DB_UI_SOUND_LIST_PULLDOWN
+Il file audio riprodotto quando viene aperto un menu a discesa.
+
+OPTIONS_DB_UI_SOUND_TEXT_TYPING
+Il file audio riprodotto quando l'utente scrive del testo.
+
+OPTIONS_DB_UI_SOUND_WINDOW_MAXIMIZE
+Il file audio riprodotto quando una finestra viene ingrandita.
+
+OPTIONS_DB_UI_SOUND_WINDOW_MINIMIZE
+Il file audio riprodotto quando una finestra viene ridotta.
+
+OPTIONS_DB_UI_SOUND_WINDOW_CLOSE
+Il file audio riprodotto quando una finestra viene chiusa.
+
+OPTIONS_DB_UI_SOUND_ALERT
+Il file audio riprodotto quando si verifica un errore oppure un'azione non consentita.
+
+OPTIONS_DB_UI_SOUND_PLANET_BUTTON_CLICK
+Il file audio riprodotto quando viene cliccato il pulsante di un pianeta.
+
+OPTIONS_DB_UI_SOUND_FLEET_BUTTON_ROLLOVER
+Il file audio riprodotto quando il mouse passa sopra un pulsante di flotta.
+
+OPTIONS_DB_UI_SOUND_FLEET_BUTTON_CLICK
+Il file audio riprodotto quando viene cliccato un pulsante di flotta.
+
+OPTIONS_DB_UI_SOUND_SYSTEM_ICON_ROLLOVER
+Il file audio riprodotto quando il mouse passa sopra un'icona dei sistemi.
+
+OPTIONS_DB_UI_SOUND_SIDEPANEL_OPEN
+Il file audio riprodotto quando viene aperto il pannello laterale del sistema.
+
+OPTIONS_DB_UI_FONT
+Imposta il file del font.
+
+OPTIONS_DB_UI_FONT_BOLD
+Imposta il file del font in grassetto.
+
+OPTIONS_DB_UI_FONT_SIZE
+Imposta la dimensione del font per l'interfaccia.
+
+OPTIONS_DB_UI_TITLE_FONT
+Imposta il file del font per il titolo.
+
+OPTIONS_DB_UI_TITLE_FONT_SIZE
+Imposta la dimensione del font per il titolo.
+
+OPTIONS_DB_UI_WND_COLOR
+Imposta il colore di sfondo dell'interfaccia.
+
+OPTIONS_DB_UI_TEXT_COLOR
+Imposta il colore del testo dell'interfaccia.
+
+OPTIONS_DB_UI_DEFAULT_LINK_COLOR
+Imposta il colore predefinito per il collegamento dell'interfaccia.
+
+OPTIONS_DB_UI_ROLLOVER_LINK_COLOR
+Imposta il colore per il passaggio del mouse sui collegamenti.
+
+OPTIONS_DB_UI_CTRL_COLOR
+Imposta il colore di sfondo dei pulsanti di controllo.
+
+OPTIONS_DB_UI_CTRL_BORDER_COLOR
+Imposta il colore del bordo dei pulsanti di controllo.
+
+OPTIONS_DB_UI_STATE_BUTTON_COLOR
+Imposta il colore dei pulsanti selezionati.
+
+OPTIONS_DB_UI_DROPDOWNLIST_ARROW_COLOR
+Imposta il colore delle frecce per i menu a discesa.
+
+OPTIONS_DB_UI_EDIT_HILITE
+Imposta il colore di selezione nei controlli di modifica del testo.
+
+OPTIONS_DB_UI_STAT_INCREASE_COLOR
+Imposta il colore di incremento nelle statistiche.
+
+OPTIONS_DB_UI_STAT_DECREASE_COLOR
+Imposta il colore di riduzione nelle statistiche.
+
+OPTIONS_DB_UI_WND_OUTER_BORDER_COLOR
+Imposta il colore del bordo esterno delle finestre.
+
+OPTIONS_DB_UI_WND_INNER_BORDER_COLOR
+Imposta il colore del bordo interno delle finestre.
+
+OPTIONS_DB_UI_KNOWN_TECH
+Imposta il colore delle tecnologie conosciute nell'albero tecnologico.
+
+OPTIONS_DB_UI_KNOWN_TECH_BORDER
+Imposta il colore dei testi e dei bordi delle tecnologie conosciute nell'albero tecnologico.
+
+OPTIONS_DB_UI_RESEARCHABLE_TECH
+Imposta il colore delle tecnologie ricercabili nell'albero tecnologico.
+
+OPTIONS_DB_UI_RESEARCHABLE_TECH_BORDER
+Imposta il colore dei testi e dei bordi delle tecnologie ricercabili nell'albero tecnologico.
+
+OPTIONS_DB_UI_UNRESEARCHABLE_TECH
+Imposta il colore delle tecnologie non ancora ricercabili nell'albero tecnologico.
+
+OPTIONS_DB_UI_UNRESEARCHABLE_TECH_BORDER
+Imposta il colore dei testi e dei bordi delle tecnologie non ancora ricercabili nell'albero tecnologico.
+
+OPTIONS_DB_UI_TECH_PROGRESS_BACKGROUND
+Imposta il colore di sfondo della barra di avanzamento nell'albero tecnologico.
+
+OPTIONS_DB_UI_TECH_PROGRESS
+Imposta il colore della barra di avanzamento nell'albero tecnologico.
+
+OPTIONS_DB_UI_SCROLL_WIDTH
+Imposta la larghezza di scorrimento.
+
+OPTIONS_DB_UI_SYSTEM_ICON_SIZE
+Imposta la dimensione delle icone dei sistemi.
+
+OPTIONS_DB_UI_SYSTEM_FOG
+Attiva l'offuscamento sopra le icone dei sistemi.
+
+OPTIONS_DB_UI_SYSTEM_FOG_SPACING
+Imposta la spaziatura delle linee di offuscamento (in pixels).
+
+OPTIONS_DB_UI_SYSTEM_CIRCLES
+Attiva il disegno di un cerchio attorno ai sistemi.
+
+OPTIONS_DB_UI_SYSTEM_CIRCLE_SIZE
+Imposta la dimensione dei cerchi attorno ai sistemi, relativo alla dimensione delle icone.
+
+OPTIONS_DB_UI_SYSTEM_NAME_UNOWNED_COLOR
+Imposta il colore dei sistemi non controllati nella mappa.
+
+OPTIONS_DB_UI_MEDIUM_FLEET_BUTTON_MIN_ZOOM
+Imposta il livello minimo di ingrandimento al quale le flotte medie sono mostrate sulla mappa.
+
+OPTIONS_DB_UI_SMALL_FLEET_BUTTON_MIN_ZOOM
+Imposta il livello minimo di ingrandimento al quale le flotte piccole sono mostrate nella mappa.
+
+OPTIONS_DB_UI_TINY_FLEET_BUTTON_MIN_ZOOM
+Imposta il livello minimo di ingrandimento al quale le flotte minori sono mostrate nella mappa. Ad ingrandimenti minori nessuna flotta è mostrata sulla mappa.
+
+OPTIONS_DB_UI_FLEET_SELECTION_INDICATOR_SIZE
+Imposta la dimensione dell'indicatore di selezione della flotta (relativo all'icona della flotta).
+
+OPTIONS_DB_UI_SYSTEM_SELECTION_INDICATOR_SIZE
+Imposta la dimensione dell'indicatore di selezione del sistema (relativo all'icona del sistema).
+
+OPTIONS_DB_UI_SYSTEM_SELECTION_INDICATOR_FPS
+Imposta la velocità dei fotogrammi dell'animazione per l'indicatore di selezione del sistema.
+
+OPTIONS_DB_UI_SYSTEM_TINY_ICON_SIZE_THRESHOLD
+Imposta la dimensione minima delle icone dei sistemi oltre la quale viene mostrata la piccola icona fissa.
+
+OPTIONS_DB_UI_TOOLTIP_DELAY
+Imposta il ritardo del tooltip, in ms.
+
+OPTIONS_DB_UI_MULTIPLE_FLEET_WINDOWS
+Se attivato, un click sul pulsante di flotta multipla aprirà più finestre contemporaneamente. Altrimenti l'apertura di una causerà la chiusura di qualunque altra correntemente aperta.
+
+OPTIONS_DB_UI_WINDOW_QUICKCLOSE
+Chiude le finestre aperte quando viene cliccato il pulsante destro del mouse sulla mappa.
+
+OPTIONS_DB_UI_SIDEPANEL_WIDTH
+Imposta la larghezza del pannello laterale del sistema.
+
+OPTIONS_DB_UI_SIDEPANEL_PLANET_MAX_DIAMETER
+Imposta la dimensione del pianeta rotante più grande nel pannello laterale del sistema.
+
+OPTIONS_DB_UI_SIDEPANEL_PLANET_MIN_DIAMETER
+Imposta la dimensione del pianeta rotante più piccolo nel pannello laterale del sistema.
+
+OPTIONS_DB_GAMESETUP_EMPIRE_NAME
+Il nome del tuo impero.
+
+OPTIONS_DB_GAMESETUP_PLAYER_NAME
+Il nome usato nel gioco dal giocatore.
+
+OPTIONS_DB_GAMESETUP_EMPIRE_COLOR
+Il colore usato per il tuo impero.
+
+OPTIONS_DB_UI_TECH_LAYOUT_HORZ_SPACING
+La spaziatura orizzontale fra tecnologie nell'albero tecnologico, in multipli della larghezza di ogni singola tecnologia.
+
+OPTIONS_DB_UI_TECH_LAYOUT_VERT_SPACING
+La spaziatura verticale fra tecnologie nell'albero tecnologico, in multipli dell'altezza di ogni singola tecnologia.
+
+OPTIONS_DB_SAVE_DIR
+Imposta la cartella dove risiedono i salvataggi. I nomi delle cartelle sono considerati relativi alla posizione dell'applicazione.
+
+OPTIONS_DB_RESOURCE_DIR
+Imposta la cartella radice per i file di gioco (contenuti del gioco e file di dati).
+
+OPTIONS_DB_LOG_LEVEL
+Imposta il livello sopra al quale i messaggi di log verranno mostrati (livelli in ordine decrescente: DEBUG, INFO, NOTICE, WARN, ERROR, CRIT, ALERT, FATAL, EMERG)
+
+OPTIONS_DB_STRINGTABLE_FILENAME
+Imposta il file della lingua.
+
+OPTIONS_DB_AUTOSAVE_TURNS
+Imposta il numero di turni da attendere fra due salvataggi automatici.
+
+OPTIONS_DB_MUSIC_VOLUME
+Il volume (da 0 a 255) per la musica durante la partita.
+
+OPTIONS_DB_QUICKSTART
+Avvio veloce senza mostrare il menu.
+
+
+##
+## File dialog
+##
+
+FILE_DLG_FILE_TYPES
+Tipo(i):
+
+FILE_DLG_OVERWRITE_PROMPT
+'''%1% esiste.
+sovrascrivere?'''
+
+FILE_DLG_FILENAME_IS_A_DIRECTORY
+'''"%1%"
+è una cartella.'''
+
+FILE_DLG_FILE_DOES_NOT_EXIST
+'''Il file "%1%"
+non esiste.'''
+
+FILE_DLG_DEVICE_IS_NOT_READY
+Il dispositivo non è pronto.
+
+
+##
+## Color selection dialog
+##
+
+COLOR_DLG_NEW
+Nuovo
+
+COLOR_DLG_OLD
+Vecchio
+
+COLOR_DLG_GREEN
+V:
+
+
+##
+## Intro screen
+##
+
+INTRO_WINDOW_TITLE
+FreeOrion Menu Principale
+
+INTRO_BTN_SINGLE_PLAYER
+Giocatore Singolo
+
+INTRO_BTN_QUICK_START
+Partita Veloce
+
+INTRO_BTN_MULTI_PLAYER
+Multi Giocatore
+
+INTRO_BTN_LOAD_GAME
+Carica Partita
+
+INTRO_BTN_OPTIONS
+Opzioni
+
+INTRO_BTN_ABOUT
+Informazioni
+
+INTRO_BTN_CREDITS
+Ringraziamenti
+
+INTRO_BTN_EXIT
+Esci
+
+ERR_CONNECT_TIMED_OUT
+Tempo scaduto durante il tentativo di connessione al server
+
+
+##
+## Server Setup Screen
+##
+
+SCONNECT_WINDOW_TITLE
+Connessione al server
+
+LAN_GAME_LABEL
+Partita in rete locale (LAN):
+
+INTERNET_GAME_LABEL
+Partita su internet:
+
+PLAYER_NAME_LABEL
+Nome Giocatore
+
+HOST_GAME_BN
+Ospita una nuova partita
+
+JOIN_GAME_BN
+Unisciti ad una partita
+
+REFRESH_LIST_BN
+Aggiorna Lista
+
+
+##
+## Multiplayer lobby
+##
+
+MPLOBBY_WINDOW_TITLE
+Impostazioni Multigiocatore
+
+MULTIPLAYER_GAME_START_CONDITIONS
+Richiesti nome impero e colori univoci
+
+MULTIPLAYER_PLAYER_LIST_TYPES
+Tipo
+
+MULTIPLAYER_PLAYER_LIST_NAMES
+Giocatore
+
+MULTIPLAYER_PLAYER_LIST_EMPIRES
+Impero
+
+MULTIPLAYER_PLAYER_LIST_COLOURS
+Colore Impero
+
+MULTIPLAYER_PLAYER_LIST_ORIGINAL_NAMES
+Giocatore Precedente
+
+MULTIPLAYER_PLAYER_LIST_STARTING_SPECIES
+Specie Iniziali
+
+NEW_GAME_BN
+Nuova Partita
+
+LOAD_GAME_BN
+Carica Partita
+
+START_GAME_BN
+Avvia Partita
+
+
+##
+## Galaxy Setup Screen
+##
+
+GSETUP_WINDOW_TITLE
+'''Impostazioni Galassia '''
+
+GSETUP_PLAYER_NAME
+Nome Giocatore
+
+GSETUP_EMPIRE_NAME
+Nome Impero
+
+GSETUP_EMPIRE_COLOR
+Colore Impero
+
+GSETUP_SPECIES
+Specie Iniziali
+
+GSETUP_NUMBER_AIS
+Numero di giocatori controllati dal computer
+
+GSETUP_SEED
+Seme
+
+GSETUP_STARS
+Sistemi
+
+GSETUP_SHAPE
+Forma Galassia
+
+GSETUP_AGE
+Età Galassia
+
+GSETUP_STARLANE_FREQ
+Frequenza rotte stellari
+
+GSETUP_PLANET_DENSITY
+Densità Pianeti
+
+GSETUP_SPECIALS_FREQ
+Frequenza Speciali
+
+GSETUP_MONSTER_FREQ
+Frequenza Mostri
+
+GSETUP_NATIVE_FREQ
+Frequenza Nativa
+
+# A galaxy shape to select when generating a universe.
+GSETUP_2ARM
+Spirale, 2-bracci
+
+# A galaxy shape to select when generating a universe.
+GSETUP_3ARM
+Spirale, 3-bracci
+
+# A galaxy shape to select when generating a universe.
+GSETUP_4ARM
+Spirale, 4-bracci
+
+# A galaxy shape to select when generating a universe.
+GSETUP_CLUSTER
+Agglomerato
+
+# A galaxy shape to select when generating a universe.
+GSETUP_ELLIPTICAL
+Ellittica
+
+# A galaxy shape to select when generating a universe.
+GSETUP_RING
+Ad anello
+
+# A galaxy shape to select when generating a universe.
+GSETUP_RANDOM
+Casuale
+
+# Frequency value of starlanes, planets, specials, monsters and native species.
+GSETUP_NONE
+Nessuna
+
+# Frequency value of starlanes, planets, specials, monsters and native species.
+GSETUP_LOW
+Bassa
+
+# Frequency value of starlanes, planets, specials, monsters and native species.
+GSETUP_MEDIUM
+Media
+
+# Frequency value of starlanes, planets, specials, monsters and native species.
+GSETUP_HIGH
+Alta
+
+# A galaxy age to select when generating a universe.
+GSETUP_YOUNG
+Giovane
+
+# A galaxy age to select when generating a universe.
+GSETUP_MATURE
+Matura
+
+# A galaxy age to select when generating a universe.
+GSETUP_ANCIENT
+Antica
+
+# AI aggression level.
+GSETUP_BEGINNER
+Principiante
+
+# AI aggression level.
+GSETUP_TURTLE
+Testuggine
+
+# AI aggression level.
+GSETUP_CAUTIOUS
+Cauto
+
+# AI aggression level.
+GSETUP_TYPICAL
+Tradizionale
+
+# AI aggression level.
+GSETUP_AGGRESSIVE
+Aggressivo
+
+# AI aggression level.
+GSETUP_MANIACAL
+Maniacale
+
+
+##
+## About dialog
+##
+
+LICENSE
+Licenza
+
+ABOUT_WINDOW_TITLE
+Informazioni su FreeOrion
+
+VISION
+Visione
+
+FREEORION_VISION
+'''FreeOrion, è un gioco open-source ispirato a Master of Orion, è un gioco epico spaziale di strategia a turni che si basa sul classico modello '4X' che prevede la costruzione degli elementi di gioco come Stellaris e contiene un versatile motore di battaglia. Mentre la sua struttura open-source e modulare permette un notevole grado di personalizzazione del motore di gioco e degli elementi della storia da parte della comunità, la squadra di FreeOrion si è dedicata alla costruzione di un modello di 'grande campagna' in un universo vivibile e di grande respiro. '''
+
+
+##
+## In-game menu
+##
+
+GAME_MENU_SAVE
+Salva Partita
+
+GAME_MENU_LOAD
+Carica Partita
+
+GAME_MENU_RESIGN
+Abbandona
+
+GAME_MENU_SAVE_FILES
+Salvataggi
+
+
+##
+## Save game dialog
+##
+
+
+##
+## Game options
+##
+
+OPTIONS_TITLE
+Opzioni
+
+OPTIONS_MULTIPLE_FLEET_WNDS
+Finestre flotta multiple
+
+OPTIONS_QUICK_CLOSE_WNDS
+Chiusura rapida finestre
+
+OPTIONS_SHOW_SIDEPANEL_PLANETS
+Mostra pannello laterale pianeti
+
+OPTIONS_MISC_UI
+Impostazioni varie interfaccia utente
+
+OPTIONS_AUTOSAVE_LIMIT
+Salvataggi automatici da conservare
+
+OPTIONS_AUTOSAVE_TURNS_BETWEEN
+Turni tra un salvataggio automatico e l'altro
+
+OPTIONS_LANGUAGE
+File della lingua
+
+OPTIONS_FONTS
+Tipo Carattere
+
+OPTIONS_FONT_SIZES
+Dimensione carattere
+
+OPTIONS_FONT_TEXT
+Testo
+
+OPTIONS_FONT_TITLE
+Titoli finestre
+
+OPTIONS_TECH_SPACING_HORIZONTAL
+Orizzontale
+
+OPTIONS_TECH_SPACING_VERTICAL
+Verticale
+
+OPTIONS_TOOLTIP_DELAY
+Ritardo testo a comparsa (ms)
+
+OPTIONS_SWAP_MOUSE_LR
+Scambia tasto sinistro e destro del mouse
+
+OPTIONS_VIDEO_MODE
+Modalità video a schermo intero (richiede riavvio)
+
+OPTIONS_VIDEO_MODE_LIST_DESCRIPTION
+Imposta i bit per pixel e la risoluzione a schermo intero.
+
+OPTIONS_VIDEO_MODE_WINDOWED
+Modalità video in finestra (richiede riavvio)
+
+OPTIONS_VIDEO_MODE_WINDOWED_SPINNERS_DESCRIPTION
+Imposta larghezza ed altezza della modalità a finetra. Questo sistema utilizza i bit per pixel della modalità schermo intero.
+
+OPTIONS_APP_WIDTH_WINDOWED
+Larghezza finestra
+
+OPTIONS_APP_HEIGHT_WINDOWED
+Altezza finestra
+
+OPTIONS_APP_LEFT_WINDOWED
+Posizione Margine Sinistro Finestra
+
+OPTIONS_FULLSCREEN
+Schermo intero
+
+OPTIONS_SHOW_FPS
+Mostra FPS
+
+OPTIONS_LIMIT_FPS
+Limite FPS
+
+OPTIONS_MAX_FPS
+FPS Massimi
+
+OPTIONS_APPLY
+Applica
+
+OPTIONS_GALAXY_MAP
+Mappa Galassia
+
+OPTIONS_DESCRIPTIONS
+Descrizione contesto
+
+OPTIONS_SYSTEM_ICONS
+Icone sistema
+
+OPTIONS_UI_SYSTEM_ICON_SIZE
+Dimensione icone del sistema
+
+OPTIONS_UI_SYSTEM_FOG
+Linee Nebbia di guerra del Sistema
+
+OPTIONS_UI_SYSTEM_FOG_SPACING
+Spaziatura linee Nebbia di Guerra
+
+OPTIONS_UI_SYSTEM_CIRCLES
+Chiusura cerchio Sistema
+
+OPTIONS_UI_SYSTEM_CIRCLE_SIZE
+Grandezza cerchio
+
+OPTIONS_UI_SYSTEM_SELECTION_INDICATOR_SIZE
+Grandezza indicatore di selezione
+
+OPTIONS_UI_SYSTEM_SELECTION_INDICATOR_FPS
+Velocità dei fotogrammi per l'indicatore animato di selezione sistema
+
+OPTIONS_UI_SYSTEM_TINY_ICON_SIZE_THRESHOLD
+Soglia grandezza icone sistema
+
+OPTIONS_UI_SYSTEM_NAME_UNOWNED_COLOR
+Colore nome sistema libero
+
+OPTIONS_FLEET_ICONS
+Icone flotta
+
+OPTIONS_UI_TINY_FLEET_BUTTON_MIN_ZOOM
+Zoom minimo icona flotta (piccolissima)
+
+OPTIONS_UI_SMALL_FLEET_BUTTON_MIN_ZOOM
+Zoom minimo icona flotta (piccola)
+
+OPTIONS_UI_MEDIUM_FLEET_BUTTON_MIN_ZOOM
+Zoom minimo icona flotta (media)
+
+OPTIONS_UI_FLEET_SELECTION_INDICATOR_SIZE
+Grandezza indicatore selezione flotta
+
+OPTIONS_GALAXY_MAP_GENERAL
+Generale
+
+OPTIONS_GALAXY_MAP_GAS
+Rendering gas mappa galassia
+
+OPTIONS_GALAXY_MAP_STARFIELDS
+Rendering campo stellato mappa galassia
+
+OPTIONS_GALAXY_MAP_SCALE_LINE
+Scala distanze mappa galassia
+
+OPTIONS_GALAXY_MAP_DETECTION_RANGE
+Cerchi area di rilevamento
+
+OPTIONS_GALAXY_MAP_POPUP
+Menu di scelta rapida mappa galassia
+
+OPTIONS_STARLANES
+Rotte spaziali
+
+OPTIONS_STARLANE_THICKNESS
+Spessore rotte
+
+OPTIONS_RESOURCE_STARLANE_COLOURING
+Colorazione rotte commerciali
+
+OPTIONS_FLEET_SUPPLY_LINES
+Linee rifornimento flotta
+
+OPTIONS_FLEET_SUPPLY_LINE_WIDTH
+Larghezza linee rifornimento flotta
+
+OPTIONS_FLEET_SUPPLY_LINE_DOT_SPACING
+Spaziatura linee rifornimento flotta
+
+OPTIONS_FLEET_SUPPLY_LINE_DOT_RATE
+Quantità di punti nelle linee dei rifornimenti della flotta
+
+OPTIONS_UNOWNED_STARLANE_COLOUR
+Colore predefinito rotta
+
+OPTIONS_MUSIC
+Musica
+
+OPTIONS_UI_SOUNDS
+Suoni Interfaccia
+
+OPTIONS_BACKGROUND_MUSIC
+Musica di sottofondo
+
+OPTIONS_SOUNDS
+Suoni
+
+OPTIONS_SOUND_CLOSE
+Chiudi finestra
+
+OPTIONS_SOUND_MINIMIZE
+Riduci finestra
+
+OPTIONS_SOUND_MAXIMIZE
+Ingrandisci finestra
+
+OPTIONS_SOUND_ROLLOVER
+Passaggio
+
+OPTIONS_SOUND_FLEET_CLICK
+Click tasto flotta
+
+OPTIONS_SOUND_FLEET_ROLLOVER
+Passaggio tasto flotta
+
+OPTIONS_SOUND_SYSTEM_ROLLOVER
+Passaggio icona sistema
+
+OPTIONS_SOUND_WINDOW
+Suoni finestre
+
+OPTIONS_SOUND_BUTTON
+Suoni pulsanti
+
+OPTIONS_SOUND_ALERT
+Attenzione
+
+OPTIONS_SOUND_TYPING
+Scrittura
+
+OPTIONS_SOUND_TURN
+Click tasto turno
+
+OPTIONS_SOUND_SIDEPANEL
+Apertura pannello laterale
+
+OPTIONS_SOUND_PLANET
+Selezione pianeta
+
+OPTIONS_SOUND_LIST
+Lista suoni
+
+OPTIONS_SOUND_DROP
+Rilascia elemento
+
+OPTIONS_SOUND_PULLDOWN
+Apertura menu a tendina
+
+OPTIONS_SOUND_SELECT
+Selezione lista
+
+OPTIONS_GENERAL_COLORS
+Generale
+
+OPTIONS_CONTROL_COLORS
+Controlli interfaccia utente
+
+OPTIONS_FILL_COLOR
+Riempimento
+
+OPTIONS_BORDER_COLOR
+Bordo
+
+OPTIONS_TEXT_COLOR
+Testo
+
+OPTIONS_DEFAULT_LINK_COLOR
+Collegamenti predefiniti
+
+OPTIONS_ROLLOVER_LINK_COLOR
+Collegamenti al passaggio del mouse
+
+OPTIONS_HIGHLIGHT_COLOR
+Evidenziazione selezione
+
+OPTIONS_DROPLIST_ARROW_COLOR
+Colore freccia menu a tendina
+
+OPTIONS_STATE_BUTTON_COLOR
+Pulsante di commutazione selezionato
+
+OPTIONS_STAT_INCREASE_COLOR
+Incremento statistiche
+
+OPTIONS_STAT_DECREASE_COLOR
+Decremento statistiche
+
+OPTIONS_WINDOW_COLORS
+Finestre
+
+OPTIONS_INNER_BORDER_COLOR
+Bordo interno
+
+OPTIONS_OUTER_BORDER_COLOR
+Bordo esterno
+
+OPTIONS_PAGE_AUTOSAVE
+Salvataggio Automatico
+
+OPTIONS_PAGE_UI
+Interfaccia utente
+
+OPTIONS_PAGE_COLORS
+Colori
+
+OPTIONS_PAGE_DIRECTORIES
+Cartelle
+
+OPTIONS_TECH_COLORS
+Tecnologie
+
+OPTIONS_TEXT_AND_BORDER_COLOR
+Testo e bordi
+
+OPTIONS_KNOWN_TECH_COLORS
+Tecnologie conosciute
+
+OPTIONS_RESEARCHABLE_TECH_COLORS
+Tecnologie ricercabili
+
+OPTIONS_UNRESEARCHABLE_TECH_COLORS
+Tecnologie non ricercabili
+
+OPTIONS_TECH_PROGRESS_COLORS
+Barra di avanzamento ricerca
+
+OPTIONS_PROGRESS_BAR_COLOR
+Colore barra
+
+OPTIONS_PROGRESS_BACKGROUND_COLOR
+Sfondo
+
+OPTIONS_FOLDER_SETTINGS
+Files di risorse
+
+OPTIONS_FOLDER_SAVE
+Cartella salvataggi
+
+OPTIONS_LANGUAGE_FILE
+File della lingua
+
+OPTIONS_VOLUME_AND_MUSIC
+Volume e Musica
+
+OPTIONS_MUSIC_FILE
+File della musica
+
+OPTIONS_SOUND_FILE
+File dei suoni
+
+OPTIONS_VERBOSE_LOGGING_DESC
+Registrazione messaggi dettagliata per debug
+
+OPTIONS_VERBOSE_SITREP_DESC
+Rapporti sulla situazione con errori
+
+
+##
+## Main map window
+##
+
+# %1% current turn number.
+MAP_BTN_TURN_UPDATE
+Turno %1%
+
+MAP_BTN_OBJECTS
+Oggetti
+
+MAP_BTN_SITREP
+Eventi
+
+MAP_BTN_RESEARCH
+Ricerca
+
+MAP_BTN_PRODUCTION
+Produzione
+
+MAP_BTN_DESIGN
+Progettazione
+
+MAP_BTN_PEDIA
+Guida
+
+MAP_PRODUCTION_TITLE
+Produzione
+
+MAP_RESEARCH_TITLE
+Ricerca
+
+MAP_POPULATION_DISTRIBUTION
+Censimento
+
+MAP_DETECTION_TITLE
+Rilevamento Impero
+
+MAP_DETECTION_TEXT
+Forza Rilevamento Impero
+
+MAP_TRADE_TITLE
+Commercio
+
+MAP_TRADE_TEXT
+Commercio totale impero. (Commercio non fa nulla)
+
+
+##
+## Side panel/System information
+##
+
+# %1% resource type currently produced by the system.
+# %2% amount of the resource currently produced by the system.
+RESOURCE_PRODUCTION_TOOLTIP
+Sistema %1%: %2%
+
+# %1% resource type currently consumed by the system.
+# %2% amount of the resource currently consumed by the system.
+RESOURCE_ALLOCATION_TOOLTIP
+Sistema %1%: %2%
+
+INDUSTRY_PRODUCTION
+Produzione Industriale
+
+RESEARCH_PRODUCTION
+Produzione Ricerca
+
+TRADE_PRODUCTION
+Produzione Commercio
+
+INDUSTRY_CONSUMPTION
+Consumo Industriale
+
+RESEARCH_CONSUMPTION
+Consumo Ricerca
+
+TRADE_CONSUMPTION
+Consumo Commercio
+
+IMPORT_EXPORT_TOOLTIP
+Importazione / Esportazione
+
+RESOURCE_IMPORT
+Importazione
+
+RESOURCE_EXPORT
+Disponibile per l'esportazione
+
+RESOURCE_SELF_SUFFICIENT
+Nessuna importazione od esportazione
+
+
+##
+## Side panel/Planet panel
+##
+
+PLANET_PANEL
+Pannello Pianeta
+
+# %1% name of the system this asteroid belt is created in.
+PL_ASTEROID_BELT_OF_SYSTEM
+%1% Asteroidi
+
+# %1% size of the population this planet is colonized with.
+# %2% maximum population this planet can support.
+PL_COLONIZE
+Colonizza (%1%)
+
+PL_CANCEL_COLONIZE
+Annulla Colonizzazione
+
+PL_OUTPOST
+Piazza Avamposto
+
+# %1% number of ground troops that will be deployed on the planet.
+PL_INVADE
+Invadi (+%1%)
+
+PL_CANCEL_INVADE
+Annulla Invasione
+
+
+##
+## Side panel/Resources panel
+##
+
+# %1% current resource this planet is focused on producing.
+RP_FOCUS_TOOLTIP
+Obbiettivo: %1%
+
+
+##
+## Side panel/Specials panel
+##
+
+
+##
+## Side panel/Buildings panel
+##
+
+ORDER_BUIDLING_SCRAP
+Demolisci Struttura
+
+ORDER_CANCEL_BUIDLING_SCRAP
+Annulla demolizione struttura
+
+
+##
+## General tooltips
+##
+
+TT_THIS_TURN
+Questo Turno
+
+TT_NEXT_TURN
+Turno Successivo
+
+TT_CHANGE
+Variazione
+
+# %1% the meter name displayed.
+# %2% the meter value.
+TT_BREAKDOWN_SUMMARY
+'''%1%: %2% '''
+
+TT_INHERENT
+Innato
+
+# %1% name of the owning empire.
+# %2% FIXME
+TT_TECH
+%1% Tecnologia <i>%2%</i>
+
+# %1% name of the planet, where the building is located.
+# %2% FIXME
+TT_BUILDING
+%1% Struttura <i>%2%</i>
+
+# %1% FIXME
+# %2% FIXME
+TT_SHIP_HULL
+Nave <i>%1%</i> Scafo <i>%2%</i>
+
+# %1% FIXME
+# %2% FIXME
+TT_SHIP_PART
+Nave <i>%1%</i> Parte <i>%2%</i>
+
+# %1% FIXME
+# %2% FIXME
+TT_SPECIAL
+Speciale <i>%2%</i>
+
+# %1% name of the species.
+# %2% FIXME
+TT_SPECIES
+Specie <i>%2%</i>
+
+TT_UNKNOWN
+Sconosciuto
+
+SP_RENAME_PLANET
+Rinomina Pianeta
+
+SP_ENTER_NEW_PLANET_NAME
+Inserisci il nuovo nome del pianeta
+
+SP_PLANET_SUITABILITY
+Idoneità Pianeta
+
+
+##
+## Fleet window
+##
+
+# %1% system name where this fleet is holding.
+FW_FLEET_HOLDING_AT
+Mantenimento a %1%
+
+# %1% system name where this fleet is moving to.
+FW_FLEET_MOVING_TO
+Sposta su %1%
+
+FW_FLEET_EXPLORING_REFUEL
+In attesa di carburante
+
+FW_FLEET_EXPLORING_WAITING
+Attesa per sistema da esplorare
+
+# %1% name of the destination system
+# %2% estimated turns until the fleet reach the destination system. Can also be
+#     'unknown', 'never' or 'out of range.
+# %3% estimated turns until the fleet reach the next system. Can also be
+#     'unknown', 'never' or 'out of range.
+FW_FLEET_EXPLORING_TO
+Esplorando %1%
+
+FW_FLEET_ETA_NEVER
+Mai
+
+FW_FLEET_ETA_UNKNOWN
+Sconosciuto
+
+FW_FLEET_ETA_OUT_OF_RANGE
+Fuori portata
+
+FW_AGGRESSIVE
+Controllo del Sistema
+
+FW_AGGRESSIVE_DESC
+La flotta blocca gli imperi nemici ed inizia uno scontro con ogni nemico nel sistema.
+
+FW_PASSIVE
+Nascondi
+
+FW_PASSIVE_DESC
+La flotta cerca di rimanere nascosta; non bloccherà od inizierà uno scontro.
+
+FW_UNKNOWN_DESIGN_NAME
+Progetto sconosciuto
+
+# Displayed when creating a new fleet by dropping ships into the new fleet slot.
+FW_NEW_FLEET_LABEL
+<i>Nuova Flotta</i>
+
+# Fleet window title
+# %1% empire, which owns the fleets.
+# %2% system where those fleets hold.
+FW_EMPIRE_FLEETS_AT_SYSTEM
+%1% Flotte su %2%
+
+# Fleet window title
+# %1% empire, which owns the fleets.
+FW_EMPIRE_FLEETS
+%1% Flotte
+
+# Fleet window title
+FW_NO_FLEET
+No Flotte
+
+# Fleet window title
+# %1% system where those fleets hold.
+FW_GENERIC_FLEETS_AT_SYSTEM
+Flotte su %1%
+
+# Fleet window title
+FW_GENERIC_FLEETS
+Flotte
+
+# the name that is used for fleets the client's player does not control when
+# the empire is not specified.
+FW_FOREIGN_FLEET
+Flotta straniera
+
+# the name that is used for fleets that no player controls
+FW_ROGUE_FLEET
+Flotta Canaglia
+
+# the name that is used for ships the client's player does not control when the
+# empire is not specified.
+FW_FOREIGN_SHIP
+Nave straniera
+
+# the name that is used for ships that no player controls
+FW_ROGUE_SHIP
+Nave Canaglia
+
+SHIP_DAMAGE_STAT_TITLE
+Danno
+
+FW_FLEET_FUEL_SUMMARY
+Carburante flotta - Pari al carburante minimo delle navi della flotta.
+
+FW_FLEET_SPEED_SUMMARY
+Velocità flotta - Pari alla velocità minima delle navi della flotta.
+
+FW_FLEET_SHIELD_SUMMARY
+Scudi Flotta - Pari agli scudi totali delle navi della flotta.
+
+FW_FLEET_STRUCTURE_SUMMARY
+Struttura Flotta - Pari alla struttura totale delle navi della flotta.
+
+FW_FLEET_DAMAGE_SUMMARY
+Danno Flotta - Pari al danno totale delle navi della flotta.
+
+FW_FLEET_COUNT_SUMMARY
+Conteggio Flotta - Pari al numero totale delle navi della flotta.
+
+FW_SPLIT_DAMAGED_FLEET
+Separa Navi Danneggiate dalla Flotta
+
+FW_SPLIT_UNFUELED_FLEET
+Separa Navi Senza Carburante dalla Flotta
+
+FW_SPLIT_FLEET
+Separa Flotta
+
+ORDER_SHIP_SCRAP
+Demolisci Nave
+
+ORDER_FLEET_SCRAP
+Rottama Navi
+
+ORDER_CANCEL_SHIP_SCRAP
+Annulla demolizione nave
+
+ORDER_CANCEL_FLEET_SCRAP
+Annulla Rottamazione Navi
+
+ORDER_FLEET_EXPLORE
+Esplora
+
+ORDER_CANCEL_FLEET_EXPLORE
+Interrompi Esplorazione
+
+
+##
+## Moderator
+##
+
+MOD_DESTROY
+Moderatore: Distruggi
+
+MOD_SET_OWNER
+Moderatore: Imposta Proprietario
+
+
+##
+## Diplomacy
+##
+
+DIPLOMACY
+Diplomazia
+
+PEACE
+Pace
+
+WAR
+Guerra
+
+WAR_DECLARATION
+Dichiara Guerra
+
+PEACE_PROPOSAL
+Proponi Pace
+
+PEACE_PROPOSAL_CANCEL
+Annulla Proposta di Pace
+
+PEACE_ACCEPT
+Accetta Proposta di Pace
+
+
+##
+## TechTreeWnd
+##
+
+TECH_DISPLAY
+Schermo
+
+# %1% research points used this turn.
+# %2% research points available for this turn.
+TECH_TURN_COST_STR
++%1% PR
+
+# %1% number of remaining turns to complete the technology research.
+TECH_TURNS_LEFT_STR
+%1% Turni
+
+TECH_TURNS_LEFT_NEVER
+Mai
+
+TECH_WND_STATUS_COMPLETED
+Completato
+
+TECH_WND_STATUS_RESEARCHABLE
+Ricercabile
+
+TECH_WND_STATUS_LOCKED
+Bloccato
+
+TECH_WND_UNRESEARCHABLE
+Non Ricercabile
+
+TECH_WND_ENQUEUED
+Accodato
+
+TECH_WND_UNRESEARCHED_PREREQUISITES
+'''Prerequisiti non Ricercati: '''
+
+TECH_WND_VIEW_TYPE
+Ad Albero / Come Lista
+
+# %1% research points already spent on a reseach.
+# %2% total research points required to complete the research.
+# %3% research points used per turn.
+# %4% research points available per turn.
+TECH_WND_PROGRESS
+'''%1% / %2% PR
++ %3% / %4% PR/turno'''
+
+# %1% estimated turns left until technology is researched.
+TECH_WND_ETA
+%1% turni restanti
+
+
+##
+## Production info panel
+##
+
+PRODUCTION_INFO_TOTAL_PS_LABEL
+Totale Punti Disponibili
+
+PRODUCTION_INFO_WASTED_PS_LABEL
+Punti Sprecati
+
+
+##
+## Research window
+##
+
+RESEARCH_WND_TITLE
+Ricerca
+
+RESEARCH_INFO_RP
+PR
+
+
+##
+## Build selector window
+##
+
+PRODUCTION_WND_BUILD_ITEMS_TITLE
+Strutture Edificabili
+
+# %1% name of the location where the item is produced.
+PRODUCTION_WND_BUILD_ITEMS_TITLE_LOCATION
+Strutture Edificabili Presso %1%
+
+PRODUCTION_WND_CATEGORY_BT_BUILDING
+Strutture
+
+PRODUCTION_WND_CATEGORY_BT_SHIP
+Navi
+
+PRODUCTION_WND_AVAILABILITY_AVAILABLE
+Disponibile
+
+PRODUCTION_WND_AVAILABILITY_UNAVAILABLE
+Non disponibile
+
+# %1% number of turns left to finish the production of an item.
+PRODUCTION_TURNS_LEFT_STR
+%1% Turni
+
+PRODUCTION_TURNS_LEFT_NEVER
+Mai
+
+PRODUCTION_DETAIL_ADD_TO_QUEUE
+Aggiungi alla coda
+
+PRODUCTION_QUEUE_PROMPT
+Doppio click su un elemento disponibile per aggiungerlo alla coda di produzione.
+
+
+##
+## Production window
+##
+
+PRODUCTION_WND_TITLE
+Produzione
+
+# %1% location where the item is produced.
+PRODUCTION_QUEUE_ITEM_LOCATION
+Su %1%
+
+
+##
+## Design window
+##
+
+DESIGN_NAME_DEFAULT
+Progetto Nave Personalizzato
+
+DESIGN_DESCRIPTION_DEFAULT
+Descrizione Progetto
+
+DESIGN_WND_STARTS
+Avvia Progettazione
+
+DESIGN_WND_HULLS
+Scafi Vuoti
+
+DESIGN_WND_FINISHED_DESIGNS
+Progetti Completi
+
+DESIGN_WND_SAVED_DESIGNS
+Progetti Salvati
+
+DESIGN_WND_PART_PALETTE_TITLE
+Parti di Nave
+
+DESIGN_WND_MAIN_PANEL_TITLE
+Dettagli Progetti
+
+DESIGN_WND_DESIGN_NAME
+Nome Progetto
+
+DESIGN_WND_DESIGN_DESCRIPTION
+Descrizione
+
+DESIGN_WND_CLEAR
+Rimuovi Parti
+
+
+##
+## Statistics
+##
+
+
+##
+## Encyclopedia
+##
+
+# %1% name of the planet.
+ENC_SUITABILITY_REPORT_POSITIVE_HEADER
+'''%1% è adatto per la colonizzazione da parte di queste specie.
+
+'''
+
+# %1% name of the planet.
+ENC_SUITABILITY_REPORT_NEGATIVE_HEADER
+'''%1% non è adatto per la colonizzazione da parte di queste specie. I tentativi di colonizzazione falliranno oppure alla fine si estinguerà la colonia.
+
+'''
+
+ENC_SHIP_PART
+Parte Nave
+
+ENC_SHIP_HULL
+Scafo Nave
+
+ENC_TECH
+Tecnologia
+
+ENC_SPECIAL
+Speciale
+
+OBJECTS_WITH_SPECIAL
+'''Oggetti con Speciale: '''
+
+ENC_BUILDING_TYPE
+Tipo Struttura
+
+ENC_SPECIES
+Specie
+
+ENC_SHIP_DESIGN
+Progetto Nave
+
+SHIPS_OF_DESIGN
+'''Navi di questo Progetto: '''
+
+ENC_INCOMPETE_SHIP_DESIGN
+Progetto Nave Incompleto
+
+ENC_EMPIRE
+Impero
+
+EMPIRE_CAPITAL
+'''Capitale: '''
+
+NO_CAPITAL
+Nessuna Capitale Conosciuta
+
+EMPIRE_METERS
+Metri:
+
+OWNED_PLANETS
+'''Pianeti Posseduti: '''
+
+NO_OWNED_PLANETS_KNOWN
+Nessun pianeta posseduto noto
+
+OWNED_FLEETS
+'''Flotte Possedute: '''
+
+# %1% link to a fleet.
+# %2% link to a system.
+OWNED_FLEET_AT_SYSTEM
+%1% su %2%
+
+NO_OWNED_FLEETS_KNOWN
+Nessuna flotta posseduta nota
+
+ENC_SHIP
+Nave
+
+ENC_MONSTER
+Tipo Mostro
+
+ENC_FLEET
+Flotta
+
+ENC_PLANET
+Pianeta
+
+ENC_BUILDING
+Struttura
+
+ENC_SYSTEM
+Sistema
+
+ENC_INDEX
+Indice Enciclopedia
+
+ENC_RP
+PR
+
+# Concise listing of costs required to produce item or research tech.
+# %1% cost to complete requested item or technology.
+# %2% unit of costs; can be `ENC_PP` or `ENC_RP` depending on the item or
+#     technology.
+# %3% turns to complete requested item or technology.
+ENC_COST_AND_TURNS_STR
+%1% %2% e %3% Turni
+
+ENC_UNLOCKED_BY
+'''<u>Sbloccato dalle Tecnologie:</u>
+
+'''
+
+ENC_UNLOCKS
+'''<u>Sblocca</u>
+
+'''
+
+# %1% object, technology or other content that should be looked up in the
+#     encyclopedia.
+ENC_LOOKUP
+Cerca %1% sulla guida
+
+# %1% link to the system, where the combat occured.
+# %2% turn when the combat occured.
+ENC_COMBAT_LOG_DESCRIPTION_STR
+Combattimento su %1% al turno %2%:
+
+# %1% link to the attacker in a weapon fired battle event.
+# %2% link to the target in a weapon fired event.
+# %3% amount of damage done when firing the weapon.
+# %4% the round number. (a round is phase where all units in a combat have
+#     acted).
+# %5% the draw number (a draw is the acting of a single combat unit).
+ENC_COMBAT_ATTACK_STR
+Round %4%: %1% attacca %2% e realizza %3% danno
+
+ENC_COMBAT_UNKNOWN_OBJECT
+Sconosciuto
+
+
+##
+## Combat report
+##
+
+
+##
+## Encyclopedia article categories and short descriptions
+##
+
+CATEGORY_GAME_CONCEPTS
+Concetti Partita
+
+GROWTH_ARTICLE_SHORT_DESC
+Crescita
+
+OUTPOSTS_ARTICLE_SHORT_DESC
+Avamposti
+
+PRODUCTION_ARTICLE_SHORT_DESC
+Produzione
+
+DIPLOMACY_ARTICLE_SHORT_DESC
+Diplomazia
+
+SPECIES_ARTICLE_SHORT_DESC
+Specie
+
+SHIPS_ARTICLE_SHORT_DESC
+Navi
+
+METER_ARTICLE_SHORT_DESC
+Misuratori
+
+POPULATION_TITLE_SHORT_DESC
+Popolazione
+
+
+##
+## Encyclopedia articles
+##
+
+METER_INDUSTRY_VALUE_LABEL
+Industria
+
+METER_RESEARCH_VALUE_LABEL
+Ricerca
+
+METER_TRADE_VALUE_LABEL
+Commercio
+
+METER_CONSTRUCTION_VALUE_LABEL
+Infrastrutture
+
+METER_HAPPINESS_VALUE_LABEL
+Felicità
+
+METER_FUEL_VALUE_LABEL
+Carburante
+
+METER_SHIELD_VALUE_LABEL
+Scudi
+
+METER_DEFENSE_VALUE_LABEL
+Difesa
+
+METER_DEFENSE_VALUE_DESC
+Il misuratore difesa di un pianeta rappresenta il potere delle armi installate sulla terra rivolte verso lo spazio. E' paragonabile al valore di danno di una nave spaziale.
+
+METER_SUPPLY_VALUE_LABEL
+Rifornimenti
+
+METER_TROOPS_VALUE_LABEL
+Truppe
+
+METER_TROOPS_VALUE_DESC
+'''Il termine Truppe combina tutti i tipi di forze militari in grado di operare sulla superficie dei pianeti.
+
+Il misuratore delle truppe su un pianeta rappresenta il potere delle forze di terra che lo difendono. La forza d'invasione deve inviare una forza più potente (cioè un numero complessivamente superiore) per conquistare un pianeta.'''
+
+METER_DETECTION_VALUE_LABEL
+Raggio di Rilevamento
+
+METER_STEALTH_VALUE_LABEL
+Occultamento
+
+METER_STEALTH_VALUE_DESC
+'''Il termine Occultamento rappresenta la capacità di un oggetto di non essere rilevato da tutti i tipi di sensori. Solo gli imperi con un'alta [[encyclopedia DETECTION_TITLE]] di o uguale al valore di occultamento dell'oggetto che si vuole rilevare.
+
+Navi spaziali, strutture, speciali, sistemi e pianeti hanno un misuratore di Occultamento.'''
+
+PEACE_TITLE
+Pace
+
+PEACE_TEXT
+La pace è lo stato diplomatico tra imperi in cui reciprocamente si impegnano a non attaccare le rispettive navi o pianeti, non ostacolare le rispettive linee di [[metertype METER_SUPPLY]], e di non ostacolare la colonizzazione.
+
+OUTPOSTS_TITLE
+Avamposti
+
+OUTPOSTS_TEXT
+Gli avamposti sono stazioni non presidiate che possono essere fondate in luoghi troppo ostili per la sopravvivenza di una colonia. Non hanno popolazione e di norma non producono risorse. Ma creano [[metertype METER_SUPPLY]] (con la giusta tecnologia) e forniscono la visione. Le colonie possono essere fondate su pianeti che hanno già un avamposto. Per costruire un avamposto, è necessario mettere un [[shippart CO_OUTPOST_POD]] su una nave. Gli avamposti si possono creare anche quando la popolazione di una colonia scende a zero per qualsiasi motivo.
+
+GROWTH_FOCUS_TITLE
+Focus sulla Crescita
+
+TRADE_FOCUS_TITLE
+Focus sul Commercio
+
+TRADE_FOCUS_TEXT
+Il focus sul commercio non fa nulla, ancora. E' solo un segnaposto per i prossimi aggiornamenti.
+
+PROTECTION_FOCUS_TITLE
+Focus sulla Protezione
+
+PROTECTION_FOCUS_TEXT
+Il focus sulla protezione rappresenta un pianeta interamente dedicato alla sua difesa.  [[metertype METER_TROOPS]], [[metertype METER_DEFENSE]] planetaria e [[metertype METER_SHIELD]] planetari sono raddoppiati.
+
+ORGANIC_SPECIES_TITLE
+Metabolismo Organico
+
+ORGANIC_SPECIES_TEXT
+Le specie organiche sono, 'la vita come noi la conosciamo', più o meno. Queste popolazioni possono essere aumentate al massimo quando il loro mondo connesso è impostato a [[encyclopedia GROWTH_FOCUS_TITLE]], oppure quando è colonizzata una crescita organica speciale, e si è concentrati sulla crescita. Le specialità di crescita biologica sono contrassegnate con un po 'di verde 'O' all'angolo.
+
+LITHIC_SPECIES_TITLE
+Metabolismo Litico
+
+ROBOTIC_SPECIES_TITLE
+Metabolismo Robotico
+
+PHOTOTROPHIC_SPECIES_TITLE
+Metabolismo Fototrofico
+
+SELF_SUSTAINING_SPECIES_TITLE
+Metabolismo Auto-Sostenibile
+
+TELEPATHIC_TITLE
+Telepatia
+
+FLEET_UPKEEP_TITLE
+Mantenimento della Flotta
+
+EVACUATION_TITLE
+Evacuazione
+
+
+##
+## Guides
+##
+
+
+##
+## Turn progress
+##
+
+TURN_PROGRESS_PHASE_FLEET_MOVEMENT
+Movimento Flotta ...
+
+TURN_PROGRESS_PHASE_COMBAT
+Risoluzione combattimento ...
+
+TURN_PROGRESS_PHASE_EMPIRE_GROWTH
+Produzione e crescita ...
+
+TURN_PROGRESS_PHASE_WAITING
+Attesa mosse avversarie ...
+
+TURN_PROGRESS_PHASE_ORDERS
+Esecuzione ordini
+
+TURN_PROGRESS_COLONIZE_AND_SCRAP
+Colonizzazione, Invasione e Rottamazione
+
+TURN_PROGRESS_PHASE_DOWNLOADING
+Scaricamento del nuovo stato di gioco
+
+TURN_PROGRESS_PHASE_LOADING_GAME
+Caricamento
+
+TURN_PROGRESS_PHASE_GENERATING_UNIVERSE
+Generazione Universo
+
+TURN_PROGRESS_STARTING_AIS
+Creazione IA Clients
+
+# %1% number of the current turn.
+TURN_BEGIN
+Inizio Turno %1%
+
+
+##
+## Messages panel
+##
+
+MESSAGES_PANEL_TITLE
+Messaggi
+
+
+##
+## Players list
+##
+
+PLAYERS_LIST_PANEL_TITLE
+Imperi
+
+PLAYING_TURN
+Giocando
+
+RESOLVING_COMBAT
+Combattimento
+
+WAITING
+Attesa
+
+
+##
+## Objects window
+##
+
+SORT
+Ordina
+
+COLLAPSE_ALL
+Comprimi Tutto
+
+EXPAND_ALL
+Espandi Tutto
+
+
+##
+## Objects columns
+##
+
+
+##
+## Filters dialog
+##
+
+VISIBLE
+Visibile
+
+PREVIOUSLY_VISIBLE
+Visibile Prec.
+
+DESTROYED
+Distrutto
+
+CONDITION_ALL
+Tutti
+
+CONDITION_ARMED
+Armati
+
+CONDITION_CAPITAL
+Capitale
+
+CONDITION_MONSTER
+Mostri
+
+CONDITION_STATIONARY
+Stazionario
+
+CONDITION_CANCOLONIZE
+Specie in grado di Colonizzare
+
+CONDITION_CANPRODUCESHIPS
+Specie in grado di Costruire Navi
+
+CONDITION_HOMEWORLD
+Pianeta Natale
+
+CONDITION_HASSPECIAL
+Condizioni Speciali
+
+CONDITION_HASTAG
+Condizione Contrassegno
+
+CONDITION_SPECIES
+Name Specie
+
+CONDITION_PLANETSIZE
+Dimensione Pianeta
+
+CONDITION_PLANETTYPE
+Tipo Pianeta
+
+CONDITION_FOCUSTYPE
+Impostazione Focus
+
+CONDITION_STARTYPE
+Tipo Stella
+
+
+##
+## Situation report
+##
+## Format: Ideally always start with Location: with ship/fleet names near the end.
+
+SITREP_PANEL_TITLE
+Rapporto Situazione
+
+# %1% number of the current turn.
+SITREP_PANEL_TITLE_TURN
+Rapporto Situazione - Turno %1%
+
+FILTERS
+Filtri
+
+SITREP_SHIP_BUILT
+Il progetto %shipdesign% '%ship%' è stato prodotto in %system%.
+
+SITREP_SHIP_BUILT_LABEL
+Nave Prodotta
+
+SITREP_SHIP_BATCH_BUILT
+%rawtext%x %shipdesign% sono stati prodotti in %system%.
+
+SITREP_SHIP_BATCH_BUILT_LABEL
+Lotto Nave Prodotto
+
+SITREP_BUILDING_BUILT
+%building% è stata edificata su %planet%.
+
+SITREP_BUILDING_BUILT_LABEL
+Struttura Edificata
+
+SITREP_TECH_RESEARCHED
+%tech% è stata ricercata.
+
+SITREP_TECH_RESEARCHED_LABEL
+Tecnologia Ricercata
+
+SITREP_COMBAT_SYSTEM
+Una battaglia si è verificata in %system%.
+
+SITREP_COMBAT_SYSTEM_LABEL
+Combattimento su Sistema
+
+COMBAT
+Combattimento
+
+SITREP_OBJECT_DESTROYED_AT_SYSTEM
+Un oggetto è stato distrutto da %system%.
+
+SITREP_OBJECT_DESTROYED_AT_SYSTEM_LABEL
+Oggetto Distrutto
+
+SITREP_SHIP_DESTROYED_AT_SYSTEM
+The %empire% %shipdesign% '%ship%' è stata distrutta da %system%.
+
+SITREP_SHIP_DESTROYED_AT_SYSTEM_LABEL
+Nave dell'Impero Distrutta
+
+SITREP_UNOWNED_SHIP_DESTROYED_AT_SYSTEM
+Un %shipdesign% è stato distrutto da %system%.
+
+SITREP_UNOWNED_SHIP_DESTROYED_AT_SYSTEM_LABEL
+Nave Sconosciuta Distrutta
+
+SITREP_FLEET_DESTROYED_AT_SYSTEM
+The %empire% flotta %fleet% è stata distrutta da %system%.
+
+SITREP_FLEET_DESTROYED_AT_SYSTEM_LABEL
+Flotta dell'Impero Distrutta
+
+SITREP_UNOWNED_FLEET_DESTROYED_AT_SYSTEM
+La flotta %fleet% è stata distrutta da %system%.
+
+SITREP_UNOWNED_FLEET_DESTROYED_AT_SYSTEM_LABEL
+Flotta Sconosciuta Distrutta
+
+SITREP_PLANET_DESTROYED_AT_SYSTEM
+The %empire% pianeta %planet% è stato distrutto da %system%.
+
+SITREP_PLANET_DESTROYED_AT_SYSTEM_LABEL
+Pianeta dell'Impero Distrutto
+
+SITREP_UNOWNED_PLANET_DESTROYED_AT_SYSTEM
+Il pianeta %planet% è stato distrutto da %system%.
+
+SITREP_UNOWNED_PLANET_DESTROYED_AT_SYSTEM_LABEL
+Pianeta Sconosciuto Distrutto
+
+SITREP_BUILDING_DESTROYED_ON_PLANET_AT_SYSTEM
+%empire% struttura %building% sul pianeta %planet% è stata distrutta da %system%.
+
+SITREP_UNOWNED_BUILDING_DESTROYED_ON_PLANET_AT_SYSTEM
+La struttura %building% sul pianeta %planet% è stata distrutta da %system%.
+
+SITREP_OBJECT_DAMAGED_AT_SYSTEM
+Un oggetto è stato danneggiato da %system%.
+
+SITREP_SHIP_DAMAGED_AT_SYSTEM
+%empire% %shipdesign% '%ship%' è stato danneggiato da %system%.
+
+SITREP_UNOWNED_SHIP_DAMAGED_AT_SYSTEM
+La %shipdesign% è stata danneggiata da %system%.
+
+SITREP_GROUND_BATTLE
+Una battaglia si è verificata sul pianeta %planet%.
+
+SITREP_GROUND_BATTLE_LABEL
+Battaglia di Terra
+
+SITREP_PLANET_CAPTURED
+%planet% è stato catturato da %empire%.
+
+SITREP_PLANET_CAPTURED_LABEL
+Pianeta Catturato
+
+SITREP_PLANET_DEPOPULATED
+La colonia su %planet% è distrutta.
+
+SITREP_PLANET_DEPOPULATED_LABEL
+Pianeta Distrutto
+
+SITREP_PLANET_COLONIZED
+%planet% è stato colonizzato.
+
+SITREP_PLANET_COLONIZED_LABEL
+Pianeta Colonizzato
+
+SITREP_FLEET_ARRIVED_AT_DESTINATION
+%fleet% è arrivata in %system%.
+
+SITREP_FLEET_ARRIVED_AT_DESTINATION_LABEL
+Gen. Flotta Arrivata
+
+SITREP_MONSTER_FLEET_ARRIVED_AT_DESTINATION
+%fleet% è arrivata in %system%.
+
+SITREP_OWN_FLEET_ARRIVED_AT_DESTINATION
+%empire% %fleet% è arrivata in %system%.
+
+SITREP_FOREIGN_FLEET_ARRIVED_AT_DESTINATION
+%empire% %fleet% è arrivata in %system%.
+
+SITREP_FOREIGN_FLEET_ARRIVED_AT_DESTINATION_LABEL
+Arrivata Flotta Straniera
+
+EFFECT_DERELICT_MAP
+Informazioni sull'area sono state ottenute da un relitto abbandonato su %system%.
+
+EFFECT_DERELICT_MAP_LABEL
+Mappa da Relitto
+
+EFFECT_DERELICT_FUEL
+Le navi sono state rifornite tramite la fornitura residua trovata in un relitto abbandonato su %system%.
+
+EFFECT_DERELICT_FUEL_LABEL
+Carburante da Relitto
+
+EFFECT_BIOWEAPON
+%system% ha perso la popolazione a causa di un attacco biologico!
+
+EFFECT_BIOWEAPON_LABEL
+Attacco Arma Biologica
+
+EFFECT_EVACUEES
+Gli sfollati si sono stabiliti su %planet%.
+
+EFFECT_EVACUEES_LABEL
+Sfollati
+
+EFFECT_STARGATE
+La flotta %fleet% ha attraversato il portale spaziale per il sistema %system%.
+
+EFFECT_STARGATE_LABEL
+Uso Portale Spaziale
+
+EFFECT_PSY_DOM_LABEL
+Dominazione Psicogenica
+
+EFFECT_MINES
+La nave dell'impero %empire% della flotta %fleet% ha subito %rawtext% punti di danno alla struttura dalle mine nel sistema %system%.
+
+EFFECT_MINES_LABEL
+Mine di Sistema
+
+
+##
+## Victory/defeat
+##
+
+VICTORY_TECH
+%empire% ha ottenuto una vittoria tecnologica.
+
+VICTORY_ALL_ENEMIES_ELIMINATED
+%empire% ha ottenuto una vittoria di sopravvivenza.
+
+SITREP_VICTORY_LABEL
+Vittoria
+
+SITREP_EMPIRE_ELIMINATED
+%empire% è stato eliminato.
+
+SITREP_EMPIRE_ELIMINATED_LABEL
+Impero Eliminato
+
+
+##
+## Random beginner hints
+##
+
+
+##
+## Species
+##
+
+ENVIRONMENTAL_PREFERENCES
+Preferenze Ambientali:
+
+SP_HUMAN
+Umano
+
+
+##
+## Specials
+##
+
+ANCIENT_RUINS_SPECIAL
+Antiche rovine
+
+ANCIENT_RUINS_SPECIAL_DESCRIPTION
+'''Questo pianeta possiede le rovine di un antica razza avanzata che sono stati dimenticati nei libri di storia, che forniscono un bonus alla ricerca.
+
+Questo pianeta conserva le rovine di una razza antica ignota, e avanzata. Il primo impero con la tecnologia [[tech LRN_XENOARCH]] Possedere questo pianeta permette di ricevere una tecnologia avanzata oppure scoprire un potente edificio o una nave.'''
+
+ECCENTRIC_ORBIT_SPECIAL
+Orbita eccentrica
+
+
+##
+## Enumeration values
+##
+
+# Universe object types
+INVALID_UNIVERSE_OBJECT_TYPE
+Oggetto Generico
+
+# Universe object types
+OBJ_BUILDING
+Edificio
+
+# Universe object types
+OBJ_SHIP
+Nave
+
+# Universe object types
+OBJ_FLEET
+Flotta
+
+# Universe object types
+OBJ_PLANET
+Pianeta
+
+# Universe object types
+OBJ_POP_CENTER
+Centro popolazione
+
+# Universe object types
+OBJ_PROD_CENTER
+Centro di produzione
+
+# Universe object types
+OBJ_SYSTEM
+Sistema
+
+# Universe object types
+OBJ_FIELD
+Campo
+
+# Star types
+INVALID_STAR_TYPE
+tipo stella sconosciuta
+
+# Star types
+STAR_BLUE
+blu
+
+# Star types
+STAR_WHITE
+bianca
+
+# Star types
+STAR_YELLOW
+gialla
+
+# Star types
+STAR_ORANGE
+arancione
+
+# Star types
+STAR_RED
+rossa
+
+# Star types
+STAR_NEUTRON
+neutrini
+
+# Star types
+STAR_BLACK
+buco nero
+
+# Star types
+STAR_NONE
+nessuna stella
+
+# Planet types
+PT_SWAMP
+paludoso
+
+# Planet types
+PT_TOXIC
+tossico
+
+# Planet types
+PT_RADIATED
+radioattivo
+
+# Planet types
+PT_BARREN
+arido
+
+# Planet types
+PT_DESERT
+deserto
+
+# Planet types
+PT_TERRAN
+terrestre
+
+# Planet types
+PT_OCEAN
+oceanico
+
+# Planet types
+PT_ASTEROIDS
+asteroidi
+
+# Planet types
+PT_GASGIANT
+gigante gassoso
+
+# Planet sizes
+SZ_NOWORLD
+Niente da vedere qui; procedi oltre.
+
+# Planet sizes
+SZ_TINY
+molto piccolo
+
+# Planet sizes
+SZ_SMALL
+piccolo
+
+# Planet sizes
+SZ_MEDIUM
+medio
+
+# Planet sizes
+SZ_LARGE
+grande
+
+# Planet sizes
+SZ_HUGE
+enorme
+
+# Planet sizes
+SZ_ASTEROIDS
+asteroidi
+
+# Planet sizes
+SZ_GASGIANT
+gigante gassoso
+
+# Planet environments
+PE_UNINHABITABLE
+inabitabile
+
+# Planet environments
+PE_HOSTILE
+ostile
+
+# Planet environments
+PE_POOR
+povero
+
+# Planet environments
+PE_ADEQUATE
+adatto
+
+# Planet environments
+PE_GOOD
+buono
+
+# Focus types
+FOCUS_INDUSTRY
+industria
+
+# Focus types
+FOCUS_RESEARCH
+ricerca
+
+# Focus types
+FOCUS_TRADE
+commercio
+
+# Empire affiliation types
+AFFIL_SELF
+compagno
+
+# Empire affiliation types
+AFFIL_ENEMY
+nemico
+
+# Empire affiliation types
+AFFIL_ALLY
+alleato
+
+# Empire affiliation types
+AFFIL_ANY
+qualsiasi
+
+# Unlockable item types
+UIT_BUILDING
+Struttura
+
+# Unlockable item types
+UIT_SHIP_PART
+Parte Nave
+
+# Unlockable item types
+UIT_SHIP_HULL
+Scafo Nave
+
+# Unlockable item types
+UIT_TECH
+Tecnologia
+
+# Build types
+BT_NOT_BUILDING
+non edificare
+
+# Build types
+BT_BUILDING
+edificare
+
+# Build types
+BT_SHIP
+nave
+
+# Resource types
+RE_TRADE
+commercio
+
+# Resource types
+RE_INDUSTRY
+industria
+
+# Resource types
+RE_RESEARCH
+ricerca
+
+# Ship slot types
+SL_EXTERNAL
+Slot Esterno
+
+# Ship slot types
+SL_INTERNAL
+Slot Interno
+
+SL_TOOLTIP_DESC
+Vuoto
+
+# Ship part classes
+PC_SHIELD
+Scudi
+
+# Ship part classes
+PC_ARMOUR
+Corazza
+
+# Ship part classes
+PC_TROOPS
+Truppe di Terra
+
+# Ship part classes
+PC_DETECTION
+Rilevamento
+
+# Ship part classes
+PC_STEALTH
+Occultamento
+
+# Ship part classes
+PC_FUEL
+Carburante
+
+# Ship part classes
+PC_COLONY
+Colonizzazione
+
+
+##
+## FOCS value references, effects & condition descriptions
+##
+
+DESC_VAR_PLANET
+pianeta
+
+DESC_VAR_SYSTEM
+sistema
+
+DESC_VAR_FLEET
+flotta
+
+DESC_VAR_SOURCE
+provenienza
+
+DESC_VAR_TARGET
+destinazione
+
+DESC_VAR_PLANETSIZE
+dimensione pianeta
+
+DESC_VAR_SIZEASDOUBLE
+dimensione pianeta
+
+DESC_VAR_PLANETTYPE
+tipo pianeta
+
+DESC_VAR_PLANETENVIRONMENT
+condizioni ambientali pianeta
+
+DESC_VAR_OBJECTTYPE
+tipo di oggetto
+
+DESC_VAR_STARTYPE
+tipo di stella
+
+DESC_VAR_VALUE
+Valore precedente per questo metro
+
+DESC_VAR_OWNER
+proprietario
+
+DESC_VAR_PRODUCEDBYEMPIREID
+producer
+
+DESC_VAR_CREATIONTURN
+turno della creazione
+
+
+##
+## FOCS condition descriptions
+##
+
+DESC_ALL
+'''  nell'universo'''
+
+DESC_ALL_NOT
+''' non nell'universo'''
+
+# %1% name of the empire this condition applies to.
+DESC_EMPIRE_AFFILIATION_SELF
+''' che appartengono all'impero %1%'''
+
+# %1% the affiliation the empire should have to the object.
+# %2% name of the empire this condition applies to.
+DESC_EMPIRE_AFFILIATION
+''' che appartengono ad un %1% dell'impero %2%'''
+
+# %1% the affiliation the empire should not have to the object.
+# %2% name of the empire this condition does not apply to.
+DESC_EMPIRE_AFFILIATION_NOT
+''' che non appartengono ad un %1% dell'impero %2%'''
+
+DESC_EMPIRE_AFFILIATION_ANY_NOT
+''' che non appartengono solo ad un %1% dell'impero %2%'''
+
+DESC_SOURCE
+''' che è l'oggetto sorgente'''
+
+# %1% name of the species.
+DESC_HOMEWORLD
+''' che è il sistema di provenienza'''
+
+# %1% name of the species.
+DESC_HOMEWORLD_NOT
+''' che non è il sistema di provenienza'''
+
+DESC_CAPITAL
+''' Che è un pianeta della capitale dell'impero'''
+
+DESC_CAPITAL_NOT
+''' Che non è un pianeta della capitale dell'impero'''
+
+# %1% name of an object type.
+DESC_TYPE
+''' che è un %1%'''
+
+# %1% name of an object type.
+DESC_TYPE_NOT
+''' che non è un %1%'''
+
+# %1% name of a building type.
+DESC_BUILDING
+''' che contiene una struttura %1%'''
+
+# %1% name of a building type.
+DESC_BUILDING_NOT
+''' che non contiene una struttura %1%'''
+
+# %1% name of the special the object should have.
+DESC_SPECIAL
+''' che ha uno speciale %1%'''
+
+# %1% textual description of an object contained inside another object.
+DESC_CONTAINS
+''' che contiene un'oggetto %1%'''
+
+# %1% textual description of an object not contained inside another object.
+DESC_CONTAINS_NOT
+''' che non contiene un'oggetto %1%'''
+
+# %1% planet type that should match the condition.
+DESC_PLANET_TYPE
+''' che è un pianeta %1%'''
+
+# %1% planet type that should not match the condition.
+DESC_PLANET_TYPE_NOT
+''' che non è un pianeta %1%'''
+
+# %1% planet size that should match the condition.
+DESC_PLANET_SIZE
+''' che è un pianeta %1%'''
+
+# %1% planet size that should not match the condition.
+DESC_PLANET_SIZE_NOT
+''' che non è un pianeta %1%'''
+
+DESC_AND_BETWEEN_OPERANDS
+''' e'''
+
+DESC_OR_BETWEEN_OPERANDS
+''' o'''
+
+# %1% textual description of the lower turn limit.
+# %2% textual description of the upper turn limit.
+DESC_TURN
+''' quando il turno in corso è compreso tra %1% e %2%'''
+
+
+##
+## Technology categories
+##
+
+LEARNING_CATEGORY
+Apprendimento
+
+PRODUCTION_CATEGORY
+Produzione
+
+CONSTRUCTION_CATEGORY
+Costruzione
+
+GROWTH_CATEGORY
+Crescita
+
+DEFENSE_CATEGORY
+Difesa
+
+SPY_CATEGORY
+Spionaggio
+
+
+##
+## Technology theories
+##
+
+THEORY_SHORT_DESC
+Prerequisiti Teorici
+
+LRN_PHYS_BRAIN
+La Fisica del Cervello
+
+LRN_PHYS_BRAIN_DESC
+Le strutture cerebrali e le loro funzioni sono definite. è chiarita la natura elettrochimica e quantica del pensiero e della memoria. Con l'apprendimento, è possibile alterare ed aumentare le funzioni cerebrali, nuove idee ed espressioni sono generate ai limiti del sapere.
+
+LRN_ALGO_ELEGANCE
+Algoritmi Eleganti
+
+LRN_TRANSLING_THT
+Translinguistica
+
+LRN_PSIONICS
+Psionica
+
+LRN_ARTIF_MINDS
+Mente Artificiale
+
+LRN_XENOARCH
+Xenoarcheologia
+
+LRN_GRAVITONICS
+Gravitonica
+
+LRN_GRAVITONICS_DESC
+Analogamente alla carica di colore della cromodinamica quantistica, esistono parecchi tipi di gravitoni. accanto al gravitone comune della forza attrattiva, il familiare "anti-gravitone" , il "gravitone destro" ed il  "gravitone sinistro" possono essere uniti per flettere arbitrariamente la superficie dello spazio-tempo. Questa manipolazione è percepita teoricamente come controllo della forza di gravità, permettendo strutture, scafi ed indagini precedentemente impossibili anche solo teoricamente.
+
+LRN_EVERYTHING
+Teoria del Tutto
+
+LRN_EVERYTHING_DESC
+Le ingenue teorie iniziali descrivono i sottoinsiemi delle quattro forze fondamentali della natura: l'elettromagnetismo, le forze nucleari forti e deboli e la gravità. Una struttura completa che esprima tutte le forze come casi speciali di una singola interazione rappresenta un Sacro Graal della scienza. Questa teoria descrive i momenti iniziali della nascita dell'universo, le profonde distorzioni della singolarità, le involuzioni più minute di dimensioni nascoste ed il destino finale dell'universo. Tuttavia possono ancora "esistere" strati dell'esistenza oltre i quali osservare e descrivere scentificamente ...
+
+LRN_FORCE_FIELD
+Campi di forza Armonici
+
+LRN_FORCE_FIELD_DESC
+'''Aumenta il massimo [[metertype METER_SHIELD]] Su tutti i pianeti entro il 10 e sblocca la tecnologia di base della schermatura delle navi. [[metertype METER_SHIELD]] Sono generalmente molto più costosi dell'armatura, grazie alla tecnologia necessaria per produrre campi di schermatura, ma gli scudi forniscono una difesa molto più forte dell'armatura. Tuttavia, su una nave può esistere un solo generatore di scudo attivo, in modo che le parti dello schermo non si impilano.
+
+Come nell'analisi di Fourier del suono, l'elettromagnetismo e le forze nucleari forti e deboli, possono essere espresse come armoniche quantiche di onde che si sovrapposizionano alle particelle portatrici di forze. Selettivamente amplificando queste armoniche, le forze possono essere controllate arbitrariamente per proteggere, attaccare, contenere o sostenere qualsiasi struttura.'''
+
+LRN_MIND_VOID
+Percezione del Vuoto
+
+LRN_MIND_VOID_DESC
+Non siamo soli nell'universo ... perché allora la ricerca dovrebbe essere così limitata? Molte culture hanno miti, leggende o credenze in una più alta coscienza. Che sia un dio amoroso o ostile, oppure un osservatore distaccato, è chiaro che qualcosa, forse l'universo stesso ad un certo livello, è vivo, attento e osserva.
+
+LRN_TIME_MECH
+Meccanica del Tempo
+
+LRN_TIME_MECH_DESC
+Che cosa sono "presente", "futuro" e "passato"? Il paradosso dei gemelli nella relatività speciale, oppure la teoria dei "wormhole" suggeriscono primitive forme di "viaggi nel tempo". La diretta manipolazione dello spazio-tempo e del flusso temporale permette di sfruttarne e potenziarne gli effetti. Le incursioni temporali non possono alterare la percezione del passato dell'universo che conosciamo. Possono, tuttavia, comprimere i tempi oppure estendere quei momenti fino a durate arbitrarie, con un limitato uso dei materiali presenti e della nostra pazienza.
+
+LRN_NDIM_SUBSPACE
+Subspazio N-Dimensionale
+
+LRN_NDIM_SUBSPACE_DESC
+I primi teorici delle superstringhe parlavano di 10, 11 o 26 universi dimensionali, ma non delle 4 macrodimensioni "arricciate" così sottili da essere invisibili. Queste ed altre dimensioni possono essere ora distese ed aperte e, la sua superficie di spazio, allungata spostando la materia fra livelli di esistenza precedentemente nascosti sotto la superficie della nostra limitata percezione, o generando nuovi strati o bolle dove niente esisteva prima.
+
+LRN_UNIF_CONC
+Coscienza Unificata
+
+LRN_TRANSCEND
+Singolarità Trascendentale
+
+GRO_PLANET_ECOL
+Ecologia Planetaria
+
+GRO_GENETIC_ENG
+Ingegneria Genetica
+
+GRO_GENETIC_ENG_DESC
+Il repertorio della genetica è tanto varia quanto le forme di vita da cui trae ispirazione. I geni possono essere rimossi, copiati e reinseriti nei genomi per creare organismi transgenici con combinazioni di caratteristiche non esistenti o possibili in natura inoltre, i geni possono essere alterati prima del reinserimento, alterando direttamente la base del codice e permettendo la creazione di interi geni. Tuttavia, le tecniche sono limitate a piccole modifiche di geni che sono disponibili per lo studio.
+
+GRO_SYMBIOTIC_BIO
+Biologia simbiotica
+
+GRO_SYMBIOTIC_BIO_DESC
+Accresce la popolazione massima dei pianeti buoni, adeguati e poveri in base alla dimensione del pianeta; Molto piccolo: +1, Piccolo: +2, Medio: +3, Grande: +4, Enorme: +5.
+
+GRO_GENETIC_MED
+Medicina Genetica
+
+GRO_LIFECYCLE_MAN
+Controllo del Ciclo Vitale
+
+GRO_ADV_ECOMAN
+Ecomanipolazione Avanzata
+
+GRO_XENO_GENETICS
+Genetica Xenologica
+
+GRO_NANOTECH_MED
+Medicina Nanotecnologica
+
+GRO_XENO_HYBRIDS
+Ibridazione Xenologica
+
+GRO_NANO_CYBERNET
+Naniti Cibernetici
+
+GRO_ENERGY_META
+Metabolismo Energetico Puro
+
+PRO_MICROGRAV_MAN
+Industria Microgravitazionale
+
+PRO_ROBOTIC_PROD
+Produzione Robotica
+
+PRO_ROBOTIC_PROD_DESC
+'''Incrementa l'obiettivo [[metertype METER_INDUSTRY]] su tutti i pianeti con focus industriale di 0.05 per popolazione.
+
+Gli Exobots, come diventano comunemente conosciuti, sono una meraviglia della forma unita alla funzione. Sono robot progettati per soddisfare quasi qualsiasi lavoro produttivo, in campi di ampia portata come l'elettronica per la costruzione su larga scala. Prodotti facilmente in massa, se ne trae maggior beneficio sulle colonie che danno la priorità all'industria. Ogni pieneta che si concentra principalmente sul quel settore riceve una squadra di Exobots, aumentando notevolmente la sua produzione industriale.
+
+Sebbene la progettazione iniziale di alto livello e la configurazione iniziale dell'impianto richiedono ancora un'attiva supervisione, l'eliminazione degli operatori dal processo di produzione reale elimina molti colli di bottiglia. I robot lavorano continuamente, senza richieste perpetue per una maggiore compensazione economica. I robot hanno una tolleranza molto superiore ai fattori di rischio ambientali in fabbrica e non necessitano di ulteriore spazio abitabile al di fuori del sito. I robot eseguono i loro compiti senza problemi in base a come vengono programmati.'''
+
+PRO_EXOBOTS
+Exobot
+
+PRO_EXOBOTS_DESC
+Permette la costruzione Exobots ottimizzati per l'industria su pianeti ostili.
+
+PRO_FUSION_GEN
+Generatore di Fusione
+
+PRO_FUSION_GEN_DESC
+'''Incrementa l'obiettivo [[metertype METER_INDUSTRY]] su tutti i pianeti con focus industriale di 0.05 per popolazione.
+
+Le centrali di fusione, pur essendo costose da produrre e mantenere, si ammortizzano facilmente sui mondi industrializzati con maggiori potenzialità. La dipendenza da centri nucleari a base di fissione a poco a poco diventerà una cosa del passato.
+
+Le reazioni termonucleari esplosive oppure incontrollate sono relativamente semplici da causare a scale che vanno da piccole testate tattiche a forni stellari supergiganti. La generazione di energia elettrica controllabile, e stabile dalla reazione è un po 'più difficile. Il processo resta attraente, tuttavia, a causa della quasi illimitata offerta di carburante e del potenziale per il funzionamento senza emissioni.'''
+
+PRO_NANOTECH_PROD
+Produzione Nanotecnologica
+
+PRO_ORBITAL_GEN
+Generazione Orbitale
+
+PRO_SENTIENT_AUTOMATION
+Automazione Intelligente
+
+PRO_SENTIENT_AUTOMATION_DESC
+'''Aumenta l'obiettivo [[metertype METER_INDUSTRY]] su tutti i pianeti di 5.
+
+Produrre fabbriche automatizzate che operano senza supervisione diretta, è possibile aumentare la produzione industriale in un impianto completamente automatizzato. Queste fabbriche possono essere costruite e mantenute su qualsiasi pianeta, indipendentemente dalla messa a fuoco, offrendo un bonus all'industria in tutti i mondi.
+
+Dato che l'apparecchiatura diventa sempre più automatizzata, diventa capace di replicare e mantenere senza supporto esterno, a parte le materie prime necessarie e un prodotto finale richiesto o suggerito per produrre. Quando controllato da una mente artificiale, l'intero sistema può imparare, pianificare, reagire e adattarsi autonomamente e può farlo senza le inefficienze ingombranti tradizionalmente necessarie per ospitare e impiegare i lavoratori.'''
+
+PRO_NDIM_ASSMB
+Assemblaggio N-Dimensionale
+
+PRO_ZERO_GEN
+Generatore di Gravità-Zero
+
+CON_ARCH_PSYCH
+Psicologia architettonica
+
+CON_ARCH_PSYCH_DESC
+La forma di una struttura o di uno spazio disabitato non è solo guidata dai limiti fisici dei materiali da cui è costruita. Gli effetti psicologici sugli abitanti all'interno o sugli osservatori all'esterno possono avere un'influenza molto maggiore sul successo di un progetto rispetto alla resistenza di un muro od alla robustezza di una fondazione.
+
+CON_ORGANIC_STRC
+Strutture Organiche
+
+CON_ASYMP_MATS
+Materiali Asintotici
+
+CON_ASYMP_MATS_DESC
+Una volta che determinate soglie di prestazioni vengono superate, la misurazione delle proprietà fisiche dei materiali, per il confronto relativo, diventa impraticabile in qualsiasi termine diverso da ordini di grandezza o scale logaritmiche. Molto simile alla superconduttività in elettronica, la resistenza alla trazione, tenacità, densità, elasticità, indice refrattario ed altre proprietà meccaniche dei materiali possono essere controllate efficacemente senza limiti. Con tutte le limitazioni significative precedentemente rimosse, le progettazioni sono ulteriormente facilitate, e si possono ampliare o modificare con svariati ordini di grandezza.
+
+
+##
+## Technology application
+##
+
+VICTORY_SHORT_DESC
+Porta alla Vittoria!
+
+SHIP_PART_UNLOCK_SHORT_DESC
+Sblocca Parte Nave
+
+SHIP_WEAPON_UNLOCK_SHORT_DESC
+Sblocca Armamento Nave
+
+SHIP_HULL_UNLOCK_SHORT_DESC
+Sblocca Scafo Nave
+
+BUILDING_UNLOCK_SHORT_DESC
+Sblocca Struttura
+
+RESEARCH_SHORT_DESC
+Migliora Ricerca
+
+INDUSTRY_SHORT_DESC
+Migliora Industria
+
+SUPPLY_SHORT_DESC
+Migliora Rifornimento
+
+DEFENSE_SHORT_DESC
+Migliora Difesa Planetaria
+
+TROOPS_SHORT_DESC
+Migliora Truppe
+
+METER_GROWTH_SHORT_DESC
+Migliora Misura Crescita
+
+POPULATION_SHORT_DESC
+Incrementa Popolazione Massima
+
+STRUCTURE_SHORT_DESC
+Migliora Struttura
+
+SHIP_REPAIR_DESC
+Ripara Navi
+
+SHIELD_SHORT_DESC
+Migliora Scudo
+
+STEALTH_SHORT_DESC
+Migliora Occultamento
+
+DETECTION_SHORT_DESC
+Migliora Rilevamento
+
+PLANET_PROTECT_SHORT_DESC
+Protegge i Pianeti
+
+VARIOUS_SHORT_DESC
+Migliora Vari Aspetti
+
+PENALTY_ELIMINATE_SHORT_DESC
+Elimina Sanzioni
+
+GAME_MAKE_WORK_SHORT_DESC
+Rende il Gioco Funzionante
+
+TAME_MONSTER_SHORT_DESC
+Addomestica Mostri Spaziali
+
+EXOBOT_SHORT_DESC
+Produce Cittadini Exobot
+
+STARLANE_SPEED_SHORT_DESC
+Incrementa la Velocità Stellare
+
+CON_ORBITAL_CON
+Costruzione Orbitale
+
+CON_ORBITAL_CON_DESC
+'''Accresce il raggio delle [[metertype METER_SUPPLY]] di tutte le colonie ed avamposti di 1.
+
+Su un pianeta, c'è sempre una direzione di riferimento fissa: "in su". La microgravità isotropica è efficace. Questa singola differenza ha una moltitudine di conseguenze per i tipi di strutture che possono essere costruite, e quali di queste forme fa un utilizzo ottimale dello spazio, dei materiali e dell'energia in ogni ambiente. Inoltre, la configurazione interna degli spazi in orbita deve essere ripensata. Tuttavia, mentre è concentrato a tentare di rivoluzionare completamente il design degli interni in un paradigma completamente indipendente dagli stili utilizzati sulle superfici del pianeta, l'uso pratico di questi spazi sarà iniziale principalmente da coloro che sono abituati e adattati per quelle superfici del pianeta. Piuttosto che una rottura completa dagli stili più anziani, una transizione graduale può essere più efficace.'''
+
+GRO_BIOTERROR
+Servizi di Bioterrorismo
+
+GRO_BIOTERROR_DESC
+Un centro di ricerca creato per sviluppare, in sicurezza, le più pericolose armi biologiche, lontano da sguardi indiscreti. Le armi biologiche hanno effetto troppo lentamente per essere di grande utilità in un conflitto militare diretto, ma sono insuperabili come armi di terrore, contaminando in maniera lenta ma crescente in modo che arrivi prima il panico ad esso, le immagini di persone disperate in quarantena diffondono preoccupazione nel proprio governo e disperazione oltre l'area interessata, tuttavia occorre fare attenzione quando si sviluppano tali organismi in modo da mettersi al riparo da rilasci accidentali che potrebbero danneggiare le relazioni con altri imperi o il nostro stesso popolo.
+
+GRO_REMOTE_TERRAFORM_SHORT_DESC
+Consente la terraformazione a distanza
+
+GRO_GAIA_TRANS
+Trasformazione di Gaia
+
+GRO_GAIA_TRANS_SHORT_DESC
+Consente la Trasformazione di Gaia
+
+LRN_OBSERVATORY_I
+Osservatorio
+
+LRN_SOLAR_MAN
+Manipolazione Solare
+
+LRN_DISTRIB_THOUGHT
+Calcolo Distribuito con il Pensiero
+
+LRN_STELLAR_TOMOGRAPHY
+Tomografia Stellare
+
+LRN_GATEWAY_VOID
+Passaggio per il Vuoto
+
+LRN_ENCLAVE_VOID
+Enclave del Vuoto
+
+LRN_ART_BLACK_HOLE
+Buco Nero Artificiale
+
+LRN_PSY_DOM
+Dominazione Psicogena
+
+MIND_CONTROL_SHORT_DESC
+Consente il Controllo Mentale
+
+PRO_SOL_ORB_GEN
+Produzione Orbitale Solare
+
+PRO_INDUSTRY_CENTER_I
+Centri Industriali
+
+PRO_INDUSTRY_MOD
+Modifica Industriale
+
+SPY_LIGHTHOUSE
+Fari Interstellari
+
+DEF_DEFENSE_NET_1
+Rete di Difesa Planetaria 1
+
+DEF_DEFENSE_NET_2
+Rete di Difesa Planetaria 2
+
+DEF_DEFENSE_NET_3
+Rete di Difesa Planetaria 3
+
+DEF_DEFENSE_NET_REGEN_1
+Rigenerazione Rete di Difesa 1
+
+DEF_DEFENSE_NET_REGEN_2
+Rigenerazione Rete di Difesa 2
+
+DEF_PLAN_BARRIER_SHLD_1
+Barriera Scudo Planetaria 1
+
+DEF_PLAN_BARRIER_SHLD_2
+Barriera Scudo Planetaria 2
+
+DEF_PLAN_BARRIER_SHLD_3
+Barriera Scudo Planetaria 3
+
+DEF_PLAN_BARRIER_SHLD_4
+Barriera Scudo Planetaria 4
+
+DEF_PLAN_BARRIER_SHLD_5
+Barriera Scudo Planetaria 5
+
+DEF_SYST_DEF_MINE_1
+Mine di Difesa del Sistema 1
+
+DEF_SYST_DEF_MINE_1_DESC
+'''Quando le navi amiche non sono presenti in un sistema, le navi nemiche sono libere di stazionarvi, fermando il trasferimento di risorse senza impegnare direttamente le difese planetarie, quindi senza alcun rischio di danni a se stessi. Una rete di mine di difesa del sistema può dissuadere queste tattiche danneggiando le navi nemiche ad ogni turno in cui restano nel sistema.
+
+La struttura di tutte le navi appartenenti ad un impero nemico che sono presenti in un sistema contenente un pianeta di proprietà dell'impero che possiede questa tecnologia sarà ridotto a 2 unità per turno.
+
+Le mine si rigenerano ad ogni turno, quindi non si esauriscono con l'uso.'''
+
+DEF_SYST_DEF_MINE_2
+Mine di Difesa del Sistema 2
+
+DEF_SYST_DEF_MINE_2_DESC
+Riduce la struttura delle navi nemiche di altri 4 punti per turno, cumulati con [[tech DEF_SYST_DEF_MINE_1]].
+
+DEF_SYST_DEF_MINE_3
+Mine di Difesa del Sistema 3
+
+DEF_SYST_DEF_MINE_3_DESC
+Riduce la struttura delle navi nemiche di altri 8 punti per turno, cumulativo con il prerequisito tecnologico.
+
+DEF_ROOT_DEFENSE
+Difesa Personale
+
+DEF_ROOT_DEFENSE_DESC
+'''Incrementa il limite delle [[metertype METER_TROOPS]] su tutti i pianeti di 2.
+
+Il concetto di 'difesa personale' è alla base di molti percorsi di progresso tecnologico.'''
+
+DEF_GARRISON_1
+Presidio Planetario 1
+
+DEF_GARRISON_1_DESC
+Incrementa il numero massimo delle [[metertype METER_TROOPS]] su tutti i pianeti di 5.
+
+DEF_GARRISON_2
+Presidio Planetario 2
+
+DEF_GARRISON_2_DESC
+Incrementa il numero massimo delle [[metertype METER_TROOPS]] su tutti i pianeti di 10.
+
+DEF_GARRISON_3
+Presidio Planetario 3
+
+DEF_GARRISON_3_DESC
+Incrementa il numero massimo delle [[metertype METER_TROOPS]] su tutti i pianeti di 15.
+
+DEF_GARRISON_4
+Presidio Planetario 4
+
+DEF_GARRISON_4_DESC
+Incrementa il numero massimo delle [[metertype METER_TROOPS]] su tutti i pianeti di 20.
+
+SHP_FLEET_REPAIR_DESC
+Permette le navi all'interno [[metertype METER_SUPPLY]] Linee per riparare i danni ad una velocità di 1 per turno. Non funziona immediatamente dopo le battaglie.
+
+SHP_ADV_DAM_CONT
+Controllo Avanzato dei Danni
+
+SHP_ADV_DAM_CONT_DESC
+Riparazione del 25% per turno della struttura delle navi danneggiate -- non durante le battaglie.
+
+SHP_ROOT_AGGRESSION
+Aggressione
+
+SHP_ROOT_AGGRESSION_DESC
+Consente armamenti di base e [[shippart GT_TROOP_POD]].
+
+SHP_ION_CANNON
+Cannone a Ioni
+
+SHP_ION_CANNON_DESC
+Sblocca la parte di nave Cannone a Ioni.
+
+SHP_WEAPON_1
+Cannone a Rotaia
+
+SHP_WEAPON_4
+Raggio della Morte
+
+SHP_PULSE_LASER
+Laser ad Impulso
+
+SHP_INTERCEPTOR
+Intercettore
+
+SHP_BOMBER
+Bombardiere
+
+SHP_NUCLEAR_MISSILE
+Missile Nucleare
+
+SPY_DETECT_1
+Scanner Ottico
+
+SPY_DETECT_2
+Radar Attivo
+
+SPY_DETECT_2_DESC
+'''Sblocca il componente per nave Radar Attivo e la struttura impianto di scansione, incrementa il [[metertype METER_DETECTION]] di tutti i pianeti a 75, ed incrementa la [[encyclopedia DETECTION_TITLE]] a 30.
+
+Il passivo affidamento alla radiazione elettromagnetica in arrivo per informazioni sugli oggetti nelle vicinanze è grezzo e impraticabile, in quanto questa radiazione può essere mascherata o inumidita. Emettendo le radiazioni elettromagnetiche e rilevando la radiazione di ritorno, è possibile determinare la posizione e la velocità di molti oggetti.'''
+
+SPY_DETECT_3
+Scanner Neutronico
+
+SPY_DETECT_4
+Sensori
+
+SPY_DETECT_5
+Scanner Omnidirezionale
+
+SPY_STEALTH_1
+Smorzatore Elettromagnetico
+
+SPY_STEALTH_2
+Campo di Assorbimento
+
+SHP_DEUTERIUM_TANK
+Serbatoio di deuterio
+
+SHP_DEUTERIUM_TANK_DESC
+Piccolo aumento del raggio d'azione incrementando la capacità del serbatoio.
+
+SHP_ANTIMATTER_TANK
+Serbatoio di Antimateria
+
+SHP_ANTIMATTER_TANK_DESC
+Medio aumento del raggio d'azione incrementando la capacità del serbatoio.
+
+SHP_ORG_HULL
+Scafo Organico
+
+SHP_ENDOSYMB_HULL
+Scafo Endosimbiotico
+
+SHP_SENT_HULL
+Scafo Senziente
+
+SHP_BIOINTERCEPTOR
+Biointercettori
+
+SHP_BIOBOMBER
+Biobombardieri
+
+
+##
+## Technology refinement
+##
+
+BUILDING_REFINE_SHORT_DESC
+Raffineria
+
+
+##
+## Buildings
+##
+
+BLD_OBSERVATORY
+Osservatorio
+
+BLD_IMPERIAL_PALACE
+Palazzo imperiale
+
+BLD_SHIPYARD_BASE
+Cantiere Navale di Base
+
+BLD_SHIPYARD_BASE_DESC
+Impianto orbitale per la produzione e l'assemblaggio di navi militari interstellari. Consente la produzione di navi nel sistema in cui si trova. Può essere aggiornato con la produzione di ulteriori strutture nello stesso sistema.
+
+BLD_SHIPYARD_ORBITAL_DRYDOCK
+Bacino di Carenaggio Orbitale
+
+BLD_SCANNING_FACILITY
+Impianto di Scansione
+
+BLD_SCANNING_FACILITY_DESC
+'''Incrementa la [[metertype METER_DETECTION]] del pianeta di 75.
+
+Una combinazione di dispositivi di scansione a lunga percorrenza e una grande potenza di calcolo per analizzare i dati consente di scansionare un'area di spazio maggiore per qualsiasi oggetto.'''
+
+BLD_INDUSTRY_CENTER
+Centro Industriale
+
+BLD_MEGALITH
+Megalito
+
+BLD_SPACE_ELEVATOR
+Elevatore Spaziale
+
+BLD_GENOME_BANK
+Banca del Genoma
+
+BLD_GAIA_TRANS
+Trasformazione di Gaia
+
+BLD_COLLECTIVE_NET
+Rete Neuronica Collettiva
+
+BLD_GATEWAY_VOID
+Passaggio per il Vuoto
+
+BLD_ART_BLACK_HOLE
+Buco Nero Artificiale
+
+BLD_HYPER_DAM
+Diga Iperspaziale
+
+BLD_SOL_ACCEL
+Acceleratore Solare
+
+BLD_CLONING_CENTER
+Centro di Clonazione
+
+BLD_TRANSFORMER
+Trasformatore
+
+BLD_TRANSFORMER_DESC
+'''Un edificio versatile ed estremamente costoso in grado di avere gli effetti di molti altri edifici, attualmente attivato utilizzando le impostazioni di focus del pianeta su cui è costruito, a condizione che il proprietario abbia sbloccato l'edificio che il Transformer sta replicando.
+
+A questo edificio possono essere dati gli effetti di un Replicatore, un Dispositivo di Occultamento Planetario, di un Proiettore di Bioterrorismo, un Portale Spaziale, un QUALCOSA DI INDEFINITO, oppure un Generatore di Distorsione Spaziale, a condizione che il proprietario possiede la tecnologia appropriata.'''
+
+BLD_PLANET_CLOAK
+Dispositivo di Occultamento Planetario
+
+BLD_STARGATE
+Portale Spaziale
+
+
+##
+## Hull and ship part description templates
+##
+
+# %1% ship part capacity (fuel, troops, colonists, fighters).
+PART_DESC_CAPACITY
+Capacità: %1%
+
+# %1% ship part strength (other).
+PART_DESC_STRENGTH
+Resistenza: %1%
+
+SR_ION_CANNON
+Cannone a Ioni
+
+PD_PULSE_LASER
+Laser ad Impulso
+
+FI_INTERCEPTOR
+Intercettore
+
+FI_BOMBER
+Bombardiere
+
+FI_BIOBOMBER
+Bio-Bombardiere
+
+FI_BIOBOMBER_DESC
+Diciotto bombardieri progettati per combattere navi e pianeti. Molto più efficace dei bombardieri regolari. Questa parte può essere costruita solo se c'è un'unità di modifica Bioneurale da qualche parte nell'impero o nell'impero di un alleato.
+
+LR_NUCLEAR_MISSILE
+Missile Nucleare
+
+LR_SPECTRAL_MISSILE
+Missile Spettrale
+
+DT_DETECTOR_1
+Scanner Ottico
+
+DT_DETECTOR_2
+Radar Attivo
+
+DT_DETECTOR_3
+Scanner Neutronico
+
+DT_DETECTOR_4
+Sensori
+
+
+##
+## Ship parts
+##
+
+ST_CLOAK_1
+Smorzatore Elettromagnetico
+
+ST_CLOAK_2
+Campo di Assorbimento
+
+AR_STD_PLATE
+Corazzatura Blindata
+
+SH_DEFENSE_GRID
+Griglia Difensiva
+
+SH_DEFLECTOR
+Scudo Deflettore
+
+CO_COLONY_POD
+Capsula Coloni
+
+CO_SUSPEND_ANIM_POD
+Capsula Coloni Criogenica
+
+CO_SUSPEND_ANIM_POD_DESC
+'''I coloni vengono ibernati durante il viaggio verso nuovi mondi, eliminando il bisogno di sostenerli, e aumentando notevolmente il numero di coloni che possono essere portati su una singola nave.
+
+Tutte le parti della nave di classe colonia richiedono il pianeta su cui sono costruite per avere una popolazione di almeno tre.'''
+
+
+##
+## Ship hulls
+##
+
+SH_ROBOTIC
+Scafo Robotico
+
+SH_NANOROBOTIC
+Scafo Nano-Robotico
+
+SH_TITANIC
+Scafo Titanico
+
+
+##
+## Buildings macros
+##
+
+
+##
+## Tech macros
+##
+
+
+##
+## Growth macros
+##
+
+
+##
+## Species picks
+##
+
+
+##
+## Accounting labels
+##
+
+# %1% FIXME
+ENV_ENCAPSUL_LABEL
+%1% Incapsulamento Ambientale
+
+
+##
+## Tags
+##
+
+ANTIQUATED
+Antiquato
+
+STYLISH
+Elegante
+
+ORGANIC
+Organico
+
+ROBOTIC
+Robotico
+
+LITHIC
+Litico
+
+PHOTOTROPHIC
+Fototrofico
+
+TELEPATHIC
+Telepatico
+
+ORBITAL
+Orbitale
+
+
+##
+## AI strings
+##
+
+
+##
+## AI diplomacy strings and lists
+##
+
+
+##
+## Hotkey names and descriptions
+##
+
+
+##
+## Name lists
+##
+
+#include "../content_specific_parameters.txt"
+#include "../customizations/common_user_customizations.txt"
+

@@ -1,0 +1,14 @@
+body {
+
+	font-family:Verdana,sans-serif;
+	color: white;
+	background: black;
+	background-image: URL(images/backd.gif);
+}
+
+
+p, h3, input, select {
+
+	font-size:11px;
+
+}

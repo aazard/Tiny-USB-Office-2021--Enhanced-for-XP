@@ -1,0 +1,25 @@
+1;Are you one of the Merchants?;;;
+;Yes;2;;
+;No;3;;
+;What merchants? I don't know what you are talking about;4;;
+2;Excellent! We require more weapons! We can't defeat the bluecaps without your help;;;
+;What weapons?;5;;
+;Sure.;6;;
+;bluecaps? Who are they?;7;;
+3;Then who are you, and on who's side are you? Ours, or the bluecaps?;;;
+;We are on your side;8;;
+;We are on the bluecaps side;9;;
+;We don't even know who these sides are;7;;
+4;Some honorable merchants from the stars have been supplying us with weapons to fight the bluecaps.;;;
+;I see;3;;
+5;The ones you have been selling us;;;
+;Let's see what I have got;6;;
+;I am not going to sell you weapons;;;
+6;We will pay you handsomely as usual;;SELL;1
+7;The bluecaps are the most morally corrupt members of our species. They must be destroyed to ensure the survival of our species;;;
+;I will help you;6;;
+;I will not help you, I will help the bluecaps;9;;
+;Isn't there a possibility to end this conflict peacefully?;10;;
+8;Great! If you find any bluecaps, kill them!;;;
+9;What? Die redcap-friend!!!;;CHANGEMOOD;0
+10;It is impossible to talk to the bluecaps. ;;;
