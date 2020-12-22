@@ -1,4 +1,0 @@
-
-MEW11, MPRESS and Upack are freeware closed source applications.
-They are not included due to license restrictions.
-You can automatically download them from software Options.

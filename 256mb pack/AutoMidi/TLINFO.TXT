@@ -1,0 +1,19 @@
+
+TS-Audio ToMIDI Converter
+
+2002.02.03.
+
+TS-AUDIO TOMIDI CONVERTER
+version: 1.07
+
+Alexey Egorov
+alegorov@mail.ru 
+http://www.midi.ru/AudioToMidi/
+
+TS-AudioToMidi Converter v1.07 - 348 KB
+For Windows 9x/ME 
+TS-AudioToMidi Converter converts realtime sounds or WAV-, MP3-, CDA-files to MIDI-events (notes) which can be given to a standard MIDI device, PC speaker, or built-in sequencer. It features display of audio signal spectrum, a huge selection of filters & instruments, and more. Designed mainly for semi-professional sound engineers, with a small amount of experimentation even a relatively non-technical person can use this program. If offers such a range of filters you can virtually create the sound you want from the program itself. Unfortunately the author's Website is in Russian which makes it a little hard to get additional information, though the program does have a help file in English which should assist get you started. Again, because the program is designed for a semi-professional sound engineer the technical aspects of the help file is quite detailed and therefore not always clear to the layman. If you are looking for a realtime conversion of audio sound to MIDI -- and you wish to be able to control that sound -- AudioToMidi Converter is for you. 
+
+http://www.midi.ru/AudioToMidi/download/AudioToMidi.zip
+
+

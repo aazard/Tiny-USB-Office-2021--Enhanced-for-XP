@@ -1,0 +1,132 @@
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<Theme themeid="DefaultThemeScript" transitioncategory="none" effectcategory="none" textcategory="none" themeicon="c:\title\adda.ico">
+  <ThemeProject TitleTextDefault="FadeZoomTextScript" CreditTextDefault="BasicScrollingTextScript" CaptionTextDefault="PlainStyleTextScript" TitleClipTemplate="" CreditClipTemplate="" ProjectTemplate="" ExtentSelectorTemplate="" PhotoDuration="7" AddAudio="false" PromptForAudio="false">
+    <Intro AudioFile="">
+      <SimpleIntro>
+        <Transition Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </Transition>
+      </SimpleIntro>
+      <ComplexIntro NumberOfItems="1" MuteVideo="true">
+        <Titles></Titles>
+        <FirstTransition Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="FadeZoomTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </FirstTransition>
+        <Transitions Order="sequential" >
+        </Transitions>
+        <LastTransition Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="FadeZoomTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </LastTransition>
+        <FirstEffect Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="">
+            <Effects></Effects>
+          </PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </FirstEffect>
+        <Effects Order="sequential">
+        </Effects>
+        <LastEffect Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="">
+            <Effects></Effects>
+          </PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </LastEffect>
+      </ComplexIntro>
+    </Intro>
+    <Mid AudioFile="">
+      <Titles>
+      </Titles>
+      <FirstTransition Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="PlainStyleTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </FirstTransition>
+      <Transitions Order="sequential" >
+        <Transition Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="PlainStyleTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </Transition>
+      </Transitions>
+      <LastTransition Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="PlainStyleTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </LastTransition>
+      <FirstEffect Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="">
+          <Effects></Effects>
+        </PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </FirstEffect>
+      <Effects Order="sequential">
+        <Effect Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="">
+            <Effects></Effects>
+          </PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </Effect>
+      </Effects>
+      <LastEffect Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="">
+          <Effects></Effects>
+        </PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </LastEffect>
+    </Mid>
+    <Outro AudioFile="">
+      <Titles></Titles>
+      <FirstTransition Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="BasicScrollingTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </FirstTransition>
+      <Transitions Order="sequential" >
+        <Transition Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="BasicScrollingTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </Transition>
+      </Transitions>
+      <LastTransition Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="none"></PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="BasicScrollingTextScript" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </LastTransition>
+      <FirstEffect Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="">
+          <Effects></Effects>
+        </PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </FirstEffect>
+      <Effects Order="sequential">
+        <Effect Repeat="1">
+          <PrimaryTrack Name="main" BoundaryId="">
+            <Effects></Effects>
+          </PrimaryTrack>
+          <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+          <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        </Effect>
+      </Effects>
+      <LastEffect Repeat="1">
+        <PrimaryTrack Name="main" BoundaryId="">
+          <Effects></Effects>
+        </PrimaryTrack>
+        <DependentTrack Name="text" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+        <DependentTrack Name="audio" BoundaryId="none" BoundaryFadeIn="0" BoundaryFadeOut="0"></DependentTrack>
+      </LastEffect>
+    </Outro>
+  </ThemeProject>
+</Theme>

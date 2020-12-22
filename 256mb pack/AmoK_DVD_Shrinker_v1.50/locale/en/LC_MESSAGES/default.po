@@ -1,0 +1,201 @@
+# Translation file for AmoK DVD Shrinker
+# Copyright (C) by Dirk Paehl 2010
+# This file is distributed under the same license as the PACKAGE package.
+# Dirk Paehl http://www.amok.am
+#
+msgid ""
+msgstr "Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2010-01-18 19:12\n"
+"PO-Revision-Date: 2010-01-18 19:12\n"
+"Last-Translator:Dirk Paehl www.amok.am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: dxgettext 1.2.2\n"
+
+msgid "&Close"
+msgstr "&Close"
+
+msgid "&Custom"
+msgstr "&Custom"
+
+msgid "&Movie Only"
+msgstr "&Movie Only"
+
+msgid "&Whole DVD"
+msgstr "&Whole DVD"
+
+msgid "4.20 GB"
+msgstr "4.20 GB"
+
+msgid "4.30 GB"
+msgstr "4.30 GB"
+
+msgid "About"
+msgstr "About"
+
+msgid "All language"
+msgstr "All language"
+
+msgid "and send it via Contactform"
+msgstr "and send it via Contactform"
+
+msgid "Audio:"
+msgstr "Audio:"
+
+msgid "Authorize Drive"
+msgstr "Authorize Drive"
+
+msgid "Available language"
+msgstr "Available language"
+
+msgid "Compression"
+msgstr "Compression"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Data Input (MB):"
+msgstr "Data Input (MB):"
+
+msgid "Data Output (MB):"
+msgstr "Data Output (MB):"
+
+msgid "Disable preview"
+msgstr "Disable preview"
+
+msgid "DVD Size"
+msgstr "DVD Size"
+
+msgid "DVD Size:"
+msgstr "DVD Size:"
+
+msgid "Elapsed Time:"
+msgstr "Elapsed Time:"
+
+msgid "Exit"
+msgstr "Exit"
+
+msgid "fps"
+msgstr "fps"
+
+msgid "Frame"
+msgstr "Frame"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Homepage"
+msgstr "Homepage"
+
+msgid "I/O"
+msgstr "I/O"
+
+msgid "In german"
+msgstr "In german"
+
+msgid "kB/s"
+msgstr "kB/s"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "lblFileName"
+msgstr "lblFileName"
+
+
+msgid "Make an ISO?"
+msgstr "Make an ISO?"
+
+msgid "MB"
+msgstr "MB"
+
+msgid "N/A"
+msgstr "N/A"
+
+msgid "Open"
+msgstr "Open"
+
+msgid "Open this language"
+msgstr "Open this language"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "or pdf"
+msgstr "or pdf"
+
+msgid "Performance"
+msgstr "Performance"
+
+msgid "Please wait, while read the DVD is finish"
+msgstr "Please wait, while read the DVD is finish"
+
+msgid "Processing Information"
+msgstr "Processing Information"
+
+msgid "Progress"
+msgstr "Progress"
+
+msgid "Quality"
+msgstr "Quality"
+
+msgid "Quantizer Ratio:"
+msgstr "Quantizer Ratio:"
+
+msgid "Remaining Time:"
+msgstr "Remaining Time:"
+
+msgid "Source Path:"
+msgstr "Source Path:"
+
+msgid "Speed"
+msgstr "Speed"
+
+msgid "SplashScreen"
+msgstr "SplashScreen"
+
+msgid "Standard audio and subtitle language (Movie "
+"Only)"
+msgstr "Standard audio and subtitle language (Movie "
+"Only)"
+
+msgid "Stop"
+msgstr "Stop"
+
+msgid "SubTitle"
+msgstr "SubTitle"
+
+msgid "Target Path:"
+msgstr "Target Path:"
+
+msgid "Target Size:"
+msgstr "Target Size:"
+
+msgid "This program use the opensource DLL from shrinkto5.com, DECSS "
+"free"
+msgstr "This program use the opensource DLL from shrinkto5.com, DECSS "
+"free"
+
+msgid "Throughput"
+msgstr "Throughput"
+
+msgid "Total Time:"
+msgstr "Total Time:"
+
+msgid "Transfer"
+msgstr "Transfer"
+
+msgid "Use DeCSS"
+msgstr "Use DeCSS"
+
+msgid "Use full disc capacity (overwrite deposit "
+"buffer)"
+msgstr "Use full disc capacity (overwrite deposit "
+"buffer)"
+
+msgid "You can help. Translate the HTML in your language and rename it "
+"to"
+msgstr "You can help. Translate the HTML in your language and rename it "
+"to"
+

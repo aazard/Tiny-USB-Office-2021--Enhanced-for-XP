@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"AudioFadeEffectTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='""'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='""'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='5'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='6'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"volume"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"LogarithmInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"FadeInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectDuration"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"DurationInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"keyValue"'/>
+          <MetadataInteger containerField='value' name='socketConnectIndex' value='0'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--All nodes in this set are injected-->
+    <Transform DEF='InjectSet'>
+      <!--Use the duration (replacing the placeholder 5) to convert the desired fade in/out times from seconds to fractions of the total length-->
+      <ScalarInterpolator DEF='DurationInterpolator' key='0' keyValue='0'/>
+      <ScalarInterpolator DEF='DesiredFadeInEndFractionInterpolator' key='0 5' keyValue='0 1'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='AudioFadeInDuration' value='"set_fraction"'/>
+        </MetadataSet>
+      </ScalarInterpolator>
+      <ScalarInterpolator DEF='DesiredFadeOutStartFractionInterpolator' key='0 5' keyValue='1 0'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='AudioFadeOutDuration' value='"set_fraction"'/>
+        </MetadataSet>
+      </ScalarInterpolator>
+      
+      <!--Limit the fade durations to no more than a third of the clip duration-->
+      <ScalarInterpolator DEF='FadeInEndFractionLimiterInterpolator' key='0 0.33333333333333333' keyValue='0 0.33333333333333333'/>
+      <ScalarInterpolator DEF='FadeOutStartFractionLimiterInterpolator' key='0.66666666666666666 1' keyValue='0.66666666666666666 1'/>
+      
+      <!--The second or third key entries are set when fade in or out is turned on-->
+      <ScalarInterpolator DEF='FadeInterpolator' key='0 0 1 1' keyValue='0 1 1 0'/>
+      
+      <!--Simulate a logarithmic curve so the fade sounds more natural-->
+      <ScalarInterpolator DEF='LogarithmInterpolator' 
+                          key='0.000016 0.008333 0.016656 0.024979 0.033302 0.041625 0.049948 0.058271 0.066594 0.074917 0.08324 0.091563 0.099886 0.108209 0.116532 0.124855 0.133178 0.141501 0.149824 0.158147 
+                               0.16647 0.174793 0.183116 0.191439 0.199762 0.208085 0.216408 0.224731 0.233054 0.241377 0.2497 0.258023 0.266346 0.274669 0.282992 0.291315 0.299638 0.307961 0.316284 0.324607 
+                               0.33293 0.341253 0.349576 0.357899 0.366222 0.374545 0.382868 0.391191 0.399514 0.407837 0.41616 0.424483 0.432806 0.441129 0.449452 0.457775 0.466098 0.474421 0.482744 0.491067 
+                               0.49939 0.507713 0.516036 0.524359 0.532682 0.541005 0.549328 0.557651 0.565974 0.574297 0.58262 0.590943 0.599266 0.607589 0.615912 0.624235 0.632558 0.640881 0.649204 0.657527 
+                               0.66585 0.674173 0.682496 0.690819 0.699142 0.707465 0.715788 0.724111 0.732434 0.740757 0.74908 0.757403 0.765726 0.774049 0.782372 0.790695 0.799018 0.807341 0.815664 0.823987 
+                               0.83231 0.840633 0.848956 0.857279 0.865602 0.873925 0.882248 0.890571 0.898894 0.907217 0.91554 0.923863 0.932186 0.940509 0.948832 0.957155 0.965478 0.973801 0.982124 0.990447 1' 
+                          keyValue='-96 -41.58397236 -35.56858576 -32.04849904 -29.55059367 -27.61291507 -26.02963794 -24.69095058 -23.53129796 -22.50839244 -21.59335857 -20.76559973 -20.00990756 -19.31473233 -18.671096 -18.07188122 -17.51135023 -16.98480982 -16.48837225 -16.01878084 
+                                    -15.57328041 -15.14951927 -14.74547414 -14.35939166 -13.98974245 -13.6351845 -13.29453377 -12.96674031 -12.65086877 -12.34608229 -12.05162915 -11.76683159 -11.49107642 -11.22380707 -10.96451683 -10.71274305 -10.46806221 -10.23008558 -9.998455548 -9.772842381 
+                                    -9.552941384 -9.33847044 -9.129167827 -8.924790301 -8.725111399 -8.529919924 -8.339018607 -8.152222909 -7.969359946 -7.79026753 -7.614793303 -7.44279396 -7.274134544 -7.108687812 -6.946333654 -6.786958574 -6.630455212 -6.476721908 -6.325662307 -6.177184995 
+                                    -6.031203168 -5.887634327 -5.746399996 -5.607425469 -5.470639567 -5.335974422 -5.203365277 -5.072750293 -4.944070384 -4.817269047 -4.692292223 -4.569088148 -4.447607235 -4.327801947 -4.209626687 -4.093037694 -3.977992947 -3.864452072 -3.75237626 -3.641728181 
+                                    -3.532471918 -3.424572891 -3.317997792 -3.212714526 -3.108692149 -3.005900817 -2.904311734 -2.803897102 -2.704630074 -2.606484717 -2.509435964 -2.41345958 -2.318532126 -2.224630922 -2.131734015 -2.03982015 -1.948868739 -1.858859835 -1.769774104 -1.681592802 
+                                    -1.594297748 -1.507871305 -1.422296359 -1.337556293 -1.253634976 -1.170516736 -1.08818635 -1.006629021 -0.925830368 -0.845776406 -0.766453532 -0.687848514 -0.609948476 -0.532740884 -0.456213537 -0.380354553 -0.305152358 -0.230595676 -0.156673521 -0.083375182 0'/>
+      
+      <ROUTE fromNode='DurationInterpolator' fromField='value_changed' toNode='DesiredFadeInEndFractionInterpolator' toField='key' toIndex='1'/>
+      <ROUTE fromNode='DurationInterpolator' fromField='value_changed' toNode='DesiredFadeOutStartFractionInterpolator' toField='key' toIndex='1'/>
+      <ROUTE fromNode='DesiredFadeInEndFractionInterpolator' fromField='value_changed' toNode='FadeInEndFractionLimiterInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='FadeInEndFractionLimiterInterpolator' fromField='value_changed' toNode='FadeInterpolator' toField='key' toIndex='1'/>
+      <ROUTE fromNode='DesiredFadeOutStartFractionInterpolator' fromField='value_changed' toNode='FadeOutStartFractionLimiterInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='FadeOutStartFractionLimiterInterpolator' fromField='value_changed' toNode='FadeInterpolator' toField='key' toIndex='2'/>
+      <ROUTE fromNode='FadeInterpolator' fromField='value_changed' toNode='LogarithmInterpolator' toField='set_fraction'/>
+    </Transform>
+
+  </Transform>
+</X3D>

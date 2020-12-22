@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"TextEffectSwingDownTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TextTransform"'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"TextEffectTransform"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"EffectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TextSwingInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectDuration"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"DurationReciprocal"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+
+    <Transform DEF='TextEffectTransform'>
+      <Transform translation='1 1 0.025'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='position' value='"translation"'/>
+        </MetadataSet>
+        <Transform DEF='TextEffectSwingTransform'>
+          <Shape DEF='TextEffectShape'>
+            <Appearance DEF='TextEffectAppearance'>
+              <Material DEF='TextEffectMaterial' transparency ='0' ambientIntensity='0.200' shininess='0.200' diffuseColor='1 0 0'>
+                <MetadataSet name='BPSet'>
+                  <MetadataString containerField='value' name='color' value='"diffuseColor"'/>
+                  <MetadataString containerField='value' name='automatic' value='"false"' reference='Custom'/>
+                </MetadataSet>
+              </Material>
+
+              <TextShader DEF='TextEffectTextShader' outlineColor='0 1 0'>
+                <MetadataSet name='BPSet'>
+                  <MetadataString containerField='value' name='outlineColor' value='"outlineColor"'/>
+                </MetadataSet>
+              </TextShader>
+
+            </Appearance>
+
+            <Text DEF='TextEffectText' containerField='geometry' string='""'>
+              <MetadataSet name='BPSet'>
+                <MetadataString containerField='value' name='string' value='"string"'/>
+                <MetadataString containerField='value' name='length' value='"length"' />
+                <MetadataString containerField='value' name='maxExtent' value='"maxExtent"'/>
+              </MetadataSet>
+              <FontStyle DEF='TextEffectFontStyle' containerField='fontStyle' family='"Arial" "Trebuchet"'
+                  horizontal='true' justify='"MIDDLE" "END"' language='""' size='1.000'
+                  spacing='1.1' style='PLAIN' topToBottom='true' outlineSizeIndex='0'>
+                <MetadataSet name='BPSet'>
+                  <MetadataString containerField='value' name='family' value='"family"'/>
+                  <MetadataString containerField='value' name='horizontal' value='"horizontal"'/>
+                  <MetadataString containerField='value' name='size' value='"size"'/>
+                  <MetadataString containerField='value' name='style' value='"style"'/>
+                  <MetadataString containerField='value' name='justify' value='"justify"'/>
+                  <MetadataString containerField='value' name='leftToRight' value='"leftToRight"'/>
+                  <MetadataString containerField='value' name='outlineSizeIndex' value='"outlineSizeIndex"'/>
+                </MetadataSet>
+              </FontStyle>
+            </Text>
+          </Shape>
+        </Transform>
+      </Transform>
+    </Transform>
+
+    <!--All nodes in this set are injected-->
+
+    <Transform DEF='InjectSet'>
+      <ScalarInterpolator DEF='TextSwingInterpolator' key='0 1' keyValue='0 1'/>
+      <ScalarInterpolator DEF='TextSwingTransparencyInterpolator' key='0 0.3 0.7 1' keyValue='1 0 0 1'/>
+      <ROUTE fromNode='TextSwingInterpolator' fromField='value_changed' toNode='TextSwingOrientationInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='TextSwingInterpolator' fromField='value_changed' toNode='TextSwingTransparencyInterpolator' toField='set_fraction'/>
+
+      <ScalarInterpolator DEF='TextUITransparencyInterpolator' key='0 1' keyValue='0 1'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='transparency' value='"set_fraction"'/>
+        </MetadataSet>
+      </ScalarInterpolator>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="1" toNode="TextSwingTransparencyInterpolator"/>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="2" toNode="TextSwingTransparencyInterpolator"/>
+
+      <ROUTE fromNode="TextSwingTransparencyInterpolator" fromField="value_changed" toNode="TextEffectMaterial" toField="transparency" />
+
+
+      <!--The appropriate lead-in and lead-out fractions (calculated below) are routed into the second and third key entries, respectively -->
+      <OrientationInterpolator DEF='TextSwingOrientationInterpolator' key='0 0.3 0.7 1'
+                              keyValue='1 0 0 -1.5708
+                                        1 0 0 0.0
+                                        1 0 0 0.0
+                                        1 0 0 -1.5708 '/>
+      <ROUTE fromNode="TextSwingOrientationInterpolator" fromField="value_changed" toNode="TextEffectSwingTransform" toField="rotation" />
+
+      <!-- Convert the desired lead-in time (0.6 seconds) to a fraction of the total duration (set by the InSocket, above) -->
+      <MathScalar DEF="DurationReciprocal" />
+      <ROUTE fromNode='DurationReciprocal' fromField='Reciprocal' toNode='LeadInDurationFraction' toField='Operand'/>
+      <MathScalar DEF="LeadInDurationFraction" Multiplier="0.6" />
+      <ROUTE fromNode='LeadInDurationFraction' fromField='ProdSum' toNode='LeadInFractionLimiterInterpolator' toField='set_fraction'/>
+
+      <!-- Calculate 1 - 0.6/D, the fraction of the total duration of the time when we want the lead-out to begin -->
+      <ROUTE fromNode='LeadInDurationFraction' fromField='ProdSum' toNode='LeadOutDurationFraction' toField='Operand'/>
+      <MathScalar DEF="LeadOutDurationFraction" Multiplier="-1.0" Addend="1.0"/>
+      <ROUTE fromNode='LeadOutDurationFraction' fromField='ProdSum' toNode='LeadOutFractionLimiterInterpolator' toField='set_fraction'/>
+
+      <!--Limit the lead-in duration to no more than 3/10 of the  duration-->
+      <ScalarInterpolator DEF='LeadInFractionLimiterInterpolator' key='0 0.3' keyValue='0 0.3'/>
+      <ROUTE fromNode='LeadInFractionLimiterInterpolator' fromField='value_changed' toNode='TextSwingOrientationInterpolator' toField='key' toIndex='1'/>
+      <ROUTE fromNode='LeadInFractionLimiterInterpolator' fromField='value_changed' toNode='TextSwingTransparencyInterpolator' toField='key' toIndex='1'/>
+
+      <!--Limit the lead-out duration to no more than 3/10 of the clip duration-->
+      <ScalarInterpolator DEF='LeadOutFractionLimiterInterpolator' key='0.7 1' keyValue='0.7 1'/>
+      <ROUTE fromNode='LeadOutFractionLimiterInterpolator' fromField='value_changed' toNode='TextSwingOrientationInterpolator' toField='key' toIndex='2'/>
+      <ROUTE fromNode='LeadOutFractionLimiterInterpolator' fromField='value_changed' toNode='TextSwingTransparencyInterpolator' toField='key' toIndex='2'/>
+
+    </Transform>
+  </Transform>
+  </X3D>

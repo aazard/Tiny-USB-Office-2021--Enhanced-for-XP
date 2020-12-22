@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"Spin360EffectTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Motions and Fades"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='1'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+    </MetadataSet>
+    
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textureTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"Spin360EffectRescaleTextureTransform"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Spin360EffectInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"projectAspectRatio"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Spin360EffectAspectRatio"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+    <Transform>
+      <Shape>
+        <Appearance>
+          <TextureTransform DEF='Spin360EffectRescaleTextureTransform' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 0.75' containerField='textureTransform'>
+            <TextureTransform DEF='Spin360EffectRotationTextureTransform' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 1.33333333333333333' containerField='textureTransform'>
+              <TextureTransform DEF='Spin360EffectScaleTextureTransform' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+            </TextureTransform>
+          </TextureTransform>
+        </Appearance>
+      </Shape>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <ScalarInterpolator DEF='Spin360EffectInterpolator' key='0 1' keyValue='0 1'/>
+      <PositionInterpolator2D DEF='Spin360EffectScaleInterpolator' key='0 0.5 1' keyValue='1 1 1.33333333333333333 1.33333333333333333 1 1'/>
+      <ScalarInterpolator DEF='Spin360EffectRotationInterpolator'
+                          key='0 0.33333333333333333 0.66666666666666667 1'
+                          keyValue='0 -2.0943951023931955 -4.1887902047863910 -6.2831853071795865'/>
+      <ROUTE fromNode='Spin360EffectInterpolator' fromField='value_changed' toNode='Spin360EffectRotationInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='Spin360EffectInterpolator' fromField='value_changed' toNode='Spin360EffectScaleInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='Spin360EffectScaleInterpolator' fromField='value_changed' toNode='Spin360EffectScaleTextureTransform' toField='set_scale'/>
+      <ROUTE fromNode='Spin360EffectRotationInterpolator' fromField='value_changed' toNode='Spin360EffectRotationTextureTransform' toField='set_rotation'/>
+
+      <!--Aspect ratio calculation: To avoid distortion, we need to scale the image to square before we can rotate it,
+      then scale it back to the original aspect ratio, so we need both the aspect ratio and its reciprocal-->
+      <MathScalar DEF='Spin360EffectAspectRatio' Multiplier='1'/>
+      <PositionInterpolator2D DEF='Spin360EffectAspectInterpolator1' key='0 10' keyValue='1 0 1 10'/>
+      <PositionInterpolator2D DEF='Spin360EffectAspectInterpolator2' key='0 10' keyValue='1 0 1 10'/>
+      <ROUTE fromNode='Spin360EffectAspectRatio' fromField='ProdSum' toNode='Spin360EffectAspectInterpolator1' toField='set_fraction'/>
+      <ROUTE fromNode='Spin360EffectAspectRatio' fromField='Reciprocal' toNode='Spin360EffectAspectInterpolator2' toField='set_fraction'/>
+      <ROUTE fromNode='Spin360EffectAspectInterpolator1' fromField='value_changed' toNode='Spin360EffectRotationTextureTransform' toField='set_scale'/>
+      <ROUTE fromNode='Spin360EffectAspectInterpolator2' fromField='value_changed' toNode='Spin360EffectRescaleTextureTransform' toField='set_scale'/>
+    </Transform>
+
+  </Transform>
+</X3D>

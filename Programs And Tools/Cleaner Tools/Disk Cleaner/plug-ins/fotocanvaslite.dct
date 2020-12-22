@@ -1,7 +1,0 @@
-[Info]
-Title=FotoCanvas Lite
-Description=Delete FotoCanvas Lite's recent files
-
-
-[registry]
-HKEY_CURRENT_USER|Software\ACD Systems\FotoCanvas Lite\Recent File List

@@ -1,0 +1,14 @@
+TS-AUDIO TOMIDI CONVERTER v1.07
+Hangállományok valósidejû konvertálása MIDI formátumba
+-------------------------------------------------------------
+Op.rend: WINDOWS 9x/Me
+Szerzõ : Alexey Egorov
+Honlap : http://www.midi.ru/AudioToMidi/
+Licenc : freeware
+Dátum  : 2001.09.05.
+-------------------------------------------------------------
+Leírás : Valósidejû hanganyagok, WAV, MP3, CDA stb. hangállományok onvertálása MIDI formátumba.
+English: The present software allows the conversion of a standard audio 
+signal to MIDI signal with an insignificant delay. The resulting MIDI signal 
+can be given to a standard MIDI device, PC speaker, built-in sequencer. The 
+audio signal spectrum is displayed in a special window in real time.

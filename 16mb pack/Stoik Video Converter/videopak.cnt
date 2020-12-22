@@ -1,0 +1,10 @@
+:Base VideoPak.hlp>main
+1 Introduction=intro>main
+1 System Requirements=requirements>main
+1 Main window=HIDD_VIDEOPAK_DIALOG>main
+1 Video Rendering dialog box=HIDD_CHOOSEVIDEOPARAMS_DIALOG>main
+1 Audio Rendering dialog box=HIDD_CHOOSEAUDIOPARAMS_DIALOG>main
+1 Video compression dialog box=HIDD_CHOOSE_CODEC>main
+1 Audio compression dialog box=HIDD_CHOOSE_SND>main
+1 About dialog box=HIDD_ABOUTBOX>main
+1 STOIK Imaging=main@stsoft.hlp

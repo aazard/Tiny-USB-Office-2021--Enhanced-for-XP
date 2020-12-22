@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"TextEffectCinematicCaption2RightTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TextTransform"'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"TextEffectTransform"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"EffectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"EffectInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectDuration"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"DurationScalar"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"projectAspectRatio"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"ARScalar"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+
+    <Transform DEF='TextEffectTransform'>
+
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='position' value='"translation"'/>
+      </MetadataSet>
+      <Transform DEF='TextEffectCinematicCaption2Transform'>
+        <Shape DEF='TextEffectShape'>
+          <Appearance DEF='TextEffectAppearance'>
+            <Material DEF='TextEffectMaterial' transparency='0' ambientIntensity='0.200' shininess='0.200' diffuseColor='1 0 0'>
+              <MetadataSet DEF='MaterialBP' name='BPSet'>
+                <MetadataString containerField='value' name='color' value='"diffuseColor"'/>
+                <MetadataString containerField='value' name='automatic' value='"false"' reference='Custom'/>
+              </MetadataSet>
+            </Material>
+
+            <TextShader DEF='TextEffectTextShader' outlineColor='0 1 0'>
+              <MetadataSet name='BPSet'>
+                <MetadataString containerField='value' name='outlineColor' value='"outlineColor"'/>
+              </MetadataSet>
+            </TextShader>
+
+          </Appearance>
+
+          <Text DEF='TextEffectText' containerField='geometry' string='""'>
+            <MetadataSet name='BPSet'>
+              <MetadataString containerField='value' name='string' value='"string"'/>
+              <MetadataString containerField='value' name='length' value='"length"' />
+              <MetadataString containerField='value' name='maxExtent' value='"maxExtent"'/>
+            </MetadataSet>
+            <FontStyle DEF='TextEffectFontStyle' containerField='fontStyle' family='"Cambria"'
+                horizontal='true' justify='"MIDDLE" "END"' language='""' size='1.000'
+                spacing='1.1' style='PLAIN' topToBottom='true' outlineSizeIndex='0'>
+              <MetadataSet name='BPSet'>
+                <MetadataString containerField='value' name='family' value='"family"'/>
+                <MetadataString containerField='value' name='horizontal' value='"horizontal"'/>
+                <MetadataString containerField='value' name='size' value='"size"'/>
+                <MetadataString containerField='value' name='style' value='"style"'/>
+                <MetadataString containerField='value' name='justify' value='"justify"'/>
+                <MetadataString containerField='value' name='leftToRight' value='"leftToRight"'/>
+                <MetadataString containerField='value' name='outlineSizeIndex' value='"outlineSizeIndex"'/>
+              </MetadataSet>
+            </FontStyle>
+          </Text>
+        </Shape>
+
+      </Transform>
+
+      <!-- Starburst -->
+      <Transform DEF='StarburstTransform' scale='10 10 1'>
+        <Shape>
+          <Appearance>
+            <Material DEF='StarburstMaterial' transparency='1' diffuseColor='0 0 0'/>
+            <ImageTexture DEF='Burst' url='"res:\\MovieMakerCore.DLL\IDB_TEXTEFFECT_STARBURST"' repeatS='false' repeatT='false' />
+            <ChannelMixerShader mixerMatrix='0 0 0 0.5  0 0 0 0.5  0 0 0 0.5  0 0 0 0' colorOffset='1 1 1'/>
+          </Appearance>
+          <IndexedFaceSet creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1 1 0 3 -1 2 1 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1 2 1 0 -1 3 2 0 -1'>
+            <Coordinate point='-.75  .75 0  -.75 -.75 0  .75 -.75 0  .75  .75 0'/>
+            <TextureCoordinate  point='0 1  0 0  1 0  1 1'/>
+          </IndexedFaceSet>
+        </Shape>
+      </Transform>
+
+      <!-- Lens flare -->
+      <Transform DEF='LensFlareTransform'>
+        <!-- Lens Flare 1 - Yellow -->
+        <Transform scale='21.33333 21.33333 1' translation='0 0 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='LensFlareMaterial1' diffuseColor='1 0.85 0.4' transparency='1'/>
+                <WipeShader DEF='lensFlareLeftWipe13' fraction='0.5' transitionWidth='0.30' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.045 0.045' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe13Interpolator' closed='false' key='0 1' keyValue='0  0    -3.01  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe13Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe13Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe13' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareLeftWipe14' fraction='0.5' transitionWidth='0.25' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.065 0.065' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe14Interpolator' closed='false' key='0 1' keyValue='0  0    -5.01  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe14Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe14Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe14' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe11' fraction='0.5' transitionWidth='0.70' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.010 0.010' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe11Interpolator' closed='false' key='0.41 0.931' keyValue='0  0    0.30  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe11Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe11Interpolator' fromField='value_changed' toNode='lensFlareRightWipe11' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe12' fraction='0.5' transitionWidth='0.50' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe12Interpolator' closed='false' key='0.21 0.91' keyValue='0  0    0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe12Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe12Interpolator' fromField='value_changed' toNode='lensFlareRightWipe12' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe13' fraction='0.5' transitionWidth='0.20' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.030 0.030' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe13Interpolator' closed='false' key='0.11 0.81' keyValue='0  0    0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe13Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe13Interpolator' fromField='value_changed' toNode='lensFlareRightWipe13' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe14' fraction='0.5' transitionWidth='0.15' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.050 0.050' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe14Interpolator' closed='false' key='0 0.61' keyValue='0  0    0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe14Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe14Interpolator' fromField='value_changed' toNode='lensFlareRightWipe14' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe15' fraction='0.5' transitionWidth='0.05' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.085 0.085' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe15Interpolator' closed='false' key='0 0.41' keyValue='0  0    0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe15Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe15Interpolator' fromField='value_changed' toNode='lensFlareRightWipe15' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial1'/>
+                <WipeShader DEF='lensFlareRightWipe16' fraction='0.5' transitionWidth='0.10' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.110 0.110' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe16Interpolator' closed='false' key='0 0.51' keyValue='0  0    0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe16Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe16Interpolator' fromField='value_changed' toNode='lensFlareRightWipe16' toField='set_translation'/>
+
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='LensFlare1TransparencyInterpolator' key='0 0.26 0.80 0.90 1' keyValue='1  0.85 0.85 1 1'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='LensFlare1TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='LensFlare1TransparencyInterpolator' fromField='value_changed' toNode='LensFlareMaterial1' toField='set_transparency'/>
+
+        <!-- Lens Flare 2 - Green -->
+          <Shape>
+            <Appearance>
+              <Material DEF='LensFlareMaterial2' diffuseColor='0.7 1 0.6' transparency='1'/>
+                <WipeShader DEF='lensFlareLeftWipe21' fraction='0.5' transitionWidth='0.5' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.015 0.015' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe21Interpolator' closed='false' key='0 1' keyValue='0  0    -0.42  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe21Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe21Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe21' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareLeftWipe22' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.055 0.055' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe22Interpolator' closed='false' key='0 1' keyValue='0  0    -0.82  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe22Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe22Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe22' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareLeftWipe23' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.065 0.065' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe23Interpolator' closed='false' key='0 1' keyValue='0  0    -1.62  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe23Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe23Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe23' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareLeftWipe24' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.080 0.080' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe24Interpolator' closed='false' key='0 1' keyValue='0  0    -3.22  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe24Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe24Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe24' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareLeftWipe25' fraction='0.5' transitionWidth='0.5' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe25Interpolator' closed='false' key='0 1' keyValue='0  0    -0.22  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe25Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe25Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe25' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareLeftWipe26' fraction='0.5' transitionWidth='0.3' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.025 0.025' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe26Interpolator' closed='false' key='0 1' keyValue='0  0    -0.52  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe26Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe26Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe26' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe21' fraction='0.5' transitionWidth='0.5' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe21Interpolator' closed='false' key='0 1' keyValue='0  0    0.22  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe21Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe21Interpolator' fromField='value_changed' toNode='lensFlareRightWipe21' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe22' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.050 0.050' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe22Interpolator' closed='false' key='0 1' keyValue='0  0    0.42  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe22Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe22Interpolator' fromField='value_changed' toNode='lensFlareRightWipe22' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe23' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.070 0.070' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe23Interpolator' closed='false' key='0 1' keyValue='0  0    0.72  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe23Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe23Interpolator' fromField='value_changed' toNode='lensFlareRightWipe23' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe24' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.075 0.075' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe24Interpolator' closed='false' key='0 1' keyValue='0  0    1.52  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe24Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe24Interpolator' fromField='value_changed' toNode='lensFlareRightWipe24' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe25' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.090 0.090' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe25Interpolator' closed='false' key='0 1' keyValue='0  0    0.82  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe25Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe25Interpolator' fromField='value_changed' toNode='lensFlareRightWipe25' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial2'/>
+                <WipeShader DEF='lensFlareRightWipe26' fraction='0.5' transitionWidth='0.4' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.030 0.030' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe26Interpolator' closed='false' key='0 1' keyValue='0  0    0.62  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe26Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe26Interpolator' fromField='value_changed' toNode='lensFlareRightWipe26' toField='set_translation'/>
+
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='LensFlare2TransparencyInterpolator' key='0 0.26 0.80 0.95 1' keyValue='1  0.89 0.89 1 1'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='LensFlare2TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='LensFlare2TransparencyInterpolator' fromField='value_changed' toNode='LensFlareMaterial2' toField='set_transparency'/>
+
+        <!-- Lens Flare 3 - Blue -->
+          <Shape>
+            <Appearance>
+              <Material DEF='LensFlareMaterial3' diffuseColor='0.7 0.7 1' transparency='1'/>
+                <WipeShader DEF='lensFlareLeftWipe31' fraction='0.5' transitionWidth='0.5' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.010 0.010' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe31Interpolator' closed='false' key='0 1' keyValue='0  0    -0.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe31Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe31Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe31' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareLeftWipe32' fraction='0.5' transitionWidth='0.4' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.015 0.015' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe32Interpolator' closed='false' key='0 1' keyValue='0  0    -1.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe32Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe32Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe32' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareLeftWipe33' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.035 0.035' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe33Interpolator' closed='false' key='0 1' keyValue='0  0    -2.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe33Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe33Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe33' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareLeftWipe34' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.070 0.070' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe34Interpolator' closed='false' key='0 1' keyValue='0  0    -4.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe34Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe34Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe34' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareLeftWipe35' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.085 0.085' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe35Interpolator' closed='false' key='0 1' keyValue='0  0    -5.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe35Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe35Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe35' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareLeftWipe36' fraction='0.5' transitionWidth='0.2' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe36Interpolator' closed='false' key='0 1' keyValue='0  0    -0.63  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe36Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe36Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe36' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe31' fraction='0.5' transitionWidth='0.4' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.015 0.015' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe31Interpolator' closed='false' key='0 1' keyValue='0  0    0.23  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe31Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe31Interpolator' fromField='value_changed' toNode='lensFlareRightWipe31' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe32' fraction='0.5' transitionWidth='0.2' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe32Interpolator' closed='false' key='0 1' keyValue='0  0    0.43  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe32Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe32Interpolator' fromField='value_changed' toNode='lensFlareRightWipe32' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe33' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.040 0.040' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe33Interpolator' closed='false' key='0 1' keyValue='0  0    0.53  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe33Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe33Interpolator' fromField='value_changed' toNode='lensFlareRightWipe33' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe34' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.075 0.075' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe34Interpolator' closed='false' key='0 1' keyValue='0  0    0.73  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe34Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe34Interpolator' fromField='value_changed' toNode='lensFlareRightWipe34' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe35' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.090 0.090' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe35Interpolator' closed='false' key='0 1' keyValue='0  0    3.03  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe35Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe35Interpolator' fromField='value_changed' toNode='lensFlareRightWipe35' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial3'/>
+                <WipeShader DEF='lensFlareRightWipe36' fraction='0.5' transitionWidth='0.3' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.025 0.025' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareRightWipe36Interpolator' closed='false' key='0 1' keyValue='0  0    0.43  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareRightWipe36Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareRightWipe36Interpolator' fromField='value_changed' toNode='lensFlareRightWipe36' toField='set_translation'/>
+
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='LensFlare3TransparencyInterpolator' key='0 0.26 0.80 0.95 1' keyValue='1  0.87 0.87 1 1'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='LensFlare3TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='LensFlare3TransparencyInterpolator' fromField='value_changed' toNode='LensFlareMaterial3' toField='set_transparency'/>
+
+        <!-- Lens Flare 4 - Red -->
+          <Shape>
+            <Appearance>
+              <Material DEF='LensFlareMaterial4' diffuseColor='1 0.8 0.8' transparency='1'/>
+                <WipeShader DEF='lensFlareLeftWipe41' fraction='0.5' transitionWidth='0.5' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.011 0.011' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe41Interpolator' closed='false' key='0.38 0.94' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe41Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe41Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe41' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe42' fraction='0.5' transitionWidth='0.4' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.013 0.013' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe42Interpolator' closed='false' key='0.34 0.84' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe42Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe42Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe42' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe43' fraction='0.5' transitionWidth='0.3' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.015 0.015' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe43Interpolator' closed='false' key='0.24 0.74' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe43Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe43Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe43' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe44' fraction='0.5' transitionWidth='0.2' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.020 0.020' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe44Interpolator' closed='false' key='0.24 0.54' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe44Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe44Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe44' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe45' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.025 0.025' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe45Interpolator' closed='false' key='0.14 0.54' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe45Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe45Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe45' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe46' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.030 0.030' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe46Interpolator' closed='false' key='0.04 0.34' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe46Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe46Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe46' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+                <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe47' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.035 0.035' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe47Interpolator' closed='false' key='0.04 0.24' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe47Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe47Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe47' toField='set_translation'/>
+
+          <Shape>
+            <Appearance>
+              <Material USE='LensFlareMaterial4'/>
+                <WipeShader DEF='lensFlareLeftWipe48' fraction='0.5' transitionWidth='0.1' meshType='Circle' edgeType='Fill' AspectRatioWidth='1' AspectRatioHeight='1' center='0.5 0.5' scale='0.040 0.040' translation='0.0 0.0' centerIn='true'/>
+            </Appearance>
+          </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator2D DEF='lensFlareLeftWipe48Interpolator' closed='false' key='0.04 0.14' keyValue='0  0    -0.60  0'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='lensFlareLeftWipe48Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='lensFlareLeftWipe48Interpolator' fromField='value_changed' toNode='lensFlareLeftWipe48' toField='set_translation'/>
+
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='LensFlare4TransparencyInterpolator' key='0 0.26 0.80 0.95 1' keyValue='1  0.88 0.88 1 1'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='LensFlare4TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='LensFlare4TransparencyInterpolator' fromField='value_changed' toNode='LensFlareMaterial4' toField='set_transparency'/>
+        </Transform>
+      </Transform>
+    </Transform>
+
+    <!--All nodes in this set are injected-->
+    <Transform DEF='InjectSet'>
+
+      <!-- Grey Overlays -->
+        <Transform translation='0 0 0.01'>
+          <Shape>
+            <Appearance>
+              <Material DEF="OverlayMaterial" diffuseColor='0 0 0'/>
+              <TextureTransform DEF='OverlayTextureTransform' center="-0.5 -0.5"/>
+              <MotionTexture>
+                <ImageTexture DEF='DummyImageTexture' repeatS='false' repeatT='false' url='"res:\\MovieMakerCore.DLL\IDB_WHITE_1024X512"' />
+                <ShaderSet>
+                  <!-- Fraction should be no more than 1/sqrt(2) -->
+                  <WipeShader DEF='wipe1'
+                              fraction='0.5'
+                              transitionWidth='0.0005'
+                              meshType='Circle'
+                              edgeType='Soft'
+                              center='0.5 0.5'
+                              scale='5 5'
+                              translation='-1.8 0.1'
+                              AspectRatioWidth='1.33333333'
+                              AspectRatioHeight='1.33333333'
+                              centerIn='false'/>
+                  <ChannelMixerShader mixerMatrix='1 0 0 0  0 1 0 0  0 0 0 1  0 0 1 0'/>
+                  <!-- swap blue <-> alpha -->
+                  <WipeShader DEF='wipe2'
+                              fraction='0.5'
+                              transitionWidth='0.0005'
+                              meshType='Circle'
+                              edgeType='Soft'
+                              center='0.5 0.5'
+                              scale='5 5'
+                              translation='-1.68 0.7'
+                              AspectRatioWidth='1.33333333'
+                              AspectRatioHeight='1.33333333'
+                              centerIn='false'/>
+                  <ChannelMixerShader mixerMatrix='1 0 0 0  0 0 0 0  0 0 0 0.80  0 0 0 0.80'/>
+                  <!--                                     (1 - sqrt(1-0.94)) / 0.94 = 0.80 -->
+                  <ChannelMixerShader mixerMatrix='0.44 0.44 0.44 0  0 0 0 0  0 0 0 0    0 0 0 0.94' colorOffset='0.42 0.42 0.46'/>
+                  <!-- Gradient from 0.42 0.42 0.46 to 0.86 0.86 0.90, using R channel gradient in the input -->
+                </ShaderSet>
+              </MotionTexture>
+            </Appearance>
+            <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+              <Coordinate containerField='coord' point='-5.33333333 3 0 -5.33333333 -3 0 5.33333333 -3 0 5.33333333 3 0' />
+              <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+            </IndexedFaceSet>
+          </Shape>
+
+          <SplinePositionInterpolator2D DEF='wipe1Interpolator' closed='false' key='0  1' keyValue='-1.42 0.22  -1.34 0.24'/>
+          <SplinePositionInterpolator2D DEF='wipe2Interpolator' closed='false' key='0  1' keyValue='-1.28 0.59  -1.245 0.66'/>
+          <ROUTE fromNode='EffectInterpolator' fromField='value_changed' toNode='wipe1Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='EffectInterpolator' fromField='value_changed' toNode='wipe2Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='wipe1Interpolator' fromField='value_changed' toNode='wipe1' toField='set_translation'/>
+          <ROUTE fromNode='wipe2Interpolator' fromField='value_changed' toNode='wipe2' toField='set_translation'/>
+          <MathScalar DEF='ARScalar'/>
+          <!-- Convert 3/4 to (1, 4/3) -->
+          <PositionInterpolator2D DEF='OverlayTextureTransformScale' key='0 75' keyValue='0 1  133.33333 1'/>
+          <ROUTE fromNode='ARScalar' fromField='Reciprocal_changed' toNode='OverlayTextureTransformScale' toField='set_fraction'/>
+          <ROUTE fromNode='OverlayTextureTransformScale' fromField='value_changed' toNode='OverlayTextureTransform' toField='set_scale'/>
+          <ROUTE fromNode='ARScalar' fromField='ProdSum_changed' toNode='wipe1' toField='set_AspectRatioWidth'/>
+          <ROUTE fromNode='ARScalar' fromField='ProdSum_changed' toNode='wipe2' toField='set_AspectRatioWidth'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Overlay1TransparencyInterpolator' key='0 0.15 0.85 1' keyValue='1 0 0 1'/>
+          <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed' toNode='Overlay1TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Overlay1TransparencyInterpolator' fromField='value_changed' toNode='OverlayMaterial' toField='set_transparency'/>
+        </Transform>
+
+        <Transform  DEF='CircleAspectRatioTransform'>
+            <Transform scale='2 2 1' translation='-1 -1 0.10'>
+
+
+        <!-- Small circle 1 -->
+        <Transform DEF='SmallCircleTransform1' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial1' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture DEF='DummyImageTexture' repeatS='false' repeatT='false' url='"res:\\MovieMakerCore.DLL\IDB_BUBBLE"' />
+            </Appearance>
+            <IndexedFaceSet DEF='SmallCircleMesh' containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-0 1 0 -0 0 0 1 0 0 1 1 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+            </IndexedFaceSet>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe1Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+           keyValue='0.42 0.3 0 0.42 0.3 0 0.42 0.3 0 0.38 0.31 0 0.38 0.33 0 0.38 0.35 0 0.38 0.37 0 0.38 0.39 0 0.38 0.41 0 0.38 0.43 0 0.38 0.45 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe1Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe1Interpolator' fromField='value_changed' toNode='SmallCircleTransform1' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle1TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 0.92 0.92 0.92 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle1TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle1TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial1' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle1ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0 0 1 0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.02 0.02 1 0.025 0.025 1 0.025 0.025 1 0.025 0.025 1 0.025 0.025 1 0.025 0.025 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle1ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle1ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform1' toField='set_scale' />
+        </Transform>
+
+        <!-- Small circle 2 -->
+        <Transform DEF='SmallCircleTransform2' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial2' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe2Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.4 0.2 0 0.38 0.21 0 0.37 0.22 0 0.37 0.23 0 0.37 0.24 0 0.37 0.25 0 0.37 0.26 0 0.37 0.27 0 0.37 0.28 0 0.37 0.29 0 0.37 0.31 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe2Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe2Interpolator' fromField='value_changed' toNode='SmallCircleTransform2' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle2TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 0.92 0.92 0.92 1 1 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle2TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle2TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial2' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle2ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.025 0.025 1 0.03 0.03 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle2ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle2ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform2' toField='set_scale' />
+        </Transform>
+
+        <!-- Small circle 3 -->
+        <Transform DEF='SmallCircleTransform3' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial3' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe3Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.44 0.1 0 0.44 0.1 0 0.44 0.1 0 0.44 0.1 0 0.39 0.15 0 0.39 0.2 0 0.39 0.25 0 0.39 0.3 0 0.39 0.35 0 0.39 0.4 0 0.39 0.45 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe3Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe3Interpolator' fromField='value_changed' toNode='SmallCircleTransform3' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle3TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.87 1' keyValue='1 1 1 1 0.92 0.92 0.92 0.92 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle3TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle3TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial3' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle3ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0 0 1 0 0 1 0.005 0.005 1 0.01 0.01 1 0.02 0.02 1 0.02 0.02 1 0.025 0.025 1 0.025 0.025 1 0.025 0.025 1 0.025 0.025 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle3ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle3ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform3' toField='set_scale' />
+        </Transform>
+
+
+        <!-- Small circle 7 -->
+        <Transform DEF='SmallCircleTransform7' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial7' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe7Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.42 0.05 0 0.42 0.05 0 0.35 0.07 0 0.35 0.09 0 0.35 0.11 0 0.35 0.13 0 0.35 0.15 0 0.35 0.17 0 0.35 0.19 0 0.35 0.21 0 0.35 0.23 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe7Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe7Interpolator' fromField='value_changed' toNode='SmallCircleTransform7' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle7TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 0.92 0.92 1 1 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle7TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle7TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial7' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle7ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.025 0.025 1 0.035 0.035 1 0.045 0.045 1 0.045 0.045 1 0.045 0.045 1 0.045 0.045 1 0.045 0.045 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle7ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle7ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform7' toField='set_scale' />
+        </Transform>
+
+        <!-- Small circle 8 -->
+        <Transform DEF='SmallCircleTransform8' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial8' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe8Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.48 -0.2 0 0.48 -0.2 0 0.48 -0.2 0 0.48 -0.2 0 0.48 -0.2 0 0.43 -0.16 0 0.43 -0.12 0 0.43 -0.08 0 0.43 -0.04 0 0.43 0 0 0.43 0.04 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe8Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe8Interpolator' fromField='value_changed' toNode='SmallCircleTransform8' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle8TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 1 0.92 0.92 0.92 0.92 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle8TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle8TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial8' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle8ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0 0 1 0 0 1 0 0 1 0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.02 0.02 1 0.02 0.02 1 0.025 0.025 1 0.025 0.025 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle8ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle8ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform8' toField='set_scale' />
+        </Transform>
+
+
+        <!-- Small circle 10 -->
+        <Transform DEF='SmallCircleTransform10' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial10' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe10Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0.4 -0.35 0 0.4 -0.35 0 0.4 -0.35 0 0.4 -0.35 0 0.37 -0.3 0 0.36 -0.25 0 0.36 -0.2 0 0.36 -0.15 0 0.36 -0.1 0 0.36 -0.05 0 0.36 0 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe10Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe10Interpolator' fromField='value_changed' toNode='SmallCircleTransform10' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle10TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 0.92 0.92 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle10TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle10TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial10' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle10ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0 0 1 0 0 1 0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.025 0.025 1 0.025 0.025 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle10ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle10ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform10' toField='set_scale' />
+        </Transform>
+
+
+
+        <!-- Small circle 12 -->
+        <Transform DEF='SmallCircleTransform12' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial12' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe12Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.87 1' 
+          keyValue='0.4 -0.25 0 0.4 -0.25 0 0.35 -0.2 0 0.35 -0.15 0 0.35 -0.1 0 0.35 -0.05 0 0.35 0 0 0.35 0.05 0 0.35 0.1 0 0.35 0.15 0 0.35 0.2 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe12Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe12Interpolator' fromField='value_changed' toNode='SmallCircleTransform12' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle12TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 0.92 0.92 0.92 1 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle12TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle12TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial12' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle12ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0.0005 0.0005 1 0.01 0.01 1 0.015 0.015 1 0.015 0.015 1 0.015 0.015 1 0.025 0.025 1 0.03 0.03 1 0.035 0.035 1 0.035 0.035 1 0.035 0.035 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle12ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle12ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform12' toField='set_scale' />
+        </Transform>
+
+
+        <!-- Small circle 13 -->
+        <Transform DEF='SmallCircleTransform13' center='0.5 0.5 0'>
+          <Shape>
+            <Appearance>
+              <Material DEF='CircleMaterial13' transparency='1' diffuseColor='0 0 0'/>
+              <ImageTexture USE='DummyImageTexture' />
+            </Appearance>
+            <IndexedFaceSet USE='SmallCircleMesh'/>
+        </Shape>
+          <!-- Movement -->
+          <SplinePositionInterpolator DEF='smallWipe13Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.87 1' 
+          keyValue='0.48 -0.1 0 0.48 -0.1 0 0.45 -0.09 0 0.45 -0.05 0 0.45 -0.01 0 0.45 0.03 0 0.45 0.07 0 0.45 0.11 0 0.45 0.15 0 0.45 0.19 0 0.45 0.23 0'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='smallWipe13Interpolator' toField='set_fraction'/>
+          <ROUTE fromNode='smallWipe13Interpolator' fromField='value_changed' toNode='SmallCircleTransform13' toField='set_translation'/>
+          <!-- Transparency -->
+          <ScalarInterpolator DEF='Circle13TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 0.92 0.92 1 1 1 1 1 1 1'/>
+          <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle13TransparencyInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle13TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial13' toField='set_transparency'/>
+          <!-- Scale -->
+          <PositionInterpolator DEF='Circle13ScaleInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' 
+          keyValue='0 0 1 0.005 0.005 1 0.01 0.01 1 0.015 0.015 1 0.02 0.02 1 0.025 0.025 1 0.03 0.03 1 0.035 0.035 1 0.04 0.04 1 0.04 0.04 1 0.04 0.04 1'/>
+          <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'  toNode='Circle13ScaleInterpolator' toField='set_fraction'/>
+          <ROUTE fromNode='Circle13ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform13' toField='set_scale' />
+        </Transform>
+
+            </Transform>
+
+            <PositionInterpolator DEF='CircleAspectRatio' key='1.33333 1.77778' keyValue='4 4 1 5.33333 5.33333 1'/>
+            <ROUTE fromNode='ARScalar' fromField='ProdSum_changed' toNode='CircleAspectRatio' toField='set_fraction'/>
+            <ROUTE fromNode='CircleAspectRatio' fromField='value_changed' toNode='CircleAspectRatioTransform' toField='scale'/>
+        </Transform>
+
+        <ScalarInterpolator DEF='EffectInterpolator' key='0 1' keyValue='0 1'/>
+      <ScalarInterpolator DEF='EffectInterpolatorLimitedIn' key='0 1 1' keyValue='0 1 1'/>
+      <ScalarInterpolator DEF='EffectInterpolatorLimitedInOut' key='0 0.5 0.5 1' keyValue='0 0.5 0.5 1'/>
+
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedIn' toField='set_fraction'/>
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_fraction'/>
+
+      <MathScalar DEF='DurationScalar'/>
+
+      <!-- 0.5 / (7.0 / 2) = 0.143... We use a higher number in the following keys so that won't stop @ 7 second or below duration -->
+      <ScalarInterpolator DEF='InverseDurationToKey1Interpolator' key='0 0.15' keyValue='0 0.5'/>
+      <ScalarInterpolator DEF='InverseDurationToKey2Interpolator' key='0 0.15' keyValue='1 0.5'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey1Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey2Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='InverseDurationToKey1Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='1'/>
+      <ROUTE fromNode='InverseDurationToKey2Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='2'/>
+
+      <!-- 1 / 7.0 = 0.143... -->
+      <ScalarInterpolator DEF='InverseDurationToKeyInInterpolator' key='0 0.15' keyValue='0 1'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKeyInInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='InverseDurationToKeyInInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedIn' toField='set_key' toIndex='1'/>
+
+      <!-- max(1, 1 / 0.15 / Duration). Reciprocal is: min(1, Duration / 7). Then we multiply it by real EffectInterpolator value, and take fractional part.-->
+      <MathScalar DEF='EffectDurationMultiplier'/>
+      <ROUTE fromNode='InverseDurationToKeyInInterpolator' fromField='value_changed'
+             toNode='EffectDurationMultiplier' toField='set_Operand'/>
+      <MathScalar DEF='EffectFractionScaled'/>
+      <ROUTE fromNode='EffectDurationMultiplier' fromField='Reciprocal_changed'
+             toNode='EffectFractionScaled' toField='set_Operand'/>
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectFractionScaled' toField='set_Multiplier'/>
+      <MathScalar DEF='EffectFractionCycledOver'/>
+      <ROUTE fromNode='EffectFractionScaled' fromField='ProdSum_changed'
+             toNode='EffectFractionCycledOver' toField='set_Operand'/>
+
+      <!-- Take the maximum of MinimalOutroSmallCircleTransparencyDriverInterpolaror (that will be 0 except at the end where it will get to 1) and EffectFractionCycledOver for transparency . -1's are to be replaced -->
+      <ScalarInterpolator DEF='SmallCircleTransparencyDriverInterpolator' key='-1 1' keyValue='-1 1'/>
+      <ScalarInterpolator DEF='MinimalOutroSmallCircleTransparencyDriverInterpolaror' key='0.8 0.95' keyValue='0 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed'
+             toNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' toField='set_fraction'/>
+      <ROUTE fromNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' fromField='value_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_keyValue' toIndex='0'/>
+      <ROUTE fromNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' fromField='value_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_key' toIndex='0'/>
+      <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_fraction'/>
+
+      <!-- Text transparency -->
+      <ScalarInterpolator DEF='TextUITransparencyInterpolator' key='0 1' keyValue='0 1'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='transparency' value='"set_fraction"'/>
+        </MetadataSet>
+      </ScalarInterpolator>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="2" toNode="TextCinematicCaption2TransparencyInterpolator"/>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="3" toNode="TextCinematicCaption2TransparencyInterpolator"/>
+
+      <ScalarInterpolator DEF='TextCinematicCaption2TransparencyInterpolator' key='0 0.15 0.25 0.85 1' keyValue='1 1 -1 -1 1'/>
+      <!-- -1's will be replaced with UI values -->
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed'
+               toNode='TextCinematicCaption2TransparencyInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='TextCinematicCaption2TransparencyInterpolator' fromField='value_changed'
+               toNode='TextEffectMaterial' toField='set_transparency' />
+
+      <ScalarInterpolator DEF='StarburstTransparencyInterpolator' key='0.0 0.04 0.18 0.45' keyValue='1 0 0 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed'
+               toNode='StarburstTransparencyInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='StarburstTransparencyInterpolator' fromField='value_changed'
+               toNode='StarburstMaterial' toField='set_transparency'/>
+
+      <OrientationInterpolator DEF='TextCinematicCaption2OrientationInterpolator' key='0 0.15 0.294'
+                              keyValue='0 1 0 -1.5708
+                                        0 1 0 -1.5708
+                                        0 1 0 0.0'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed'
+               toNode='TextCinematicCaption2OrientationInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='TextCinematicCaption2OrientationInterpolator' fromField='value_changed'
+               toNode='TextEffectCinematicCaption2Transform' toField='rotation' />
+      <SplinePositionInterpolator DEF='TextScaleInterpolator' closed='false'
+        key='
+            0
+            0.15
+            0.162
+            0.174
+            0.186
+            0.198
+            0.210
+            0.222
+            0.234
+            0.246
+            0.258
+            0.270
+            0.282
+            0.294
+            1
+        ' keyValue='
+            14          1    10
+            14          1    10
+            8.423247098 1    10
+            4.24162078  1    10
+            2.861523608 1    10
+            2.182326759 1    10
+            1.784097122 1    10
+            1.527042237 1    10
+            1.351440173 1    10
+            1.227632607 1    10
+            1.139368735 1    10
+            1.077159135 1    10
+            1.03527618  1    10
+            1.010283227 1    10
+            1.05        1.05 10
+     '/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed'
+               toNode='TextScaleInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextScaleInterpolator" fromField="value_changed"
+               toNode="TextEffectCinematicCaption2Transform" toField="scale" />
+
+      <PositionInterpolator DEF="StarburstScaleInterpolator" key="0 0.15 0.45" keyValue="2 2 1 4 4 1 5 5 1"/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed'
+               toNode='StarburstScaleInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="StarburstScaleInterpolator" fromField="value_changed"
+               toNode="StarburstTransform" toField="scale" />
+
+      <!-- Center the star burst and lens flare behind the main text -->
+      <MathVector DEF='TextMathBoundsSplitter'/>
+      <!-- Get the size of the text object, divide the Y component in half, and set as the center -->
+      <ROUTE fromNode='TextEffectText' fromField='TextBounds' toNode='TextMathBoundsSplitter' toField='Vec2'/>
+      <ROUTE fromNode='TextMathBoundsSplitter' fromField='ComponentY' toNode='TextCenterYInterpolator' toField='set_fraction'/>
+      <PositionInterpolator DEF='TextCenterYInterpolator' key='-100 0' keyValue='0 -50 0, 0 0 0'/>
+      <ROUTE fromNode='TextCenterYInterpolator' fromField='value_changed' toNode='StarburstTransform' toField='translation' />
+      <ROUTE fromNode='TextCenterYInterpolator' fromField='value_changed' toNode='LensFlareTransform' toField='translation' />
+
+    </Transform>
+
+  </Transform>
+
+</X3D>

@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>How to use Master Pages</title>
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 5px 5px 5px 5px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Font Style */
+{
+ font-size: 12pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-size: 10pt;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-size: 10pt;
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-size: 10pt;
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ font-size: 10pt;
+ color: #000080;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ font-size: 10pt;
+ color: #000080;
+ text-decoration: underline;
+}
+span.rvts6 /* Font Hint */
+{
+ font-size: 10pt;
+ color: #a0a0a0;
+}
+span.rvts7 /* Font Hint Title */
+{
+ font-size: 15pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ font-weight: bold;
+ color: #696969;
+}
+span.rvts8 /* Font Hint Bold */
+{
+ font-size: 10pt;
+ font-weight: bold;
+ color: #a0a0a0;
+}
+span.rvts9 /* Font Hint Italic */
+{
+ font-size: 10pt;
+ font-style: italic;
+ color: #a0a0a0;
+}
+span.rvts10 /* Heading Title */
+{
+ font-size: 30pt;
+ font-weight: bold;
+}
+span.rvts11 /* Heading1 */
+{
+ font-size: 16pt;
+}
+span.rvts12 /* Heading2 */
+{
+ font-size: 15pt;
+}
+span.rvts13 /* Heading3 */
+{
+ font-size: 14pt;
+}
+span.rvts14 /* Heading4 */
+{
+ font-size: 13pt;
+}
+span.rvts15 /* Heading5 */
+{
+}
+span.rvts16 /* Heading Title */
+{
+ font-size: 30pt;
+ font-weight: bold;
+}
+span.rvts17 /* Heading1 */
+{
+ font-size: 16pt;
+}
+span.rvts18 /* Heading2 */
+{
+ font-size: 15pt;
+}
+span.rvts19 /* Heading3 */
+{
+ font-size: 14pt;
+}
+span.rvts20 /* Heading4 */
+{
+ font-size: 13pt;
+}
+span.rvts21 /* Heading5 */
+{
+}
+span.rvts22 /* Heading Title */
+{
+ font-size: 30pt;
+ font-weight: bold;
+}
+span.rvts23 /* Heading1 */
+{
+ font-size: 16pt;
+}
+span.rvts24 /* Heading2 */
+{
+ font-size: 15pt;
+}
+span.rvts25 /* Heading3 */
+{
+ font-size: 14pt;
+}
+span.rvts26 /* Heading4 */
+{
+ font-size: 13pt;
+}
+span.rvts27 /* Heading5 */
+{
+}
+span.rvts28
+{
+ font-weight: bold;
+}
+span.rvts29
+{
+ font-style: italic;
+}
+span.rvts30 /* Font Style */
+{
+ font-size: 20pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ color: #ffffff;
+}
+span.rvts31 /* Font Style */
+{
+ font-size: 10pt;
+ font-family: 'MS Sans Serif', 'Geneva', sans-serif;
+ color: #808080;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2 /* Heading Title */
+{
+ text-align: center;
+ line-height: 1.50;
+ margin: 250px 0px 0px 0px;
+}
+.rvps3 /* Heading1 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps4 /* Heading2 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps5 /* Heading3 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps6 /* Heading4 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps7 /* Heading5 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps8 /* Heading Title */
+{
+ text-align: center;
+ line-height: 1.50;
+ margin: 250px 0px 0px 0px;
+}
+.rvps9 /* Heading1 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps10 /* Heading2 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps11 /* Heading3 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps12 /* Heading4 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps13 /* Heading5 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps14 /* Heading Title */
+{
+ text-align: center;
+ line-height: 1.50;
+ margin: 250px 0px 0px 0px;
+}
+.rvps15 /* Heading1 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps16 /* Heading2 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps17 /* Heading3 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps18 /* Heading4 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps19 /* Heading5 */
+{
+ border-color: #aaaaaa;
+ border-style: solid;
+ border-width: 1px;
+ border-top: none;
+ border-right: none;
+ border-left: none;
+ margin: 20px 0px 10px 0px;
+}
+.rvps20 /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ background: #6d6d6d;
+ padding: 5px 5px 2px 5px;
+ margin: -5px -5px 18px -5px;
+}
+.rvps21 /* Paragraph Style */
+{
+ text-align: center;
+ background: #e4e4e4;
+ margin: 20px 0px 0px 0px;
+}
+--></style>
+<link rel="StyleSheet" href="hnd.css" type="text/css"/>
+<script type="text/javascript">if(top.frames.length == 0) { sTopic = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length); top.location.href="../index.html?" + sTopic; }</script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="hnd.js"></script>
+<meta name="generator" content="HelpNDoc Professional Edition"></head>
+<body>
+<h1 class=rvps20><span class=rvts0><span class=rvts30>How to use Master Pages</span></span></h1>
+<p>RocketCake has a built- in feature named <span class=rvts29>Master Pages</span>, a simple mechanism to share parts of the website between </p>
+<p> different pages. If you have a lot of web pages with repeating design, it might be easier to just design the layout once and reuse it on all pages which have actual content. This section will show how to do this.</p>
+<p><br></p>
+<p><span class=rvts28>Getting started</span></p>
+<p><br></p>
+<p>First, create some design layout page for your website. Name it for example 'masterpage.html' to be sure you don't confuse it with a real page. As example, create a menu and some caption on it, like this:</p>
+<p><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_15.png"></p>
+<p class=rvps1><span class=rvts28><br></span></p>
+<p>This will now be the base for all pages, and we only will change the text content on every page. To let RocketCake know which part of the website should change, add a 'Content Placeholder' on the page. You can find it in the menu item 'Insert -&gt; More -&gt; Content Placeholder' or on the second page of the toolset on the right:</p>
+<p><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_16.png"></p>
+<p class=rvps1><br></p>
+<p>Place it where your website content should be displayed:</p>
+<p class=rvps1><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_19.png"></p>
+<p class=rvps1><br></p>
+<p class=rvps1><br></p>
+<p>Note: Without the placeholder, Master Pages won't work.</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><span class=rvts28>Add content</span></p>
+<p><br></p>
+<p>Now, we only need to add one or two pages with content to use this master page. Add a new, empty page to the project, and fill it with some text and content:</p>
+<p><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_20.png"></p>
+<p class=rvps1><br></p>
+<p>The only thing missing is now to tell RocketCake to use the Master Page for this page. In the Properties window, go to the 'Master Page' option, and check it. A new entry will appear where you will be able to select a page as master page. Select the masterpage.html we created before:</p>
+<p><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_21.png"></p>
+<p class=rvps1><br></p>
+<p>And basically, that's it. If you now publish or preview the page, it should appear as part of the master page, exactly where you placed the content placeholder:</p>
+<p><br></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_22.png"></p>
+<p class=rvps1><br></p>
+<p>You can create as many pages as you want which all can use the Master Page. In this way, you only have one page containing the layout, which you only need to edit once.</p>
+<p><br></p>
+<p class=rvps21><span class=rvts31>Copyright © by Ambiera e.U.</span></p>
+</body></html>

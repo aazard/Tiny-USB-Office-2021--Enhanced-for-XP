@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"SimpleProjectTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='2'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='"MovieTimeSensor"'/>
+    </MetadataSet>
+    <Viewpoint jump='true' fieldOfView='0.47109' position='0 0 12.458333' orientation='0 0 1 0' />
+    <!--Viewpoint jump='true' fieldOfView='0.47109' position='0 0 12.5' orientation='0 0 1 0' /-->
+
+    <Transform>
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='DuckedVideoAndNarrationMix' reference='Custom'/>
+        <MetadataString containerField='value' name='DuckedVideoAndSoundTrackMix' reference='Custom'/>
+        <MetadataString containerField='value' name='DuckedNarrationAndSoundTrackMix' reference='Custom'/>
+        <MetadataString containerField='value' name='SoundTrackMix' reference='Custom'/>
+      </MetadataSet>
+    </Transform>
+
+    <!-- This switch controls normal project preview v.s. single extent preview -->
+    <Switch DEF='PreviewModeSwitch' whichChoice='0' >
+      <Transform>
+        <!-- In this theme template this is the main extent of the movie and all visual extents 
+             are inserted into it. -->
+        <Transform>
+          <MetadataSet name='placeholder'>
+            <MetadataString containerField='value' name='PlaceholderName' value='"Main"'/>
+          </MetadataSet>
+        </Transform>
+
+        <!-- This is placeholder for text overlays. It should only contain TitleClips.
+             It sits parallel and just in front of the main placeholder on Z axis. -->
+        <Transform translation='0 0 0.05' scale='0.996 0.996 1'>
+          <MetadataSet name='placeholder'>
+            <MetadataString containerField='value' name='PlaceholderName' value='"Text"'/>
+            <MetadataString containerField='value' name='ElasticTime' value='"true"'/>
+          </MetadataSet>
+        </Transform>
+
+        <!-- This is placeholder for music. It should not contain any visual extents (only AudioClips)-->
+        <Transform translation='0 0 -10'>
+          <MetadataSet name='placeholder'>
+            <MetadataString containerField='value' name='PlaceholderName' value='"SoundTrack"'/>
+            <MetadataString containerField='value' name='ElasticTime' value='"true"'/>
+          </MetadataSet>
+        </Transform>
+
+        <!-- This is placeholder for narration. It should not contain any visual extents (only AudioClips) -->
+        <Transform translation='0 0 -10'>
+          <MetadataSet name='placeholder'>
+            <MetadataString containerField='value' name='PlaceholderName' value='"Narration"'/>
+            <MetadataString containerField='value' name='ElasticTime' value='"true"'/>
+          </MetadataSet>
+        </Transform>
+
+        <!-- This is the project's status overlay.  It contains a status text, an icon and
+             background images.  It sits parallel and just in front of the main placeholder on Z axis. -->
+        <Transform translation='0 0 0.05'>
+          <Switch DEF='OverlayTransformSwitch' whichChoice='-1'>
+            <Transform DEF='OverlayTransform' translation='0 0 0'>
+              <!-- This is the text overlay node -->
+              <Shape>
+                <Appearance>
+                  <Material transparency='0' diffuseColor='0 0 0'/>
+                </Appearance>
+                <Text DEF='OverlayText' containerField='geometry' string='""' origin='0 0 0'>
+                  <FontStyle containerField='fontStyle' size='0.4' horizontal='true' leftToRight='true'/>
+                </Text>
+              </Shape>
+
+              <!-- This is the icon overlay node -->
+              <Transform DEF='IconTransform' translation='0 0 0'>
+                <Shape>
+                  <Appearance>
+                    <Material transparency='0' diffuseColor='0 0 0'/>
+                    <ImageTexture DEF='IconImageTexture' containerField='texture' repeatS='false' repeatT='false' url='""'>
+                        <TextureProperties borderColor="0 0 0 0" boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/>
+                    </ImageTexture>
+                    <TextureTransform DEF='IconTextureTransform' center='0 0' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+                  </Appearance>
+                  <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                    <Coordinate containerField='coord' point='0 1 0 0 0 0 1 0 0 1 1 0' />
+                    <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                  </IndexedFaceSet>
+                </Shape>
+              </Transform>
+
+              <!-- This is the left background node -->
+              <Transform DEF='BackgroundLeftTransform' translation='0 0 -0.01'>
+                <Shape>
+                  <Appearance>
+                    <Material transparency='0' diffuseColor='1 1 1'/>
+                    <ImageTexture DEF='BackgroundLeftImageTexture' containerField='texture' repeatS='false' repeatT='false' url='""'>
+                        <TextureProperties borderColor="0 0 0 0" boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/>
+                    </ImageTexture>
+                    <TextureTransform DEF='BackgroundLeftTextureTransform' center='0 0' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+                  </Appearance>
+                  <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                    <Coordinate containerField='coord' point='0 1 0 0 0 0 1 0 0 1 1 0' />
+                    <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                  </IndexedFaceSet>
+                </Shape>
+              </Transform>
+
+              <!-- This is the center background node -->
+              <Transform DEF='BackgroundCenterTransform' translation='0 0 -0.01'>
+                <Shape>
+                  <Appearance>
+                    <Material transparency='0' diffuseColor='1 1 1'/>
+                    <ImageTexture DEF='BackgroundCenterImageTexture' containerField='texture' repeatS='false' repeatT='false' url='""'>
+                        <TextureProperties borderColor="0 0 0 0" boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/>
+                    </ImageTexture>
+                    <TextureTransform DEF='BackgroundCenterTextureTransform' center='0 0' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+                  </Appearance>
+                  <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                    <Coordinate containerField='coord' point='0 1 0 0 0 0 1 0 0 1 1 0' />
+                    <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                  </IndexedFaceSet>
+                </Shape>
+              </Transform>
+
+              <!-- This is the right background node -->
+              <Transform DEF='BackgroundRightTransform' translation='0 0 -0.01'>
+                <Shape>
+                  <Appearance>
+                    <Material transparency='0' diffuseColor='1 1 1'/>
+                    <ImageTexture DEF='BackgroundRightImageTexture' containerField='texture' repeatS='false' repeatT='false' url='""'>
+                        <TextureProperties borderColor="0 0 0 0" boundaryModeS="CLAMP_TO_BOUNDARY" boundaryModeT="CLAMP_TO_BOUNDARY"/>
+                    </ImageTexture>
+                    <TextureTransform DEF='BackgroundRightTextureTransform' center='0 0' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+                  </Appearance>
+                  <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                    <Coordinate containerField='coord' point='0 1 0 0 0 0 1 0 0 1 1 0' />
+                    <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                  </IndexedFaceSet>
+                </Shape>
+              </Transform>
+            </Transform>
+          </Switch>
+        </Transform>
+      </Transform>  <!-- Inner transform within single extent view switch -->
+      <Transform>
+        <!-- This is single extent mode placeholder, should not be used by any project as it is 
+              populated dynamically, when project is switched to single extent mode -->
+        <MetadataSet name='placeholder'>
+          <MetadataString containerField='value' name='PlaceholderName' value='"SingleExtentView"'/>
+        </MetadataSet>
+      </Transform>
+    </Switch>
+
+    <ScalarInterpolator DEF='ProjectAspectRatio' key='0' keyValue='0'>
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='AspectRatio' value='"keyValue"'/>
+      </MetadataSet>
+    </ScalarInterpolator>
+    <TimeSensor DEF='MovieTimeSensor' enabled='true' loop='true' stopTime='-1' />
+  </Transform>
+</X3D>
