@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"ContemporarySlideDownNarrow2TransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Contemporary"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='2'/>
+    </MetadataSet>
+
+    <!--OUT Sockets -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"translate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary5PreviousInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"previous"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"translate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary5CurrentInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+
+      </MetadataSet>
+    </Transform>
+
+    <!--IN Sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary5Interpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <Switch DEF='Contemporary5Switch' whichChoice='0'>
+        <!-- Switch group node -->
+        <Transform DEF='Contemporary5Transform'>
+          <!--Large white rectangle covering the whole screen behind the assets; shows through the gap -->
+          <Transform DEF='BGRect' scale='10.67 1.6 1' translation='0 -3.79 -0.052'>
+            <Shape>
+              <Appearance>
+                <Material DEF='BGMaterial' transparency='0' diffuseColor='0.92 0.92 0.92'/>
+              </Appearance>
+              <IndexedFaceSet DEF='BGIndexedFaceSet' containerField='geometry' coordIndex='0 1 2 -1 0 2 3 -1' colorPerVertex='true'>
+                <Coordinate containerField='coord' point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0' />
+                <ColorRGBA color='1 1 1 1, 1 1 1 1, 1 1 1 1, 1 1 1 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+
+          <!--Gray/Brown rectangle-->
+          <Transform DEF='Rect1Transform' scale='10.67 1.1 1' translation='0 -3.785 -0.051'>
+            <Shape>
+              <Appearance>
+                <Material DEF='Rect4Material' transparency='0.75' diffuseColor='0.52 0.48 0.37'/>
+              </Appearance>
+              <IndexedFaceSet USE='BGIndexedFaceSet' />
+            </Shape>
+          </Transform>
+
+          <!--Blue rectangle-->
+          <Transform DEF='Rect1Transform' scale='10.67 .458 1' translation='0 -3.32 -0.050'>
+            <Shape>
+              <Appearance>
+                <Material DEF='Rect5Material' transparency='0.33' diffuseColor='0.65 0.79 0.87'/>
+              </Appearance>
+              <IndexedFaceSet USE='BGIndexedFaceSet' />
+            </Shape>
+          </Transform>
+        </Transform>
+      </Switch>
+
+      <ScalarInterpolator DEF='Contemporary5Interpolator' key='0 1' keyValue='0 1'/>
+
+      <IntegerSequencer DEF='Contemporary5Sequencer' key ='1 1' keyValue ='0 -1'/>
+      <ROUTE fromNode='Contemporary5Interpolator' fromField='value_changed' toNode='Contemporary5Sequencer' toField='set_fraction'/>
+      <ROUTE fromNode='Contemporary5Sequencer' fromField='value_changed' toNode='Contemporary5Switch' toField='set_whichChoice'/>
+
+      <SplinePositionInterpolator DEF='Contemporary5PreviousInterpolator' key='0 0.5 1' keyValue='0 0.00 0, 0 -3.79 0, 0 -7.58 0' keyVelocity='0 0 0, 0 -8 0, 0 0 0'/>
+      <SplinePositionInterpolator DEF='Contemporary5CurrentInterpolator'  key='0 0.5 1' keyValue='0 7.58 0, 0  3.79 0, 0  0.00 0' keyVelocity='0 0 0, 0 -8 0, 0 0 0'/>
+
+      <ROUTE fromNode='Contemporary5Interpolator' fromField='value_changed' toNode='Contemporary5PreviousInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='Contemporary5Interpolator' fromField='value_changed' toNode='Contemporary5CurrentInterpolator' toField='set_fraction'/>
+
+    </Transform>
+
+  </Transform>
+</X3D>

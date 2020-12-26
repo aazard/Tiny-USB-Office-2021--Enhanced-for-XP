@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=Inštalácia produktu %ProductName% %ProductVersion%
+Static1=%ProductName% %ProductVersion% je u v systéme nainštalovanı. Odporúèa se pred reinštalácíou pôvodnej aplikácie odinštalovat. Kliknite Ano k odinštalácii %ProductName% %ProductVersion%. Kliknite Nie pre pokraèovanie v inštalácii. Kliknite Storno k ukonèeniu inštalácie.
+Error1=Odinstaláci sa nedá uskutoèni. Inštalácia bude teraz pokraèovat.
+Yes=&Ano
+No=&Nie
+Cancel=Storno
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Správa
+Static1=Nasledujúci súbor sa práve pouíva a nemôe by aktualizovanı:
+Static2=Zatvorte všetky spustené aplikácie a inštaláciu spustite znova.<br>Ukonèite inštaláciu a reštartujte poèítaè<br>Ukonèite inštalácie.
+Retry=&Opakova
+Cancel=&Zavrie
+Abort=&Zruši
+
+[PASSWORD_DIALOG]
+Dialog_Title=Inštalaèné heslo
+Static1=Prosím zadajte heslo inštalácie
+OK=&OK
+Exit=Koniec
+Error_Title=Error
+Error_Static1=Prepáète, heslo nesúhlasí. Prosím skúste znova.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Vyberte jazyk
+Static1=Proím vyberte jazyk, ktorı chcete poui pre inštaláciu.
+Next=&Ïalej >
+Cancel=Storno
+
+[WELCOME_DIALOG]
+Dialog_Title=Vítajte
+Static1=Vítajte v inštalaènom programe %ProductName%. Tento program nainštaluje %ProductName% do Vášho poèítaèa.
+Static2=Odporúèame ukonèi všetky Windows aplikácie pred spustením tejto inštalácie.
+Static3=Kliknite Storno k ukonèeniu inštalácie a potom uzavrite všetky spustené aplikácie. Kliknite Ïalej pre pokraèovanie v inštalácii.
+Static4=VAROVANIE: Tento program je chránenı autorskım zákonom a medzinárodnımi zmluvami.
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[LICENSE_DIALOG]
+Dialog_Title=Softwarová licenèná dohoda
+Static1=Prosím preèítajte si následujúcu Licenènú dohodu. Stlaète PAGE DOWN pre zobrazenie zvyšku dokumentu.
+Static2=Súhlasíte s podmienkami predchádzajúcej Licenènej dohody? Ak zvolíte Ne, inštalácia sa ukonèí. Pre pokraèovanie v inštalácii musíte podmienky akceptova.
+Back=< &Naspä
+Yes=Ano
+No=Nie
+
+[README_DIALOG]
+Dialog_Title=Readme informácie
+Static1=Readme informácie:
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Vyberte umiestnenie
+Static1=%ProductName% bude nainštalovanı do následujúcej zloky.
+Static2=Pre inštaláciu do tejto zloky kliknite Ïalej.
+Static3=Pre inštaláciu do inej zloky kliknite H¾ada a vyberte zloku.
+Static4=Pokia¾ nechcete nainštalova %ProductName%, inštaláciu ukonèíte kliknutím na Storno.
+Static5=Poadovanı priestor:
+Static7=Dostupnı priestor:
+Browse=&H¾ada...
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Vyberte existujúci adresár
+Static1=Prosím vyberte adresár pre inštaláciu.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Vyberte zloku programu
+Static1=Inštalácia pridá ikony programu do níšie uvedenej zloky. Môete uvies novı názov zloky alebo vybra niektorú z u existujících. Kliknite Ïalej pre pokraèovanie.
+Static2=&Zloka programu
+Static3=&Existujúce zloky
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Nastavenia ikôn programu
+Static1=Tu máte monos nastavi ikony k rıchlemu spusteniu aplikácie.
+Static2=Chcete vytvori ikonu na PRACOVNEJ PLOCHE? Ak chcete kliknite na Ano.  Ak nechcete kliknite na Nie.
+Static3=Chcete vytvori ikonu v QUICK LAUNCH paneli? Ak chcete kliknite na Ano.  Ak nechcete kliknite na Nie.
+Yes=Ano
+No=Nie
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[START_DIALOG]
+Dialog_Title=Zaèiatok kopírovania súborov
+Static1=Inštalátor má u dostatok informacií k tomu, aby mohol zaháji kopírovaniw súborov. Pokia¾ si chcete skontrolova nastavenia alebo nieèo zmeni, kliknite na Naspä. Ak z nastavením súhlasíte, kliknite Ïalej k zahájeniu kopírovania súborov.
+Static2=Aktuálne nastavenia
+String1=Cie¾ovı adresár:
+String2=Programová skupina:
+Back=< &Naspä
+Next=&Ïalej >
+Cancel=Storno
+
+[PROCESS_DIALOG]
+Dialog_Title=Kopírovánie súborov
+Cancel=Storno
+
+[FINISH_DIALOG]
+Dialog_Title=Inštalácia ukonèená
+Static1=Inštalácia produktu %ProductName% do Vášho poèítaèa.
+Check1=Èíta &Readme
+Check2=&Spusti nainštalovanú aplikáciu
+Back=< &ZNaspä
+Finish=Koniec
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Ukonèenie inštalácie
+Static1=Inštalácia nieje kompletná. Ak teraz inštaláciu ukonèíte, program nebude nainštalovanı.
+Static2=Inštalátor môte spustit znovu neskôr a inštaláciu dokonèi.
+Static3=Kliknite Pokraèova pre dokonèenie. Ak chcete inštaláciu naozaj ukonèi, kliknite Koniec.
+Resume=&Pokraèova
+Exit=&Koniec
+
+[UNINSTALL_DIALOG]
+1001=Odinštalovat Setup2Go
+1101=Potvrdi odstránenie súboru
+1102=Ste si istı, e chcete úplne odstráni %1 a všetky jeho súèasti?
+1103=&Ano
+1104=&Nie
+1201=Odstráni program z poèítaèa
+1202=Odinštalácia odstrání software %1 z Vášho poèítaèa. Prosím poèkajte, kım budú odstránené všetky nasledujúce súèasti...
+1203=Odinštalácia dokonèená. Niektoré súèasti nemohli by odstránené. Poloky súvisjace s aplikáciou by mali by odstránené ruène.
+1204=Odinštalácia úspešne dokonèená.
+1301=Odstráni zdie¾anı súbor?
+1302=Zdá sa, e nasledujúcí zdie¾anı súbor nieje ïalej pouívanı iadnım programom. Pokia¾ by niektorı program chcel tento súbor pouí po jeho odstránení, mohlo by to vies k nesprávnej funkènosti dotknutého programu. Ste si istí, e chcete zdie¾anı súbor odstráni?<br><br>Odstránìnie tohoto súboru nenaruší Váš systém. Ak nieste si istí, èo máte urobi, odporúèa sa zdie¾anı súbor neodstraòova.<br><br>Názov súboru:<tab>%1<br><br>Umiestnenı v:<tab>%2
+1400=Podrobnosti
+1401=Podrobnosti...
+1402=Zloka sa nedá odstráni
+1403=Súbor sa nedá odstráni
+
+[STRINGS]
+1=Poznámka
+10=Zmena nastavenia systému
+11=Aby bolo nové nastavenie akceptováne systémom, je nutné najprv reštartovat poèítaè.<br><br>Chcete poèítaè reštartovat teraz?
+21=Váš systém nieje kompatibilnı s %1. Inštalácia bude teraz ukonèená.
+22=Váš systém nieje kompatibilnı s %1. Inštalácia bude pokraèova, avšak software nemusí fungova správne.
+23=Nemáte dostatoèné vısady na ukonèenie inšalácie. Prihláste sa ako Administrátor a inštaláciu opakujte.
+
+[FONT]
+CHARSET=1

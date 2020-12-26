@@ -1,0 +1,39 @@
+<ROOT>
+   <HEADER COUNT="6" C1="Offset" C2="Field" C3="Type" C4="Size" C5="Value" C6="Description" />
+   <ROW C1="0000" C2="Machine" C3="WORD" C4="2" C5="014c" C6="Architecture of the computer" />
+   <ROW C1="0002" C2="NumberOfSections" C3="WORD" C4="2" C5="0002" C6="Number of Sections" />
+   <ROW C1="0004" C2="TimeDateStamp" C3="DWORD" C4="4" C5="3b7d6cd3" C6="Time Date Stamp of the File" />
+   <ROW C1="0008" C2="PointerToSymbolTable" C3="DWORD" C4="4" C5="00000000" C6="Pointer to the Symbol table in the file" />
+   <ROW C1="000c" C2="NumberOfSymbols" C3="DWORD" C4="4" C5="00000000" C6="Number of symbols in symbol table" />
+   <ROW C1="0010" C2="SizeOfOptionalHeader" C3="WORD" C4="2" C5="00e0" C6="Size of the Optional File Header" />
+   <ROW C1="0012" C2="Characteristics" C3="WORD" C4="2" C5="210e" C6="Characteristics of the file" />
+   <ROW C1="0014" C2="Magic" C3="WORD" C4="2" C5="010b" C6="Magic Number" />
+   <ROW C1="0016" C2="MajorLinkerVersion" C3="BYTE" C4="1" C5="00" C6="Minor Linker Version" />
+   <ROW C1="0017" C2="MinorLinkerVersion" C3="BYTE" C4="1" C5="00" C6="Minor Linker Version" />
+   <ROW C1="0018" C2="SizeOfCode" C3="DWORD" C4="4" C5="00000000" C6="Size of the Code Section(s)" />
+   <ROW C1="001c" C2="SizeOfInitializedData" C3="DWORD" C4="4" C5="00000000" C6="Size of the Initialized Data" />
+   <ROW C1="0020" C2="AddressOfEntryPoint" C3="DWORD" C4="4" C5="00000000" C6="Address of the entry point function" />
+   <ROW C1="0024" C2="BaseOfCode" C3="DWORD" C4="4" C5="00001000" C6="Base address of the code" />
+   <ROW C1="0028" C2="BaseOfData" C3="DWORD" C4="4" C5="00001000" C6="Base address of the data" />
+   <ROW C1="002c" C2="ImageBase" C3="DWORD" C4="4" C5="10000000" C6="Preferred load address" />
+   <ROW C1="0030" C2="SectionAlignment" C3="DWORD" C4="4" C5="00001000" C6="Alignment of sections in memory" />
+   <ROW C1="0034" C2="FileAlignment" C3="DWORD" C4="4" C5="00001000" C6="Alignment of sections in image file" />
+   <ROW C1="0038" C2="MajorOperatingSystemVersion" C3="WORD" C4="2" C5="0004" C6="Major Operation System Version" />
+   <ROW C1="003a" C2="MinorOperatingSystemVersion" C3="WORD" C4="2" C5="0000" C6="Minor Operating System Version" />
+   <ROW C1="003c" C2="MajorImageVersion" C3="WORD" C4="2" C5="0000" C6="Major Image Version" />
+   <ROW C1="003e" C2="MinorImageVersion" C3="WORD" C4="2" C5="0000" C6="Minor Image Version" />
+   <ROW C1="0040" C2="MajorSubsystemVersion" C3="WORD" C4="2" C5="0004" C6="Major Subsystem Version" />
+   <ROW C1="0042" C2="MinorSubsystemVersion" C3="WORD" C4="2" C5="0000" C6="Minor Subsystem Version" />
+   <ROW C1="0044" C2="Win32VersionValue" C3="DWORD" C4="4" C5="00000000" C6="Win32 Version Value" />
+   <ROW C1="0048" C2="SizeOfImage" C3="DWORD" C4="4" C5="00003000" C6="Section aligned total size" />
+   <ROW C1="004c" C2="SizeOfHeaders" C3="DWORD" C4="4" C5="00001000" C6="File aligned header size" />
+   <ROW C1="0050" C2="CheckSum" C3="DWORD" C4="4" C5="004054cc" C6="Checksum" />
+   <ROW C1="0054" C2="Subsystem" C3="WORD" C4="2" C5="0002" C6="Subsystem" />
+   <ROW C1="0056" C2="DllCharacteristics" C3="WORD" C4="2" C5="0000" C6="Characteristics of teh DLL" />
+   <ROW C1="0058" C2="SizeOfStackReserve" C3="DWORD" C4="4" C5="00100000" C6="Size reserved for the stack" />
+   <ROW C1="005c" C2="SizeOfStackCommit" C3="DWORD" C4="4" C5="00001000" C6="Initial stack size" />
+   <ROW C1="0060" C2="SizeOfHeapReserve" C3="DWORD" C4="4" C5="00100000" C6="Size reserved for the heap" />
+   <ROW C1="0064" C2="SizeOfHeapCommit" C3="DWORD" C4="4" C5="00001000" C6="Initial heap size" />
+   <ROW C1="0068" C2="LoaderFlags" C3="DWORD" C4="4" C5="00000000" C6="Flags sent to the loader" />
+   <ROW C1="006c" C2="NumberOfRvaAndSizes" C3="DWORD" C4="4" C5="00000010" C6="Number of entries in the directory" />
+</ROOT>

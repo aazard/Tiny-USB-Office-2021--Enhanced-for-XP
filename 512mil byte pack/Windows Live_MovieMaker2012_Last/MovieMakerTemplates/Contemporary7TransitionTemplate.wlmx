@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"ContemporarySlideDownNarrow3TransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Contemporary"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='2'/>
+    </MetadataSet>
+
+    <!--OUT Sockets -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"translate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary7PreviousInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"previous"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"translate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary7CurrentInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+
+      </MetadataSet>
+    </Transform>
+
+    <!--IN Sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"Contemporary7Interpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <Switch DEF='Contemporary7Switch' whichChoice='0'>
+        <!-- Switch group node -->
+        <Transform DEF='Contemporary7Transform'>
+          <!--Gray rectangle -->
+          <Transform DEF='BGRect' scale='10.67 1.026 1' translation='0 -3.5 -0.052'>
+              <Shape>
+              <Appearance>
+                <Material DEF='BGMaterial' transparency='0' diffuseColor='0.78 0.78 0.78'/>
+              </Appearance>
+              <IndexedFaceSet DEF='BGIndexedFaceSet' containerField='geometry' coordIndex='0 1 2 -1 0 2 3 -1' colorPerVertex='true'>
+                <Coordinate containerField='coord' point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0' />
+                <ColorRGBA color='1 1 1 1, 1 1 1 1, 1 1 1 1, 1 1 1 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+
+          <!--Blue rectangle-->
+          <Transform DEF='Rect1Transform' scale='10.67 .51 1' translation='0 -3.75 -0.050'>
+            <Shape>
+              <Appearance>
+                <Material DEF='Rect1Material' transparency='0' diffuseColor='0.55 0.73 0.81'/>
+              </Appearance>
+              <IndexedFaceSet USE='BGIndexedFaceSet' />
+            </Shape>
+          </Transform>
+        </Transform>
+      </Switch>
+
+      <ScalarInterpolator DEF='Contemporary7Interpolator' key='0 1' keyValue='0 1'/>
+
+      <IntegerSequencer DEF='Contemporary7Sequencer' key ='1 1' keyValue ='0 -1'/>
+      <ROUTE fromNode='Contemporary7Interpolator' fromField='value_changed' toNode='Contemporary7Sequencer' toField='set_fraction'/>
+      <ROUTE fromNode='Contemporary7Sequencer' fromField='value_changed' toNode='Contemporary7Switch' toField='set_whichChoice'/>
+
+      <SplinePositionInterpolator DEF='Contemporary7PreviousInterpolator' key='0 0.5 1' keyValue='0 0.0 0, 0 -3.5 0, 0 -7 0' keyVelocity='0 0 0, 0 -8 0, 0 0 0'/>
+      <SplinePositionInterpolator DEF='Contemporary7CurrentInterpolator'  key='0 0.5 1' keyValue='0 7.0 0, 0  3.5 0, 0  0 0' keyVelocity='0 0 0, 0 -8 0, 0 0 0'/>
+
+      <ROUTE fromNode='Contemporary7Interpolator' fromField='value_changed' toNode='Contemporary7PreviousInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='Contemporary7Interpolator' fromField='value_changed' toNode='Contemporary7CurrentInterpolator' toField='set_fraction'/>
+
+    </Transform>
+
+  </Transform>
+</X3D>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<XML_DIZ_INFO>
+<MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>1.10</MASTER_PAD_VERSION>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+</MASTER_PAD_VERSION_INFO>
+<Company_Info>
+        <Company_Name>Detlef Folger</Company_Name>
+        <Address_1 />
+        <Address_2 />
+        <City_Town />
+        <State_Province />
+        <Zip_Postal_Code />
+        <Country>Germany</Country>
+        <Company_WebSite_URL>http://www.mailpeek.de</Company_WebSite_URL>
+<Contact_Info>
+        <Author_First_Name>Detlef</Author_First_Name>
+        <Author_Last_Name>Folger</Author_Last_Name>
+        <Author_Email>info@mailpeek.de</Author_Email>
+        <Contact_First_Name>Detlef</Contact_First_Name>
+        <Contact_Last_Name>Folger</Contact_Last_Name>
+        <Contact_Email>info@mailpeek.de</Contact_Email>
+    </Contact_Info>
+<Support_Info>
+        <Sales_Email>info@mailpeek.de</Sales_Email>
+        <Support_Email>info@mailpeek.de</Support_Email>
+        <General_Email>info@mailpeek.de</General_Email>
+        <Sales_Phone />
+        <Support_Phone />
+        <General_Phone />
+        <Fax_Phone />
+    </Support_Info>
+</Company_Info>
+<Program_Info>
+        <Program_Name>MailPeek</Program_Name>
+        <Program_Version>0.93</Program_Version>
+        <Program_Release_Month />
+        <Program_Release_Day />
+        <Program_Release_Year />
+        <Program_Cost_Dollars>0</Program_Cost_Dollars>
+        <Program_Cost_Other>0</Program_Cost_Other>
+        <Program_Type>Freeware</Program_Type>
+        <Program_Release_Status>New Release</Program_Release_Status>
+        <Program_Install_Support>Install Only</Program_Install_Support>
+        <Program_OS_Support>Win95,Win98,WinME,WinNT 4.x,Windows2000</Program_OS_Support>
+        <Program_Language>English,Spanish,German</Program_Language>
+        <Program_Change_Info />
+        <Program_System_Requirements />
+        <Program_Specific_Category>Audio</Program_Specific_Category>
+        <Program_Categories />
+<File_Info>
+        <Filename_Versioned>mailpeek.zip</Filename_Versioned>
+        <Filename_Previous />
+        <Filename_Generic />
+        <Filename_Long>mailpeek.zip</Filename_Long>
+        <File_Size_Bytes>155369</File_Size_Bytes>
+        <File_Size_K>152</File_Size_K>
+        <File_Size_MB>0.15</File_Size_MB>
+    </File_Info>
+<Expire_Info>
+        <Has_Expire_Info>N</Has_Expire_Info>
+        <Expire_Count />
+        <Expire_Based_On>Days</Expire_Based_On>
+        <Expire_Other_Info />
+        <Expire_Month />
+        <Expire_Day />
+        <Expire_Year />
+    </Expire_Info>
+        <Includes_JAVA_VM>N</Includes_JAVA_VM>
+        <Includes_VB_Runtime>N</Includes_VB_Runtime>
+        <Includes_DirectX>N</Includes_DirectX>
+</Program_Info>
+<Program_Descriptions>
+<English>
+        <Keywords>email, client, freeware, pop3, smtp, server, multilingual</Keywords>
+        <Char_Desc_45>MailPeek - The different eMail program -</Char_Desc_45>
+        <Char_Desc_80>MailPeek - The different eMail program -</Char_Desc_80>
+        <Char_Desc_250>For a detailed description of MailPeek please visit http://www.MailPeek.de</Char_Desc_250>
+        <Char_Desc_450>With MailPeek you will get a multilingual (English, German, Spanish etc.), small and slick POP3 email client that lets you periodically check an unlimited number of email accounts. You can either download the headers only or the entire message. You can also send emails incl. attachments thru SMTP. MailPeek comes with a simple address book.</Char_Desc_450>
+        <Char_Desc_2000>For a detailed description of MailPeek please visit http://www.MailPeek.de</Char_Desc_2000>
+</English>
+</Program_Descriptions>
+<Web_Info>
+<Application_URLs>
+        <Application_Info_URL>http://www.mailpeek.de</Application_Info_URL>
+        <Application_Order_URL />
+        <Application_Screenshot_URL />
+        <Application_Icon_URL />
+        <Application_XML_File_URL />
+    </Application_URLs>
+<Download_URLs>
+        <Primary_Download_URL>http://www.mailpeek.de</Primary_Download_URL>
+        <Secondary_Download_URL>http://download.mailpeek.de</Secondary_Download_URL>
+        <Additional_Download_URL_1 />
+        <Additional_Download_URL_2 />
+    </Download_URLs>
+</Web_Info>
+<Permissions>
+        <Distribution_Permissions />
+        <EULA />
+</Permissions>
+<ASP>
+    <ASP_FORM>Y</ASP_FORM>
+    <ASP_Member>N</ASP_Member>
+    <ASP_Member_Number />
+</ASP>
+<Simtel>
+    <Simtel_Email>info@mailpeek.de</Simtel_Email>
+    <Simtel_FORM>Y</Simtel_FORM>
+    <Simtel_DOS_Category>Select - MS-DOS Platform</Simtel_DOS_Category>
+    <Simtel_Win31_Category>Select - Win3 Platform</Simtel_Win31_Category>
+    <Simtel_WinXX_Category>Internet - email E-mail Programs and Utilities</Simtel_WinXX_Category>
+    <Simtel_Category>Internet - Email</Simtel_Category>
+    <SIMTEL_FORM_VER>1.03 04/09/2001</SIMTEL_FORM_VER>
+</Simtel>
+</XML_DIZ_INFO>

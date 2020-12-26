@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<Directory Type="0" Named_Entries="2" ID_Entries="0">
+   <Entry Name="DOSHEADER" Directory="1" Ignore="1">
+      <Directory Type="0" Name="DOSHEADER" Named_Entries="10" ID_Entries="0">
+         <Entry Name="DosHeader" Directory="1">
+            <Directory Type="0" Name="DosHeader" Named_Entries="0" ID_Entries="1">
+               <Entry ID="1033" Directory="0">
+                  <File Name="DosHeader.hdr"/>
+               </Entry>
+            </Directory>
+         </Entry>
+      </Directory>
+   </Entry>
+   <Entry Name="NTHEADER" Directory="1" Ignore="1">
+      <Directory Type="0" Name="NTHEADER" Named_Entries="10" ID_Entries="0">
+         <Entry Name="NTHeader" Directory="1">
+            <Directory Type="0" Name="NT Header" Named_Entries="0" ID_Entries="1">
+               <Entry ID="1033" Directory="0">
+                  <File Name="NTHeader.hdr"/>
+               </Entry>
+            </Directory>
+         </Entry>
+      </Directory>
+   </Entry>
+</Directory>

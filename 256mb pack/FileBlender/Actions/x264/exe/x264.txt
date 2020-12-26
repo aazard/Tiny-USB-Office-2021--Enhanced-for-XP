@@ -1,3 +1,0 @@
-x264 - Free H264/AVC Encoder - H.264/MPEG-4 AVC Format
-Homepage: http://www.videolan.org/developers/x264.html
-Download: http://x264.nl/

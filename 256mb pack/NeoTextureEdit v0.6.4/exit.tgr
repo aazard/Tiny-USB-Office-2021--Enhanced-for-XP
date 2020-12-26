@@ -1,6 +1,0 @@
-#NTEVersion 6
-#BeginNodes 0
-#EndNodes
-#BeginConnections 0
-#EndConnections
-glpreview -1 -1 -1 -1 Object 0 Spec._Power 20.0 POM_Strength 0.25 Ambient 0.5 TexScale_U 1 TexScale_V 1 CamRotX 45.0 CamRotY 0.0 CamDist 2.5 endglpreview

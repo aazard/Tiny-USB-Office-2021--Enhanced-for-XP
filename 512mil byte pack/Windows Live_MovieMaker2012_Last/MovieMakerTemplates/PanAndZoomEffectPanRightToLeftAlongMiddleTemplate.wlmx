@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"PanAndZoomEffectPanRightToLeftAlongMiddleTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Panning Only"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='3'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='5'/>
+    </MetadataSet>
+
+    <Transform>
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='effectType' value='"2"' reference='Custom'/>
+      </MetadataSet>
+    </Transform>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textureTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"PanAndZoomEffectTextureTransform"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"PanAndZoomEffectPanRightToLeftAlongMiddleInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+    <Transform>
+      <Shape>
+        <Appearance>
+          <TextureTransform DEF='PanAndZoomEffectTextureTransform' center='-0.5 -0.5' translation='0 0' rotation='0 0' scale='0.85 0.85' containerField='textureTransform'/>
+        </Appearance>
+      </Shape>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <PositionInterpolator2D DEF='PanAndZoomEffectPanRightToLeftAlongMiddleInterpolator' key='0 1' keyValue='-1 -0.5 0 -0.5'/>
+      <ROUTE fromNode='PanAndZoomEffectPanRightToLeftAlongMiddleInterpolator' fromField='value_changed' toNode='PanAndZoomEffectTextureTransform' toField='set_center'/>
+    </Transform>
+    
+  </Transform>
+</X3D>

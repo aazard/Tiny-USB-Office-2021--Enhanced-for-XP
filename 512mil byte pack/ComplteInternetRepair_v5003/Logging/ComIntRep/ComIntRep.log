@@ -1,0 +1,151 @@
+=========================================================================================
+ RIZONESOFT LOGGING VERSION 2.0
+=========================================================================================
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 2020-11-12 22:41:13 ] DATE:                        2020-11-12 22:41:13
+[ 2020-11-12 22:41:13 ] PROGRAM:                     Complete Internet Repair 6.0.3.5003
+[ 2020-11-12 22:41:13 ] PROGRAM PATH:                [C:\Users\PCX-001-R5-3600XT\Desktop\WORK_VIN_4_Mod\Safety Tools\Misc Safety Tools\ComplteInternetRepair_v5003\ComIntRep_X64.exe]
+[ 2020-11-12 22:41:13 ] COMPILED:                    YES
+[ 2020-11-12 22:41:13 ] WINDOWS VERSION:             WIN_10 
+[ 2020-11-12 22:41:13 ] SYSTEM TYPE:                 64-Bit Operating System
+[ 2020-11-12 22:41:13 ] MEMORY (RAM):                32714.31 MB
+[ 2020-11-12 22:41:13 ] PROGRAM FILES DIRECTORY:     C:\Program Files
+[ 2020-11-12 22:41:13 ] WINDOWS DIRECTORY:           C:\Windows
+-----------------------------------------------------------------------------------------
+
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 2020-12-02 20:48:55 ] DATE:                        2020-12-02 20:48:55
+[ 2020-12-02 20:48:55 ] PROGRAM:                     Complete Internet Repair 6.0.3.5003
+[ 2020-12-02 20:48:55 ] PROGRAM PATH:                [C:\!!!! HumanStuff_EasyBuilderWorkshop\HumanStuff Tools\System And Utility Tools\ComplteInternetRepair_v5003\ComIntRep_X64.exe]
+[ 2020-12-02 20:48:55 ] COMPILED:                    YES
+[ 2020-12-02 20:48:55 ] WINDOWS VERSION:             WIN_10 
+[ 2020-12-02 20:48:55 ] SYSTEM TYPE:                 64-Bit Operating System
+[ 2020-12-02 20:48:55 ] MEMORY (RAM):                32714.31 MB
+[ 2020-12-02 20:48:55 ] PROGRAM FILES DIRECTORY:     C:\Program Files
+[ 2020-12-02 20:48:55 ] WINDOWS DIRECTORY:           C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 2020-12-02 20:48:57 ] Resetting all IP configurations.
+------------------------------------------------------------------------------------------
+[ 2020-12-02 20:48:57 ] Resetting IP version 4 configurations.
+[ 2020-12-02 20:48:57 ] Resetting Compartment Forwarding, OK!
+[ 2020-12-02 20:48:57 ] Resetting Compartment, OK!
+[ 2020-12-02 20:48:57 ] Resetting Control Protocol, OK!
+[ 2020-12-02 20:48:57 ] Resetting Echo Sequence Request, OK!
+[ 2020-12-02 20:48:57 ] Resetting Global, OK!
+[ 2020-12-02 20:48:57 ] Resetting Interface, OK!
+[ 2020-12-02 20:48:57 ] Resetting Anycast Address, OK!
+[ 2020-12-02 20:48:57 ] Resetting Multicast Address, OK!
+[ 2020-12-02 20:48:58 ] Resetting Unicast Address, OK!
+[ 2020-12-02 20:48:58 ] Resetting Neighbor, OK!
+[ 2020-12-02 20:48:58 ] Resetting Path, OK!
+[ 2020-12-02 20:48:58 ] Resetting Potential, OK!
+[ 2020-12-02 20:48:58 ] Resetting Prefix Policy, OK!
+[ 2020-12-02 20:48:58 ] Resetting Proxy Neighbor, OK!
+[ 2020-12-02 20:48:58 ] Resetting Route, OK!
+[ 2020-12-02 20:48:58 ] Resetting Site Prefix, OK!
+[ 2020-12-02 20:48:58 ] Resetting Subinterface, OK!
+[ 2020-12-02 20:48:58 ] Resetting Wakeup Pattern, OK!
+[ 2020-12-02 20:48:58 ] Resetting Resolve Neighbor, OK!
+[ 2020-12-02 20:48:58 ] Resetting, OK!
+[ 2020-12-02 20:48:58 ] Resetting, OK!
+[ 2020-12-02 20:48:58 ] Resetting, OK!
+[ 2020-12-02 20:48:58 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, failed.
+[ 2020-12-02 20:48:59 ] Access is denied.
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Resetting, OK!
+[ 2020-12-02 20:48:59 ] Restart the computer to complete this action.
+[ 2020-12-02 20:48:59 ] Resetting IP version 6 configurations.
+[ 2020-12-02 20:48:59 ] Resetting Compartment Forwarding, OK!
+[ 2020-12-02 20:48:59 ] Resetting Compartment, OK!
+[ 2020-12-02 20:48:59 ] Resetting Control Protocol, OK!
+[ 2020-12-02 20:48:59 ] Resetting Echo Sequence Request, OK!
+[ 2020-12-02 20:48:59 ] Resetting Global, OK!
+[ 2020-12-02 20:49:00 ] Resetting Interface, OK!
+[ 2020-12-02 20:49:00 ] Resetting Anycast Address, OK!
+[ 2020-12-02 20:49:00 ] Resetting Multicast Address, OK!
+[ 2020-12-02 20:49:00 ] Resetting Unicast Address, OK!
+[ 2020-12-02 20:49:00 ] Resetting Neighbor, OK!
+[ 2020-12-02 20:49:00 ] Resetting Path, OK!
+[ 2020-12-02 20:49:00 ] Resetting Potential, OK!
+[ 2020-12-02 20:49:00 ] Resetting Prefix Policy, OK!
+[ 2020-12-02 20:49:00 ] Resetting Proxy Neighbor, OK!
+[ 2020-12-02 20:49:00 ] Resetting Route, OK!
+[ 2020-12-02 20:49:00 ] Resetting Site Prefix, OK!
+[ 2020-12-02 20:49:00 ] Resetting Subinterface, OK!
+[ 2020-12-02 20:49:00 ] Resetting Wakeup Pattern, OK!
+[ 2020-12-02 20:49:00 ] Resetting Resolve Neighbor, OK!
+[ 2020-12-02 20:49:00 ] Resetting, OK!
+[ 2020-12-02 20:49:00 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, failed.
+[ 2020-12-02 20:49:01 ] Access is denied.
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Resetting, OK!
+[ 2020-12-02 20:49:01 ] Restart the computer to complete this action.
+[ 2020-12-02 20:49:01 ] Error: Finished with (02) errors!
+------------------------------------------------------------------------------------------
+[ 2020-12-02 20:49:02 ] Attempting to reset Winsock catalog.
+------------------------------------------------------------------------------------------
+[ 2020-12-02 20:49:03 ] Resetting Winsock using Method 1.
+[ 2020-12-02 20:49:03 ] Successfully reset the Winsock Catalog.
+[ 2020-12-02 20:49:03 ] You must restart the computer in order to complete the reset.
+[ 2020-12-02 20:49:03 ] Resetting Winsock using Method 2.
+[ 2020-12-02 20:49:03 ] Successfully reset the Winsock Catalog.
+[ 2020-12-02 20:49:03 ] You must restart the computer in order to complete the reset.
+[ 2020-12-02 20:49:04 ] Finished: Finished resetting Winsock catalog.
+------------------------------------------------------------------------------------------
+[ 2020-12-02 20:49:04 ] Releasing and Renewing TCP/IP connections.
+------------------------------------------------------------------------------------------
+[ 2020-12-02 20:49:04 ] Releasing TCP/IP connections.
+[ 2020-12-02 20:49:04 ] Windows IP Configuration
+[ 2020-12-02 20:49:04 ] No operation can be performed on Ethernet while it has its media disconnected.
+[ 2020-12-02 20:49:04 ] No operation can be performed on Local Area Connection* 9 while it has its media disconnected.
+[ 2020-12-02 20:49:04 ] No operation can be performed on Local Area Connection* 10 while it has its media disconnected.
+[ 2020-12-02 20:49:04 ] No operation can be performed on Ethernet 2 while it has its media disconnected.
+[ 2020-12-02 20:49:04 ] Ethernet adapter Ethernet:
+[ 2020-12-02 20:49:05 ] Media State . . . . . . . . . . . : Media disconnected
+[ 2020-12-02 20:49:05 ] Connection-specific DNS Suffix  . : hitronhub.home
+[ 2020-12-02 20:49:05 ] Wireless LAN adapter Local Area Connection* 9:
+[ 2020-12-02 20:49:05 ] Media State . . . . . . . . . . . : Media disconnected
+[ 2020-12-02 20:49:05 ] Connection-specific DNS Suffix  . :
+[ 2020-12-02 20:49:05 ] Wireless LAN adapter Local Area Connection* 10:
+[ 2020-12-02 20:49:05 ] Media State . . . . . . . . . . . : Media disconnected
+[ 2020-12-02 20:49:05 ] Connection-specific DNS Suffix  . :
+[ 2020-12-02 20:49:05 ] Ethernet adapter Ethernet 2:
+[ 2020-12-02 20:49:05 ] Media State . . . . . . . . . . . : Media disconnected
+[ 2020-12-02 20:49:05 ] Connection-specific DNS Suffix  . :
+[ 2020-12-02 20:49:05 ] Wireless LAN adapter Wi-Fi:
+[ 2020-12-02 20:49:05 ] Connection-specific DNS Suffix  . :
+[ 2020-12-02 20:49:05 ] Link-local IPv6 Address . . . . . : fe80::4097:495f:f86b:6d18%15
+[ 2020-12-02 20:49:05 ] Default Gateway . . . . . . . . . :
+[ 2020-12-02 20:49:05 ] Renewing TCP/IP connections.
+[ 2020-12-02 20:49:06 ] Windows IP Configuration
+[ 2020-12-02 20:49:06 ] No operation can be performed on Ethernet while it has its media disconnected.
+[ 2020-12-02 20:49:06 ] No operation can be performed on Local Area Connection* 9 while it has its media disconnected.
+[ 2020-12-02 20:49:06 ] No operation can be performed on Local Area Connection* 10 while it has its media disconnected.
+[ 2020-12-02 20:49:06 ] No operation can be performed on Ethernet 2 while it has its media disconnected.
+[ 2020-12-02 20:50:59 ] Finished: TCP/IP renewed
+------------------------------------------------------------------------------------------
