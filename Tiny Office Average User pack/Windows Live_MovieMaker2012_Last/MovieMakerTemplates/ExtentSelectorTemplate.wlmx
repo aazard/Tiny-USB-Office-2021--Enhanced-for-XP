@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <!-- This is extent selector template. It defines the structure of extent selector using
+       switch node and creates rotator logic for the switch. -->
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"DefaultExtentSelectorTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='1'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='"SelectorTimeSensor"'/>
+    </MetadataSet>
+
+    <!-- This is a front switch (used for transitions) -->
+    <Switch DEF='ExtentSelectorSwitch1' whichChoice='-1'>
+      <MetadataSet name='placeholder'>
+        <MetadataString containerField='value' name='PlaceholderName' value='"ExtentsFront"'/>
+      </MetadataSet>
+    </Switch>
+
+    <!-- This is a back switch (used as a backdrop) -->
+    <Transform translation='0 0 -0.05' scale='1.004 1.004 1'>
+      <Switch DEF='ExtentSelectorSwitch2' whichChoice='-1'>
+        <MetadataSet name='placeholder'>
+          <MetadataString containerField='value' name='PlaceholderName' value='"ExtentsBack"'/>
+        </MetadataSet>
+      </Switch>
+    </Transform>
+
+    <IntegerSequencer DEF='ExtentSelectorSequencer1' />
+    <ROUTE fromNode='ExtentSelectorSequencer1' fromField='value_changed' toNode='ExtentSelectorSwitch1' toField='set_whichChoice'/>
+    
+    <IntegerSequencer DEF='ExtentSelectorSequencer2' />
+    <ROUTE fromNode='ExtentSelectorSequencer2' fromField='value_changed' toNode='ExtentSelectorSwitch2' toField='set_whichChoice'/>
+
+    <TimeSensor DEF='SelectorTimeSensor' enabled='true' loop='false' stopTime='-1'/>
+    <ROUTE fromNode='SelectorTimeSensor' fromField='elapsedTime' toNode='ExtentSelectorSequencer1' toField='set_fraction'/>
+    <ROUTE fromNode='SelectorTimeSensor' fromField='elapsedTime' toNode='ExtentSelectorSequencer2' toField='set_fraction'/>
+
+  </Transform>
+</X3D>

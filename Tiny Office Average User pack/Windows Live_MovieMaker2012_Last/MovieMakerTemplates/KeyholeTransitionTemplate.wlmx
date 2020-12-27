@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"KeyholeTransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Patterns and Shapes"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='3'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='2'/>
+    </MetadataSet>
+
+  <!--OUT sockets -->
+  <Transform>
+    <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"appearanceShader"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"previous"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"KeyholeShader"'/>
+        </MetadataSet>
+    </MetadataSet>
+  </Transform>
+
+  <!--IN sockets -->
+  <Transform>
+    <MetadataSet DEF='InSockets'>
+      <MetadataSet containerField='value' name='InSocket'>
+        <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+        <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+        <MetadataString containerField='value' name='socketParentDEF' value='"KeyholeInterpolator"'/>
+        <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+      </MetadataSet>
+      <MetadataSet containerField='value' name='InSocket'>
+        <MetadataString containerField='value' name='socketName' value='"projectAspectRatio"'/>
+        <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+        <MetadataString containerField='value' name='socketParentDEF' value='"KeyholeShader"'/>
+        <MetadataString containerField='value' name='socketConnectAttribute' value='"aspectRatioWidth"'/>
+      </MetadataSet>
+    </MetadataSet>
+  </Transform>
+
+  <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+  <Transform>
+    <Shape>
+      <Appearance>
+        <WipeShader DEF='KeyholeShader'
+                    fraction='1'
+                    size='8 6'
+                    aspectRatioWidth='1'
+                    aspectRatioHeight='1'
+                    meshType='Keyhole'
+                    edgeType='Soft'
+                    transitionWidth='0.1'
+                    centerIn='false'/>
+      </Appearance>
+    </Shape>
+  </Transform>
+
+  <!--Nodes that need to be injected-->
+  <Transform DEF='InjectSet'>
+    <ScalarInterpolator DEF='KeyholeInterpolator' key='0 1' keyValue='1 0'/>
+    <ROUTE fromNode='KeyholeInterpolator' fromField='value_changed' toNode='KeyholeShader' toField='set_fraction'/>
+  </Transform>
+
+  </Transform>
+</X3D>

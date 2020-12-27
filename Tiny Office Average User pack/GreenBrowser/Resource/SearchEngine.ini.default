@@ -1,0 +1,56 @@
+[SearchEngine]
+N0=综合搜索
+S0=http://s.5igb.com/u.htm?t=搜狗+百度&q=%u
+C1=1
+N1=百度
+S1=http://www.baidu.com/s?tn=5igb_dg&wd=%s
+I1=.\resource\baidu.ico
+N2=搜狗
+S2=http://www.sogou.com/sogou?query=%s
+I2=.\resource\sogou.ico
+N3=Google
+S3=http://www.google.com.hk/search?hl=zh-CN&ie=utf-8&q=%u
+I3=.\resource\google.ico
+N4====== 新闻 =====
+S4=http://news.sogou.com/news?query=%s | http://news.baidu.com/ns?word=%s&cl=0&tn=news
+N5=搜狗(新闻)
+S5=http://news.sogou.com/news?query=%s
+N6=百度(新闻)
+S6=http://news.baidu.com/ns?word=%s&cl=0&tn=news
+N7====== 图片 =====
+S7=http://pic.sogou.com/pics?query=%s | http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%s
+N8=搜狗(图片)
+S8=http://pic.sogou.com/pics?query=%s
+I8=.\resource\image.ico
+N9=百度(图片)
+S9=http://image.baidu.com/i?tn=baiduimage&ct=201326592&lm=-1&cl=2&word=%s
+N10====== 影音 =====
+S10=http://mp3.baidu.com/m?word=%s&tn=5igb_dg | http://www.soku.com/search_video/q_%u
+N11=百度音乐
+S11=http://music.baidu.com/search?key=%u
+N12=优酷视频
+S12=http://www.soku.com/search_video/q_%u
+N13=VeryCD电驴
+S13=http://www.verycd.com/search/folders/%u
+N14====== 购物 =====
+S14=http://search.jd.com/Search?&enc=utf-8&keyword=%u|http://s.taobao.com/search?q=%s
+N15=京东商城
+S15=http://search.jd.com/Search?&enc=utf-8&keyword=%u
+N16=淘宝网
+S16=http://s.taobao.com/search?q=%s
+N17====== 其它 =====
+S17=%s
+N18=华军软件园
+S18=http://search.newhua.com/search_list.php?searchname=%u
+N19=iCIBA爱词霸
+S19=http://www.iciba.com/%u
+N20=Google地图
+S20=http://ditu.google.cn/maps?ie=utf-8&oe=UTF-8&hl=zh-CN&q=%u
+N21=Google手气不错
+S21=http://www.google.com.hk/search?hl=zh-CN&ie=utf-8&btnI=%C2%A0%E6%89%8B%E6%B0%94%E4%B8%8D%E9%94%99%C2%A0&q=%u
+N22=百度知道
+S22=http://zhidao.baidu.com/q?ct=17&pn=0&pt=5igb_ik&tn=ikaslist&rn=10&word=%s
+N23=百度百科
+S23=http://baike.baidu.com/search/word?pic=1&word=%s
+N24=百度贴吧
+S24=http://tieba.baidu.com/f?kw=%s
