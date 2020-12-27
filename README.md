@@ -4,6 +4,8 @@
 
 ### App list needs v2.0.1 update, Many, many, more apps added
 
+***
+
 # Tiny USB Office 2021: Enhanced for XP aka "Tiny Office"
 
 ### Available in many pack sizes from 1.44mb (1480kb) floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
