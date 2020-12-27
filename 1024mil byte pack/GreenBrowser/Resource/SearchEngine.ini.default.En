@@ -1,0 +1,45 @@
+[SearchEngine]
+N0=multiple search
+S0=http://s.5igb.com/u.htm?q=%u
+I0=.\resource\search.ico
+C1=1
+N1=google.com
+S1=http://www.google.com/search?hl=en&q=%u
+I1=.\resource\google.ico
+N2=baidu
+S2=http://www.baidu.com/s?tn=5igb_dg&wd=%s
+N3=yahoo
+S3=http://search.yahoo.com/search?ei=UTF-8&p=%u
+N4=bing
+S4=http://www.bing.com/search?q=%u
+N5=--
+S5=
+N6=image (google)
+S6=http://images.google.com/images?hl=en&q=%u
+I6=.\resource\image.ico
+N7=image (yahoo.com)
+S7=http://images.search.yahoo.com/search/images?ei=UTF-8&p=%u
+N8=--
+S8=
+N9=news (google)
+S9=http://news.google.com/news?hl=en&q=%u
+N10=news (cnn.com)
+S10=http://edition.cnn.com/search/?sortBy=date&query=%s
+N11=--
+S11=
+N12=shopping (amazon.com)
+S12=http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=%u
+N13=shopping (ebay.com)
+S13=http://shop.ebay.com/?_nkw=%u
+N14=--
+S14=
+N15=mp3 (mp3.com)
+S15=http://mp3.com/?s=%s
+N16=maps (google.com)
+S16=http://maps.google.com/maps?hl=en&q=%u
+N17=soft (brothersoft.com)
+S17=http://search.brothersoft.com/index.php?act=search.index&keyword=%s&referral=GreenBrowser
+N18=weather (weather.com)
+S18=http://www.weather.com/search/enhanced?where=%s
+N19=dictionary (reference.com)
+S19=http://dictionary.reference.com/browse/%u
