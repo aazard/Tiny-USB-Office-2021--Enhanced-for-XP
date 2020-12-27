@@ -16,7 +16,7 @@
 
 ### APP List is for v1, v2 has more, smaller, less requirements needed apps
 
-***IMPORTANT***
+# IMPORTANT
 
 ## Install to "Root of Drive", ie: C:\, D:\ or Etc.
  
