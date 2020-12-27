@@ -1,8 +1,10 @@
+## 99% OF YOU WANT THE "Tiny Office Average User pack", it fits on a 128mb flash drive (or to PC HDD/SSD)
+
 ### App list needs v2.0.1 update, Many, many, more apps added
 
 # Tiny USB Office 2021: Enhanced for XP aka "Tiny Office"
 
-# Available in 10 pack sizes from 1.44mb (1480kb) floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
+## Available in many pack sizes from 1.44mb (1480kb) floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
 
 # Two FOSS/Freeware Games packs, one small of 41 games (77mb) and one large (795mb), of many, are also attached as separate downloads 
 
