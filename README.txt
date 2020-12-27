@@ -1,11 +1,20 @@
-Tiny USB Office 2021: Enhanced for XP
+# Tiny USB Office 2021: Enhanced for XP aka "Tiny Office"
+
+# Available in 10 pack sizes from 1.44mb (1480kb) floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
+
+# Two FOSS/Freeware Games packs, one small of 41 games (77mb) and one large (795mb), of many, are also attached as separate downloads 
+
+### APP List is for v1, v2 has more, smaller, less requirements needed apps
 
 ***IMPORTANT***
 
-Install to "Root of Drive", ie: C:\, D:\ or Etc.
- So it appears as THIS:
+## Install to "Root of Drive", ie: C:\, D:\ or Etc.
+ 
+### So it appears as THIS:
 
-"C:\Tiny USB Office 2021 Enhanced for XP\" or "H:\Tiny USB Office 2021 Enhanced for XP\"
+### "C:\Tiny Office "number of" mil byte pack\" or "H:\Tiny Office "number of" mil byte pack\"
+
+Add "Game" packs to a new "games folder", Make games category in Qsel, drag & drop games "exe" to Qsel's window to create menu entry
 
 ***
 
