@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% Setup
+Static1=%ProductName% %ProductVersion% has already installed on your system. It is recommended to uninstall the application before re-installing. Click Yes to uninstall %ProductName% %ProductVersion%. Click No to proceed with setup. Click Cancel to exit.
+Error1=Can not launch the Uninstall. Setup will now continue the installation.
+Yes=&Yes
+No=&No
+Cancel=Cancel
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Installation Password
+Static1=Please enter installation password
+OK=&OK
+Exit=E&xit
+Error_Title=Error
+Error_Static1=Sorry, incorrect password. Please try again.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Select Language
+Static1=Please select the language that you would like to use during the installation.
+Next=&Next >
+Cancel=Cancel
+
+[WELCOME_DIALOG]
+Dialog_Title=Welcome
+Static1=Welcome to the %ProductName% Setup program. This program will install %ProductName% on your computer.
+Static2=It is strongly recommended that you exit all Windows programs before running this Setup program.
+Static3=Click Cancel to quit Setup and then close any programs you have running. Click Next to continue with the Setup program.
+Static4=WARNING: This program is protected by copyright law and international treaties.
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[LICENSE_DIALOG]
+Dialog_Title=Software License Agreement
+Static1=Please read the following License Agreement. Press the PAGE DOWN key to see the rest of the agreement.
+Static2=Do you accept all the terms of the preceding License Agreement? If you choose No, Setup will close. To proceed with the installation, you have to accept this agreement.
+Back=< &Back
+Yes=Yes
+No=No
+
+[README_DIALOG]
+Dialog_Title=Readme Information
+Static1=Readme Information:
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Choose Destination Location
+Static1=Setup will install %ProductName% in the following folder.
+Static2=To install to this folder, click Next
+Static3=To install to a different folder, click Browse and select another folder.
+Static4=You can choose not to install %ProductName% by clicking Cancel to exit Setup.
+Static5=Space Required:
+Static7=Space Available:
+Browse=B&rowse...
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Select an existing directory
+Static1=Please select the directory to install to.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Select Program Folder
+Static1=Setup will add program icons to the Program Folder listed below. You may type a new folder name, or select one from the existing Folders list. Click Next to continue.
+Static2=&Program Folder
+Static3=E&xisting Folders
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Start Copying Files
+Static1=Setup has enough information to start copying the program files. If you want to review or change any settings, click Back. If you are satisfied with the settings, click Next to begin copying files.
+Static2=Current Settings
+String1=Target Directory:
+String2=Program Manager Group:
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[PROCESS_DIALOG]
+Dialog_Title=Copying Files
+Cancel=Cancel
+
+[FINISH_DIALOG]
+Dialog_Title=Setup Complete
+Static1=Setup has finished installing %ProductName% on your computer. Press Finish to exit setup.
+Check1=&View Readme
+Check2=&Run the installed application now
+Back=< &Back
+Finish=Finish
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Exit Setup
+Static1=Setup is not complete. If you quit the Setup program now, the program will not be installed.
+Static2=You may run the Setup program at a later time to complete the installation.
+Static3=To continue, click Resume. If you really want to quit click Exit Setup.
+Resume=&Resume
+Exit=E&xit
+
+[UNINSTALL_DIALOG]
+1001=Setup2Go Uninstall
+1101=Confirm File Deletion
+1102=Are you sure you want to completely remove %1 and all of its components?
+1103=&Yes
+1104=&No
+1201=Remove Program From Your Computer
+1202=Uninstall will remove the software %1 from your computer. Please wait while each of the following components is removed...
+1203=Uninstall completed. Some elements could not be removed. You should manually remove items related to the application.
+1204=Uninstall successfully completed.
+1301=Remove Shared File?
+1302=The system indicates that the following shared file is no longer used by any programs. If any programs are still using this file and it is removed, those programs may not function. Are you sure you want to remove the shared file?<br><br>Leaving this file will not harm your system. If you are not sure what to do, it is suggested that you choose to not remove this shared component.<br><br>File name:<tab>%1<br>Located in:<tab>%2
+1400=Details
+1401=Details...
+1402=Unable to delete folder
+1403=Unable to delete file
+
+[STRINGS]
+1=Notice
+10=System Settings Change
+11=You must restart your computer before the new settings will take effect.<br><br>Do you want to restart your computer now?
+21=Your system incompatible with %1. Setup will now abort the installation.
+22=Your system incompatible with %1. Setup will continue, however the software may not function properly.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

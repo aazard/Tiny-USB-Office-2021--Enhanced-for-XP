@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% instalacija
+Static1=%ProductName% %ProductVersion% je vec instaliran na vase racunalo. Preporuceno je da deinstalirate program prije ponovnog instaliranja. Pritisnite Da za deinstalaciju %ProductName% %ProductVersion%.Pritisnite Ne za nastavak instalacije. Pritisnite Izlaz ukoliko zelite izaci iz instalacije.
+Error1=Deinstalacija ne moze biti pokrenuta. Instalacijski program ce nastaviti instalaciju.
+Yes=&Da
+No=&Ne
+Cancel=Izlaz
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Instalacijska zaporka
+Static1=Molimo unesite instalacijsku zaporku
+OK=&OK
+Exit=Izlaz
+Error_Title=Greska
+Error_Static1=Oprostite,pogresna zaporka. Molimo pokusajte ponovno.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Odaberite jezik
+Static1=Molimo odaberite jezik koji zelite tokom instalacije.
+Next=&Naprijed >
+Cancel=Izlaz
+
+[WELCOME_DIALOG]
+Dialog_Title=Dobrodosli
+Static1=Dobrodosli u %ProductName% instalacijski program. Ovaj program ce instalirati %ProductName% na vase racunalo.
+Static2=Preporucljivo je da prije nastavka instalacije zatvorite sve pokrenute Windows programe.
+Static3=Pritisnite Izlaz za prekid instalacije i tada zatvorite sve programe koji su pokrenuti. Pritisnite Naprijed za nastavak instalacije.
+Static4=UPOZORENJE: Ovaj program je zasticen zakonom o autorskim pravima i medjunarodnim zakonima.
+Back=< &Povratak
+Next=&Naprijed >
+Cancel=Izlaz
+
+[LICENSE_DIALOG]
+Dialog_Title=Licencicni Ugovor o programu
+Static1=Molimo procitajte slijdeci Licencicni Ugovor. Pritisntite tipku PAGE DOWN da bi vidjeli ostatak ugovora.
+Static2=Da li prihvacate sve odredbe ovog Licencicnog Ugovora? Ako odaberete Ne, instalacija ce se zatvoriti. Za nastavak instalacije, morate prihvatiti ovaj ugovor.
+Back=< &Povratak
+Yes=Da
+No=Ne
+
+[README_DIALOG]
+Dialog_Title=Informacije o softveru
+Static1=Informacije o softveru:
+Back=< &Povratak
+Next=&Nazad >
+Cancel=Izlaz
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Odaberite odredisnu mapu
+Static1=Instalacijski program ce instalirati %ProductName% u slijedecu mapu.
+Static2=Da bi instalirali u ovu mapu, pritisnite Naprijed.
+Static3=Da bi instalirali u neku drugu mapu, pritisnite Odaberi i izaberite drugu mapu.
+Static4=Instalaciju %ProductName% mozete otkazati pritiskom na Izlaz.Nakon toga instalacija ce se zatvoriti.
+Static5=Potrebni prostor:
+Static7=Dostupni prostor:
+Browse=O&daberi...
+Back=< &Povratak
+Next=&Naprijed >
+Cancel=Izlaz
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Odaberite neku postojecu mapu
+Static1=Molimo odaberite mapu u koju zelite instalirati program.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Odaberite grupu u koju cete smjestiti programske ikone
+Static1=Instalacija ce dodati programske ikone u Program mapu koja je ispisana dolje. Mozete unijeti novo ime grupe, ili odabrati jedno od postojecih. Pritisnite Naprijed za nastavak.
+Static2=&Programska grupa
+Static3=Po&stojece grupe
+Back=< &Povratak
+Next=&Naprijed >
+Cancel=Izlaz
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Pocetak kopiranja datoteka
+Static1=Instalacija ima dovoljno informacija za pocetak kopiranja programskih datoteka. Ako zelite pregledati ili promijeniti neke postavke instalacije, pritisnite Povratak. Ako ste zadovoljni s postavkama, pritisnite Naprijed za pocetak kopiranja datoteka.
+Static2=Trenutne postavke
+String1=Odredisna mapa:
+String2=Programska grupa:
+Back=< &Povratak
+Next=&Naprijed >
+Cancel=Izlaz
+
+[PROCESS_DIALOG]
+Dialog_Title=Kopiranje datoteka
+Cancel=Izlaz
+
+[FINISH_DIALOG]
+Dialog_Title=Instalacija zavrsena
+Static1=Instalacija je zavrsila instaliranje %ProductName% na vase racunalo.
+Check1=&Pogledaj informacije o programu
+Check2=&Pokreni instaliranu aplikaciju
+Back=< &Povratak
+Finish=Zavrsi
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Izlaz iz instalacije
+Static1=Instalacija nije zavrsila. Ako sada prekinete instalaciju, program nece biti instaliran.
+Static2=Mozete kasnije pokrenuti instalaciju i instaliati program.
+Static3=Za nastavak, pritisnite Nastavi. Ako zelite prekinuti instalaciju pritisnite Izlaz.
+Resume=&Nastavi
+Exit=&Izlaz
+
+[UNINSTALL_DIALOG]
+1001=Deinstalacija
+1101=Deinstalacija programa
+1102=Jeste li sigurni da zelite potpuno izbrisati %1 i sve njegove dijelove?
+1103=&Da
+1104=&Ne
+1201=Uklanjanje programa s vaseg racunala
+1202=Deinstalacija ce ukloniti program %1 sa vaseg racunala. Molimo pricekajte dok svaki od slijedecih dijelova programa bude izbrisan...
+1203=Deinstalacija zavrsena.Neki dijelovi nisu mogli biti izbrisani. Trebate rucno ukloniti dijelove programa.
+1204=Deinstalacija uspijesno zavrsena.
+1301=Izbrisi dijeljenu datoteku?
+1302=Sljedecu dijeljenu datoteku ne korisiti niti jedan program. Ako neki program ipak koristi ovu datoteku, a vi je izbrisete, taj program mozda nece moci raditi. Jeste li sigurni da zelite izbrisati ovau dijeljenu datoteku?<br><br>Ukoliko zadrzite ovu datoteku to nece ostetiti vase racunalo. Ako niste sigurni, preporuceno je da zadrzite datoteku.<br><br>Datoteku:<tab>%1<br>Nalazi se u:<tab>%2
+1400=Detalji
+1401=Detalji...
+1402=Mapu nije moguce izbrisati
+1403=Datoteku nije moguce izbrisati
+
+[STRINGS]
+1=Napomena
+10=Postavke sistema su promjenjene
+11=Morate ponovno pokrenuti (resetirati) vase racunalo da bi promjene imale ucinka.<br><br>Zelite li resetirati vase racunalo sada?
+21=Vase racunalo nije kompatibilno sa %1. Instalacijski program ce sada prekinuti instalaciju.
+22=Vase racunalo nije kompatibilno sa %1. Instalacija ce se nastaviti, ali program mozda nece ispravno raditi.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

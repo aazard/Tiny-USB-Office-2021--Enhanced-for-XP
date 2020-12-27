@@ -1,0 +1,36 @@
+; Application: Startup Control Panel
+; Version    : 2.8
+; Author     : Mike Lin
+; Copyright  : © 2003 by Mike Lin
+; Created by : the UNREGISTERED VERSION of INF-Tool Setup Program and INF File Generator
+;              from http://Inner-Smile.com
+; Note: INF-Tool Professional is capable to create advanced setup packages
+;       including Uninstall functionality, support for Long File Names,
+;       Start Menu groups, a small (4 KB!) Setup utility for your disks,
+;       digitally signed, password-encrypted setup programs and much more.
+;       Save resources and use INF-Tool instead of huge "Bloatware"-Installers!
+; ---------------------------------------------------------------------------
+
+[Version]
+Signature=$Chicago$
+Provider=%Author%
+SetupClass=BASE
+Compatible=1
+Generator=INF-Tool v6.3d Lite
+[Strings]
+Product="Startup Control Panel"
+Version="2.8"
+Author="Mike Lin"
+Copyright="© 2003 by Mike Lin"
+DiskName="Startup Control Panel, Setup Disk #1"
+Setup="SOFTWARE\Microsoft\Windows\CurrentVersion\Setup"
+[SourceDisksNames]
+1=%DiskName%,,0
+[SourceDisksFiles]
+Startup.cpl=1
+[DestGrp]
+Startup.cpl
+[DestinationDirs]
+DestGrp=11
+[DefaultInstall]
+Copyfiles=DestGrp

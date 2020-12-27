@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% Instalacija
+Static1=Aplikacija %ProductName% %ProductVersion% je vec instalirana na Vasem racunaru. Preporucljivo je deinstalirati aplikaciju pre ponovne instalacije. Pritisnite dugme Da ako zelite da deinstalirate aplikaciju %ProductName% %ProductVersion%. Pritisnite Ne ako zelite da nastavite sa instalacijom. Pritisnite Prekid ako zelite da prekinete instalaciju.
+Error1=Pokretanje deinstalacije nije uspelo. Instalacija ce sada biti nastavljena.
+Yes=&Da
+No=&Ne
+Cancel=Prekid
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Installation Password
+Static1=Please enter installation password
+OK=&OK
+Exit=E&xit
+Error_Title=Error
+Error_Static1=Sorry, incorrect password. Please try again.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Izaberite jezik
+Static1=Izaberite jezik koji ce biti koriscen tokom instalacije.
+Next=&Dalje >
+Cancel=Prekid
+
+[WELCOME_DIALOG]
+Dialog_Title=Dobrodosli
+Static1=Dobrodosli u instalaciju aplikacije %ProductName% %ProductVersion%. Sledite dalja uputstva kako biste uspesno instalirali ovu aplikaciju na Vas racunar.
+Static2=Preporucljivo je da zatvorite sve ostale Windows aplikacije pre pokretanja ovog instalacionog programa.
+Static3=Pritisnite dugme Prekid ako zelite da prekinete instalaciju, kako biste zatvorili sve pokrenute Windows aplikacije. Pritisnite Dalje za nastavak instalacije.
+Static4=UPOZORENJE: Ova aplikacija je zasticena Zakonom o autorskim pravima i medjunarodnim Konvencijama o pravima autora.
+Back=< &Nazad
+Next=&Dalje >
+Cancel=Prekid
+
+[LICENSE_DIALOG]
+Dialog_Title=Ugovor o licenciranju softvera
+Static1=Procitajte sledeci Ugovor o licenciranju softvera. Pritisnite PAGE DOWN (na tastaturi) kako biste videli ostatak Ugovora.
+Static2=Da li prihvatate sve uslove prethodnog Ugovora o licenciranju? Ako izaberete Ne, instalacija ce biti prekinuta. Da biste nastavili instalaciju morate prihvatiti predocene klauzule Ugovora o licenciranju konkretnog softvera.
+Back=< &Nazad
+Yes=Da
+No=Ne
+
+[README_DIALOG]
+Dialog_Title=Informacije o softveru
+Static1=Informacije o softveru:
+Back=< &Nazad
+Next=&Dalje >
+Cancel=Prekid
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Izaberite direktorijum u koji ce aplikacija biti instalirana
+Static1=Aplikacija %ProductName% %ProductVersion% ce biti instalirana u ovde navedeni direktorijum.
+Static2=Za nastavak instalacije pritisnite Dalje.
+Static3=Ako zelite da promenite instalacioni direktorijum, pritisnite dugme Izbor foldera.
+Static4=Ako ne zelite da instalirate aplikaciju %ProductName% %ProductVersion%, pritisnite Prekid za kraj.
+Static5=Potreban prostor:
+Static7=Dostupan prostor:
+Browse=&Izbor foldera...
+Back=< &Nazad
+Next=&Dalje >
+Cancel=Prekid
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Izaberite neki od postojecih direktorijuma
+Static1=Izaberite direktorijum u koji zelite da instalirate program.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Izaberite naziv grupe u koju ce biti smestene ikone programa
+Static1=Odgovarajuce ikone ce biti dodate u ovde izabrani podmeni Start>Programs menija. Unesite novi naziv menija, ili izaberite neki od postojecih. Pritisnite Dalje za nastavak.
+Static2=&Izabran naziv menija:
+Static3=P&ostojeci nazivi menija:
+Back=< &Nazad
+Next=&Dalje >
+Cancel=Prekid
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Prikupljeni parametri instalacije
+Static1=Sve informacije potrebne za instalaciju su prikupljene. Ako zelite da pregledate ili izmenite neke od parametara instalacije, pritisnite dugme Nazad. Ovo je poslednja tacka u kojoj se mozete vratiti unazad ili prekinuti citav proces instalacije. Ako ste zadovoljni izborom, za pocetak instalacije pritisnite dugme Dalje.
+Static2=Tekuce opcije
+String1=Direktorijum u koji ce aplikacija biti smestena:
+String2=Meni za smestanje ikona programa (podmeni menija Start>Programs):
+Back=< &Nazad
+Next=&Dalje >
+Cancel=Prekid
+
+[PROCESS_DIALOG]
+Dialog_Title=Kopiranje fajlova u toku, sacekajte...
+Cancel=Prekid
+
+[FINISH_DIALOG]
+Dialog_Title=Instalacija je zavrsena
+Static1=Instalacija aplikacije %ProductName% %ProductVersion% na Vasem racunaru je uspesno zavrsena.
+Check1=&Prikazi dodatne informacije
+Check2=&Odmah pokreni instaliranu aplikaciju
+Back=< &Nazad
+Finish=Kraj
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Prekid instalacije
+Static1=Instalacija aplikacije %ProductName% %ProductVersion% nije zavrsena. Ako sada prekinete instalaciju, program nece biti instaliran na Vasem racunaru.
+Static2=Kasnije mozete ponovo pokrenuti i kompletirati instalaciju.
+Static3=Za nastavak instalacije, pritisnite Nastavak. Ako zaista zelite da prekinete instalaciju, pritisnite Izlaz.
+Resume=&Nastavak
+Exit=&Izlaz
+
+[UNINSTALL_DIALOG]
+1001=Deinstalacija
+1101=Deinstalacija alpikacije
+1102=Da li ste sigurni da zelite da u potpunosti uklonite aplikaciju %1 i sve za nju vezane komponente sa Vaseg racunara?
+1103=&Da
+1104=&Ne
+1201=Uklanjanje aplikacije
+1202=Uklanjanje aplikacije %1 sa Vaseg racunara je u toku. Sacekajte...
+1203=Deinstalacija je zavrsena. Neki elementi aplikacije nisu mogli da budu uklonjeni, pa ih morate ukloniti rucno.
+1204=Deinstalacija je uspesno zavrsena.
+1301=Ukloniti deljeni (shared) fajl?
+1302=Sledeci deljeni (shared) fajl ne koristi ni jedna registrovana aplikacija. Ako neki programa ipak koristi ovaj fajl, moze se dogoditi da posle njegovog uklanjanja vise nece raditi. Da li ste sigurni da zelite da uklonite deljeni (shared) fajl?<br><br>U slucaju da ovaj fajl ne uklonite, to nece stetiti Vasem sistemu. Ako niste sigurni sta treba da uradite, preporucljivo je da NE uklanjate ovu deljenu (shared) komponentu.<br><br>Naziv fajla:<tab>%1<br>Nalazi se u:<tab>%2
+1400=Detaljne informacije
+1401=Detaljne informacije...
+1402=Nije uspelo uklanjanje direktorijuma 
+1403=Nije uspelo uklanjanje fajla 
+
+[STRINGS]
+1=Napomena
+10=Izmena sistemskih parametara
+11=Morate restartovati racunar kako bi sistem prihvatio nove parametre.<br><br>Da li zelite da restartujete racunar sada?
+21=Vas sistem nije kompatibilan sa %1. Instalaciona procedura ce biti prekinuta.
+22=Vas sistem nije kompatibilan sa %1. Instalaciona procedura ce biti nastavljena, ali postoji verovatnoca da instalirana aplikacija nece ispravno raditi.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

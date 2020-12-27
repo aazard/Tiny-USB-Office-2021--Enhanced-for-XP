@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <!-- This is Title Clip template. It defines the shape into which the image is mapped as well
+    as duration timer with start/end logic. -->
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"DefaultTitleClipTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='1'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+    </MetadataSet>
+
+    <Transform>
+      <!-- Properties Set -->
+      <MetadataSet DEF='ExtentSockets'>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <!--Change property type to IN-->
+          <MetadataString containerField='value' name='socketName' value='"translate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"BaseExtentTransform"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"translation"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"scale"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"BaseExtentTransform"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"scale"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"rotate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"BaseExtentTransform"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"rotation"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"centerOfRotation"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"BaseExtentTransform"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"center"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"rotate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TransformFromNextExtent"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"rotation"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"next"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"centerOfRotation"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TransformFromNextExtent"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"center"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"next"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transparency"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"ExtentMaterial"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"transparency"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"appearanceShader"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"AppearanceNode"'/>
+          <MetadataString containerField='value' name='socketChildNodeType' value='"X3dShader"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textureTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"AppearanceNode"'/>
+          <MetadataString containerField='value' name='socketChildNodeType' value='"X3dTextureTransform"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TextTransform"'/>
+          <MetadataString containerField='value' name='socketChildNodeType' value='"X3dTransform"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"grid"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TitleShape"'/>
+          <MetadataString containerField='value' name='socketChildNodeType' value='"X3DGeometryNode"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectShaderSet"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"ExtentEffectMotionTexture"'/>
+          <MetadataString containerField='value' name='socketChildNodeType' value='"ShaderSet"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+      </MetadataSet>
+    </Transform>
+
+    <Transform DEF='BaseExtentTransform'>
+      <Transform DEF='TransformFromNextExtent'>
+        <Transform DEF='InnerExtentTransform'>
+          <Switch whichChoice="0" DEF="ExtentShapeSwitch">
+            <Shape>
+              <Appearance DEF='AppearanceNode'>
+
+                <Material DEF='ExtentMaterial' transparency='0' diffuseColor='0.75 1 0' shininess='0'>
+                  <MetadataSet name='BPSet'>
+                    <MetadataString containerField='value' name='transparency' value='"transparency"'/>
+                    <MetadataString containerField='value' name='diffuseColor' value='"diffuseColor"'/>
+                  </MetadataSet>
+                </Material>
+                <MotionTexture DEF='ExtentEffectMotionTexture'>
+                  <ImageTexture DEF='DummyImageTexture' containerField='texture' repeatS='false' repeatT='false' url='"res:\\MovieMakerCore.DLL\IDB_TRANSITION_DISSOLVE_ROUGH"' />
+                  <ShaderSet DEF='ExtentEffectShaderSet'>
+                    <ChannelMixerShader DEF='ChannelMixerNode' mixerMatrix =  '0        0       0         0
+                                                                               0        0       0         0
+                                                                               0        0       0         0
+                                                                               0        0       0         0' colorOffset='0 0 0' alphaOffset='1.0'/>
+                    <ROUTE fromNode='ExtentMaterial' fromField='diffuseColor' toNode='ChannelMixerNode' toField='colorOffset'/>
+                  </ShaderSet>
+                </MotionTexture>
+
+                <TextureTransform DEF='BaseTextureTransform' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+              </Appearance>
+              <IndexedFaceSet DEF='TitleIndexedFaceSet' containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1' colorPerVertex='true'>
+                <Coordinate containerField='coord' point='-4 3 0 -4 -3 0 4 -3 0 4 3 0' />
+                <TextureCoordinate DEF='Extent_TextureCoordinates' containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                <ColorRGBA color='1 1 1 1
+                                  1 1 1 1
+                                  1 1 1 1
+                                  1 1 1 1'/>
+              </IndexedFaceSet>
+            </Shape>
+            <Shape DEF="TitleShape">
+              <Appearance USE='AppearanceNode'/>
+            </Shape>
+          </Switch>
+        </Transform>
+        <Transform>
+          <MetadataSet name='placeholder'>
+            <MetadataString containerField='value' name='PlaceholderName' value='"Effects"'/>
+          </MetadataSet>
+        </Transform>
+      </Transform>
+    </Transform>
+
+    <Transform DEF='TextTransform'/>
+
+    <Transform DEF='ExtentBin'/>
+
+  </Transform>
+</X3D>

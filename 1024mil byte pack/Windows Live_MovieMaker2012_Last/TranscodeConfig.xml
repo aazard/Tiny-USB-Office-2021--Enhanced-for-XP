@@ -1,0 +1,48 @@
+<Transcode version="2">
+  <Containers>
+    <Container name="WMV" dimension="720">
+      <Extensions>
+        <Extension type=".wmv"/>
+      </Extensions>
+    </Container>
+    <Container name="MTS" dimension="720">
+      <Extensions>
+        <Extension type=".mts"/>
+        <Extension type=".m2ts"/>
+        <Extension type=".m2t"/>
+      </Extensions>
+    </Container>
+    <Container name="MP4" dimension="720">
+      <Extensions>
+        <Extension type=".mp4"/>
+      </Extensions>
+    </Container>
+    <Container name="MOV">
+      <Extensions>
+        <Extension type=".mov"/>
+      </Extensions>
+      <FourCCCodes>
+        <FourCCCode code="1983148141" dimension="720"/>
+        <FourCCCode code="1446269005" dimension="720"/>
+        <FourCCCode code="842289229" dimension="720"/>
+        <FourCCCode code="859066445" dimension="720"/>
+        <FourCCCode code="1093947469" dimension="720"/>
+        <FourCCCode code="1395937357" dimension="720"/>
+        <FourCCCode code="1412714573" dimension="720"/>
+        <FourCCCode code="828601953" dimension="720"/>
+        <FourCCCode code="3765272614" dimension="720"/>
+        <FourCCCode code="875967048" dimension="720"/>
+      </FourCCCodes>
+    </Container>
+    <Container name="WTV" dimension="720">
+      <Extensions>
+        <Extension type=".wtv"/>
+      </Extensions>
+    </Container>
+    <Container name="DVRMS" dimension="720">
+      <Extensions>
+        <Extension type=".dvr-ms"/>
+      </Extensions>
+    </Container>
+  </Containers>
+</Transcode>

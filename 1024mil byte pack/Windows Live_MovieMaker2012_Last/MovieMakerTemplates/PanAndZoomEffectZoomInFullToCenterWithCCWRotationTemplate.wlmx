@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"PanAndZoomEffectZoomInFullToCenterWithCCWRotationTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Zoom In"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='3'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='5'/>
+    </MetadataSet>
+
+    <Transform>
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='effectType' value='"5"' reference='Custom'/>
+      </MetadataSet>
+    </Transform>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textureTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"PandZCCWRescaleTT"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"PandZCCWInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"projectAspectRatio"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"PandZCCWAspectRatio"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+    <Transform>
+      <Shape>
+      <Appearance>
+        <TextureTransform DEF='PandZCCWRescaleTT' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 0.75' containerField='textureTransform'>
+          <TextureTransform DEF='PandZCCWRotationTT' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 1.33333333333333333' containerField='textureTransform'>
+            <TextureTransform DEF='PandZCCWScaleTT' center='-0.5 -0.5' translation='0 0' rotation='0' scale='1 1' containerField='textureTransform'/>
+          </TextureTransform>
+        </TextureTransform>
+      </Appearance>
+    </Shape>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <ScalarInterpolator DEF='PandZCCWInterpolator' key='0 1' keyValue='0 1'/>
+      <ROUTE fromNode='PandZCCWInterpolator'
+             fromField='value_changed'
+             toNode='PandZCCWScaleInterpolator'
+             toField='set_fraction'/>
+      <ROUTE fromNode='PandZCCWInterpolator'
+             fromField='value_changed'
+             toNode='PandZCCWRotationInterpolator'
+             toField='set_fraction'/>
+
+      <PositionInterpolator2D DEF='PandZCCWScaleInterpolator' 
+                              key='0 1' 
+                              keyValue='1 1 0.8 0.8'/>
+      <ROUTE fromNode='PandZCCWScaleInterpolator'
+             fromField='value_changed'
+             toNode='PandZCCWScaleTT'
+             toField='set_scale'/>
+
+      <ScalarInterpolator DEF='PandZCCWRotationInterpolator'
+                          key='0 1'
+                          keyValue='0 -0.1178571428571429'/>
+      <ROUTE fromNode='PandZCCWRotationInterpolator' 
+             fromField='value_changed' 
+             toNode='PandZCCWRotationTT' 
+             toField='set_rotation'/>
+
+      <!--Aspect ratio calculation: To avoid distortion, we need to scale the image to square before we can rotate it,
+      then scale it back to the original aspect ratio, so we need both the aspect ratio and its reciprocal-->
+      <MathScalar DEF='PandZCCWAspectRatio' Multiplier='1'/>
+      <PositionInterpolator2D DEF='PandZCCWAspectInterpolator1' key='0 10' keyValue='1 0 1 10'/>
+      <PositionInterpolator2D DEF='PandZCCWAspectInterpolator2' key='0 10' keyValue='1 0 1 10'/>
+      <ROUTE fromNode='PandZCCWAspectRatio' fromField='ProdSum' toNode='PandZCCWAspectInterpolator1' toField='set_fraction'/>
+      <ROUTE fromNode='PandZCCWAspectRatio' fromField='Reciprocal' toNode='PandZCCWAspectInterpolator2' toField='set_fraction'/>
+      <ROUTE fromNode='PandZCCWAspectInterpolator1' fromField='value_changed' toNode='PandZCCWRotationTT' toField='set_scale'/>
+      <ROUTE fromNode='PandZCCWAspectInterpolator2' fromField='value_changed' toNode='PandZCCWRescaleTT' toField='set_scale'/>
+    </Transform>
+
+  </Transform>
+</X3D>

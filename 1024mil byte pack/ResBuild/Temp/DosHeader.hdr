@@ -1,0 +1,34 @@
+<ROOT>
+   <HEADER COUNT="6" C1="Offset" C2="Field" C3="Type" C4="Size" C5="Value" C6="Description" />
+   <ROW C1="0000" C2="e_magic" C3="WORD" C4="2" C5="5a4d" C6="Magic Number" />
+   <ROW C1="0002" C2="e_cblp" C3="WORD" C4="2" C5="0090" C6="Bytes on last page of file" />
+   <ROW C1="0004" C2="e_cp" C3="WORD" C4="2" C5="0003" C6="Pages in file" />
+   <ROW C1="0006" C2="e_crlc" C3="WORD" C4="2" C5="0000" C6="Relocations" />
+   <ROW C1="0008" C2="e_cparhdr" C3="WORD" C4="2" C5="0004" C6="Size of header in paragraphs" />
+   <ROW C1="000a" C2="e_minalloc" C3="WORD" C4="2" C5="0000" C6="Minimum extra paragraphs needed" />
+   <ROW C1="000c" C2="e_maxalloc" C3="WORD" C4="2" C5="ffff" C6="Maximum extra paragraphs needed" />
+   <ROW C1="000e" C2="e_ss" C3="WORD" C4="2" C5="0000" C6="Initial (relative) SS value" />
+   <ROW C1="0010" C2="e_sp" C3="WORD" C4="2" C5="00b8" C6="Initial SP value" />
+   <ROW C1="0012" C2="e_csum" C3="WORD" C4="2" C5="0000" C6="Checksum" />
+   <ROW C1="0014" C2="e_ip" C3="WORD" C4="2" C5="0000" C6="Initial IP value" />
+   <ROW C1="0016" C2="e_cs" C3="WORD" C4="2" C5="0000" C6="Initial (relative) CS value" />
+   <ROW C1="0018" C2="e_lfarlc" C3="WORD" C4="2" C5="0040" C6="File address of relocation table" />
+   <ROW C1="001a" C2="e_ovno" C3="WORD" C4="2" C5="0000" C6="Overlay number" />
+   <ROW C1="001c" C2="e_res[0]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="001e" C2="e_res[1]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0020" C2="e_res[2]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0022" C2="e_res[3]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0024" C2="e_oemid" C3="WORD" C4="2" C5="0000" C6="OEM Identifier (for e_oeminfo)" />
+   <ROW C1="0026" C2="e_oeminfo" C3="WORD" C4="2" C5="0000" C6="OEM information" />
+   <ROW C1="0028" C2="e_res2[0]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="002a" C2="e_res2[1]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="002c" C2="e_res2[2]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="002e" C2="e_res2[3]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0030" C2="e_res2[4]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0032" C2="e_res2[5]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0034" C2="e_res2[6]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0036" C2="e_res2[7]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="0038" C2="e_res2[8]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="003a" C2="e_res2[9]" C3="WORD" C4="2" C5="0000" C6="Reserved Word" />
+   <ROW C1="003c" C2="e_lfanew" C3="LONG" C4="4" C5="000000b8" C6="File address of new exe header" />
+</ROOT>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <!-- This is Audio Clip template. It defines the sound and audioClip nodes -->
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"DefaultAudioClipTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='1'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='"AudioClip"'/>
+    </MetadataSet>
+
+    <Transform>
+      <!-- Properties Set -->
+      <MetadataSet DEF='ExtentSockets'>
+        
+        <MetadataSet containerField='value' name='ExtentSocket'>
+          <MetadataString containerField='value' name='socketName' value='"volume"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"SoundIntensityInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"either"'/>
+        </MetadataSet>
+
+      </MetadataSet>
+    </Transform>
+
+    <Sound DEF='Sound'>
+      <AudioClip DEF='AudioClip' url='""' loop='false' />
+    </Sound>
+    <ScalarInterpolator DEF='SoundIntensityInterpolator' key='-96 0' keyValue='-96 0' set_fraction='0'>
+      <MetadataSet name='BPSet'>
+        <MetadataString containerField='value' name='Volume' reference='Custom'/>
+        <MetadataString containerField='value' name='Mute' reference='Custom'/>
+      </MetadataSet>
+    </ScalarInterpolator>
+    <ROUTE fromNode='SoundIntensityInterpolator' fromField='value_changed' toNode='Sound' toField='set_intensity'/>
+    
+    <Transform>
+      <MetadataSet name='placeholder'>
+        <MetadataString containerField='value' name='PlaceholderName' value='"Effects"'/>
+      </MetadataSet>
+    </Transform>
+
+  </Transform>
+</X3D>
+

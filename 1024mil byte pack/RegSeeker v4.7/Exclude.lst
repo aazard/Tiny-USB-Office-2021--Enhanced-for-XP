@@ -1,0 +1,169 @@
+0|AppUserModelId
+0|CEIPLuaElevationHelper
+0|DiskManagement.Connection
+0|ERCLuaElevationHelper
+0|ERCLuaSupport.1
+0|Extensions\ContractId
+0|Game
+0|Installer
+0|Local Settings
+0|LocalPathSearchProvider
+0|MIME
+0|NetProjW.Elev.1
+0|Record
+0|Scriptlet.Behavior
+0|Scriptlet.HiFiTimer
+0|Scriptlet.SvrOm
+0|Search.CollatorErrors.1
+0|Search.CustomWordbreaker
+0|Search.CustomWordbreaker.1
+0|Search.DirMonitorNotifier.1
+0|Search.EmbeddedSearchSvcAdmin.1
+0|Search.FilesystemBackupProvider.1
+0|Search.Indexer.1
+0|Search.NlCiIndex.1
+0|Software\Microsoft\Windows
+0|SpeechUX.SpeechMediaPlayerStringCollection.1
+0|STSInproc.SpeechPropertyStore.1
+0|SystemSettings
+0|Unmarshalers
+1|Software\Classes\Installer
+1|Software\Classes\Local Settings
+1|Software\JavaSoft
+1|Software\Microsoft\Internet Explorer\
+1|SOFTWARE\Microsoft\Internet Explorer\LowRegistry
+1|Software\Microsoft\Internet Explorer\MAO Settings
+1|Software\Microsoft\Office
+1|Software\Microsoft\Speech_OneCore
+1|Software\Microsoft\SystemCertificates
+1|Software\Microsoft\Windows Live
+1|Software\Microsoft\Windows NT\CurrentVersion\AeDebug
+1|Software\Microsoft\Windows\CurrentVersion\Authentication
+1|Software\Microsoft\Windows\CurrentVersion\DeviceAccess
+1|Software\Microsoft\Windows\CurrentVersion\Explorer\CD Burning
+1|Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\DDECache
+1|Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\OpenWithList
+1|Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+1|Software\Microsoft\Windows\CurrentVersion\MCT
+1|Software\Microsoft\Windows\CurrentVersion\Media Center\MRU
+1|Software\Microsoft\Windows\CurrentVersion\PushNotifications
+1|Software\Policies\Microsoft\Office
+2|SOFTWARE\Classes\Installer
+2|SOFTWARE\Classes\Local Settings
+2|Software\Intel\Wireless
+2|Software\Microsoft\.NETFramework
+2|SOFTWARE\Microsoft\Active Setup
+2|SOFTWARE\Microsoft\Advanced INF Setup
+2|SOFTWARE\Microsoft\Cryptography
+2|Software\Microsoft\CTF
+2|Software\Microsoft\Device Association Framework
+2|Software\Microsoft\DiskSnapshot
+2|Software\Microsoft\FilterDS
+2|Software\Microsoft\Fusion
+2|SOFTWARE\Microsoft\IMAPI\StashInfo
+2|Software\Microsoft\InProcLogger
+2|Software\Microsoft\Input\Locales
+2|SOFTWARE\Microsoft\Internet Explorer\MAIN
+2|Software\Microsoft\MediaPlayer\Battery
+2|SOFTWARE\Microsoft\MMC\SnapIns
+2|Software\Microsoft\Multimedia\TV
+2|Software\Microsoft\Multivariant
+2|SOFTWARE\Microsoft\Office
+2|Software\Microsoft\PointOfService
+2|Software\Microsoft\PolicyManager
+2|SOFTWARE\Microsoft\PowerShell
+2|Software\Microsoft\Provisioning
+2|Software\Microsoft\SecurityManager
+2|Software\Microsoft\Speech
+2|Software\Microsoft\Speech_OneCore
+2|Software\Microsoft\SystemCertificates
+2|Software\Microsoft\SystemSettings
+2|SOFTWARE\Microsoft\TPG
+2|SOFTWARE\Microsoft\WBEM\Tracing\WMI
+2|SOFTWARE\Microsoft\WBEM\WDM
+2|SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug
+2|SOFTWARE\Microsoft\Windows NT\CurrentVersion\APITracing
+2|Software\Microsoft\Windows NT\CurrentVersion\EMDMgmt
+2|Software\Microsoft\Windows NT\CurrentVersion\NetworkList
+2|Software\Microsoft\Windows NT\CurrentVersion\Perflib
+2|Software\Microsoft\Windows NT\CurrentVersion\ProfileList
+2|SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule
+2|Software\Microsoft\Windows NT\CurrentVersion\SecEdit
+2|Software\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+2|Software\Microsoft\Windows NT\CurrentVersion\Time Zones
+2|Software\Microsoft\Windows NT\CurrentVersion\WinSAT
+2|SOFTWARE\Microsoft\Windows Search
+2|SOFTWARE\Microsoft\Windows\CurrentVersion\Appx
+2|Software\Microsoft\Windows\CurrentVersion\Component Based Servicing
+2|Software\Microsoft\Windows\CurrentVersion\DeviceAccess
+2|Software\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches
+2|Software\Microsoft\Windows\CurrentVersion\IME
+2|Software\Microsoft\Windows\CurrentVersion\Installer\Userdata
+2|Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache
+2|Software\Microsoft\Windows\CurrentVersion\Internet Settings\Cache
+2|Software\Microsoft\Windows\CurrentVersion\NetworkServiceTriggers
+2|Software\Microsoft\Windows\CurrentVersion\OOBE
+2|SOFTWARE\Microsoft\Windows\CurrentVersion\Parental Controls
+2|Software\Microsoft\Windows\CurrentVersion\Policies
+2|SOFTWARE\Microsoft\Windows\CurrentVersion\RenameFiles
+2|Software\Microsoft\Windows\CurrentVersion\Setup
+2|SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide
+2|Software\Microsoft\Windows\CurrentVersion\SystemProtectedUserData
+2|Software\Microsoft\Windows\CurrentVersion\Uninstall
+2|Software\Microsoft\Windows\CurrentVersion\WindowsUpdate
+2|SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT
+2|Software\Microsoft\Windows\CurrentVersion\XWizards
+2|SOFTWARE\Microsoft\WindowsRuntime
+2|Software\SRS Labs\APO
+2|Software\WOW6432Node\Intel\Wireless
+2|Software\WOW6432Node\LogMeInRescueCallingCard
+2|Software\WOW6432Node\McAfee
+2|Software\WOW6432Node\Microsoft\.NETFramework
+2|Software\Wow6432Node\Microsoft\Active Setup
+2|Software\Wow6432Node\Microsoft\Advanced INF Setup
+2|Software\Wow6432Node\Microsoft\Code Store Database
+2|Software\WOW6432Node\Microsoft\Cryptography
+2|Software\WOW6432Node\Microsoft\CTF
+2|Software\WOW6432Node\Microsoft\Device Association Framework
+2|Software\WOW6432Node\Microsoft\DirectPlay
+2|Software\WOW6432Node\Microsoft\Fusion
+2|Software\Wow6432Node\Microsoft\IMEJP
+2|Software\WOW6432Node\Microsoft\Input
+2|Software\WOW6432Node\Microsoft\Internet Explorer
+2|Software\WOW6432Node\Microsoft\MediaPlayer\Battery
+2|Software\WOW6432Node\Microsoft\MMC
+2|Software\WOW6432Node\Microsoft\PowerShell
+2|Software\WOW6432Node\Microsoft\SPEECH
+2|Software\WOW6432Node\Microsoft\Speech_OneCore
+2|Software\WOW6432Node\Microsoft\WBEM\Tracing\WMI
+2|Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug
+2|Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Perflib
+2|Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\ProfileList
+2|Software\Wow6432Node\Microsoft\Windows Search
+2|Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches
+2|Software\Wow6432Node\Microsoft\Windows\CurrentVersion\IME
+2|Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\Cache
+2|Software\Wow6432Node\Microsoft\Windows\CurrentVersion\RenameFiles
+2|Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Setup
+2|Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+2|Software\WOW6432Node\Microsoft\Windows\CurrentVersion\XWizards
+2|Software\WOW6432Node\Microsoft\WindowsRuntime
+2|Software\Wow6432Node\Network Associates
+2|Software\WOW6432Node\ODBC
+2|SYSTEM\Setup
+3|.DEFAULT\Software\Microsoft\ADs
+3|.DEFAULT\Software\Microsoft\Windows Media\WMSDK
+3|.DEFAULT\Software\RegisteredApplications
+3|AppEvents
+3|Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe
+3|Console\%SystemRoot%_SysWOW64_WindowsPowerShell_v1.0_powershell.exe
+3|Environment
+3|Local Settings
+3|Software\Microsoft\ADs
+3|SOFTWARE\Microsoft\Internet Explorer\International
+3|Software\Microsoft\Windows Media\WMSDK\Namespace
+3|Software\Microsoft\Windows NT\CurrentVersion\AeDebug
+3|Software\Microsoft\Windows\CurrentVersion\Explorer\CD Burning
+3|Software\Microsoft\Windows\CurrentVersion\Internet Settings\5.0\Cache
+3|Software\Policies\Microsoft\Office
+3|System\GameConfigStore
