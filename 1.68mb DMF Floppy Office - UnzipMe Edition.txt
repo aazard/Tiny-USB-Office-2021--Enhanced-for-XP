@@ -26,7 +26,7 @@ FotoGrafix
 kPad
 MailPeek v0.93
 MemPad
-Merer v1.9.4
+Mereo v1.9.4
 Password Generator
 PDF Producer
 Pixie
