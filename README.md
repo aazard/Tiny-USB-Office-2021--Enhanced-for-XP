@@ -22,7 +22,7 @@
  
 ### So it appears as THIS:
 
-# "C:\Tiny Office "number of" mil byte pack\" or "H:\Tiny Office "number of" mil byte pack\"
+## "C:\Tiny Office "number of" mil byte pack\" or "H:\Tiny Office "number of" mil byte pack\"
 
 Add "Game" packs to a new "games folder", Make games category in Qsel, drag & drop games "exe" to Qsel's window to create menu entry
 
