@@ -1,0 +1,41 @@
+The 1.68mb DMF Floppy Office - UnzipMe Edition
+…..
+
+A suite fitting on a 1680kb (1.68mb) DMF formatted 3.5 inch floppy diskette.
+
+Contains 25 tools. All but the 100Zipper, a zip/unzip tool, are in a zip file.
+
+....
+
+Use:
+
+Copy to USB, HDD, or SSD (etc.) drive & use the 100Zipper to unzip them for use. 
+
+....
+
+Tools:
+
+100Zipper
+AntMem v13- Try to Free 64mb
+CSVboard v1.1
+Deluxe FTP
+Dsdel
+Encopy5
+Eve
+FotoGrafix
+kPad
+MailPeek v0.93
+MemPad
+Merer v1.9.4
+Password Generator
+PDF Producer
+Pixie
+Rename Filesv2.42
+ShackUp
+Spread32
+Pico-Sticky (Sticky)
+SureCrypt
+TinyPlayer
+Voyager XG MajorGeeks Edition
+Wave Edit
+Xpass
