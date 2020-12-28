@@ -37,7 +37,7 @@ redistribution and UNRESTRICTED use, where applicable.
 Intro:
 Free and Full Featured. Toolset “wants and needs” inclusive. Works with minimal requirements.
 Fully tested on Windows XP SP3 32bit & current Windows 10 64bit, on December 18 2020.
-Run from 256mb+ USB/Etc. (like SD, or LS-240 and Zip-250 media, EVEN apps, that fit, stand-alone 
+Run from USB/Etc. (like SD, or LS-240 and Zip-250 media, EVEN apps, that fit, stand-alone 
 from DMF formatted 3.5-inch floppy) media or “Install” (copied/Unzipped) it to your PC’s drive.
 Includes an application menu/launcher, that ALSO works portably, Qsel.
 
