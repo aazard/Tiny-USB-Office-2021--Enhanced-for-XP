@@ -60,8 +60,6 @@ Includes an application menu/launcher, that ALSO works portably, Qsel.
 
 #### **Created by using [FoldersReport**](http://www.nirsoft.net/)**
 
-* **I removed the empty folders, they eat 4kb each! Plus some unneeded txt files saving a few kb**
-
 |**Folder** |**Size Of Files** |**Size On Disk** |**Files** |
 | :-: | :-: | :-: | :-: |
 |` `APP = 100k zipper v1.21 |` `71 KB |` `72 KB |` `1 |
