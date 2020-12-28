@@ -52,7 +52,7 @@ Includes an application menu/launcher, that ALSO works portably, Qsel.
 * a 1.68mb DMF Formatted 3.5 inch 2HD Floppy version is also uploaded (its 1677kb)
 * Only 100K Zipper (smaller no bug v1.21) is NOT zipped, use it unzip other tools 
 
-### **Folders Information**
+### **Folders Information** of 1.68mb pack:
 
 #### **Created by using [FoldersReport](http://www.nirsoft.net/) (a 22kb app)**
 
