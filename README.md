@@ -54,45 +54,49 @@ Includes an application menu/launcher, that ALSO works portably, Qsel.
 
 ### **Folders Information** of 1.68mb pack: 29 Apps on a FLOPPY!
 
-#### **Created by using [FoldersReport](http://www.nirsoft.net/) (a 22kb app)**
+#### **Note size on disk totals = 1676kb**
 
 * **I removed the empty folders, they eat 4kb each! Plus some unneeded txt files saving a few kb**
 
-|**Folder** |**Size Of Files** |**Size On Disk (as reported on NTFS 3TB HDD)**|
-| :-: | :-: | :-: |
-|` `APP = 100k zipper v1.21 |` `71 KB |` `72 KB |
-|` `APP = AntMem v13- Try to Free 64mb |` `1 KB |` `4 KB |
-|` `APP = CSVboard v1.1 |` `71 KB |` `72 KB |
-|` `APP = Deluxe FTP |` `157 KB |` `160 KB |
-|` `APP = Deluxe FTP\out |` `6 KB |` `12 KB |
-|` `APP = dsdel |` `7 KB |` `8 KB |
-|` `APP = Encopy5 |` `23 KB |` `28 KB |
-|` `APP = Eve |` `73 KB |` `80 KB |
-|` `APP = ezview |` `54 KB |` `56 KB |
-|` `APP = FoldersReport |` `21 KB |` `24 KB |
-|` `APP = Fontster |` `2 KB |` `4 KB |
-|` `APP = htmldocedit |` `69 KB |` `76 KB |
-|` `APP = mailpeek 0.93 |` `68 KB |` `88 KB |
-|` `APP = mempad |` `80 KB |` `88 KB |
-|` `APP = mempad\languages |` `4 KB |` `8 KB |
-|` `APP = mereo-1.9.4-bin |` `33 KB |` `36 KB |
-|` `APP = Password Generator |` `4 KB |` `8 KB |
-|` `APP = PDFproducer |` `21 KB |` `24 KB |
-|` `APP = renamefiles\_v2.42\_us |` `128 KB |` `128 KB |
-|` `APP = searchmyfiles |` `77 KB |` `80 KB |
-|` `APP = SGsoft WordPad - Use XP Compatibility |` `16 KB |` `20 KB |
-|` `APP = ShackUp |` `118 KB |` `120 KB |
-|` `APP = Spread32 |` `350 KB |` `352 KB |
-|` `APP = sticky |` `11 KB |` `12 KB |
-|` `APP = surecrypt |` `9 KB |` `12 KB |
-|` `APP = TheGun |` `6 KB |` `8 KB |
-|` `APP = TinyPlayer |` `79 KB |` `80 KB |
-|` `APP = Undelete |` `48 KB |` `48 KB |
-|` `APP = Voyager XG - Use XP Compatibility |` `88 KB |` `108 KB |
-|` `APP = Xcalday Calendar |` `61 KB |` `64 KB |
-|` `APP = Xpass |` `13 KB |` `16 KB |
+#### **Created by using [FoldersReport**](http://www.nirsoft.net/)**
 
+* **I removed the empty folders, they eat 4kb each! Plus some unneeded txt files saving a few kb**
 
+|**Folder** |**Size Of Files** |**Size On Disk** |**Files** |
+| :-: | :-: | :-: | :-: |
+|` `APP = 100k zipper v1.21 |` `71 KB |` `72 KB |` `1 |
+|` `APP = AntMem v13- Try to Free 64mb |` `0 KB |` `4 KB |` `1 |
+|` `APP = CSVboard v1.1 |` `71 KB |` `72 KB |` `1 |
+|` `APP = Deluxe FTP |` `151 KB |` `156 KB |` `2 |
+|` `APP = Deluxe FTP\out |` `0 KB |` `4 KB |` `1 |
+|` `APP = dsdel |` `7 KB |` `8 KB |` `1 |
+|` `APP = Encopy5 |` `23 KB |` `28 KB |` `2 |
+|` `APP = Eve |` `73 KB |` `80 KB |` `2 |
+|` `APP = ezview |` `54 KB |` `56 KB |` `1 |
+|` `APP = FoldersReport |` `21 KB |` `24 KB |` `1 |
+|` `APP = Fontster |` `2 KB |` `4 KB |` `1 |
+|` `APP = htmldocedit |` `69 KB |` `76 KB |` `2 |
+|` `APP = mailpeek 0.93 |` `68 KB |` `84 KB |` `5 |
+|` `APP = mempad |` `80 KB |` `88 KB |` `2 |
+|` `APP = mereo-1.9.4-bin |` `33 KB |` `36 KB |` `1 |
+|` `APP = mereo-1.9.4-bin\files |` `0 KB |` `4 KB |` `1 |
+|` `APP = Password Generator |` `4 KB |` `8 KB |` `1 |
+|` `APP = PDFproducer |` `21 KB |` `24 KB |` `1 |
+|` `APP = renamefiles\_v2.42\_us |` `128 KB |` `128 KB |` `1 |
+|` `APP = searchmyfiles |` `77 KB |` `80 KB |` `2 |
+|` `APP = SGsoft WordPad - Use XP Compatibility |` `16 KB |` `20 KB |` `1 |
+|` `APP = ShackUp |` `118 KB |` `120 KB |` `1 |
+|` `APP = Spread32 |` `350 KB |` `352 KB |` `1 |
+|` `APP = sticky |` `11 KB |` `12 KB |` `1 |
+|` `APP = surecrypt |` `9 KB |` `12 KB |` `1 |
+|` `APP = TheGun |` `6 KB |` `8 KB |` `1 |
+|` `APP = TinyPlayer |` `79 KB |` `80 KB |` `1 |
+|` `APP = Undelete |` `48 KB |` `48 KB |` `1 |
+|` `APP = Voyager XG - Use XP Compatibility |` `88 KB |` `92 KB |` `2 |
+|` `APP = Xcalday Calendar |` `62 KB |` `64 KB |` `1 |
+|` `APP = Xpass |` `13 KB |` `16 KB |` `2 |
+
+***
 
 ### App list needs v2.0.2 update, Many, many, more apps added
  
