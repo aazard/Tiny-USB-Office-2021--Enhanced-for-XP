@@ -56,7 +56,7 @@ Includes an application menu/launcher, that ALSO works portably, Qsel.
 
 #### **Created by using [FoldersReport](http://www.nirsoft.net/) (a 22kb app)**
 
-* **Minor work needed to remove empty folders, they eat 4kb each!**
+* **I removed the empty folders, they eat 4kb each! Plus some unneeded txt files saving a few kb**
 
 |**Folder** |**Size Of Files** |**Size On Disk (as reported on NTFS 3TB HDD)**|
 | :-: | :-: | :-: |
