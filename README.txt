@@ -1,6 +1,6 @@
 ## AVERAGE USERS WILL WANT THE "Small Office Average User pack", it fits on a 64mb flash drive (or to PC HDD/SSD)
 
-## ADVANCED USERS WILL WANT THE "Large Office Average User pack", it fits on a 64mb flash drive (or to PC HDD/SSD)
+## ADVANCED USERS WILL WANT THE "Large Office Average User pack", it fits on a 1024mb flash drive (or to PC HDD/SSD)
 
 # If you truly need a "Floppy" office a 1.68mb (1680kb) "UnzipMe" version is also uploaded
 
