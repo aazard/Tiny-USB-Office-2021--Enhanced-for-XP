@@ -1,0 +1,270 @@
+-----------------------------------------------------------
+06/01/2018 - version 1.2d
+-----------------------------------------------------------
+Game:
+- Updated to use VS2015 runtimes instead of 2010 to improve
+  support for Windows 10 (minimum requirements for use are
+  the same as the 2010 runtimes, so should be no issue).
+- FIXED: Timed races now resume properly after a save.
+- FIXED: Autosaves no longer crash on load.
+- FIXED: Game no longer crashes after races that have no
+  laps under 60 seconds.
+- FIXED: Various small timing issues with timed races.
+- FIXED: "No supported resolutions" problem on certain GPU
+  and monitor combinations.
+
+Editor:
+- FIXED: Some missing resources (nothing that materially
+  affects track creation).
+
+-----------------------------------------------------------
+06/08/2012 - version 1.2c
+-----------------------------------------------------------
+Game:
+- Adjusted the way AI fuel themselves in timed races to be
+  more optimal.
+- FIXED: Timed races now last the correct duration.
+- FIXED: Timed races can now be saved properly.
+- FIXED: Game no longer crashes when a cone hits a person.
+- FIXED: Person object now stands upright on slopes.
+
+Editor:
+- FIXED: Randomised track names on new tracks work again.
+
+-----------------------------------------------------------
+09/07/2012 - version 1.2b
+-----------------------------------------------------------
+Game:
+- FIXED: Tracks are now displayed in alphabetical order on
+  all systems.
+- FIXED: Game no longer crashes when colliding with cones
+  under certain circumstances.
+
+-----------------------------------------------------------
+08/07/2012 - version 1.2 - (10th Anniversary of v1.0)
+-----------------------------------------------------------
+Game:
+- Added timed races as an option.
+- Can now change palette via the Advanced Options menu (the
+  gr.ini setting has been removed).
+- Increased race length maximum to 255 laps/kms/minutes.
+- In-game menu now prompts before ending race/championship.
+- Controllers now support fully analogue controls.
+- Default tracks (by TuomoH) updated to include speed
+  limiters and new objects.
+- FIXED: Game now detects available resolutions rather than
+  using presets.
+- FIXED: Tracks with zero checkpoints now do not end and
+  tracks with only one checkpoint don't count multiple laps
+  at once.
+- FIXED: Multiple controllers are once again supported.
+- FIXED: When using shift with a keyboard key, the correct
+  symbol is now entered (en-US locale only).
+- FIXED: Numpad keys now work as expected.
+- FIXED: Glancing spectator collisions no longer produce
+  blood.
+- FIXED: Enter/Return can again be used to confirm dialogs
+  and selected menu items.
+- FIXED: Stereo sound files now play back in stereo, as
+  expected.
+
+Editor:
+- Added 'speed limiter' checkpoints.
+- Added new 'hedge' objects (long and short versions).
+- Added 'moveable road cone' (in addition to the static).
+- Front edge of Armco barrier is now visible in the Editor.
+- FIXED: Importing AI lines on tracks with WS200 or greater
+  now works as intended.
+- FIXED: Tracks loaded into the Editor via the command-line
+  or file-association are now displayed correctly and
+  Editor buttons assume their correct states.
+- FIXED: When saving an existing track under a different
+  name, objects are no longer rotated.
+
+-----------------------------------------------------------
+02/05/2011 - version 1.10c
+-----------------------------------------------------------
+Game:
+- FIXED: Saving games now works correctly and no longer
+  produces 'empty' replays.
+
+-----------------------------------------------------------
+25/03/2011 - version 1.10b
+-----------------------------------------------------------
+Game:
+- Modified armco barrier colour to be a more visible, light
+  blue colour (the only other viable colour available).
+- Implemented an experimental feature to adjust zoom based
+  on screen aspect ratio.
+- Grid order for the first race of a season is now defined
+  by player selection order when using "points" or "points,
+  reversed" grid modes.
+- FIXED: Driver statistics dialog now shows correctly after
+  being reset.
+- FIXED: Mouse cursor is no longer visible during the race.
+- FIXED: Using 'end race' on the final race of the season
+  doesn't quit directly to the main menu at least one race
+  has been completed.
+- FIXED: Rendering distance increased to solve bug on some
+  higher resolutions.
+- FIXED: UI no longer changes colour when adjusting a
+  driver's primary colour in full-screen mode.
+- FIXED: Start lights no longer remain visible in a replay.
+
+Editor:
+- FIXED: Saves with correct v1.10 flag.  Please re-save all
+  tracks made with v1.10 with v1.10b.
+- FIXED: No longer crashes when loading a path with spaces
+  via the command line (wrap all paths with quotes).
+
+-----------------------------------------------------------
+18/02/2011 - version 1.10
+-----------------------------------------------------------
+Game:
+- Game graphic, control and sound functionality ported to
+  the SDL game libraries for greater compatibility.
+- Improved Windows Vista/7 compatibility.
+- Windowed mode (including Alt+Enter toggle).
+- Extra game resolutions (including widescreen support).
+- Alt+F4 quits the game directly.
+- Scroll wheel works in dialogs.
+- Removed 'game speed' option from game - now fixed @ 100%.
+- New official tracks (by TuomoH).
+- Fixed various small bugs and crashes.
+
+
+Track Editor:
+- Can select world-size from 25-255 in the editor itself.
+- Added some new objects:
+	- Road cone
+	- Armco barrier
+	- Office block (short + small variants)
+	- Telephone pole
+	- Pedestrian bridge
+	- Invisible wall
+	- Person (varying sizes, including children)
+- Open track via command line (pass filename to program).
+
+-----------------------------------------------------------
+22/12/2003 - version 1.05
+-----------------------------------------------------------
+
+- World Tour track set.
+- Option to hide start / finish line (track editor).
+- Option to zoom in / out on track.
+- Track editor supports drop files.
+- Some internal implementation changes and bug fixes.
+- Christmas edition also offers one additional vehicle, 
+  sleigh and a bonus track, Santafest.
+
+
+-----------------------------------------------------------
+21/03/2003 - version 1.04
+-----------------------------------------------------------
+
+- F11 grabs a screen at fixed (in gr.ini) resolution.
+- TyreAutoSort option in gr.ini to control the way wheels
+  are drawn. This improves visual quality of the cars.
+- Fixes to the menus, better handling of mouse wheel, etc.
+- Option to disable objects in track preview dialog to
+  decrease preview generation time.
+- Few bugs killed.
+
+
+-----------------------------------------------------------
+22/12/2002 - version 1.03 patch #1
+-----------------------------------------------------------
+
+- Some bugs fixed.
+
+-----------------------------------------------------------
+17/12/2002 - version 1.03
+-----------------------------------------------------------
+
+Game:
+- AI improvements, including variable pit stop strategies.
+- Replay.
+- Better support for game controllers .
+- gr.ini file for advanced settings.
+- Some new objects.
+
+Track editor:
+- 2x/4x zoom feature.
+
+
+-----------------------------------------------------------
+05/09/2002 - version 1.02
+-----------------------------------------------------------
+
+Game:
+- Track list is now alphabetically ordered.
+- Folders can be used to categorise tracks.
+- All .car-files are now loaded.
+- Compatibilty with different video cards is better now.
+- Game crashed to desktop if no drivers existed when 
+  entering the drivers menu.
+
+
+Track editor:
+- Maximum number of objects and maximum length of AI line 
+  is now less limited.
+- More accurate cursor on edit area.
+
+Note: Track format has changed since v1.01. Old tracks will 
+still work in version 1.02.
+Note2: Saved games are not compatible between version 1.02
+and any previous versions.
+
+
+-----------------------------------------------------------
+26/07/2002 - version 1.01
+-----------------------------------------------------------
+
+Game:
+- Engine sounds were not loaded if sound set was changed 
+  during a season.
+- Bridges were lower than they seemed and some cars 
+  couldn't drive under them without getting damage.
+- Track info now displays author information.
+
+Track editor:
+- Import AI line and Rotate AI line functions.
+- Look of pitbox object changed.
+- Numbered checkpoints and start objects.
+- Track properties now include Author information.
+- Deleting objects is now easier.
+
+Note: Track format has changed since v1.0. Old tracks will 
+work in version 1.01, but new tracks won't work in v1.0.
+
+
+-----------------------------------------------------------
+08/07/2002 - version 1.0
+-----------------------------------------------------------
+
+- A track editor.
+- Some new tracks.
+- Support for game controllers.
+- Ability to grab screens (F12).
+- Improved AI.
+- Each vehicle can now have individual engine sound.
+- View track info in mainmenu (right click on track).
+- View driver stats in mainmenu (right click on driver).
+- Cars changed a bit and one new vehicle.
+- Setting for reverse mode (advanced options).
+- Some minor adjustments to hadling of the car.
+- Loads of bugs fixed.
+
+
+-----------------------------------------------------------
+16/05/2002 - version 1.0 beta
+-----------------------------------------------------------
+
+- First public release of GeneRally.
+
+
+-----------------------------------------------------------
+All versions prior to version 1.0 beta
+-----------------------------------------------------------
+
+- Developement and alpha testing.

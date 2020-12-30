@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"CinematicEffectTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Cinematic"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='1'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'/>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"EffectInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectDuration"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"DurationScalar"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"projectAspectRatio"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"ARScalar"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+
+      <ScalarInterpolator DEF='EffectInterpolator' key='0 1' keyValue='0 1'/>
+      <ScalarInterpolator DEF='EffectInterpolatorLimitedInOut' key='0 0.5 0.5 1' keyValue='0 0.5 0.5 1'/>
+
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_fraction'/>
+
+      <MathScalar DEF='DurationScalar'/>
+      <!-- 0.5 / (7.0 / 2) = 0.143... We use a higher number in the following keys so that won't stop @ 7 second or below duration -->
+      <ScalarInterpolator DEF='InverseDurationToKey1Interpolator' key='0 0.15' keyValue='0 0.5'/>
+      <ScalarInterpolator DEF='InverseDurationToKey2Interpolator' key='0 0.15' keyValue='1 0.5'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey1Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey2Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='InverseDurationToKey1Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='1'/>
+      <ROUTE fromNode='InverseDurationToKey2Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='2'/>
+
+      <!-- 1 / 7.0 = 0.143... -->
+      <ScalarInterpolator DEF='InverseDurationToKeyInInterpolator' key='0 0.15' keyValue='0 1'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKeyInInterpolator' toField='set_fraction'/>
+
+      <!-- max(1, 1 / 0.15 / Duration). Reciprocal is: min(1, Duration / 7). Then we multiply it by real EffectInterpolator value, and take fractional part.-->
+      <MathScalar DEF='EffectDurationMultiplier'/>
+      <ROUTE fromNode='InverseDurationToKeyInInterpolator' fromField='value_changed'
+             toNode='EffectDurationMultiplier' toField='set_Operand'/>
+      <MathScalar DEF='EffectFractionScaled'/>
+      <ROUTE fromNode='EffectDurationMultiplier' fromField='Reciprocal_changed'
+             toNode='EffectFractionScaled' toField='set_Operand'/>
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectFractionScaled' toField='set_Multiplier'/>
+      <MathScalar DEF='EffectFractionCycledOver'/>
+      <ROUTE fromNode='EffectFractionScaled' fromField='ProdSum_changed'
+             toNode='EffectFractionCycledOver' toField='set_Operand'/>
+
+      <!-- Take the maximum of MinimalOutroSmallCircleTransparencyDriverInterpolaror (that will be 0 except at the end where it will get to 1) and EffectFractionCycledOver for transparency . -1's are to be replaced -->
+      <ScalarInterpolator DEF='SmallCircleTransparencyDriverInterpolator' key='-1 1' keyValue='-1 1'/>
+      <ScalarInterpolator DEF='MinimalOutroSmallCircleTransparencyDriverInterpolaror' key='0.8 0.95' keyValue='0 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed'
+             toNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' toField='set_fraction'/>
+      <ROUTE fromNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' fromField='value_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_keyValue' toIndex='0'/>
+      <ROUTE fromNode='MinimalOutroSmallCircleTransparencyDriverInterpolaror' fromField='value_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_key' toIndex='0'/>
+      <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed'
+             toNode='SmallCircleTransparencyDriverInterpolator' toField='set_fraction'/>
+
+
+      <!--Aspect Ratio-->
+      <MathScalar DEF='ARScalar'/>
+      <!-- Convert 3/4 to (1, 4/3) -->
+
+
+        <Transform  DEF='CircleAspectRatioTransform'>
+            <Transform scale='2 2 1' translation='-1 -1 0.10'>
+
+
+
+                <!-- Small circle 1 -->
+                            <Transform DEF='SmallCircleTransform1' center='0.5 0.5 0'>
+                                <Shape>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial1' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture DEF='DummyImageTexture' repeatS='false' repeatT='false' url='"res:\\MovieMakerCore.DLL\IDB_BUBBLE"' />
+                                    </Appearance>
+                                    <IndexedFaceSet DEF='SmallCircleMesh' containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                                        <Coordinate containerField='coord' point='-0 1 0 -0 0 0 1 0 0 1 1 0' />
+                                        <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+                                    </IndexedFaceSet>
+                                </Shape>
+                                <!-- Movement -->
+                                <SplinePositionInterpolator DEF='smallWipe1Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                                keyValue='-0.1 -0.2 0, -0.1 -0.2 0, -0.1 -0.2 0, -0.1 -0.2 0, -0.1 -0.2 0, -0.07 -0.16 0, -0.07 -0.12 0, -0.07 -0.08 0, -0.07 -0.04 0, -0.07 0 0, -0.07 0.04 0'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe1Interpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='smallWipe1Interpolator' fromField='value_changed' toNode='SmallCircleTransform1' toField='set_translation'/>
+                                <!-- Transparency -->
+                                <ScalarInterpolator DEF='Circle1TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 1 0.93 0.93 0.93 1 1 1'/>
+                                <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle1TransparencyInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle1TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial1' toField='set_transparency'/>
+                                <!-- Scale -->
+                                <PositionInterpolator DEF='Circle1ScaleInterpolator' key='0.4 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle1ScaleInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle1ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform1' toField='set_scale' />
+                </Transform>
+
+                <!-- Small circle 2 -->
+                            <Transform DEF='SmallCircleTransform2' center='0.5 0.5 0'>
+                                <Shape>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial2' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                                <!-- Movement -->
+                                <SplinePositionInterpolator DEF='smallWipe2Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                                keyValue='-0.27 0.23 0, -0.27 0.23 0, -0.27 0.23 0, -0.27 0.23 0, -0.27 0.23 0, -0.27 0.23 0, -0.27 0.23 0, -0.3 0.23 0, -0.31 0.26 0, -0.32 0.29 0, -0.32 0.32 0'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe2Interpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='smallWipe2Interpolator' fromField='value_changed' toNode='SmallCircleTransform2' toField='set_translation'/>
+                                <!-- Transparency -->
+                                <ScalarInterpolator DEF='Circle2TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 1 1 1 0.93 0.93 0.93 0.93'/>
+                                <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle2TransparencyInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle2TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial2' toField='set_transparency'/>
+                                <!-- Scale -->
+                                <PositionInterpolator DEF='Circle2ScaleInterpolator' key='0.6 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle2ScaleInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle2ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform2' toField='set_scale' />
+                </Transform>
+
+                <!-- Small circles 3, 8, 9, 11 -->
+                            <Transform DEF='SmallCircleTransform3' center='0.5 0.5 0'>
+                                <Shape DEF='SmallCircleShape3'>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial3' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                            <!-- Movement -->
+                            <SplinePositionInterpolator DEF='smallWipe3Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0.16 -0.4 0, 0.16 -0.37 0, 0.16 -0.34 0, 0.16 -0.31 0, 0.13 -0.28 0, 0.13 -0.25 0, 0.13 -0.22 0, 0.13 -0.19 0, 0.13 -0.16 0, 0.13 -0.13 0, 0.13 -0.1 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe3Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe3Interpolator' fromField='value_changed' toNode='SmallCircleTransform3' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe8Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0.27 -0.2 0, 0.27 -0.2 0, 0.27 -0.2 0, 0.33 -0.17 0, 0.34 -0.14 0, 0.35 -0.11 0, 0.35 -0.08 0, 0.35 -0.05 0, 0.35 -0.02 0, 0.35 0.01 0, 0.35 0.04 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe8Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe8Interpolator' fromField='value_changed' toNode='SmallCircleTransform8' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe9Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='-0.3 -0.3 0, -0.3 -0.3 0, -0.3 -0.27 0, -0.27 -0.24 0, -0.27 -0.21 0, -0.27 -0.18 0, -0.27 -0.15 0, -0.27 -0.12 0, -0.27 -0.09 0, -0.27 -0.06 0, -0.27 0.03 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe9Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe9Interpolator' fromField='value_changed' toNode='SmallCircleTransform9' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe11Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='-0.35 -0.1 0, -0.35 -0.1 0, -0.35 -0.1 0, -0.37 -0.07 0, -0.37 -0.04 0, -0.37 -0.01 0, -0.37 0.02 0, -0.37 0.05 0, -0.37 0.08 0, -0.37 0.11 0, -0.37 0.14 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe11Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe11Interpolator' fromField='value_changed' toNode='SmallCircleTransform11' toField='set_translation'/>
+                            <!-- Transparency -->
+                            <ScalarInterpolator DEF='Circle3TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 0.93 0.93 0.93 0.93 0.93 1 1 1'/>
+                            <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle3TransparencyInterpolator' toField='set_fraction'/>
+                <ROUTE fromNode='Circle3TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial3' toField='set_transparency'/>
+                            <!-- Scale -->
+                            <PositionInterpolator DEF='Circle3ScaleInterpolator' key='0.2 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle3ScaleInterpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='Circle3ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform3' toField='set_scale' />
+                            <ROUTE fromNode='Circle3ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform8' toField='set_scale' />
+                            <ROUTE fromNode='Circle3ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform9' toField='set_scale' />
+                            <ROUTE fromNode='Circle3ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform11' toField='set_scale' />
+                            </Transform>
+
+                            <Transform DEF='SmallCircleTransform8' center='0.5 0.5 0'>
+                                <Shape USE='SmallCircleShape3'/>
+                            </Transform>
+
+                            <Transform DEF='SmallCircleTransform9' center='0.5 0.5 0'>
+                                <Shape USE='SmallCircleShape3'/>
+                            </Transform>
+
+                            <Transform DEF='SmallCircleTransform11' center='0.5 0.5 0'>
+                                <Shape USE='SmallCircleShape3'/>
+                            </Transform>
+
+                            <!-- Small circle 4, 12 -->
+                            <Transform DEF='SmallCircleTransform4' center='0.5 0.5 0'>
+                                <Shape DEF='SmallCircleShape4'>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial4' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                            <!-- Movement -->
+                            <SplinePositionInterpolator DEF='smallWipe4Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0 0 0, 0 0.03 0, 0 0.06 0, 0 0.09 0, 0 0.12 0, 0 0.15 0, 0 0.18 0, 0 0.21 0, 0 0.24 0, 0 0.27 0, 0 0.3 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe4Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe4Interpolator' fromField='value_changed' toNode='SmallCircleTransform4' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe12Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='-0.2 0.3 0, -0.17 0.33 0, -0.17 0.36 0, -0.17 0.39 0, -0.17 0.42 0, -0.17 0.45 0, -0.17 0.48 0, -0.17 0.51 0, -0.17 0.54 0, -0.17 0.57 0, -0.17 0.6 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe12Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe12Interpolator' fromField='value_changed' toNode='SmallCircleTransform12' toField='set_translation'/>
+                            <!-- Transparency -->
+                            <ScalarInterpolator DEF='Circle4TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 0.93 0.93 0.93 0.93 1 1 1 1 1 1'/>
+                            <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle4TransparencyInterpolator' toField='set_fraction'/>
+                <ROUTE fromNode='Circle4TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial4' toField='set_transparency'/>
+                            <!-- Scale -->
+                            <PositionInterpolator DEF='Circle4ScaleInterpolator' key='0 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle4ScaleInterpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='Circle4ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform4' toField='set_scale' />
+                            <ROUTE fromNode='Circle4ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform12' toField='set_scale' />
+                            </Transform>
+
+                            <Transform DEF='SmallCircleTransform12' center='0.5 0.5 0'>
+                                <Shape USE='SmallCircleShape4'/>
+                            </Transform>
+
+                            <!-- Small circle 5 -->
+                            <Transform DEF='SmallCircleTransform5' center='0.5 0.5 0'>
+                                <Shape>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial5' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                                <!-- Movement -->
+                                <SplinePositionInterpolator DEF='smallWipe5Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                                keyValue='0.3 0 0, 0.3 0 0, 0.3 0 0, 0.3 0 0, 0.3 0 0, 0.3 0 0, 0.33 0.03 0, 0.33 0.06 0, 0.33 0.09 0, 0.33 0.12 0, 0.33 0.15 0'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe5Interpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='smallWipe5Interpolator' fromField='value_changed' toNode='SmallCircleTransform5' toField='set_translation'/>
+                                <!-- Transparency -->
+                                <ScalarInterpolator DEF='Circle5TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 1 1 0.93 0.93 0.93 0.93 1'/>
+                                <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle5TransparencyInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle5TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial5' toField='set_transparency'/>
+                                <!-- Scale -->
+                                <PositionInterpolator DEF='Circle5ScaleInterpolator' key='0.5 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle5ScaleInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle5ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform5' toField='set_scale' />
+                </Transform>
+
+                <!-- Small circle 6, 13 -->
+                <Transform DEF='SmallCircleTransform6' center='0.5 0.5 0'>
+                                <Shape DEF='SmallCircleShape6'>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial6' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                            <!-- Movement -->
+                            <SplinePositionInterpolator DEF='smallWipe6Interpolator' closed='false' key='0 0.1 0.2 0.35 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0.35 0.1 0, 0.39 0.1 0, 0.405 0.11 0, 0.42 0.15 0, 0.43 0.2 0, 0.44 0.25 0, 0.45 0.3 0, 0.46 0.35 0, 0.47 0.4 0, 0.48 0.45 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe6Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe6Interpolator' fromField='value_changed' toNode='SmallCircleTransform6' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe13Interpolator' closed='false' key='0 0.1 0.2 0.35 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='-0.35 0.1 0, -0.36 0.1 0, -0.38 0.15 0, -0.39 0.18 0, -0.39 0.21 0, -0.39 0.24 0, -0.39 0.27 0, -0.39 0.3 0, -0.39 0.33 0, -0.39 0.36 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe13Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe13Interpolator' fromField='value_changed' toNode='SmallCircleTransform13' toField='set_translation'/>
+                            <!-- Transparency -->
+                            <ScalarInterpolator DEF='Circle6TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 0.93 0.93 0.93 0.93 1 1 1 1 1'/>
+                            <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle6TransparencyInterpolator' toField='set_fraction'/>
+                <ROUTE fromNode='Circle6TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial6' toField='set_transparency'/>
+                            <!-- Scale -->
+                            <PositionInterpolator DEF='Circle6ScaleInterpolator' key='0.1 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle6ScaleInterpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='Circle6ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform6' toField='set_scale' />
+                            <ROUTE fromNode='Circle6ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform13' toField='set_scale' />
+                </Transform>
+
+                <Transform DEF='SmallCircleTransform13' center='0.5 0.5 0'>
+                    <Shape USE='SmallCircleShape6'/>
+                </Transform>
+
+                <!-- Small circle 7 -->
+                <Transform DEF='SmallCircleTransform7' center='0.5 0.5 0'>
+                                <Shape>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial7' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+                                <!-- Movement -->
+                                <SplinePositionInterpolator DEF='smallWipe7Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                                keyValue='-0.35 0.05 0, -0.35 0.05 0, -0.35 0.05 0, -0.35 0.05 0, -0.35 0.08 0, -0.32 0.11 0, -0.32 0.14 0, -0.32 0.17 0, -0.32 0.2 0, -0.32 0.23 0, -0.32 0.27 0'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe7Interpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='smallWipe7Interpolator' fromField='value_changed' toNode='SmallCircleTransform7' toField='set_translation'/>
+                                <!-- Transparency -->
+                                <ScalarInterpolator DEF='Circle7TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 1 0.93 0.93 0.93 1 1 1'/>
+                                <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle7TransparencyInterpolator' toField='set_fraction'/>
+                    <ROUTE fromNode='Circle7TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial7' toField='set_transparency'/>
+                                <!-- Scale -->
+                                <PositionInterpolator DEF='Circle7ScaleInterpolator' key='0.4 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                                <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle7ScaleInterpolator' toField='set_fraction'/>
+                                <ROUTE fromNode='Circle7ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform7' toField='set_scale' />
+                </Transform>
+
+                <!-- Small circle 10, 14 -->
+                            <Transform DEF='SmallCircleTransform10' center='0.5 0.5 0'>
+                                <Shape DEF='SmallCircleShape10'>
+                                    <Appearance>
+                                        <Material DEF='CircleMaterial10' transparency='0' diffuseColor='0 0 0'/>
+                                        <ImageTexture USE='DummyImageTexture' />
+                                    </Appearance>
+                                    <IndexedFaceSet USE='SmallCircleMesh'/>
+                                </Shape>
+
+                            <!-- Movement -->
+                            <SplinePositionInterpolator DEF='smallWipe10Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0.2 0.2 0, 0.2 0.2 0, 0.2 0.2 0, 0.2 0.2 0, 0.23 0.25 0, 0.24 0.28 0, 0.24 0.31 0, 0.24 0.34 0, 0.24 0.37 0, 0.24 0.4 0, 0.24 0.44 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe10Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe10Interpolator' fromField='value_changed' toNode='SmallCircleTransform10' toField='set_translation'/>
+                            <SplinePositionInterpolator DEF='smallWipe14Interpolator' closed='false' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1'
+                            keyValue='0.1 0.1 0, 0.1 0.1 0, 0.09 0.1 0, 0.09 0.1 0, 0.08 0.15 0, 0.07 0.18 0, 0.06 0.21 0, 0.06 0.24 0, 0.06 0.27 0, 0.06 0.3 0, 0.06 0.33 0'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='smallWipe14Interpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='smallWipe14Interpolator' fromField='value_changed' toNode='SmallCircleTransform14' toField='set_translation'/>
+                            <!-- Transparency -->
+                            <ScalarInterpolator DEF='Circle10TransparencyInterpolator' key='0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1' keyValue='1 1 1 1 0.93 0.93 0.93 0.93 0.93 1 1'/>
+                            <ROUTE fromNode='SmallCircleTransparencyDriverInterpolator' fromField='value_changed' toNode='Circle10TransparencyInterpolator' toField='set_fraction'/>
+                <ROUTE fromNode='Circle10TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial10' toField='set_transparency'/>
+                            <!-- Scale -->
+                            <PositionInterpolator DEF='Circle10ScaleInterpolator' key='0.3 1' keyValue='0 0 1, 0.03 0.03 1'/>
+                            <ROUTE fromNode='EffectFractionCycledOver' fromField='Frac_changed' toNode='Circle10ScaleInterpolator' toField='set_fraction'/>
+                            <ROUTE fromNode='Circle10ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform10' toField='set_scale' />
+                            <ROUTE fromNode='Circle10ScaleInterpolator' fromField='value_changed' toNode='SmallCircleTransform14' toField='set_scale' />
+
+                            </Transform>
+
+                            <Transform DEF='SmallCircleTransform14' center='0.5 0.5 0'>
+                                <Shape USE='SmallCircleShape10'/>
+                            </Transform>
+
+
+
+
+                        </Transform>
+
+            <PositionInterpolator DEF='CircleAspectRatio' key='1.33333 1.77778' keyValue='7.11065 7.11065 1 5.33333 5.33333 1'/>
+            <ROUTE fromNode='ARScalar' fromField='ProdSum_changed' toNode='CircleAspectRatio' toField='set_fraction'/>
+            <ROUTE fromNode='CircleAspectRatio' fromField='value_changed' toNode='CircleAspectRatioTransform' toField='scale'/>
+        </Transform>
+
+
+
+
+    </Transform>
+
+  </Transform>
+</X3D>

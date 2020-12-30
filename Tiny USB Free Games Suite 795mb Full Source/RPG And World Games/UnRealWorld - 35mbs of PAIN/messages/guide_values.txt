@@ -1,0 +1,92 @@
+*_uname_flora.txt - must exist! List of unknown plant tags.
+
+---
+
+
+<weapon_slot>	-	primary or secondary weapon slot based on action
+1
+2
+
+<who> <npc> <attacker> <defender>
+Pc
+He
+She
+It
+
+
+<npc_defdesc> - definitive npc description eg. "the bear"
+<npc_desc>    - indefinitive npc description eg. "an elk"
+
+_verbose
+usage: <npc_verbose> - display name and full species information 
+
+Kimmo the Sartolais woodsman
+<npc> 	      : He
+<npc_verbose> : Kimmo the Sartolais woodsman
+<npc_desc>    : Kimmo
+<npc_defdesc> : Kimmo
+<npc_defdesc_verbose> : Kimmo the Sartolais woodsman
+
+
+<wounded_bodypart> - displays string value of a bodypart that is currently processed for effects of the wound/injury
+
+
+
+<direction> - direction (compass point) in given situation: N, NE, E, SE, etc.
+<npc_direction> - direction (compass point) of NPC in question
+
+<item> - display applicable item name/description ie. "broadsword"
+<items> - display applicable items in plural form adding a number ie. "3 broadswords"
+          if there is only one target item (defined by game) it's displayed in singular form unless nonum parameter is used
+
+by default display plain item description without any tags (like quality, ie. pot of rye porridge, battlesword, board)
+
+additional parameters:
+
+_nonum
+usage: <items_nonum> - can be used in plural form NOT to display numbers, but just for example "broadswords" 
+                       this ALWAYS displays item descriptiob in plural form even, even if the was only on target item
+
+_verbose 
+usage: <item_verbose> - display item description with all tags (like quality, ie. fine pot of bland rye porridge, crude knife)
+
+_container
+usage: <item_container> - display only container name without contents (if the item is a container, otherwise ignored)
+
+_raw
+usage: <item_raw> - display raw, main item name without container or quantity (fistful of, pinch of etc.) information.
+examples:
+"fine pot of bland rye porridge" displays as "rye porridge"
+crude arrow" displays as "arrow"
+"fistful of peas" displays as "peas"
+
+_ind - indefinite form, "a battlesword"
+_def - definite form, "the battlesword"
+(you can also use the_ for definite form, ie. <the_rawitem>
+
+multiple parameters can be passed, and it shouldn't matter in which order they come in, for example
+<items_verbose_def>
+"the 4 fine battlesword"
+<therawitem>
+
+
+more examples:
+<item> 
+-> "pot of rye porridge", "knife", "fistful of blueberries"
+
+<item_raw>
+-> "rye porridge", "knife", "blueberries"
+
+<item_verbose> 
+-> "fine pot of bland rye porridge", "crude knife", "fistful of blueberries"
+
+<item_raw_verbose>
+-> "bland rye porridge", "crude knife", "blueberries"
+
+<item_container>
+-> "pot"
+
+shortcuts:
+<fullitem> equals to item_verbose.
+
+

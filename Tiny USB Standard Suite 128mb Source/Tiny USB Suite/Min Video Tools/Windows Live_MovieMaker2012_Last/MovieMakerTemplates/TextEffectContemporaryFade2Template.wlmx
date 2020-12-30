@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"TextEffectContemporaryFade2Template"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"textTransform"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TextTransform"'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"TextEffectTransform"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"EffectTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"EffectInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectDuration"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"DurationScalar"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"Operand"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+
+    <Transform DEF='TextEffectTransform'>
+      <Transform DEF='TextUserPositionYTransform'>
+        <Transform DEF='TextUserPositionXTransform'>
+          <Transform DEF='TextInnerTransform'>
+            <Shape DEF='TextEffectShape'>
+              <Appearance DEF='TextEffectAppearance'>
+                <Material DEF='TextEffectMaterial' transparency ='0' ambientIntensity='0.200' shininess='0.200' diffuseColor='1 0 0'>
+                  <MetadataSet name='BPSet'>
+                    <MetadataString containerField='value' name='color' value='"diffuseColor"'/>
+                    <MetadataString containerField='value' name='automatic' value='"false"' reference='Custom'/>
+                  </MetadataSet>
+                </Material>
+                
+                <TextShader DEF='TextEffectTextShader' outlineColor='0 1 0'>
+                  <MetadataSet name='BPSet'>
+                    <MetadataString containerField='value' name='outlineColor' value='"outlineColor"'/>
+                  </MetadataSet>
+                </TextShader>
+                
+              </Appearance>
+
+              <Text DEF='TextEffectText' containerField='geometry' string='""'>
+                <MetadataSet name='BPSet'>
+                  <MetadataString containerField='value' name='string' value='"string"'/>
+                  <MetadataString containerField='value' name='length' value='"length"' />
+                  <MetadataString containerField='value' name='maxExtent' value='"maxExtent"'/>
+                </MetadataSet>
+                <FontStyle DEF='TextEffectFontStyle' containerField='fontStyle' family='"Arial" "Trebuchet"'
+                    horizontal='true' justify='"MIDDLE" "END"' language='""' size='1.000'
+                    spacing='1.1' style='PLAIN' topToBottom='true' outlineSizeIndex='0'>
+                  <MetadataSet name='BPSet'>
+                    <MetadataString containerField='value' name='family' value='"family"'/>
+                    <MetadataString containerField='value' name='horizontal' value='"horizontal"'/>
+                    <MetadataString containerField='value' name='size' value='"size"'/>
+                    <MetadataString containerField='value' name='style' value='"style"'/>
+                    <MetadataString containerField='value' name='justify' value='"justify"'/>
+                    <MetadataString containerField='value' name='leftToRight' value='"leftToRight"'/>
+                    <MetadataString containerField='value' name='outlineSizeIndex' value='"outlineSizeIndex"'/>
+                  </MetadataSet>
+                </FontStyle>
+              </Text>
+            </Shape>
+          </Transform>
+        </Transform>
+
+        <Transform DEF='TextEffectTransformBGRectUpper'>
+          <Transform DEF='TextEffectTransformBGRect'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextBGMaterial' diffuseColor='0.63 0.80 0.82'/>
+              </Appearance>
+              <IndexedFaceSet DEF='TextBGIndexedFaceSet' containerField='geometry' coordIndex='0 1 2 -1 0 2 3 -1' colorPerVertex='true'>
+                <Coordinate containerField='coord' point='-0.5 0.5 0 -0.5 -0.5 0 0.5 -0.5 0 0.5 0.5 0' />
+                <ColorRGBA color='1 1 1 1, 1 1 1 1, 1 1 1 1, 1 1 1 1'/>
+              </IndexedFaceSet>
+            </Shape>
+          </Transform>
+
+          <Transform DEF='TextEffectRect2Transform'>
+            <Shape>
+              <Appearance>
+                <Material DEF='TextRect2Material' diffuseColor='0.70 0.55 0.34'/>
+              </Appearance>
+              <IndexedFaceSet USE='TextBGIndexedFaceSet' />
+            </Shape>
+          </Transform>
+
+        </Transform>
+      </Transform>
+
+      <MathVector DEF='TextMathTransform'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='position' value='"Vec3"'/>
+        </MetadataSet>
+      </MathVector>
+
+    </Transform>
+
+    <!--All nodes in this set are injected-->
+
+    <Transform DEF='InjectSet'>
+      <ScalarInterpolator DEF='EffectInterpolator' key='0 1' keyValue='0 1'/>
+      <ScalarInterpolator DEF='EffectInterpolatorLimitedIn' key='0 1 1' keyValue='0 1 1'/>
+      <ScalarInterpolator DEF='EffectInterpolatorLimitedInOut' key='0 0.5 0.5 1' keyValue='0 0.5 0.5 1'/>
+
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedIn' toField='set_fraction'/>
+      <ROUTE fromNode='EffectInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_fraction'/>
+
+      <MathScalar DEF='DurationScalar'/>
+      <!-- 0.5 / (7.0 / 2) = 0.143... We use a higher number in the following keys so that won't stop @ 7 second or below duration -->
+      <ScalarInterpolator DEF='InverseDurationToKey1Interpolator' key='0 0.15' keyValue='0 0.5'/>
+      <ScalarInterpolator DEF='InverseDurationToKey2Interpolator' key='0 0.15' keyValue='1 0.5'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey1Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKey2Interpolator' toField='set_fraction'/>
+      <ROUTE fromNode='InverseDurationToKey1Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='1'/>
+      <ROUTE fromNode='InverseDurationToKey2Interpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedInOut' toField='set_key' toIndex='2'/>
+
+      <!-- 1 / 7.0 = 0.143... -->
+      <ScalarInterpolator DEF='InverseDurationToKeyInInterpolator' key='0 0.15' keyValue='0 1'/>
+      <ROUTE fromNode='DurationScalar' fromField='Reciprocal_changed'
+             toNode='InverseDurationToKeyInInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='InverseDurationToKeyInInterpolator' fromField='value_changed'
+             toNode='EffectInterpolatorLimitedIn' toField='set_key' toIndex='1'/>
+
+      <!-- Animations for the Text background rectangle -->
+      <SplinePositionInterpolator DEF='TextRect1StretchInterpolator' key='0 0.2 1'
+                                                                     keyValue='1 2.0 1, 10.7 1.0 1, 10.7 1.0 1'
+                                                                     keyVelocity='0 0 0, 0 0 0, 0 0 0'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='TextRect1StretchInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextRect1StretchInterpolator" fromField="value_changed" toNode="TextEffectTransformBGRect" toField="scale" />
+
+      <SplinePositionInterpolator DEF='TextRect1PositionInterpolator' key='0 0.2 1'
+                                                                      keyValue='-5.9 0 0, 0 0 0, 0 0 0'
+                                                                      keyVelocity='10 0 0, 0 0 0, 0 0 0'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='TextRect1PositionInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextRect1PositionInterpolator" fromField="value_changed" toNode="TextEffectTransformBGRect" toField="translation" />
+
+      <!-- Animations for the additional andornment (brown) rectangle -->
+      <SplinePositionInterpolator DEF='TextRect2StretchInterpolator' key='0 0.2 1'
+                                                                     keyValue='1 1 1, 11 0.1 1, 11 0.1 1' closed='false'
+                                                                     keyVelocity='2 -0.5 0, 0 0 0, 0 0 0'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='TextRect2StretchInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextRect2StretchInterpolator" fromField="value_changed" toNode="TextEffectRect2Transform" toField="scale" />
+
+      <SplinePositionInterpolator DEF='TextRect2PositionInterpolator' key='0 0.2 1'
+                                                                      keyValue='5.9 -0.51 0.001, 3 -0.51 0.001, 3 -0.51 0.001' closed='false'
+                                                                      keyVelocity='-2 0 0, 0 0 0, 0 0 0'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='TextRect2PositionInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextRect2PositionInterpolator" fromField="value_changed" toNode="TextEffectRect2Transform" toField="translation" />
+
+      <!--Overall pan down on the entire text effect-->
+      <SplinePositionInterpolator DEF='TextPanPositionInterpolator' key='0 0.2 1'
+                                                                    keyValue='0 2.0 0, 0 0.5 0, 0 0 0'/>
+
+      <ROUTE fromNode='EffectInterpolatorLimitedIn' fromField='value_changed' toNode='TextPanPositionInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextPanPositionInterpolator" fromField="value_changed" toNode="TextEffectTransform" toField="translation" />
+
+      <!--Center the text on the blue background rect-->
+      <MathVector DEF='TextMathBoundsSplitter'/>
+      <!-- Get the size of the text object, divide the Y component in half, and set as the center -->
+      <ROUTE fromNode='TextEffectText' fromField='TextBounds' toNode='TextMathBoundsSplitter' toField='Vec2'/>
+      <ROUTE fromNode='TextMathBoundsSplitter' fromField='ComponentY' toNode='TextCenterYInterpolator' toField='set_fraction'/>
+      <PositionInterpolator DEF='TextCenterYInterpolator' key='-100 0' keyValue='0 -50 0, 0 0 0'/>
+      <ROUTE fromNode='TextCenterYInterpolator' fromField='value_changed' toNode='TextEffectTransformBGRectUpper' toField='translation' />
+
+      <!-- Translate the entire animation by the user-selected Y position, but ignore X -->
+      <ROUTE fromNode='TextMathTransform' fromField='ComponentY' toNode='TextPosYInterpolator' toField='set_fraction'/>
+      <!-- Extract the Y component -->
+      <PositionInterpolator DEF='TextPosYInterpolator' key='-10 10' keyValue='0 -10 0, 0 10 0'/>
+      <ROUTE fromNode="TextPosYInterpolator" fromField="value_changed" toNode="TextUserPositionYTransform" toField="translation" />
+
+      <!-- Translate just the text object by the user-selected X position, but ignore Y (it's handled above) -->
+      <ROUTE fromNode='TextMathTransform' fromField='ComponentX' toNode='TextPosXInterpolator' toField='set_fraction'/>
+      <!-- Extract the X component -->
+      <PositionInterpolator DEF='TextPosXInterpolator' key='-10 10' keyValue='-10 0 0.025, 10 0 0.025'/>
+      <ROUTE fromNode="TextPosXInterpolator" fromField="value_changed" toNode="TextUserPositionXTransform" toField="translation" />
+
+      <!-- Text transparency -->
+      <ScalarInterpolator DEF='TextTransparencyInterpolator' key='0.10 0.20 0.80 1' keyValue='1 -1 -1 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed' toNode='TextTransparencyInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="TextTransparencyInterpolator" fromField="value_changed" toNode="TextEffectMaterial" toField="transparency" />
+
+      <ScalarInterpolator DEF='TextUITransparencyInterpolator' key='0 1' keyValue='0 1'>
+        <MetadataSet name='BPSet'>
+          <MetadataString containerField='value' name='transparency' value='"set_fraction"'/>
+        </MetadataSet>
+      </ScalarInterpolator>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="1" toNode="TextTransparencyInterpolator"/>
+      <ROUTE fromField="value_changed" fromNode="TextUITransparencyInterpolator" toField="keyValue" toIndex="2" toNode="TextTransparencyInterpolator"/>
+
+      <!-- Adornment rectangle transparency -->
+      <ScalarInterpolator DEF='RectBGTransparencyInterpolator' key='0.80 1' keyValue='0.19 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed' toNode='RectBGTransparencyInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="RectBGTransparencyInterpolator" fromField="value_changed" toNode="TextBGMaterial" toField="transparency" />
+
+      <ScalarInterpolator DEF='Rect2TransparencyInterpolator' key='0.80 1' keyValue='0.43 1'/>
+      <ROUTE fromNode='EffectInterpolatorLimitedInOut' fromField='value_changed' toNode='Rect2TransparencyInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode="Rect2TransparencyInterpolator" fromField="value_changed" toNode="TextRect2Material" toField="transparency" />
+
+    </Transform>
+
+  </Transform>
+</X3D>

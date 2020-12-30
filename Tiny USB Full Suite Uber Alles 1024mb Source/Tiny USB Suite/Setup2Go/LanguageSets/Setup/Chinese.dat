@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% 安装向导
+Static1=%ProductName% %ProductVersion% 已经被安装到你的系统中了。建议你在重新安装它之前首先卸载该应用程序，单击“是”将立即卸载 %ProductName% %ProductVersion%，单击“否”则继续进行安装。单击“取消”将退出安装程序。
+Error1=无法启动卸载程序，安装将继续进行下去。
+Yes=是(&Y)
+No=否(&N)
+Cancel=取消
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=注意
+Static1=下列文件正在使用，暂时无法更新:
+Static2=关闭所有其他应用程序并选择“重试”按钮再试一次。<br>选择“取消”将在重启之后安装该文件。<br>选择“放弃”终止安装进程。
+Retry=重试(&R)
+Cancel=取消(&C)
+Abort=放弃(&A)
+
+[PASSWORD_DIALOG]
+Dialog_Title=安装密码
+Static1=请输入安装密码:
+OK=确定(&O)
+Exit=退出(&X)
+Error_Title=错误
+Error_Static1=抱歉，密码不正确。请重试。
+
+[LANGUAGE_DIALOG]
+Dialog_Title=选择安装语言
+Static1=请选择你在安装期间想要使用的语言。
+Next=下一步(&N) >
+Cancel=取消
+
+[WELCOME_DIALOG]
+Dialog_Title=欢迎
+Static1=欢迎进入 %ProductName% 安装向导程序。本程序将安装 %ProductName% 到您的计算机中。
+Static2=强烈建议您在运行本安装程序之前首先退出所有其他正在运行的 Windows 程序。
+Static3=如果您现在不想安装，请单击“取消”将中止并关闭本程序。否则，请单击“下一步”继续。
+Static4=警告: 本计算机软件受著作权法和国际公约的保护。未经授权擅自复制或散发本程序的全部或任何部分，都会导致严厉的民事和刑事惩罚，并将受到法律允许范围内的最大限度的起诉。
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[LICENSE_DIALOG]
+Dialog_Title=软件许可协议
+Static1=请阅读下列许可协议条款。按下“PAGE DOWN”键翻页。
+Static2=你是否同意并接受以上列出的所有许可协议条款内容？如果你选择否，将中止安装并关闭本程序。要想继续进行安装，你必须接受本协议。
+Back=< 上一步(&B)
+Yes=是
+No=否
+
+[README_DIALOG]
+Dialog_Title=软件说明
+Static1=说明信息:
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=选择目标位置
+Static1=安装向导将安装 %ProductName% 到下列文件夹内。
+Static2=要安装到该文件夹，请单击“下一步”继续。
+Static3=要安装到其他文件夹，请单击“浏览”按钮选择一个另外的文件夹。
+Static4=您也可以选择单击“取消”按钮不安装 %ProductName% 然后退出安装程序。
+Static5=所需磁盘空间:
+Static7=可用磁盘空间:
+Browse=浏览(&R)...
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=选择一个现有的目录
+Static1=请选择一个文件要安装到的目录。
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=选择程序文件夹
+Static1=安装程序将添加程序图标到下面已指定的程序文件夹中。你可以键入一个新的文件夹名称，或从现有的文件夹列表中进行选择。单击“下一步”继续。
+Static2=程序文件夹(&P)
+Static3=现有文件夹(&X)
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=程序图标选项
+Static1=你可以在下列附加选项中选择是否创建程序图标用来便于在以后快速启动应用程序。
+Static2=你想要在桌面上创建程序图标吗？如果需要，请单击“是”。
+Static3=你想要在快速起动工具栏创建程序图标吗？如果需要，请单击“是”。
+Yes=是
+No=否
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[START_DIALOG]
+Dialog_Title=准备复制文件
+Static1=安装程序现在已经有了足够的信息来复制文件到你的计算机中。如果你还想检查或更改这些设置，请按下“上一步”按钮返回到前面的设置中。如果你已经对修改的结果感到满意，可以单击“下一步”按钮开始复制文件。
+Static2=当前设置
+String1=安装目录:
+String2=程序文件夹:
+Back=< 上一步(&B)
+Next=下一步(&N) >
+Cancel=取消
+
+[PROCESS_DIALOG]
+Dialog_Title=正在复制文件
+Cancel=取消
+
+[FINISH_DIALOG]
+Dialog_Title=安装完成
+Static1=安装程序现在已成功安装 %ProductName% 到您的计算机中。点击“完成”退出安装程序。
+Check1=查看说明文件(&V)
+Check2=运行已安装的程序(&R)
+Back=< 上一步(&B)
+Finish=完成
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=退出安装
+Static1=安装尚未完成。如果您现在就退出，程序将不会被安装到您的系统中去。
+Static2=您也可以在以后运行本安装程序来完成安装。
+Static3=单击“继续”将继续进行安装。单击“退出”将中止并退出安装程序。
+Resume=继续(&R)
+Exit=退出(&X)
+
+[UNINSTALL_DIALOG]
+1001=Setup2Go 卸载
+1101=确认文件删除
+1102=你确定要完全删除 %1 和它的所有组件吗？
+1103=是(&Y)
+1104=否(&N)
+1201=将程序从你的计算机中移除
+1202=卸载程序将把该软件 %1 从你的计算机中移除。请等待直到以下列出的所有组件已被删除为止...
+1203=卸载已完成。还有一些文件没有被删除，但你可以自己手动删除这些与此应用程序有关的项目。
+1204=卸载已成功完成。
+1301=要删除共享文件吗？
+1302=存在于系统中的下列共享文件已经不再被任何程序所使用。如果以后还有程序需要使用到其中的文件并且文件已经被删除，这些程序将有可能无法正常运行。你确定要删除这些共享文件吗？<br><br>保留该文件将不会损伤你的系统。如果你不能确定该怎么做，建议你选择“否”不删除此共享文件。<br><br>文件名:<tab>%1<br>位置:<tab>%2
+1400=详细资料
+1401=详细资料...
+1402=无法删除文件夹
+1403=无法删除文件
+
+[STRINGS]
+1=注意
+10=系统设置更改
+11=你必须在新的设置生效之前重新启动你的计算机。<br><br>你想要现在就重新启动你的计算机吗？
+21=你的系统和 %1 不兼容。安装程序现在将中止安装。
+22=你的系统和 %1 不兼容。安装仍将继续下去，但安装后的软件有可能无法正常运行。
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=134

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<quest name="test">
+
+<info>test...
+</info>
+
+<completed_text>
+</completed_text>
+
+<quest_objective type="find_item" arg1="blah" gold="300"/>
+
+<location name="test">
+
+<floor image_name="floor_paved"/>
+<wall image_name="wall"/>
+<background image_name="background_dark"/>
+
+<player_start x="1.0" y="1.0"/>
+
+<floorregion shape="rect" rect_x="0.0" rect_y="0.0" rect_w="5.0" rect_h="5.0"/>
+
+<floorregion shape="rect" rect_x="5.0" rect_y="2.0" rect_w="5.0" rect_h="1.0"/>
+
+<scenery name="Door" image_name="door_wood_n" x="5.5" y="2.5" w="1.0" h="1.0" blocking="true" block_visibility="true" door="true"/>
+
+</location>
+
+</quest>

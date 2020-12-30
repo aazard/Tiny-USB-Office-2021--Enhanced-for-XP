@@ -1,0 +1,29 @@
+<dvdauthor jumppad="1" dest="#destination#"><vmgm>
+<menus>
+<audio lang="EN"/>
+<pgc>
+<vob file="empty_#tvsystem#_ac3.mpg"/>
+<pre>jump titleset 1 menu;</pre>
+</pgc>
+</menus>
+</vmgm>
+<titleset>
+<menus>
+<video aspect="#fullaspect#"/>
+<audio lang="EN"/>
+<pgc>
+<button name="1">jump title 1;</button>
+<vob file="menu_#aspect#_#tvsystem#.mpg"/>
+<post>jump vmgm menu 1;</post>
+</pgc>
+</menus>
+<titles>
+<video aspect="#fullaspect#"/>
+<pgc>
+<vob file="#file#" #chapters#/>
+<post>call vmgm menu 1;
+</post>
+</pgc>
+</titles>
+</titleset>
+</dvdauthor>

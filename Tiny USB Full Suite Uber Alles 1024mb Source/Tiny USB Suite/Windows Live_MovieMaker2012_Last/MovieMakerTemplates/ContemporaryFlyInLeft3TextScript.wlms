@@ -1,0 +1,6 @@
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<TextComposer StyleTemplateName="TextEffectContemporaryFlyInLeft3Template">
+  <TextProperties>
+    <TextProperty Text="@2018@" Family="Segoe UI" Bold ="false" Italic="false" Justify="BEGIN" TranslationX="-2.2" TranslationY="1.0" TranslationZ="0.025" DiffuseColorR="0.3" DiffuseColorG="0.3" DiffuseColorB="0.3" Size ="0.3333333333" OutlineSizeIndex="0" OutlineColorR="0.65" OutlineColorG="0.65" OutlineColorB="0.65" />
+  </TextProperties>
+</TextComposer>

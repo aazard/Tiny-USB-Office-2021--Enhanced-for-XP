@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"BlackAndWhiteEffectTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Black and White"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='1'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='1'/>
+    </MetadataSet>
+
+    <!--OUT sockets -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectShaderSet"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"ShaderSet"'/>
+        </MetadataSet>
+
+      </MetadataSet>
+    </Transform>
+
+    <!--IN sockets -->
+    <Transform>
+      <MetadataSet DEF='InSockets'/>
+    </Transform>
+
+    <!--Socket nodes scratch pad (only nodes with def's are injected)-->
+    <Transform>
+      <Shape>
+        <Appearance>
+          <MotionTexture>
+            <ShaderSet DEF='ShaderSet'>
+              <ChannelMixerShader mixerMatrix =  '0.299    0.299   0.299     0
+                                                  0.587    0.587   0.587     0
+                                                  0.114    0.114   0.114     0
+                                                  0        0       0         1'/>
+            </ShaderSet>
+          </MotionTexture>
+        </Appearance>
+      </Shape>
+    </Transform>
+
+    <!--Whole thing gets injected-->
+    <Transform DEF='InjectSet'/>
+  </Transform>
+</X3D>

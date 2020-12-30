@@ -1,0 +1,659 @@
+-------------------------------------------------------------------------------
+version: 2.071 - (bugfix/pre-release version)
+released: Jun-28-1995
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.071!                                        ***
+
+ - scroll writing/reading improved.
+
+        Contents of text-containing scrolls  will  be  displayed  in  a
+        large windows instead of displaying in the notebox.
+        Size of scroll-writing window has also been also increased.
+
+ - documentation (URW.DOC) updated.
+
+        Documents are still under construction and some even  essential
+        parts may be missing.
+
+ - added notifications concerning healing.
+
+        You will be notified about disease/poisoning progress  if  they
+        are getting better or worse. You  will  also  be  notified when
+        some injury has fully healed.
+
+ - new RNDWORLD version: 0.2.
+
+        Added bush- and foothill-zones.
+
+ - added more fruitful plants for foraging.
+
+        Now it's easier to find vegetarian food from plains also.
+
+ - fixed possible encounter-bug.
+
+        I've reason to believe that wilderness encounters were  totally
+        missing from version 2.07 - anyway that's fixed now.   And  now
+        there is some non-creature encounters too.
+
+ - FORAGING-skill improved.
+
+        When fruitful plants are found you can pick the berries/plants/
+        fruits by regular pick  up  commands: [,] and [;].  When  using
+        FORAGING-skill you may now (depending on your success) find out
+        if there is any possibilities of finding vegetarian  food  from
+        current terrain or you may  be  automatically  positioned  near
+        fruitful plants so you don't have to find them manually.
+
+ - added occupation/status ranks and rank information command: <M>.
+
+        You may now acquire some ranks when joining guilds etc.
+        Use <M> command to check out your merits.This command shows all
+        your ranks  followed  by  numerical  value (experience points).
+        Your rank should gradually raise if you keep on developing your
+        rank-specific skills. For example  if  being a fisherman, using
+        fishing-skill a lot should eventually  raise  your  rank.  Your
+        highest rank is displayed on the  Statistics-screen below  your
+        character's name.
+        NOTICE! Guilds are still under development -> totally missing.
+
+ - Statistics-screen re-arranged.
+
+ - heavily improved new CRTPLR version:
+
+        - Non-human races have been removed. You  will   now   choose a
+          culture you want to born into instead of race.
+        - You will learn some family skills depending on  your  parents
+          occupation.
+        - You may choose an apprenticeship in one guild to  learn  more
+          skills.
+        - All characters won't now necessarely learn all the skills.
+        - You may open new skills or develop old ones to some point  in
+          the course of character generations.
+
+ - key-sequence of special command 'Chat' changed from #c to #t.
+
+ - added chat-maneuvers.
+
+        Now there is several chatting maneuveres:
+        Greet, Deliver, Join and Unjoin.
+        You have to choose one of them every time you wish to chat with
+        someone. 'Greet' means general chatting started by greeting. It
+        is the most common chatting maneuver.  Other chatting maneuvers
+        are mostly used when accomplishing tasks and co-operating  with
+        your chatting partner (notice  that  these  may  not  have real
+        usage yet).
+         'Deliver' means giving some of your  items  to  your  chatting
+        partner at first. It's usually used when the person  has  asked
+        you to bring him/her some item.
+         'Join' means  that you suggest to your chatting  partner  that
+        he/she should start to follow you. This  is  used  mainly  when
+        somebody asks you to lead him/her somewhere.
+         'Unjoin' means that  you tell the person who was following you
+        that you have reached your  goal  and  tell  him/her  to   stop
+        following you. (So you can't use Unjoin before using Join.)
+
+ - peaceful walking now decreases fatigue.
+
+ - amount of cuts when cutting a corple increased to be more realistic.
+
+ - added direction to FORAGING-skill.
+
+        Now you will be asked for direction of foraging.  And direction
+        should be of course chosen to point fruitful plants.
+
+ - added diseases and poisoning.
+
+        Diseases  and  poisonings will  appear  in  the  wounds-screen.
+        (special command #w)  There  are  not  currently  barely  other
+        plagues than a simple flu but this is still uder development.
+
+ - added new kind of wilderness encounters.
+
+        There may now happen this and that when  wandering  trough  the
+        wilderness; you may get lost, hear strange sounds / see strange
+        tracks, catch a cold etc.
+-------------------------------------------------------------------------------
+version: 2.07
+released: Jun-06-1995
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.07!                                         ***
+
+ - <e>quipment function removed.
+
+        It was quite useles; You  can  easily  see  equipped  items  by
+        <i>nventory command - not  in such a neat form though, I admit.
+
+ - added random world generator: RNDWORLD.EXE.
+
+        RNDWORLD generates  (in the course of new character generation)
+        randomize campaign (called RND) which offers you a  new  unseen
+        campaign to explore every time you play.
+        (Notice: Old WYVERN campaign doesn't exist anymore.)
+
+ - added start-up equipment for new characters.
+
+        New characters will now get equipped with some useful clothes /
+        armours and tools suitable for their profession.
+
+ - potion effects temporarely removed.
+
+        You may still find some potions but they  wont  affect  you  at
+        all. Potions  will  be  totally  reorganized  in  the  becoming
+        versions.
+
+ - Skills-screen re-arranged.
+
+        'Mastery level' is now colored instead of skill name.
+        Preferred skill can be chosen also by moving  cursor  to  point
+        the skill and by pressing [ENTER] or by typing it.
+
+ - new poem-generator version.
+
+        Rune singers have plenty of new songs to sing.
+        Poem-scrolls contain verses never heard before.
+
+ - Foraging and Vegetarian food-system improved.
+
+        There is lots of new fruits,  berries,  mushrooms  and  various
+        plants to find and pick up. The system is now more natural  and
+        now  it  depends  on  the  terrain what kind of plants you will
+        find. Only confusing change about foraging is that now you have
+        to stand ON the plant you are about to pick up instead of being
+        beside it as in the previous version.
+-------------------------------------------------------------------------------
+version: 2.06
+released: Jun-02-1995
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.06!                                         ***
+
+ - Skill using/listing commands re-arranged.
+
+        <F4>-key is no longer in function. Skills   are   from  now  on
+        listed and also used by <S>-key.
+
+ - added fatigue.
+
+        Your character and any creatures as well will  now suffer  from
+        fatigue. Any hard physical activity such as running or fighting
+        will tire you up. Amount  of  load  carried  and your endurance
+        will affect on how fast you will tire. Fatigue is  indicated by
+        'Fatigue'-meter which shows in percents how much your  physical
+        activities will be penalized due fatigue.
+        For example: Character who has 48% mastery level in SWORD-skill
+        tires in combat so that he achieves -2% fatigue penalty so  his
+        effective mastery level in SWORD-skill  will  be  46%  due  his
+        fatigue. Notice that he might also have other penalties such as
+        injury and encumbrance penalty so his final mastery  level  can
+        be far lower.
+        You may use rest  option  (key sequence: .)  or  #sleep  (key
+        sequence: #s) to recover from fatigue.
+
+ - Statistics-screen re-arranged.
+
+        Fatigue-meter added. Coins-meter moved to 'Character statistics'
+        screen (<p> command).
+
+ - added new building-type: Farm.
+
+        Villages may  now  include farms where you can purchase various
+        kind of animals such as goats, sheeps, bulls, pigs etc.
+
+ - added new item: Rope.
+
+        Ropes can be currently used only to leash creatures.
+
+ - added weapon descriptions.
+
+        You will now see description of a weapon when examining  one by
+        an <i>nventory command.
+
+ - armours can be damaged in combat from now on.
+
+        Armours  will   now  break   apart   after   receiving  several
+        penetrating hits.
+
+ - added randomly generated villages.
+
+ - added new kind of scrolls.
+
+        There are now also scrolls including songs.
+
+ - added new character attribute: Speed.
+
+        Speed indicates the native ability to  run  when  unencumbered.
+        It is linked to Agility and may not differ from  it  very much.
+
+ - added mobility-rate for characters and creatures.
+
+        Mobility indicates how much creatures and you may move per  one
+        turn. Any physical penalty such as injuries and  carried  loads
+        will reduce mobility.
+
+ - added new command: <R> - Start/stop running.
+
+        You can now set your character running/walking by pressing <R>.
+        Running is mainly used when you are chasing  some  creature  or
+        you have been chased.
+-------------------------------------------------------------------------------
+version: 2.051 (bugfix version)
+released: Mar-28-1995
+
+ - fixed bug in tracking-routine.
+
+        Using TRACKING skill  sometimes  caused the game to get stucked
+        forever - it's fixed now.
+
+ - added new types of scrolls.
+
+        Besides  maps  you may now find scrolls including written works
+        such as poetry.
+
+ - fixed bug in corpse cutting-routine.
+
+        Corpse  cutting  caused  corruption  in character's pack - it's
+        fixed now.
+
+ - fixed couple of nasty minor bugs.
+-------------------------------------------------------------------------------
+version: 2.05
+released: Mar-19-1995
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.05!                                         ***
+
+ - TRACKING skill improved.
+
+        Depending on your tracking success you  will  now  obtain  more
+        information about tracks such as  what  kind  of  creature  has
+        left them etc.
+
+ - improved escaping creature behaviour.
+
+        Creatures which can't escape  from you  may  now suddenly  turn
+        desperate and attack at you.
+
+ - improved creature behaviour during character's unconciousness.
+
+        Now  it  is  little  less  possible   to   get   killed  during
+        unconsciousness. Creatures which aren't carnivorous or  somehow
+        murderous will now leave you alone after they have knocked  you
+        out.
+
+ - added new creatures: Trolls.
+
+        Only thing you need to know about trolls so far: They're tough!
+
+ - fixed bugs from installation and campaign installationn programs.
+
+ - removed special command: 'Suicide'.
+
+        It simply is useless.
+
+ - added items for writing/drawing.
+
+        There is now Quills, Ink  and  Blank  Parchments  available  at
+        lexigraphers store. With them your character can write  his/her
+        own scrolls and notes.
+
+ - added new items: Maps.
+
+        Maps can be purchased  from  lexigrapher  or  even  found  from
+        dungeons. Only difficulty with them is that you sometimes don't
+        know which region they represent, but once you've found it  out
+        they can be really helpful.
+
+ - added new command: <r> - Read written works.
+
+        This command is used to read scrolls, maps etc.
+
+ - added new creatures: Rats.
+
+ - added new command: <;> - Pick up something from given direction.
+
+        This command allows you to pick up something from the positions
+        beside your character. So now you don't  have  to (for example)
+        climb on the table to pick up items on it - you just need to go
+        beside it and use <;> command.
+
+ - added reach factor for creatures.
+
+        Reach factor means that in combat some  creatures  (ie. snakes)
+        can reach to hit only your legs etc.
+
+ - added graphical symbols for creatures.
+
+        When  graphical fonts are enabled (see option FONTS in URW.CNF)
+        creatures appear as a graphical  symbols  instead  of  being  a
+        plain letters.
+
+ - scale of local area changed.
+
+        Instead of 33 meters scale of local areas  (encounter  screens,
+        villages etc.) is now 3 meters.
+
+ - added new creature-types: 'sheriff','beggar','bard'.
+
+        These may still be under development. Find out what they can do
+        for you.
+
+ - added new building-types: 'sauna','bar','inn'.
+
+        Related to these added new creature-types: 'bathmaster',
+        'barkeeper' and 'innkeeper'.
+        These special building will be documented later.
+
+ - new version of campaign 'WYVERN'.
+ 
+       Added something fresh to village:
+       - population
+       - new buildings: sauna, bar, inn.
+
+ - new RNDHOUSE version.
+
+ - new DEFCREAT (pre-defined creature generator) version.
+
+ - new CRTPLR version (2.4):
+
+        - New occupations: Cook, Gladiator.
+        - Added SWIMMING to Fisherman beginning skills.
+        - Added weapon-skill improvements for specific occupations.
+        - CRTPLR now also  tells  which skills will be increased due to
+          your occupation selection.
+
+ - added 'information screen'.
+
+        From now on sometimes during the game information screen   will
+        pop  up  and  show  you some extra information about something.
+        Currently you can  see  extra  information  only  about  armour
+        materials. ( by  using  <i>nventory  command and selecting some
+        armour)
+
+ - note-appearing improved.
+
+        Old notes (in notebox window) will now be faded when new a note
+        appears. This will hopefully improve readability. This  feature
+        can be toggled between ON and OFF though.  (See  config  option
+        FADE_OLD_NOTES)
+
+ - added FADE_OLD_NOTES option to URW.CNF configuration file.
+
+        When option FADE_OLD_NOTES is set to ON it will show  only  the
+        most newest notes (in notebox window) colored and fade the  old
+        ones. Setting  this  option  OFF  causes  all  the notes appear
+        colored.
+
+
+-------------------------------------------------------------------------------
+version: 2.04
+released: Jan-15-1995
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.04!                                         ***
+
+ - automatic stand up after sleep.
+
+        Character now automatically stands up after sleep  if  sleeping
+        is not unexpectedly interrupted.
+
+ - added new command: <A> - Overall armour coverage.
+
+        This commands shows you which parts of your body are covered by
+        armours/clothes and amount of protection. Amount of  protection
+        is shown by colors like this:
+        red    - minor protection
+        yellow - average protection
+        green  - good protection
+
+ - added warning for low diskspace.
+
+        If diskspace is getting low during game you will be warned.
+
+ - added bows.
+
+        See 'COMBAT AND INJURIES / Fighting (bows and arrows)' for more
+        info.
+
+ - add new skills: 'BOW' and 'CROSSBOW'.
+
+        'BOW' is ability to use  any  bows but crossbows. 'CROSSBOW' is
+        ability to use crossbows.
+
+ - New campaign called WYVERN added to the distribution archive.
+
+ - Old campaign called FIRST no longer exists.
+
+ - 'SURVIVAL'-skill documented.
+
+        See 'SKILLS / Survival'-section in URW.DOC
+
+ - Installation system added.
+
+        It's simple as life :-) Should not cause any trouble.
+
+ - new CRTPLR version (2.3):
+
+        Characters attributes (strength,eyesight etc.) are now modified
+        according to race selected (this will be hopefully documentated
+        later). Strenght is also modified by Weight.
+
+ - swapped special commands #s and #S.
+
+        #s means sleep from now on and #S is suicide.
+
+ - added 'graphical' armour-coverage screen.
+
+        Listing of covered bodyparts (when  examining  some  armour  by
+        <i>nventory-command) replaced by 'graphical' demonstration.
+
+ - added <t>hrow command.
+
+        Now it's  possible  to  throw  your  enemy  with  weapons.  See
+        'COMBAT AND INJURIES / Fighting (Throwing weapons)'-section  in
+        URW.DOC.
+
+ - added new map object: Sign.
+
+        To read signs simply look at them.
+
+ - added new creatures: Snakes.
+
+        Currently only non-poisonous ordinary snakes.
+
+ - added automatic 'what is here'-check when walking on an item.
+
+        When you walk on an item you will be automatically told what it
+        is. If  there  are  several items this will be told to you  and
+        you have to use gool old ':'-key to see them.
+
+ - added random shops.
+
+ - added something fresh to caves.
+
+        Special rooms,  boulders,  gold, changed  generality of
+        items etc.
+
+ - added some new potions.
+
+ - added new creature activity-type: 'watchman'.
+
+        This is not necessarily used in any campaign yet.
+
+ - added Campaign-support.
+
+        It is now  possible to transport  character  from a campaign to
+        another. See 'WORLD / Campaigns'-section in URW.DOC.
+
+ - fixed lotsa bugs.
+-------------------------------------------------------------------------------
+version: 2.03
+released: 05.12.1994
+
+ *** NOTICE! Saved characters from previous versions are NOT compatible ***
+ ***         with version 2.03!                                         ***
+
+ - added some weapon information to Inventory-option.
+
+        When selecting some weapon in  Inventory-window  you  will  see
+        into which weapon group it belongs.
+
+ - added new skill: 'COOKERY'.
+
+        'COOKERY' is used to cook,bake,roast etc. something in order to
+        make it more nutritious and delicious.
+
+ - added new skill: 'SURVIVAL'.
+
+        'SURVIVAL' is ability to survive in the wilderness though  some
+        of the 'SURVIVAL' skill can be used indoors as well.  Currently
+        you can use 'SURVIVAL' only to collect branches and build fires
+        but in the future there is going to be many more options.
+
+ - added new special command: 'Cut'.
+
+        #Cut command is used to cut corpses to get some meat.  Meat can
+        be of course used as a food.
+        (use key sequence #C to use 'Cut' command)
+
+ - statistics-screen rearranged.
+
+        There is no  longer  'Weapons Wielded'-part  on the statistics-
+        screen (right half of the screen).
+        Notebox is now two lines higher - this should reduce appearance
+        of sometimes irritating More-prompt.
+
+ - added load-restrictions.
+
+        It isn't possible to carry tons of items anymore. Check out the
+        'CARRYING LOADS'-section in URW.DOC.
+
+ - new CRTPLR version (2.2):
+
+        When creating a new character it's now possible to select  from
+        which season (spring,summer,autumn or winter) you wish to start
+        your adventure.
+
+ - added some population to village.
+
+ - added specific color for dead creatures.
+
+         All  corpses  (regardless of their type) have  now  their  own
+         color which is magenta.
+
+ - added new special command: 'fill'.
+
+         #fill command is used to fill empty containers with something.
+         Currently only empty  potion-bottles can be filled with water.
+         (use key sequence #s to use 'fill' command)
+
+ - added potions.
+
+          Some potions added (use 'q' to drink 'em).
+
+ - fixed BEEP-bug from door opening/closing-routine.
+
+          Due to my experiments to add sounds  to  UrW  the  game  left
+          pc-speaker to beeeeeeeeeeeep everytime  a  door was opened or
+          closed. This was somewhat  maddening  bug.  Sorry  for  that.
+-------------------------------------------------------------------------------
+version: 2.02
+released: 30.09.1994
+
+ - shops improved.
+
+          Shops are now paint in yellow :-)  to help identification and
+          there is also some kind of permitted hours to visit shops.
+
+ - /-key works also as for far-look.
+
+          In addition to <F3>, /-key can also be used to check out what
+          is in some distant location. It's  just  a  matter  of  taste
+          which one you should use.
+
+ - added NORMAL_CONTROL option to URW.CNF configuration file.
+
+          Available options are ON and OFF. Default is OFF.  If you set
+          this option to ON you'll get stantard movement system   which
+          is used in the most of roguelike games.
+
+ - disabled possibility to wear several similar armours.
+
+          Earlier there were no restrictions in armour wearing. It  was
+          possible to wear for example several helms at the same  time.
+          That's not possible anymore. You can however wear  a  cap  or
+          a cowl under your helm and a vest or a shirt (or both)  under
+          your breastplate. Shortly: armour wearing rules are now  more
+          realistic.
+
+ - initiative granted to creatures when entering a new map.
+
+          This is more real and it also prevents  some  bugs (creatures
+          that will accidentally be in  'wrong'  locations (ie. 'under'
+          your character) will be  moved to  correct  locations  during
+          their movement-routines).
+
+ - added 'store supplement'.
+
+          Shopkeepers will now reinforce their  supplies  if  they  are
+          running out.
+
+ - fixed bug in Equipment-function.
+
+          Sometimes Equipment-function didn't tell you  what  you  were
+          wearing - that SHOULD BE fixed now.
+-------------------------------------------------------------------------------
+version: 2.01
+released: 04.09.1994
+
+  - 'Brown be' is now 'Brown bear'.
+
+          For  some  reason  anytime there  was  something  told  about
+          'Brown bear'  the  game  always  told  you  about 'Brown be'.
+          That SHOULD BE fixed now.
+
+  - removed excess quotation marks from interactive creatures' talkings.
+
+          Talking to  interactive  pre-defined  creatures  caused  some
+          extra quotation marks to appear - it's now fixed.
+
+  - added PERMANENT_MAP option to URW.CNF configuration file.
+
+          Available options are ON and OFF. If this option is ON map of
+          known area is shown all the time. If  this  option is OFF you
+          have to press <SPACE> every  time  you  want  to look at map.
+          Default is OFF.
+
+  - fixed bug in saving routine.
+
+          Bug  occured when  player didn't  want to quit  to dos  after
+          saving and it totally mixed up personal data of all creatures
+          on current map.
+
+  - added warning for possibly too little amount of memory.
+
+          When UrW is started it finds out  the  memory  available  for
+          the game itself. If  there  is  considerably little amount of          detected memory is
+          memory the player is warned and asked if he/she wants to quit
+          to DOS.
+
+  - fixed 'I've been attacked but I can't see my enemy' bug.
+
+          This  bug  occured  when  some creature happened to be in the
+          same map position where player was forced to stay when he/she
+          entered the map (bug was especially encountered  when  player
+          entered to buildings).
+
+  - fixed bug in creature escaping routines.
+
+          It caused some weird effects when some creature escaped from
+          the building (for example: all  the  other  creatures  could
+          disappear as well).
+-------------------------------------------------------------------------------
+version: 2.0b
+released: 31.07.1994
+
+  - fully rewritten version.
+-------------------------------------------------------------------------------
+

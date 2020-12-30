@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"CinematicBlurTransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Dissolves"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='2'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"effectShaderSet"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"previous"'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='""'/>
+          <MetadataString containerField='value' name='socketChildNodeDEF' value='"ShaderSetPrevious"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transparency"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TransparencyInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"TransitionInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Socket Nodes scratch pad (only nodes with def's are injected)-->
+    <Transform>
+      <Shape>
+        <Appearance>
+          <MotionTexture>
+            <ShaderSet DEF='ShaderSetPrevious'>
+              <BlurShader DEF='BlurShaderPreviousX' direction='x'/>
+              <BlurShader DEF='BlurShaderPreviousY' direction='y'/>
+            </ShaderSet>
+          </MotionTexture>
+        </Appearance>
+      </Shape>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <Switch DEF='TransitionSwitch' whichChoice='0'>
+        <Transform scale='5.33333 5.33333 1' translation='0 0 0.01'>
+          <ScalarInterpolator DEF='TransitionInterpolator' key='0 1' keyValue='0 1'/>
+
+          <ScalarInterpolator DEF='TransparencyInterpolator' key='0 1' keyValue='1 0'/>
+          <ROUTE fromNode='TransitionInterpolator' fromField='value_changed'
+                   toNode='TransparencyInterpolator' toField='set_fraction'/>
+
+          <ScalarInterpolator DEF='BlurShaderInterpolatorPrevious' key='0 0.3' keyValue='0 0.006'/>
+          <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='BlurShaderInterpolatorPrevious' toField='set_fraction'/>
+          <ROUTE fromNode='BlurShaderInterpolatorPrevious' fromField='value_changed' toNode='BlurShaderPreviousX' toField='set_radius'/>
+          <ROUTE fromNode='BlurShaderInterpolatorPrevious' fromField='value_changed' toNode='BlurShaderPreviousY' toField='set_radius'/>
+
+          <!-- Large circle 1 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial1' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe1'
+                            fraction='0.5'
+                            transitionWidth='0.2'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.2 0.2'
+                            translation='0.4 0.2'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle1TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.96 0.96 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle1TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle1TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial1' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe1Interpolator' closed='false' key='0 1' keyValue='0.10  0.25    0.08  0.2'/>
+            <ROUTE fromNode='smallWipe1Interpolator' fromField='value_changed' toNode='smallWipe1' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe1Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 2 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial2' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe2'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.15 0.15'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle2TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.93 0.93 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle2TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle2TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial2' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe2Interpolator' closed='false' key='0 1' keyValue='0.07  0.13    0.04  0.17'/>
+            <ROUTE fromNode='smallWipe2Interpolator' fromField='value_changed' toNode='smallWipe2' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe2Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 3 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial3' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe3'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.25 0.25'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle3TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.95 0.95 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle3TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle3TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial3' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe3Interpolator' closed='false' key='0 1' keyValue='0.10  0.23    0.14  0.19'/>
+            <ROUTE fromNode='smallWipe3Interpolator' fromField='value_changed' toNode='smallWipe3' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe3Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 4 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial4' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe4'
+                            fraction='0.5'
+                            transitionWidth='0.05'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.25 0.25'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle4TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.9 0.9 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle4TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle4TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial4' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe4Interpolator' closed='false' key='0 1' keyValue='0.40  0.05    0.38  0.10'/>
+            <ROUTE fromNode='smallWipe4Interpolator' fromField='value_changed' toNode='smallWipe4' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe4Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 5 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial5' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe5'
+                            fraction='0.5'
+                            transitionWidth='0.3N'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.16 0.16'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle5TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.97 0.97 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle5TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle5TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial5' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe5Interpolator' closed='false' key='0 1' keyValue='0.35 -0.03    0.3 -0.01'/>
+            <ROUTE fromNode='smallWipe5Interpolator' fromField='value_changed' toNode='smallWipe5' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe5Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 6 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial6' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe6'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.2 0.2'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle6TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.97 0.97 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle6TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle6TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial6' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe6Interpolator' closed='false' key='0 1' keyValue='0.14 -0.21    0.11 -0.18'/>
+            <ROUTE fromNode='smallWipe6Interpolator' fromField='value_changed' toNode='smallWipe6' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe6Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 7 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial7' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe7'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.18 0.18'
+                            translation='0.32 -0.24'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle7TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.97 0.97 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle7TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle7TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial7' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe7Interpolator' closed='false' key='0 1' keyValue='0.10 -0.10    0.07 -0.13'/>
+            <ROUTE fromNode='smallWipe7Interpolator' fromField='value_changed' toNode='smallWipe7' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe7Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 8 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial8' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe8'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.13 0.13'
+                            translation='0.4 0.2'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle8TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.9 0.9 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle8TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle8TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial8' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe8Interpolator' closed='false' key='0 1' keyValue='-0.3  -0.2    -0.35  -0.1'/>
+            <ROUTE fromNode='smallWipe8Interpolator' fromField='value_changed' toNode='smallWipe8' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe8Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 9 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial9' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe9'
+                            fraction='0.5'
+                            transitionWidth='0.2'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.2 0.2'
+                            translation='0.4 0.2'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle9TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.9 0.9 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle9TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle9TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial9' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe9Interpolator' closed='false' key='0 1' keyValue='-0.45  -0.25    -0.46  -0.19'/>
+            <ROUTE fromNode='smallWipe9Interpolator' fromField='value_changed' toNode='smallWipe9' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe9Interpolator' toField='set_fraction'/>
+
+          <!-- Large circle 10 -->
+            <Shape>
+              <Appearance>
+                <Material DEF='CircleMaterial10' diffuseColor='1 1 1' transparency='1'/>
+                <WipeShader DEF='smallWipe10'
+                            fraction='0.5'
+                            transitionWidth='0.1'
+                            meshType='Circle'
+                            edgeType='Fill'
+                            AspectRatioWidth='1'
+                            AspectRatioHeight='1'
+                            center='0.5 0.5'
+                            scale='0.2 0.2'
+                            translation='0.4 0.2'
+                            centerIn='true'/>
+              </Appearance>
+              <IndexedFaceSet containerField='geometry' creaseAngle='0.524' coordIndex='0 1 2 -1 0 2 3 -1' texCoordIndex='0 1 2 -1 0 2 3 -1'>
+                <Coordinate containerField='coord' point='-5.333 3 0 -5.333 -3 0 5.333 -3 0 5.333 3 0' />
+                <TextureCoordinate containerField='texCoord' point='0 1 0 0 1 0 1 1' />
+              </IndexedFaceSet>
+            </Shape>
+            <!-- Transparency -->
+            <ScalarInterpolator DEF='Circle10TransparencyInterpolator' key='0 0.15 0.4 0.8 1' keyValue='1 1 0.95 0.95 1'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='Circle10TransparencyInterpolator' toField='set_fraction'/>
+            <ROUTE fromNode='Circle10TransparencyInterpolator' fromField='value_changed' toNode='CircleMaterial10' toField='set_transparency'/>
+            <!-- Movement -->
+            <SplinePositionInterpolator2D DEF='smallWipe10Interpolator' closed='false' key='0 1' keyValue='-0.42  -0.02    -0.41  0.03'/>
+            <ROUTE fromNode='smallWipe10Interpolator' fromField='value_changed' toNode='smallWipe10' toField='set_translation'/>
+            <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='smallWipe10Interpolator' toField='set_fraction'/>
+          </Transform>
+      </Switch>
+
+      <!-- Turn off all rendered objects inside the switch above when TransitionInterpolator.value_changed == 1 -->
+      <IntegerSequencer DEF='TransitionSequencer' key ='1 1' keyValue ='0 -1'/>
+      <ROUTE fromNode='TransitionInterpolator' fromField='value_changed' toNode='TransitionSequencer' toField='set_fraction'/>
+      <ROUTE fromNode='TransitionSequencer' fromField='value_changed' toNode='TransitionSwitch' toField='set_whichChoice'/>
+      
+    </Transform>
+  </Transform>
+</X3D>

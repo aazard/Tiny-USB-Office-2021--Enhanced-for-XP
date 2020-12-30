@@ -1,0 +1,845 @@
+// <attack_aspect> 
+//
+// PC or NPC chosen attack aspect 
+//
+// value: POINT/EDGE/BLUNT/POINT/BITE/CLAW/SQUEEZE
+
+// <attacker>
+// <defender>
+//
+// Identity of the attacker/defender
+//
+// value: PC/NPC/MALE/FEMALE/ANIMAL
+
+.S_FAIL.
+[PC:fail]
+[*:fails]
+
+.S_TRY.
+[PC:try]
+[*:tries]
+
+// <weapon_slot> returns: 1 or 2 (primary or secondary) in case of player, for NPCs it shouldn't be used
+// 		
+.HANDMODE.
+[1:primary]
+[2:secondary]
+
+// when player or NPC wields a weapon. use (who) parameter
+// <weapon_slot> can be used for player character but not for NPCs!
+//
+.WIELD_WEAPON.(who)
+[PC:+<the_fullitem> wielded as a [HANDMODE:<weapon_slot>] weapon.]
+[*:<npc_desc> wields <fullitem>.]
+
+.UNWIELD_WEAPON.(who)
+[PC:+You unwield your <fullitem>.]
+[*:<npc_desc> unwields <fullitem>.]
+
+.LOAD_CROSSBOW.(who)
+[PC:+You start to load <the_fullitem>.]
+[*:<npc_desc> starts to load <fullitem>.]
+
+
+
+
+// PAW, SQUEEZE, HOOF, ANTLER, HORN, TUSK, BEAK
+//
+// 
+// nip		- bite of a small mammal (hare, ermine etc.)
+// snap   	- bite of a fox/badger sized animal
+// bite   	- bite of a carnivore with a proper fangs (lynx/glutton)
+// rip    	- fierce attack with strong claws (glutton)
+// smack  	- hit of a strong paw not using claws (bear)
+// crush  	- bearhug
+// big_bite   	- bite of a voracious carnivore (bear,glutton)
+// hoof_kick	- kick of a elk/reindeer/cow etc.
+// ram		- ram/bull attack with horns
+// charge	- charging attack of a pig (and the sheep also)
+// antler_rake	- antler attack of reindeers and male elk
+// savage	- canine attack to bite (wolf, dog)
+// snakebite (snake)
+// peck (birds)
+// scracth	- to claw with not so sharp claws (badger)
+//
+// for previous version compatibility also use: paw,squeeze,horn,hoof,tusk,antler,beak 
+//
+.ATTACK_NOUN.
+[POINT:thrust]
+[EDGE:strike]
+[BLUNT:blow]
+[SHOOT:shot]
+[THROW:throw]
+[PUNCH:punch]
+[KICK:kick]
+[BITE:snap]
+[CLAW:claw]
+[PAW:claw]
+[CRUSH:hug]
+[HOOF:kick]
+[HORN:butt]
+[ANTLER:butt]
+[TUSK:bite]
+[BEAK:beak]
+[BIG_BITE:bite]
+[*:attack]
+
+
+.ATTACK_VERB.
+[POINT:to stab]
+[EDGE:to slash]
+[BLUNT:to swing]
+[SHOOT:to shoot]
+[THROW:to throw]
+[PUNCH:to punch]
+[KICK:to kick]
+[NIP:to nip]
+[SNAP:to snap at]
+[BITE:to bite]
+[RIP:to claw]
+[SMACK:to smack]
+[CRUSH:to crush]
+[BIG_BITE:to bite]
+[HOOF_KICK:to kick]
+[RAM:to ram]
+[CHARGE:to charge]
+[ANTLER*:to gore]
+[CLAW:to claw]
+[SAVAGE:to savage]
+[SNAKEBITE:to strike]
+[PECK:to peck]
+[SCRATCH:to scratch]
+[PAW:to bite]
+[SQUEEZE:to crush]
+[HORN:to charge]
+[HOOF:to kick]
+[TUSK:to charge]
+[ANTLER:to gore]
+[BEAK:to peck]
+
+
+
+.ATTACK_HITS.
+[SHOOT:shot hits]
+[THROW:throw lands]
+[NIP:teeth snap]
+[SNAP:jaws bite]
+[BITE:fangs tear]
+[RIP:claws rip]
+[SMACK:paw slams]
+[CRUSH:paws grab]
+[BIG_BITE:maw lunges]
+[HOOF_KICK:hoof stabs]
+[RAM:horns charge]
+[CHARGE:charge hits]
+[ANTLER*:antlers rake]
+[CLAW:claws slash]
+[SAVAGE:jaws snap]
+[SNAKEBITE:fangs lunge]
+[PECK:beak thrusts]
+[SCRATCH:claws swipe]
+[PAW:paw slams]
+[SQUEEZE:paws grab]
+[HORN:horns charge]
+[HOOF:hoof stabs]
+[TUSK:body lunges]
+[ANTLER:antlers rake]
+[BEAK:beak thrusts]
+
+19:14 9.10.2011
+
+//
+// Attack declaration strings.
+//
+.WEAPON_ATTACK_DECLARATION.(attacker)
+[PC:You try [ATTACK_VERB:<attack_aspect>] <defender_defdesc> with your <attack_weapon>.]
+[*:<attacker_defdesc> tries [ATTACK_VERB:<attack_aspect>] <defender_defdesc> with [PP_GEN:<attacker>] <attack_weapon>.]
+[HEAR:You hear sounds of fighting in the [IN_DIR:<npc_direction>].]
+
+.UNARMED_ATTACK_DECLARATION.(attacker)
+[PC:You try [ATTACK_VERB:<attack_aspect>] <defender_defdesc>.]
+[ANIMAL:<attacker_defdesc> tries [ATTACK_VERB:<attack_aspect>] <defender_defdesc>.]
+[*:<attacker_defdesc> tries [ATTACK_VERB:<attack_aspect>] <defender_defdesc>.]
+
+.BOW_ATTACK_DECLARATION.(attacker)
+[PC:You aim your <attack_bow> at <defender_defdesc> and shoot.]
+[*:<attacker_desc> aims [PP_GEN:<attacker>] <attack_bow> at <defender_defdesc> and shoots.]
+
+.THROW_ATTACK_DECLARATION.(attacker)
+[PC:You try to throw your <attack_weapon> at <defender_defdesc>.]
+[*:<attacker_desc> tries to throw [PP_GEN:<attacker>] <attack_weapon> at <defender_defdesc>.]
+
+// trying to perform melee attack with unsuitable item
+.BAD_MELEE_WEAPON.
+!You can not strike with <item_ind>.
+
+
+// *
+// Melee attack success strings.
+// *
+.MELEE_INFERIOR.(attacker)
+[PC:Your clumsy [ATTACK_NOUN:<attack_aspect>] is barely an attack]
+[ANIMAL:It makes a slow and clumsy attempt [ATTACK_VERB:<attack_aspect>] [PP_OBJ:<defender>]]
+[*:[PP_GEN:<attacker>] pathetic [ATTACK_NOUN:<attack_aspect>] is barely an attack]
+
+.MELEE_MARGINAL.(attacker)
+[PC:You fail to do more than a sloppy [ATTACK_NOUN:<attack_aspect>]]
+[ANIMAL:It fails [ATTACK_VERB:<attack_aspect>] [PP_OBJ:<defender>] efficiently]
+[*:[PP_SUBJ:<attacker>] fails to do more than a sloppy [ATTACK_NOUN:<attack_aspect>]]
+
+.MELEE_GOOD.(attacker)
+[PC:You execute a skilled [ATTACK_NOUN:<attack_aspect>]]
+[ANIMAL:It rushes [ATTACK_VERB:<attack_aspect>] [PP_OBJ:<defender>]]
+[*:[PP_SUBJ:<attacker>] executes a skilled [ATTACK_NOUN:<attack_aspect>]]
+
+.MELEE_SUPERIOR.(attacker)
+[PC:You carry out a perfect [ATTACK_NOUN:<attack_aspect>]]
+[ANIMAL:Its attempt [ATTACK_VERB:<attack_aspect>] [PP_OBJ:<defender>] is fast and furious]
+[*:[PP_SUBJ:<attacker>] carries out a perfect [ATTACK_NOUN:<attack_aspect>]]
+
+// *
+// Missile attack success strings. (for shooting with a bow and throwing weapons)
+// The game may continue these strings ("...but something something" etc.) so don't end them with a dot.
+// *
+.MISSILE_INFERIOR.(attacker)
+[PC:You totally blow your [ATTACK_NOUN:<attack_aspect>] sending the <attack_weapon> wild]
+[*:[PP_SUBJ:<attacker>] totally blows [PP_GEN:<attacker>] [ATTACK_NOUN:<attack_aspect>] sending the <attack_weapon> wild]
+
+.MISSILE_MARGINAL.(attacker)
+[PC:You fail to deliver a steady [ATTACK_NOUN:<attack_aspect>]]
+[*:[PP_SUBJ:<attacker>] fails to deliver a steady [ATTACK_NOUN:<attack_aspect>]]
+
+.MISSILE_GOOD.(attacker)
+[PC:You execute a steady [ATTACK_NOUN:<attack_aspect>]]
+[*:[PP_SUBJ:<attacker>] executes a steady [ATTACK_NOUN:<attack_aspect>]]
+
+.MISSILE_SUPERIOR.(attacker)
+[PC:You carry out a perfectly true [ATTACK_NOUN:<attack_aspect>]]
+[*:[PP_SUBJ:<attacker>] carries out a perfectly true [ATTACK_NOUN:<attack_aspect>]]
+
+
+
+// description of thrown/fired missile trajectory/accuracy when it reaches the target
+// these messages only descripe how accurately the missile lands at the "center" of the target.
+// the missile may then either hit (good or bad) or miss even target depending on the target size
+// and its actions/movement
+//
+.TRAJECTORY_INFERIOR.
+the <attack_weapon> travels badly off course barely reaching <defender_defdesc>
+
+.TRAJECTORY_MARGINAL.
+the <attack_weapon> flies slightly off <defender_defdesc>
+
+.TRAJECTORY_GOOD.
+the <attack_weapon> flies true at <defender_defdesc>
+
+.TRAJECTORY_SUPERIOR.
+the <attack_weapon> flies straight at <defender_defdesc>
+
+
+// when thrown/fired missile misses because of the target being too small compared to hit accuracy.
+//
+.TARGET_SIZE_MISS.
+the [ATTACK_NOUN:<attack_aspect>] isn't accurate enough to hit a target that size.
+
+// when thrown/fired missile misses because of the chosen aiming location (head/arms/legs) being
+// too challenging compared to hit accuracy.
+//
+.TARGET_LOCATION_MISS.
+the [ATTACK_NOUN:<attack_aspect>] isn't accurate enough to hit that challenging a mark.
+
+// combat string ending when missile attacks hit the defender's shield
+//
+.SHIELD_PROTECTS.(defender)
+[PC:the shield protects you.]
+[*:the shield protects [PP_OBJ:<defender>].]
+
+
+// *
+// Counterstrike success strings
+// *
+.COUNTERSTRIKE_INFERIOR.(defender)
+[PC:you fumble with your <defend_weapon> failing your counterstrike attempt.]
+[*:[PP_SUBJ:<defender>] fumbles with [PP_GEN:<defender>] <defend_weapon> failing [PP_GEN:<defender>] counterstrike attempt.]
+
+.COUNTERSTRIKE_MARGINAL.(defender)
+[PC:you counterstrike but fail to make a decent [ATTACK_NOUN:<defend_aspect>] with your <defend_weapon>.]
+[*:[PP_SUBJ:<defender>] counterstrikes but fails to make a decent [ATTACK_NOUN:<defend_aspect>] with [PP_GEN:<defender>] <defend_weapon>.]
+
+.COUNTERSTRIKE_GOOD.(defender)
+[PC:you skilfully counterstrike with your <defend_weapon> [ATTACK_NOUN:<defend_aspect>].]
+[*:[PP_SUBJ:<defender>] skilfully counterstrikes with [PP_GEN:<defender>] <defend_weapon> [ATTACK_NOUN:<defend_aspect>].]
+
+.COUNTERSTRIKE_SUPERIOR.(defender)
+[PC:you perform an excellent counterstrike with a deft [ATTACK_NOUN:<defend_aspect>] of your <defend_weapon>.]
+[*:[PP_SUBJ:<defender>] performs an excellent counterstrike with a deft [ATTACK_NOUN:<defend_aspect>] of [PP_GEN:<defender>] <defend_weapon>.]
+
+
+// *
+// Unarmed/animal counterattack success strings.
+// *
+.COUNTERATTACK_INFERIOR.(defender)
+[*:[PP_SUBJ:<defender>] makes a slow and clumsy counterattack trying [ATTACK_VERB:<defend_aspect>] [PP_OBJ:<attacker>].]
+
+.COUNTERATTACK_MARGINAL.(defender)
+[*:[PP_SUBJ:<defender>] counterattacks but fails [ATTACK_VERB:<defend_aspect>] [PP_OBJ:<attacker>] efficiently.]
+
+.COUNTERATTACK_GOOD.(defender)
+[*:[PP_SUBJ:<defender>] rushes to counterattack aiming [ATTACK_VERB:<defend_aspect>] [PP_OBJ:<attacker>].]
+
+.COUNTERATTACK_SUPERIOR.(defender)
+[*:[PP_SUBJ:<defender>] makes a furious counterattack [ATTACK_VERB:<defend_aspect>] [PP_OBJ:<attacker>].]
+
+
+
+.BLOCK_INFERIOR.(defender)
+[PC:you fumble with your <defend_weapon> making a shaky block.]
+[*:[PP_SUBJ:<defender>] fumbles with [PP_GEN:<defender>] <defend_weapon> making a shaky block.]
+
+.BLOCK_MARGINAL.(defender)
+[PC:you make an awkward attempt to block with your <defend_weapon>.]
+[*:[PP_SUBJ:<defender>] makes an awkward attempt to block with [PP_GEN:<defender>] <defend_weapon>.]
+
+.BLOCK_GOOD.(defender)
+[PC:you quickly raise your <defend_weapon> to block it.]
+[*:[PP_SUBJ:<defender>] quickly raises [PP_GEN:<defender>] <defend_weapon> to block it.]
+
+.BLOCK_SUPERIOR.(defender)
+[PC:you duck behind the cover of your <defend_weapon> making an excellent block.]
+[*:[PP_SUBJ:<defender>] ducks behind the cover of [PP_GEN:<defender>] <defend_weapon> making an excellent block.]
+
+
+
+// *
+// Dodge strings. 
+// *
+.DODGE_INFERIOR.(defender)
+[PC:your attempt to dodge turns into a stumble.]
+[ANIMAL:it doesn't do much to avoid the attack.]
+[*:[PP_GEN:<defender>] attempt to dodge turns into a stumble.]
+
+.DODGE_MARGINAL.(defender)
+[PC:your attempt to dodge is clumsy and late.]
+[ANIMAL:it makes a late attempt to leap away.]
+[*:[PP_GEN:<defender>] attempt to dodge is clumsy and late.]
+
+.DODGE_GOOD.(defender)
+[PC:you quickly dodge aside.]
+[ANIMAL:it quickly rushes aside.]
+[*:[PP_SUBJ:<defender>] quickly dodges aside.]
+
+.DODGE_SUPERIOR.(defender)
+[PC:you dodge like a swan.]
+[ANIMAL:it gracefully leaps away from the attack.]
+[*:[PP_SUBJ:<defender>] dodges like a swan.]
+
+
+
+// *
+// Success/failure strings for moving targets. 
+// Success-message describes the victim avoiding getting hit, 
+// failure-message describes that we have a moving target in question, but it fails move fast enough to avoid the attack.
+// *
+//
+// for characters that stay put, but are fighting or moving otherwise in a manner of not being stationary targets.
+//
+.MOVEMENT_DODGE_SUCCESS.(defender)
+[PC:you don't stay put, making a lucky dodge.]
+[*:[PP_SUBJ:<defender>] doesn't stay put, making a lucky dodge.]
+
+.MOVEMENT_DODGE_FAILURE.(defender)
+[PC:your movements don't significantly hamper [PP_GEN:<attacker>] [ATTACK_NOUN:<attack_aspect>].]
+[*:[PP_GEN:<defender>] movements don't significantly hamper [PP_GEN:<attacker>] [ATTACK_NOUN:<attack_aspect>].]
+
+
+// for characters that are actively running from one place to another.
+//
+.MOVING_DODGE_SUCCESS.(defender)
+[PC:you move fast enough to get out of the way.]
+[*:[PP_SUBJ:<defender>] moves fast enough to get out of the way.]
+
+.MOVING_DODGE_FAILURE.(defender)
+[PC:you don't make it out of the way.]
+[*:[PP_SUBJ:<defender>] doesn't make it out of the way.]
+
+
+// * 
+// Attacker strike strings - whenever an attacker successfully hits the target 
+// Use (attacker) parameter to allow different messages depending on whether the attacker is PC,ANIMAL or HUMAN NPC (*)
+// *
+
+.ATTACKER_STRIKE_LIGHT.(attacker)
+[PC:[PP_GEN:<attacker>] [ATTACK_NOUN:<attack_aspect>] glances off of [PP_GEN:<defender>] <bodypart> still hurting [PP_OBJ:<defender>].]
+[ANIMAL:It barely catches [PP_OBJ:<defender>] but manages [ATTACK_VERB:<attack_aspect>] [PP_OBJ:<defender>] in [PP_GEN:<defender>] <bodypart>.]
+[*:[PP_GEN:<attacker>] [ATTACK_NOUN:<attack_aspect>] glances off of [PP_GEN:<defender>] <bodypart> still hurting [PP_OBJ:<defender>].]
+
+.ATTACKER_STRIKE.(attacker)
+[PC:You land a solid hit to [PP_GEN:<defender>] <bodypart>.]
+[ANIMAL:Its [ATTACK_HITS:<attack_aspect>] [PP_GEN:<defender>] <bodypart>.]
+[*:[PP_SUBJ:<attacker>] lands a solid hit to [PP_GEN:<defender>] <bodypart>.]
+
+.ATTACKER_STRIKE_HARD.(attacker)
+[PC:Your <attack_weapon> strikes hard to [PP_GEN:<defender>] <bodypart>!]
+[ANIMAL:Its [ATTACK_HITS:<attack_aspect>] [PP_GEN:<defender>] <bodypart> fiercely!]
+[*:[PP_GEN:<attacker>] <attack_weapon> strikes hard to [PP_GEN:<defender>] <bodypart>!]
+
+
+
+// *
+// Defender strike strings - whenever a succesfull COUNTERSTRIKE hits the attacker
+// Use (defender) parameter to allow different messages depending on whether the defender is PC,ANIMAL or HUMAN NPC (*)
+//
+// Useful tags: <defender> <defend_aspect> <defend_weapon> <bodypart_counterstrike>
+//
+
+.DEFENDER_STRIKE_LIGHT.(defender)
+[PC:[PP_GEN:<defender>] [ATTACK_NOUN:<defend_aspect>] glances off of [PP_GEN:<attacker>] <bodypart_counterstrike> still hurting [PP_OBJ:<attacker>].]
+[ANIMAL:It barely catches [PP_OBJ:<attacker>] but manages [ATTACK_VERB:<defend_aspect>] [PP_OBJ:<attacker>] in [PP_GEN:<attacker>] <bodypart_counterstrike>.]
+[*:[PP_GEN:<defender>] [ATTACK_NOUN:<defend_aspect>] glances off of [PP_GEN:<attacker>] <bodypart_counterstrike> still hurting [PP_OBJ:<attacker>].]
+
+.DEFENDER_STRIKE.(defender)
+[PC:You land a solid hit to [PP_GEN:<attacker>] <bodypart_counterstrike>.]
+[ANIMAL:Its [ATTACK_HITS:<defend_aspect>] [PP_GEN:<attacker>] <bodypart_counterstrike>.]
+[*:[PP_SUBJ:<defender>] lands a solid hit to [PP_GEN:<attacker>] <bodypart_counterstrike>.]
+
+.DEFENDER_STRIKE_HARD.(defender)
+[PC:Your <defend_weapon> strikes hard to [PP_GEN:<attacker>] <bodypart_counterstrike>!]
+[ANIMAL:Its [ATTACK_HITS:<defend_aspect>] [PP_GEN:<attacker>] <bodypart_counterstrike> fiercely!]
+[*:[PP_GEN:<defender>] <defend_weapon> strikes hard to [PP_GEN:<attacker>] <bodypart_counterstrike>!]
+
+
+// Combat conjunction string between attack and defend messages when both parties critically fail their maneuvers.
+// 
+// Example:
+// You fail to do more than a sloppy thrust *even though* his attempt to dodge is clumsy and late.
+// 
+.CONJUNCTION_BOTH_FAIL.
+even though
+
+
+//
+// A special case where (as a result counterstrike) both the attacker and the defender will score a hit to each other.
+// The actual strike messages (ATTACK_STRIKE_* and DEFENDER_STRIKE_*) are displayed after this message.
+//
+.BOTH_STRIKE.
+!Both parties manage to hurt each other.
+
+
+// A succesful straight-on block by the defender which calls for checking weapon damage.
+// 
+.MELEE_BLOCK.(defender)
+[PC:You block [PP_GEN:<attacker>] <attack_weapon>.]
+[*:<defender_defdesc> blocks [PP_GEN:<attacker>] <attack_weapon>.]
+
+// A succesful deft block by the defender where the attack is deflected and no weapon damage occurs.
+//
+.MELEE_PARRY.(defender)
+[PC:You deftly parry [PP_GEN:<attacker>] <attack_weapon>.]
+[*:<defender_defdesc> deftly parries [PP_GEN:<attacker>] <attack_weapon>.]
+
+
+
+.MELEE_MISS.(attacker)
+[PC:You completely miss [PP_OBJ:<defender>].]
+[ANIMAL:Its [ATTACK_HITS:<attack_aspect>] the thin air.]
+[*:<attacker_defdesc> completely misses [PP_OBJ:<defender>].]
+
+
+.DEFENDER_ADVANTAGE.(defender)
+[PC:=You gain tactical advantage to strike back immediately!]
+[*:=<defender_defdesc> gains tactical advantage to strike back immediately!]
+
+.ATTACKER_ADVANTAGE.(attacker)
+[PC:=You gain tactical advantage to immediately attack again!]
+[*:=<attacker_defdesc> gains tactical advantage to immediately attack again!]
+
+
+.MISSILE_STRIKE_LIGHT.
+the <attack_weapon> scratches [PP_GEN:<defender>] <bodypart>.
+
+.MISSILE_STRIKE.
+the <attack_weapon> hits [PP_GEN:<defender>] <bodypart>.
+
+.MISSILE_STRIKE_HARD.
+the <attack_weapon> pierces [PP_GEN:<defender>] <bodypart>!
+
+// when thrown/shot missile has struck a non-living target such as a tree, wall etc.
+// <item> - thrown item
+// %s 	  - map tile struck
+//
+.MISSILE_HITS_OBSTACLE.
++<the_item> hits %s.
+
+.MISSILE_HITS_SHIELD.(attacker)
+[*:+[PP_GEN:<attacker>] <attack_weapon> hits [PP_GEN:<defender>] shield.]
+
+
+// when missile hits something and breaks
+.MISSILE_BREAKS.
++<the_item> hits %s and breaks!
+
+.MISSILE_HITS_GROUND.
++<item> hits the ground.
+
+// when missile misses the original target
+//
+.MISSILE_MISS.(attacker)
+[PC:you narrowly miss <defender_defdesc>.]
+[*:[PP_SUBJ:<attacker>] narrowly misses <defender_defdesc>.]
+
+// when missile misses the original target by a greater distance
+//
+.MISSILE_WILD.(attacker)
+[PC:your <attack_weapon> flies past <defender_defdesc>.]
+[*:[PP_GEN:<attacker>] <attack_weapon> flies past <defender_defdesc>.
+
+
+// when player can't complete his missile attack (shoot/throw) due to getting hit or having to make a defense maneuver
+// 
+.MISSILE_ATTACK_CANCELLED.
+!You fail to complete your ranged attack!
+
+
+
+// When missile attack fails to hit the original target, but accidentally hits another target.
+// <defender> variables are set to match the accidental target before the message is displayed.
+//
+// the missile has missed the original target by great distance or hits another target in front of the original target.
+// 
+.MISSILE_ACCIDENTAL_TARGET.(attacker)
+[PC:!Your <attack_weapon> misses its mark and flies at <defender_defdesc> on its course!]
+[*:![PP_GEN:<attacker>] <attack_weapon> misses its mark and flies at <defender_defdesc> on its course!]
+
+// the missile has narrowly missed the original target and hits another target behind the original target
+//
+.MISSILE_ACCIDENTAL_TARGET_BEHIND.(attacker)
+[PC:!Your <attack_weapon> narrowly misses its mark but flies at <defender_defdesc> behind!]
+[*:![PP_GEN:<attacker>] <attack_weapon> narrowly misses its mark but flies at <defender_defdesc> behind!]
+
+// in case of trying to attack with hand (primary or secondary) that has no weapon wielded
+.NOT_WIELDED.
+!You have no weapon wielded in that hand!
+
+
+// Weapon damage messages
+.BREAK_DO.(who)
+[PC:!Your <item> breaks!]
+[*:![PP_GEN:<who>] <item> breaks!]
+
+
+
+// Fumble messages.
+//
+.FUMBLE_CHECK.(who)
+[PC:You have trouble holding onto your weapon.]
+[*:<npc_defdesc> has trouble holding onto [PP_GEN:<npc>] weapon.]
+
+.FUMBLE_DO.(who)	
+[PC:+The %s slips from your grasp.]
+[*:The %s slips from <npc_defdesc>'s grasp.]
+[HEAR:You hear something dropping down in the [IN_DIR:<npc_direction>].]
+
+// When combat round results in both attacker and defender making a fumble roll which MAY lead in combatant(s) to drop their weapon.
+// This message can result from counterstrike or block and also from unarmed/animal attack, so be general with the description.
+//
+.FUMBLE_TOGETHER.(defender)
+[PC:You and <attacker_defdesc> engage in an awkward standoff which results in mere fumbling.]
+[*:<defender_descdesc> and <attacker_desc> engage in an awkward standoff which results in mere fumbling.]
+
+// Stumble messages.
+//
+.STUMBLE_CHECK.(who)
+[PC:You stagger trying to maintain your balance.]
+[*:<npc_defdesc> staggers trying to maintain [PP_GEN:<npc>] balance.]
+
+.STUMBLE_DO.(who)
+[PC:&You stumble and fall.]
+[*:<npc_defdesc> stumbles and falls.]
+[HEAR:You hear some stumbling in the [IN_DIR:<npc_direction>].]
+
+// When combat round results in both attacker and defender making a stumble roll.
+// This may result in combatant(s) to fall prone, but not always.
+.STUMBLE_TOGETHER.(defender)
+[PC:You and <attacker_defdesc> collide against each other struggling not to trip over.]
+[*:<defender_defdesc> and <attacker_desc> collide against each other struggling not to trip over.]
+
+
+
+// messages when somebody gets a bleeding wound
+// use <wounded_bodypart> for value of the actually hurt bodypart.
+//
+.BLEEDING_LIGHT.(who)
+[PC:!You start to bleed from the <wounded_bodypart>.]
+[*:![PP_SUBJ:<who>] starts to bleed from the <wounded_bodypart>.]
+
+.BLEEDING.
+!The blood pours out of [PP_GEN:<who>] <wounded_bodypart>.
+
+.BLEEDING_HARD.
+!The blood gushes out of [PP_GEN:<who>] <wounded_bodypart>!
+
+
+
+// when NPC attacks someone (player or another NPC)
+// <defender> and <attacker> variables are set when string is displayed.
+// (defender) parameter can be used to display different string for
+// attack against player or another NPC
+//
+.NPC_ATTACKS.(defender)
+[PC:!<attacker_desc> rushes at you!]
+[*:!<attacker_desc> attacks <defender_defdesc>!]
+
+
+// when NPC calms down after being aggressive, or after the fight is over.
+// 
+.NPC_CALMS_DOWN.(who)
+[*:<npc_desc> calms down.]
+
+
+
+// when player has been attacked out from his sight
+.CANT_SEE_ATTACKER.
+!You've been attacked from out of sight!
+
+
+.RISE.(who)
+[PC:&You get back on your feet.]
+[*:<npc_desc> rises back on [PP_GEN:<who>] feet.]
+
+.RISE_FAILURE.(who)
+[PC:&You try but fail to get back on your feet!]
+[*:<npc_desc> struggles to get back on [PP_GEN:<npc>] feet.]
+
+
+.LEG_INJURY.
+[LOW:walking lame]
+[MED:limping]
+[HIGH:crippled]
+[DISABLED:unable to walk]
+
+.OVERALL_INJURY.
+[LOW:wounded]
+[MED:seriously wounded]
+[HIGH:grievously wounded]
+
+// when player has too severe leg injuries to walk or stand up
+//
+.UNUSABLE_LEGS.
+&Your serious leg injuries make it impossible to stay on your feet!
+
+
+
+// Displayed when the strike impact is completely absorbed by the victim's armour.
+// Don't use any attacker/defender values, but rather (who) and <npc*> values.
+//
+.IMPACT_ABSORBED.(who)
+[PC:+The impact doesn't penetrate your armour.]
+[ANIMAL:The impact doesn't penetrate its skin.]
+[*:+The impact doesn't penetrate [PP_GEN:<npc>] armour.]
+
+.IMPACT_UNHURT.(who).
+[PC:+The impact doesn't hurt you.]
+[*:+The impact doesn't hurt [PP_OBJ:<npc>].]
+
+.ACTIVITY_PROFILE.
+[FALLEN:fallen]
+[SLEEPING:sleeping]
+[AGGRESSIVE:aggressive]
+[ESCAPING:escaping]
+[IN_SHOCK:prone lying]
+[UNCONSCIOUS:unconscious]
+[FLYING:flying high]
+[IN_A_TREE:in a tree]
+
+
+// bodypart definitions.
+// <bodypart> macro returns values from these cases
+// 
+.BODYPART.
+[SKULL:skull]
+[EYE:eye]
+[FACE:face]
+[NECK:neck]
+[SHOULDER:shoulder]
+[UPPER ARM:upper arm]
+[ELBOW:elbow]
+[FOREARM:forearm]
+[FORELEG:foreleg]
+[HAND:hand]
+[PAW:paw]
+[THORAX:thorax]
+[ABDOMEN:abdomen]
+[HIP:hip]
+[GROIN:groin]
+[THIGH:thigh]
+[KNEE:knee]
+[CALF:calf]
+[SHANK:shank]
+[FOOT:foot]
+[HINDLEG:hindleg]
+[HOOF:hoof]
+[TAIL:tail]
+[WING:wing]
+
+
+.BODYZONE.
+[HEAD:head]
+[BODY:body]
+[LEGS:legs]
+[ARMS:arms]
+[FORELEGS:forelegs]
+[HINDLEGS:hindlegs]
+
+
+// description of bleeding wound
+// i.e. serious cut in left arm (bleeding) 
+//
+.WOUND_DESC_BLEEDING.
+bleeding
+
+
+
+// When character/npc falls unconscious from whatever reason (exhaustion, pain, trauma).
+// For NPCs a message for falling/dropping down is displayed before this message.
+//
+.FALL_UNCONSCIOUS.(who)
+[PC::The world turns black and you fall unconscious.]
+[*::<npc_defdesc> seems to have fallen unconscious.]
+
+// player regains consciousness
+.REGAIN_CONSCIOUSNESS.
+:You regain consciousness...
+
+
+// when somebody gets a fatal wound resulting in an immediate death.
+// (an applicable death message is will follow this one)
+//
+.FATAL_WOUND.(who)
+[PC:!The wound proves immediately fatal for you!]
+[*:![PP_SUBJ:<npc>] drops dead in an instant!]
+
+// when somebody gets a wound that nearly amputates the victim's bodypart. 
+// true amputation don't exist yet, but the this wound type still has its unique results.
+// 
+.AMPUTATION_WOUND.
+![PP_GEN:<npc>] <wounded_bodypart> is nearly cut in half!
+
+
+
+// description of applicable weapon skill displayed when examining the weapon from character's inventory
+// <item> gets value of the weapon name
+// %s gets value of the applicable skill
+//
+.EXAMINE_ITEM_SKILL.
++The applicable weapon skill for <the_item> is "%s".
+
+// description of weapon attack and defense class displayed when examining the weapon from character's inventory
+// <item> gets value of the weapon name
+// <attack_class> and <defense_class> gets value (0-6) of according class
+//
+.EXAMINE_ITEM_CLASS.
++Weapon classification of <the_item> gives it [WEAPON_CLASS:<attack_class>] bonus to attack, and [WEAPON_CLASS:<defense_class>] bonus to defense.
+
+// <var> gets value of penalty
+//
+.EXAMINE_TWO-HANDED_ITEM.
++<the_item> is two-handed weapon. Using it with one hand is [HANDMODE_PEN:<var>].
+
+
+// verbal description for weapon attack/defense class
+// 
+.WEAPON_CLASS.
+[0:zero]
+[1:a very little]
+[2:a little]
+[3:a decent]
+[4:a good]
+[5:a remarkable]
+[*:a superior]
+
+// description of the actual bonus gained from weapon class calculations (shown in wc_BONUS_ATTACKER and WC_BONUS_DOGDGE messages)
+// the possible bonus values are: 5,10,15,20,25,30.
+// 
+.WEAPON_CLASS_BONUS.
+[5:little]
+[10:slight]
+[15:decent]
+[20:good]
+[25:remarkable]
+[*:remarkable]
+
+// when attacker gains a bonus from using a weapon of high attack rank and the defender doesn't use a weapon
+// to defend or doesn't defend at all. 
+// the message should describe only the attack weapon attributes
+// <wc_bonus> gets value of the actual bonus gained from weapon class calculations (5,10,15,20,25) 
+//
+.WC_BONUS_ATTACKER.
+#The attack properties of the <attack_weapon> add a [WEAPON_CLASS_BONUS:<wc_bonus>] bonus to the success of [PP_GEN:<attacker>] attack.
+
+
+// when defender dodges a weapon which a low attack class and earns a weapon class bonus for 
+//
+.WC_BONUS_DODGE.
+#The short reach of [PP_GEN:<attacker>] <attack_weapon> gives [PP_OBJ:<defender>] a [WEAPON_CLASS_BONUS:<wc_bonus>] advantage to dodge.
+
+
+// when both combatants use weapons but the attacker's gains a bonus 
+// due to a better weapon class in the combination
+//
+.WC_BONUS_ATTACKER_WINS.
+#[PP_GEN:<attacker>] <attack_weapon> performs better on attack than [PP_GEN:<defender>] <defend_weapon> on defense giving [PP_OBJ:<attacker>] [WEAPON_CLASS_BONUS:<wc_bonus>] advantage.
+
+// when both combatants use weapons but the defender's gains a bonus 
+// due to a better weapon class in the combination
+//
+.WC_BONUS_DEFENDER_WINS.
+#Using a <defend_weapon> to defend against [PP_GEN:<attacker>] <attack_weapon> gains [PP_OBJ:<defender>] a [WEAPON_CLASS_BONUS:<wc_bonus>] advantage.
+
+
+// handmode penalty descriptions - penalty varies between 0-30
+.HANDMODE_PEN.
+[?:a little clumsy]
+[10:quite clumsy]
+[11:quite clumsy]
+[12:quite clumsy]
+[13:quite clumsy]
+[14:quite clumsy]
+[1?:clumsy]
+[20:not easy]
+[21:not easy]
+[22:not easy]
+[23:not easy]
+[24:not easy]
+[2?:difficult]
+[*:very difficult]
+
+// description when using two-handed weapon with one hand only. 
+// <var> common variable gets value of penalty 
+.TWO-HANDED_PENALTY.
+!It's [HANDMODE_PEN:<var>] to use your <item> with one hand.
+
+
+
+
+
+
+// COMBAT MENU TEXT - don't use formatting - descriptions for special attack possibilities
+//
+// "coup de grace" for unconscious/sleeping creatures
+//
+.HITOPT_DEATHBLOW.
+A deathblow is possible. You try to execute a carefully aimed strike to finish this unconscious victim.
+
+// butchering for leashed creature
+//
+.HITOPT_BUTCHERING.
+Butchering is possible. You try to execute a carefully aimed butchering blow to quickly stun or kill this leashed creature.
+
+
+
+
+
+
+
+
+ 

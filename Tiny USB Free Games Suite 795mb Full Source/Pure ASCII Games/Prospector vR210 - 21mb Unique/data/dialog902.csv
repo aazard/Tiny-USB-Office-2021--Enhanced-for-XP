@@ -1,0 +1,11 @@
+1;Your fur is funny. May I touch it?;
+;Yes;2
+;No;3
+;Only if i may touch yours;4
+2;It's really funny;
+3;Awwww…;
+4;Of course. It's really funny. Now your turn;
+;Touch it;5
+;Don't touch it;6
+5;That tickles!;
+6;Changed your mind? Ok then.;

@@ -1,0 +1,6 @@
+Searace - Beispiel Map
+Steige auf das Floß und fahre alle 55 Checkpoints ab!
+Wenn du am Ende angelangt bist musst du absteigen und zum
+Ziel laufen!
+
+Achtung: Deine Zeit ist begrenzt!

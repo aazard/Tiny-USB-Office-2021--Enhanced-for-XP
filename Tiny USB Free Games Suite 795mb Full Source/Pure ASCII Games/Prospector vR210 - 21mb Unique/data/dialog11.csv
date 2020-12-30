@@ -1,0 +1,7 @@
+1;This is merchant convoy <FLEET>;;;
+;Just saying Hello;3;;
+;We need fuel, would you sell some?;8;;
+;Where are we going again?;9;;
+3;Thanks. Also thanks for the help.;;;
+8;We can supply you with fuel for 5 Cr per ton;1;BUYFUEL;5
+9;We are headed for <GOAL>;;;

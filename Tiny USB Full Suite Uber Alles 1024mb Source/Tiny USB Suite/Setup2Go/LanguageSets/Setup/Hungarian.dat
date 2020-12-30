@@ -1,0 +1,152 @@
+; Hungarian translate: 	Sinka Zsolt
+;			sina@mailbox.hu
+
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% telepítõje
+Static1=A(z) %ProductName% %ProductVersion% már telepítve van a rendszerre. Ajánlot a meglévõ eltávolítása mielõtt újra telepítenéd a programot. Kattints az "Igen" gombra a(z) %ProductName% %ProductVersion% eltávolításához. Kattints a "Nem" gombra ha folytatni akarod a telepítést. Kattints a "Mégsem" gombra ha ki akarsz lépni.
+Error1=Nem futtatható az eltávolítás. Folytatódik a telepítés.
+Yes=&Igen
+No=&Nem
+Cancel=Mégsem
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Telepítõ jelszó
+Static1=Kérem add meg a jelszót
+OK=&OK
+Exit=&Kilépés
+Error_Title=Hiba
+Error_Static1=Sajnálom, a jelszó érvénytelen. Próbáld meg újra.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Nyelv választás
+Static1=Kérem válaszd ki a nyelvet amin folytatódik a telepítés.
+Next=&Tovább >
+Cancel=Mégsem
+
+[WELCOME_DIALOG]
+Dialog_Title=Üdvözöllek
+Static1=Üdvözöl a(z) %ProductName% %ProductVersion% telepítõ program. Ez a program fogja telepíteni a(z) %ProductName% %ProductVersion% alkalmazást a számítógépedre.
+Static2=Ajánlott az összes futó alkalmazás bezárása, mielõtt folytatnád a telepítést.
+Static3=Kattints a "Mégsem" gombra a telepítõbõl való kilépéshez és zárj be minden futó alkalmazást. Kattints a "Tovább" gombra a telepítés folytatásához.
+Static4=FIGYELEM: A programot védi a szerzõi jog.
+Back=< &Vissza
+Next=&Tovább >
+Cancel=Mégsem
+
+[LICENSE_DIALOG]
+Dialog_Title=Software Licensz Megállapodás
+Static1=Kérlek olvasd el a következõ Licensz Megállapodást. A PAGE DOWN billentyû segítségével olvashatod a megállapodás többi részét.
+Static2=Elfogadod az elõbbi Licensz Megállapodást? Ha nem, a telepítõ azonnal befejezõdik. Tovább folytatódik a telepítés amennyiben elfogadod a megállapodást.
+Back=< &Vissza
+Yes=Igen
+No=Nem
+
+[README_DIALOG]
+Dialog_Title=Olvass el
+Static1=Olvass el:
+Back=< &Vissza
+Next=&Tovább >
+Cancel=Mégsem
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Célkönyvtár kiválasztás
+Static1=A telepítõ a(z) %ProductName% programot a következõ könyvtárba fogja másolni.
+Static2=A telepítéshez ebbe a könyvtárba kattints a "Tovább" gombra.
+Static3=Másik könyvtárba történõ telepítéshez kattints a "Tallózás" gombra és válaszd ki a cél könyvtárat.
+Static4=A telepítõ programból való kilépéshez kattints a "Mégsem" gombra.
+Static5=Szükséges lemezterület:
+Static7=Szabad lemezterület:
+Browse=T&allózás...
+Back=< &Vissza
+Next=&Tovább >
+Cancel=Mégsem
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Választás a létezõ könyvtárakból
+Static1=Válassz ki egy könyvtárat a telepítéshez.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Program könyvtár választás
+Static1=A telepítõ hozzáadja a program ikonját a létezõ Programok listájához. Megadhatsz új nevet, vagy választhatsz egyet a létezõk közül. Kattints a "Tovább" gombra a folytatáshoz.
+Static2=&Program könyvtár
+Static3=&Létezõ könyvtárak
+Back=< &Vissza
+Next=&Tovább >
+Cancel=Mégsem
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Fájlok másolásának indítása
+Static1=A telepítõ elegendõ információval rendelkezik a program fájlok másolásához. Ha ellenõrizni, vagy változtatni akarsz a beállításokon kattints a "Vissza" gombra. Ha elégedett vagy a beállításokkal, kattints a "Tovább" gombra a fájlok másolásának indításához.
+Static2=Aktuális beállítások
+String1=Cél könyvtár:
+String2=Program csoport:
+Back=< &Vissza
+Next=&Tovább >
+Cancel=Mégsem
+
+[PROCESS_DIALOG]
+Dialog_Title=Fájlok másolása
+Cancel=Mégsem
+
+[FINISH_DIALOG]
+Dialog_Title=Telepítés kész
+Static1=A telepítõ befejezte a %ProductName% %ProductVersion% másolását a számítógépre.
+Check1=&Olvass el fájl megjelenítése
+Check2=&Telepített alkalmazás futtatása
+Back=< &Vissza
+Finish=Befejezés
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Kilépés a telepítõbõl
+Static1=A telepítés nincs kész. Ha most kilépsz a telepítõbõl, a program nem lessz a számítógépre másolva.
+Static2=Futtasd késõbb a telepítõt a program számítógépre másolásának befejezéséhez.
+Static3=A telepítés folytatásához kattints a "Folytatás" gombra. Ha valóban ki akarsz lépni a telepítõbõl kattints a "Kilépés" gombra.
+Resume=&Folytatás
+Exit=&Kilépés
+
+[UNINSTALL_DIALOG]
+1001=Eltávolítás
+1101=Fájl törlés megerõsítése
+1102=Valóban el kívánod távolítani a(z) %1 programot és az összes összetevõjét?
+1103=&Igen
+1104=&Nem
+1201=Program eltávolítása a számítógéprõl
+1202=A(z) %1 program eltávolítása a számítógéprõl. Kérlek várj amíg a következõ komponenseket eltávolítja a rendszerrõl...
+1203=Eltávolítás befejezõdött. Néhány elemet nem lehet eltávolítani. Az eltávolítás után hátramaradt el nem távolított elemeket kézzel el távolíthatod.
+1204=Eltávolítás sikeresen befejezõdött.
+1301=Megosztott fájlok törlése?
+1302=A rendszer szerint a következõ fájlokat más programok is használhatják. Ha ezek a programok már nincsenek a rendszeren akkor a fájlok törölhetõek, ellenkezõ esetben hibák léphetnek fel. Valóban el akarod távolítani a megosztott fájlokat?<br><br>Ezen fájlok kihagyása nem okoz károsodást a rendszerben. Ha nem tudod eldönteni mit tegyél, javasolt a megosztott fájlok megtartása.<br><br>Fájl név:<tab>%1<br>Hely:<tab>%2
+1400=Részletek
+1401=Részletek...
+1402=Nem lehet törölni a könyvtárat
+1403=Nem lehet törölni a fájlt
+
+[STRINGS]
+1=Értesítés
+10=Rendszer beállítások változása
+11=Az új beállítások érvénybelépéséhez a számítógép újraindítása szükséges.<br><br>Újra akarod indítani a számítógépet?
+21=A telepítendõ program inkompatibilis a(z) %1 OP rendszerrel. A telepítõ megszakítja a program másolását.
+22=A telepítendõ program inkompatibilis a(z) %1 OP rendszerrel. Ha a telepítõ folytatódik a program nem fog helyesen mûködni.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

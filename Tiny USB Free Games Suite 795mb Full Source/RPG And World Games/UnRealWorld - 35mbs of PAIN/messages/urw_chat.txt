@@ -1,0 +1,159 @@
+ 
+.TRADE_LETS_BARTER.(trading mood)
+:( -And just what did you <reptitle_trading> think of offering?
+:| -So let's barter! What have you got to offer, <plr_identity>?
+:) -My pleasure to start trading with <reptitle_trading_ind>.
+
+.TRADE_ACCEPT_OFFER.(trading mood)
+:( -Maybe I just might accept this offer. Do we have a deal now, <plr_bad_name>?
+:| -I do accept your offer. Shall we close the deal then?
+:) -This will do just fine. I'm happy with this deal if you are?
+
+.TRADE_DEAL.(trading mood)
+:( -So be it, <plr_bad_name>.
+:| -We have to come to an agreement over this trade.
+:) -Thank you once again, <plr_identity>.
+
+.TRADE_GENEROUS_DEAL.(trading mood)
+:( -I'm pleasantly surprised. Maybe you are not <reptitle_trading_ind> after all.
+:| -Thank you, <plr_identity>. That was generous.
+:) -Many thanks, <plr_identity>! You are not only <reptitle_trading_ind>, but generous too.
+
+
+.NPC_CAN_TRADE.(tra rep)
+:( -There are few things I could trade away, <plr_bad_name>, although I would prefer to do so with someone other than you.
+:| -I have some goods to trade.
+:) -If you find my goods interesting I'm happy to trade with you, <plr_identity>.
+
+.NPC_CANT_TRADE.(tra rep)
+:( -I do not trade my goods.
+:| -Sorry, <plr_identity>. I've got nothing to trade.
+:) -I'm sorry to disappoint <reptitle_tra_ind>, but I don't have anything to trade.
+
+.TRADE_BRIEFING.(trading mood)
+:| -If you like the goods around here just pick up the ones you need, come talk and we'll see about trading then.
+
+.TRADE_BANNED.
+-Leave our goods alone! We do not trade.
+
+
+// villagers have started trade stoppage refusing to trade with player character
+//
+.TRADE_STOPPAGE.(fam rep)
+-For the time being we keep our goods to ourselves and do not trade with anyone.
+
+
+.DEMAND_PAYMENT.(stealing mood)
+:( -You <reptitle_stealing> need to pay your debt right now!
+:| -You owe us for the goods you have picked.
+:) -Would you care to barter for the goods you've gotten?
+
+.FAILED_PAYMENT.(trading mood)
+:( -Bah! You better be prepared next time!
+:| -Next time come barter only when you are up to it.
+:) -Hmph! I though you were reliable when it comes to trading.
+
+
+.MISCHIEF_TELL_OFF.(mischief)
+:( -How many times does <reptitle_mischief_ind> like you need to be told off before you stop!
+:| -There are certain things you are not allowed to do!
+:) -You need to follow certain rules around here.
+
+
+.DROP_OUR_GOODS.(stealing mood)
+:( -Drop our goods right now, you <reptitle_stealing>!
+:| -Drop our goods right now!
+:) -I have to ask you to drop our goods now!
+
+.ADULT_TOPIC.(fam rep)
+:| -Talk to the adults.
+
+
+.GREET_MORNING.(overall rep)
+:( -Hmpf.
+:| -Good morning, <plr_identity>.
+:) -Good morning and an even better day to you, <plr_identity>!
+
+.GREET_NIGHT.(overall rep)
+:( -Why are you bothering me at this hour, <plr_bad_name>?
+:| -You are bothering us at unusual hour, <plr_identity>.
+:) -Don't you ever sleep, <plr_identity>?
+
+.GREET.(overall rep)
+:( -I am listening, <plr_bad_name>.
+:| -Greetings, <plr_identity>.
+:) -Good day, <plr_identity>.
+
+.GREET_LONG_TIME.(overall rep)
+:( -So you <plr_bad_name> have returned.
+:| -I haven't seen you much around here lately!
+:) -It's good to see you again!
+
+.GREET_LONGER_TIME.(overall rep)
+:( -I hoped you <plr_bad_name> wouldn't ever return.
+:| -Where have you been hiding yourself?
+:) -Good to see you after such a long time!
+
+.GREET_QUERY.(overall rep)
+:( -What do you want?
+:| -What's on your mind?
+:) -What can I do for you?
+
+.INTRODUCTION_REMARK.(fam rep)
+:( -Good to know you, <plr_name>.
+:| -I'm pleased to meet you, <plr_name>.
+:) -<plr_name>, it was about time to hear your name at last.
+
+
+.WOM_BAD_INFO.
+-Our neighbours came to warn us about %s.
+many: -We've been warned about %s at this area.
+
+.WOM_BAD_NEWS.
+-Unpleasant news about %s have reached us.
+many: -We have received many news about %s.
+
+.WOM_BAD_RUMORS.
+-Disturbing rumor about %s has been spreading around here lately.
+many: -Many unpleasant rumors about %s have come to our attention.
+
+.BANISH_PRECAUTION.(fam rep)
+:( -We don't want you around here, <plr_bad_name>. Go away!
+:| -You are not welcome here now, <plr_identity>. 
+:) -We have to ask you to leave for some time, <plr_identity>. 
+
+.THEFT_SUSPICION.(fam rep)
+-We keep an eye out for thieves, <plr_identity>.
+
+.THEFT_CHARGE.(fam rep)
+-You seem to be one shameless thief, <plr_identity>!
+
+.MURDER_SUSPICION.
+-We keep an eye out for you too, <plr_identity>.
+
+.MURDER_CHARGE.
+-You have blood on your hands, <plr_identity>! 
+
+
+
+.DELIVER_GENERAL.(fam rep)
+:( -For me? Well thank you, <plr_identity>.
+:| -I accept your offerings, <plr_identity>.
+:) -Thanks, <plr_identity>. This might come in handy.
+
+
+.DELIVER_HELP.(help rep)
+:( -This is much appreciated, <plr_identity>.
+:| -My humble thanks, <plr_identity>. Your favours will be remembered.
+:) -You are such <reptitle_help_ind>, <plr_identity>! I hope we can repay your favours one day.
+
+
+.DELIVER_COMP.
+:| -Alright, companion. I got it.
+
+
+
+.LOWREP_REFUSAL.
+-Bah! I don't feel like helping you on that matter, <plr_bad_name>.
+
+

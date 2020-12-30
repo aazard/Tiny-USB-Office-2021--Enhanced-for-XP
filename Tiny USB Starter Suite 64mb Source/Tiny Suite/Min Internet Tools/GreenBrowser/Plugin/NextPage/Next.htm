@@ -1,0 +1,290 @@
+<script language="JavaScript">
+
+function IMG_alt()
+{
+	if (limg.length > 0)
+	{
+		var R = new RegExp("^ *("
+			 + "next( page| chapter)?"
+			 + ") *$", "i");
+		try
+		{
+			for (var i=0;i<limg.length;i++)
+				if (R.test(limg[i].alt))
+				{
+					nex_array.push(["IMG.alt",limg[i]]);
+				}
+		} catch (e) {}
+	}
+}
+
+function SPAN_class()
+{
+	if (lspan.length >0)
+	{
+		try
+		{
+			for (var i=0; i<lspan.length; i++)
+				if (lspan[i].className == "pagenumstatic")
+				{
+					nex_array.push(["SPAN.class",i]);
+				}
+		} catch (e) {}
+	}
+}
+
+function INPUT_name_or_value()
+{
+	if (linput.length >0)
+	{
+		var R = new RegExp("^ *("
+				 + "next( +\\w+)?"
+				 + ") *$", "i");
+		try
+		{
+			for (var i=0; i<linput.length; i++)
+			{
+				if ((/page/i).test(linput[i].name) && (/go/i).test(linput[i+1].value))
+				{
+					nex_array.push(["INPUT.name",i]);
+				} else {
+					if (R.test(linput[i].value))
+					{
+						nex_array.push(["INPUT.value",i]);
+					}
+				}
+			}
+		} catch (e) {}
+	}
+}
+
+function A_previous_next_innerText_or_title()
+{
+	if (la.length >0)
+	{
+		var R = new RegExp("^ *("
+			 + "[\[]?>[\]]?|"
+			 + "next( +\\w*)?( *>>)?|"
+			 + "Continues[ \\.\\w]*|"
+			 + "[下后]{1} *一? *[页頁章篇]{1}.*( *>>)?"
+			 + ") *$", "i");
+		var strDiscuz5 = String.fromCharCode(8250); strDiscuz5 += strDiscuz5;//13.4.18
+		try
+		{
+			for (var i=0;i<la.length;i++)
+			{
+				if (R.test(la[i].innerText) || R.test(la[i].title) || la[i].innerText==strDiscuz5)
+				{
+					nex_array.push(["A.previous_next",la[i]]);
+				}
+			}
+		} catch (e) {}
+	}
+}
+
+function A_previous_next_innerHTML()
+{
+	if (la.length >0)
+	{
+		var R = new RegExp("("
+				 + "next( +\\w*| *>>)?|"
+				 + "Continues[ \\.\\w]*|"
+				 + "[下后]{1} *一? *[页頁章篇]{1}.*"
+				 + ")", "i");
+		try
+		{
+			var strDvbbs8 = "下一主题 >>";//13.4.20, move down, next page first
+			for (var i=0;i<la.length;i++)
+			{
+				if (R.test(la[i].innerHTML) || la[i].innerText==strDvbbs8)
+				{
+					nex_array.push(["A.previous_next",la[i]]);
+				}
+			}
+		} catch (e) {}
+	}
+}
+
+function A_title_paged()
+{
+	if (la.length > 1)
+	{
+		var R = new RegExp("^ *("
+				 + "分[页頁]{1}[：: \\d+]*"
+				 + ") *$", "i");
+		try
+		{
+			for (var i=la.length-1;i>-1;i--)
+				if (R.test(la[i].title))
+				{
+					var vec = new Array(4);
+					if ((/\d+/).exec(la[i].title) == 1)
+					{
+						vec[0]=i; vec[1]=1; vec[2]=-1; vec[3]=-1;
+					} else {
+						vec[0]=-1; vec[1]=-1; vec[2]=i; vec[3]=(/\d+/).exec(la[i].title);
+					}
+					nex_array.push(["A.title.分页",vec]);
+				}
+		} catch (e) {}
+	}
+}
+
+function page_index_only_innerText()
+{
+	if (la.length >1)
+	{
+		var pg = new RegExp("("
+				+ "\\d+|"
+				+ "[一二三四五六七八九十]|"
+				+ "next"
+				+ ")("
+				+ "page|"
+				+ "topic|"
+				+ "thread|"
+				+ "[页頁章]|"
+				+ "主题"
+				+ ")", "gi");
+		try
+		{
+			for (var i=0; i<la.length-1; i++)
+				if (la[i].href == document.location.href)
+				{
+					if (pg.test(la[i+1].innerText))
+					{
+						nex_array.push(["page_index_only",la[i+1]]);
+					}
+				}
+		} catch (e) {}
+	}
+}
+
+function next_page()
+{
+	L = document.location.href;
+	d=/(\d+)([\D]*)$/;
+	if(L.match(d))
+	{
+		oldNum = d.exec(L)[1];
+		newNum = String(parseInt(oldNum) + 1);
+		while (newNum.length < oldNum.length)
+			newNum = "0" + newNum;
+		return L.replace(d,newNum + d.exec(L)[2]);
+	}
+}
+
+var linput= document.all.tags("INPUT");
+var limg = document.all.tags("IMG");
+var la = document.all.tags("A");
+var lspan = document.all.tags("SPAN");
+
+var t, nex;
+var nex_array = [];
+var begin = -1; end = la.length;
+var uri = next_page();
+
+IMG_alt();
+SPAN_class();
+INPUT_name_or_value();
+A_previous_next_innerText_or_title();
+A_title_paged();
+A_previous_next_innerHTML();
+page_index_only_innerText();
+
+if (nex_array.length > 0)
+{
+	t = nex_array[0][0];
+	nex = nex_array[0][1];
+}
+if (uri != undefined)
+{
+	if (nex_array.length == 0) t = "page_plus";
+	if (nex_array.length > 1)
+	{
+		var uri_index = 0;
+		for (var i=0; i<nex_array.length; i++)
+		{
+			if (uri == nex_array[i][1].href)
+			{
+				uri_index = i;
+				break;
+			}
+		}
+		t = nex_array[uri_index][0];
+		nex = nex_array[uri_index][1];
+	}
+}
+
+switch (t)
+{
+	case "SPAN.class":
+		if (nex+2<lspan.length && lspan[nex+2].className == "pagenum")
+		{
+			document.location.href = lspan[nex+1].all.tags("A")[0].href;
+		}
+		break;
+	case "INPUT.name":
+		linput[nex].value = linput[nex].value*1 + 1;
+		linput[nex+1].click();
+		break;
+	case "INPUT.value":
+		linput[nex].click();
+		break;
+	case "IMG.alt":
+		nex.click();
+		break;
+	case "A.previous_next":
+		if (nex.href.substr(0,11).toLowerCase()=="javascript:" || nex.href.substr(0,9).toLowerCase()=="vbscript:")//13.4.18
+			nex.click();
+		else
+			document.location.href = nex.href;
+		break;
+	case "A.title.分页":
+		begin = nex[0];
+		end = nex[2];
+		var bp = nex[1];
+		var ep = nex[3];
+
+		if (end < la.length)
+		{
+			for (var i=end-1; i>end-6; i--)
+			{
+				N=(/\d+/).exec(la[i].innerText);
+				N1=(/\d+/).exec(la[i-1].innerText);
+				if (N1 == null || N-N1 == 2)
+				{
+					var o=i;
+					break;
+				}
+			}
+		} else {
+			if (begin > -1)
+			{
+				for (var i=begin+1; i<begin+6; i++)
+				{
+					N1=(/\d+/).exec(la[i].innerText);
+					N=(/\d+/).exec(la[i+1].innerText);
+					if (N != null && N-N1 == 2)
+					{
+						var o=i+1;
+						break;
+					}
+				}
+			}
+		}
+		if (o != undefined)
+		{
+			document.location.href = la[o].href;
+		}
+		break;
+	case "page_index_only":
+		if (document.location.href != nex.href)
+			document.location.href = nex.href;
+		break;
+	case "page_plus":
+		if (document.location.href != uri)
+			document.location.href = uri;
+		break;
+}
+
+</script>

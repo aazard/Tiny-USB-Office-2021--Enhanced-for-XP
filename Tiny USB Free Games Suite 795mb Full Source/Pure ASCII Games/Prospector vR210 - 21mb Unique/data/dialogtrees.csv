@@ -1,0 +1,36 @@
+1;SUBJUGATE OR BE DESTROYED;
+;Who are you?;2
+;Why should we subjugate?;3
+;I don't want to be subjugated.;4
+;No chance. We will destroy you!;5
+2;WE ARE THE NEW MASTERS OF THIS AREA OF SPACE;
+;Who made you master?;6
+;New Masters? Where there old masters too?;6
+;What If I don't recognize you as the new masters?;4
+3;SUBJUGATE OR BE DESTROYED;
+;You already said that;3
+;I don't want to be subjugated.;4
+;No chance. We will destroy you!;5
+;All right, subjugation it is;7
+4;THEN BE DESTROYED;
+;In that case I subjugate to you;7
+;No chance. We will destroy you!;5
+5;YOU WILL NOT SUCCEED, LIKE OTHERS HAVE FAILED BEFORE YOU.;
+;Others? What others;6
+;We'll see…;0
+6;THE ANCIENTS CREATED US, BUT THEY COULDN'T CONTROL US. SO WE DEFEATED THEM;
+;For what purpose did the ancients create you?;8
+;Can you tell us anything about the ancients;9
+;I don't believe you. I will look for these ancients and ask them myself;0
+7;OPEN YOUR MINDS AND STOP RESISTING OR WE WILL DESTROY YOU;
+8;THE ANCIENTS CREATED MANY CREATURES, FOR DIFFERENT PURPOSES. WE DO NOT KNOW WHY THEY CREATED US, ONLY THAT THEY WERE UNABLE TO CONTROL US;
+;I see;6
+9;THEY WANTED TO CONTROL US, BUT WE DESTROYED THEM.;
+;I see;6
+10;I am Apollo! Bow down and Worship me!;
+;Never!;11
+;Who is Apollo?;12
+;I don't believe you are Apollo.;13
+;How shall we worship you?;14
+;(Lie) You are a god, and entitled to our worship. We will gladly obey;15
+;(Truth) You are a god, and entitled to our worship. We will gladly obey;16

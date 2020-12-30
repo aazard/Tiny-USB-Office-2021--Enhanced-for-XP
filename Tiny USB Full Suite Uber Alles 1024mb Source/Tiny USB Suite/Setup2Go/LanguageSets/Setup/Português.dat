@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% Instalação
+Static1=%ProductName% %ProductVersion% já esta instalado no seu sistema. recomenda-se que desinstale a aplicação antes de reinstalar. Pressione Sim para desinstalar %ProductName% %ProductVersion%. Pressione Não para continuar com a instalação. Pressione Cancelar para sair.
+Error1=A desinstalação não pode ser executada. A instalação continuará.
+Yes=&Sim
+No=&Não
+Cancel=Cancelar
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Senha para instalação
+Static1=Por favor digite a senha para instalação
+OK=&OK
+Exit=&Sair
+Error_Title=Erro
+Error_Static1=Senha incorreta. Por favor, tente novamente.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Seleção de Linguagem
+Static1=Por favor selecione a linguagem que será usada durante a instalação.
+Next=&Próximo >
+Cancel=&Cancelar
+
+[WELCOME_DIALOG]
+Dialog_Title=Bem-vindo
+Static1=Bem-vindo à instalação de %ProductName% . Este programa instalará %ProductName% em seu computador.
+Static2=É recomendável que feche todos os outros programas antes de executar esta instalação.
+Static3=Pressione Cancelar para sair e então feche qualquer programa que esteja executando no Windows. Pressione Próximo para continuar com a instalação.
+Static4=AVISO: Este este programa é protegido pelas leis de direitos autorais e pelos tratados internacionais.
+Back=< &Retornar
+Next=&Próximo >
+Cancel=&Cancelar
+
+[LICENSE_DIALOG]
+Dialog_Title=Contrato de licença do Software
+Static1=Por favor leia o contrato abaixo. Pressione a tecla PageDown para ver o resto do contrato.
+Static2=Aceita todos e cada um dos termos do contrato? Se optar por NÃO, a instalação será encerrada. Para continuar com a instalação, você deve aceitar este contrato.
+Back=< &Retornar
+Yes=Sim
+No=Não
+
+[README_DIALOG]
+Dialog_Title=Leia-me
+Static1=Leia-me:
+Back=< &Retornar
+Next=&Próximo >
+Cancel=&Cancelar
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Selecione o diretório de destino
+Static1=%ProductName% será instalado no seguinte diretório.
+Static2=Para instalar neste diretório, pressione Próximo.
+Static3=Para instalar em um diretório diferente, pressione Explorar e selecione outro diretório.
+Static4=Você pode optar por não instalar %ProductName% pressionando Cancelar para sair desta instalação.
+Static5=Espaço requerido:
+Static7=Espaço disponível:
+Browse=E&xplorar...
+Back=< &Retornar
+Next=&Próximo >
+Cancel=&Cancelar
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Selecione um diretório existente
+Static1=Por favor selecione o diretório para instalar.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Selecione o Grupo do programa
+Static1=A instalação adicionará os ícones ao grupo mostrado abaixo. Você pode definir um novo nome de grupo, ou selecionar um da lista de grupos existentes. Pressione Próximo para continuar.
+Static2=&Grupo de programas
+Static3=Grupos E&xistentes
+Back=< &Retornar
+Next=&Próximo >
+Cancel=&Cancelar
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Início de cópia de arquivos
+Static1=A instalação tem informação suficiente para iniciar a cópia de arquivos do programa. Se deseja revisar ou alterar alguma opção, pressione Retornar. Se está satisfeito com as opções, pressione continuar para iniciar a instalação do software.
+Static2=Opções selecionadas
+String1=Diretório de destino:
+String2=Grupo de programas:
+Back=< &Retornar
+Next=&Próximo >
+Cancel=&Cancelar
+
+[PROCESS_DIALOG]
+Dialog_Title=Copiando arquivos
+Cancel=&Cancelar
+
+[FINISH_DIALOG]
+Dialog_Title=Instalação Completa
+Static1=A instalação de %ProductName% em seu computador foi concluída com sucesso.
+Check1=&Ver arquivo leia-me
+Check2=&Executar o programa agora
+Back=< &Retornar
+Finish=&Terminar
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Sair de instalação
+Static1=A instalação não está completa. Se sair da instalação agora, o software não será instalado.
+Static2=Você poderá executar o programa de instalação no futuro.
+Static3=Para continuar, pressione Continuar. Se realmente deseja abortar a instalação pressione Sair.
+Resume=&Continuar
+Exit=&Sair
+
+[UNINSTALL_DIALOG]
+1001=Setup2Go Desinstalador
+1101=Confirme a exclusão dos arquivos
+1102=Está seguro que quere remover completamente %1 e todos seus componentes?
+1103=&Sim
+1104=&Não
+1201=Remover software de seu Computador
+1202=A desinstalação removerá o software %1 de seu computador. Por favor espere enquanto cada um dos seguintes componentes é removido...
+1203=Desinstalação terminada. Alguns elementos não puderam ser removidos. Você deve removê-los manualmente.
+1204=Desinstalação completada com êxito.
+1301=Remover arquivos compartilhados?
+1302=O sistema indica que os seguintes arquivos compartilhados já não serão utilizados por outro programa. Se algum deles estiver sendo utilizado e for removido, esses programas podem não funcionar mais. Está seguro que deseja remover os arquivos compartilhados?\r\rManter os arquivos não danificaria seu sistema. Se você não estiver seguro, é recomendável que os arquivos não sejam removidos.\r\rNome do arquivo:\t%1\rModificado em:\t%2");
+1400=Detalhes
+1401=Detalhes...
+1402=Incapaz de apagar o diretório
+1403=Incapaz de apagar o arquivo
+
+[STRINGS]
+1=Aviso
+10=Troca nas opções do sistema
+11=Deve reiniciar seu computador para que as novas mudanças tenham efeito.\r\rDeseja reiniciar seu computador agora?
+21=Seu computador é incompatível com %1. A instalação será abortada.
+22=Seu sistema é incompatível com %1. A instalação continuará, entretanto pode ser que o software não funcione adequadamente.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

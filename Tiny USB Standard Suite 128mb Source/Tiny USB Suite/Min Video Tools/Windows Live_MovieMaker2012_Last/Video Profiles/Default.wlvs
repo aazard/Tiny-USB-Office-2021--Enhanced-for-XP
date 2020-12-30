@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<profileset>
+
+<profile id="1001" category="1">
+<title label="#0" icon="#0" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="24000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="1002" category="1">
+<title label="#1" icon="#1" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5500000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="480" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="1003" category="1">
+<title label="#2" icon="#2" />
+<props>
+<attribute key="{55F62B9E-F032-428c-9317-B486B78FF85A}" type="STRING" value="WindowsDVDMaker" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2799000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="720" low32="480" />
+<attribute key="{c6376a1e-8d0a-4027-be45-6d9a0ad39bb6}" type="UINT64" high32="213" low32="180" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="1004" category="1">
+<title label="#3" icon="#3" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="12000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="44100" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="1500000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="240" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2001" category="2">
+<title label="#4" icon="#4" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="16000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="480" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2002" category="2">
+<title label="#5" icon="#4" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="12000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="1500000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="240" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2003" category="2">
+<title label="#6" icon="#5" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2004" category="2">
+<title label="#7" icon="#5" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="16000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="272" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2005" category="2">
+<title label="#9" icon="#6" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="10000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2006" category="2">
+<title label="#10" icon="#6" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="10000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2007" category="2">
+<title label="#11" icon="#6" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="24000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2008" category="2">
+<title label="#12" icon="#6" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="1000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="240" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="2009" category="2">
+<title label="#13" icon="#6" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="1000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="480" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="3001" category="3">
+<title label="#14" icon="#7" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="10000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="3002" category="3">
+<title label="#15" icon="#7" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="10000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="3003" category="3">
+<title label="#16" icon="#7" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="24000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="3004" category="3">
+<title label="#17" icon="#7" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="10000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="3005" category="3">
+<title label="#18" icon="#7" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="24000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4001" category="4">
+<title label="#19" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2200000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4002" category="4">
+<title label="#20" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4003" category="4">
+<title label="#21" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4004" category="4">
+<title label="#22" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4005" category="4">
+<title label="#23" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4006" category="4">
+<title label="#24" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="5000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4007" category="4">
+<title label="#25" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="2000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="720" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="4008" category="4">
+<title label="#26" icon="#8" />
+<props>
+<attribute key="{4D45F527-8A9D-4968-97C9-72DFC809CAEA}" type="UINT32" value="1" />
+</props>
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+<video>
+<attribute key="{20332624-FB0D-4D9E-BD0D-CBF6786C102E}" type="UINT32" value="4000000" />
+<attribute key="{1652C33D-D6B2-4012-B834-72030849A37D}" type="UINT64" high32="0" low32="1080" />
+<attribute key="{C459A2E8-3D2C-4E44-B132-FEE5156C7BB0}" type="UINT64" high32="30000" low32="1001" />
+</video>
+</profile>
+
+<profile id="5001" category="5">
+<title label="#8" icon="#9" />
+<audio>
+<attribute key="{1AAB75C8-CFEF-451C-AB95-AC034B8E1731}" type="UINT32" value="24000" />
+<attribute key="{37E48BF5-645E-4C5B-89DE-ADA9E29B696A}" type="UINT32" value="2" />
+<attribute key="{5FAEEAE7-0290-4C31-9E8A-C534F68D9DBA}" type="UINT32" value="48000" />
+</audio>
+</profile>
+
+</profileset>

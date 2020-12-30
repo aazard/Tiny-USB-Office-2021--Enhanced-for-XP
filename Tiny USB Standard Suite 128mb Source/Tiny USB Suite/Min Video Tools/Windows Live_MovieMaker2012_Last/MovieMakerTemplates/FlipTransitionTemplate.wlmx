@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"FlipTransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Reveals"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='1'/>
+    </MetadataSet>
+
+    <!--OUT properties -->
+    <Transform>
+      <MetadataSet DEF='OutSockets'>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"rotate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"FlipPreviousClipInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"previous"'/>
+        </MetadataSet>
+        <MetadataSet containerField='value' name='OutSocket'>
+          <MetadataString containerField='value' name='socketName' value='"rotate"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"FlipCurrentClipInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+          <MetadataString containerField='value' name='socketConnectToExtent' value='"current"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--IN properties -->
+    <Transform>
+      <MetadataSet DEF='InSockets'>
+        <MetadataSet containerField='value' name='InSocket'>
+          <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+          <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+          <MetadataString containerField='value' name='socketParentDEF' value='"FlipInterpolator"'/>
+          <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+        </MetadataSet>
+      </MetadataSet>
+    </Transform>
+
+    <!--Nodes that need to be injected-->
+    <Transform DEF='InjectSet'>
+      <ScalarInterpolator DEF='FlipInterpolator' key='0 1' keyValue='0 1'/>
+      <OrientationInterpolator DEF='FlipPreviousClipInterpolator' 
+                               key='0 0.5 1' 
+                               keyValue='0 1 0 0, 0 1 0 -1.5707963267948966192313216916398, 0 1 0 -1.5707963267948966192313216916398'/>
+      <OrientationInterpolator DEF='FlipCurrentClipInterpolator'
+                               key='0 0.5 1' 
+                               keyValue='0 1 0 1.5707963267948966192313216916398, 0 1 0 1.5707963267948966192313216916398, 0 1 0 0'/>
+      <ROUTE fromNode='FlipInterpolator' fromField='value_changed' toNode='FlipPreviousClipInterpolator' toField='set_fraction'/>
+      <ROUTE fromNode='FlipInterpolator' fromField='value_changed' toNode='FlipCurrentClipInterpolator' toField='set_fraction'/>
+    </Transform>
+
+    <!--X3d containing Out Node's -THIS WILL NOT BE INJECTED INTO THE SCENE-->
+
+  </Transform>
+</X3D>

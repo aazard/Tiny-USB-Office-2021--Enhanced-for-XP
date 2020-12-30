@@ -1,0 +1,89 @@
+Stats of the factions. Edit at own risk.
+-factionname (not important)
+x,y
+Name
+Adjective
+Color
+Knowledge
+Capital
+
+-------------------------Roma #1
+371,303
+Roma
+Roman
+8398
+0
+Roma
+
+-------------------------Carthage #2
+222,410
+Carthage
+Carthaginian
+169335
+0
+Carthage
+
+-------------------------Samnium #3
+403,264
+Samnium
+Samnite
+16384
+0
+Aesernia
+
+-------------------------Epirus #4
+511,441
+Epirus
+Epirote
+10485760
+0
+Ambracia
+
+-------------------------Etruria #5
+359,239
+Etruria
+Etruscan
+65408
+0
+Perusia
+
+-------------------------Vetentii #6
+424,181
+Vetentii
+Venetic
+33023
+0
+Patavium
+
+-------------------------Ligures #7
+293,176
+Ligures
+Ligurian
+16776960
+0
+Hasta
+
+-------------------------Illyria #8
+495,295
+Illyria
+Illyrian
+8454143
+0
+Narona
+
+-------------------------Syracuse #9
+358,437
+Syracuse
+Syracuse
+11172158
+0
+Syracuse
+
+-------------------------Lucani #10
+427,368
+Lucani
+Lucanian
+12615935
+0
+Paestum
+

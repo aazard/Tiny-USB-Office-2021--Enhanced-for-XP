@@ -1,0 +1,288 @@
+*p
+!You are standing!A
+:You get back on your feet.B
+:You are extremely tired and can no longer stay on your feet.C
+:You feel extremely tired...D
+:You feel very tired and sleepy...E
+:You need water! Your knees start to shake and you fall down...F
+:You regain consciousness ...G
+:You fall few feet with no injuries.H
+:You are starting to feel very sick.I
+:You are starting to feel sick.J
+:You are starting to feel weak and dizzy.K
+:You are starting to feel weak.L
+:You are starting to feel mildly nauseous.M
+:You are starting to feel slightly nauseous.N
+:You need to apply a cold compress to the wound.O
+:You need to set and splint the bone.P
+:You need to clean and dress the wound with water and bandages.Q
+:You need to clean the wound, perform surgery, and dress it.R
+:You need to gently warm the injury.S
+!You can't treat a disease like this.T
+:The bleeding seems to stop.U
+!The bleeding didn't stop yet.V
+!Wound not treated!W
+:This wound is in very good condition now.X
+!The wound starts to bleed a little!Y
+!The wound starts to bleed!Z
+*h
+:This wound looks very good now.A
+:This wound looks quite good now.B
+:It will take some time before this wound heals.C
+:This wound looks quite bad.D
+:This is a very bad injury.E
+:This wound looks terrible, and may even be deadly.F
+:You are freezing and shivering from the cold.G
+:You feel bitterly cold.H
+:You feel cold.I
+:You feel rather warm.J
+:You are sweating a bit.K
+:You are sweating a lot!L
+:You have recover somewhat from starvation.M
+:You have fully recovered from starvation.N
+!You pass out due to bloodloss.O
+:@You suddenly feel quite weak and feverish. You may have caught the plague.P
+:@A-a-a-choo! You suddenly sneeze. Maybe you are about to catch a cold.Q
+:@Some plant scratches your skin and as you look at it you recognize it to be a poison ivy!R
+:You feel a bit cold.S
+*P
+:However, you manage to control yourself.A
+:You fail to control yourself.B
+:You totally lose your control and succumb.C
+!You become hysterical!D
+!You faint and fall down.E
+:After a while you wake up...F
+:Looking down from this height makes you terrified!G
+:Open space around here makes you terrified!H
+:You get terrified seeing all the blood around you!I
+:You see a disgusting rodent nearby!J
+:You see a disgusting feline nearby!K
+:You see a disgusting canine nearby!L
+:The crowd around you makes you feel terrified!M
+:You see a disgusting equine nearby!N
+!You get scared of the water around you!O
+!The combat situation and all these weapons make you terrified!P
+*R
+!You don't have enough ritual points left!A
+!The ritual must be performed on a coast!B
+!The ritual must be performed at a lake rich of fish.C
+!The ritual must be performed out in the wilderness!D
+!You should have a trap readied and you should stand right on it!E
+Something splashes in the water and swims further before you can see what it is.F
+Surface of the water looks very calm and peaceful.G
+Surface of the water looks very dark and you see no movement under it.H
+You see several fish swimming peacefully in the water.I
+The wilderness goes very silent for a moment.J
+You hear an almost silent rustle nearby and notice new tracks here.K
+You hear silent angry whispers nearby and decide not to sleep here.L
+The ground suddenly looks very soft and comfortable.M
+It seems nothing special is happening.N
+Your trap looks very hard to notice and seems to merge into the environment very well.O
+The wilderness still seems very unfamiliar.P
+You feel the wilderness is very rugged and wild giving you no shelter.Q
+*S
+!This skill can't be used in the wilderness! Press [ENTER] to zoom into local area.A
+!This skill is automatically used when necessary!B
+n/aC
+!TIMBERCRAFT skill can't be used to work with this kind of wooden material.D
+!You can't swim over there!E
+:You start swimming ...F
+:You face serious problems as you try to swim further.G
+:You sink under the water over and over again and finally pass out, lungs filled with water.H
+You easily swam your way this far.I
+You had some trouble making progress during your swimming.J
+Even though you went under a few times, you still managed to swim this far.K
+:Unfortunately you caught no fish.L
+:You start pulling up the net...M
+:Some fish seem to be caught in it!N
+:It feels very light. You see no fish in it.O
+You ready yourself to knock down any fish that dares to approach the coast-line.P
+INGAME.Q
+You only got yourself wet and caught no fish!R
+You didn't manage to catch any fish!S
+!You can't climb over there!T
+:You start climbing...U
+!No trees here! Can't find any branches!V
+You found some branches.W
+voivaihtaa!X
+!There is not enough firewood for the fire to be set properly!Y
+You did not succeed in making a fire.Z
+*s
+You managed to make a fire.A
+!Can't use skills in the heat of the combat!B
+!You know what? Fish live in the water.C
+Return here some day to pick up your catch.D
+You can't continue climbing now.E
+:You return on the surface of the earth.F
+You don't think there is any vegetarian food in this area.G
+You notice marks of fruitful plants here. Now you just have to find them.H
+:You found some vegetarian food!I
+!You should be in a sauna to use this scoop.J
+!There should be water near you!K
+!You should be located near heated sauna stove in order to throw water on it.L
++You take some water into the scoop and throw it on the sauna stove.M
+:The sauna stove hisses and hot steam fills the room for a moment.N
+!That's far too hard to dig.O
+!What if you tried to use your pick-axe on a wall.P
+:You give up after thirty minutes.Q
+:You succeeded in cutting away some rock.R
+:You make several clumsy, incorrect cuts and ruin the whole skin!S
+!You make some clumsy cuts but manage to get the hide almost undamaged.T
+!You manage to cut the skin without any big mistakes.U
+!You cut the skin with very skilful moves.V
+!You can't catch any fish from here. The water you are standing by isn't abounding in fish at all.W
+(FREE!hould stand on the corpse in order to use hideworking!X
+!You don't have a cutting weapon wielded.Y
+voi k„ytt””.Z
+!This skill can be used only on the wilderness map.[
+*E
+Shopkeeper starts to deal with you:A
+"I'm sorry but I can't buy that. I don't have enough coins to pay an appropriate price for that."B
+"Alright then, keep your stuff."C
+!You don't have enough coins!D
+!You're carrying too much! Drop something or you'll need an extra pair of arms soon!E
+--F
+!You are already wearing that!G
+!Both your hands are in use!H
++Swapped to 2nd weapon!I
++Swapped to 1st weapon!J
+!Can't wield that!K
+!You aren't wielding anything!L
+!You can't drop something that is being used.M
+!You can't drop something you are wearing.N
+"That kind of item is NOT wanted here!"O
+!There is nothing to fill this container with here.P
+To pack an animal you must have all the items you want pack on the ground beside you.Q
+?Do you wish to pack items from this location (Y/N)? R
+!You can't pack an animal without dropping the items you wish to pack!S
+!You should stand on the watercraft!T
+!Only real landlubbers would sail on the surface of the earth.U
+:Do you wish to fill it (Y/N)? V
+!You can't use that as a lamp oil!W
+!You can't set the trap over there!X
+:@You set the trap.Y
+:Remember to come back and check the trap someday.Z
+*X
+#Use cursor keys to choose target, [ENTER] to select or [ESC] to cancel.A
+!You can't see there!B
+:This place feels very peaceful now.C;
+!ERROR! Could not spawnl RNDHOUSE.EXE!D;
+#Campaign border reached! You can change Campaign now if you wish to.E
+?Select new Campaign [Y/N]? F
+!Suddenly the floor beneath your feet caves in developing a deep chasm!G
+!You drop into a chasm!H
+!Hard walls batter your body during your fall into the abyss...I
+You climb up through the chasm.J
+!This building seems to be closed!K
+:You can't zoom out directly because you're not alone around here! To zoom out walk over map border.L
+removed.M
+:You can't remember where you were coming from or where any familiar landmarks were.N
+:You must have lost it somewhere - probably forever.O
+:The wind suddenly blows.P
+:Suddenly a chorus of howls startles you!Q
+:You hear some whispers and footsteps.R
+:Something has been written on the scroll already. Continue writing (y/n)? S
++This map represents a region from some far-away land. It's useless around here.T
+Do you wish to turn around and swim back (y/n)? U
+You turn around and swim back on the coast.V
+!You see no creature there!W
+:You boldly continue swimming...X
+!You should wield an axe first!Y
+--Z
+*M
+?Really walk into the fire [Y/N]? A
+!You are too fatigued to move! Rest for a while!B
+!Your excess load prevents you from moving! Drop something!C
+!You are too injured to stay on your feet!D
+Splash! The boulder sinks into the water.E
+The fire's flames warm you as you walk by.F
+You trudge through the swamp.G
+!It seems to be locked.H
+!Dummy! It's already open.I
+You open the door.J
+!That isn't a door!K
+You peek into the dark cave and take a deep breathL
+as you carefully step a little bit further into the shadows.M
+By the deep blue lake where the surface of the water mixesN
+your reflection to the reflection of the skies aboveO
+Here, by the hillside, where the bones of the earthP
+rise towards the sky high above the wanderers belowQ
+You shake the pine-needles off your shoulders and raise yourR
+head to see some small cosy looking houses.S
+Branches bend and curve above your head here in theT
+majestic temple of the ageless forest asU
+You get the twigs from the conifer trees nearby.V
+t„nvoi vaihtaaW
+you start to examine the gifts of the mother-earth.X
+the peace is broken by a sudden encounter.Y
+The wilderness hums behind your back as you enter there.Z
+*F
+:Even if you wanted to you can't eat this piece of raw meat now.A
+:With all your might you stick the meat into your mouth.B
+Yuck! This tastes foul!C
+This tastes awful!D
+Crunch, crunch, crunch...E
+Yum! Delicious!F
+Crunch...G
+:Burp! Your stomach is full.H
+:You feel more lively and less exhausted.I
+:Your thirst is extinguished.J
+Glp, glp, glp...K
+You relax and sip your tea.L
+This tastes like water.M
+!It is empty!N
+*C
++Your armor absorbs the whole impact.A
+!Such a lousy blow does no harm.B
+ok.C
+:You maintain your balance.D
+!Such a lousy blow does no harm.E
+!You've been attacked from behind.F
+!You hear sounds of fighting.G
+!You have no 1st weapon wielded!H
+!You have no 2nd weapon wielded!I
++You can't use this weapon that way.J
+!You have no free fist to punch with.K
+:You attempt to trigger the trap.L
+!There are no living creatures.M
+!You don't have any weapon wielded.N
+!You don't have a bow wielded!O
+!Wield an arrow first!P
+!Bows are for shooting arrows, not for throwing.Q
+!@You suddenly encounter something.R
+:You hear the forest living around you as the time peacefully goes by.S
+:A bird chirps nearby.T
+:You hear a bird singing a beautiful hymn nearby.U
+:Suddenly tracks beside your feet capture your attention.V
++You draw your bow and prepare to shoot.W
+!You didn't have enough time to draw your bow!X
+*e
++You start to load the crossbow.A
++Required equipment selected - OK!B
+There is plenty of water nearby.C
+There are some suitable trees near you.D
+There is a fire near you.E
+You are wielding a cutting weapon.F
+!There's nobody to chat with you!G
+!You get no response. Go a bit closer.H
+!You should be just beside your target in order to perform this chat-maneuver.I
+!Packing is prohibited here!J
+!Unpacking is prohibited here!K
++A branch snaps under your foot.L
+!You have been noticed - no hiding anymore!M
+:You carefully sneak ahead.N
+!You find no place to hide in this open area and become uncovered!O
+:You step out from your hiding place.P
+!Hiding doesn't work on the wilderness map!Q
+!As you are clearly seen now it's impossible to hide.R
+unusedS
+:You find a cover and hide.T
+#Command is not available at the moment!U
+You are wielding an axe.V
+*m
+!Dummy! It's already closed.A
+You failed picking this lock.B
+Click! ...says the lock.C
+!That is not a locked door!D
+You close the door.E
+

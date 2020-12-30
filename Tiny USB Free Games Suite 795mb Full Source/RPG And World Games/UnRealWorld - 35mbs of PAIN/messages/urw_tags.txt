@@ -1,0 +1,8 @@
+
+.QUALITY.
+[0:Crude]
+[1:Inferior]
+[2:Decent]
+[3:-]
+[4:Fine]
+

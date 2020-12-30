@@ -1,0 +1,21 @@
+1;I am Apollo! Bow down and Worship me!;;;
+;Never!;2;;
+;Who is Apollo?;3;;
+;I don't believe you are Apollo.;4;;
+;How shall we worship you?;5;;
+;(Lie) You are a god, and entitled to our worship. We will gladly obey;6;;
+;(Truth) You are a god, and entitled to our worship. We will gladly obey;7;;
+2;Then I will show you my power and convince you!;;CHANGEMOOD;0
+3;Don't you know your gods of old anymore? Once we walked upon your planet, and you prayed to us, offered us sacrifices and we in turn loved you;1;;
+4;How dare you! I can squash you like bugs, right where you stand!;;;
+;(Lie) I am sorry, I believe you;6;;
+;(Truth) I am sorry, I believe you;1;;
+;Bring it on!;2;;
+5;Dance, sing, pray, and bring me sacrifices!;;;
+;Ok, I can do that ;9;;
+;What? No way!;2;;
+6;Do not lie to me!;;;
+;(Lie) That wasn't a lie, honestly!;8;;
+;I am sorry;1;;
+7;Then bring me sacrifices, and amuse me!;;CHANGEMOOD;1
+8;Your insolence is beyond even my patience! Now you will suffer!;;CHANGEMOOD;0

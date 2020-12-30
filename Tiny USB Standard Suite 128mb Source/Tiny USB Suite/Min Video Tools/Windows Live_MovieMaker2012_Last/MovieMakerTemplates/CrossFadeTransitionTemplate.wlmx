@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: These templates are provided as-is with no support.  They can, and likely will, change in future versions of Windows Live Essentials. -->
+<X3D profile="Immersive"  version="3.1">
+  <Transform>
+    <MetadataSet name='Template'>
+      <MetadataString containerField='value' name='TemplateID' value='"CrossfadeTransitionTemplate"'/>
+      <MetadataInteger containerField='value' name='TemplateKind' value='3'/>
+      <MetadataString containerField='value' name='TimeDependentNode' value='""'/>
+      <MetadataString containerField='value' name='TemplateTitle' value='"@"'/>
+      <MetadataString containerField='value' name='TemplateCategory' value='"Dissolves"'/>
+      <MetadataString containerField='value' name='TemplateThumbnailPath' value='""'/>
+      <MetadataInteger containerField='value' name='TemplateSubType' value='2'/>
+      <MetadataInteger containerField='value' name='TemplateEffectKind' value='2'/>
+      <MetadataInteger containerField='value' name='TransitionCompatibility' value='1'/>
+    </MetadataSet>
+
+  <!--OUT sockets -->
+  <Transform>
+    <MetadataSet DEF='OutSockets'>
+
+      <MetadataSet containerField='value' name='OutSocket'>
+        <MetadataString containerField='value' name='socketName' value='"transparency"'/>
+        <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+        <MetadataString containerField='value' name='socketParentDEF' value='"CrossfadeInterpolator"'/>
+        <MetadataString containerField='value' name='socketConnectAttribute' value='"value_changed"'/>
+      </MetadataSet>
+
+    </MetadataSet>
+  </Transform>
+
+  <!--IN sockets -->
+  <Transform>
+    <MetadataSet DEF='InSockets'>
+      <MetadataSet containerField='value' name='InSocket'>
+        <MetadataString containerField='value' name='socketName' value='"transitionTimer"'/>
+        <MetadataFloat containerField='value' name='socketCompatibilitySet' value='1.0'/>
+        <MetadataString containerField='value' name='socketParentDEF' value='"CrossfadeInterpolator"'/>
+        <MetadataString containerField='value' name='socketConnectAttribute' value='"set_fraction"'/>
+      </MetadataSet>
+    </MetadataSet>
+  </Transform>
+
+  <!--All nodes in this set are injected-->
+  <Transform DEF='InjectSet'>
+    <ScalarInterpolator DEF='CrossfadeInterpolator' key='0 1' keyValue='1 0'/>
+  </Transform>
+
+  </Transform>
+</X3D>

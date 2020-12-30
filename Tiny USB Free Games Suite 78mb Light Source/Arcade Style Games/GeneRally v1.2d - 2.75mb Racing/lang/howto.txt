@@ -1,0 +1,6 @@
+HOW TO CREATE CUSTOM LANGUAGE FILES?
+
+* Open English.lng in any text editor.
+* Use it as template as you create your custom 
+  language file.
+* Save with different file name (e.g. custom.lng)

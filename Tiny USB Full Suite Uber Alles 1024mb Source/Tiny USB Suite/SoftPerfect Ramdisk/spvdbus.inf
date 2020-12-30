@@ -1,0 +1,80 @@
+[Version]
+Signature="$Windows NT$"
+Provider=%KEG%
+Class=SCSIAdapter
+ClassGuid={4D36E97B-E325-11CE-BFC1-08002BE10318}
+DriverVer=09/03/2014, 2.05.004
+CatalogFile=spvdbus.cat
+
+[Manufacturer]
+%KEG%=Models,NTamd64
+
+[Models]
+%VDBus.DeviceDesc%=Port, Root\SPVD
+
+[Models.NTamd64]
+%VDBus.DeviceDesc%=Port, Root\SPVD
+
+[Port]
+CopyFiles=@spvdbus.sys
+AddReg=PortRegistry
+
+; ----------------------------------------------------------
+; REGISTRY
+; ----------------------------------------------------------
+
+
+[PortRegistry]
+HKR,,DeviceCharacteristics,0x10001,0x0100         ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"      ; Allow generic-all access to Built-in administrators and Local system 
+
+
+; ----------------------------------------------------------
+; FILES
+; ----------------------------------------------------------
+
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames.x86]
+1 = %DiskId1%,,,
+
+[SourceDisksNames.amd64]
+1 = %DiskId1%,,,
+
+[SourceDisksFiles]
+spvdbus.sys = 1
+spvdbus.inf = 1
+
+
+; ----------------------------------------------------------
+; SERVICES
+; ----------------------------------------------------------
+
+
+[Port.Services]
+AddService = SPVDPort,%SPSVCINST_ASSOCSERVICE%, PortService
+
+[PortService]
+DisplayName    = %VD.SVCNAME%
+Description    = %VD.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 1               ; SERVICE_SYSTEM_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\spvdbus.sys
+LoadOrderGroup = SCSI Class
+
+
+; ----------------------------------------------------------
+; STRINGS
+; ----------------------------------------------------------
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+KEG = "KEG"
+DiskId1 = "SoftPerfect VD Installation Disk"
+VDBus.DeviceDesc = "SoftPerfect Virtual Bus"
+VD.SVCNAME = "SoftPerfect Virtual Disk"
+VD.SVCDESC = "Emulates hard disk storage devices in virtual disk product"

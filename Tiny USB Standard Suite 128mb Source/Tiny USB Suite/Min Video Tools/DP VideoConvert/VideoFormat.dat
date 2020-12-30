@@ -1,0 +1,350 @@
+[VideoFormat0]
+Title=MPEG-1/VCD Video (*.mpg)
+VideoFormat=MPG1
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=1150
+Framerate=25
+AudioBitrate=224
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mpg
+
+[VideoFormat1]
+Title=MPEG-2/SVCD/DVD Video (*.mpg)
+VideoFormat=MPG2
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=4000
+Framerate=25
+AudioBitrate=224
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mpg
+
+[VideoFormat2]
+Title=AVI Audio Video Interleaved (*.avi)
+VideoFormat=MSM4
+AudioFormat=MP3
+FrameSize=320 x 240
+VideoBitrate=4000
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.avi
+
+[VideoFormat3]
+Title=DivX Video Format (*.avi)
+VideoFormat=MP4
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=4000
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.avi
+
+[VideoFormat4]
+Title=XviD Video Format (*.avi)
+VideoFormat=XVID
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=4000
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.avi
+
+[VideoFormat5]
+Title=Microsoft MPEG-4 Video Codec (*.avi)
+VideoFormat=MSM4
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.avi
+
+[VideoFormat6]
+Title=WMV Video (*.wmv)
+VideoFormat=WMV1
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=512
+Framerate=Same as source file
+AudioBitrate=192
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.wmv
+
+[VideoFormat7]
+Title=MP4 MPEG-4 Video (*.mp4)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=Same as source file
+VideoBitrate=1200
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat8]
+Title=MP4 MPEG-4 AVC Video (*.mp4)
+VideoFormat=H264
+AudioFormat=ACC
+FrameSize=Same as source file
+VideoBitrate=768
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat9]
+Title=PSP MPEG-4 Video (368x208)
+VideoFormat=XVID
+AudioFormat=ACC
+FrameSize=368 x 208
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=24000
+Channels=1
+IsPSP=1
+Edit=1
+FileType=.mp4
+
+[VideoFormat10]
+Title=PSP MPEG-4 Video (368x192)
+VideoFormat=XVID
+AudioFormat=ACC
+FrameSize=368 x 192
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=24000
+Channels=1
+IsPSP=1
+Edit=1
+FileType=.mp4
+
+[VideoFormat11]
+Title=PSP H264 AVC Video (368x208)
+VideoFormat=H264
+AudioFormat=ACC
+FrameSize=368 x 208
+VideoBitrate=400
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=1
+Edit=1
+FileType=.mp4
+
+[VideoFormat12]
+Title=PSP H264 AVC Video (368x192)
+VideoFormat=H264
+AudioFormat=ACC
+FrameSize=368 x 192
+VideoBitrate=400
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=1
+Edit=1
+FileType=.mp4
+
+[VideoFormat13]
+Title=iPod MPEG-4 Video (320x240, 4:3)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 240
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat14]
+Title=iPod MPEG-4 Video (320x180, 16:9)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 180
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat15]
+Title=Zune MPEG-4 Video (320x240, 4:3)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 240
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat16]
+Title=Zune MPEG-4 Video (320x180, 16:9)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 180
+VideoBitrate=512
+Framerate=25
+AudioBitrate=128
+SampleBitrate=44100
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mp4
+
+[VideoFormat17]
+Title=3GP H263 AMR Mobile Video (*.3gp)
+VideoFormat=H263
+AudioFormat=AMR
+FrameSize=176 x 144
+VideoBitrate=190
+Framerate=15
+AudioBitrate=32
+SampleBitrate=8000
+Channels=0
+IsPSP=0
+Edit=1
+FileType=.3gp
+
+[VideoFormat18]
+Title=3GP MPEG-4 AAC Mobile Video (*.3gp)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 240
+VideoBitrate=190
+Framerate=15
+AudioBitrate=48
+SampleBitrate=16000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.3gp
+
+[VideoFormat19]
+Title=3GP MPEG-4 AMR Mobile Video (*.3gp)
+VideoFormat=MP4
+AudioFormat=AMR
+FrameSize=320 x 240
+VideoBitrate=190
+Framerate=15
+AudioBitrate=32
+SampleBitrate=8000
+Channels=0
+IsPSP=0
+Edit=1
+FileType=.3gp
+
+[VideoFormat20]
+Title=3GP2 Normal Quality Mobile Video (*.3g2)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=320 x 240
+VideoBitrate=190
+Framerate=15
+AudioBitrate=32
+SampleBitrate=16000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.3g2
+
+[VideoFormat21]
+Title=DVD MPEG-2 MP3 (*.vob)
+VideoFormat=MPG2
+AudioFormat=MP3
+FrameSize=720 x 480
+VideoBitrate=1500
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.vob
+
+[VideoFormat22]
+Title=DVD MPEG-2 AC3 (*.vob)
+VideoFormat=MPG2
+AudioFormat=AC3
+FrameSize=720 x 480
+VideoBitrate=1500
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.vob
+
+[VideoFormat23]
+Title=Apple QuickTime Video (*.mov)
+VideoFormat=MP4
+AudioFormat=ACC
+FrameSize=Same as source file
+VideoBitrate=1500
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.mov
+
+[VideoFormat24]
+Title=ASF Advanced Streaming Format (*.asf)
+VideoFormat=MSV2
+AudioFormat=MP3
+FrameSize=Same as source file
+VideoBitrate=1500
+Framerate=25
+AudioBitrate=128
+SampleBitrate=48000
+Channels=1
+IsPSP=0
+Edit=1
+FileType=.asf
+

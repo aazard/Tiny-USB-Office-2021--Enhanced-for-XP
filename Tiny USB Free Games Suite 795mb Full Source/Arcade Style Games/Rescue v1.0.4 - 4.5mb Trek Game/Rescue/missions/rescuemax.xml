@@ -1,0 +1,608 @@
+<mission version="1.0" preview="preview/rescuemax.jpg" name="Star Trek: Rescue! Max" author="Yura Mamyrin" email="yura@yura.net" website="http://yura.net/">
+  <spaceObjects cluster="yes">
+    <object name="Wormhole" image="so/sobig/wormhole.gif" small="so/sosmall/wormhole.gif" info="so/soinfo/wormhole.gif" number="5" type="wormhole">
+    </object>
+    <object name="Outpost" image="so/sobig/planet.gif" small="so/sosmall/outpost.gif" number="3" type="planet">
+      <names>
+        <name value="Altair 1" image="so/sobig/mercury.gif"/>
+        <name value="Betelgeuse 2" image="so/sobig/venus.gif"/>
+        <name value="Carilius 3" image="so/sobig/earth.gif"/>
+        <name value="Deneb 4" image="so/sobig/mars.gif"/>
+        <name value="Epsilon 5" image="so/sobig/jupiter.gif"/>
+        <name value="Feldikar 6" image="so/sobig/saturn.gif"/>
+	<name value="Garilliel 7"/>
+        <name value="Ceresin 8" image="so/sobig/neptune.gif"/>
+	<name value="Morlikon 9"/>
+      </names>
+      <info>
+        <maxphaserintensity value="0"/>
+        <maxtorpedosalvo value="0"/>
+        <maxshieldpower value="100"/>
+        <maxtorpedosleft value="0"/>
+        <maxtractorpower value="0"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="1000000"/>
+        <maxphaserbanks value="0"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="5"/>
+        <like who="Starbase" amount="5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="-5"/>
+        <like who="Ferengi Marauder" amount="-5"/>
+        <like who="Jem'Hadar Warship" amount="-5"/>
+        <like who="Jem'Hadar Attack Ship" amount="-5"/>
+        <like who="Klingon Bird of Prey" amount="5"/>
+        <like who="The Sovereign" amount="5"/>
+        <like who="Romulan D'deridex" amount="-5"/>
+      </likes>
+      <options min="1" max="9">
+        <preset name="cadet" value="2"/>
+        <preset name="lieutenant" value="5"/>
+        <preset name="captain" value="9"/>
+        <preset name="admiral" value="9"/>
+      </options>
+    </object>
+    <object name="Starbase" image="so/sobig/starbase.gif" small="so/sosmall/starbase.gif" info="so/soinfo/starbase.gif" number="2" type="base">
+      <names>
+        <name value="Earth Spacedock"/>
+        <name value="Jupiter Station" image="so/sobig/jupiterstation.gif"/>
+        <name value="Deep Space Nine" image="so/sobig/ds9.gif"/>
+        <name value="Particle Fountain" image="so/sobig/particlefountain.gif"/>
+        <name value="yura.net base"/>
+      </names>
+      <info>
+        <maxphaserintensity value="3"/>
+        <maxtorpedosalvo value="3"/>
+        <maxshieldpower value="500"/>
+        <maxtorpedosleft value="10000"/>
+        <maxtractorpower value="100"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="1000000"/>
+        <maxphaserbanks value="10000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="5"/>
+        <like who="Starbase" amount="5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="-5"/>
+        <like who="Ferengi Marauder" amount="-5"/>
+        <like who="Jem'Hadar Warship" amount="-5"/>
+        <like who="Jem'Hadar Attack Ship" amount="-5"/>
+        <like who="Klingon Bird of Prey" amount="5"/>
+        <like who="The Sovereign" amount="5"/>
+        <like who="Romulan D'deridex" amount="-5"/>
+      </likes>
+      <options min="1" max="5">
+        <preset name="cadet" value="1"/>
+        <preset name="lieutenant" value="2"/>
+        <preset name="captain" value="3"/>
+        <preset name="admiral" value="3"/>
+      </options>
+    </object>
+    <object name="Enemy base" image="so/sobig/baddiebase.gif" small="so/sosmall/baddiebase.gif" info="so/soinfo/baddiebase.gif" number="1" type="base">
+      <info>
+        <maxphaserintensity value="3"/>
+        <maxtorpedosalvo value="3"/>
+        <maxshieldpower value="500"/>
+        <maxtorpedosleft value="10000"/>
+        <maxtractorpower value="100"/>
+        <maxcloakpower value="4"/>
+        <maxtotalenergy value="1000000"/>
+        <maxphaserbanks value="10000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="-5"/>
+        <like who="Starbase" amount="-5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="-5"/>
+        <like who="The Sovereign" amount="-5"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+    </object>
+    <object name="Borg Cube" image="so/sobig/borgcube.gif" small="so/sosmall/borgcube.gif" number="0" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="0"/>
+        <maxphaserintensity value="3"/>
+        <maxtorpedosalvo value="3"/>
+        <maxshieldpower value="500"/>
+        <maxtorpedosleft value="100"/>
+        <maxtractorpower value="100"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="1000000"/>
+        <maxphaserbanks value="10000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="-10"/>
+        <like who="Starbase" amount="-10"/>
+        <like who="Borg Cube" amount="5"/>
+        <like who="Cardassian Keldon" amount="-10"/>
+        <like who="Ferengi Marauder" amount="-10"/>
+        <like who="Jem'Hadar Warship" amount="-10"/>
+        <like who="Jem'Hadar Attack Ship" amount="-10"/>
+        <like who="Klingon Bird of Prey" amount="-10"/>
+        <like who="The Sovereign" amount="-10"/>
+        <like who="Romulan D'deridex" amount="-10"/>
+      </likes>
+      <options min="0" max="2">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="0"/>
+        <preset name="captain" value="0"/>
+        <preset name="admiral" value="0"/>
+      </options>
+    </object>
+    <object name="Romulan D'deridex" image="so/sobig/deridex.gif" small="so/sosmall/romulansuperhawk.gif" info="so/soinfo/romulansuperhawk.gif" number="0" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="3"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="0"/>
+        <like who="Starbase" amount="0"/>
+        <like who="Borg Cube" amount="-10"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="-5"/>
+        <like who="The Sovereign" amount="0"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+      <options min="0" max="5">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="0"/>
+        <preset name="captain" value="1"/>
+        <preset name="admiral" value="2"/>
+      </options>
+    </object>
+    <object name="Jem'Hadar Warship" image="so/sobig/jemhadarwarship.gif" small="so/sosmall/jemhadarwarship.gif" info="so/soinfo/jemhadarwarship.gif" number="2" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="-10"/>
+        <like who="Starbase" amount="-5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="-5"/>
+        <like who="The Sovereign" amount="-5"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+      <options min="0" max="15">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="0"/>
+        <preset name="captain" value="5"/>
+        <preset name="admiral" value="10"/>
+      </options>
+    </object>
+    <object name="Jem'Hadar Attack Ship" image="so/sobig/jemhadarattackship.gif" small="so/sosmall/jemhadarattackship.gif" info="so/soinfo/jemhadarattackship.gif" number="2" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="-5"/>
+        <like who="Starbase" amount="-5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="-5"/>
+        <like who="The Sovereign" amount="-10"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+      <options min="0" max="25">
+        <preset name="cadet" value="5"/>
+        <preset name="lieutenant" value="12"/>
+        <preset name="captain" value="15"/>
+        <preset name="admiral" value="17"/>
+      </options>
+    </object>
+    <object name="Cardassian Keldon" image="so/sobig/cardassiankeldon.gif" small="so/sosmall/cardassiandestroyer.gif" info="so/soinfo/cardassiankeldon.gif" number="2" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="-10"/>
+        <like who="Starbase" amount="-5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="-5"/>
+        <like who="The Sovereign" amount="-5"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+      <options min="0" max="10">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="0"/>
+        <preset name="captain" value="5"/>
+        <preset name="admiral" value="8"/>
+      </options>
+    </object>
+    <object name="Ferengi Marauder" image="so/sobig/marauder.gif" small="so/sosmall/marauder.gif" info="so/soinfo/ferengimarauder.gif" number="0" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="0"/>
+        <like who="Starbase" amount="0"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="5"/>
+        <like who="Ferengi Marauder" amount="5"/>
+        <like who="Jem'Hadar Warship" amount="5"/>
+        <like who="Jem'Hadar Attack Ship" amount="5"/>
+        <like who="Klingon Bird of Prey" amount="0"/>
+        <like who="The Sovereign" amount="0"/>
+        <like who="Romulan D'deridex" amount="5"/>
+      </likes>
+      <options min="0" max="5">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="0"/>
+        <preset name="captain" value="1"/>
+        <preset name="admiral" value="2"/>
+      </options>
+    </object>
+    <object name="Klingon Bird of Prey" image="so/sobig/klingonbirdofprey.gif" small="so/sosmall/klingon.gif" info="so/soinfo/klingon.gif" number="2" type="ship">
+      <info>
+        <maxwarp value="4"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="1"/>
+        <maxtorpedosalvo value="1"/>
+        <maxshieldpower value="50"/>
+        <maxtorpedosleft value="18"/>
+        <maxtractorpower value="50"/>
+        <maxcloakpower value="3"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="1000"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="5"/>
+        <like who="Starbase" amount="5"/>
+        <like who="Borg Cube" amount="-5"/>
+        <like who="Cardassian Keldon" amount="-5"/>
+        <like who="Ferengi Marauder" amount="-5"/>
+        <like who="Jem'Hadar Warship" amount="-5"/>
+        <like who="Jem'Hadar Attack Ship" amount="-5"/>
+        <like who="Klingon Bird of Prey" amount="5"/>
+        <like who="The Sovereign" amount="5"/>
+        <like who="Romulan D'deridex" amount="-5"/>
+      </likes>
+      <options min="0" max="5">
+        <preset name="cadet" value="0"/>
+        <preset name="lieutenant" value="2"/>
+        <preset name="captain" value="5"/>
+        <preset name="admiral" value="1"/>
+      </options>
+    </object>
+    <object name="The Sovereign" image="so/sobig/thesovereign.gif" small="so/sosmall/thesovereign.gif" info="so/soinfo/thesovereign.gif" number="1" type="ship">
+      <info>
+        <maxwarp value="9"/>
+        <maximpulse value="1"/>
+        <jump value="1"/>
+        <turn value="1"/>
+        <maxphaserintensity value="3"/>
+        <maxtorpedosalvo value="3"/>
+        <maxshieldpower value="100"/>
+        <maxtorpedosleft value="64"/>
+        <maxtractorpower value="100"/>
+        <maxcloakpower value="0"/>
+        <maxtotalenergy value="10000"/>
+        <maxphaserbanks value="2500"/>
+      </info>
+      <likes>
+        <like who="Outpost" amount="5"/>
+        <like who="Starbase" amount="5"/>
+        <like who="Borg Cube" amount="-10"/>
+        <like who="Cardassian Keldon" amount="-5"/>
+        <like who="Ferengi Marauder" amount="-5"/>
+        <like who="Jem'Hadar Warship" amount="-5"/>
+        <like who="Jem'Hadar Attack Ship" amount="-5"/>
+        <like who="Klingon Bird of Prey" amount="5"/>
+        <like who="The Sovereign" amount="5"/>
+        <like who="Romulan D'deridex" amount="-5"/>
+      </likes>
+      <options min="1" max="3">
+        <preset name="cadet" value="1"/>
+        <preset name="lieutenant" value="1"/>
+        <preset name="captain" value="1"/>
+        <preset name="admiral" value="1"/>
+      </options>
+    </object>
+  </spaceObjects>
+  <guitheme external="yes">
+    <container name="LCARS Interface for Rescue! Max" x="5" y="5">
+      <container constraints="West">
+        <text constraints="Center" w="239" h="64"/>
+        <panel constraints="North" w="263" h="238">
+          <image nob="15" on="ui/rescuemax/1_on.png" off="ui/rescuemax/1_off.png" up="ui/rescuemax/1_up.png" down="ui/rescuemax/1_down.png" map="ui/rescuemax/1_map.gif">
+            <color value="0" action="divert"/>
+            <color value="1" action="reserve"/>
+            <color value="14" action="fix 0"/>
+            <color value="2" action="fix 1"/>
+            <color value="3" action="fix 2"/>
+            <color value="4" action="fix 3"/>
+            <color value="5" action="fix 4"/>
+            <color value="6" action="fix 5"/>
+            <color value="7" action="fix 6"/>
+            <color value="8" action="fix 7"/>
+            <color value="9" action="fix 8"/>
+            <color value="10" action="fix 9"/>
+            <color value="11" action="fix 10"/>
+            <infotext x="190" y="68" w="64" h="11" lx="212" ly="77" type="system_warpdrive"/>
+            <infotext x="190" y="83" w="64" h="11" lx="212" ly="92" type="system_impulsedrive"/>
+            <infotext x="190" y="98" w="64" h="11" lx="212" ly="107" type="system_phaserbanks"/>
+            <infotext x="190" y="113" w="64" h="11" lx="212" ly="122" type="system_torpedotubes"/>
+            <infotext x="190" y="128" w="64" h="11" lx="212" ly="137" type="system_longrangescan"/>
+            <infotext x="190" y="143" w="64" h="11" lx="212" ly="152" type="system_sencorscan"/>
+            <infotext x="190" y="158" w="64" h="11" lx="212" ly="167" type="system_shields"/>
+            <infotext x="190" y="173" w="64" h="11" lx="212" ly="182" type="system_computer"/>
+            <infotext x="190" y="188" w="64" h="11" lx="212" ly="197" type="system_transporters"/>
+            <infotext x="190" y="203" w="64" h="11" lx="212" ly="212" type="system_tractorbeam"/>
+            <infobar x="70" y="11" w="133" h="14" type="total_energy" direction="right"/>
+            <infotext x="195" y="43" w="50" h="15" lx="202" ly="55" type="condition"/>
+          </image>
+        </panel>
+        <panel constraints="East" w="20" h="64">
+          <image nob="0" on="ui/rescuemax/4.png" off="ui/rescuemax/4.png" up="none" down="none" map="none">
+          </image>
+        </panel>
+        <panel constraints="South" w="263" h="398">
+          <image nob="31" on="ui/rescuemax/2_on.png" off="ui/rescuemax/2_off.png" up="ui/rescuemax/2_up.png" down="ui/rescuemax/2_down.png" map="ui/rescuemax/2_map.gif">
+            <color value="0" action="stop"/>
+            <color value="1" action="warp_start"/>
+            <color value="2" action="impulse_start"/>
+            <color value="3" action="warp_speed 1"/>
+            <color value="4" action="warp_speed 2"/>
+            <color value="5" action="warp_speed 3"/>
+            <color value="6" action="warp_speed 4"/>
+            <color value="7" action="warp_speed 5"/>
+            <color value="8" action="warp_speed 6"/>
+            <color value="9" action="warp_speed 7"/>
+            <color value="10" action="warp_speed 8"/>
+            <color value="11" action="warp_speed 9"/>
+            <color value="12" action="impulse_speed 1"/>
+            <color value="13" action="impulse_speed 2"/>
+            <color value="14" action="impulse_speed 3"/>
+            <color value="15" action="impulse_speed 4"/>
+            <color value="16" action="phaser_intensity 1"/>
+            <color value="17" action="phaser_intensity 2"/>
+            <color value="18" action="phaser_intensity 3"/>
+            <color value="19" action="phaser_fire"/>
+            <color value="20" action="torpedo_salvo 1"/>
+            <color value="21" action="torpedo_salvo 2"/>
+            <color value="22" action="torpedo_salvo 3"/>
+            <color value="23" action="torpedo_fire"/>
+            <color value="24" action="shields_down"/>
+            <color value="25" action="shields_up"/>
+            <color value="26" action="tractor_off"/>
+            <color value="27" action="tractor"/>
+            <color value="28" action="evasive 1"/>
+            <color value="29" action="evasive 2"/>
+            <color value="30" action="evasive 3"/>
+            <infotext x="4" y="20" w="177" h="21" lx="11" ly="36" type="warp_auto" color="white"/>
+            <infotext x="4" y="89" w="177" h="21" lx="11" ly="103" type="impulse_auto" color="white"/>
+            <infobar x="193" y="161" w="55" h="5" type="phaser_banks" direction="right"/>
+            <infobar x="193" y="193" w="55" h="5" type="torpedos_left" direction="right"/>
+            <infobar x="193" y="311" w="55" h="5" type="tractor_beam" direction="right"/>
+            <infobar x="193" y="279" w="55" h="5" type="shield_power" direction="right"/>
+          </image>
+        </panel>
+        <panel constraints="West" w="4" h="64">
+          <image nob="0" on="ui/rescuemax/3.png" off="ui/rescuemax/3.png" up="none" down="none" map="none">
+          </image>
+        </panel>
+      </container>
+      <container constraints="Center">
+        <bigmap constraints="Center" w="500" h="500"/>
+        <panel constraints="North" w="500" h="11">
+          <image nob="0" on="ui/rescuemax/5.png" off="ui/rescuemax/5.png" up="none" down="none" map="none">
+          </image>
+        </panel>
+        <container constraints="South">
+          <shipinfo constraints="Center" w="176" h="176"/>
+          <panel constraints="North" w="500" h="5">
+            <image nob="0" on="ui/rescuemax/6.png" off="ui/rescuemax/6.png" up="none" down="none" map="none">
+            </image>
+          </panel>
+          <panel constraints="East" w="127" h="176">
+            <image nob="11" on="ui/rescuemax/7_on.png" off="ui/rescuemax/7_off.png" up="ui/rescuemax/7_up.png" down="ui/rescuemax/7_down.png" map="ui/rescuemax/7_map.gif">
+              <color value="0" action="target 0"/>
+              <color value="1" action="target 1"/>
+              <color value="2" action="target 2"/>
+              <color value="3" action="target 3"/>
+              <color value="4" action="target 4"/>
+              <color value="5" action="target 5"/>
+              <color value="6" action="target 6"/>
+              <color value="7" action="target 7"/>
+              <color value="8" action="target 8"/>
+              <color value="9" action="target 9"/>
+              <color value="10" action="target 10"/>
+            </image>
+          </panel>
+          <panel constraints="South" w="500" h="8">
+            <image nob="0" on="ui/rescuemax/8.png" off="ui/rescuemax/8.png" up="none" down="none" map="none">
+            </image>
+          </panel>
+          <panel constraints="West" w="197" h="176">
+            <image nob="4" on="ui/rescuemax/9_on.png" off="ui/rescuemax/9_off.png" up="ui/rescuemax/9_up.png" down="ui/rescuemax/9_down.png" map="ui/rescuemax/9_map.gif">
+              <color value="0" action="beam_down"/>
+              <color value="1" action="beam_up"/>
+              <color value="2" action="dock"/>
+              <color value="3" action="board"/>
+              <infotext x="149" y="43" w="29" h="11" lx="156" ly="53" type="outposts_rescued"/>
+              <infotext x="149" y="56" w="29" h="11" lx="156" ly="66" type="outposts_destroyed"/>
+              <infotext x="149" y="69" w="29" h="11" lx="156" ly="79" type="outposts_remaining"/>
+              <infotext x="149" y="95" w="29" h="11" lx="156" ly="105" type="otherships_friendlies"/>
+              <infotext x="149" y="109" w="29" h="11" lx="156" ly="119" type="otherships_enemies"/>
+              <infotext x="149" y="122" w="29" h="11" lx="156" ly="132" type="otherships_destroyed"/>
+              <infotext x="149" y="148" w="29" h="11" lx="156" ly="158" type="number_away_teams"/>
+              <infotext x="149" y="161" w="29" h="11" lx="156" ly="171" type="colonies_onboard"/>
+            </image>
+          </panel>
+        </container>
+      </container>
+      <container constraints="East">
+        <smallmap constraints="Center" w="220" h="220"/>
+        <panel constraints="North" w="237" h="50">
+          <image nob="4" on="ui/rescuemax/10_on.png" off="ui/rescuemax/10_off.png" up="ui/rescuemax/10_up.png" down="ui/rescuemax/10_down.png" map="ui/rescuemax/10_map.gif">
+            <color value="0" action="pause"/>
+            <color value="1" action="endgame"/>
+            <color value="2" action="help"/>
+            <color value="3" action="quit"/>
+          </image>
+        </panel>
+        <panel constraints="East" w="5" h="220">
+          <image nob="0" on="ui/rescuemax/12.png" off="ui/rescuemax/12.png" up="none" down="none" map="none">
+          </image>
+        </panel>
+        <panel constraints="West" w="12" h="220">
+          <image nob="0" on="ui/rescuemax/11.png" off="ui/rescuemax/11.png" up="none" down="none" map="none">
+          </image>
+        </panel>
+        <container constraints="South">
+          <baselist constraints="Center" w="178" h="120"/>
+          <panel constraints="North" w="237" h="96">
+            <image nob="8" on="ui/rescuemax/13_on.png" off="ui/rescuemax/13_off.png" up="ui/rescuemax/13_up.png" down="ui/rescuemax/13_down.png" map="ui/rescuemax/13_map.gif">
+              <color value="0" action="select_enemies"/>
+              <color value="1" action="select_manual"/>
+              <color value="2" action="select_all"/>
+              <color value="3" action="zoomin"/>
+              <color value="4" action="zoomout"/>
+              <color value="5" action="headsup"/>
+              <color value="6" action="scan_down"/>
+              <color value="7" action="scan_up"/>
+              <infotext x="109" y="8" w="38" h="23" lx="117" ly="24" type="scan"/>
+            </image>
+          </panel>
+          <panel constraints="East" w="9" h="120">
+            <image nob="0" on="ui/rescuemax/14.png" off="ui/rescuemax/14.png" up="none" down="none" map="none">
+            </image>
+          </panel>
+          <panel constraints="West" w="50" h="120">
+            <image nob="4" on="ui/rescuemax/15_on.png" off="ui/rescuemax/15_off.png" up="ui/rescuemax/15_up.png" down="ui/rescuemax/15_down.png" map="ui/rescuemax/15_map.gif">
+              <color value="0" action="base_sort 0"/>
+              <color value="1" action="base_sort 1"/>
+              <color value="2" action="base_up"/>
+              <color value="3" action="base_down"/>
+            </image>
+          </panel>
+          <container constraints="South">
+            <shiplist constraints="Center" w="178" h="120"/>
+            <panel constraints="North" w="237" h="58">
+              <image nob="4" on="ui/rescuemax/16_on.png" off="ui/rescuemax/16_off.png" up="ui/rescuemax/16_up.png" down="ui/rescuemax/16_down.png" map="ui/rescuemax/16_map.gif">
+                <color value="0" action="base_show 0"/>
+                <color value="1" action="base_show 1"/>
+                <color value="2" action="base_show 2"/>
+                <color value="3" action="base_show 3"/>
+              </image>
+            </panel>
+            <panel constraints="East" w="9" h="120">
+              <image nob="0" on="ui/rescuemax/14.png" off="ui/rescuemax/14.png" up="none" down="none" map="none">
+              </image>
+            </panel>
+            <panel constraints="West" w="50" h="120">
+              <image nob="4" on="ui/rescuemax/17_on.png" off="ui/rescuemax/17_off.png" up="ui/rescuemax/17_up.png" down="ui/rescuemax/17_down.png" map="ui/rescuemax/17_map.gif">
+                <color value="0" action="ships_sort 0"/>
+                <color value="1" action="ships_sort 1"/>
+                <color value="2" action="ships_up"/>
+                <color value="3" action="ships_down"/>
+              </image>
+            </panel>
+            <panel constraints="South" w="237" h="36">
+              <image nob="4" on="ui/rescuemax/0_on.png" off="ui/rescuemax/0_off.png" up="ui/rescuemax/0_up.png" down="ui/rescuemax/0_down.png" map="ui/rescuemax/0_map.gif">
+                <color value="0" action="ships_show 0"/>
+                <color value="1" action="ships_show 1"/>
+                <color value="2" action="ships_show 2"/>
+                <color value="3" action="ships_show 3"/>
+              </image>
+            </panel>
+          </container>
+        </container>
+      </container>
+    </container>
+  </guitheme>
+  <sounds>
+
+<!--
+
+    <voice name="reached" file="sounds/voice/reachedcoordinates.au"/>
+    <effect name="hit" file="sounds/effect/hit.au"/>
+
+-->
+
+    <sound name="welcome" file="sounds/voice/welcome.au"/>
+    <sound name="mouseclick" file="sounds/effect/mouseclick.au"/>
+
+    <sound name="music" file="sounds/music/backgroundmusic.au"/>
+    <sound name="background" file="sounds/effect/background.au"/>
+
+  </sounds>
+</mission>

@@ -1,0 +1,501 @@
+[HELP]
+help=Setup2Go.hlp
+
+[TABS]
+0=General Info
+1=Setup Settings
+2=Requirements
+3=Files
+4=Shortcuts
+5=Registry
+6=File Types
+7=Dialogs/Screens
+8=Create Setup
+9=External Tools
+10=INI Files
+
+[GENERAL_INFO_TAB]
+1=Company Name
+2=Product Name
+3=Product Version
+4=Product Description
+5=Product Information URL
+6=Copyright Notice
+11=My Company
+12=My Application
+13=1.0
+14=My Application Description
+15=www.mycompany.com
+16=Copyright (c) 2003
+
+[SETUP_INFO_TAB]
+1=Default Product Installation Path
+2=Default Product Shortcut Folder Name
+5=Uninstall Settings
+51=Enable automatic uninstaller
+52=Create uninstall icon in product shortcut folder
+6=Add/Remove Programs Control Panel Description
+7=Shortcut icon description
+11=%ProgramFiles%\%ProductName%
+12=%ProductName%
+13=%ProductName% %ProductVersion%
+14=Uninstall %ProductName%
+15=Selected Setup Languages
+16=<- Add
+17=Remove ->
+18=Default Language:
+19=Install Settings
+20=Windows NT/2000/XP Settings
+21=Create shortcuts in the common program groups that appear on the Start menu for all users
+22=Create shortcuts in the user's program groups that appear for this particular user
+23=Run in Silent Mode. If checked, this option performs a silent (unattended) installation
+24=Re-install Settings
+25=Registry key to store installation directory of your product
+26=Enable a test for the existence of your product to prevent re-install
+27=Force restart after successful installation
+28=Abort the installation, if the user does not have administrative privileges
+
+[REQUIREMENTS_TAB]
+1=Supporting Operating Systems
+2=Any
+3=Abort Installation if requirements are not met
+4=Required Free Disk Space
+
+[DIALOGS_TAB]
+1=Select the screens/dialogs you want to display during installation
+2=Splash Screen
+3=Splash Bitmap
+4=Setup Window
+5=Welcome
+6=License
+7=License file (*.txt;*.rtf):
+8=ReadMe
+9=Readme file (*.txt;*.rtf):
+10=Select Target Directory
+11=Select Program Group
+12=Start Installation
+13=Finished
+14=Show "View Readme" Checkbox
+15=Readme file:
+16=Checked by default
+17=Show "Run Installed Application" Checkbox
+18=Application:
+19=Settings...
+20=Browse...
+21=Choose Language
+22=Custom Dialog Image
+23=Dialog Bitmap ( dimensions = 120 x 260 pixels )
+24=Splash Screen Duration ( in seconds )
+25=Program Icon Options
+26=Add "Create program icon on desktop" option
+27=Add "Create program icon in the Quick Launch Toolbar" option
+
+[EXTERNAL_TOOLS_TAB]
+1=Run Application Before Setup
+2=Application Pathname
+3=Command Line
+4=Working Directory
+5=Run Mode
+6=Run Application After Setup has Finished
+7=Run Application Before Uninstalling
+8=Normal Window
+9=Minimized
+10=Maximized
+11=Browse...
+12=Wait for application to finish
+13=Terminate installation if exit code not 0
+
+[CREATE_SETUP_TAB]
+1=Setup Files Location
+2=Output Folder
+3=Setup Filename
+4=Create Single File Installation (Self-Extracted Setup)
+5=Setup Icon (32x32, 16 colors)
+6=Browse...
+7=&Build
+8=Test &Run
+9=Setup Password Protection
+10=Password
+11=Enable Password Protection
+
+[BUILD_STATUS_DIALOG]
+0=Build Status
+1=Cancel
+
+[ABOUT_DIALOG]
+2=Complete version of Setup2Go with unlimited rights to produce setups for both commercial and freeware products. There are absolutely no limitations in the functionality, and none of those annoying "nag screens" in the main application. Setups producing by this version will have an advertisement page for SDS Software when the installation is complete.
+22=Registered version of Setup2Go with unlimited rights to produce setups for both commercial and freeware products. Setups producing by this version will not have an advertisement page for SDS Software when the installation is complete.
+3=OK
+4=Registration
+5=Credits
+
+[REGISTRATION_DIALOG]
+0=Registration
+1=If you have paid the registration fee simply enter your registration information below and click Register.
+2=Here is your Setup2Go registration information:
+3=Registration Information
+4=User/Company Name
+5=Registration Number
+6=Ordering Info
+7=Register
+8=Close
+
+[WELCOME_DIALOG]
+0=Welcome
+1=Create a New Project using the Project Wizard
+2=Create a New Blank Project
+3=Open an Existing Project
+4=Recent Project Files
+
+[WIZARD_WELCOME_DIALOG]
+0=Welcome to the Setup2Go Project Wizard
+1=Welcome to the Setup2Go Project Wizard!<br><br>The Project Wizard will guide you through the necessary steps of creating setup program for your software product.<br><br>On the following screens you will be asked a series of questions. Setup2Go will use your responses to create a customized project for you.<br><br>When Setup2Go has gathered enough information from you, it will generate your custom project.<br><br>Click Next to continue, or Cancel to abort.
+2=&Next >
+3=Cancel
+
+[WIZARD_GENERAL_INFO_DIALOG]
+0=General Information
+1=Company Name
+2=Product Name
+3=Product Version
+4=Product Description
+5=Product Information URL
+6=Copyright Notice
+7=< &Back
+8=&Next >
+9=Cancel
+
+[WIZARD_LOCATE_FILES_DIALOG]
+0=Locate Files
+1=The Project Wizard now needs to know where to find your source files. Please enter the directory that contains all the files that will be included in your installation.<br><br>You will be able to add or remove files once you are returned to Setup2Go's main window.
+2=What directory are your files located in?
+3=Include files in subdirectories
+4=Browse...
+5=< &Back
+6=&Next >
+7=Cancel
+
+[WIZARD_FINISH_DIALOG]
+0=Ready to Generate Project
+1=The Project Wizard now has enough information to create your customized project.<br><br>If you would like to make any changes before creating the project, click on the Back button.<br><br>If you would like to abort, click on the Cancel button.<br><br>When your are ready to create the project, click on the Finish button.
+2=< &Back
+3=Finish
+4=Cancel
+
+[WANT_TO_SAVE_DIALOG]
+1=You have made changes to the %1 project. Do you want to save your changes?
+2=&Yes
+3=&No
+4=Cancel
+
+[SETUP_WINDOWS_SETTINGS_DIALOG]
+0=Setup Window Settings
+1=Background Style
+2=Gradient Fill
+3=Solid Fill
+4=Colors
+5=From:
+6=To:
+7=Setup Window Title
+8=Heading
+9=Alignment:
+10=3D Look
+11=Subheading
+12=Footer
+13=Left
+14=Center
+15=Right
+16=Font/Color...
+17=OK
+18=Cancel
+
+[CHOOSE_FILE_DIALOG]
+0=Choose File
+1=Select one of the files in your installation from the list below.
+2=OK
+3=Cancel
+
+[NEW_FOLDER_DIALOG]
+0=Create New Folder
+1=Folder Name:
+2=OK
+3=Cancel
+
+[FILE_PROPERTIES_DIALOG]
+0=Edit File Properties
+1=Name
+2=Type
+3=Source
+4=Destination
+5=Compress
+6=Self Register OCX/DLL/EXE/TLB
+7=Shared File
+8=Do not Uninstall
+21=Use System Attributes
+9=If file already exists
+10=Replace existing file:
+11=Always
+12=If version number same or older
+13=If version number older
+14=If date/time same or older
+15=If date/time older
+16=If date/time and version number is same or older
+17=If date/time and version number is older
+18=Never
+19=OK
+20=Cancel
+22=Show file "in-use" notice
+
+[SHORTCUT_DIALOG]
+0=Create New Shortcut
+1=Edit Shortcut
+2=Shortcut name
+3=Target Pathname
+4=Command Line Parameters
+5=Working Directory
+6=Icon Pathname
+7=Icon Index
+8=Run
+81=Comments
+9=Normal Window
+10=Minimized
+11=Maximized
+12=Browse...
+13=OK
+14=Cancel
+
+[INTERNET_SHORTCUT_DIALOG]
+0=Create New Internet Shortcut
+1=Edit Internet Shortcut
+2=Internet Shortcut Name:
+3=URL
+4=OK
+5=Cancel
+
+[NEW_KEY_DIALOG]
+0=Create New Key
+1=Key Name
+2=OK
+3=Cancel
+
+[REGISTRY_STRING_VALUE_DIALOG]
+0=Create New String Value
+1=Edit String Value
+2=Value Name
+3=Value Data
+4=OK
+5=Cancel
+
+[REGISTRY_BINARY_VALUE_DIALOG]
+0=Create New Binary Value
+1=Edit Binary Value
+2=Value Name
+3=Value Data (a series of bytes in hexadecimal notation separated by at least one white space):
+4=OK
+5=Cancel
+
+[REGISTRY_DWORD_VALUE_DIALOG]
+0=Create New DWORD Value
+1=Edit DWORD Value
+2=Value Name
+3=Value Data
+4=Base
+5=Hexadecimal
+6=Decimal
+7=OK
+8=Cancel
+
+[FILE_TYPE_PROPERTIES_DIALOG]
+0=Create New File Type Association
+1=Edit File Type Association
+2=Document Extension
+3=Document Identifier
+4=Identifier Full Name
+5=Source Pathname
+6=Icon Pathname
+7=Icon Number
+8=Browse...
+9=OK
+10=Cancel
+
+[INI_FILE_PROPERTIES_DIALOG]
+0=Create New INI File Record
+1=Edit INI File Record
+2=INI File pathname
+3=Section
+4=Key
+5=Value
+6=OK
+7=Cancel
+
+[STRINGS]
+0=Notice
+1=Error
+2=Untitled
+
+11=Name
+12=Size
+13=Type
+14=Modified
+15=Link To
+16=Data
+17=Shortcut To
+
+20=Extension
+21=Identifier
+22=Identifier Full Name
+23=Source Pathname
+24=Icon Pathname
+25=Icon Number
+
+26=INI File Pathname
+27=Section
+28=Key
+29=Value
+
+30=File Folder
+31=Shortcut Folder
+32=File Shortcut
+33=Internet Shortcut
+
+50=Please specify the path to your files.
+51=Please specify the folder name.
+52=Please specify the value name.
+53=Please specify output folder name.
+54=Please specify Setup Filename.
+55=A folder name cannot contain any of the following characters \ / : * ? " < > |
+56=Please specify the shortcut name
+57=Please specify the shortcut URL
+58=Can't open selected project file
+59=Selected file does not support Self Register OCX/DLL/EXE/TLB feature!
+60=Selected file does not have version number resource. Please choose another "Replace existing file" option!
+
+100=Select the directory where your program files reside:
+101=Select the output directory where your generated setup file(s) will be resided:
+
+;------------------------------ Miscellaneous strings
+
+;------------------------------ Error strings
+606=Please specify a document extension.  
+607=Please specify a document identifier.  
+608=Please specify a identifier full name.  
+609=Please specify a source pathname.  
+610=Please specify INI file pathname.
+611=Please specify a section name.
+612=Please specify a key name.
+
+;------------------------------ Toolbar strings
+800=New Project|Create a new project
+801=Open Project|Open an existing project
+802=Save Project|Save the current project
+803=Project Wizard|Create a new project using the Project Wizard
+804=New Folder|Insert a new file folder
+805=Insert File(s)|Insert existing file(s) into the project
+806=New Shortcut Folder|Insert a new shortcut folder into the project
+807=New Shortcut|Insert a new shortcut into the project
+808=New Internet Shortcut|Insert a new internet shortcut into the project
+809=New Key|Insert a new key into the project
+810=New String Value|Insert a new String value into the project
+811=New Binary Value|Insert a new Binary value into the project
+812=New DWORD Value|Insert a new DWORD value into the project
+813=Build Setup|Build the setup program
+814=Test Run Setup|Test run the setup program
+815=Delete Selection|Delete the selection
+816=Properties|Edit the current selection's properties
+817=Registration|How to buy and register the program
+818=Home Page|Setup2Go Home Page
+819=Help|Help Contents
+820=About|Display program information, version number, copyright
+821=New File Type Association|Insert a new file type association 
+822=Import from a .reg file|Import from a .reg file
+823=New INI file record|Insert a new INI file record
+
+;------------------------------ Application Menu strings
+1000=&File
+1001=&Edit
+1002=&Project
+1003=&Build
+1004=&Options
+1005=&Help
+
+;------------------------------ File Menu strings
+1020=&New Project<tab>Ctrl+N|Create a new project
+1021=New Project &Wizard...|Create a new project using the Project Wizard
+1022=&Open Project...<tab>Ctrl+O|Open an existing project
+1023=&Close Project|Close the current project
+1024=&Save Project<tab>Ctrl+S|Save the current project
+1025=Save Project &As...|Save the current project with a new name
+1026=E&xit|Quit the application
+1027=Recent &Files|Open recent file
+
+;------------------------------ Edit Menu strings
+1040=&Undo<tab>Ctrl+Z
+1041=&Redo<tab>Ctrl+Y
+1042=Cu&t<tab>Ctrl+X
+1043=&Copy<tab>Ctrl+C
+1044=&Paste<tab>Ctrl+V
+1045=&Delete<tab>Del
+
+;------------------------------ Project Menu strings
+1060=General Info|Activate the General Info tab
+1061=Setup Info|Activate the Setup Info tab
+1062=Requirements|Activate the Requirements tab
+1063=Files|Activate the Files tab
+1064=Shortcuts|Activate the Shortcuts tab
+1065=Registry|Activate the Registry tab
+1066=File Types|Activate the File Types tab
+1067=Dialogs/Screens|Activate the Dialogs/Screens tab
+1068=Create Setup|Activate the Create Setup tab
+1069=External Tools|Activate the External Tools tab
+1070=INI Files|Ativate the INI Files tab
+
+;------------------------------ Build Menu strings
+1080=&Build Setup|Build the setup program
+1081=&Test Run Setup|Test run the setup program
+
+;------------------------------ Options Menu strings
+1100=Language|Change the current language
+
+;------------------------------ Help Menu strings
+1120=&Help Topics|Help Contents
+1121=&Setup2Go on the Web|Setup2Go Home Page
+1122=&Registration|How to buy and register the program
+1123=&About...|Display program information, version number, copyright
+
+;------------------------------ Files Tab Context Menu strings
+1140=Ne&w Folder...|Insert a new file folder
+1141=&Insert File(s)...|Insert existing file(s) into the project
+1142=&Delete File(s)|Delete the selected file(s)
+1143=D&elete Folder|Delete the selected folder
+1144=&Properties|Edit the current selection's properties
+1145=Insert &Folder...|Insert folder into the project
+
+;------------------------------ Shortcuts Tab Context Menu strings
+1160=Ne&w Folder...|Insert a new shortcut folder into the project
+1161=New &Shortcut...|Insert a new shortcut into the project
+1162=New &Internet Shortcut..|Insert a new internet shortcut into the project
+1163=&Delete Shortcut(s)|Delete the selected shortcut(s)
+1164=&Delete Folder|Delete the selected shortcut folder
+1165=&Properties|Edit the current selection's properties
+
+;------------------------------ Registry TAB Context Menu strings
+1180=New|Contains commands for creating new keys or values
+1181=New Key|Insert a new key into the project
+1182=New String Value|Insert a new String value into the project
+1183=New Binary Value|Insert a new Binary value into the project
+1184=New DWORD Value|Insert a new DWORD value into the project
+1185=&Delete Value(s)|Delete the selected value(s)
+1186=&Delete Key|Delete the selected key
+1187=&Properties|Edit the current selection's properties
+1188=&Import from a .reg file|Import from a .reg file
+1189=New D&efault Value|Insert a new Default value into the project
+
+;------------------------------ File Type TAB Context Menu strings
+1200=New File Type Association|Insert a new file type association
+1201=&Delete|Delete the selected file type association(s)
+1202=&Properties|Edit the current selection's properties
+
+;------------------------------ INI Files TAB Context Menu strings
+1300=New INI File Record|Insert a new INI file record
+1301=&Delete|Delete the selected INI file record(s)
+1302=&Properties|Edit the current selection's properties

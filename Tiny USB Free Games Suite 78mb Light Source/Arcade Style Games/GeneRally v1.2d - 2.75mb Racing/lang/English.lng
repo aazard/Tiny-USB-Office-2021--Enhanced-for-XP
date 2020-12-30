@@ -1,0 +1,169 @@
+#0000# "Oops!"                                   ; Messagebox title
+#0001# "lap"                                     ; Mainmenu, race length
+#0002# "laps"                                    ; Mainmenu, race length
+#0003# "kilometer"                               ; Mainmenu, race length
+#0004# "kilometers"                              ; Mainmenu, race length
+#0005# "on"                                      ; 2 state buttons
+#0006# "off"                                     ; 2 state buttons
+#0007# "Race distance"                           ; Pre race info box
+#0008# "Track record"                            ; Pre race info box
+#0009# "Fastest lap"                             ; Pre race info box
+#0010# "Official standings"                      ; Post race info box
+#0011# "Official championship"                   ; Post season info box, continues on next line
+#0012# "standings"                               ; Post season info box
+#0013# "Championship points"                     ; Post race info box
+#0014# "after race "                             ; Post race info box, continues on next line
+#0015# ""                                        ; Post race info box
+#0016# "LOADING..."                              ; While loading track
+#0017# "Exit"                                    ; Main menu
+#0018# "Start"                                   ; Main menu
+#0019# "Race length"                             ; Main menu
+#0020# "Select player(s) and track(s) first!"    ; Main menu
+#0021# "Select none"                             ; Main menu (not used in v1.02 and later)
+#0022# "Select all"                              ; Main menu (not used in v1.02 and later)
+#0023# "Randomize"                               ; Main menu (not used in v1.02 and later)
+#0024# "Cancel"                                  ; Menus
+#0025# "Options"                                 ; Menus
+#0026# "Advanced"                                ; Menus
+#0027# "Drivers"                                 ; Menus
+#0028# "OK"                                      ; Menus
+#0029# "Resume"                                  ; In-game menu
+#0030# "End season"                              ; In-game menu
+#0031# "OK"                                      ; Message box
+#0032# "Yes"                                     ; Message box
+#0033# "No"                                      ; Message box
+#0034# "Main Menu"                               ; Main menu title
+#0035# "Options"                                 ; Options menu title
+#0036# "Advanced options"                        ; Advanced options menu title
+#0037# "Driver options"                          ; Main menu
+#0038# "game"                                    ; Save / Load "game"
+#0039# "Tyre wear"                               ; Options menu
+#0040# "Fuel consumption"                        ; Options menu
+#0041# "Fuel mass"                               ; Options menu
+#0042# "Damage"                                  ; Options menu
+#0043# "Race length"                             ; Options menu
+#0044# "Starting order"                          ; Options menu
+#0045# "Points"                                  ; Options menu
+#0046# "1st place"                               ; Options menu
+#0047# "2nd place"                               ; Options menu
+#0048# "3rd place"                               ; Options menu
+#0049# "4th place"                               ; Options menu
+#0050# "5th place"                               ; Options menu
+#0051# "6th place"                               ; Options menu
+#0052# "Fastest lap"                             ; Options menu
+#0053# "laps"                                    ; Options menu, race length
+#0054# "kilometers"                              ; Options menu, race length
+#0055# "random"                                  ; Options menu, starting order
+#0056# "points"                                  ; Options menu, starting order
+#0057# "points, reversed"                        ; Options menu, starting order
+#0058# "point|points"                            ; Options menu, points
+#0059# "Resolution"                              ; Advanced options menu
+#0060# "Effects"                                 ; Advanced options menu
+#0061# "Shadows"                                 ; Advanced options menu
+#0062# "Vertical sync."                          ; Advanced options menu
+#0063# "Ghost car"                               ; Advanced options menu
+#0064# "Engine volume"                           ; Advanced options menu
+#0065# "Skid volume"                             ; Advanced options menu
+#0066# "Effects volume"                          ; Advanced options menu
+#0067# "Game speed"                              ; Advanced options menu
+#0068# "Language"                                ; Advanced options menu
+#0069# "Sound set"                               ; Advanced options menu
+#0070# "Create driver"                           ; Drivers menu
+#0071# "Delete driver"                           ; Drivers menu
+#0072# "Driver stats"                            ; Drivers menu
+#0073# "Driver"                                  ; Drivers menu
+#0074# "Colors"                                  ; Drivers menu
+#0075# "Controls"                                ; Drivers menu
+#0076# "Accelerate"                              ; Drivers menu
+#0077# "Brake"                                   ; Drivers menu
+#0078# "Steer left"                              ; Drivers menu
+#0079# "Steer right"                             ; Drivers menu
+#0080# "unassigned"                              ; Drivers menu, controls
+#0081# "Name"                                    ; Drivers menu, create driver
+#0082# "Type"                                    ; Drivers menu, create driver
+#0083# "human"                                   ; Drivers menu, create driver, Type
+#0084# "computer"                                ; Drivers menu, create driver, Type
+#0085# "Driver needs a name."                    ; Drivers menu, create driver
+#0086# "Driver already exists."                  ; Drivers menu, create driver
+#0087# "Game paused"                             ; In-game menu title
+#0088# "Select control for"                      ; Drivers menu, controls
+#0089# "AI driver skill"                         ; Drivers menu
+#0090# "Load"                                    ; Load / Save dialog
+#0091# "Save"                                    ; Load / Save dialog
+#0092# "Delete"                                  ; Load / Save dialog
+#0093# "Filename"                                ; Load / Save dialog
+#0094# "Files"                                   ; Load / Save dialog
+#0095# "File '"                                  ; Load / Save dialog, msgbox
+#0096# "' already exists. Overwrite?"            ; Load / Save dialog, msgbox
+#0097# "Save game"                               ; Load / Save dialog, msgbox
+#0098# "File '"                                  ; Load / Save dialog, msgbox
+#0099# "' does not exist!"                       ; Load / Save dialog, msgbox
+#0100# "Load game"                               ; Load / Save dialog, msgbox
+#0101# "Load failed!"                            ; Load / Save dialog, msgbox
+#0102# "Really delete"                           ; Load / Save dialog, msgbox
+#0103# "Delete file"                             ; Load / Save dialog, msgbox
+#0104# "Wins"                                    ; Drivers menu, stats
+#0105# "2nd places"                              ; Drivers menu, stats
+#0106# "3rd places"                              ; Drivers menu, stats
+#0107# "4th places"                              ; Drivers menu, stats
+#0108# "5th places"                              ; Drivers menu, stats
+#0109# "6th places"                              ; Drivers menu, stats
+#0110# "Races"                                   ; Drivers menu, stats
+#0111# "Seasons"                                 ; Drivers menu, stats
+#0112# "Total"                                   ; Drivers menu, stats
+#0113# "Total points"                            ; Drivers menu, stats
+#0114# "Fastest laps"                            ; Drivers menu, stats
+#0115# "Driver statistics"                       ; Drivers menu, stats
+#0116# "Are you sure?"                           ; msgbox
+#0117# "End race"                                ; In-game menu
+#0118# "Best times"                              ; Post race dialog (time trial)
+#0119# "Time trial results"                      ; Post race dialog (time trial)
+#0120# "Time trial"                              ; Post race dialog (time trial)
+#0121# "Best time"                               ; Post race dialog (time trial)
+#0122# "Goofy reverse"                           ; Advanced options menu
+#0123# "Track info"                              ; Track info dialog
+#0124# "Track length"                            ; Track info dialog
+#0125# "Reset"                                   ; Track info/driver stats dialog
+#0126# "Are you sure?"                           ; Track info/driver stats dialog
+#0127# "Author"                                  ; Track info dialog
+#0128# "[all tracks]"                            ; MainMenu, folder list
+#0129# "[misc. tracks]"                          ; MainMenu, folder list
+#0130# "[multiple folders]"                      ; MainMenu, folder list
+#0131# "Create"                                  ; MainMenu
+#0132# "Delete"                                  ; MainMenu
+#0133# "selected"                                ; MainMenu
+#0134# "Move to"                                 ; MainMenu
+#0135# "Delete tracks"                           ; MainMenu
+#0136# "Select"                                  ; MainMenu
+#0137# "Create folder"                           ; MainMenu, msgbox
+#0138# "Enter a name for the folder"             ; MainMenu, inputbox
+#0139# "Failed to create a folder."              ; MainMenu, msgbox
+#0140# "Delete folder"                           ; MainMenu, msgbox
+#0141# "Select a folder first."                  ; MainMenu, msgbox
+#0142# "Are you sure you want to delete the folder and all its contents?" ; MainMenu, msgbox
+#0143# "Failed to delete the folder."            ; MainMenu, msgbox
+#0144# "Move tracks"                             ; MainMenu, msgbox
+#0145# "Some tracks could not be moved."         ; MainMenu, msgbox
+#0146# "Delete tracks"                           ; MainMenu, msgbox
+#0147# "Select atleast one track first."         ; MainMenu, msgbox
+#0148# "Are you sure you want to delete these"   ; MainMenu, msgbox, continues on the next line
+#0149# "tracks?"                                 ; MainMenu, msgbox
+#0150# "Some tracks could not be deleted."       ; MainMenu, msgbox
+#0151# "Replay"                                  ; In-game menu
+#0152# "ESC to exit, F1 for help."               ; Replay
+#0153# "Rate"                                    ; Replay
+#0154# "Play"                                    ; Replay help
+#0155# "Stop"                                    ; Replay help
+#0156# "Reverse play"                            ; Replay help
+#0157# "Fast forward"                            ; Replay help
+#0158# "Rewind"                                  ; Replay help
+#0159# "Adjust replay rate"                      ; Replay help
+#0160# "Go to begin/end"                         ; Replay help
+#0161# "Begin/end cut area"                      ; Replay help
+#0162# "Fullscreen mode"			 			 ; Advanced options menu
+#0163# "Palette"								 ; Advanced options menu
+#0164# "minutes (+2 laps)"						 ; Options menu, race length
+#0165# "minute"									 ; Mainmenu, race length
+#0166# "minutes"								 ; Mainmenu, race length
+#0167# "Are you sure you want to skip this race?"; In-game menu dialog
+#0168# "Are you sure you want to quit to the main menu?" ; In-game menu dialog

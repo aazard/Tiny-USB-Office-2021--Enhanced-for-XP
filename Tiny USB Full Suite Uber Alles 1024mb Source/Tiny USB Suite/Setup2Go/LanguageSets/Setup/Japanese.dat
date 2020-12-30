@@ -1,0 +1,149 @@
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% セットアップ
+Static1=%ProductName% %ProductVersion% はすでにインストールされています。アンインストールしてから再インストールすることをお勧めします。 %ProductName% %ProductVersion% をアンインストールするなら はい. このままセットアップするなら いいえ. 中止するなら終了をクリックしてください。
+Error1=アンインストールを続けられません。このままセットアップを継続します。
+Yes=はい(&Y)
+No=いいえ(&N)
+Cancel=中止
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=通知
+Static1=次のファイルは使用されているため更新できません。
+Static2=他のプログラムをすべて終了してから再実行してください。<br>再起動してこのファイルをインストールするなら 終了<br>インストールを終了するなら 中止.
+Retry=再実行(&R)
+Cancel=終了(&C)
+Abort=中止(&A)
+
+[PASSWORD_DIALOG]
+Dialog_Title=パスワード
+Static1=インストールパスワードを入力してください。
+OK=&OK
+Exit=終了(&X)
+Error_Title=エラー
+Error_Static1=不正なパスワードです。やり直してください。
+
+[LANGUAGE_DIALOG]
+Dialog_Title=言語の選択
+Static1=インストール作業中に使用する言語を選んでください。
+Next=続行(&N) >
+Cancel=中止
+
+[WELCOME_DIALOG]
+Dialog_Title=ようこそ
+Static1=ようこそ %ProductName% のセットアップへ。<br>あなたのコンピューターへ %ProductName% をインストールします。
+Static2=このセットアップ作業の前に、他のすべてのウィンドウズプログラムを終了してください。
+Static3=他に実行中ののプログラムがあるなら中止をクリックし、このままセットアップするなら継続をクリックしてください。
+Static4=警告: このプログラムは著作権に関する法律と条約に保護されています。
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[LICENSE_DIALOG]
+Dialog_Title=ソフトウェアライセンス
+Static1=ライセンス契約をお読みください。最後まで読むにはPAGE DOWN キーをお使いください。
+Static2=ライセンス契約のすべての条項に同意されますか？<br>いいえを選ぶとセットアップは中止されます。セットアップを継続するには、同意いただかなければなりません。
+Back=< 戻る(&B)
+Yes=はい
+No=いいえ
+
+[README_DIALOG]
+Dialog_Title=はじめに
+Static1=はじめに
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=インストール先の選択
+Static1=次のフォルダーへ %ProductName% をインストールします。
+Static2=このフォルダーへインストールするなら 継続 をクリックしてください。
+Static3=別のフォルダーへインストールするなら 参照 をクリックして選択してください。
+Static4=中止を選択すれば %ProductName% はインストールされません。
+Static5=必要なディスク容量：
+Static7=空きディスク容量：
+Browse=参照(&R)...
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=既存フォルダーの選択
+Static1=インストールするフォルダーを選択してください。
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=プログラムフォルダーの選択
+Static1=このプログラムのアイコンを下記のフォルダーに作成します。既存のフォルダーまたは新しいフォルダーを選択できます。選択したら 継続 をクリックしてください。
+Static2=プログラムフォルダー(&P)
+Static3=既存のフォルダー(&X)
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=アイコンオプション
+Static1=インストールするプログラムを素早く起動するためにオプションを設定します。
+Static2=デスクトップにアイコンを作成しますか？
+Static3=ツールバーにアイコンを作成しますか？
+Yes=はい
+No=いいえ
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[START_DIALOG]
+Dialog_Title=ファイルのコピー
+Static1=セットアップに必要な情報を設定できました。今までの設定を確認・変更するには 戻る をクリックしてください。 今までの設定でよろしければ 継続 をクリックしてファイルのコピーを開始してください。
+Static2=現在の設定情報
+String1=インストール先のディレクトリー:
+String2=プログラムマネージャーグループ:
+Back=< 戻る(&B)
+Next=続行(&N) >
+Cancel=中止
+
+[PROCESS_DIALOG]
+Dialog_Title=ファイルをコピーしています。
+Cancel=中止
+
+[FINISH_DIALOG]
+Dialog_Title=セットアップの完了
+Static1=あなたのコンピューターに %ProductName% のセットアップできました。完了をクリックしてください。
+Check1=Readmeを読む(&V) 
+Check2=インストールしたプログラムを今すぐ実行する(&R)
+Back=< 戻る(&B)
+Finish=完了
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=セットアップの中断
+Static1=セットアップは完了していません。ここで中止すると %ProductName% はインストールされません。
+Static2=後から再度セットアップをやり直すこともできます。
+Static3=セットアップを続けるには 再開 をクリックしてください。本当に中止するなら 終了 をクリックしてください。
+Resume=再開(&R)
+Exit=終了(&X)
+
+[UNINSTALL_DIALOG]
+1001=Setup2Goのアンインストール
+1101=削除するファイルの確認
+1102=%1  とその関連するコンポーネントを本当に削除しますか？
+1103=はい(&Y)
+1104=いいえ(&N)
+1201=プログラムの削除
+1202=アンインストールはあなたのコンピューターから %1 を削除します。 以下のコンポーネントが削除されるまでお待ちください。
+1203=アンインストールは完了しました。いくつかのエレメントは削除されませんでした。別に手作業で削除してください。
+1204=アンインストールは成功しました。
+1301=共有ファイルを削除しますか?
+1302=以下のファイルはどのプログラムからも使用されていません。なんらかのプログラムがこのファイルを使用しているのに削除すると、そのプログラムは動作しなくなるかもしれません。本当にこれらの共有ファイルを削除しますか？<br><br>残しておいてもあなたのコンピューターに問題は生じません。どうしたらよいか確信が持てない場合は、これらの共有ファイルを削除しないことをお勧めします。<br><br>ファイル名:<tab>%1<br>フォルダー:<tab>%2
+1400=詳細
+1401=詳細...
+1402=フォルダーを削除できません。
+1403=ファイルを削除できません。
+
+[STRINGS]
+1=通知
+10=システム設定の変更
+11=新しい設定を有効にするには、まずコンピューターを再起動してください。<br><br>今すぐに再起動しますか？
+21=このシステムは %1と互換性がありません。セットアップを終了します。
+22=このシステムは %1と互換性がありません。セットアップを継続してもプログラムは正しく動作しないかもしれません。
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=128

@@ -1,0 +1,162 @@
+// companion/pet control status displayed in NPC description
+//
+// Wounded hunter (party member)
+// Dog called Fido (leashed)
+// Cow (tied in place)
+// 
+.COMP_CONTROL.
+[PARTY:party member]
+[LEASHED:leashed]
+[TIED:tied in place]
+
+.SLEEPING.
+Sleeping
+
+.FALLEN.
+Fallen
+
+.UNCONSCIOUS.
+Unconscious
+
+.IN_SHOCK.
+Prone lying
+
+.ESCAPING.
+Escaping
+
+.AGGRESSIVE.
+Aggressive
+
+.FUZZY_NUM.
+[1:1]
+[2:2]
+[3:a few]
+[4:some]
+[5:some]
+[6:half a dozen]
+[7:half a dozen]
+[8:half a dozen]
+[9:several]
+[10:several]
+[11:a dozen]
+[12:a dozen]
+[13:a dozen]
+
+// "in some direction" grammar form of compass points. Used in messages like; "...in the [north]"
+// in english the word remains unchanged, but the section defined for the ease of future translations.
+// 
+.IN_DIR.
+[N:north]
+[NE:north-east]
+[E:east]
+[SE:south-east]
+[S:south]
+[SW:south-west]
+[W:west]
+[NW:north-west]
+[*:unkown direction]
+
+
+.TIMESPAN_DAY.
+[1:a day]
+[2:two days]
+[3:few days]
+[4:half a week]
+[5:half a week]
+[?:a week]
+[1?:two weeks]
+[2?:couple of weeks]
+[3?:a month]
+[4?:over a month]
+[5?:nearly two months]
+[6?:few months]
+[7?:couple of months]
+[??:several months]
+[1??:many months]
+[2??:half a year]
+[3??:a year]
+[4??:over a year]
+[5??:nearly two years]
+[6??:few years]
+[*:unknown time]
+
+// NPC wielding info. 
+// <item_indef> gets value of indefinite weapon name NPC wielding. (eg. a knife)
+// <npc> returns HE/SHE/ANIMAL
+//
+.NPC_INFO_WIELDING.
+[PP_SUBJ:<npc>] is wielding <item_verbose_ind>.
+
+// NPC shield mode info, %s gets value of shield mode in use
+.NPC_INFO_SHIELD.
+[PP_SUBJ:<npc>] is holding <item_verbose_ind> %s.
+
+// General info for looking at plants. 
+// <num> - number of plants, <status> - growing/withering/picked
+// <item>  - plant name, <items> - plural form of plant name
+// case 1 for single plant, * for multiple (determined by passed (num) value)
+// --
+// Patch info
+.FLORA_INFO_PATCH.(num)
+[1:a <status> <item> patch]
+[*:a patch of <num> <status> <items_nonum>]
+
+// Single plants/shrubs info
+.FLORA_INFO_SINGLE.(num)
+[1:a <status> <item>]
+[*:<num> <status> <items_nonum>]
+
+
+.PET_PHRASE.
+[EAT:&"Eat now, <npc_desc>."]
+[ATTACK:&"Attack, <npc_desc>, attack!"]
+[STAY:&"Stay there, <npc_desc>."]
+[COME:&"Come <npc_desc> come!"]
+
+
+// tags for carcasses whose hides are damaged by weapons.
+// initialized upon start, don't edit while game is running.
+.CARCASS_DAMAGE.
+[SLIGHT:harmed]
+[LOW:torn]
+[MED:hacked]
+[HIGH:mangled]
+[GREAT:grisly]
+
+// tags for carcasses which have been eaten by predators
+.CARCASS_EATEN.
+[LOW:slightly eaten]
+[MED:partially eaten]
+[HIGH:half-eaten]
+[GREAT:largely eaten]
+
+// tags for carcasses which have been cut for meat
+.CARCASS_CUT.
+[LOW:slightly cut]
+[MED:partially cut]
+[HIGH:half-cut]
+[GREAT:largely cut]
+
+
+// tags for NPCs fatigue display. "It looks [very fatigued]"
+.OVERALL_FATIGUE.
+[LOW:slightly fatigued]
+[MED:fatigued]
+[HIGH:very fatigued]
+[GREAT:breathless]
+
+// names of twelve months 
+.MONTH_NAME.
+[1:Center month]
+[2:Pearl month]
+[3:Soil month]
+[4:Swidden month]
+[5:Seedtime month]
+[6:Fallow month]
+[7:Hay month]
+[8:Harvest month]
+[9:Fall month]
+[10:Dirt month]
+[11:Dead month]
+[12:Winter month]
+[*:Unknown month]

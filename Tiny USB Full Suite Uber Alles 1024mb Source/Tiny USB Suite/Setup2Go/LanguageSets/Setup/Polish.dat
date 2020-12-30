@@ -1,0 +1,153 @@
+; Polskie t³umaczenie: 	Dariusz Ma³achowski
+;			d_malachowski@pf.pl
+;			darcio@mat.uni.torun.pl
+
+[REINSTALL_DIALOG]
+Dialog_Title=%ProductName% %ProductVersion% Instalacja
+Static1=%ProductName% %ProductVersion% jest zainstalowany na Twoim komputerze. Zaleca siê odinstalowanie programu, przed kontynuowaniem. Naciœnij Tak aby odinstalowaæ %ProductName% %ProductVersion%. Naciœnij Nie aby kontynuowaæ bie¿¹c¹ instalacjê. Naciœnij Anuluj aby zakoñczyæ.
+Error1=Nie mogê deinstalowaæ programu. Bie¿¹ca instalacja bêdzie kontynuowana.
+Yes=&Tak
+No=&Nie
+Cancel=Anuluj
+
+[FILE_IN_USE_DIALOG]
+Dialog_Title=Notice
+Static1=The following file is in use and can not be updated:
+Static2=Close all other applications and choose Retry.<br>Choose Cancel to install this file on reboot.<br>Choose Abort to terminate the installation.
+Retry=&Retry
+Cancel=&Cancel
+Abort=&Abort
+
+[PASSWORD_DIALOG]
+Dialog_Title=Has³o Instalacji
+Static1=Proszê wpisaæ has³o instalacyjne
+OK=&OK
+Exit=&Wyjœcie
+Error_Title=B³¹d
+Error_Static1=Przepraszamy, z³e has³o. Spróbuj wpisaæ ponownie.
+
+[LANGUAGE_DIALOG]
+Dialog_Title=Wybierz jêzyk
+Static1=Proszê wybraæ jêzyk, w którym bêdzie przeprowadzana dalsza instalacja.
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[WELCOME_DIALOG]
+Dialog_Title=Witamy
+Static1=Witamy w programie instalacyjnym %ProductName%. Ten program przeprowadzi instalacjê %ProductName% na Twoim komputerze.
+Static2=Zaleca siê zakoñczyæ wszystkie programy Windows przed uruchomieniem instalacji.
+Static3=Naciœnij Anuluj aby zakoñczyæ instalacjê i wtedy zamkn¹æ uruchomione programy. Naciœnij Nastêpny aby kontynuowaæ instalacjê.
+Static4=UWAGA: Ten program jest chroniony prawem autorskim i miêdzynarodowymi postanowieniami.
+Back=< &Cofnij
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[LICENSE_DIALOG]
+Dialog_Title=Warunki Licencji
+Static1=Proszê uwa¿nie przeczytaæ podane Warunki Licencji. Naciœnij klawisz PAGE DOWN aby przeczytaæ ca³¹ umowê licencyjn¹.
+Static2=Czy akceptujesz przedstawione Warunki Licencji? Je¿eli wybierzesz Nie, Program Instalacyjny zostanie zakoñczony. Aby kontynuowaæ, musisz zaakceptowaæ Warunki Licencji.
+Back=< &Cofnij
+Yes=Tak
+No=Nie
+
+[README_DIALOG]
+Dialog_Title=Dodatkowe Informacje
+Static1=Dodatkowe Informacje:
+Back=< &Cofnij
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[TARGET_DIRECTORY_DIALOG]
+Dialog_Title=Wybierz docelowy katalog
+Static1=Program Instalacyjny zainstaluje %ProductName% w nastêpuj¹cym katalogu.
+Static2=Aby zainstalowaæ w tym katalogu, naciœnij Nastêpny
+Static3=Aby zainstalowaæ w innym katalogu, naciœnij Przegl¹daj i wybierz inny katalog.
+Static4=Mo¿esz zrezygnowaæ z instalacji %ProductName% naciskaj¹c Anuluj.
+Static5=Wymagane miejsce:
+Static7=Miejsce dostêpne:
+Browse=&Przegl¹daj...
+Back=< &Cofnij
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[CHOOSE_DIRECTORY_DIALOG]
+Dialog_Title=Wybierz istniej¹cy katalog
+Static1=Proszê wybraæ katalog instalacyjny.
+
+[PROGRAM_GROUP_DIALOG]
+Dialog_Title=Wybierz Katalog Programu
+Static1=Program Instalacyjny doda ikony instalowanego programu do poni¿szego Katalogu. Mo¿esz wpisaæ now¹ nazwê katalogu, lub wybraæ jeden z istniej¹cych katalogów. Naciœnij Nastêpny aby kontynuowaæ.
+Static2=&Katalog Programu
+Static3=&Istniej¹ce Katalogi
+Back=< &Cofnij
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[PROGRAM_ICON_OPTIONS_DIALOG]
+Dialog_Title=Program Icon Options
+Static1=You have additional option(s) to create program icon to start the application quickly.
+Static2=Do you want to create a Desktop icon? If so, please click Yes.
+Static3=Do you want to create a Quick Launch Toolbar icon? If so, please click Yes.
+Yes=Yes
+No=No
+Back=< &Back
+Next=&Next >
+Cancel=Cancel
+
+[START_DIALOG]
+Dialog_Title=Kopiowanie plików
+Static1=Program Instalacyjny ma doœæ informacji, aby zacz¹æ kopiowanie plików. W celu zmiany ustawieñ naciœnij Cofnij. Je¿eli bie¿¹ce ustawienia s¹ poprawne, naciœnij Nastêpny aby rozpocz¹æ kopiowanie.
+Static2=Wybrane ustawienia
+String1=Katalog instalacyjny:
+String2=Grupa Programów menu Start:
+Back=< &Cofnij
+Next=&Nastêpny >
+Cancel=Anuluj
+
+[PROCESS_DIALOG]
+Dialog_Title=Kopiowanie Plików
+Cancel=Anuluj
+
+[FINISH_DIALOG]
+Dialog_Title=Instalacja zakoñczona
+Static1=Program Instalacyjny zakoñczy³ instalowanie %ProductName% na Twoim komputerze.
+Check1=&Przeczytaj plik Czytaj To
+Check2=&Uruchom zainstalowany program
+Back=< &Cofnij
+Finish=Zakoñcz
+
+[EXIT_SETUP_DIALOG]
+Dialog_Title=Zakoñczenie Instalacji
+Static1=Instalacja nie zosta³a ukoñczona. Je¿eli zakoñczysz Program Instalacyjny teraz, to instalacja aplikacji nie bêdzie ukoñczona.
+Static2=Mo¿esz uruchomiæ Program Instalacyjny póŸniej aby dokoñczyæ tê instalacjê.
+Static3=Aby kontynuowaæ naciœnij Zrezygnuj. Je¿eli chcesz zakoñczyæ naciœnij Koniec.
+Resume=&Zrezygnuj
+Exit=&Koniec
+
+[UNINSTALL_DIALOG]
+1001=Setup2Go DeInstalator
+1101=PotwierdŸ kasowanie pliku
+1102=Czy na pewno chcesz usun¹æ %1 i wszystkie jego komponenty?
+1103=&Tak
+1104=&Nie
+1201=Usuwanie programu z Twojego komputera.
+1202=Deinstalator usun¹³ %1 z Twojego komputera. Proszê poczekaæ. Finalizowanie deinstalacji...
+1203=Deinstalacja zakoñczona. Pewne elementy nie mog¹ byæ usuniête. Powinieneœ sam odinstalowaæ te elementy.
+1204=Deinstalacja zakoñczona powodzeniem.
+1301=Usuwanie plików wspó³dzielonych?
+1302=Nastêpuj¹cy plik wspó³dzielony nie jest u¿ywany przez ¿aden z programów. Je¿eli jakieœ programy u¿ywaj¹ tego pliku, a zostanie on usuniêty, to mog¹ one nie funkcjonowaæ poprawnie. Czy na pewno chcesz usun¹æ ten plik?<br><br>Pozostawienie tego pliku nie zniszczy Twojego systemu. Je¿eli nie jesteœ pewien, co zrobiæ, sugerujê aby nie kasowaæ tego pliku<br><br>Nazwa pliku:<tab>%1<br>Katalog:<tab>%2
+1400=Szczegó³y
+1401=Szczegó³y...
+1402=Nie mo¿na usun¹æ katalogu
+1403=Nie mo¿na usun¹æ pliku
+
+[STRINGS]
+1=Zwróæ uwagê
+10=Zmiana Ustawieñ Systemu
+11=Musisz zrestartowaæ swój komputer przed uruchomieniem programu.<br><br>Czy chcesz go teraz zrestartowaæ?
+21=Twój system nie jest kompatybilny z %1. Program Instalacyjny zakoñczy dzia³anie.
+22=Twój system nie jest kompatybilny z %1. Program Instalacyjny bêdzie kontynuowa³, jednak aplikacja mo¿e nie dzia³aæ poprawnie.
+23=You do not have sufficient privileges to complete this installation. Log on as administrator and then retry this installation.
+
+[FONT]
+CHARSET=1

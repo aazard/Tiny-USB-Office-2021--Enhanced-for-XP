@@ -1,0 +1,36 @@
+1;Greetings spacefaring being!;
+;Greetings to you too;2
+;I don't want to talk to you;0
+2;I hope you will enjoy our peaceful planet;
+;Can you tell me a little bit about it?;3
+;Can you tell me about your kind?;4
+;I am certain I will. Good bye;
+3;Of course. The climate is mild, and there are no predators that are dangerous to us. There is enough edible vegetation to nourish our entire population without the need for additional farming.;
+;Sounds too good to be true;5
+;I would like to talk about something else;2
+;It has been nice talking to you. Goodbye;0
+4;What would you like to know?;
+;Tell me about your technology;6
+;Tell me about your biology;7
+;Tell me about your philosophy;8
+;Did you ever have contact with other civilisations?;9
+;I think I'll explore a little more. See you later;0
+5;Actually it wasn't always this way, but we have been able to adjust certain parameters;
+;I see;2
+6;We have abandoned technology, and now live in harmony with nature;
+;I see;4
+7;We have found that most other lifeforms live a lot shorter than we do. We do not know why.;
+;I see;4
+8;Do you wish to discuss the teachings of gzrollazasd?;
+;Another time perhaps;4
+9;Indeed, 1300 cycles ago, a species very similiar to yours visited our planet. They were suffering from a lack of legs, just like you.;
+;What else can you tell me about them?;10
+;I see;4
+10;They were very friendly, and helped us to adjust this planet. They were in a kind of war at the time.;
+;Can you tell me more about those 'adjustments'?;12
+;Can you tell me more about that war?;11
+;I see;4
+11;Sorry, no. They never went into detail, and we do not care for that sort of things.;
+;I see;4
+12;They are a secret, sorry.;
+;I see;4

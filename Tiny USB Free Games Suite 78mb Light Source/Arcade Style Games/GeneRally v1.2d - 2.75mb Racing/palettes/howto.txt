@@ -1,0 +1,4 @@
+HOW TO USE CUSTOM PALETTES
+
+* Place user-created .pal files into this folder
+* Select the palette in the Advanced Options menu
