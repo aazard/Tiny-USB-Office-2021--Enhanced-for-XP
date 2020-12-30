@@ -1,6 +1,11 @@
 # Aazards Website, with releases details: https://aazard.github.io/
 
 ***
+aazards Logo | Tiny USB Logo
+------------ | -------------
+![aazards Logo](https://i.ibb.co/qy9t6Kc/Human-Stuff-Standard-Suit-Animated-480.webp) | ![Tiny USB Logo](https://i.ibb.co/19BWW3Z/51-Ug-RY4fo-HL.png)
+
+***
 
 ## AVERAGE USERS WILL WANT THE "Tiny USB Suite 128mb pack", it fits on a 128mb flash drive (or to PC HDD/SSD)
 
