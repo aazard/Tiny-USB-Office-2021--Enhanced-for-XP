@@ -1,4 +1,0 @@
-Kiwi Rescue - Beispiel Map
-Auf dieser Karte musst du Kiwis 'retten'.
-Dies machst du, indem du sie zum dem Stock mit
-dem steinernem Kiwi treibst.

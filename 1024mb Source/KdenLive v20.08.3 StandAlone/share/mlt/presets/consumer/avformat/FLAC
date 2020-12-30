@@ -1,8 +1,0 @@
-f=matroska
-acodec=flac
-vn=1
-video_off=1
-
-meta.preset.extension=mka
-meta.preset.note=audio only
-meta.preset.name=audio/FLAC

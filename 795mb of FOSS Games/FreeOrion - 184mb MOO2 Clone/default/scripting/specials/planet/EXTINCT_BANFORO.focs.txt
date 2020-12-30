@@ -1,5 +1,0 @@
-Special
-    name = "EXTINCT_BANFORO_SPECIAL"
-    description = "EXTINCT_BANFORO_SPECIAL_DESC"
-    spawnrate = 0.0
-    graphic = "icons/specials_huge/extinct_banforo.png"
