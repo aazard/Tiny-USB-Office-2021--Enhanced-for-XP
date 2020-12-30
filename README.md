@@ -11,7 +11,7 @@ aazards Logo | Tiny USB Logo
 
 ## ADVANCED USERS WILL WANT THE "Large Office Average User pack", it fits on a 1024mb flash drive (or to PC HDD/SSD)
 
-# If you truly need a "Floppy" office a 1.68mb (1680kb) "UnzipMe" version is also uploaded under mu GitHub as "DMF Floppy Office"
+# If you truly need a "Floppy" office a 1.68mb (1680kb) "UnzipMe" version is also uploaded under my GitHub as "DMF Floppy Office"
 
 ### App list needs v2.0.2 update, Many, many, more apps added
 
