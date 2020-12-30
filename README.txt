@@ -1,14 +1,14 @@
-## AVERAGE USERS WILL WANT THE "Small Office Average User pack", it fits on a 64mb flash drive (or to PC HDD/SSD)
+## AVERAGE USERS WILL WANT THE "Tiny USB Suite 128mb pack", it fits on a 128mb flash drive (or to PC HDD/SSD)
 
 ## ADVANCED USERS WILL WANT THE "Large Office Average User pack", it fits on a 1024mb flash drive (or to PC HDD/SSD)
 
-# If you truly need a "Floppy" office a 1.68mb (1680kb) "UnzipMe" version is also uploaded
+# If you truly need a "Floppy" office a 1.68mb (1680kb) "UnzipMe" version is also uploaded under mu GitHub as "DMF Floppy Office"
 
 ### App list needs v2.0.2 update, Many, many, more apps added
 
 # Tiny USB Office 2021: Enhanced for XP aka "Tiny Office"
 
-## Available in packs sized from 1.68mb (1680kb) floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
+## Available in packs sized from 4mb floppy sized to "fits on a 1gb USB flash drive" or HDD/SSD install sized
 
 # Two FOSS/Freeware Games packs, one small of 41 games (77mb) and one large (795mb), of many, are also attached as separate downloads 
 
@@ -20,7 +20,7 @@
  
 ### So it appears as THIS:
 
-### "C:\Tiny Office+\" or "H:\Tiny Office+\"
+### "C:\"Packs Release Name" +\" or "H:\"Packs Release Name"\"
 
 Add "Game" packs to a new "games folder", Make games category in Qsel, drag & drop games "exe" to Qsel's window to create menu entry
 
@@ -67,7 +67,7 @@ automatically, once we connect I can supply link safe address)
 
 Details:
 
-Tiny USB Office 2021: Enhanced for XP, is intended to extend, improve and update the former Tiny USB 
+Tiny USB Office 2021: Enhanced for XP, is a set of "suites" intended to extend, improve and update the former Tiny USB 
 Office from 2008, to a “full featured” while retaining the “Fully Portable” package, using a combination 
 of “Small is beautiful” and “Plus the kitchen sink” design philosophies; that being to attempt to be as 
 inclusive as possible, while being respectful to disk space and resource use. 
@@ -86,7 +86,7 @@ package for you.
 
 Note:
 
-The Tiny USB Office 2021: Enhanced for XP package attempts to keep size and resource use, plus 
+The Tiny USB Office 2021: Enhanced for XP suite packages attempts to keep size and resource use, plus 
 requirements in mind. That said very few tools may require Dot Net framework and/or Java to function. 
 
 I have tried to exclude/minimize tools that have these requirements, but a few are unavoidable, unless I 
@@ -161,23 +161,21 @@ readme into a book!
 
 This is the perfect software package for you! When it comes to portable productivity, Tiny USB Office: 
 
-Enhanced for XP, offers you the biggest bang for your buck!
+Enhanced for XP suite packages, offers you the biggest bang for your buck!
 
-All inside 238 megabytes, the true size of a 256mb USB/etc. drive. The “true” size of pack is only 237mb 
-of space! Hope you find it useful.
 
 ***
 
 Application and tools short descriptions and list:
 
-Tiny USB Office: Enhanced for XP, features all of these programs, which are accessible with one click 
+Tiny USB Office: Enhanced for XP suite packages, features all of these programs, which are accessible with one click 
 with the included Qsel portable program launcher software:
 
 136+ tools and applications & 34+ Games
 
 ***
 
-# Main Tool List Requires Re-write
+# Main Tool List Requires Re-write for v2.0.2+ (Getting to it, Building menu 1st)
 
 ***
 END
