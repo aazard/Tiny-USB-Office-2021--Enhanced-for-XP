@@ -1,3 +1,5 @@
+# Aazards Website, with releases details: https://aazard.github.io/
+
 ## AVERAGE USERS WILL WANT THE "Tiny USB Suite 128mb pack", it fits on a 128mb flash drive (or to PC HDD/SSD)
 
 ## ADVANCED USERS WILL WANT THE "Large Office Average User pack", it fits on a 1024mb flash drive (or to PC HDD/SSD)
