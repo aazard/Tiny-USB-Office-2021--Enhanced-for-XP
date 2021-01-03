@@ -1,0 +1,517 @@
+<html>
+<head>
+	<title>Scribe Scripting Language API</title>
+	<style type="text/css">
+		<!--
+		h3 {
+			margin-left: 2em;	
+		}
+
+		h4 {
+			font-family: courier;
+			margin-left: 5em;	
+			margin-bottom: 0em;
+			color: #a00;
+			background: #eee;
+		}
+
+		ul {
+			margin: 0px;
+			//border: 1px solid red;
+		}
+
+		div {
+			font-size: smaller;
+			margin-left: 9em;
+			background: #fafafa;
+		}
+		-->
+	</style>
+</head>
+<body>
+<h1>Scribe Scripting API</h1>
+<h2>Basics</h2>
+
+<p>The main syntax of the language is somewhat modelled after Javascript and C, however you don't
+need to declared variables with "var". And some more advanced features are missing like passing
+functions around as variables, ternary operators etc.</p/>
+
+<p>When scripting in Scribe you will encounter objects, like email, the application object, a contact
+and so on. These are implemented internally as C++ objects that inherit from the
+<a href="http://www.memecode.com/lgi/docs/classGDom.html">GDom class</a>. You
+can read and write various properties via a simple naming convention. For instance if you have a
+pointer to a mail object in that variable 'm' then you can access the sender's email addres using
+the syntax 'm.From.Email'. You can look up the fields available in the various objects using the
+<a href="http://www.memecode.com/scribe/dom.php">Scribe DOM</a> reference.</p>
+
+<p>Objects in Scribe generally have a type associated with them. Folders can contain items of one
+type, except the trash which can have all types of objects. The types have codes associated with them,
+and this is the mapping:
+<table style="margin-left:2em;font-size:smaller;">
+    <tr><td>MAGIC_NONE<td style="padding-right:1em;">0x00000000<td>No type
+    <tr><td>MAGIC_MAIL<td>0xaaff0001<td>Mail item
+    <tr><td>MAGIC_CONTACT<td>0xaaff0002<td>Contact item
+    <tr><td>MAGIC_FOLDER<td>0xaaff0003<td>Folder of items
+    <tr><td>MAGIC_MAILBOX<td>0xaaff0004<td>Root of mail tree (nothing-abstract)
+    <tr><td style="padding-right:1em;">MAGIC_ATTACHMENT<td>0xaaff0005<td>Mail attachment
+    <tr><td>MAGIC_ANY<td>0xaaff0006<td>Trash folder type (accepts any object)
+    <tr><td>MAGIC_FILTER<td>0xaaff0007<td>Used to match messages against
+    <tr><td>MAGIC_FOLDER_2<td>0xaaff0008<td>Folder v2
+    <tr><td>MAGIC_CONDITION<td>0xaaff0009<td>Filter condition
+    <tr><td>MAGIC_ACTION<td>0xaaff0010<td>Filter action
+    <tr><td>MAGIC_CALENDAR<td>0xaaff0011<td>Calendar event
+    <tr><td>MAGIC_ATTENDEE<td>0xaaff0012<td>Event attendee
+    <tr><td>MAGIC_GROUP<td>0xaaff0013<td>Group of contacts
+</table>
+</p>
+
+<p>There are a number of example scripts in the ./Scripts sub-folder in the scribe directory, and
+a copy of this file. Scripts in the ./Scripts sub-folder are automatically scanned and loaded
+into the tools menu of Scribe on startup.
+<p/>
+They need to define a main function, which is called when Scribe starts. In your main function you
+should do any intialization required and then setup a callback hook depending on what type of functionality
+you're implementing.</p>
+
+<h2>Library Functions:</h2>
+
+	<h3>Built In Language Functions</h3>
+
+		<h4>string Strchr(str, ch[, len]);</h4>
+			<div>
+				Finds a unicode character in a string.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> str - the string to search in
+					<li> ch - the character to find
+					<li> [Optional] len - the maximum length in 'str' to search
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> The remainder of the string starting with the character found or NULL if not found.
+				</ul>				
+			</div>
+
+		<h4>string Strstr(str1, str2[, case_insensitive[, len]]);</h4>
+			<div>
+				Finds a string in another string.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> str1 - the string to search in
+					<li> str2 - the string to search for
+					<li> [Optional] case_insensitive - true if you want case sensitivity (default: false)
+					<li> [Optional] len - the maximum length in 'str' to search (default: the whole of 'str1')
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> The remainder of the string starting with the string found or NULL if not found.
+				</ul>				
+			</div>
+
+		<h4>int Strcmp(str1, str2[, case_insensitive[, len]]);</h4>
+			<div>
+				Compares 2 strings.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> str1 - the first string to compare
+					<li> str2 - the second string to compare
+					<li> [Optional] case_insensitive - true if you want case sensitivity (default: false)
+					<li> [Optional] len - the maximum length in characters to compare (default: the whole strings)
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> zero if the strings are the same, non-zero if they are not.
+				</ul>				
+			</div>
+
+		<h4>string Substr(str, start[, len]);</h4>
+			<div>
+				Returns a part of another string.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> str - the whole string
+					<li> start - the zero based character index of the sub string you want
+					<li> [Optional] len - the length of the substring (default: the rest of the string)
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> part of the string.
+				</ul>				
+			</div>
+
+		<h4>string LoadString(id);</h4>
+			<div>
+				Loads a string from the resource file.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> id - the string's id.
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A string or NULL on failure.
+				</ul>
+			</div>
+
+		<h4>hashtable NewHashTable();</h4>
+			<div>
+				Returns an empty hash table object.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> (none)
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> a hash table object.
+				</ul>
+				<br>
+				See also <a href="http://www.memecode.com/xyz/view.php?id=6108">this</a> page on container 
+				type handling.
+			</div>
+
+		<h4>list NewList();</h4>
+			<div>
+				Returns an empty list object.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> (none)
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> a list object.
+				</ul>
+				<br>
+				See also <a href="http://www.memecode.com/xyz/view.php?id=6108">this</a> page on container 
+				type handling.
+			</div>
+
+		<h4>bool DeleteElement(container, index);</h4>
+			<div>
+				Returns an empty list object.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> container - the list or hashtable container to delete from
+					<li> index - the index of the element, if 'container' is a list, then specify the
+						integer index of the element to delete. If it's a hash table, specific the
+						key of the element to delete as a string.
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero if successful, zero on error.
+				</ul>
+			</div>
+
+		<h4>string ReadTextFile(filename);</h4>
+			<div>
+				Returns the contents of a text file.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> filename - the name of the file
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> the contents of the file as a string.
+				</ul>
+			</div>
+
+		<h4>bool WriteTextFile(filename, data);</h4>
+			<div>
+				Writes the contents of a variable to a text file.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> filename - the name of the file
+					<li> data - the date to write, can either be a string or a binary object
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero on succes, zero on failure.
+				</ul>
+			</div>
+
+	<h3>Scribe Specific Functions</h3>
+
+		<h4>bool LoadFolder(folder);</h4>
+			<div>
+				Loads the items in a folder. By default folders are not loaded, to access their
+				items you first have to load them using this function.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> folder - the object to load
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero on success.
+				</ul>
+			</div>
+
+		<h4>string SelectFolder(parent_wnd[, limit_to_type]);</h4>
+			<div>
+				Displays a dialog to the user so they can select a folder.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> parent_wnd - the parent window object or 0
+					<li> limit_to_type - an item type specified in the
+						list of item types at the top of this document.
+						(Defaults to MAGIC_NONE = 0x0 )
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> a path to the folder selected or NULL.
+				</ul>
+			</div>
+
+		<h4>object GetFolder(path);</h4>
+			<div>
+				Returns a folder object.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> path - the path to the folder, '/' is the root, '/Inbox' is your inbox etc.
+						You can also use an integer to refer to various system folders:
+						<ul>
+							<li> Inbox = 0
+							<li> Outbox = 1
+							<li> Sent = 2
+							<li> Trash = 3
+							<li> Contacts = 4
+							<li> Templates = 5
+							<li> Filters = 6
+							<li> Calendar = 7
+							<li> Groups = 8
+						</ul>
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A dom object for the folder, or NULL on failure.
+				</ul>
+				<br>
+				By default folders are not loaded, so to access the items inside them use the LoadFolder
+				method.
+			</div>
+
+		<h4>object CreateSubFolder(parent_folder, child_name, child_type);</h4>
+			<div>
+				Creates a new folder object.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> parent_folder - the parent folder
+					<li> child_name - the name of the new child folder
+					<li> type - the folders type, use one of the values specified in the
+						list of item types at the top of this document.
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A dom object for the new child folder, or NULL on failure.
+				</ul>
+			</div>
+
+		<h4>bool CreateThing(type);</h4>
+			<div>
+				Creates a new Thing.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> Type, the type of object to create, i.e. MAGIC_MAIL
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> object pointer on success, NULL on failure.
+				</ul>
+			</div>
+
+		<h4>bool MoveThing(dest_folder, object);</h4>
+			<div>
+				Moves an object to another folder.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> dest_folder - the destination folder
+					<li> object - the object to move. it will need to be the right type
+						for the destination folder. if you try and put a contact into a
+						folder of email it will fail.
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero on success, zero on failure.
+				</ul>
+			</div>
+
+		<h4>bool SaveThing(folder, object);</h4>
+			<div>
+				Saves a new object into a folder.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> folder - the destination folder
+					<li> object - the object to save.
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero on success, zero on failure.
+				</ul>
+			</div>
+
+		<h4>bool Delete(object);</h4>
+			<div>
+				Deletes an object to the trash
+				<br><br>
+				Arguments:
+				<ul>
+					<li> object - the object to delete, can be a Thing or Folder
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> non-zero on success.
+				</ul>
+			</div>
+
+		<h4>void Print(string);</h4>
+			<div>
+				Prints a string to the debug console.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> string - the string to print
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> nothing.
+				</ul>
+				<br>
+				You can open the debug console using the Tools->Debug->Show Scripting Console menu.
+			</div>
+
+		<h4>int MsgBox(parent_wnd, msg, title[, type]);</h4>
+			<div>
+				Displays a message box.
+				<br><br>
+				Arguments:
+				<ul>
+					<li> parent_wnd - the parent window or 0
+					<li> msg - the body of the msg
+					<li> title - the title for the window
+					<li> type - the button type, defaults to "Ok".
+						<ul>
+							<li> MB_OK = 5
+							<li> MB_OKCANCEL = 6
+							<li> MB_YESNO = 7
+							<li> MB_YESNOCANCEL = 8
+						</ul>
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A code for which button was pressed.
+						<ul>
+							<li> IDOK = 1
+							<li> IDCANCEL = 2
+							<li> IDYES = 3
+							<li> IDNO = 4
+						</ul>
+				</ul>
+			</div>
+
+	<h3>Scripting Hook Functions</h3>
+
+		<h4>int AddToolsMenuItem(String MenuText, String CallbackFunctionName);</h4>
+			<div>
+				Setup a new callback that shows up in the main window's Tools menu
+				<br><br>
+				Arguments:
+				<ul>
+					<li> MenuText, the text for the menu item.
+					<li> CallbackFunctionName, the method to call in the current script
+						when the user selects the menu item. This callback function should
+						have the form:
+						<blockquote>
+							void Callback(ScribeWnd App, int MenuId)
+						</blockquote>
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A menu item id, or 0 on failure.
+				</ul>
+			</div>
+
+		<h4>int AddThingMenuCallback(String MenuText, int ThingType, String CallbackFunctionName);</h4>
+			<div>
+				Setup a new menu item in the context menu of Things (mail, contact, calendar event etc).
+				<br><br>
+				Arguments:
+				<ul>
+					<li> MenuText, the text for the menu item.
+					<li> ThingType, show this menu for a specific type or use MAGIC_ANY (0xaaff0006) for all types.
+					<li> CallbackFunctionName, the method to call in the current script
+						when the user selects the menu item. This callback function should
+						have the form:
+						<blockquote>
+							void Callback(ScribeWnd App, int MenuId, Thing Obj)
+						</blockquote>
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A menu item id, or 0 on failure.
+				</ul>
+			</div>
+			
+
+		<h4>int AddThingUiButton(int ThingType, String ButtonText, String ButtonImg, String CallbackFunctionName);</h4>
+			<div>
+				Setup a new menu toolbar button in the window UI of a Thing object (mail, contact, calendar event etc).
+				<br><br>
+				Arguments:
+				<ul>
+					<li> ThingType, show this menu for a specific type or use MAGIC_ANY (0xaaff0006) for all types.
+					<li> ButtonText, the text for the button
+					<li> ButtonImg, the icon for the button. This is in the form "image_file_name,icon_index", or something
+						like './Scripts/GpgPluginIcons.gif,2' would pull the 3 icon out of that gif file. The icon size
+						is the same as whatever other icons are used by Scribe.
+					<li> CallbackFunctionName, the method to call in the current script
+						when the user selects the menu item. This callback function should
+						have the form:
+						<blockquote>
+							void Callback(ScribeWnd App, int MenuId, Thing Obj, GWindow Ui)
+						</blockquote>
+				</ul>
+				<br>
+				Returns:
+				<ul>
+					<li> A menu item id, or 0 on failure.
+				</ul>
+			</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta name="charset" content="utf-8">
+	<style>
+	.field {
+		text-align: right;
+		color: #888;
+		padding-right: 5px;
+	}
+	.subj {
+		font-weight: bold;
+	}
+	body {
+		background: ThreeDFace;
+	}
+	a.btn {
+		background: white;
+		color: black;
+		border: 1px solid black;
+		text-decoration: none;
+	}
+	</style>
+	<script type="text/javascript" language="JavaScript">
+	function ShowMimeTree()
+	{
+		a = getElementById("mimetree");
+		switch = getElementById("mimeswitch");
+		if (a)
+		{
+			if (a.style.display.Lower() == "block")
+			{
+				switch.textContent = "&nbsp;+&nbsp;";
+				a.style.display = "none";
+			}
+			else
+			{
+				switch.textContent = "&nbsp;-&nbsp;";
+				a.style.display = "block";
+			}
+		}
+	}
+	</script>
+</head>
+<body style="max-height: 50%;">
+	<table>
+		<tr>
+	        <td style="padding-bottom:6px">
+	            <? mail.Contact.ImageHtml[80] ?>
+	        </td>
+			<td width="99%">
+				<table>
+					<tr>
+						<td class=field>Subject:
+						<td class=subj><? mail.Subject ?>
+					</tr>
+					<tr>
+						<td class=field>From:
+						<td><? mail.FromHtml ?>
+					</tr>
+					<tr>
+						<td class=field>To:
+						<td><? mail.ToHtml ?>
+					</tr>
+					<tr>
+						<td class=field>Date:
+						<td><? mail.DateSent ?>
+					</tr>
+				</table>
+			</td>
+			<td class=field>Mime:</td>
+			<td><a onclick="ShowMimeTree();" class="btn" id="mimeswitch">&nbsp;+&nbsp;</a></td>
+			<td><span id="mimetree" style="display: none;"><? mail.MimeTree ?></span></td>
+		</tr>
+	</table>
+
+				
+</body>
+</html>

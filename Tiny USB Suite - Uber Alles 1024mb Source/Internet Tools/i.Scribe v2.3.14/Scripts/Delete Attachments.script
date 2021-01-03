@@ -1,0 +1,87 @@
+#include "resdefs.h"
+
+//
+// Deletes all the attachments in the current folder after asking the user.
+//
+// MenuText = Delete all attachments in current folder
+// MenuStrRef = 1266
+//
+function DeleteAttachments(App)
+{
+	Folder = App.CurrentFolder;
+
+	if (!Folder)
+	{
+		MsgBox(App, "Not a mail folder.", App.Name);
+	}
+	else if (Folder.ItemType == 0xAAFF0001)
+	{
+		Bytes = 0;
+		Count = 0;
+		Len = Folder.Length;
+		
+		for (i=0; i<Len; i++)
+		{
+			t = Folder.Item[i];
+			if (t)
+			{
+				Attachments = t.Attachments;
+				for (n=0; n<Attachments; n++)
+				{
+					a = t.Attachment[n];
+					if (a)
+					{
+						Bytes += a.Length;
+						Count++;
+					}
+				}
+			}
+		}
+
+		if (Count)
+		{
+			Msg = Sprintf(LoadString(769), Count, FormatSize(Bytes));
+			Response = MsgBox(App, Msg, App.Name, 4);
+			if (Response == 6)
+			{
+				for (i=0; i<Len; i++)
+				{
+					t = Folder.Item[i];
+					// Print("Item " + i + " = " + t + "\n");
+					if (t)
+					{
+						// Print("Attachments.Len = " + t.Attachments + "\n");
+						n = 0;
+						while (t.Attachments > n)
+						{
+							old = t.Attachments;
+							a = t.Attachment[n];
+							DeleteThing(a);
+							if (t.Attachments == old)
+								n++;
+						}
+					}
+				}
+			}
+			else
+			{
+				Print("User response: " + Response);
+			}
+		}
+		else
+		{
+			MsgBox(App, "No attachments to delete", App.Name);
+		}
+	}
+	else
+	{
+		MsgBox(App, "Not a mail folder: " + Folder.Type, App.Name);
+	}
+}
+
+function Main(App)
+{
+	if (!AddToolsMenuItem(LoadString(IDS_DELETE_ATTACHMENTS), "DeleteAttachments"))
+		MsgBox(App, "Couldn't add hook for DeleteAttachments");
+	return 1;
+}

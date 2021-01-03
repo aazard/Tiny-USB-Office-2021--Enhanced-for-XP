@@ -1,0 +1,163 @@
+function ExtractMailList(Thing)
+{
+	ListId = Thing.InternetHeader["List-Id"];
+	if (!ListId)
+		return ListId;
+	
+	if (ListId.Length)
+	{
+		s = ListId.Fin("<");
+		e = ListId.Find(">", s);
+		if (s > 0 && e > 0)
+		{
+			ListId = ListId.Sub(s + 1, e - s - 1);
+		}
+	}
+	
+	return ListId;
+}
+
+function CreateMailingListFilter(App, Thing, CallbackId)
+{
+	ListId = ExtractMailList(Thing);
+	Folder = BrowseFolder(App, "Select folder to filter mailing list into:", ListId);
+	if (Folder.Length)
+	{
+		Filter = CreateThing(0xAAFF0007);
+		Filter.Name = ListId;
+		Filter.ConditionsXml = "<Conditions><And><Condition Not='0' Field='mail.InternetHeader[List-Id]' Op='Contains' Value='"+ListId+"'/></And></Conditions>";
+		Filter.ActionsXml = "<Actions><Action Type='7' Arg1='false,notnew' /><Action Type='0' Arg1='"+Folder+"'/></Actions>";
+		ShowThingWindow(Filter);
+	}
+}
+
+function CreateFromFilter(App, Thing, CallbackId)
+{
+	Email = Thing.From.Email;
+	Filter = CreateThing(0xAAFF0007);
+	Filter.Name = Email;
+	Filter.ConditionsXml = "<Conditions><And><Condition Not='0' Field='mail.From.Email' Op='Contains' Value='"+Email+"'/></And></Conditions>";
+	ShowThingWindow(Filter);
+}
+
+function GetSortedFilters()
+{
+	Items = New("List");
+	Filter = GetFolder(6);
+	if (Filter)
+	{
+		Count = Filter.Item.Length;
+		for (i = 0; i < Count; i++)
+		{
+			f = Filter.Item[i];
+			if (f)
+			{
+				Items.Add(f);
+			}
+		}
+		Items.Sort("Index");
+	}
+	return Items;
+}
+
+function GetAllGroups()
+{
+	Items = New("List");
+	Groups = GetFolder(8);
+	if (Groups)
+	{
+		for (i = 0; grp = Groups.Item[i]; i++)
+		{
+			Items.Add(grp);
+		}
+		Items.Sort("-UsedTs");
+	}
+	else
+	{
+		Print("GetAllGroups: No groups folder.\n");
+	}
+	
+	return Items;
+}
+
+function AddFromToFilter(App, Thing, CallbackId)
+{
+	Items = GetSortedFilters();
+	Filter = Items[CallbackId - 4000];
+	if (Filter)
+	{
+		MailFrom = Thing.From.Email;
+		Filter.AddCondition("Mail.From.Email", "=", MailFrom);
+	}
+	else
+	{
+		Print("Error: No filter for ID: " + CallbackId + "\n");
+	}
+}
+
+function AddFromToGroup(App, Thing, CallbackId)
+{
+	Items = GetAllGroups();
+	Group = Items[CallbackId - 5000];
+	if (Group)
+	{
+		Group.AddAddress(Thing.From.Email);
+	}
+	else
+	{
+		Print("Error: No group for ID: " + CallbackId + "\n");
+	}
+}
+
+function CreateFilterMenu(App, Thing, Menu)
+{
+	if (Thing.Type == 0xAAFF0001)
+	{
+		Sub = GMenuAddSubmenu(Menu, "&Create Filter", Menu.Length - 2);
+		if (Sub)
+		{
+			// Debugger();
+			ListId = ExtractMailList(Thing);
+			if (ListId)
+			{
+				if (ListId.Length)
+				{
+					GMenuAddItem(Sub, -1, "New filter for email from mailing list '" + ListId + "'", -1, "CreateMailingListFilter", 3000);
+				}
+			}
+
+			MailFrom = Thing.From.Email;
+
+			GMenuAddItem(Sub, -1, "New filter for email from '" + MailFrom + "'", -1, "CreateFromFilter", 3001);
+			Sm = GMenuAddSubmenu(Sub, "Add '" + MailFrom + "' to existing filter", -1);
+			if (Sm)
+			{
+				Items = GetSortedFilters();
+				for (i = 0; i < Items.Length; i++)
+				{
+					f = Items[i];					
+					GMenuAddItem(Sm, -1, "(" + f.Index + ") " + f.Name, -1, "AddFromToFilter", 4000 + i);
+				}
+			}
+
+			Sm2 = GMenuAddSubmenu(Sub, "Add '" + MailFrom + "' to contact group", -1);
+			if (Sm2)
+			{
+				Items = GetAllGroups();
+				for (i = 0; i < Items.Length; i++)
+				{
+					grp = Items[i];					
+					GMenuAddItem(Sm2, -1, grp.Name, -1, "AddFromToGroup", 5000 + i);
+				}
+			}
+		}
+	}
+}
+
+function Main(App)
+{
+	if (!AddCallback("OnThingContextMenu", "CreateFilterMenu"))
+		MsgBox(App, "Couldn't add CreateFilterMenu");
+
+	return 1;
+}

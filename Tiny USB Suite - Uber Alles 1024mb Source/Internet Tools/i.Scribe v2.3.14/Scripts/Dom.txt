@@ -1,0 +1,277 @@
+AccountIdentity {   // ScribeSendReceive.cpp:854
+    String Name;    // :857
+    String Email;   // :858
+    String Reply;   // :859
+    String Sig;     // :860
+    String HtmlSig; // :861
+}
+
+Attachment {          // ScribeAttachment.cpp:168
+    Int64  Length;    // :173
+    String Name;      // :178
+    String MimeType;  // :183
+    String ContentId; // :188
+    Binary Data;      // :193
+    Int32  Type;      // :205
+}
+
+Contact {                        // ScribeContact.cpp:775
+    ScribeWnd      Scribe;       // :781
+    ThingContainer Folder;       // :786
+    String[]       Email;        // :794
+    Int32          Type;         // :808
+    String[]       Groups;       // :813
+    Image          Image;        // :856
+    String         ImageHtml;    // :861
+    String         Title;        // :934
+    String         First;        // :937
+    String         Surname;      // :940
+    String         Nickname;     // :943
+    String         Spouse;       // :946
+    String         Notes;        // :949
+    Int64          Uid;          // :952
+    String         TimeZone;     // :955
+    String         HomeStreet;   // :958
+    String         HomeSuburb;   // :961
+    String         HomePostcode; // :964
+    String         HomeState;    // :967
+    String         HomeCountry;  // :970
+    String         HomePhone;    // :973
+    String         HomeMobile;   // :976
+    String         HomeIM;       // :979
+    String         HomeFax;      // :982
+    String         HomeWebpage;  // :985
+    String         WorkStreet;   // :988
+    String         WorkSuburb;   // :991
+    String         WorkPostcode; // :994
+    String         WorkState;    // :997
+    String         WorkCountry;  // :1000
+    String         WorkPhone;    // :1003
+    String         WorkMobile;   // :1006
+    String         WorkIM;       // :1009
+    String         WorkFax;      // :1012
+    String         Company;      // :1015
+    String         WorkWebpage;  // :1018
+}
+
+ContactGroup {             // ScribeGroup.cpp:215
+    String   Name;         // :220
+    String[] List;         // :225
+    Int32    Type;         // :242
+    Unknown  DateModified; // :247
+    Unknown  UsedTs;       // :252
+}
+
+Filter {                      // ScribeFilter.cpp:2571
+    Mail      Mail;           // :2722
+    ScribeWnd Scribe;         // :2730
+    String    Name;           // :2735
+    Bool      TestConditions; // :2740
+    Int32     Type;           // :2751
+    String    ConditionsXml;  // :2756
+    String    ActionsXml;     // :2761
+    Int32     Index;          // :2766
+
+    function AddCondition(String Feild, String Op, String Value); // :2576
+    function AddAction(String ActionName, String Value); // :2651
+    function StopFiltering(); // :2681
+    function DoActions(Mail Object); // :2691
+}
+
+GCssStyle {         // GHtml.cpp:9186
+    String Display; // :9191
+}
+
+GCustomType { // GVariant.cpp:2381
+
+    function New(); // :2438
+    function Delete(Object); // :2447
+}
+
+GHtml {                // GHtml.cpp:8649
+    Bool supportLists; // :8651
+    Bool vml;          // :8653
+    Bool mso;          // :8656
+}
+
+GPreviewPanel { // PreviewPanel.cpp:559
+
+    function ShowRemoteContent(); // :564
+}
+
+GXmlTag {                    // GXmlTree.cpp:503
+    String 'attribute_name'; // :505
+}
+
+ListAddr {            // ScribeListAddr.cpp:1178
+    String   Text;    // :1183
+    String   Name;    // :1199
+    String   Email;   // :1204
+    Int32    Type;    // :1209
+    Contact  Contact; // :1214
+    String[] Groups;  // :1226
+}
+
+Mail {                              // ScribeMail.cpp:5268
+    ListAddr       From;            // :5273
+    String         FromHtml;        // :5278
+    Contact        Contact;         // :5286
+    ListAddr[]     To;              // :5304
+    String         ToHtml;          // :5345
+    String         Subject;         // :5363
+    String         Body;            // :5368
+    String         BodyAsText;      // :5436
+    String         BodyAsHtml;      // :5471
+    String         HtmlHeadFields;  // :5484
+    String         MessageID;       // :5548
+    String         InternetHeaders; // :5553
+    String[]       InternetHeader;  // :5558
+    Int32          Priority;        // :5570
+    String         Html;            // :5575
+    Int32          Flags;           // :5580
+    ThingContainer Folder;          // :5593
+    ScribeWnd      Scribe;          // :5601
+    Mail           Mail;            // :5606
+    DateTime       DateSent;        // :5611
+    DateTime       DateReceived;    // :5616
+    String         Sig;             // :5621
+    Int64          Size;            // :5629
+    String         Label;           // :5634
+    Int32          Attachments;     // :5639
+    Attachment[]   Attachment;      // :5646
+    String         MimeTree;        // :5660
+    GView          Ui;              // :5671
+    Int32          Type;            // :5676
+    Bool           Selected;        // :5681
+    Bool           Read;            // :5686
+    Bool           ShowImages;      // :5691
+    Int32          Colour;          // :5696
+
+    function Send([Bool SendNow = true]); // :5823
+}
+
+MailUi { // ScribeMail.cpp:3858
+
+    function ShowRemoteContent(); // :3863
+}
+
+ReceiveAccountlet {          // ScribeSendReceive.cpp:1431
+    String  Protocol;        // :1434
+    String  Server;          // :1435
+    Integer Port;            // :1436
+    String  Name;            // :1437
+    Bool    AutoReceive;     // :1438
+    String  CheckEvery;      // :1439
+    Bool    LeaveOnServer;   // :1441
+    Bool    DeleteAfter;     // :1442
+    Bool    DelIfLarger;     // :1444
+    Integer DelIfLargerSize; // :1445
+    String  Folder;          // :1447
+    Integer MaxSize;         // :1448
+    String  8BitCharSet;     // :1449
+    String  AsciiCharset;    // :1450
+    Integer AuthType;        // :1451
+}
+
+ScribeAccount {                                   // ScribeAccount.cpp:57
+    Accountlet.AccountIdentity   Identity;        // :65
+    Accountlet.SendAccountlet    Send;            // :68
+    Accountlet.ReceiveAccountlet Receive;         // :71
+    Bool                         IsValid;         // :74
+    Bool                         IsOnline;        // :77
+    ScribeWnd                    Scribe;          // :80
+    String                       Name;            // :83
+    String                       Id;              // :85
+    Bool                         Disable;         // :87
+    Bool                         AccountExpanded; // :89
+
+    function Stop(); // :126
+    function Disconnect(); // :129
+    function Kill(); // :132
+    function EndSession(); // :135
+}
+
+ScribeDom {                    // ScribeUtils.cpp:1386
+    ScribeWnd    Scribe;       // :1391
+    Mail         Mail;         // :1396
+    Contact      Contact;      // :1401
+    ContactGroup ContactGroup; // :1406
+    Calendar     Calendar;     // :1411
+    Filter       Filter;       // :1416
+    String       Now;          // :1421
+}
+
+ScribeWnd {                          // ScribeApp.cpp:2614
+    String           Quote;          // :2619
+    String           Name;           // :2623
+    String           Home;           // :2628
+    String           Now;            // :2637
+    ThingContainer[] Folder;         // :2646
+    String           AppName;        // :2668
+    String           CalendarToday;  // :2673
+    Unknown          InboxSummary;   // :2677
+    String           Execute;        // :2734
+    String           BuildType;      // :2758
+    String           Tag;            // :2767
+    String           Version;        // :2772
+    String           Build;          // :2779
+    String           Language;       // :2786
+    String           String;         // :2797
+    ThingContainer   CurrentFolder;  // :2809
+    GView            View;           // :2814
+    Contact          NoContact;      // :2819
+    Unknown          Accounts;       // :2824
+    Unknown          Options;        // :2856
+    Unknown          MailStorePaths; // :2860
+    Unknown          RootFolders;    // :2868
+
+    function GrowlOnMail(Mail Obj); // :2898
+    function GetClipboardText(); // :2916
+    function SetClipboardText(String Text); // :2922
+    function LookupContactGroup(String GroupName); // :2939
+    function GetUserString(GView ParentView, String PromptMessage[, Bool ObsurePassword[, String DefaultValue]]); // :2951
+    function CreateAccount(); // :2969
+    function DeleteAccount(ScribeAccount AccountToDelete); // :2982
+    function ShowRemoteContent(); // :3018
+}
+
+SendAccountlet {          // ScribeSendReceive.cpp:888
+    String  Server;       // :891
+    Integer Port;         // :892
+    String  Domain;       // :893
+    String  Name;         // :894
+    Bool    Auth;         // :895
+    Integer AuthType;     // :896
+    String  PrefCharset1; // :897
+    String  PrefCharset2; // :898
+    Bool    OnlySendThis; // :899
+}
+
+SslSocket {     // OpenSSLSocket.cpp:675
+    Bool isSsl; // :680
+}
+
+Store3Addr {          // Store3Common.cpp:131
+    String   Name;    // :136
+    String   Email;   // :141
+    String   Domain;  // :146
+    String   Text;    // :155
+    Contact  Contact; // :175
+    String[] Groups;  // :188
+}
+
+ThingContainer {             // ScribeFolder.cpp:3720
+    Int32          Type;     // :3725
+    String         Name;     // :3730
+    String         Path;     // :3736
+    Int32          Unread;   // :3745
+    Int32          Length;   // :3750
+    Thing[]        Item;     // :3755
+    Int32          ItemType; // :3809
+    ScribeWnd      Scribe;   // :3814
+    ThingContainer Child;    // :3819
+    ThingContainer Next;     // :3824
+    Thing[]        Selected; // :3829
+    Boolean        Expanded; // :3845
+}
+

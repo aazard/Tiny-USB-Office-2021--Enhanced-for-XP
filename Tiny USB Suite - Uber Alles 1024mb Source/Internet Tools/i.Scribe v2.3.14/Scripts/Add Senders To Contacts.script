@@ -1,0 +1,105 @@
+#include "resdefs.h"
+
+//
+// Add senders to your contact
+//
+function AddSendersToContacts(App, MenuId)
+{
+	MAGIC_CONTACT = 0xaaff0002;
+
+	Src = App.CurrentFolder;
+	Print("Src='" + Src.Path + "'\n");
+	if (Src)
+	{
+		Path = SelectFolder(App, MAGIC_CONTACT);
+		// Path = "/Contacts";
+		if (Path)
+		{
+			Start = Now();
+			Dest = GetFolder(Path);
+			Print("Dest='" + Dest.Path + "'\n");
+			if (Dest)
+			{
+				Hash = New("HashTable");
+
+				// Populate the hash table with existing contacts...
+				LoadFolder(Dest);
+				Items = Dest.Length;
+				for (i=0; i<Items; i++)
+				{
+					Contact = Dest.Item[i];
+					Email = Contact.Email;
+					if (Email)
+					{
+						Hash[Email] = 1;
+					}
+				}
+
+				Print("Added " + Items + " from Dest\n");
+				Added = 0;
+
+				// Add new contacts from source emails...
+				Print("Items=" + Src.Length + "\n");
+				Items = Src.Length;
+				for (i=0; i<Items; i++)
+				{
+					Thing = Src.Item[i];
+					if (Thing)
+					{
+						Email = Thing.From.Email;
+						if (Email)
+						{
+							if (!Hash[Email])
+							{
+								Hash[Email] = 1;
+
+								Contact = CreateThing(MAGIC_CONTACT);
+								if (Contact)
+								{
+									Contact.Email = Email;
+
+									Name = Thing.From.Name;
+									Sp = Name.Find(" ");
+									if (Sp >= 0)
+									{
+										Contact.FirstName = Name.Sub(0, Sp);
+										Contact.SurName = Name.Sub(Sp + 1);
+									}
+									else
+									{
+										Contact.FirstName = Name;
+									}
+
+									if (!SaveThing(Dest, Contact))
+									{
+										Print("Error: Couldn't save new contact.\n");
+									}
+									else
+									{
+										Added = Added + 1;
+									}
+								}
+								else Print("Error: Couldn't create contact.\n");
+							}
+						}
+					}
+					else Print("Error: No thing at index " + i + "\n");
+				}
+			}
+			else Print("Error: Failed to get current folder.\n");
+
+			End = Now();
+			MsgBox(App, "Script took " + (End - Start) + " ms\n" +
+						"Added " + Added + " contacts", "Script");
+		}
+		else Print("Error: Failed to get source folder '" + Path + "'\n");
+	}
+	else Print("Error: Couldn't get the current folder.\n");
+}
+
+function Main(App)
+{
+	if (!AddToolsMenuItem(LoadString(IDS_ADD_ALL_CONTACTS), "AddSendersToContacts"))
+		MsgBox(App, "Couldn't add hook for AddSendersToContacts");
+	return 1;
+}

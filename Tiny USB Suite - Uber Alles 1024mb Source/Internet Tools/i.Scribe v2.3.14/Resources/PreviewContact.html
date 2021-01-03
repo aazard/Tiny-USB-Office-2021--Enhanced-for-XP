@@ -1,0 +1,89 @@
+<html>
+<head>
+	<meta name="charset" content="utf-8">
+	<style>
+	.field {
+		text-align: right;
+		color: #888;
+	}
+	.name {
+		font-weight: bold;
+	}
+	body {
+		background: ThreeDFace;
+	}
+	</style>
+	<script type="text/javascript" language="JavaScript">
+		function init()
+		{
+			Txt = getElementById("email");
+			if (Txt)
+			{
+			    Email = Thing.Email;
+			    s = "";
+			    for (i=0; i<Email.Length; i++)
+			    {
+			        e = Email[i];
+			        if (i)
+			        {
+			            s += ", ";
+			        }
+			        s += "<a href='" + e + "'>" + e + "</a>";
+			    }
+			    Txt.innerHTML = s;
+		    }
+		}
+	</script>
+</head>
+<body onload="init();">
+	<table>
+		<tr>
+			<td style="padding-right: 0.5em;">
+				<? contact.ImageHtml ?>
+			<td>
+				<table>
+					<tr>
+						<td class=field>Name:
+						<td width="200px" class="name"><? contact.First ?> <? contact.SurName ?>
+					</tr>
+					<tr>
+						<td class=field>Email:
+						<td id="email">
+					</tr>
+					<tr>
+						<td class=field>Nick:
+						<td><? contact.Nick ?>
+					</tr>
+					<tr>
+						<td class=field>Home Address:
+						<td><? contact.HomeStreet ?><br>
+							<? contact.HomeSuburb ?> <? contact.HomePostcode ?><br>
+							<? contact.HomeState ?> <? contact.HomeCountry ?><br>
+							<? contact.HomeWebpage ?>
+					</tr>
+					<tr>
+						<td class=field>Phone:
+						<td><? contact.HomePhone ?><br>
+							<? contact.HomeMobile ?><br>
+							<? contact.HomeFax ?>
+					</tr>
+					<tr>
+						<td class=field>Work Address:
+						<td><? contact.Company ?><br>
+							<? contact.WorkStreet ?><br>
+							<? contact.Workuburb ?> <? contact.WorkPostcode ?><br>
+							<? contact.WorkState ?> <? contact.WorkCountry ?><br>
+							<? contact.WorkWebpage ?>
+					</tr>
+					<tr>
+						<td class=field>Phone:
+						<td><? contact.WorkPhone ?><br>
+							<? contact.WorkMobile ?>
+							<? contact.WorkFax ?>
+					</tr>
+				</table>
+			
+	</table>
+				
+</body>
+</html>

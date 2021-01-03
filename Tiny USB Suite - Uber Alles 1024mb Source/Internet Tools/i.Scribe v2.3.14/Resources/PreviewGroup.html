@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta name="charset" content="utf-8">
+	<style>
+	.field {
+		text-align: right;
+		color: #888;
+	}
+	.name {
+		font-weight: bold;
+	}
+	body {
+		background: ThreeDFace;
+	}
+	</style>
+	<script type="text/javascript" language="JavaScript">
+		function init()
+		{
+			Txt = getElementById("email");
+			if (Txt)
+			{
+			    Email = Thing.List.Split("\n");
+			    s = "";
+			    for (i=0; i<Email.Length; i++)
+			    {
+			        e = Email[i];
+			        if (i)
+			            s += "<br>\n";
+			        s += "<a href='" + e + "'>" + e + "</a>";
+			    }
+			    Txt.innerHTML = s;
+			    Print(s + "\n");
+		    }
+		}
+	</script>
+</head>
+<body onload="init();">
+	<table>
+		<tr>
+			<td class=field>Name:
+			<td><? contactgroup.Name ?>
+		</tr>
+		<tr>
+			<td class=field>Members:
+			<td id="email">
+		</tr>
+	</table>
+</body>
+</html>

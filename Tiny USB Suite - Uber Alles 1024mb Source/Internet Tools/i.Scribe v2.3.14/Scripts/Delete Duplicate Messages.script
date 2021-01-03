@@ -1,0 +1,70 @@
+#include "resdefs.h"
+
+//
+// Delete duplicate messages
+//
+
+function DeleteDuplicateMessages(App)
+{
+	Folder = App.CurrentFolder;
+	if (Folder && Folder.ItemType == 0xAAFF0001)
+	{
+		Msgs = New("HashTable");
+		Dupes = New("List");
+		Len = Folder.Length;
+
+		for (i=0; i<Len; i++)
+		{
+			t = Folder.Item[i];
+			if (t)
+			{
+				Id = t.MessageID;
+				if (Id != NULL)
+				{
+					Existing = Msgs[Id];
+					if (Existing)
+					{
+						// Decide which email is older
+						if (t.DateReceived < Existing.DateReceived)
+						{
+							// t is earlier, t replaces existing item
+							Dupes[-1] = Existing;
+							Msgs[Id] = t;
+						}
+						else
+						{
+							// existing is earlier, delete t
+							Dupes[-1] = t;
+						}
+					}
+					else
+					{
+						Msgs[Id] = t;
+					}
+				}
+				else Print("No msgid at " + i + "\n");
+			}
+			else Print("No item at " + i + "\n");
+		}
+
+		if (Dupes.Length > 0)
+		{
+			if (MsgBox(App, Sprintf(LoadString(1013), Dupes.Length), App.Name, 4) == 6)
+			{
+				for (i=0; i<Dupes.Length; i++)
+				{
+					DeleteThing(Dupes[i]);
+				}
+			}
+		}
+		else Print("Error: No dupes.\n");
+	}
+	else Print("Error: No folder.\n");
+}
+
+function Main(App)
+{
+	if (!AddToolsMenuItem(LoadString(IDS_REMOVE_DUPES), "DeleteDuplicateMessages"))
+		MsgBox(App, "Couldn't add hook for DeleteDuplicateMessages");
+	return 1;
+}

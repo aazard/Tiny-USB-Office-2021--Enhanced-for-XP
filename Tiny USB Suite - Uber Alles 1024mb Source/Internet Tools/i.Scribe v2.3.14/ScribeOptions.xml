@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Options IsPortable="1"
+	 ConfirmDel="1"
+	 DelDirection="2"
+	 EditorFont="binary(f4ffffff0000000000000000000000009001000000000001000000005300650067006f006500200055004900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)"
+	 HtmlFont="binary(f0ffffff0000000000000000000000009001000000000001000000005300650067006f006500200055004900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)"
+	 DefAlt="1"
+	 BdUnread="1"
+	 PreviewLines="1"
+	 AutoDelExe="1"
+	 DefReplayAll="2"
+	 Blink="1"
+	 PreReadSec="5"
+	 BayesThres="0.9"
+	 SoftwareUpdate="1"
+	 ResizeImgAttach="0"
+	 ResizeJpegQual="80"
+	 ResizeMaxPx="1024"
+	 ResizeMaxSize="200"
+	 RegWinClient="1"
+	 HasTemplates="0"
+	 HasCalEvents="1"
+	 HasGroups="1"
+	 HasFilters="1"
+	 HasSpam="0"
+	 GlyphSub="1"
+	 ReplyFmt="---------- Original Message ----------&#10;To: &lt;mail.to[0].name&gt; (&lt;mail.to[0].email&gt;)&#10;From: &lt;mail.from.name&gt; (&lt;mail.from.email&gt;)&#10;Subject: &lt;mail.subject&gt;&#10;Date: &lt;mail.datesent&gt;&#10;&#10;&lt;mail.bodyastext quote=scribe.quote&gt;&#10;&lt;cursor&gt;&#10;&lt;mail.sig&gt;&#10;"
+	 FwdFmt="---------- Original Message ----------&#10;To: &lt;mail.to[0].name&gt; (&lt;mail.to[0].email&gt;)&#10;From: &lt;mail.from.name&gt; (&lt;mail.from.email&gt;)&#10;Subject: &lt;mail.subject&gt;&#10;Date: &lt;mail.datesent&gt;&#10;&#10;&lt;mail.bodyastext quote=scribe.quote&gt;&#10;&lt;cursor&gt;&#10;&lt;mail.sig&gt;&#10;"
+	 ToolText="1"
+	 SoftwareUpdateLast="2021-1-1 5:43:37p">
+	<Accounts>
+		<Account-0 AccId="1687642653"
+			 AccName="My ISP">
+			<Identity />
+			<Send PrefCharset1="iso-8859-1"
+				 PrefCharset2="windows-1252" />
+			<Receive />
+		</Account-0>
+	</Accounts>
+	<CalendarUI>
+		<Sources />
+	</CalendarUI>
+	<MailUI />
+	<ScribeUI FontSize="2"
+		 Lang="en"
+		 Pos="State=1;Pos=889,429,1669,1009"
+		 StatusOpen="0"
+		 SplitPos="200" />
+	<Plugins />
+	<Print Font="binary(f4ffffff0000000000000000000000009001000000000001000000005300650067006f006500200055004900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)" />
+	<MailStores />
+</Options>

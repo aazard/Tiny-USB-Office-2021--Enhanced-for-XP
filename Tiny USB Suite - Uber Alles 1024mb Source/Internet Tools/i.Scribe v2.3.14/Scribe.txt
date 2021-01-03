@@ -1,0 +1,4 @@
+..\..\Lgi\trunk\src\common\Gdc2\Filters\Png.cpp:96 - Failed to load libpng.
+..\..\Lgi\trunk\src\common\Gdc2\Filters\Png.cpp:687 - libpng is missing (libpng12x32.dll)
+..\..\Lgi\trunk\src\common\Gdc2\Filters\Png.cpp:692 - Unable to load libpng (libpng12x32.dll).
+src\common\Gdc2\Filters\GFilter.cpp:1960 - Filter couldn't cope with 'C:\Users\PCX-001-R5-3600XT\Downloads\iscribe-win32-v2.3.14\Resources\EmojiMap.png'.
